@@ -1,0 +1,194 @@
+schema_version: "0.1"
+content_version: "0.1"
+limbs:
+  human_head:
+    name: Human Head
+    slot: head
+    max_integrity: 25
+    size: medium
+    actions: [focus]
+  damaged_human_torso:
+    name: Damaged Human Torso
+    slot: torso
+    max_integrity: 45
+    size: large
+    passives: [bleeding_vulnerability]
+  human_left_arm:
+    name: Human Left Arm
+    slot: left_arm
+    max_integrity: 30
+    size: medium
+    actions: [grip_strike]
+  human_right_arm:
+    name: Human Right Arm
+    slot: right_arm
+    max_integrity: 30
+    size: medium
+    actions: [guard_flesh]
+  weak_human_legs:
+    name: Weak Human Legs
+    slot: legs
+    max_integrity: 35
+    size: large
+    actions: [brace]
+  human_heart:
+    name: Human Heart
+    slot: core
+    max_integrity: 35
+    size: medium
+    passives: [panic_pulse]
+  missing_right_arm:
+    name: Missing Right Arm
+    slot: right_arm
+    max_integrity: 1
+    size: medium
+    initial_state: missing
+  jeff_left_arm:
+    name: Jeff Left Arm
+    slot: left_arm
+    max_integrity: 20
+    size: medium
+  jeff_right_arm:
+    name: Jeff Right Arm
+    slot: right_arm
+    max_integrity: 30
+    size: large
+  anna_crude_graft_arm:
+    name: Crude Graft Arm
+    slot: right_arm
+    max_integrity: 30
+    size: medium
+
+actions:
+  focus:
+    name: Focus
+    timing: focus
+    cost: 3
+    source_slot: head
+  grip_strike:
+    name: Grip Strike
+    timing: main
+    cost: 0
+    source_slot: left_arm
+    damage: 10
+    damage_type: blunt
+    can_clean_sever: false
+  guard_flesh:
+    name: Guard Flesh
+    timing: main
+    cost: 4
+    source_slot: right_arm
+    reduction: 0.5
+  brace:
+    name: Brace
+    timing: main
+    cost: 0
+    source_slot: legs
+  desperate_swing:
+    name: Desperate Swing
+    timing: enemy
+    cost: 0
+    damage: 10
+    damage_type: blunt
+  surgical_jab:
+    name: Surgical Jab
+    timing: enemy
+    cost: 0
+    source_slot: right_arm
+    damage: 8
+    damage_type: surgical
+
+items:
+  blood_bag:
+    name: Blood Bag
+    timing: fast
+    consumable: true
+    gain: 25
+    gain_if_bleeding: 15
+  clotting_cream:
+    name: Clotting Cream
+    timing: fast
+    consumable: true
+    cost: 8
+  claim_the_cut:
+    name: Claim the Cut
+    timing: main
+    consumable: true
+    cost: 10
+  bone_scissors:
+    name: Bone Scissors
+    timing: main
+    uses_per_fight: 1
+    cost: 6
+    damaged_damage: 8
+    damage_type: surgical
+    valid_sizes: [small, medium]
+  hell_saw:
+    name: Hell Saw
+    timing: main
+    uses_per_fight: 1
+    cost: 18
+    damage: 18
+    damage_type: saw
+    sever_success_rolls: [4, 5, 6]
+    rage_bonus: 5
+
+starting_bodies:
+  s001:
+    name: Torn but Stable
+    blood: 85
+    slots:
+      head: human_head
+      torso: damaged_human_torso
+      left_arm: human_left_arm
+      right_arm: missing_right_arm
+      legs: weak_human_legs
+      core: human_heart
+    inventory:
+      blood_bag: 1
+      clotting_cream: 1
+      claim_the_cut: 1
+      bone_scissors: 1
+      hell_saw: 1
+
+enemies:
+  jeff:
+    name: Jeff
+    blood: 70
+    limbs:
+      head: {name: Human Head, max_integrity: 25, size: medium}
+      torso: {name: Open Wound Torso, max_integrity: 45, size: large}
+      left_arm: {definition: jeff_left_arm}
+      right_arm: {definition: jeff_right_arm}
+      legs: {name: Weak Human Legs, max_integrity: 35, size: large}
+      core: {name: Human Heart, max_integrity: 35, size: medium}
+    actions: [desperate_swing, cover_it]
+  anna:
+    name: Anna
+    blood: 80
+    limbs:
+      head: {name: Dazed Human Head, max_integrity: 25, size: medium}
+      torso: {name: Stitched Torso, max_integrity: 45, size: large}
+      left_arm: {name: Human Left Arm, max_integrity: 30, size: medium}
+      right_arm: {definition: anna_crude_graft_arm}
+      legs: {name: Human Legs, max_integrity: 35, size: large}
+      core: {name: Leaking Heart, max_integrity: 35, size: medium}
+    actions: [surgical_jab, black_stitch, calm_guard, trade_offer]
+
+table_options:
+  integrate_arm:
+    name: Properly Seat Grafted Arm
+    cost: 15
+  repair_torso:
+    name: Repair Damaged Human Torso
+    cost: 18
+  strengthen_legs:
+    name: Strengthen Weak Legs
+    cost: 12
+  table_loan:
+    name: Table Loan
+    gain: 20
+    debt: 30
+  leave:
+    name: Leave Unchanged
+    cost: 0

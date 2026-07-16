@@ -1,0 +1,220 @@
+# Game att2 — Simulator Test Plan and Acceptance v0.2
+
+## Evidence goal
+
+Tests prove faithful implementation and detect numerical/systemic problems. They do not prove fun.
+
+## 1. Unit tests
+
+### Configuration and definitions
+
+- reject duplicate IDs;
+- reject missing body slots;
+- reject invalid integrity/cost/reference;
+- ensure Grip Strike is not configured as clean-sever capable;
+- load all supplied YAML successfully.
+
+### Limb thresholds
+
+- 30/30 is Intact;
+- 20/30 is Damaged;
+- 10/30 is Critical;
+- zero from basic attack becomes Ruined/Disabled, not Clean Severed;
+- zero from valid Bone Scissors extraction becomes Severed with Clean Harvest;
+- tags do not overwrite primary state incorrectly.
+
+### Acting source
+
+- Damaged source applies 75%;
+- Critical source applies 50%;
+- unusable source cancels action;
+- enemy action cancels if source is disabled by earlier player action.
+
+### Blood
+
+- spend/gain logs before/delta/after/reason;
+- insufficient blood action is illegal unless a documented effect allows debt;
+- Panic Pulse triggers from damage, bleeding, or voluntary spending crossing below 25;
+- Pulse triggers once and caps at 35;
+- collapse at zero;
+- soft collapse removes seeded non-core limb and restores 12 once.
+
+### Timing
+
+- Focus does not consume main action;
+- one Focus per round;
+- no Focus with unusable Head;
+- damaged Head raises cost;
+- critical Head uses injected RNG for incomplete info;
+- at most one Fast item per round;
+- Fast item occurs before main action;
+- consumables persist as consumed across encounters;
+- fight-use tools refresh per fight.
+
+### Harvest and tools
+
+- Claim marks and upgrades subsequent valid sever to Clean;
+- Claim does not itself sever;
+- Bone Scissors Critical valid limb Clean severs;
+- Stabilized modifies Bone Scissors attempt and failure creates Hanging/Disabled;
+- Hell Saw seeded success/failure paths;
+- Hell Saw failure gives Rage exactly once;
+- Marked and unmarked salvage distributions use injected RNG;
+- Ruined cannot normal emergency graft.
+
+### Grafting
+
+- Clean and Stressed stability tables;
+- slot replacement updates available actions;
+- Unstable Twitch/Works/Ache/Surge branches;
+- Ache queued disable;
+- Surge cost reduction or +2 fallback;
+- Integrated graft stops normal instability checks.
+
+### Plead/surrender
+
+- generic Plead Pressure increments only from documented triggers;
+- basic plead at 2;
+- Jeff pleads after both clean-severed arms;
+- Jeff incapacity-surrenders after both arms unusable without granting clean quality;
+- Anna offer trigger recognizes Unstable/Bleeding/threatened graft.
+
+### Table
+
+- affordability and transformations;
+- table loan stores minimal debt record;
+- leave unchanged is legal;
+- cannot integrate missing/non-grafted arm.
+
+## 2. Integration scenarios
+
+### S1 Jeff Baseline Acquisition
+
+Purpose: intended extraction chain. Scripted or strategy decisions should mark right arm, damage, use saw, disable/extract left, bargain, and emergency graft.
+
+Pass invariants:
+
+- clean right-arm harvest possible;
+- blood transactions fully logged;
+- new Guard Flesh available after graft;
+- final blood above 0;
+- seed reproducible.
+
+### S2 Jeff No-Spend Exploit
+
+Purpose: spam free attacks.
+
+Pass invariants:
+
+- Jeff may surrender through incapacity;
+- no Clean Harvest from free attacks;
+- player cannot gain premium graft without spending through salvage/other valid route.
+
+### S3 Failed Hell Saw Spiral
+
+Purpose: force saw failure, Rage, Bleeding pressure.
+
+Pass invariants:
+
+- failure is explicit;
+- projected/actual critical state visible;
+- Panic/soft-collapse timing correct;
+- no hidden rescue.
+
+### S4 Anna Stabilization Path
+
+Purpose: first Unstable graft, Focus/Guard/medical timing, accept treatment.
+
+Pass invariants:
+
+- player can trade limb greed for stabilization;
+- fight can end without Anna death;
+- Unstable removed and event logged.
+
+### S5 Anna Greed Path
+
+Purpose: reject treatment and pursue Crude Graft Arm.
+
+Pass invariants:
+
+- Stabilized sever penalty visible;
+- valid success/failure paths;
+- risky extraction remains possible;
+- no automatic free arm.
+
+### S6 Mini-Campaign
+
+Purpose: end-to-end source-of-truth loop.
+
+Pass invariants:
+
+- S-001 → Jeff → graft → Anna → table completes;
+- at least one body change affects later encounter options;
+- final summary describes body, blood, items, decisions, unresolved vulnerability.
+
+### S7 Blood Bag Balance Variants
+
+Purpose: compare current Blood Bag against documented alternative values without changing baseline.
+
+Pass invariants:
+
+- variants are config overlays;
+- report use timing and survival/body outcomes;
+- implementation does not automatically select a winner.
+
+## 3. Strategy batch
+
+Run default 100 seeds for each:
+
+- balanced;
+- blood_hoarder;
+- limb_greed;
+- survival_first;
+- reckless_sever.
+
+Minimum report:
+
+- encounter completion and collapse rate;
+- average/median final blood;
+- blood spent/gained;
+- Clean/Stressed/Ruined outcomes;
+- action frequency;
+- graft/stabilization/table paths;
+- identical final body rate.
+
+## 4. Acceptance gate
+
+### Implementation pass
+
+- all mandatory unit tests pass;
+- all seven integration scenarios execute and meet invariants;
+- same seed produces identical events/results;
+- text and JSON reports contain required fields;
+- package has no runtime UI/engine dependencies;
+- no undocumented mechanic was introduced.
+
+### Product continue signal
+
+Report a positive simulator signal—not an automatic Unity approval—if:
+
+- no-spend does not reliably produce premium limbs;
+- blood-cost actions appear in successful Balanced/Limb Greed runs;
+- Unstable increases risk without making most runs unavoidable failures;
+- Anna stabilization and greed paths both occur under plausible strategies;
+- table choices are not universally identical;
+- body changes affect later legal actions/decisions.
+
+### Revise signal
+
+- one action dominates all strategies;
+- Blood Hoarder earns equal/better premium bodies;
+- Blood Bag is always used immediately and erases risk;
+- Hell Saw is always or never rational;
+- Anna always kills or is always trivially spared;
+- table option is universal;
+- most successful runs converge to one body;
+- logs cannot explain failures.
+
+### Unity remains blocked
+
+Even passing simulator tests do not automatically approve Unity. Produce a review recommendation first.

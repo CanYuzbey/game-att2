@@ -1,0 +1,48 @@
+schema_version: "0.1"
+scenario_version: "0.1"
+scenarios:
+  jeff_baseline:
+    description: Intended right-arm acquisition and emergency graft.
+    start_body: s001
+    encounters: [jeff]
+    default_strategy: balanced
+    invariants:
+      - every_blood_change_logged
+      - right_arm_clean_harvest_possible
+      - graft_changes_available_actions
+  jeff_no_spend:
+    description: Free-attack exploit regression.
+    start_body: s001
+    encounters: [jeff]
+    default_strategy: blood_hoarder
+    invariants:
+      - no_clean_harvest_from_grip_strike_only
+      - incapacity_surrender_allowed
+  failed_hell_saw:
+    description: Forced failure, Rage, bleeding and collapse pressure.
+    start_body: s001
+    encounters: [jeff]
+    default_strategy: reckless_sever
+    scripted_rolls: [1]
+  anna_stabilization:
+    description: Enter Anna with first right-arm graft forced Unstable and accept treatment.
+    start_body: s001
+    encounters: [anna]
+    default_strategy: survival_first
+  anna_greed:
+    description: Reject treatment and pursue Anna's Crude Graft Arm.
+    start_body: s001
+    encounters: [anna]
+    default_strategy: limb_greed
+  mini_campaign:
+    description: Source-of-truth loop from S-001 through table.
+    start_body: s001
+    encounters: [jeff, anna]
+    table: true
+    default_strategy: balanced
+  blood_bag_balance:
+    description: Compare Blood Bag config overlays without changing baseline.
+    start_body: s001
+    encounters: [jeff, anna]
+    table: true
+    default_strategy: balanced

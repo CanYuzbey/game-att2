@@ -1,0 +1,26 @@
+# Game att2 Codex Handoff — Manifest
+
+Package version: 0.6
+
+## Files
+
+- `.gitignore` — 176 bytes — SHA256 `ab1d850cb89a89b4e380ef25557afed4b50a66311d4c1886eb0d29919efcd136`
+- `AGENTS.md` — 3908 bytes — SHA256 `f702fd1f19224cad52cc0a01bb1c6a576b0b0dc4c2d86f19eacd37915c7442ef`
+- `CODEX_TASK.md` — 3947 bytes — SHA256 `51accb03962091af310dec28723cb228190f8c7c7f6d33eaf09ac93dd17f3655`
+- `README.md` — 2265 bytes — SHA256 `d34acf4e3fa44745a0bd54ff5f575c73159e48020bf203eca02abf0a4e810d9d`
+- `config/combat_rules_v0_4.yaml` — 1374 bytes — SHA256 `443ac8cebee7dd61380616b711e00fc3325669d9eb30b43f422b4d860d4f803b`
+- `config/content_v0_1.yaml` — 4232 bytes — SHA256 `da4fef949a85e03bcb0ea9e972f290d0b8e1e2fcf363cf02e90f8caf229a2516`
+- `config/scenarios_v0_1.yaml` — 1520 bytes — SHA256 `948b200e6e38360f2e7f84b4b0159b12744b8a85fecc69237964d0b851396fba`
+- `docs/01_PROJECT_STATE_HISTORY_VISION.md` — 10744 bytes — SHA256 `999f806c216398e2a70dc3800d7c90dd111b3879460456a652051c7916f063a7`
+- `docs/02_DEVELOPMENT_MASTER_v0_6.md` — 43103 bytes — SHA256 `58ddfa89d15faeec7ab9171c3cfe9e77cc927326245ff3ebb41bb98a48c4110e`
+- `docs/03_COMBAT_RULES_v0_4.md` — 8060 bytes — SHA256 `f7f4c0c067eb5e550c4050b4d02d5dab1229aeb8395ccdae9aacff9b6af25421`
+- `docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md` — 9016 bytes — SHA256 `750a5fe1607d52c4650d0720e02c93997c685b6d10ba04ea74c73956d668d8b4`
+- `docs/05_CONTENT_CATALOG_v0_1.md` — 2814 bytes — SHA256 `5edec8f20605315cefdf4d78b724aeec3201db920bbf08671fc43965bcd255fa`
+- `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md` — 6348 bytes — SHA256 `28e736c812afa7ef8857e0ec2ea0569cc0be9dfc145273a98ef30fbf785d01e0`
+- `docs/07_PAPER_TEST_EVIDENCE_v0_1.md` — 3187 bytes — SHA256 `3be1b77db51847281c7ddb78d3d9f6ad32bbfc3eb8ca4e2fcd1c37886a812b71`
+- `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md` — 3130 bytes — SHA256 `45bb1fde11e336c2c902b5e65e6ea5c9119cdb705a31c98233b3f639660c4568`
+- `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md` — 7913 bytes — SHA256 `d050475758dbfdf9c5c5b6cc9861c779badf94412efa1aa9b9d57ef5df443cbc`
+- `docs/10_CODEX_RETURN_CONTRACT.md` — 1939 bytes — SHA256 `83c6ffb706171afad56d90efd8b54d025136bac30f23ee209b2401b3ee854aab`
+- `pyproject.toml` — 695 bytes — SHA256 `b2dc43148bc96804251cc0fa2e292c8f79770fc48bf234c1b5d63007b736d61c`
+- `src/game_att2_sim/__init__.py` — 153 bytes — SHA256 `4e259197bdeea916ae969a8d832e320b5d7ee42ff4142fff56a11d63850a65b6`
+- `tests/README.md` — 284 bytes — SHA256 `535300892fda631e56008055d2f177ab2a2c0e9b184b0702c43e5bb882487d9c`

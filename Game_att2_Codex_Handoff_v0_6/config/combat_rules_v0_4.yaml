@@ -1,0 +1,62 @@
+schema_version: "0.1"
+rules_version: "0.4"
+body_slots: [head, torso, left_arm, right_arm, legs, core]
+limb_thresholds:
+  intact_above: 0.70
+  damaged_above: 0.35
+  critical_above: 0.0
+acting_limb_multipliers:
+  intact: 1.0
+  damaged: 0.75
+  critical: 0.5
+blood:
+  collapse_at: 0
+  critical_max: 20
+  dangerous_max: 50
+  normal_max: 100
+  strong_max: 140
+panic_pulse:
+  trigger_below: 25
+  gain: 10
+  cap: 35
+  uses_per_fight: 1
+soft_collapse:
+  enabled: true
+  restore_blood: 12
+  max_uses_per_run: 1
+bleeding:
+  basic_loss: 5
+  severe_loss: 8
+  per_round_cap: 20
+focus:
+  base_cost: 3
+  damaged_head_extra_cost: 2
+  critical_head_incomplete_chance: 0.5
+  max_uses_per_round: 1
+fast_items:
+  max_uses_per_round: 1
+unstable_graft:
+  twitch_rolls: [1]
+  works_rolls: [2, 3, 4]
+  ache_rolls: [5]
+  surge_rolls: [6]
+  twitch_extra_cost: 3
+  surge_cost_discount: 2
+  surge_unused_blood_gain: 2
+  ache_stress_disable_rolls: [1, 2]
+harvest:
+  emergency_graft_cost: 12
+  clean_unstable_rolls: [1]
+  stressed_unstable_rolls: [1, 2]
+  marked_salvage_cost: 8
+  marked_salvage_unusable_rolls: [1, 2]
+  marked_salvage_stressed_rolls: [3, 4, 5]
+  marked_salvage_clean_unstable_rolls: [6]
+  unmarked_salvage_cost: 15
+  unmarked_salvage_unusable_rolls: [1, 2, 3]
+  unmarked_salvage_stressed_rolls: [4, 5]
+  unmarked_salvage_unstable_rolls: [6]
+stabilized:
+  sever_success_rolls: [4, 5, 6]
+plead:
+  basic_threshold: 2
