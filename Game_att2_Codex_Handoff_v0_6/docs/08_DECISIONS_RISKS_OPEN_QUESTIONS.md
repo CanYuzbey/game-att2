@@ -1,5 +1,19 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## Sprint 0.6 decision record: historical 37 versus deterministic 25
+
+**Decision:** Preserve 37 Blood as historical paper evidence; use deterministic 25 Blood only as the current seed-42 simulator output, not as a balance target.
+
+**Evidence:** The paper record includes a spare-arm sale with no authoritative configured price or rule path. The source-compliant simulator logs 85 start, -10 Claim, -18 Hell Saw, -12 emergency graft, +2 Surge fallback, -3 Focus, -4 Guard Flesh, and -15 integration, ending at 25.
+
+**Reason:** Forcing either record to match would silently add or alter a gameplay transaction.
+
+**What remains flexible:** A future owner-approved bargain/sale rule, its value, and the intended balance target.
+
+**Revisit condition:** Owner provides a source-backed sale/bargain definition or playtest distributions justify a balance revision. Until then, automated tests use current deterministic behavior and neither isolated number determines balance.
+
+Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product evidence remains insufficient for Unity; Unity stays blocked.
+
 ## Locked identity/product decisions
 
 - single-player PC target;

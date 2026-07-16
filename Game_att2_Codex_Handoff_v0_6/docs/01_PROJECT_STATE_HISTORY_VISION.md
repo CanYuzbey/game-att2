@@ -150,6 +150,8 @@ S-001 start → Jeff → emergency graft → Anna → stabilization trade → gr
 
 The run began at 85 blood with a missing right arm. The player took Jeff's right arm, emergency-grafted it, rolled Unstable, sold the spare arm, and entered Anna's encounter with the new `Guard Flesh` action and graft risk. Against Anna, the player used Focus, defended the graft, managed blood, and ultimately accepted medical stabilization instead of taking another arm. At the table, the arm was integrated. The run ended at 37 blood with an Integrated Grafted Human Right Arm and the torso vulnerability still unresolved.
 
+The historical paper record was 37 Blood. It remains evidence, not an automated expected value. The current source-compliant seed-42 simulator result is 25 Blood under Combat Rules v0.4 and configuration. The difference is an unreconciled arithmetic/source-history contradiction, including an unconfigured spare-arm sale; neither isolated number is the intended balance target. Future balance decisions require distributions and playtests.
+
 The important result was not the exact number 37. It was the coherent body arc:
 
 ```text

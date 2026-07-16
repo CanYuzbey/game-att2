@@ -19,6 +19,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--seed", type=int, default=42, help="seed for deterministic runs")
     parser.add_argument("--strategy", choices=sorted(STRATEGIES), help="strategy for a scenario or batch")
     parser.add_argument("--batch", type=int, help="run this many mini-campaign seeds")
+    parser.add_argument("--table-choice", choices=("integrate_arm", "repair_torso", "strengthen_legs", "table_loan", "leave"))
+    parser.add_argument("--threat-profile", choices=("graft_pressure", "torso_pressure", "knockdown_pressure", "mixed_unknown_pressure"))
+    parser.add_argument("--fixture", help="controlled post-table probe fixture")
     parser.add_argument("--format", choices=("text", "json", "markdown"), default="text")
     parser.add_argument("--output", type=Path, help="write report to this path")
     parser.add_argument("--verbose", action="store_true", help="include detailed structured events in text output")
@@ -41,7 +44,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             else:
                 output = "\n\n".join(render_text(result, args.verbose) for result in results)
         else:
-            result = run_scenario(args.scenario or "mini_campaign", args.seed, args.strategy)
+            result = run_scenario(
+                args.scenario or "mini_campaign",
+                args.seed,
+                args.strategy,
+                table_choice=args.table_choice or "integrate_arm",
+                threat_profile=args.threat_profile or "graft_pressure",
+                fixture=args.fixture or "campaign_pretable",
+            )
             if args.format == "json":
                 output = render_json(result)
             elif args.format == "markdown":

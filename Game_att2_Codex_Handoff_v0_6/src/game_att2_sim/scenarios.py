@@ -294,8 +294,15 @@ def run_scenario(
     strategy: str | None = None,
     config: SimulatorConfig | None = None,
     rng: RNGService | None = None,
+    table_choice: str = "integrate_arm",
+    threat_profile: str = "graft_pressure",
+    fixture: str = "campaign_pretable",
 ) -> ScenarioResult:
     config = config or load_config()
+    if name == "post_table_probe":
+        from .probe import run_post_table_probe
+
+        return run_post_table_probe(config, seed, table_choice, threat_profile, fixture)
     declared = config.scenarios.get(name)
     if declared is None:
         raise ScenarioDefinitionError(f"unknown scenario: {name}")
@@ -326,7 +333,7 @@ def run_scenario(
 
 def run_all(seed: int = 42, config: SimulatorConfig | None = None) -> list[ScenarioResult]:
     config = config or load_config()
-    return [run_scenario(name, seed=seed, config=config) for name in config.scenarios]
+    return [run_scenario(name, seed=seed, config=config) for name in config.scenarios if name != "post_table_probe"]
 
 
 def run_batch(

@@ -132,6 +132,7 @@ class ScenarioMetrics:
     actions: dict[str, int] = field(default_factory=dict)
     body_changes: list[str] = field(default_factory=list)
     final_body_summary: str = ""
+    probe_metrics: dict[str, object] = field(default_factory=dict)
 
 
 @dataclass

@@ -116,6 +116,8 @@ Sequence:
 - integrate arm at table;
 - finish at 37 blood with changed body and remaining damaged torso.
 
+Reconciliation note: 37 Blood is retained as historical paper evidence only. Current authoritative simulation resolves seed 42 to 25 Blood under Combat Rules v0.4/configuration. The missing configured spare-arm sale and paper arithmetic make the records unreconciled; 37 is not an automated expected value and 25 is not an intended balance target.
+
 Gate result:
 
 - pass for deterministic Python simulator;

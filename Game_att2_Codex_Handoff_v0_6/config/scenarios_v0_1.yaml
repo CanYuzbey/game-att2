@@ -46,3 +46,9 @@ scenarios:
     encounters: [jeff, anna]
     table: true
     default_strategy: balanced
+  post_table_probe:
+    description: NON_CANONICAL_VALIDATION_ONLY downstream table consequence probe.
+    start_body: s001
+    default_strategy: balanced
+    marker: NON_CANONICAL_VALIDATION_ONLY
+    pressure_distribution: [graft_pressure, torso_pressure, knockdown_pressure]
