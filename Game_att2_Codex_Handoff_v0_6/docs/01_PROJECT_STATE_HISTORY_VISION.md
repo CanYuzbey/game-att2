@@ -191,6 +191,10 @@ The simulator is not expected to prove fun. It is expected to find contradiction
 
 ## 9. Future vision
 
+### Current paper-test status
+
+Encounter 3 paper structure and moderated human-test operations are prepared. Human testing has not yet run. Encounter implementation and Unity remain blocked pending real session evidence and owner approval.
+
 ### Near term
 
 1. Implement simulator v0.1.
