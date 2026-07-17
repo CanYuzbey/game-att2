@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import pytest
+from dataclasses import replace
 
 from game_att2_sim.config_loader import load_config
 from game_att2_sim.probe import (
@@ -12,6 +13,9 @@ from game_att2_sim.probe import (
     table_cost_overlay,
 )
 from game_att2_sim.scenarios import run_scenario
+from game_att2_sim.enums import LimbTag, Slot
+from game_att2_sim.errors import IllegalActionError
+from game_att2_sim.scenarios import _session
 
 
 def test_probe_is_noncanonical_and_does_not_change_campaign_regression() -> None:
@@ -35,8 +39,8 @@ def test_controlled_fixtures_are_reported(fixture: str) -> None:
 def test_each_pressure_profile_is_explicit(profile: str) -> None:
     result = run_post_table_probe(load_config(), 42, "leave", profile)
     if profile == "knockdown_pressure":
-        assert result.metrics.result == "not_identifiable"
-        assert any(note.startswith("BLOCKED:") for note in result.notes)
+        assert result.metrics.result == "completed"
+        assert result.metrics.probe_metrics["pressure"]["knockdown_attempts"] == 4
     else:
         assert result.metrics.probe_metrics["threat_profile"] == profile
 
@@ -72,3 +76,35 @@ def test_diagnostic_chooser_uses_only_declared_information() -> None:
     config = load_config()
     assert choose_table_option(config, "unstable_damaged_dangerous", "known_next_threat", "graft_pressure") == "integrate_arm"
     assert choose_table_option(config, "stable_damaged_comfortable", "unknown_next_threat") == "leave"
+
+
+def test_brace_downed_fast_stand_and_action_rejection() -> None:
+    session = _session("mini_campaign", 42, "balanced", load_config())
+    player = session.player
+    legs = player.body.slots[Slot.LEGS]
+    legs.definition = replace(legs.definition, id="braced_human_legs", name="Braced Human Legs")
+    session.engine.start_encounter(player)
+    assert player.brace_charges == 1
+    assert not session.engine.resolve_knockdown(player, "test", roll=6)
+    assert player.brace_charges == 0 and not player.downed
+    assert session.engine.resolve_knockdown(player, "test", roll=6)
+    session.engine.fast_item(player, "blood_bag")
+    assert player.downed
+    session.engine.stand(player)
+    with pytest.raises(IllegalActionError):
+        session.engine.grip(player, player, player.body.slots[Slot.TORSO])
+    assert any(event.event_type == "action_rejected_while_downed" for event in session.log.events)
+
+
+def test_failed_knockdown_preserves_brace_and_bleeding_can_collapse() -> None:
+    session = _session("mini_campaign", 42, "balanced", load_config())
+    player = session.player
+    legs = player.body.slots[Slot.LEGS]
+    legs.definition = replace(legs.definition, id="braced_human_legs", name="Braced Human Legs")
+    session.engine.start_encounter(player)
+    assert not session.engine.resolve_knockdown(player, "test", roll=1)
+    assert player.brace_charges == 1
+    player.blood = 3
+    player.body.slots[Slot.TORSO].tags.add(LimbTag.BLEEDING)
+    session.engine.start_round(player)
+    assert player.blood == 12 and player.soft_collapse_used

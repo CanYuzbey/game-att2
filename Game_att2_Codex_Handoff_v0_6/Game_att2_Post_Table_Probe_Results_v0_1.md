@@ -120,3 +120,7 @@ The probe establishes conditional downstream observability for graft instability
 4. Decide what evidence threshold, beyond this non-canonical probe, is required before an encounter is designed.
 
 No production stage begins from this report.
+
+## Sprint 0.6.1 addendum
+
+The prior blocked leg result is superseded by the owner-approved Tempo Loss rule. The non-canonical rerun now uses canonical Downed, Stand, and encounter-scoped Brace semantics. Strengthen Legs shows situational tempo protection; see `Game_att2_Knockdown_Brace_Validation_v0_1.md`. Unity remains blocked.

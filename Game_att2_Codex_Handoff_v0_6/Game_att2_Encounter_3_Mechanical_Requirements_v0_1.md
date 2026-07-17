@@ -6,7 +6,7 @@ This is a requirements brief only. It does not design, name, or implement Encoun
 
 - Threaten the grafted right arm often enough for Guard Flesh and remaining Unstable checks to matter.
 - Include an observable damaged-torso/Bleeding pressure if Repair Torso is to be evaluated.
-- Resolve or deliberately avoid Knockdown until an owner approves its minimal consequence and Brace timing.
+- Include Knockdown only with the approved Downed -> mandatory Stand and one automatic Brace charge semantics.
 - Run long enough for at least three to four player rounds after the table.
 - Present Blood pressure that can make a 12-18 Blood table spend meaningful without assuming collapse is the desired outcome.
 - Keep threats readable before commitment when evaluating a known-threat table policy; include an explicitly unknown condition only for a separate uncertainty test.
@@ -32,7 +32,7 @@ This is a requirements brief only. It does not design, name, or implement Encoun
 
 - Encounter implementation.
 - New enemy actions, limbs, items, rewards, harvests, dialogue, maps, movement, positioning, generalized debt, procedural generation, Unity, or save/load.
-- A Knockdown action-loss rule until owner approval.
+- Any expansion beyond the approved minimal Knockdown/Brace rule.
 - Balance costs or a claim that the probe proves fun.
 
 ## Rational-choice targets

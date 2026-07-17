@@ -78,6 +78,15 @@ def spend_blood(
     _thresholds(actor, before, config, log, metrics, tutorial, rng)
 
 
+def lose_blood(actor: CombatantRuntime, amount: int, reason: str, config: SimulatorConfig, log: EventLog, metrics: ScenarioMetrics, tutorial: bool, rng: RNGService) -> None:
+    """Involuntary loss may reduce Blood to zero; voluntary spends remain affordability-checked."""
+    before = actor.blood
+    actor.blood = max(0, actor.blood - amount)
+    metrics.blood_spent += before - actor.blood
+    log.emit("blood_changed", actor.id, reason=reason, before=before, delta=actor.blood - before, after=actor.blood)
+    _thresholds(actor, before, config, log, metrics, tutorial, rng)
+
+
 def gain_blood(
     actor: CombatantRuntime,
     amount: int,
@@ -207,6 +216,7 @@ class RuleEngine:
         self.log.next_round()
         self.metrics.rounds = self.log.round_number
         self.log.set_phase(Phase.START)
+        player.normal_action_consumed = False
         if player.blood <= self.config.rules["blood"]["critical_max"]:
             self.metrics.critical_rounds += 1
         for limb in player.body.slots.values():
@@ -217,17 +227,45 @@ class RuleEngine:
                     limb.state = recalculate_state(limb)
                     _record_state(limb, old, self.log, player, "temporary disable expired")
             if LimbTag.BLEEDING in limb.tags:
-                spend_blood(
-                    player,
-                    self.config.rules["bleeding"]["basic_loss"],
-                    "Bleeding",
-                    self.config,
-                    self.log,
-                    self.metrics,
-                    self.tutorial,
-                    self.rng,
-                )
+                lose_blood(player, self.config.rules["bleeding"]["basic_loss"], "Bleeding", self.config, self.log, self.metrics, self.tutorial, self.rng)
         self.unstable_checks(player)
+
+    def start_encounter(self, player: CombatantRuntime) -> None:
+        legs = player.body.slots[Slot.LEGS]
+        player.brace_charges = int(legs.definition.id == "braced_human_legs" and is_usable(legs))
+        self.log.emit("brace_reset", player.id, before=player.brace_charges, after=player.brace_charges)
+
+    def resolve_knockdown(self, player: CombatantRuntime, source: str, roll: int, threshold: int = 4) -> bool:
+        before = player.brace_charges
+        self.log.emit("knockdown_attempted", source, target_id=player.id, roll=roll, threshold=threshold, brace_before=before, downed_before=player.downed)
+        if roll < threshold:
+            self.log.emit("knockdown_failed", source, target_id=player.id, roll=roll, threshold=threshold, brace_after=player.brace_charges)
+            return False
+        legs = player.body.slots[Slot.LEGS]
+        if not player.downed and player.brace_charges and is_usable(legs):
+            player.brace_charges -= 1
+            self.log.emit("knockdown_prevented_by_brace", source, target_id=player.id, brace_before=before, brace_after=player.brace_charges, downed_after=False)
+            return False
+        if player.downed:
+            self.log.emit("knockdown_failed", source, target_id=player.id, reason="already_downed", brace_after=player.brace_charges)
+            return False
+        player.downed = True
+        self.log.emit("downed_applied", source, target_id=player.id, downed_before=False, downed_after=True)
+        return True
+
+    def stand(self, player: CombatantRuntime) -> None:
+        if not player.downed:
+            raise IllegalActionError("Stand requires Downed")
+        if player.normal_action_consumed:
+            raise IllegalActionError("normal action already consumed")
+        player.downed = False
+        player.normal_action_consumed = True
+        self.log.emit("stand_performed", player.id, action_consumed=True, downed_after=False)
+
+    def _require_normal_action(self, player: CombatantRuntime, action: str) -> None:
+        if player.downed or player.normal_action_consumed:
+            self.log.emit("action_rejected_while_downed", player.id, action=action, downed=player.downed, action_consumed=player.normal_action_consumed)
+            raise IllegalActionError(f"{action} is unavailable while Downed or after Stand")
 
     def end_round(self, player: CombatantRuntime) -> None:
         """Resolve benefits that depend on not using a limb this round."""
@@ -263,6 +301,7 @@ class RuleEngine:
             self.log.emit("unstable_check", player.id, slot=limb.slot.value, roll=roll, result=limb.unstable_result)
 
     def focus(self, player: CombatantRuntime, intent: str, exact: bool = True) -> str:
+        self._require_normal_action(player, "Focus")
         self.log.set_phase(Phase.FOCUS)
         head = require_source(player, Slot.HEAD)
         if getattr(head, "focused_round", None) == self.log.round_number:
@@ -316,6 +355,7 @@ class RuleEngine:
         self.log.emit("fast_item_used", player.id, item=item_id)
 
     def claim(self, player: CombatantRuntime, target: LimbRuntime) -> None:
+        self._require_normal_action(player, "Claim the Cut")
         self.log.set_phase(Phase.MAIN)
         if player.inventory.get("claim_the_cut", 0) <= 0:
             raise IllegalActionError("Claim the Cut is unavailable")
@@ -326,6 +366,7 @@ class RuleEngine:
         self.log.emit("limb_marked", player.id, slot=target.slot.value, target=target.name)
 
     def grip(self, player: CombatantRuntime, target_owner: CombatantRuntime, target: LimbRuntime) -> HarvestQuality | None:
+        self._require_normal_action(player, "Grip Strike")
         self.log.set_phase(Phase.MAIN)
         source = require_source(player, Slot.LEFT_ARM)
         damage = action_damage(player, source, self.config.actions["grip_strike"].damage)
@@ -333,6 +374,7 @@ class RuleEngine:
         return apply_damage(target_owner, target, damage, "Grip Strike", self.log, clean=False)
 
     def scissors(self, player: CombatantRuntime, target_owner: CombatantRuntime, target: LimbRuntime) -> HarvestQuality | None:
+        self._require_normal_action(player, "Bone Scissors")
         self.log.set_phase(Phase.MAIN)
         if player.inventory.get("bone_scissors", 0) <= 0:
             raise IllegalActionError("Bone Scissors already used this fight")
@@ -362,6 +404,7 @@ class RuleEngine:
         raise InvalidTargetError("Bone Scissors require a Damaged or Critical limb")
 
     def saw(self, player: CombatantRuntime, target_owner: CombatantRuntime, target: LimbRuntime) -> HarvestQuality | None:
+        self._require_normal_action(player, "Hell Saw")
         self.log.set_phase(Phase.MAIN)
         if player.inventory.get("hell_saw", 0) <= 0:
             raise IllegalActionError("Hell Saw already used this fight")
@@ -462,6 +505,7 @@ class RuleEngine:
         )
 
     def guard_flesh(self, player: CombatantRuntime) -> None:
+        self._require_normal_action(player, "Guard Flesh")
         self.log.set_phase(Phase.MAIN)
         arm = require_source(player, Slot.RIGHT_ARM)
         self.limb_action_cost(player, arm, self.config.actions["guard_flesh"].cost, "Guard Flesh")

@@ -122,11 +122,18 @@ Head modifiers:
 - Reduce the next incoming limb-targeting damage by 50% for the round.
 - The source arm is committed and cannot source another main action that round.
 
+### Downed and Stand
+
+An unresolved Knockdown applies `Downed`. While Downed, attacks, Focus, Guard Flesh, tools, and other normal actions are illegal. Fast medical items remain legal.
+
+At the next action opportunity, the character must spend their normal action to `Stand`. Stand removes Downed, deals no damage, creates no harvest, does not clear other conditions, and does not permit another normal action that turn.
+
 ### Brace
 
-- Source: Weak Human Legs.
-- Cost: 0.
-- Prevent one Knockdown per fight. Knockdown is minimally represented in v0.1; do not build a broad movement system.
+- Strengthened/Braced Human Legs grant one automatic Brace charge per encounter.
+- On the first otherwise-successful Knockdown, Brace cancels the Knockdown, consumes the charge, and prevents Downed.
+- Brace does not trigger on failed attempts, while already Downed, without a charge, or if the legs are unusable.
+- The charge refreshes at encounter start. There is no reaction prompt or manual Brace timing.
 
 ## 7. Fast items
 

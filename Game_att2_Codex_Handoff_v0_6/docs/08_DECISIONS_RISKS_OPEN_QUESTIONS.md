@@ -14,6 +14,20 @@
 
 Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product evidence remains insufficient for Unity; Unity stays blocked.
 
+## Sprint 0.6.1 decision record: Knockdown and Brace
+
+**Decision:** Can approved Option A, Tempo Loss.
+
+**Owner:** Can Yuzbey.
+
+**Reason:** Strengthen Legs required a minimal, legible downstream consequence without adding movement or a broad status system.
+
+**Rule:** Unresolved Knockdown applies Downed; the next normal action must Stand. Fast medical remains legal before Stand. Braced legs automatically cancel one successful Knockdown per encounter and refresh only at encounter start.
+
+**What remains flexible:** Knockdown prevalence, future limb charge counts, visual presentation, animation, audio feedback, and enemy identity.
+
+**Revisit condition:** Rerun validation shows repeated tempo-lock, no meaningful leg value, or a future encounter requires a different bounded consequence.
+
 ## Locked identity/product decisions
 
 - single-player PC target;

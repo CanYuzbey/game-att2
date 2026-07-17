@@ -158,7 +158,7 @@ def _torso_round(session: Any) -> dict[str, int]:
 def _run_profile(session: Any, profile: str) -> tuple[dict[str, Any], list[str]]:
     if profile not in THREAT_PROFILES:
         raise ScenarioDefinitionError(f"unknown probe threat profile: {profile}")
-    totals: dict[str, Any] = {"profile": profile, "rounds": 0, "damage_prevented": 0, "guard_attempts": 0, "right_arm_available_rounds": 0, "clotting_cream_uses": 0, "knockdown_attempts": 0, "prevented_knockdowns": 0, "unresolved_knockdowns": 0}
+    totals: dict[str, Any] = {"profile": profile, "rounds": 0, "damage_prevented": 0, "guard_attempts": 0, "right_arm_available_rounds": 0, "clotting_cream_uses": 0, "knockdown_attempts": 0, "failed_knockdowns": 0, "prevented_knockdowns": 0, "downed_applications": 0, "stand_actions": 0, "fast_while_downed": 0, "illegal_actions_rejected": 0}
     notes: list[str] = []
     sequence = [profile] * 4
     if profile == "mixed_unknown_pressure":
@@ -178,8 +178,22 @@ def _run_profile(session: Any, profile: str) -> tuple[dict[str, Any], list[str]]
         totals["rounds"] = cast(int, totals["rounds"]) + 1
         if selected == "knockdown_pressure":
             totals["knockdown_attempts"] = cast(int, totals["knockdown_attempts"]) + 1
-            notes.append("BLOCKED: owner-approved mechanical definition required for unresolved Knockdown consequence")
-            session.log.emit("probe_knockdown_blocked", None, marker=PROBE_MARKER)
+            downed = session.engine.resolve_knockdown(session.player, PROBE_MARKER, session.rng.randint(1, 6))
+            if downed:
+                totals["downed_applications"] = cast(int, totals["downed_applications"]) + 1
+                if session.player.inventory.get("blood_bag", 0):
+                    session.engine.fast_item(session.player, "blood_bag")
+                    totals["fast_while_downed"] = cast(int, totals["fast_while_downed"]) + 1
+                session.engine.stand(session.player)
+                totals["stand_actions"] = cast(int, totals["stand_actions"]) + 1
+                try:
+                    session.engine.grip(session.player, session.player, session.player.body.slots[Slot.TORSO])
+                except IllegalActionError:
+                    totals["illegal_actions_rejected"] = cast(int, totals["illegal_actions_rejected"]) + 1
+            elif session.player.brace_charges == 0:
+                totals["prevented_knockdowns"] = cast(int, totals["prevented_knockdowns"]) + 1
+            else:
+                totals["failed_knockdowns"] = cast(int, totals["failed_knockdowns"]) + 1
             continue
         result = _graft_round(session) if selected == "graft_pressure" else _torso_round(session)
         for key, value in result.items():
@@ -230,6 +244,7 @@ def run_post_table_probe(
             notes.append(f"illegal table choice: {error}")
     pressure: dict[str, object] = {}
     if legal:
+        session.engine.start_encounter(session.player)
         pressure, blocked = _run_profile(session, threat_profile)
         notes.extend(blocked)
     debt_paid = _settle_debt(session) if legal else True
