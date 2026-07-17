@@ -28,6 +28,14 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 
 **Revisit condition:** Rerun validation shows repeated tempo-lock, no meaningful leg value, or a future encounter requires a different bounded consequence.
 
+## Sprint 0.7 decision record: Minotaur Warden paper encounter
+
+**Decision:** Can approved Minotaur Warden for canonical paper design/testing only.
+
+**Rule:** Charge tests Knockdown/Brace, Cleave tests torso/Bleeding, and Horn Hook tests right-arm/Guard pressure using existing rules only.
+
+**Revisit condition:** Human paper evidence shows unreadable telegraphs, universal table choice, or a need for prohibited mechanics.
+
 ## Locked identity/product decisions
 
 - single-player PC target;
