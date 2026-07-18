@@ -195,6 +195,8 @@ The simulator is not expected to prove fun. It is expected to find contradiction
 
 Encounter 3 paper structure and moderated human-test operations are prepared. Human testing has not yet run. Encounter implementation and Unity remain blocked pending real session evidence and owner approval.
 
+Independent human pilot recruitment is unavailable. A controlled N=1 designer self-play pilot is approved only as fallback evidence for flow, arithmetic, obvious ambiguity, personal experience, and gross balance problems. External human validation is deferred; Encounter 3 implementation and Unity remain blocked.
+
 ### Near term
 
 1. Implement simulator v0.1.

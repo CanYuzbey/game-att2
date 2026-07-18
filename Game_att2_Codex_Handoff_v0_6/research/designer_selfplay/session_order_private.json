@@ -1,0 +1,12 @@
+{
+  "warning": "DO NOT OPEN BEFORE ALL FOUR SESSIONS ARE COMPLETE",
+  "classification": "DESIGNER SELF-PLAY EVIDENCE; N=1; participant is project owner/designer; learning contamination unavoidable.",
+  "generation_method": "Python random.Random with explicit seed, shuffled once using Fisher-Yates implementation.",
+  "seed": 20260718,
+  "order": [
+    {"session_id": "SELF-S01", "condition": "Unknown Threat", "script": "B"},
+    {"session_id": "SELF-S02", "condition": "Known Threat", "script": "B"},
+    {"session_id": "SELF-S03", "condition": "Known Threat", "script": "A"},
+    {"session_id": "SELF-S04", "condition": "Unknown Threat", "script": "A"}
+  ]
+}
