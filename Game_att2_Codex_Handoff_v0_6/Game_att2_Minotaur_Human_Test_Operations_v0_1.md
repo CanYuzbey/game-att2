@@ -1,5 +1,7 @@
 # Minotaur Warden Human Test Operations v0.1
 
+> **SUPERSEDED BEFORE ANY HUMAN SESSION.** Preserve as historical planning. Its assignment matrix and conditions must not be used. Use the v0.2 paper specification and P01–P08 record pack.
+
 Status: readying real moderated sessions only. No human testing has been run and this document contains no participant evidence.
 
 ## Operations findings

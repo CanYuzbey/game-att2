@@ -1,5 +1,15 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-07-18 owner decision: Encounter 3 bounded causal paper requirements
+
+**Decision:** Encounter 3 is not pure endurance. For paper testing only, it uses fixed fixture `E3-PRETABLE-01`, four table choices (Loan excluded), Warden right-arm/legs/torso target zones, source-derived actions, state-aware Momentum/Butcher policies, bounded combat incapacity, and an eight-round unresolved cap.
+
+**Evidence gate:** Eight real free-choice moderated sessions P01–P08. `SELF-S01`/`SELF-S02` remain contaminated designer diagnostics and do not count.
+
+**Boundary:** No Warden Blood, reward/graft value, horns, organs, penetration, death, surrender, bargaining, escape, personality, generalized AI, runtime configuration/source, simulator scenario, or Unity is approved.
+
+**Reconciliation:** `AGENTS.md` permits owner-approved paper research while retaining the runtime prohibition. Earlier fixed-sequence Minotaur v0.1 materials are historical and superseded for future moderated sessions.
+
 ## 2026-07-18 owner decision: state-derived outcomes
 
 **Decision:** Actions change supported runtime state; updated state determines current capabilities, affordances, forced consequences, and legal/rational responses. Actions do not directly select authored endings.
@@ -37,6 +47,8 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 **Revisit condition:** Rerun validation shows repeated tempo-lock, no meaningful leg value, or a future encounter requires a different bounded consequence.
 
 ## Sprint 0.7 decision record: Minotaur Warden paper encounter
+
+**Status:** Superseded for future moderated testing by the 2026-07-18 bounded causal paper requirements. Preserve the earlier Charge/Cleave/Horn Hook model only as historical walkthrough context; do not use it for P01–P08.
 
 **Decision:** Can approved Minotaur Warden for canonical paper design/testing only.
 
@@ -110,6 +122,9 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 | Simulator overbuild | Medium | High | frameworks/content unrelated to tests | AGENTS scope gate |
 | Rule/config drift | Medium | High | prose and code values diverge | config validation and report versioning |
 | Premature Unity | High | Very high | engine work before results review | explicit blocked gate |
+| Facilitator preserves policy over state | Medium | Very high | unusable source still acts | mandatory intent revalidation and cancellation log |
+| Paper target zones become implied anatomy | Medium | High | moderator invents horns/organs/weak points | mechanical-zone boundary and contamination rule |
+| Round cap mistaken for victory | Medium | Medium | cap reported as player success | exact `UNRESOLVED — ROUND CAP` classification |
 
 ## Revisit triggers
 

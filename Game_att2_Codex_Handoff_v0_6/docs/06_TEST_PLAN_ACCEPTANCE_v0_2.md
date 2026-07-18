@@ -184,6 +184,27 @@ Minimum report:
 
 ## 4. Acceptance gate
 
+## 4A. Encounter 3 moderated paper-test gate
+
+This is paper evidence only and does not alter simulator implementation acceptance. Run eight valid free-choice human sessions using fixture `E3-PRETABLE-01` and the P01–P08 Known/Unknown × Policy A/B matrix.
+
+A positive signal requires all ten:
+
+1. At least six participants explain one target-damage → weakened/lost Warden-action relationship.
+2. At least two strategic families produce a non-collapse result.
+3. No player action is required in every successful session.
+4. No Warden action executes from an unusable source.
+5. No facilitator invents anatomy or a hidden weak point.
+6. Known Threat changes planning without one universal table choice.
+7. At least two table options remain defensible in observed play.
+8. Logged state and decisions explain failures.
+9. No undocumented rescue, immunity, or narrative override occurs.
+10. Every participant encounters a meaningful consequence of the table choice.
+
+Revise if Strengthen is nearly mandatory; one policy causes unavoidable collapse; 40-Blood Leave dominates; Knockdown is not understood; source disabling is trivial/irrelevant; Guard or Repair lacks defensible use; the round cap frequently decides outcomes; moderators need biological judgment; or success relies on an unpublished rule.
+
+A material facilitator deviation contaminates that session and excludes it from aggregate conclusions. Eight valid sessions—not merely eight attempts—are required. Human testing does not authorize runtime implementation or Unity.
+
 ### Implementation pass
 
 - all mandatory unit tests pass;

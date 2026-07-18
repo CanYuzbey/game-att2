@@ -1,5 +1,7 @@
 # Minotaur Warden Participant Cards v0.1
 
+> **SUPERSEDED BEFORE ANY VALID HUMAN SESSION.** Do not issue these cards. Use `Game_att2_Encounter_3_Participant_Cards_v0_2.md`.
+
 ## Your body and resources
 
 Use the body state and Blood shown by the facilitator. Your torso can be vulnerable, your grafted right arm can use Guard Flesh, and your legs may be Braced after strengthening.

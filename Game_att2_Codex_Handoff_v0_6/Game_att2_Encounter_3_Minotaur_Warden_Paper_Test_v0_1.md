@@ -1,5 +1,7 @@
 # Game att2 Encounter 3: Minotaur Warden Paper Test v0.1
 
+> **SUPERSEDED FOR FUTURE MODERATED TESTING.** Preserve as historical designer-walkthrough evidence only. Fixed sequences, Bleeding, horns, four-round survival resolution, and its old fixture must not be used for P01–P08. Use `Game_att2_Encounter_3_Bounded_Causal_Paper_Spec_v0_2.md`.
+
 Status: canonical paper-design packet only. This is not Python, Unity, loot, final lore, or final balance.
 
 ## Purpose

@@ -1,5 +1,7 @@
 # Minotaur Warden Human Paper Test Sheet v0.1
 
+> **SUPERSEDED BEFORE ANY VALID HUMAN SESSION.** This sheet includes the old Loan/medical/four-round model. Use `Game_att2_Encounter_3_Session_Record_Pack_v0_1.md`.
+
 Run time: 15-25 minutes. Give the participant either Known or Unknown information only; do not explain simulator internals or preferred choices.
 
 ## Before play

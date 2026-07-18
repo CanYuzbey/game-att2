@@ -10,7 +10,8 @@ Implement the smallest trustworthy Python simulator that reproduces the currentl
 - The simulator exists to test rules, not to become a production game.
 - Do not silently change costs, probabilities, thresholds, encounter order, rewards, or meanings.
 - When a rule is ambiguous, choose the simplest reversible implementation, make it configurable, and list the ambiguity in the final report.
-- Do not add enemies, items, systems, lore, UI frameworks, networking, persistence, or engine integrations.
+- Additional enemies and encounters may be defined in documentation and tested through owner-approved paper protocols. They must not be added to simulator source code, runtime configuration, production content, or Unity without a separate owner-approved implementation gate. Paper-test approval is not runtime approval.
+- Do not add runtime enemies, items, systems, lore, UI frameworks, networking, persistence, or engine integrations outside the currently approved simulator implementation scope.
 
 ## Required workflow
 

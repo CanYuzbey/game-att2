@@ -36,6 +36,12 @@ This is not a final GDD. It is the **current product source of truth** for Codex
 
 ## 1. Current Project Status
 
+### Encounter 3 paper-research reconciliation — 2026-07-18
+
+The owner approved Encounter 3 as a bounded causal pressure encounter for moderated paper testing only. Use fixed fixture `E3-PRETABLE-01`, four table options, three Warden paper target zones, state-aware Policies A/B, bounded combat incapacity, and an eight-round unresolved cap as defined in `Game_att2_Encounter_3_Bounded_Causal_Paper_Spec_v0_2.md`.
+
+This may test source damage and capability loss. It does not approve Warden runtime/config, death, harvest, anatomy, organs, penetration, surrender, bargaining, escape, personality, generalized AI, or Unity. Eight valid P01–P08 human sessions are the next evidence gate. `SELF-S01` and `SELF-S02` remain contaminated designer diagnostics.
+
 ```text
 Current maturity: Level 2.5 — Prototype Plan validated through internal paper tests
 Next target: Level 3 candidate — crude playable loop, but only as a simple simulator first
@@ -1406,6 +1412,8 @@ In simulator v0.1, Black Stitch is implemented primarily as Anna's trade/treatme
 | RQ-021 | Completion report maps requirements to tests and results | Critical |
 
 ## 29. Codex Implementation Gate
+
+Paper-test approval for Encounter 3 is not an implementation gate. Additional encounter definitions may exist in controlled documentation, but no Warden source, runtime YAML, simulator scenario, production content, or Unity work is authorized before a separate owner-approved runtime gate.
 
 Codex may implement the simulator now. Codex may not:
 

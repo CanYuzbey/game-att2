@@ -1,5 +1,7 @@
 # Minotaur Warden Facilitator Script v0.1
 
+> **SUPERSEDED BEFORE ANY VALID HUMAN SESSION.** Its fixed sequences, Bleeding, medical items, Table Loan, and four-round resolution conflict with the current decision. Use the bounded causal v0.2 specification and facilitator policy cards.
+
 ## Opening: read verbatim
 
 "Thank you for helping test this paper game encounter. I am testing the system, not you. There is no correct strategy. Please think aloud when comfortable; you may also stay quiet. I will explain rules factually, but I cannot recommend an action."

@@ -21,6 +21,10 @@ Codex must read these files in this order:
 11. `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md` — broader production workflow.
 12. `docs/10_CODEX_RETURN_CONTRACT.md` — required completion report.
 13. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` — required state-derived design and consequence governance.
+14. `Game_att2_Encounter_3_Owner_Decision_Reconciliation_v0_1.md` — paper-only decisions and boundaries.
+15. `Game_att2_Encounter_3_Bounded_Causal_Paper_Spec_v0_2.md` — current moderated paper specification.
+16. `Game_att2_Encounter_3_Participant_Cards_v0_2.md` and `Game_att2_Encounter_3_Facilitator_Policy_Cards_v0_1.md` — controlled test materials.
+17. `Game_att2_Encounter_3_Session_Record_Pack_v0_1.md` — blank P01–P08 evidence records.
 
 The systemic skill is an owner-approved design-governance amendment. It does not override the implementation precedence below or approve deferred mechanics.
 
@@ -49,3 +53,5 @@ This is a **validation tool**, not the final game.
 ## Explicitly excluded
 
 Unity, graphics, animation, map generation, save/load, meta progression, full dialogue, additional enemies, curses, rot, celestial systems, full debt economy, full deck/card systems, multiplayer, and store integration.
+
+Owner-approved additional enemies may be documented for controlled paper research only. Encounter 3 remains excluded from simulator source, runtime configuration, production content, and Unity.
