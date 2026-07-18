@@ -164,6 +164,12 @@ This was judged sufficient for a narrow Python simulator, but not sufficient for
 
 ## 7. Current condition
 
+### Systemic causal design governance update — 2026-07-18
+
+The owner approved state-derived outcomes as a foundational design principle. Future work must reason from action through state mutation, capability and affordance changes, forced consequences, and documented actor response; actions must not directly select endings. This is controlled systemic design, not approval for universal simulation or invented anatomy/behavior. The reusable requirements are in `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`.
+
+Designer self-play stopped after `SELF-S02`; both completed sessions remain `CONTAMINATED DESIGNER DIAGNOSTICS`. The Encounter 3 paper/runtime action-model gap remains unresolved. Encounter 3 runtime implementation remains blocked. Unity remains blocked.
+
 ### Confirmed
 
 - The conceptual hook is promising.

@@ -113,6 +113,12 @@ Default: if it does not prove the central loop, it does not enter the first prot
 
 ## 10. Core design standards
 
+### 10.1 Required systemic causal reasoning
+
+All future mechanic, encounter, implementation, audit, and acceptance work must apply `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`. An action must validate its current source, tool, resources, status, action economy, target, and reachability; mutate explicit state; recompute capabilities and affordances; and evaluate forced and behavioral consequences before a script selects the next action. Encounter scripts may express authored preference among legal actions but must yield to destroyed sources, unaffordable costs, status blocks, and encounter-viability results.
+
+Design gates must include starting state, objectives, action-source/cost matrix, capability-loss transitions, surrender/escape or explicit deferral, and state-derived termination checks. Acceptance must trace prior state → action/rule → mutation → capability/affordance change → consequence → resolution. Unsupported anatomy, psychology, surrender, escape, and emergent outcomes remain owner decisions; mark them deferred rather than inventing them.
+
 For every mechanic ask:
 
 ```text
@@ -183,6 +189,8 @@ AI output is untrusted until:
 Use hostile review:
 
 > Find every assumption, hidden dependency, architecture violation, missing test, scope creep, hallucinated API, license risk, and maintainability problem. Return issues, severity, and fixes.
+
+For systemic work, hostile review must also reject hard-coded answers, script immortality, resource theatre, decorative limb damage, outcome teleportation, bespoke branches disguised as emergence, narrative override of capability, universal rationality, and unapproved biological or behavioral invention. P0/P1 findings block acceptance.
 
 External tools/repos/assets require source, official docs/repo, license, maintenance, integration risk, and alternative.
 
@@ -289,6 +297,8 @@ Merge recommendation
 
 Warn on scope creep, mechanics without decisions, art before gameplay proof, AI code without tests, premature multiplayer, unclear platform, lore bloat, unsupported claims, unverified dependencies, UI overload, missing ownership/save awareness, no acceptance criteria, no playtest plan, or content expansion before vertical slice.
 
+Also warn when an encounter begins from one intended answer, state changes do not constrain capabilities, scripts continue after their sources fail, or “systemic” means either unlimited speculative simulation or a collection of encounter-specific branches.
+
 ## 24. Session handoff
 
 End major sessions with approved decisions, assumptions, open decisions, changed files, next tasks, risks, and suggested next prompt.
@@ -296,3 +306,5 @@ End major sessions with approved decisions, assumptions, open decisions, changed
 ## 25. Current Game att2 anchor
 
 Operate as a skeptical senior multidisciplinary game-development leadership team. The current gate allows only a narrow Python combat-loop simulator. Preserve user authority, evidence labels, scope controls, deterministic testing, requirements traceability, and explicit continue/revise/kill criteria. Do not let implementation convenience silently redesign the game.
+
+Required companion skill: `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`. The owner-approved correction is state-derived outcomes, not action-authored endings. This amendment changes causal design/review requirements only. Existing source precedence, evidence labels, AI quarantine, simulator scope, and stage gates remain unchanged. Encounter 3 runtime implementation and Unity remain blocked.

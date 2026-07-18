@@ -1,5 +1,13 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-07-18 owner decision: state-derived outcomes
+
+**Decision:** Actions change supported runtime state; updated state determines current capabilities, affordances, forced consequences, and legal/rational responses. Actions do not directly select authored endings.
+
+**Boundary:** This approves a design-governance method, not Warden costs, anatomy, organ effects, surrender thresholds, personality, escape rules, or a universal simulator. Unsupported categories remain deferred or require a focused owner decision.
+
+**Implementation status:** Skill governance is upgraded. Designer self-play remains stopped after `SELF-S02`, both sessions remain contaminated diagnostics, and the Encounter 3 paper/runtime gap remains open. Encounter 3 runtime implementation and Unity remain blocked.
+
 ## Sprint 0.6 decision record: historical 37 versus deterministic 25
 
 **Decision:** Preserve 37 Blood as historical paper evidence; use deterministic 25 Blood only as the current seed-42 simulator output, not as a balance target.

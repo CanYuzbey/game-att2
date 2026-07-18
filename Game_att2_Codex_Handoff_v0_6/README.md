@@ -20,6 +20,9 @@ Codex must read these files in this order:
 10. `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md` — what is locked, provisional, or unresolved.
 11. `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md` — broader production workflow.
 12. `docs/10_CODEX_RETURN_CONTRACT.md` — required completion report.
+13. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` — required state-derived design and consequence governance.
+
+The systemic skill is an owner-approved design-governance amendment. It does not override the implementation precedence below or approve deferred mechanics.
 
 ## Source precedence
 
