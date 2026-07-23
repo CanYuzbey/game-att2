@@ -66,6 +66,7 @@ class CombatantRuntime:
     inventory: dict[str, int]
     role: str
     plead_pressure: int = 0
+    plead_triggers: set[str] = field(default_factory=set)
     panic_pulse_used: bool = False
     soft_collapse_used: bool = False
     collapsed: bool = False
@@ -85,6 +86,20 @@ class EnemyIntent:
     source_slot: Slot | None
     target_slot: Slot | None
     clarity: IntentClarity
+
+
+@dataclass(frozen=True)
+class ActionAvailability:
+    action_id: str
+    label: str
+    timing: str
+    enabled: bool
+    reason: str | None = None
+    cost: int = 0
+    source_slot: Slot | None = None
+    target_slot: Slot | None = None
+    irreversible: bool = False
+    risk: str | None = None
 
 
 @dataclass(frozen=True)

@@ -14,6 +14,8 @@ class RNGService(Protocol):
 
     def choice(self, values: Sequence[T]) -> T: ...
 
+    def state_token(self) -> object: ...
+
 
 class SeededRNG:
     def __init__(self, seed: int) -> None:
@@ -27,6 +29,9 @@ class SeededRNG:
         if not values:
             raise ValueError("choice requires at least one value")
         return self._random.choice(values)
+
+    def state_token(self) -> object:
+        return self._random.getstate()
 
 
 class ScriptedRNG:
@@ -47,3 +52,6 @@ class ScriptedRNG:
             raise ValueError("choice requires at least one value")
         index = self.randint(0, len(values) - 1)
         return values[index]
+
+    def state_token(self) -> object:
+        return tuple(self._rolls), self._fallback

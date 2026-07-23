@@ -1,0 +1,450 @@
+Encounter: Jeff | Round: 1
+Blood: 85
+Statuses: none
+Main available: True
+Focus available: True
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - intact
+  left_arm: Human Left Arm - intact
+  right_arm: Missing Right Arm - missing
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Desperate Swing from left_arm against torso
+Actions:
+  focus: Focus [LEGAL; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [DISABLED: Requires a Bleeding target; cost=8]
+  grip_strike:head: Grip Strike -> Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Open Wound Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Jeff Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Jeff Right Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Weak Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Human Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Human Head (head) [LEGAL; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Open Wound Torso (torso) [LEGAL; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Jeff Left Arm (left_arm) [LEGAL; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Jeff Right Arm (right_arm) [LEGAL; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Weak Human Legs (legs) [LEGAL; cost=10]
+  claim_the_cut:core: Claim The Cut -> Human Heart (core) [LEGAL; cost=10]
+  bone_scissors:head: Bone Scissors -> Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Open Wound Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Jeff Left Arm (left_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Jeff Right Arm (right_arm) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Weak Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Human Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Human Head (head) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Open Wound Torso (torso) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Jeff Left Arm (left_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Jeff Right Arm (right_arm) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Weak Human Legs (legs) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Human Heart (core) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [DISABLED: Right Arm source is unavailable; cost=0]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: claim_the_cut:right_arm
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Jeff | Round: 2
+Blood: 75
+Statuses: none
+Main available: True
+Focus available: True
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - intact
+  left_arm: Human Left Arm - intact
+  right_arm: Missing Right Arm - missing
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Desperate Swing from left_arm against torso
+Actions:
+  focus: Focus [LEGAL; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [DISABLED: Requires a Bleeding target; cost=8]
+  grip_strike:head: Grip Strike -> Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Open Wound Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Jeff Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Jeff Right Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Weak Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Human Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Human Head (head) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Open Wound Torso (torso) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Jeff Left Arm (left_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Jeff Right Arm (right_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Weak Human Legs (legs) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:core: Claim The Cut -> Human Heart (core) [DISABLED: Claim the Cut is unavailable; cost=10]
+  bone_scissors:head: Bone Scissors -> Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Open Wound Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Jeff Left Arm (left_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Jeff Right Arm (right_arm) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Weak Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Human Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Human Head (head) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Open Wound Torso (torso) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Jeff Left Arm (left_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Jeff Right Arm (right_arm) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Weak Human Legs (legs) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Human Heart (core) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [DISABLED: Right Arm source is unavailable; cost=0]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: grip_strike:right_arm
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Jeff | Round: 3
+Blood: 75
+Statuses: none
+Main available: True
+Focus available: True
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - damaged
+  left_arm: Human Left Arm - intact
+  right_arm: Missing Right Arm - missing
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Desperate Swing from left_arm against torso
+Actions:
+  focus: Focus [LEGAL; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [DISABLED: Requires a Bleeding target; cost=8]
+  grip_strike:head: Grip Strike -> Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Open Wound Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Jeff Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Jeff Right Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Weak Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Human Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Human Head (head) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Open Wound Torso (torso) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Jeff Left Arm (left_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Jeff Right Arm (right_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Weak Human Legs (legs) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:core: Claim The Cut -> Human Heart (core) [DISABLED: Claim the Cut is unavailable; cost=10]
+  bone_scissors:head: Bone Scissors -> Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Open Wound Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Jeff Left Arm (left_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Jeff Right Arm (right_arm) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Weak Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Human Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Human Head (head) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Open Wound Torso (torso) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Jeff Left Arm (left_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Jeff Right Arm (right_arm) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Weak Human Legs (legs) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Human Heart (core) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [DISABLED: Right Arm source is unavailable; cost=0]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: hell_saw:right_arm
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Jeff | Round: 4
+Blood: 57
+Statuses: none
+Main available: True
+Focus available: True
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - critical
+  left_arm: Human Left Arm - intact
+  right_arm: Missing Right Arm - missing
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Desperate Swing from left_arm against torso
+Actions:
+  focus: Focus [LEGAL; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [DISABLED: Requires a Bleeding target; cost=8]
+  grip_strike:head: Grip Strike -> Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Open Wound Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Jeff Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Jeff Right Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Weak Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Human Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Human Head (head) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Open Wound Torso (torso) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Jeff Left Arm (left_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Jeff Right Arm (right_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Weak Human Legs (legs) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:core: Claim The Cut -> Human Heart (core) [DISABLED: Claim the Cut is unavailable; cost=10]
+  bone_scissors:head: Bone Scissors -> Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Open Wound Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Jeff Left Arm (left_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Jeff Right Arm (right_arm) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Weak Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Human Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Human Head (head) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Open Wound Torso (torso) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Jeff Left Arm (left_arm) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Jeff Right Arm (right_arm) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Weak Human Legs (legs) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Human Heart (core) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [DISABLED: Right Arm source is unavailable; cost=0]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: grip_strike:left_arm
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Jeff | Round: 5
+Blood: 57
+Statuses: none
+Main available: True
+Focus available: True
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - critical
+  left_arm: Human Left Arm - intact
+  right_arm: Missing Right Arm - missing
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Desperate Swing from left_arm against torso
+Actions:
+  focus: Focus [LEGAL; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [DISABLED: Requires a Bleeding target; cost=8]
+  grip_strike:head: Grip Strike -> Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Open Wound Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Jeff Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Jeff Right Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Weak Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Human Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Human Head (head) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Open Wound Torso (torso) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Jeff Left Arm (left_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Jeff Right Arm (right_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Weak Human Legs (legs) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:core: Claim The Cut -> Human Heart (core) [DISABLED: Claim the Cut is unavailable; cost=10]
+  bone_scissors:head: Bone Scissors -> Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Open Wound Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Jeff Left Arm (left_arm) [LEGAL; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Jeff Right Arm (right_arm) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Weak Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Human Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Human Head (head) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Open Wound Torso (torso) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Jeff Left Arm (left_arm) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Jeff Right Arm (right_arm) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Weak Human Legs (legs) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Human Heart (core) [DISABLED: Hell Saw already used this fight; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [DISABLED: Right Arm source is unavailable; cost=0]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: grip_strike:left_arm
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Post-Jeff | Round: 5
+Blood: 57
+Statuses: none
+Main available: False
+Focus available: False
+Fast available: False
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - critical
+  left_arm: Human Left Arm - intact
+  right_arm: Missing Right Arm - missing
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: none
+Actions:
+  emergency_graft: Emergency graft Jeff's Right Arm [LEGAL; cost=12; risk=Configured stability roll applies]
+  end_session: Decline graft and end session [LEGAL; cost=0]
+Select action: emergency_graft
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Anna | Round: 6
+Blood: 45
+Statuses: right_arm:grafted, right_arm:unstable
+Main available: True
+Focus available: True
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - critical
+  left_arm: Human Left Arm - intact
+  right_arm: Human Right Arm - intact (grafted, unstable)
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Surgical Jab from right_arm against torso
+Actions:
+  focus: Focus [LEGAL; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [DISABLED: Requires a Bleeding target; cost=8]
+  grip_strike:head: Grip Strike -> Dazed Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Stitched Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Human Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Crude Graft Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Leaking Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Dazed Human Head (head) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Stitched Torso (torso) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Human Left Arm (left_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Crude Graft Arm (right_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Human Legs (legs) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:core: Claim The Cut -> Leaking Heart (core) [DISABLED: Claim the Cut is unavailable; cost=10]
+  bone_scissors:head: Bone Scissors -> Dazed Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Stitched Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Human Left Arm (left_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Crude Graft Arm (right_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Leaking Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Dazed Human Head (head) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Stitched Torso (torso) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Human Left Arm (left_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Crude Graft Arm (right_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Human Legs (legs) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Leaking Heart (core) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [LEGAL; cost=7]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  accept_anna_trade: Accept Anna's stabilization trade [LEGAL; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: focus
+executed
+Encounter: Anna | Round: 6
+Blood: 42
+Statuses: right_arm:grafted, right_arm:unstable
+Main available: True
+Focus available: False
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - critical
+  left_arm: Human Left Arm - intact
+  right_arm: Human Right Arm - intact (grafted, unstable)
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Surgical Jab from right_arm against torso
+Actions:
+  focus: Focus [DISABLED: Focus already used this round; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [DISABLED: Requires a Bleeding target; cost=8]
+  grip_strike:head: Grip Strike -> Dazed Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Stitched Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Human Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Crude Graft Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Leaking Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Dazed Human Head (head) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Stitched Torso (torso) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Human Left Arm (left_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Crude Graft Arm (right_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Human Legs (legs) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:core: Claim The Cut -> Leaking Heart (core) [DISABLED: Claim the Cut is unavailable; cost=10]
+  bone_scissors:head: Bone Scissors -> Dazed Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Stitched Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Human Left Arm (left_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Crude Graft Arm (right_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Leaking Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Dazed Human Head (head) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Stitched Torso (torso) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Human Left Arm (left_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Crude Graft Arm (right_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Human Legs (legs) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Leaking Heart (core) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [LEGAL; cost=7]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  accept_anna_trade: Accept Anna's stabilization trade [LEGAL; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: guard_flesh
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Anna | Round: 7
+Blood: 30
+Statuses: torso:bleeding, right_arm:grafted, right_arm:unstable
+Main available: True
+Focus available: True
+Fast available: True
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - critical (bleeding)
+  left_arm: Human Left Arm - intact
+  right_arm: Human Right Arm - intact (grafted, unstable)
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: Surgical Jab from right_arm against torso
+Actions:
+  focus: Focus [LEGAL; cost=3; risk=Critical Head may reveal incomplete information]
+  blood_bag: Blood Bag [LEGAL; cost=0]
+  clotting_cream:torso: Clotting Cream [LEGAL; cost=8]
+  grip_strike:head: Grip Strike -> Dazed Human Head (head) [LEGAL; cost=0]
+  grip_strike:torso: Grip Strike -> Stitched Torso (torso) [LEGAL; cost=0]
+  grip_strike:left_arm: Grip Strike -> Human Left Arm (left_arm) [LEGAL; cost=0]
+  grip_strike:right_arm: Grip Strike -> Crude Graft Arm (right_arm) [LEGAL; cost=0]
+  grip_strike:legs: Grip Strike -> Human Legs (legs) [LEGAL; cost=0]
+  grip_strike:core: Grip Strike -> Leaking Heart (core) [LEGAL; cost=0]
+  claim_the_cut:head: Claim The Cut -> Dazed Human Head (head) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:torso: Claim The Cut -> Stitched Torso (torso) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:left_arm: Claim The Cut -> Human Left Arm (left_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:right_arm: Claim The Cut -> Crude Graft Arm (right_arm) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:legs: Claim The Cut -> Human Legs (legs) [DISABLED: Claim the Cut is unavailable; cost=10]
+  claim_the_cut:core: Claim The Cut -> Leaking Heart (core) [DISABLED: Claim the Cut is unavailable; cost=10]
+  bone_scissors:head: Bone Scissors -> Dazed Human Head (head) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:torso: Bone Scissors -> Stitched Torso (torso) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:left_arm: Bone Scissors -> Human Left Arm (left_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:right_arm: Bone Scissors -> Crude Graft Arm (right_arm) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:legs: Bone Scissors -> Human Legs (legs) [DISABLED: Target is too large for Bone Scissors; cost=6; risk=Stabilized targets may resist severing]
+  bone_scissors:core: Bone Scissors -> Leaking Heart (core) [DISABLED: Target must be Damaged or Critical; cost=6; risk=Stabilized targets may resist severing]
+  hell_saw:head: Hell Saw -> Dazed Human Head (head) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:torso: Hell Saw -> Stitched Torso (torso) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:left_arm: Hell Saw -> Human Left Arm (left_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:right_arm: Hell Saw -> Crude Graft Arm (right_arm) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:legs: Hell Saw -> Human Legs (legs) [LEGAL; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  hell_saw:core: Hell Saw -> Leaking Heart (core) [DISABLED: Hell Saw requires a Large target; cost=18; risk=Damaged/Critical Large targets use the configured sever roll]
+  guard_flesh: Guard Flesh [LEGAL; cost=4]
+  brace: Brace [LEGAL; cost=0]
+  stand: Stand [DISABLED: Stand requires Downed; cost=0]
+  accept_anna_trade: Accept Anna's stabilization trade [LEGAL; cost=0]
+  end_session: End research session [LEGAL; cost=0]
+Select action: accept_anna_trade
+Confirm irreversible action? [y/N]: y
+executed
+Encounter: Grafting Table | Round: 7
+Blood: 30
+Statuses: torso:bleeding, right_arm:grafted
+Main available: True
+Focus available: False
+Fast available: False
+Body:
+  head: Human Head - intact
+  torso: Damaged Human Torso - critical (bleeding)
+  left_arm: Human Left Arm - intact
+  right_arm: Human Right Arm - intact (grafted)
+  legs: Weak Human Legs - intact
+  core: Human Heart - intact
+Visible intent: none
+Actions:
+  table:integrate_arm: Properly Seat Grafted Arm [LEGAL; cost=15]
+  table:repair_torso: Repair Damaged Human Torso [LEGAL; cost=18]
+  table:strengthen_legs: Strengthen Weak Legs [LEGAL; cost=12]
+  table:table_loan: Table Loan [LEGAL; cost=0]
+  table:leave: Leave Unchanged [LEGAL; cost=0]
+Select action: table:integrate_arm
+Confirm irreversible action? [y/N]: y
+executed
+Session OWNER-DIAG-SHELL-001 (OWNER_DIAGNOSTIC)
+Seed: 42; interface: 0.1
+Outcome: COMPLETED; Anna path: stabilization_trade
+Table choice: integrate_arm
+Final Blood: 25
+Decisions: 10; events: 49
+Final body:
+- head: Human Head - intact
+- torso: Damaged Human Torso - critical (bleeding)
+- left_arm: Human Left Arm - intact
+- right_arm: Human Right Arm - intact (grafted, integrated)
+- legs: Weak Human Legs - intact
+- core: Human Heart - intact

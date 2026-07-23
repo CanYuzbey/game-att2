@@ -1,0 +1,12 @@
+[
+  {"action": "claim_the_cut:right_arm", "confirmed": true},
+  {"action": "grip_strike:right_arm", "confirmed": true},
+  {"action": "hell_saw:right_arm", "confirmed": true},
+  {"action": "grip_strike:left_arm", "confirmed": true},
+  {"action": "grip_strike:left_arm", "confirmed": true},
+  {"action": "emergency_graft", "confirmed": true},
+  {"action": "focus"},
+  {"action": "guard_flesh", "confirmed": true},
+  {"action": "accept_anna_trade", "confirmed": true},
+  {"action": "table:integrate_arm", "confirmed": true}
+]

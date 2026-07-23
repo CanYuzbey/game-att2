@@ -9,7 +9,13 @@ from .config_loader import SimulatorConfig
 from .enums import HarvestQuality, LimbState, LimbTag, Phase, Slot, UnstableResult
 from .errors import IllegalActionError, InsufficientBloodError, InvalidTargetError
 from .events import EventLog
-from .models import CombatantRuntime, HarvestedLimb, LimbRuntime, ScenarioMetrics
+from .models import (
+    ActionAvailability,
+    CombatantRuntime,
+    HarvestedLimb,
+    LimbRuntime,
+    ScenarioMetrics,
+)
 from .rng import RNGService
 
 
@@ -210,6 +216,185 @@ class RuleEngine:
     log: EventLog
     metrics: ScenarioMetrics
     tutorial: bool = False
+
+    def main_action_availability(
+        self,
+        actor: CombatantRuntime,
+        action_id: str,
+        target: LimbRuntime | None = None,
+    ) -> ActionAvailability:
+        """Return the rules-owned affordance for one approved Main action."""
+        label = action_id.replace("_", " ").title()
+        source_slot: Slot | None = None
+        cost = 0
+        reason: str | None = None
+        risk: str | None = None
+        allow_downed = action_id == "stand"
+        if actor.normal_action_consumed:
+            reason = "Main action already consumed this round"
+        elif actor.downed and not allow_downed:
+            reason = "Downed requires Stand"
+        elif action_id == "stand":
+            if not actor.downed:
+                reason = "Stand requires Downed"
+        elif action_id == "grip_strike":
+            source_slot = Slot.LEFT_ARM
+            if not is_usable(actor.body.slots[source_slot]):
+                reason = "Left Arm source is unavailable"
+        elif action_id == "claim_the_cut":
+            cost = int(self.config.items["claim_the_cut"]["cost"])
+            if actor.inventory.get("claim_the_cut", 0) <= 0:
+                reason = "Claim the Cut is unavailable"
+            elif actor.blood < cost:
+                reason = f"Requires {cost} Blood"
+        elif action_id == "bone_scissors":
+            cost = int(self.config.items["bone_scissors"]["cost"])
+            if actor.inventory.get("bone_scissors", 0) <= 0:
+                reason = "Bone Scissors already used this fight"
+            elif target is None:
+                reason = "A target limb is required"
+            elif target.definition.size not in self.config.items["bone_scissors"]["valid_sizes"]:
+                reason = "Target is too large for Bone Scissors"
+            elif target.state not in {LimbState.DAMAGED, LimbState.CRITICAL}:
+                reason = "Target must be Damaged or Critical"
+            elif actor.blood < cost:
+                reason = f"Requires {cost} Blood"
+            risk = "Stabilized targets may resist severing"
+        elif action_id == "hell_saw":
+            cost = int(self.config.items["hell_saw"]["cost"])
+            if actor.inventory.get("hell_saw", 0) <= 0:
+                reason = "Hell Saw already used this fight"
+            elif target is None:
+                reason = "A target limb is required"
+            elif target.definition.size != "large":
+                reason = "Hell Saw requires a Large target"
+            elif actor.blood < cost:
+                reason = f"Requires {cost} Blood"
+            risk = "Damaged/Critical Large targets use the configured sever roll"
+        elif action_id == "guard_flesh":
+            source_slot = Slot.RIGHT_ARM
+            arm = actor.body.slots[source_slot]
+            if not is_usable(arm):
+                reason = "Right Arm source is unavailable"
+            else:
+                cost = self._limb_action_cost_amount(
+                    arm, self.config.actions["guard_flesh"].cost
+                )
+                if actor.blood < cost:
+                    reason = f"Requires {cost} Blood"
+        elif action_id == "brace":
+            source_slot = Slot.LEGS
+            if not is_usable(actor.body.slots[source_slot]):
+                reason = "Legs source is unavailable"
+            elif actor.brace_used:
+                reason = "Brace already used this encounter"
+        else:
+            reason = "Action is not an approved Main action"
+        return ActionAvailability(
+            action_id=action_id,
+            label=label,
+            timing="main",
+            enabled=reason is None,
+            reason=reason,
+            cost=cost,
+            source_slot=source_slot,
+            target_slot=target.slot if target is not None else None,
+            irreversible=True,
+            risk=risk,
+        )
+
+    def focus_availability(self, actor: CombatantRuntime) -> ActionAvailability:
+        reason: str | None = None
+        cost = int(self.config.rules["focus"]["base_cost"])
+        head = actor.body.slots[Slot.HEAD]
+        if actor.downed:
+            reason = "Focus is unavailable while Downed"
+        elif actor.normal_action_consumed:
+            reason = "Focus must occur before the Main action"
+        elif not is_usable(head):
+            reason = "Head source is unavailable"
+        elif head.focused_round == self.log.round_number:
+            reason = "Focus already used this round"
+        else:
+            if head.state is LimbState.DAMAGED:
+                cost += int(self.config.rules["focus"]["damaged_head_extra_cost"])
+            if actor.blood < cost:
+                reason = f"Requires {cost} Blood"
+        return ActionAvailability(
+            "focus",
+            "Focus",
+            "focus",
+            reason is None,
+            reason,
+            cost,
+            Slot.HEAD,
+            irreversible=False,
+            risk="Critical Head may reveal incomplete information",
+        )
+
+    def fast_item_availability(
+        self, actor: CombatantRuntime, item_id: str, target: LimbRuntime | None = None
+    ) -> ActionAvailability:
+        item = self.config.items[item_id]
+        reason: str | None = None
+        cost = int(item.get("cost", 0))
+        if actor.normal_action_consumed:
+            reason = "Fast item must occur before the Main action"
+        elif actor.inventory.get("_fast_round", -1) == self.log.round_number:
+            reason = "Fast item already used this round"
+        elif actor.inventory.get(item_id, 0) <= 0 or not item.get("available", True):
+            reason = f"{item['name']} is unavailable"
+        elif item_id == "clotting_cream" and (
+            target is None or LimbTag.BLEEDING not in target.tags
+        ):
+            reason = "Requires a Bleeding target"
+        elif actor.blood < cost:
+            reason = f"Requires {cost} Blood"
+        return ActionAvailability(
+            item_id,
+            str(item["name"]),
+            "fast",
+            reason is None,
+            reason,
+            cost,
+            target_slot=target.slot if target is not None else None,
+            irreversible=False,
+        )
+
+    def table_availability(
+        self, actor: CombatantRuntime, choice: str
+    ) -> ActionAvailability:
+        option = self.config.table_options[choice]
+        cost = int(option.get("cost", 0))
+        reason: str | None = None
+        if choice == "integrate_arm" and LimbTag.GRAFTED not in actor.body.slots[
+            Slot.RIGHT_ARM
+        ].tags:
+            reason = "Requires a Grafted Right Arm"
+        elif actor.blood < cost:
+            reason = f"Requires {cost} Blood"
+        return ActionAvailability(
+            f"table:{choice}",
+            str(option["name"]),
+            "table",
+            reason is None,
+            reason,
+            cost,
+            irreversible=True,
+        )
+
+    def anna_trade_available(
+        self, player: CombatantRuntime, anna: CombatantRuntime
+    ) -> tuple[bool, str | None]:
+        graft = player.body.slots[Slot.RIGHT_ARM]
+        bleeding = any(LimbTag.BLEEDING in limb.tags for limb in player.body.slots.values())
+        threatened = (
+            anna.body.slots[Slot.RIGHT_ARM].state in {LimbState.DAMAGED, LimbState.CRITICAL}
+            or LimbTag.MARKED in anna.body.slots[Slot.RIGHT_ARM].tags
+        )
+        if LimbTag.UNSTABLE in graft.tags or bleeding or threatened:
+            return True, None
+        return False, "Requires an Unstable graft, Bleeding, or threatened Crude Graft Arm"
 
     def start_round(self, player: CombatantRuntime) -> None:
         self.end_round(player)
@@ -645,6 +830,9 @@ class RuleEngine:
         _record_state(limb, old, self.log, player, "Twitch declined")
 
     def add_plead_pressure(self, enemy: CombatantRuntime, trigger: str) -> bool:
+        if trigger in enemy.plead_triggers:
+            return enemy.plead_pressure >= int(self.config.rules["plead"]["basic_threshold"])
+        enemy.plead_triggers.add(trigger)
         enemy.plead_pressure += 1
         threshold = int(self.config.rules["plead"]["basic_threshold"])
         pleading = enemy.plead_pressure >= threshold

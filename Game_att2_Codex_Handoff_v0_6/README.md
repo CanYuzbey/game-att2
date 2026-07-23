@@ -17,8 +17,10 @@ As of **2026-07-23**:
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
 - Unity graybox: **blocked**.
-- Latest local verification: **81 tests passed**, Ruff passed, and strict mypy passed.
+- Latest local verification: **91 tests passed**, Ruff passed, and strict mypy passed.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
+- Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
+  same narrow sequence; no external-pilot evidence exists yet.
 
 The historical paper result of 37 Blood is preserved as evidence but is not an automated target. Its arithmetic includes an unconfigured spare-arm sale. The current 25-Blood result follows the configured costs and seeded events. Neither number is an approved balance target.
 
@@ -118,6 +120,9 @@ Important code boundaries:
 - `scenarios.py` owns the approved scenario drivers and strategy batches.
 - `events.py` and `reporting.py` keep domain logic separate from output rendering.
 - `probe.py` contains explicitly non-canonical validation probes.
+- `research_shell.py` presents state-derived choices and records research evidence
+  while leaving rule authority in `rules.py`.
+- `research_cli.py` runs interactive sessions and deterministic scripted replays.
 
 ## Required reading order
 
@@ -205,6 +210,29 @@ Installed console-script equivalent:
 game-att2-sim --scenario mini_campaign --seed 42 --format text
 ```
 
+## Run Interactive Research Shell v0.1
+
+The shell is limited to S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table.
+It shows legal and disabled actions with reasons, asks before irreversible commitment,
+and writes a machine-readable trace plus a human summary.
+
+```powershell
+python -m game_att2_sim.research_cli `
+  --session-id OWNER-DIAG-002 `
+  --evidence-class OWNER_DIAGNOSTIC `
+  --participant-code OWNER-002 `
+  --seed 42 `
+  --json-output research/interactive_shell/OWNER-DIAG-002.json `
+  --summary-output research/interactive_shell/OWNER-DIAG-002-summary.md `
+  --transcript-output research/interactive_shell/OWNER-DIAG-002-transcript.txt
+```
+
+Use `EXTERNAL_PILOT` only for a genuinely external participant and
+`AUTOMATED_REGRESSION` only for scripted automation. The retained implementation
+report and owner-diagnostic evidence are in
+`Game_att2_Interactive_Research_Shell_Report_v0_1.md` and
+`research/interactive_shell/`.
+
 Supported formats are text, JSON, and Markdown. Use `--verbose` for detailed events and `--output PATH` to save output.
 
 The seven approved scenario names are:
@@ -231,9 +259,9 @@ python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 Verified on 2026-07-23:
 
 ```text
-pytest: 81 passed
+pytest: 91 passed
 ruff: all checks passed
-mypy: success, no issues in 14 source files
+mypy: success, no issues in 16 source files
 mini_campaign seed 42: completed, 25 Blood
 ```
 
@@ -266,7 +294,8 @@ The automated suite passes, but passing tests do not erase known gaps:
 
 - **P1 — Encounter 3 evidence:** P01–P08 human sessions have not run; the completed designer sessions are contaminated diagnostics.
 - **P1 — product gate:** simulator evidence does not establish fun, balance, or readiness for Unity.
-- **P2 — diagnostic coverage:** generic Plead Pressure triggers and some config-reference validations remain incompletely covered.
+- **P2 — player evidence:** the interactive shell has owner-diagnostic and automated
+  coverage, but no valid external-pilot session.
 - **Documentation age:** several historical files describe “simulator pending” or superseded outputs. Use the current report and review-gate documents to interpret them.
 
 The 2026-07-23 causal-integrity correction resolved centralized Main-action consumption and round-end Guard expiry. The current authoritative implementation evidence is `Game_att2_Combat_Simulator_Results_v0_2.md`.

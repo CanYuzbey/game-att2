@@ -97,6 +97,22 @@ actions:
     source_slot: right_arm
     damage: 8
     damage_type: surgical
+  cover_it:
+    name: Cover It
+    timing: enemy
+    cost: 0
+  black_stitch:
+    name: Black Stitch
+    timing: enemy
+    cost: 0
+  calm_guard:
+    name: Calm Guard
+    timing: enemy
+    cost: 0
+  trade_offer:
+    name: Trade Offer
+    timing: enemy
+    cost: 0
 
 items:
   blood_bag:
