@@ -93,7 +93,7 @@ def test_brace_downed_fast_stand_and_action_rejection() -> None:
     session.engine.stand(player)
     with pytest.raises(IllegalActionError):
         session.engine.grip(player, player, player.body.slots[Slot.TORSO])
-    assert any(event.event_type == "action_rejected_while_downed" for event in session.log.events)
+    assert any(event.event_type == "main_action_rejected" for event in session.log.events)
 
 
 def test_failed_knockdown_preserves_brace_and_bleeding_can_collapse() -> None:

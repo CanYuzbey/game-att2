@@ -48,7 +48,7 @@ def render_text(result: ScenarioResult, verbose: bool = False) -> str:
 
 def render_markdown(results: list[ScenarioResult], batches: list[dict[str, object]] | None = None) -> str:
     lines = [
-        "# Game att2 Combat Simulator Results v0.1",
+        "# Game att2 Combat Simulator Results v0.2",
         "",
         "Generated from deterministic simulator runs. These results validate implementation behavior; they do not prove player fun or market demand.",
         "",

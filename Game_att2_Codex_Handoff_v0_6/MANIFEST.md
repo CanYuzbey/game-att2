@@ -7,7 +7,7 @@ Package version: 0.6
 - `.gitignore` — 176 bytes — SHA256 `ab1d850cb89a89b4e380ef25557afed4b50a66311d4c1886eb0d29919efcd136`
 - `AGENTS.md` — 4298 bytes — SHA256 `1c1d388b89f1df77c47d2cae4dcf6523296a27de1be2bd4f067359a18c909fca`
 - `CODEX_TASK.md` — 3947 bytes — SHA256 `51accb03962091af310dec28723cb228190f8c7c7f6d33eaf09ac93dd17f3655`
-- `README.md` — 3189 bytes — SHA256 `86d41a9baa1376566941b2c4dc6e768d401fec6a4095066b65ce70cf1d495398`
+- `README.md` — 13241 bytes — SHA256 `4f8186a90b5021d7ae946098bb3eb5551874533ff2f4e97f50e380274f551ca3`
 - `config/combat_rules_v0_4.yaml` — 1374 bytes — SHA256 `443ac8cebee7dd61380616b711e00fc3325669d9eb30b43f422b4d860d4f803b`
 - `config/content_v0_1.yaml` — 4232 bytes — SHA256 `da4fef949a85e03bcb0ea9e972f290d0b8e1e2fcf363cf02e90f8caf229a2516`
 - `config/scenarios_v0_1.yaml` — 1520 bytes — SHA256 `948b200e6e38360f2e7f84b4b0159b12744b8a85fecc69237964d0b851396fba`
@@ -18,10 +18,12 @@ Package version: 0.6
 - `docs/05_CONTENT_CATALOG_v0_1.md` — 2814 bytes — SHA256 `5edec8f20605315cefdf4d78b724aeec3201db920bbf08671fc43965bcd255fa`
 - `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md` — 7887 bytes — SHA256 `fd62f85a59815cc5e5b954112398f0cfd2cd0d653de3f0cb52220748bc4103db`
 - `docs/07_PAPER_TEST_EVIDENCE_v0_1.md` — 3187 bytes — SHA256 `3be1b77db51847281c7ddb78d3d9f6ad32bbfc3eb8ca4e2fcd1c37886a812b71`
-- `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md` — 7901 bytes — SHA256 `cea0445fe5605371585bc866a168ba6ed3bb44bbae37ecc5effb2304ee983a27`
+- `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md` — 9281 bytes — SHA256 `d63d2321254014fc3d665721f289accd1b903b2c43ebbc59038db2e0ba40fb5f`
 - `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md` — 9991 bytes — SHA256 `236860f45e87830a170fddb8524be6a9c933d7006e9d1d307f459d775a395745`
 - `docs/10_CODEX_RETURN_CONTRACT.md` — 1939 bytes — SHA256 `83c6ffb706171afad56d90efd8b54d025136bac30f23ee209b2401b3ee854aab`
 - `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` — 10611 bytes — SHA256 `c4ba19bc4aad94a27244714fb08baa8975ca8f686df0fa22f3b1d688ea24c8e4`
+- `docs/12_CURRENT_PROJECT_REPORT_2026-07-23.md` — 23378 bytes — SHA256 `9e16268fca32afda34df68f2ed3e92f96bf226c3bb6e9fcff6c634b6d1c020d2`
+- `Game_att2_Combat_Simulator_Results_v0_2.md` — 10048 bytes — SHA256 `7cb01dedd6766d59a39ffbebd58235d470bac88b0af295c598a4d2843123d7cd`
 - `Game_att2_Project_Assimilation_Systemic_Causality_v0_1.md` — 9094 bytes — SHA256 `897186ed955a40275d1b5a8221271882f8f604b6ea4c877d44cb97e509562ac3`
 - `Game_att2_Minotaur_Systemic_Causal_Audit_v0_1.md` — 5022 bytes — SHA256 `e6ef035d8dd88701efb9d224ad0e1aac7c236a3838631f38745adadbdd01b430`
 - `Game_att2_Systemic_Causal_Skill_Migration_v0_1.md` — 2673 bytes — SHA256 `9157e31bb6bf30ea9e0a0555883881ae66a66ae186412d7ef6bb025c098600af`

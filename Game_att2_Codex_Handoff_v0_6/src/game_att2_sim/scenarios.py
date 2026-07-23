@@ -73,9 +73,11 @@ def _jeff_baseline(session: ScenarioSession, graft: bool = True) -> HarvestedLim
     session.engine.start_round(player)
     if session.strategy == "blood_hoarder":
         session.engine.grip(player, jeff, right)
+        session.engine.start_round(player)
         session.engine.grip(player, jeff, right)
         session.engine.start_round(player)
         session.engine.grip(player, jeff, left)
+        session.engine.start_round(player)
         session.engine.grip(player, jeff, left)
         session.metrics.plea_triggered = True
         session.log.emit("jeff_incapacity_surrender", jeff.id, reason="both arms ruined")

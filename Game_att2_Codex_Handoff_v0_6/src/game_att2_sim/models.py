@@ -73,6 +73,7 @@ class CombatantRuntime:
     rage: bool = False
     guard_active: bool = False
     brace_used: bool = False
+    brace_active: bool = False
     brace_charges: int = 0
     downed: bool = False
     normal_action_consumed: bool = False

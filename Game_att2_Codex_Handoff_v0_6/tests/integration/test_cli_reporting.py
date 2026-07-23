@@ -35,5 +35,5 @@ def test_renderers_include_required_fields_and_markdown() -> None:
     text = render_text(result)
     assert "Scenario:" in text and "final blood:" in text and "Body:" in text
     markdown = render_markdown(run_all(42))
-    assert "# Game att2 Combat Simulator Results v0.1" in markdown
+    assert "# Game att2 Combat Simulator Results v0.2" in markdown
     assert "mini_campaign" in markdown

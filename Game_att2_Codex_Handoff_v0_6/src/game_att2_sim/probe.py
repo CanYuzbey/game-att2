@@ -106,12 +106,10 @@ def _pressure(session: Any, slot: Slot, base_damage: int, profile: str, bleed: b
     """Apply existing limb damage/Guard/Bleeding rules without creating a content actor."""
     player = session.player
     target = player.body.slots[slot]
-    damage = base_damage
-    prevented = 0
-    if player.guard_active:
-        damage = int(base_damage * (1 - session.config.actions["guard_flesh"].reduction) + 0.5)
-        prevented = base_damage - damage
-        player.guard_active = False
+    damage = cast(
+        int, session.engine.apply_guard_reduction(player, base_damage, source=PROBE_MARKER)
+    )
+    prevented = base_damage - damage
     apply_damage(player, target, damage, f"{PROBE_MARKER}:{profile}", session.log)
     session.log.emit(
         "noncanonical_probe_pressure",

@@ -1,5 +1,15 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-07-23 owner decision: simulator causal-integrity correction
+
+**Decision:** Exactly one successfully committed Main action is permitted per actor per round. Main-action commitment and round-boundary cleanup belong to rules-owned logic. Focus and one Fast item remain pre-Main actions and do not consume Main. Stand consumes Main. Unused Guard Flesh expires at end of round and emits a structured event.
+
+**Implementation:** `RuleEngine` validates action-specific prerequisites before one centralized Main-action commit. A rejected pre-commit action does not consume Main or mutate gameplay state. Grip Strike, Claim the Cut, Bone Scissors, Hell Saw, Guard Flesh, Stand, and Brace use the same commitment path. The Jeff no-spend scenario now advances one round between each successful Grip Strike.
+
+**Evidence:** 81 automated tests pass, including focused commitment, rejection atomicity, Focus/Fast coexistence, Guard lifecycle, source invalidation, and actor-round uniqueness tests. Seed-42 mini-campaign remains 25 Blood; its event count changes from 32 to 39 because six Main commitments and one Guard-consumption event are now explicit.
+
+**Boundary:** No balance value, content definition, Encounter 3 runtime material, Unity work, or production system was added. Historical results remain preserved and are superseded by `Game_att2_Combat_Simulator_Results_v0_2.md`.
+
 ## 2026-07-18 owner decision: Encounter 3 bounded causal paper requirements
 
 **Decision:** Encounter 3 is not pure endurance. For paper testing only, it uses fixed fixture `E3-PRETABLE-01`, four table choices (Loan excluded), Warden right-arm/legs/torso target zones, source-derived actions, state-aware Momentum/Butcher policies, bounded combat incapacity, and an eight-round unresolved cap.

@@ -1,5 +1,7 @@
 # Game att2 Simulator Review Gate v0.1
 
+> **Historical review artifact — superseded for current implementation results.** Preserve this review as evidence of the earlier correction. Use `Game_att2_Combat_Simulator_Results_v0_2.md` for the authoritative post-causal-integrity state.
+
 ## 1. Executive Verdict
 
 This review found and corrected P1 source-compliance defects in the Jeff baseline and batch outcome labeling. The implementation is now a materially better validation tool, but the current simulator cannot establish table-choice value beyond terminal summaries and does not yet support a product continue signal.

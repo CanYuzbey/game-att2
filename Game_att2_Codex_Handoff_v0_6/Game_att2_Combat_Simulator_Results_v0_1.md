@@ -1,5 +1,7 @@
 # Game att2 Combat Simulator Results v0.1
 
+> **Historical artifact — superseded.** Preserve the results below as historical evidence. The current authoritative simulator evidence is `Game_att2_Combat_Simulator_Results_v0_2.md`, generated after the 2026-07-23 causal-integrity correction.
+
 Generated from deterministic simulator runs. These results validate implementation behavior; they do not prove player fun or market demand.
 
 ## Review Gate Addendum (2026-07-16)
