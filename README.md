@@ -16,7 +16,8 @@ vertical slice, or proof that the design is fun.
 
 The current simulator covers the bounded sequence from S-001 through Jeff,
 emergency grafting, Anna, and the Grafting Table. An interactive research shell
-records deterministic diagnostic sessions for the same sequence.
+records deterministic diagnostic sessions for the same sequence. A Phase 1
+playable CLI makes the S-001 → Jeff fight human-playable from a terminal.
 
 ## Design pillars
 
@@ -52,6 +53,12 @@ python -m pip install -e ".[dev]"
 python -m game_att2_sim --scenario mini_campaign --seed 42 --format text
 ```
 
+Play the Phase 1 interactive fight (S-001 vs Jeff only):
+
+```powershell
+python -m game_att2_sim.play_cli --seed 42
+```
+
 Run the verification suite:
 
 ```powershell
@@ -60,6 +67,8 @@ python -m ruff check src tests
 python -m mypy src
 ```
 
-The latest recorded local verification is 91 passing tests, a clean Ruff run,
+The latest recorded local verification is 131 passing tests, a clean Ruff run,
 and a clean strict mypy run. See the linked project report for the current
-evidence limits, known debt, and production gates.
+evidence limits, known debt, and production gates, and
+[the Phase 1 CLI report](Game_att2_Codex_Handoff_v0_6/Game_att2_Playable_CLI_Phase1_Report_v0_1.md)
+for that interface's scope lock and assumptions.

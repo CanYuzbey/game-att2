@@ -17,10 +17,13 @@ As of **2026-07-23**:
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
 - Unity graybox: **blocked**.
-- Latest local verification: **91 tests passed**, Ruff passed, and strict mypy passed.
+- Latest local verification: **131 tests passed**, Ruff passed, and strict mypy passed.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
+- Playable CLI Faz 1: implemented and regression-tested for **S-001 → Jeff only**.
+  Grafting, Anna, and the Grafting Table are outside that interface. No human play
+  evidence exists yet.
 
 The historical paper result of 37 Blood is preserved as evidence but is not an automated target. Its arithmetic includes an unconfigured spare-arm sale. The current 25-Blood result follows the configured costs and seeded events. Neither number is an approved balance target.
 
@@ -123,6 +126,10 @@ Important code boundaries:
 - `research_shell.py` presents state-derived choices and records research evidence
   while leaving rule authority in `rules.py`.
 - `research_cli.py` runs interactive sessions and deterministic scripted replays.
+- `play_session.py` drives the Faz 1 playable Jeff encounter and turns the event
+  stream into the five-question readability record; it never prints.
+- `play_render.py` renders the ASCII state tables, menus, and readability blocks.
+- `play_cli.py` owns the Faz 1 input loop and menu state machine.
 
 ## Required reading order
 
@@ -209,6 +216,32 @@ Installed console-script equivalent:
 ```powershell
 game-att2-sim --scenario mini_campaign --seed 42 --format text
 ```
+
+## Run the playable CLI (Faz 1)
+
+Faz 1 is the human-playable loop, locked to **S-001 → Jeff**. It stops at the decision
+phase of every round, prints both bodies as ASCII slot tables, and answers the five
+Pillar 5 readability questions after every resolved action. Grafting, Anna, and the
+Grafting Table are not offered and are not reachable.
+
+```powershell
+python -m game_att2_sim.play_cli --seed 42
+python -m game_att2_sim.play_cli --seed 42 --transcript-output reports/play-001.txt
+```
+
+Menu `[1]` opens attacks (action, then target slot), `[2]` Focus, `[3]` Fast items,
+`[4]` defensive Main actions, `[5]` reprints the state, `[0]` ends the session. Focus
+and Fast items do not consume the Main action; the Main action closes the round.
+Disabled options stay visible with the reason they are closed.
+
+For a deterministic non-interactive replay, pass a JSON list of action ids:
+
+```powershell
+python -m game_att2_sim.play_cli --seed 42 --script actions.json
+```
+
+Scope, assumptions, and verification limits are recorded in
+`Game_att2_Playable_CLI_Phase1_Report_v0_1.md`.
 
 ## Run Interactive Research Shell v0.1
 
