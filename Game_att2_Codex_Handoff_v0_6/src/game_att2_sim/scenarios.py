@@ -12,7 +12,7 @@ from .errors import InsufficientBloodError, ScenarioDefinitionError
 from .events import EventLog
 from .factory import body_summary, enemy_from_config, player_from_start, refresh_fight_tools
 from .models import CombatantRuntime, HarvestedLimb, ScenarioMetrics, ScenarioResult
-from .rng import RNGService, SeededRNG, ScriptedRNG
+from .rng import RNGService, ScriptedRNG, SeededRNG
 from .rules import RuleEngine, is_usable
 
 STRATEGIES = {

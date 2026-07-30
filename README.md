@@ -1,5 +1,7 @@
 # Game att2
 
+Canonical repository: <https://github.com/CanYuzbey/game-att2>
+
 Game att2 is a single-player hell-loop limb-grafting roguelike concept built
 around a simple fantasy: survive ritualized duels by turning damaged bodies
 into the next version of your own.
@@ -42,6 +44,7 @@ The active handoff package lives in
 - [Combat rules](Game_att2_Codex_Handoff_v0_6/docs/03_COMBAT_RULES_v0_4.md)
 - [Simulator technical specification](Game_att2_Codex_Handoff_v0_6/docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md)
 - [Tests and acceptance criteria](Game_att2_Codex_Handoff_v0_6/docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md)
+- [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
 
 ## Run the simulator
 
@@ -67,8 +70,8 @@ python -m ruff check src tests
 python -m mypy src
 ```
 
-The latest recorded local verification is 131 passing tests, a clean Ruff run,
-and a clean strict mypy run. See the linked project report for the current
+The latest recorded local verification is 145 passing tests, 88% line coverage,
+a clean Ruff run, and a clean strict mypy run. See the linked project report for the current
 evidence limits, known debt, and production gates, and
 [the Phase 1 CLI report](Game_att2_Codex_Handoff_v0_6/Game_att2_Playable_CLI_Phase1_Report_v0_1.md)
 for that interface's scope lock and assumptions.

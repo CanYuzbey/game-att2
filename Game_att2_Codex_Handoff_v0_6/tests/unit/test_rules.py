@@ -25,7 +25,7 @@ def engine(rolls: list[int] | None = None) -> tuple[RuleEngine, object, object]:
 def test_config_loads_and_has_all_slots() -> None:
     config = load_config()
     assert set(config.limbs)
-    assert set(Slot(slot) for slot in config.starting_bodies["s001"]["slots"]) == set(Slot)
+    assert {Slot(slot) for slot in config.starting_bodies["s001"]["slots"]} == set(Slot)
     assert not config.actions["grip_strike"].can_clean_sever
 
 

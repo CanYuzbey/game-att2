@@ -1,9 +1,12 @@
 from __future__ import annotations
 
-import pytest
 from dataclasses import replace
 
+import pytest
+
 from game_att2_sim.config_loader import load_config
+from game_att2_sim.enums import LimbTag, Slot
+from game_att2_sim.errors import IllegalActionError
 from game_att2_sim.probe import (
     FIXTURES,
     PROBE_MARKER,
@@ -12,10 +15,7 @@ from game_att2_sim.probe import (
     run_post_table_probe,
     table_cost_overlay,
 )
-from game_att2_sim.scenarios import run_scenario
-from game_att2_sim.enums import LimbTag, Slot
-from game_att2_sim.errors import IllegalActionError
-from game_att2_sim.scenarios import _session
+from game_att2_sim.scenarios import _session, run_scenario
 
 
 def test_probe_is_noncanonical_and_does_not_change_campaign_regression() -> None:

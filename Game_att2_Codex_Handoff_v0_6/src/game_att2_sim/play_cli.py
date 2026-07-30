@@ -8,12 +8,12 @@ readability record for each resolved action.
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from .cli_support import CLIInputError, load_json_list, positive_int
 from .enums import Slot
 from .play_render import (
     localize_reason,
@@ -197,7 +197,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
         "--round-limit",
-        type=int,
+        type=positive_int,
         default=DEFAULT_ROUND_LIMIT,
         help="harness guard against an endless session; not a game rule",
     )
@@ -212,32 +212,33 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
-    args = build_parser().parse_args(argv)
+    parser = build_parser()
+    args = parser.parse_args(argv)
     for stream in (sys.stdout, sys.stderr):
         reconfigure = getattr(stream, "reconfigure", None)
         if reconfigure is not None:  # pragma: no cover - depends on the console
             reconfigure(encoding="utf-8", errors="replace")
-    session = PlaySession(seed=args.seed, round_limit=args.round_limit)
-    if args.script:
-        # utf-8-sig: PowerShell's redirection writes a BOM this parser must tolerate.
-        actions = json.loads(args.script.read_text(encoding="utf-8-sig"))
-        if not isinstance(actions, list):
-            raise ValueError("script must contain a JSON list of action ids")
-        transcript: list[str] = []
+    try:
+        session = PlaySession(seed=args.seed, round_limit=args.round_limit)
+        if args.script:
+            actions = load_json_list(args.script, label="play script")
+            transcript: list[str] = []
 
-        def emit(text: str) -> None:
-            transcript.append(text)
-            print(text)
+            def emit(text: str) -> None:
+                transcript.append(text)
+                print(text)
 
-        _script_run(session, [str(action) for action in actions], emit)
-        lines = transcript
-    else:
-        console = PlayConsole(session)
-        console.run()
-        lines = console.transcript
-    if args.transcript_output:
-        args.transcript_output.parent.mkdir(parents=True, exist_ok=True)
-        args.transcript_output.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            _script_run(session, [str(action) for action in actions], emit)
+            lines = transcript
+        else:
+            console = PlayConsole(session)
+            console.run()
+            lines = console.transcript
+        if args.transcript_output:
+            args.transcript_output.parent.mkdir(parents=True, exist_ok=True)
+            args.transcript_output.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    except (CLIInputError, OSError, ValueError) as error:
+        parser.error(str(error))
     return 0
 
 

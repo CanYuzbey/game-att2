@@ -24,9 +24,37 @@ def test_cli_batch_and_nested_output_path(tmp_path: pytest.TempPathFactory) -> N
     assert json.loads(output.read_text(encoding="utf-8"))["count"] == 3
 
 
+def test_cli_invalid_output_path_is_nonzero(tmp_path: pytest.TempPathFactory) -> None:
+    with pytest.raises(SystemExit) as error:
+        main(["--scenario", "jeff_baseline", "--output", str(tmp_path)])
+    assert error.value.code == 2
+
+
+def test_cli_batch_formats_are_human_readable(capsys: pytest.CaptureFixture[str]) -> None:
+    assert main(["--batch", "1", "--format", "text"]) == 0
+    assert capsys.readouterr().out.startswith("Batch: strategy=balanced")
+    assert main(["--batch", "1", "--format", "markdown"]) == 0
+    markdown = capsys.readouterr().out
+    assert markdown.startswith("# Game att2 Combat Simulator Results")
+    assert "## Required Scenarios" not in markdown
+    assert "| balanced |" in markdown
+
+
+def test_cli_run_selectors_are_mutually_exclusive() -> None:
+    with pytest.raises(SystemExit) as error:
+        main(["--scenario", "jeff_baseline", "--batch", "1"])
+    assert error.value.code == 2
+
+
 def test_cli_invalid_input_is_nonzero() -> None:
     with pytest.raises(SystemExit) as error:
         main(["--scenario", "not-a-scenario"])
+    assert error.value.code == 2
+
+
+def test_cli_batch_count_must_be_positive() -> None:
+    with pytest.raises(SystemExit) as error:
+        main(["--batch", "0"])
     assert error.value.code == 2
 
 

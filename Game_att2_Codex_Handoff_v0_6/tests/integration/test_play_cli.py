@@ -500,5 +500,18 @@ def test_script_mode_reports_refused_actions_without_aborting(
 def test_script_must_contain_a_list(tmp_path: Path) -> None:
     script = tmp_path / "actions.json"
     script.write_text(json.dumps({"action": "focus"}), encoding="utf-8")
-    with pytest.raises(ValueError, match="JSON list"):
+    with pytest.raises(SystemExit) as error:
         main(["--script", str(script)])
+    assert error.value.code == 2
+
+
+def test_cli_rejects_missing_script_without_traceback(tmp_path: Path) -> None:
+    with pytest.raises(SystemExit) as error:
+        main(["--script", str(tmp_path / "missing.json")])
+    assert error.value.code == 2
+
+
+def test_cli_round_limit_must_be_positive() -> None:
+    with pytest.raises(SystemExit) as error:
+        main(["--round-limit", "0"])
+    assert error.value.code == 2

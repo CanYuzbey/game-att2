@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import ROUND_HALF_UP, Decimal
 
 from .config_loader import SimulatorConfig
 from .enums import HarvestQuality, LimbState, LimbTag, Phase, Slot, UnstableResult
@@ -25,16 +25,16 @@ def is_usable(limb: LimbRuntime) -> bool:
 
 def effectiveness(limb: LimbRuntime) -> Decimal:
     if limb.state is LimbState.INTACT:
-        return Decimal("1")
+        return Decimal(1)
     if limb.state is LimbState.DAMAGED:
         return Decimal("0.75")
     if limb.state is LimbState.CRITICAL:
         return Decimal("0.5")
-    return Decimal("0")
+    return Decimal(0)
 
 
 def round_half_up(value: Decimal) -> int:
-    return int(value.quantize(Decimal("1"), rounding=ROUND_HALF_UP))
+    return int(value.quantize(Decimal(1), rounding=ROUND_HALF_UP))
 
 
 def recalculate_state(limb: LimbRuntime) -> LimbState:
@@ -556,7 +556,7 @@ class RuleEngine:
         if head.state is LimbState.CRITICAL and self.rng.randint(1, 2) == 1:
             exact = False
         spend_blood(player, cost, "Focus", self.config, self.log, self.metrics, self.tutorial, self.rng)
-        setattr(head, "focused_round", self.log.round_number)
+        head.focused_round = self.log.round_number
         self.metrics.focus_used += 1
         revealed = intent if exact else "enemy intent is incomplete"
         self.log.emit("focus_resolved", player.id, cost=cost, intent=revealed, exact=exact)
@@ -785,7 +785,7 @@ class RuleEngine:
             return damage
         reduced = round_half_up(
             Decimal(damage)
-            * (Decimal("1") - Decimal(str(self.config.actions["guard_flesh"].reduction)))
+            * (Decimal(1) - Decimal(str(self.config.actions["guard_flesh"].reduction)))
         )
         player.guard_active = False
         self.log.emit(

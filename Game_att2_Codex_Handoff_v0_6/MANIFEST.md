@@ -2,6 +2,11 @@
 
 Package version: 0.6
 
+> Historical delivery manifest. The hashes below describe the original v0.6
+> handoff and are not a live inventory of later repository changes. For the
+> canonical repository, current checkout, CLI structure, and verification state,
+> see `docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md` and Git.
+
 ## Files
 
 - `.gitignore` — 176 bytes — SHA256 `ab1d850cb89a89b4e380ef25557afed4b50a66311d4c1886eb0d29919efcd136`

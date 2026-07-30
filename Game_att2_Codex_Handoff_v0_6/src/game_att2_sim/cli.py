@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import argparse
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
+from .cli_support import positive_int
 from .errors import SimulatorError
-from .reporting import render_json, render_markdown, render_text
+from .reporting import render_batch_text, render_json, render_markdown, render_text
 from .scenarios import STRATEGIES, run_all, run_batch, run_scenario
 
 
@@ -16,9 +17,9 @@ def build_parser() -> argparse.ArgumentParser:
     selected = parser.add_mutually_exclusive_group()
     selected.add_argument("--scenario", help="named scenario")
     selected.add_argument("--all-scenarios", action="store_true", help="run all required scenarios")
+    selected.add_argument("--batch", type=positive_int, help="run this many mini-campaign seeds")
     parser.add_argument("--seed", type=int, default=42, help="seed for deterministic runs")
     parser.add_argument("--strategy", choices=sorted(STRATEGIES), help="strategy for a scenario or batch")
-    parser.add_argument("--batch", type=int, help="run this many mini-campaign seeds")
     parser.add_argument("--table-choice", choices=("integrate_arm", "repair_torso", "strengthen_legs", "table_loan", "leave"))
     parser.add_argument("--threat-profile", choices=("graft_pressure", "torso_pressure", "knockdown_pressure", "mixed_unknown_pressure"))
     parser.add_argument("--fixture", help="controlled post-table probe fixture")
@@ -34,7 +35,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         if args.batch is not None:
             payload = run_batch(args.strategy or "balanced", args.batch, args.seed)
-            output = render_json(payload) if args.format == "json" else str(payload)
+            if args.format == "json":
+                output = render_json(payload)
+            elif args.format == "markdown":
+                output = render_markdown([], [payload])
+            else:
+                output = render_batch_text(payload)
         elif args.all_scenarios:
             results = run_all(args.seed)
             if args.format == "json":
@@ -61,9 +67,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     except SimulatorError as error:
         parser.error(str(error))
         return 2
-    if args.output:
-        args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(output + ("" if output.endswith("\n") else "\n"), encoding="utf-8")
-    else:
-        print(output)
+    try:
+        if args.output:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            args.output.write_text(
+                output + ("" if output.endswith("\n") else "\n"),
+                encoding="utf-8",
+            )
+        else:
+            print(output)
+    except OSError as error:
+        parser.error(str(error))
     return 0

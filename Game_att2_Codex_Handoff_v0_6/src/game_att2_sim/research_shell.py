@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Callable, Iterable
 from dataclasses import asdict, dataclass, field, replace
 from datetime import datetime
 from enum import Enum
 from pathlib import Path
-from typing import Any, Callable, Iterable
+from typing import Any
 
 from .config_loader import SimulatorConfig, load_config
 from .enums import HarvestQuality, LimbTag, Slot

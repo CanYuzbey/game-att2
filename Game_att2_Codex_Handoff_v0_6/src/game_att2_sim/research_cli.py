@@ -3,10 +3,10 @@
 from __future__ import annotations
 
 import argparse
-import json
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
+from .cli_support import CLIInputError, load_json_list
 from .research_shell import (
     EvidenceClass,
     InteractiveResearchSession,
@@ -35,33 +35,37 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
-    args = build_parser().parse_args(argv)
-    metadata = SessionMetadata.create(
-        args.session_id,
-        EvidenceClass(args.evidence_class),
-        args.seed,
-        args.participant_code,
-        information_condition=args.information_condition,
-        strategy_intention=args.strategy_intention,
-    )
-    if args.script:
-        actions = json.loads(args.script.read_text(encoding="utf-8"))
-        if not isinstance(actions, list):
-            raise ValueError("script must contain a JSON list")
-        session = replay_session(metadata, actions)
-    else:
-        session = InteractiveResearchSession(metadata)
-        session.run_console()
-    if args.json_output and args.summary_output:
-        session.write_exports(args.json_output, args.summary_output)
-    elif args.json_output or args.summary_output:
-        raise ValueError("both --json-output and --summary-output are required together")
-    if args.transcript_output:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    if bool(args.json_output) != bool(args.summary_output):
+        parser.error("both --json-output and --summary-output are required together")
+    if args.script and args.transcript_output:
+        parser.error("--transcript-output is available only for interactive sessions")
+    try:
+        metadata = SessionMetadata.create(
+            args.session_id,
+            EvidenceClass(args.evidence_class),
+            args.seed,
+            args.participant_code,
+            information_condition=args.information_condition,
+            strategy_intention=args.strategy_intention,
+        )
         if args.script:
-            raise ValueError("--transcript-output is available only for interactive sessions")
-        session.write_transcript(args.transcript_output)
-    if args.script:
-        print(session.human_summary())
+            session = replay_session(
+                metadata,
+                load_json_list(args.script, label="research script"),
+            )
+        else:
+            session = InteractiveResearchSession(metadata)
+            session.run_console()
+        if args.json_output and args.summary_output:
+            session.write_exports(args.json_output, args.summary_output)
+        if args.transcript_output:
+            session.write_transcript(args.transcript_output)
+        if args.script:
+            print(session.human_summary())
+    except (CLIInputError, OSError, ValueError) as error:
+        parser.error(str(error))
     return 0
 
 

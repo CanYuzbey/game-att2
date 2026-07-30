@@ -1,5 +1,7 @@
 # Game att2
 
+Canonical repository: <https://github.com/CanYuzbey/game-att2>
+
 Game att2 is a single-player PC hell-loop limb-grafting roguelike/roguelite concept. The player survives ritualized turn-based duels by damaging, extracting, grafting, stabilizing, and integrating body parts while spending Blood as health, currency, and ability fuel.
 
 > You are not collecting weapons. You are becoming the weapon, piece by piece, using your own blood as money.
@@ -8,7 +10,7 @@ This repository is currently a **design-research and deterministic Python simula
 
 ## Current status
 
-As of **2026-07-23**:
+Evidence baseline: **2026-07-23**. Repository and CLI readiness rechecked: **2026-07-30**.
 
 - Current maturity: pre-production rules validation / simulator stage.
 - Approved digital scope: the narrow Python simulator for S-001 → Jeff → emergency graft → Anna → Grafting Table.
@@ -17,7 +19,7 @@ As of **2026-07-23**:
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
 - Unity graybox: **blocked**.
-- Latest local verification: **131 tests passed**, Ruff passed, and strict mypy passed.
+- Latest local verification: **145 tests passed**, **88% line coverage**, Ruff passed, and strict mypy passed.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
@@ -238,6 +240,7 @@ For a deterministic non-interactive replay, pass a JSON list of action ids:
 
 ```powershell
 python -m game_att2_sim.play_cli --seed 42 --script actions.json
+python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_win_sequence.json
 ```
 
 Scope, assumptions, and verification limits are recorded in
@@ -289,14 +292,18 @@ python -m mypy src
 python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 ```
 
-Verified on 2026-07-23:
+Current verification on 2026-07-30:
 
 ```text
-pytest: 91 passed
+pytest: 145 passed
+coverage: 88%
 ruff: all checks passed
-mypy: success, no issues in 16 source files
+mypy: success, no issues in 20 source files
 mini_campaign seed 42: completed, 25 Blood
 ```
+
+The repository identity, CLI roles, current smoke commands, and readiness limits are
+recorded in [docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md](docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md).
 
 ## Evidence status
 
