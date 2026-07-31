@@ -36,6 +36,7 @@ def test_simulator_module_entrypoint_returns_machine_readable_json() -> None:
 def test_play_module_entrypoint_replays_the_example_sequence() -> None:
     result = run_module(
         "game_att2_sim.play_cli",
+        "--phase-1",
         "--seed",
         "42",
         "--script",

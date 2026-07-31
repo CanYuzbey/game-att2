@@ -18,7 +18,15 @@ from .research_shell import (
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Game att2 Interactive Research Shell v0.1")
     parser.add_argument("--session-id", required=True)
-    parser.add_argument("--evidence-class", choices=[value.value for value in EvidenceClass], required=True)
+    parser.add_argument(
+        "--evidence-class",
+        choices=[
+            EvidenceClass.OWNER_DIAGNOSTIC.value,
+            EvidenceClass.EXTERNAL_PILOT.value,
+            EvidenceClass.AUTOMATED_REGRESSION.value,
+        ],
+        required=True,
+    )
     parser.add_argument("--participant-code", required=True)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(

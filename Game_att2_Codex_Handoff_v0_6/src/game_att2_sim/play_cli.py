@@ -1,4 +1,4 @@
-"""Console driver and entry point for the Phase 1 playable CLI.
+"""Console driver and entry point for the approved playable campaign CLI.
 
 This module owns all input/output. It stops the automation at the decision
 phase of every round, presents numbered prompts, and prints the Pillar 5
@@ -13,8 +13,15 @@ from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from .campaign_play import CampaignConsole, campaign_session, run_campaign_actions
 from .cli_support import CLIInputError, load_json_list, positive_int
 from .enums import Slot
+from .play_feedback import (
+    DEFAULT_FEEDBACK_DIRECTORY,
+    PlayableSession,
+    build_feedback_record,
+    write_feedback_record,
+)
 from .play_render import (
     localize_reason,
     render_attack_menu,
@@ -35,6 +42,22 @@ from .play_session import (
 )
 
 BACK = "0"
+
+SCALE_QUESTIONS: tuple[tuple[str, str], ...] = (
+    ("goal_clarity", "Amacı ne kadar net anladın?"),
+    ("blood_importance", "Blood kararlarında ne kadar önemli hissettirdi?"),
+    ("danger_pressure", "Yenilme / ölme baskısını ne kadar hissettin?"),
+    ("consequence_clarity", "Eylemlerin sonuçları ne kadar anlaşılırdı?"),
+    ("choice_meaningfulness", "Seçimler ne kadar anlamlı hissettirdi?"),
+    ("replay_intent", "Bir kez daha oynama isteğin ne kadar yüksek?"),
+)
+
+TEXT_QUESTIONS: tuple[tuple[str, str], ...] = (
+    ("ending_cause", "Sence bu oyun deneyimi neden bu sonuçla bitti?"),
+    ("blood_strategy", "Blood harcarken veya saklarken ne düşündün?"),
+    ("threat_model", "Seni güvende ya da ölüm tehlikesinde hissettiren neydi?"),
+    ("desired_change", "Tek bir şeyi değiştirebilseydin neyi değiştirirdin?"),
+)
 
 
 @dataclass
@@ -101,6 +124,8 @@ class PlayConsole:
             )
         elif choice == "5":
             self.emit(render_state(self.session))
+
+
         elif choice == "6" and self.session.find_offer("forfeit_main") is not None:
             self._resolve("forfeit_main")
         elif choice == BACK:
@@ -173,6 +198,102 @@ class PlayConsole:
             self.emit(render_state(self.session))
 
 
+@dataclass
+class FeedbackConsole:
+    """Optional post-play questionnaire; answers stay out of the transcript."""
+
+    session: PlayableSession
+    input_fn: Callable[[str], str] = input
+    output_fn: Callable[[str], None] = print
+    _stopped: bool = field(default=False, init=False)
+
+    def collect(self) -> dict[str, object] | None:
+        self.output_fn("")
+        self.output_fn("=== İSTEĞE BAĞLI OYUN TESTİ GERİ BİLDİRİMİ ===")
+        self.output_fn(
+            "Kayıt yalnızca bu bilgisayarda saklanır; otomatik yükleme yapılmaz."
+        )
+        self.output_fn("Lütfen kişisel veya hassas bilgi yazma.")
+        consent = self._ask_yes_no(
+            "Anonim oyun özeti ve cevapların yerel tasarım araştırması için "
+            "kaydedilsin mi? [e/H]: "
+        )
+        if consent is not True:
+            self.output_fn("Geri bildirim kaydedilmedi.")
+            return None
+
+        training = self._ask_yes_no(
+            "Bu kayıt, insan incelemesi ve anonimleştirme sonrası gelecekte "
+            "model eğitimi için kullanılabilir mi? [e/H]: "
+        )
+        self.output_fn("1 = hiç / çok kötü, 5 = çok / çok iyi; Enter = atla.")
+        ratings: dict[str, int | None] = {}
+        for key, prompt in SCALE_QUESTIONS:
+            if self._stopped:
+                break
+            rating = self._ask_scale(f"{prompt} [1-5]: ")
+            if self._stopped:
+                break
+            ratings[key] = rating
+
+        reflections: dict[str, str] = {}
+        if not self._stopped:
+            self.output_fn("Kısa cevaplar isteğe bağlıdır; Enter ile atlayabilirsin.")
+        for key, prompt in TEXT_QUESTIONS:
+            if self._stopped:
+                break
+            reflections[key] = self._ask_text(f"{prompt}\n> ")
+
+        return build_feedback_record(
+            self.session,
+            ratings=ratings,
+            reflections=reflections,
+            model_training_consent=training is True,
+            collection_status="partial" if self._stopped else "complete",
+        )
+
+    def _read(self, prompt: str) -> str | None:
+        try:
+            return self.input_fn(prompt).strip()
+        except EOFError:
+            self._stopped = True
+            return None
+
+    def _ask_yes_no(self, prompt: str) -> bool | None:
+        while not self._stopped:
+            answer = self._read(prompt)
+            if answer is None:
+                return None
+            normalized = answer.casefold()
+            if normalized in {"e", "evet", "y", "yes"}:
+                return True
+            if normalized in {"", "h", "hayır", "hayir", "n", "no"}:
+                return False
+            self.output_fn("  Lütfen 'e' veya 'h' gir.")
+        return None
+
+    def _ask_scale(self, prompt: str) -> int | None:
+        while not self._stopped:
+            answer = self._read(prompt)
+            if answer is None or answer == "":
+                return None
+            if answer in {"1", "2", "3", "4", "5"}:
+                return int(answer)
+            self.output_fn("  1 ile 5 arasında bir sayı gir veya Enter ile atla.")
+        return None
+
+    def _ask_text(self, prompt: str) -> str:
+        answer = self._read(prompt)
+        return "" if answer is None else answer
+
+
+def _collect_feedback(session: PlayableSession, directory: Path) -> None:
+    feedback = FeedbackConsole(session).collect()
+    if feedback is not None:
+        feedback_path = write_feedback_record(feedback, directory)
+        print(f"Geri bildirim yerel olarak kaydedildi: {feedback_path}")
+
+
 def _script_run(session: PlaySession, actions: Sequence[str], emit: Callable[[str], None]) -> None:
     emit(render_intro(session))
     emit(render_state(session))
@@ -192,9 +313,14 @@ def _script_run(session: PlaySession, actions: Sequence[str], emit: Callable[[st
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Game att2 Phase 1 playable CLI — S-001 vs Jeff only"
+        description="Game att2 playable CLI — full approved campaign by default"
     )
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--phase-1",
+        action="store_true",
+        help="run the retained S-001 vs Jeff-only diagnostic interface",
+    )
     parser.add_argument(
         "--round-limit",
         type=positive_int,
@@ -208,6 +334,17 @@ def build_parser() -> argparse.ArgumentParser:
         f'["{ATTACK_ACTIONS[0]}:right_arm"]',
     )
     parser.add_argument("--transcript-output", type=Path)
+    parser.add_argument(
+        "--feedback-dir",
+        type=Path,
+        default=DEFAULT_FEEDBACK_DIRECTORY,
+        help="directory for consented local playtest JSON records",
+    )
+    parser.add_argument(
+        "--no-feedback",
+        action="store_true",
+        help="skip the optional post-play questionnaire",
+    )
     return parser
 
 
@@ -219,21 +356,51 @@ def main(argv: Sequence[str] | None = None) -> int:
         if reconfigure is not None:  # pragma: no cover - depends on the console
             reconfigure(encoding="utf-8", errors="replace")
     try:
-        session = PlaySession(seed=args.seed, round_limit=args.round_limit)
-        if args.script:
-            actions = load_json_list(args.script, label="play script")
-            transcript: list[str] = []
+        actions = load_json_list(args.script, label="play script") if args.script else None
+        if actions is not None and not all(isinstance(action, str) for action in actions):
+            raise CLIInputError("play script entries must be action-id strings")
+        if args.phase_1:
+            session = PlaySession(seed=args.seed, round_limit=args.round_limit)
+            if actions is not None:
+                transcript: list[str] = []
 
-            def emit(text: str) -> None:
-                transcript.append(text)
-                print(text)
+                def emit(text: str) -> None:
+                    transcript.append(text)
+                    print(text)
 
-            _script_run(session, [str(action) for action in actions], emit)
-            lines = transcript
+                _script_run(session, [str(action) for action in actions], emit)
+                lines = transcript
+            else:
+                console = PlayConsole(session)
+                console.run()
+                lines = console.transcript
+                if not args.no_feedback:
+                    _collect_feedback(session, args.feedback_dir)
         else:
-            console = PlayConsole(session)
-            console.run()
-            lines = console.transcript
+            full_session = campaign_session(args.seed)
+            if actions is not None:
+                transcript = []
+
+                def emit_campaign(text: str) -> None:
+                    transcript.append(text)
+                    print(text)
+
+                run_campaign_actions(
+                    full_session,
+                    [str(action) for action in actions],
+                    emit_campaign,
+                    args.round_limit,
+                )
+                lines = transcript
+            else:
+                campaign_console = CampaignConsole(
+                    full_session,
+                    round_limit=args.round_limit,
+                )
+                campaign_console.run()
+                lines = campaign_console.transcript
+                if not args.no_feedback:
+                    _collect_feedback(full_session, args.feedback_dir)
         if args.transcript_output:
             args.transcript_output.parent.mkdir(parents=True, exist_ok=True)
             args.transcript_output.write_text("\n".join(lines) + "\n", encoding="utf-8")

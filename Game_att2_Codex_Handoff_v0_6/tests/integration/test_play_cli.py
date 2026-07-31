@@ -136,6 +136,40 @@ def test_enemy_resolves_after_the_player_main_action() -> None:
     assert torso.integrity < before
 
 
+def test_destroyed_declared_enemy_source_cancels_without_fallback() -> None:
+    play = session()
+    assert play.intent_source is Slot.LEFT_ARM
+    source = play.enemy.body.slots[Slot.LEFT_ARM]
+    source.integrity = 5
+    source.state = LimbState.CRITICAL
+    torso = play.player.body.slots[Slot.TORSO]
+    before = torso.integrity
+
+    result = play.perform("grip_strike:left_arm")
+
+    assert len(result.reports) == 1
+    assert torso.integrity == before
+    assert any(
+        event.event_type == "enemy_action_cancelled"
+        and event.payload["source_slot"] == Slot.LEFT_ARM.value
+        for event in play.log.events
+    )
+
+
+def test_marked_usable_arm_becomes_jeffs_next_aggressive_source() -> None:
+    play = session()
+    play.perform("claim_the_cut:right_arm")
+
+    assert play.intent_source is Slot.RIGHT_ARM
+    play.perform("focus")
+    assert "Sağ Kol" in play.intent_text()
+    assert any(
+        event.event_type == "jeff_marked_source_selected"
+        and event.payload["source_slot"] == Slot.RIGHT_ARM.value
+        for event in play.log.events
+    )
+
+
 # ------------------------------------------------------ illegal input refusal
 
 
@@ -473,6 +507,7 @@ def test_script_mode_replays_actions_and_writes_a_transcript(
     transcript = tmp_path / "run.txt"
     exit_code = main(
         [
+            "--phase-1",
             "--seed",
             "42",
             "--script",
@@ -492,7 +527,7 @@ def test_script_mode_reports_refused_actions_without_aborting(
 ) -> None:
     script = tmp_path / "actions.json"
     script.write_text(json.dumps(["guard_flesh", "grip_strike:head"]), encoding="utf-8")
-    assert main(["--script", str(script)]) == 0
+    assert main(["--phase-1", "--script", str(script)]) == 0
     printed = capsys.readouterr().out
     assert "guard_flesh uygulanmadı" in printed
 
@@ -501,13 +536,13 @@ def test_script_must_contain_a_list(tmp_path: Path) -> None:
     script = tmp_path / "actions.json"
     script.write_text(json.dumps({"action": "focus"}), encoding="utf-8")
     with pytest.raises(SystemExit) as error:
-        main(["--script", str(script)])
+        main(["--phase-1", "--script", str(script)])
     assert error.value.code == 2
 
 
 def test_cli_rejects_missing_script_without_traceback(tmp_path: Path) -> None:
     with pytest.raises(SystemExit) as error:
-        main(["--script", str(tmp_path / "missing.json")])
+        main(["--phase-1", "--script", str(tmp_path / "missing.json")])
     assert error.value.code == 2
 
 

@@ -243,6 +243,7 @@ class PlaySession:
     exact_intent: str = field(init=False, default="")
     public_intent: str = field(init=False, default="")
     revealed_intent: str | None = field(init=False, default=None)
+    intent_source: Slot | None = field(init=False, default=None)
 
     def __post_init__(self) -> None:
         if self.round_limit < 1:
@@ -663,12 +664,13 @@ class PlaySession:
         )
 
     def _resolve_enemy_action(self) -> tuple[str, str] | None:
-        source = self._first_usable_enemy_arm()
-        if source is None:
+        source = self.intent_source
+        if source is None or not is_usable(self.enemy.body.slots[source]):
             self.log.emit(
                 "enemy_action_cancelled",
                 self.enemy.id,
-                reason="no usable arm source",
+                source_slot=source.value if source is not None else None,
+                reason="declared source is unavailable",
             )
             return None
         torso = self.player.body.slots[Slot.TORSO]
@@ -688,10 +690,30 @@ class PlaySession:
                 return slot
         return None
 
+    def _choose_jeff_intent_source(self) -> Slot | None:
+        """Select a legal source without replacing it later in the same phase.
+
+        Combat Rules v0.4 permits Jeff to protect or aggressively use a Marked
+        limb.  Protection has no approved numeric rule, so the reversible,
+        source-backed response is to aggressively use the usable Marked arm.
+        """
+        for slot in (Slot.RIGHT_ARM, Slot.LEFT_ARM):
+            limb = self.enemy.body.slots[slot]
+            if LimbTag.MARKED in limb.tags and is_usable(limb):
+                self.log.emit(
+                    "jeff_marked_source_selected",
+                    self.enemy.id,
+                    source_slot=slot.value,
+                    response="aggressive_use",
+                )
+                return slot
+        return self._first_usable_enemy_arm()
+
     def _start_round(self) -> None:
         self.engine.start_round(self.player)
         self.revealed_intent = None
-        source = self._first_usable_enemy_arm()
+        source = self._choose_jeff_intent_source()
+        self.intent_source = source
         swing = self.config.actions["desperate_swing"].name
         if source is None:
             self.exact_intent = f"{self.enemy.name} saldırabilecek durumda değil"

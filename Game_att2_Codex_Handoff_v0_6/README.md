@@ -10,7 +10,7 @@ This repository is currently a **design-research and deterministic Python simula
 
 ## Current status
 
-Evidence baseline: **2026-07-23**. Repository and CLI readiness rechecked: **2026-07-30**.
+Evidence baseline: **2026-07-23**. CLI/documentation alignment rechecked: **2026-07-31**.
 
 - Current maturity: pre-production rules validation / simulator stage.
 - Approved digital scope: the narrow Python simulator for S-001 → Jeff → emergency graft → Anna → Grafting Table.
@@ -19,13 +19,13 @@ Evidence baseline: **2026-07-23**. Repository and CLI readiness rechecked: **202
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
 - Unity graybox: **blocked**.
-- Latest local verification: **145 tests passed**, **88% line coverage**, Ruff passed, and strict mypy passed.
+- Latest local verification: **163 tests passed**, **87% line coverage**, Ruff passed, and strict mypy passed.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
-- Playable CLI Faz 1: implemented and regression-tested for **S-001 → Jeff only**.
-  Grafting, Anna, and the Grafting Table are outside that interface. No human play
-  evidence exists yet.
+- Playable CLI: the default interface now covers **S-001 → Jeff → emergency graft
+  → Anna → Grafting Table**. The Jeff-only Phase 1 diagnostic remains behind
+  `--phase-1`. No valid external human-play evidence exists yet.
 
 The historical paper result of 37 Blood is preserved as evidence but is not an automated target. Its arithmetic includes an unconfigured spare-arm sale. The current 25-Blood result follows the configured costs and seeded events. Neither number is an approved balance target.
 
@@ -130,8 +130,13 @@ Important code boundaries:
 - `research_cli.py` runs interactive sessions and deterministic scripted replays.
 - `play_session.py` drives the Faz 1 playable Jeff encounter and turns the event
   stream into the five-question readability record; it never prints.
+- `campaign_play.py` presents the full approved sequence over the existing research
+  state machine and rule engine; it does not create a parallel rules layer.
 - `play_render.py` renders the ASCII state tables, menus, and readability blocks.
-- `play_cli.py` owns the Faz 1 input loop and menu state machine.
+- `play_cli.py` selects full-campaign or retained Phase 1 presentation and owns
+  optional, consented local feedback collection.
+- `play_feedback.py` writes versioned anonymous gameplay/answer records without raw
+  terminal transcripts or automatic upload.
 
 ## Required reading order
 
@@ -219,32 +224,38 @@ Installed console-script equivalent:
 game-att2-sim --scenario mini_campaign --seed 42 --format text
 ```
 
-## Run the playable CLI (Faz 1)
+## Run the playable CLI
 
-Faz 1 is the human-playable loop, locked to **S-001 → Jeff**. It stops at the decision
-phase of every round, prints both bodies as ASCII slot tables, and answers the five
-Pillar 5 readability questions after every resolved action. Grafting, Anna, and the
-Grafting Table are not offered and are not reachable.
+The default human-playable loop covers **S-001 → Jeff → emergency graft → Anna →
+Grafting Table**. It exposes costs, disabled reasons, body state, visible intent,
+causal source hints, and the five Pillar 5 readability questions after each action.
 
 ```powershell
 python -m game_att2_sim.play_cli --seed 42
 python -m game_att2_sim.play_cli --seed 42 --transcript-output reports/play-001.txt
 ```
 
-Menu `[1]` opens attacks (action, then target slot), `[2]` Focus, `[3]` Fast items,
-`[4]` defensive Main actions, `[5]` reprints the state, `[0]` ends the session. Focus
-and Fast items do not consume the Main action; the Main action closes the round.
-Disabled options stay visible with the reason they are closed.
+The post-play questionnaire is opt-in, stays local, separates research and model
+training consent, and can be disabled with `--no-feedback`. Its default output is
+ignored under `reports/play_feedback/`.
 
 For a deterministic non-interactive replay, pass a JSON list of action ids:
 
 ```powershell
-python -m game_att2_sim.play_cli --seed 42 --script actions.json
-python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_win_sequence.json
+python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_full_campaign_sequence.json
 ```
 
-Scope, assumptions, and verification limits are recorded in
-`Game_att2_Playable_CLI_Phase1_Report_v0_1.md`.
+The retained Jeff-only diagnostic is explicit:
+
+```powershell
+python -m game_att2_sim.play_cli --phase-1 --seed 42
+python -m game_att2_sim.play_cli --phase-1 --seed 42 --script examples/play_cli_win_sequence.json
+```
+
+Current scope and blocked identity decisions are recorded in
+`docs/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md` and
+`docs/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md`. The older Phase 1 report remains
+a historical record of that compatibility interface.
 
 ## Run Interactive Research Shell v0.1
 
@@ -292,13 +303,13 @@ python -m mypy src
 python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 ```
 
-Current verification on 2026-07-30:
+Current verification on 2026-07-31:
 
 ```text
-pytest: 145 passed
-coverage: 88%
+pytest: 163 passed
+coverage: 87%
 ruff: all checks passed
-mypy: success, no issues in 20 source files
+mypy: success, no issues in 22 source files
 mini_campaign seed 42: completed, 25 Blood
 ```
 
@@ -336,6 +347,9 @@ The automated suite passes, but passing tests do not erase known gaps:
 - **P1 — product gate:** simulator evidence does not establish fun, balance, or readiness for Unity.
 - **P2 — player evidence:** the interactive shell has owner-diagnostic and automated
   coverage, but no valid external-pilot session.
+- **P1 — unresolved identity rules:** Jeff's direct Blood threat, the consequence of
+  a Ruined player torso, `Cover It` protection, and the conflicting Brace definitions
+  require owner decisions and are not invented by the CLI.
 - **Documentation age:** several historical files describe “simulator pending” or superseded outputs. Use the current report and review-gate documents to interpret them.
 
 The 2026-07-23 causal-integrity correction resolved centralized Main-action consumption and round-end Guard expiry. The current authoritative implementation evidence is `Game_att2_Combat_Simulator_Results_v0_2.md`.

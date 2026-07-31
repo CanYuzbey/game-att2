@@ -10,6 +10,10 @@ The acceptance source is `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`.
 - `integration/test_scenarios.py` checks the seven approved deterministic scenarios and batches.
 - `integration/test_cli_reporting.py` checks simulator CLI selection, formats, and file output.
 - `integration/test_play_cli.py` checks the Phase 1 play session, renderer, menus, and script mode.
+- `integration/test_campaign_play.py` checks the default Jeff → graft → Anna → table
+  player path, causal hints, and Pillar 5 output.
+- `unit/test_play_feedback.py` checks consented, versioned, non-overwriting local
+  feedback records for both playable modes.
 - `integration/test_research_cli.py` checks research CLI exports and input contracts.
 - `integration/test_console_entrypoints.py` launches all three documented `python -m` commands as subprocesses.
 - `integration/test_research_shell.py` and `integration/test_post_table_probe.py` check the evidence shell and non-canonical probes.
@@ -28,7 +32,8 @@ python -m mypy src
 ```powershell
 python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 python -m game_att2_sim --batch 100 --strategy balanced --seed 42 --format json
-python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_win_sequence.json
+python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_full_campaign_sequence.json
+python -m game_att2_sim.play_cli --phase-1 --seed 42 --script examples/play_cli_win_sequence.json
 python -m game_att2_sim.research_cli `
   --session-id AUTO-SMOKE-001 `
   --evidence-class AUTOMATED_REGRESSION `

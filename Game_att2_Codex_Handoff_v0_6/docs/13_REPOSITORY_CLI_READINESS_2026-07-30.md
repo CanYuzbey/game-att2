@@ -2,6 +2,10 @@
 
 Date: 2026-07-30
 
+> Historical readiness snapshot. The playable CLI boundary changed on 2026-07-31;
+> use `docs/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md` and
+> `docs/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md` for current operation.
+
 Canonical repository: <https://github.com/CanYuzbey/game-att2>
 
 Reviewed upstream commit: `ce2b836` (`origin/main`)

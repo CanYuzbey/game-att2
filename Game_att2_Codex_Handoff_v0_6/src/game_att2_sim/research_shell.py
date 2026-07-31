@@ -32,6 +32,7 @@ class EvidenceClass(str, Enum):
     OWNER_DIAGNOSTIC = "OWNER_DIAGNOSTIC"
     EXTERNAL_PILOT = "EXTERNAL_PILOT"
     AUTOMATED_REGRESSION = "AUTOMATED_REGRESSION"
+    UNCLASSIFIED_HUMAN_PLAY = "UNCLASSIFIED_HUMAN_PLAY"
 
 
 @dataclass(frozen=True)
@@ -76,10 +77,18 @@ class SessionMetadata:
             if not code.startswith(("OWNER-", "SELF-")):
                 raise ValueError("OWNER_DIAGNOSTIC requires an OWNER- or SELF- code")
         elif self.evidence_class is EvidenceClass.EXTERNAL_PILOT:
-            if code.startswith(("OWNER-", "SELF-", "AUTO-")):
-                raise ValueError("owner/automated codes cannot be labeled EXTERNAL_PILOT")
-        elif not code.startswith("AUTO-"):
+            if code.startswith(("OWNER-", "SELF-", "AUTO-", "PLAY-")):
+                raise ValueError(
+                    "owner/automated/unclassified codes cannot be labeled EXTERNAL_PILOT"
+                )
+        elif self.evidence_class is EvidenceClass.AUTOMATED_REGRESSION and not code.startswith(
+            "AUTO-"
+        ):
             raise ValueError("AUTOMATED_REGRESSION requires an AUTO- code")
+        elif self.evidence_class is EvidenceClass.UNCLASSIFIED_HUMAN_PLAY and not code.startswith(
+            "PLAY-"
+        ):
+            raise ValueError("UNCLASSIFIED_HUMAN_PLAY requires a PLAY- code")
         if self.information_condition not in {"KNOWN", "UNKNOWN", "NOT_APPLICABLE"}:
             raise ValueError("information_condition must be KNOWN, UNKNOWN, or NOT_APPLICABLE")
 
@@ -114,6 +123,8 @@ class InteractiveResearchSession:
     encounter: str = field(init=False, default="Jeff")
     enemy: CombatantRuntime | None = field(init=False)
     current_intent: str = field(init=False, default="")
+    exact_intent: str = field(init=False, default="")
+    current_intent_source: Slot | None = field(init=False, default=None)
     decisions: list[DecisionRecord] = field(init=False, default_factory=list)
     action_sequence: list[dict[str, Any]] = field(init=False, default_factory=list)
     harvested_jeff_arm: HarvestedLimb | None = field(init=False, default=None)
@@ -152,15 +163,25 @@ class InteractiveResearchSession:
     def _start_round(self) -> None:
         self.engine.start_round(self.player)
         if self.encounter == "Jeff":
-            source = self._first_usable_enemy_arm()
-            self.current_intent = (
+            source = self._choose_jeff_intent_source()
+            self.current_intent_source = source
+            self.exact_intent = (
                 f"Desperate Swing from {source.value} against torso"
                 if source is not None
                 else "No valid Desperate Swing source"
             )
+            self.current_intent = (
+                "Jeff prepares Desperate Swing (source and target unclear)"
+                if source is not None
+                else self.exact_intent
+            )
         elif self.encounter == "Anna":
-            self.current_intent = "Surgical Jab from right_arm against torso"
+            self.current_intent_source = Slot.RIGHT_ARM
+            self.exact_intent = "Surgical Jab from right_arm against torso"
+            self.current_intent = "Anna prepares Surgical Jab (source and target unclear)"
         else:
+            self.current_intent_source = None
+            self.exact_intent = ""
             self.current_intent = ""
 
     def _first_usable_enemy_arm(self) -> Slot | None:
@@ -170,6 +191,20 @@ class InteractiveResearchSession:
             if is_usable(self.enemy.body.slots[slot]):
                 return slot
         return None
+
+    def _choose_jeff_intent_source(self) -> Slot | None:
+        assert self.enemy is not None
+        for slot in (Slot.RIGHT_ARM, Slot.LEFT_ARM):
+            limb = self.enemy.body.slots[slot]
+            if LimbTag.MARKED in limb.tags and is_usable(limb):
+                self.log.emit(
+                    "jeff_marked_source_selected",
+                    self.enemy.id,
+                    source_slot=slot.value,
+                    response="aggressive_use",
+                )
+                return slot
+        return self._first_usable_enemy_arm()
 
     def _statuses(self) -> list[str]:
         statuses: list[str] = []
@@ -183,6 +218,10 @@ class InteractiveResearchSession:
             for tag in sorted(limb.tags, key=lambda value: value.value):
                 statuses.append(f"{slot.value}:{tag.value}")
         return statuses
+
+    def statuses(self) -> list[str]:
+        """Return the player-facing status list without exposing private helpers."""
+        return self._statuses()
 
     def _action_sources(self) -> dict[str, str]:
         return {
@@ -344,7 +383,8 @@ class InteractiveResearchSession:
 
     def _execute(self, selection: str) -> None:
         if selection == "focus":
-            self.engine.focus(self.player, self.current_intent)
+            self.engine.focus(self.player, self.exact_intent)
+            self.current_intent = self.exact_intent
             return
         if selection == "blood_bag":
             self.engine.fast_item(self.player, "blood_bag")
@@ -473,8 +513,14 @@ class InteractiveResearchSession:
     def _resolve_enemy_action(self) -> None:
         assert self.enemy is not None
         if self.encounter == "Jeff":
-            source = self._first_usable_enemy_arm()
-            if source is None:
+            source = self.current_intent_source
+            if source is None or not is_usable(self.enemy.body.slots[source]):
+                self.log.emit(
+                    "enemy_action_cancelled",
+                    self.enemy.id,
+                    source_slot=source.value if source is not None else None,
+                    reason="declared source is unavailable",
+                )
                 return
             self.engine.enemy_attack(
                 self.enemy, self.player, source, Slot.TORSO, 10

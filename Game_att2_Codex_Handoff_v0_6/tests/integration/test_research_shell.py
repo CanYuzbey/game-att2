@@ -98,7 +98,10 @@ def test_confirmation_cancellation_preserves_gameplay_and_rng() -> None:
 
 def test_confirmed_main_commits_once_and_focus_fast_remain_non_main() -> None:
     session = InteractiveResearchSession(metadata())
+    assert "unclear" in session.current_intent
     session.perform("focus")
+    assert session.current_intent == session.exact_intent
+    assert "left_arm against torso" in session.current_intent
     session.perform("blood_bag")
     assert not session.player.normal_action_consumed
     session.perform("grip_strike:right_arm", confirmed=True)
@@ -151,6 +154,37 @@ def test_destroyed_source_immediately_changes_affordances() -> None:
     assert not any(event.event_type == "main_action_committed" for event in session.log.events)
 
 
+def test_research_shell_revalidates_declared_jeff_source_without_fallback() -> None:
+    session = InteractiveResearchSession(metadata())
+    assert session.current_intent_source is Slot.LEFT_ARM
+    source = session.enemy.body.slots[Slot.LEFT_ARM]  # type: ignore[union-attr]
+    source.integrity = 5
+    source.state = LimbState.CRITICAL
+    torso = session.player.body.slots[Slot.TORSO]
+    before = torso.integrity
+
+    session.perform("grip_strike:left_arm", confirmed=True)
+
+    assert torso.integrity == before
+    assert any(
+        event.event_type == "enemy_action_cancelled"
+        and event.payload["source_slot"] == Slot.LEFT_ARM.value
+        for event in session.log.events
+    )
+
+
+def test_research_shell_uses_a_usable_marked_arm_on_the_next_round() -> None:
+    session = InteractiveResearchSession(metadata())
+    session.perform("claim_the_cut:right_arm", confirmed=True)
+
+    assert session.current_intent_source is Slot.RIGHT_ARM
+    assert any(
+        event.event_type == "jeff_marked_source_selected"
+        and event.payload["source_slot"] == Slot.RIGHT_ARM.value
+        for event in session.log.events
+    )
+
+
 def test_guard_consumption_expiry_and_plead_resolution_are_exported() -> None:
     completed = replay_session(metadata(), FULL_SEQUENCE)
     event_types = [event.event_type for event in completed.log.events]
@@ -188,6 +222,24 @@ def test_evidence_classes_cannot_be_mislabeled() -> None:
         participant_code="OWNER-CAN",
     )
     assert owner.evidence_class is EvidenceClass.OWNER_DIAGNOSTIC
+    play = metadata(
+        "PLAY-VALID",
+        EvidenceClass.UNCLASSIFIED_HUMAN_PLAY,
+        participant_code="PLAY-P01",
+    )
+    assert play.evidence_class is EvidenceClass.UNCLASSIFIED_HUMAN_PLAY
+    with pytest.raises(ValueError, match="PLAY- code"):
+        metadata(
+            "PLAY-BAD",
+            EvidenceClass.UNCLASSIFIED_HUMAN_PLAY,
+            participant_code="OWNER-CAN",
+        )
+    with pytest.raises(ValueError, match="unclassified"):
+        metadata(
+            "PILOT-BAD-PLAY",
+            EvidenceClass.EXTERNAL_PILOT,
+            participant_code="PLAY-P01",
+        )
 
 
 def test_broken_configuration_reference_fails_before_session(

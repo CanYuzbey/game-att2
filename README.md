@@ -16,10 +16,9 @@ Python simulator**. It validates combat rules, timing, reproducibility, and the
 body-as-build economy. It is not yet a production game, Unity project, playable
 vertical slice, or proof that the design is fun.
 
-The current simulator covers the bounded sequence from S-001 through Jeff,
-emergency grafting, Anna, and the Grafting Table. An interactive research shell
-records deterministic diagnostic sessions for the same sequence. A Phase 1
-playable CLI makes the S-001 → Jeff fight human-playable from a terminal.
+The current simulator and default playable CLI cover the bounded sequence from
+S-001 through Jeff, emergency grafting, Anna, and the Grafting Table. The older
+Jeff-only diagnostic remains available as an explicit compatibility mode.
 
 ## Design pillars
 
@@ -45,6 +44,8 @@ The active handoff package lives in
 - [Simulator technical specification](Game_att2_Codex_Handoff_v0_6/docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md)
 - [Tests and acceptance criteria](Game_att2_Codex_Handoff_v0_6/docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md)
 - [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
+- [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
+- [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)
 
 ## Run the simulator
 
@@ -56,11 +57,13 @@ python -m pip install -e ".[dev]"
 python -m game_att2_sim --scenario mini_campaign --seed 42 --format text
 ```
 
-Play the Phase 1 interactive fight (S-001 vs Jeff only):
+Play the full approved campaign:
 
 ```powershell
 python -m game_att2_sim.play_cli --seed 42
 ```
+
+Use `--phase-1` for the retained S-001 vs Jeff diagnostic.
 
 Run the verification suite:
 
@@ -70,7 +73,7 @@ python -m ruff check src tests
 python -m mypy src
 ```
 
-The latest recorded local verification is 145 passing tests, 88% line coverage,
+The latest recorded local verification is 163 passing tests, 87% line coverage,
 a clean Ruff run, and a clean strict mypy run. See the linked project report for the current
 evidence limits, known debt, and production gates, and
 [the Phase 1 CLI report](Game_att2_Codex_Handoff_v0_6/Game_att2_Playable_CLI_Phase1_Report_v0_1.md)
