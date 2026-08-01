@@ -21,8 +21,13 @@ from .research_shell import (
 
 ATTACK_ACTIONS = ("grip_strike", "claim_the_cut", "bone_scissors", "hell_saw")
 DEFENCE_ACTIONS = ("guard_flesh", "brace", "stand")
-COMMITMENT_ACTIONS = {"emergency_graft", "accept_anna_trade", "end_session"}
-CAMPAIGN_INTERFACE_VERSION = "0.1"
+COMMITMENT_ACTIONS = {
+    "emergency_graft",
+    "accept_anna_trade",
+    "accept_jeff_bargain",
+    "end_session",
+}
+CAMPAIGN_INTERFACE_VERSION = "0.2"
 COMBAT_MENU = """  [1] Saldır / hedef al
   [2] Focus
   [3] Fast eşya
@@ -83,7 +88,9 @@ def render_campaign_intro() -> str:
             "GAME ATT2 — ONAYLI TAM CLI KAMPANYASI",
             "S-001 -> Jeff -> acil graft -> Anna -> Grafting Table",
             "Blood aynı anda hayatta kalma bütçesi, ödeme ve eylem yakıtıdır.",
+            "Blood 0 ölümdür; kullanılmamış Limb for Life uygun bir uzvu feda ederek bunu bir kez önleyebilir.",
             "Hasarlı eylem kaynakları zayıflar; kullanılamaz kaynakların niyeti iptal olur.",
+            "Brace manuel bir tur duruşudur; Braced Legs otomatik yükü ayrı bir savunmadır.",
             "Not: Jeff'in mevcut onaylı saldırısı gövde bütünlüğünü azaltır, Blood'ı değil.",
             "=" * 72,
         ]
@@ -92,7 +99,7 @@ def render_campaign_intro() -> str:
 
 def _objective(encounter: str) -> str:
     return {
-        "Jeff": "Jeff'i etkisiz bırak; mümkünse graft edilebilir Sağ Kol çıkar.",
+        "Jeff": "İhtiyacın olan graft edilebilir Sağ Kol ile karşılaşmadan çık.",
         "Post-Jeff": "Kazandığın Sağ Kol için acil graft kararını ver.",
         "Anna": "Yeni beden riskini yönet; stabilizasyon veya greed yolunu seç.",
         "Grafting Table": "Bedenini entegre et, onar, güçlendir, borçlan veya koru.",
@@ -120,10 +127,16 @@ def render_campaign_state(session: InteractiveResearchSession) -> str:
             ]
         )
         if session.encounter == "Jeff":
-            lines.append(
-                "NEDENSEL İPUCU: Desperate Swing kullanılabilir bir koldan gelir; "
-                "o kaynak çözümden önce yok olursa saldırı iptal edilir."
-            )
+            if session.current_intent_action == "jeff_bargain":
+                lines.append(
+                    "NEDENSEL İPUCU: Jeff işaretli kol ile taşıdığın malzemeler arasında "
+                    "bağ kuruyor; Focus niyetin ayrıntısını açığa çıkarır."
+                )
+            else:
+                lines.append(
+                    "NEDENSEL İPUCU: Desperate Swing kullanılabilir bir koldan gelir; "
+                    "o kaynak çözümden önce yok olursa saldırı iptal edilir."
+                )
         elif session.encounter == "Anna":
             lines.append(
                 "NEDENSEL İPUCU: Surgical Jab Sağ Kol kaynaklıdır; graft/kanama durumu "
@@ -140,6 +153,7 @@ class CampaignViewSnapshot:
     enemy_body: dict[str, str]
     statuses: tuple[str, ...]
     visible_intent: str
+    inventory: dict[str, int]
 
 
 def campaign_snapshot(session: InteractiveResearchSession) -> CampaignViewSnapshot:
@@ -150,6 +164,7 @@ def campaign_snapshot(session: InteractiveResearchSession) -> CampaignViewSnapsh
         enemy_body=body_summary(session.enemy) if session.enemy is not None else {},
         statuses=tuple(session.statuses()),
         visible_intent=session.current_intent,
+        inventory=dict(session.player.inventory),
     )
 
 
@@ -165,6 +180,8 @@ def render_campaign_result(
         ("Sen", before.player_body, after.player_body),
         ("Düşman", before.enemy_body, after.enemy_body),
     ):
+        if owner == "Düşman" and before.encounter != after.encounter:
+            continue
         for slot in sorted(set(old_body) | set(new_body)):
             if old_body.get(slot) != new_body.get(slot):
                 changes.append(
@@ -182,6 +199,11 @@ def render_campaign_result(
             f"Görünen niyet: {before.visible_intent or 'yok'} -> "
             f"{after.visible_intent or 'yok'}"
         )
+    inventory_changes = [
+        f"{item}: {before.inventory.get(item, 0)} -> {after.inventory.get(item, 0)}"
+        for item in sorted(set(before.inventory) | set(after.inventory))
+        if before.inventory.get(item, 0) != after.inventory.get(item, 0)
+    ]
     event_list = list(events)
     kinds = list(dict.fromkeys(event.event_type for event in event_list))
     gains = [
@@ -198,6 +220,7 @@ def render_campaign_result(
             "emergency_graft",
             "enemy_action_cancelled",
             "focus_resolved",
+            "negotiated_exchange_completed",
         }
     ]
     if any(
@@ -224,7 +247,7 @@ def render_campaign_result(
             "unstable_applied",
             "jeff_marked_source_selected",
             "panic_pulse",
-            "soft_collapse",
+            "limb_for_life",
         }
     ]
     if any(
@@ -233,12 +256,17 @@ def render_campaign_result(
         for event in event_list
     ):
         risks.append("player_limb_state_changed")
+    inventory_cost = ", ".join(inventory_changes) if inventory_changes else "değişmedi"
+    cost_line = (
+        f"  3. Bedeli neydi? Blood {before.blood} -> {after.blood}; "
+        f"envanter: {inventory_cost}"
+    )
     return "\n".join(
         [
             "  + RİTÜEL SONUCU",
             f"  1. Ne hedeflendi? {action_label}",
             f"  2. Ne değişti? {' | '.join(changes) if changes else 'Açık durum değişikliği yok'}",
-            f"  3. Blood maliyeti? {before.blood} -> {after.blood}",
+            cost_line,
             f"  4. Ne kazanıldı? {', '.join(gains) if gains else 'Yeni kazanım yok'}",
             f"  5. Hangi yeni risk doğdu? {', '.join(risks) if risks else 'Yeni risk yok'}",
         ]
@@ -350,7 +378,8 @@ class CampaignConsole:
                 [
                     offer
                     for offer in self.session.offers()
-                    if offer.action_id in {"accept_anna_trade", "end_session"}
+                    if offer.action_id
+                    in {"accept_jeff_bargain", "accept_anna_trade", "end_session"}
                 ],
                 "KARŞILAŞMA ÇÖZÜMÜ",
             )

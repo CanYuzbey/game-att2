@@ -32,7 +32,7 @@ def render_text(result: ScenarioResult, verbose: bool = False) -> str:
         f"Scenario: {metrics.scenario} | seed={metrics.seed} | strategy={metrics.strategy}",
         f"Result: {metrics.result}; final blood: {metrics.final_blood}; rounds: {metrics.rounds}",
         f"Harvests: clean={metrics.clean_harvests}, stressed={metrics.stressed_harvests}, ruined={metrics.ruined_harvests}",
-        f"Panic Pulse={metrics.panic_pulse_used}; soft collapse={metrics.soft_collapse_used}; table={metrics.table_choice or 'n/a'}",
+        f"Panic Pulse={metrics.panic_pulse_used}; Limb for Life={metrics.limb_for_life_used}; table={metrics.table_choice or 'n/a'}",
         "Body: " + metrics.final_body_summary,
     ]
     if result.notes:
@@ -56,7 +56,7 @@ def render_batch_text(batch: dict[str, object]) -> str:
             ),
             (
                 f"Completion={float(cast(float, batch['completion_rate'])):.0%}; "
-                f"collapse={float(cast(float, batch['collapse_rate'])):.0%}; "
+                f"death={float(cast(float, batch['death_rate'])):.0%}; "
                 f"average final blood={float(cast(float, batch['average_final_blood'])):.1f}"
             ),
             (
@@ -98,12 +98,12 @@ def render_markdown(results: list[ScenarioResult], batches: list[dict[str, objec
     lines.extend(["", "## Batch Metrics", ""])
     if batches:
         lines.extend([
-            "| Strategy | Completion | Collapse | Avg Blood | Median Blood | Table Paths | Identical Body Rate |",
+            "| Strategy | Completion | Death | Avg Blood | Median Blood | Table Paths | Identical Body Rate |",
             "|---|---:|---:|---:|---:|---|---:|",
         ])
         for batch in batches:
             lines.append(
-                f"| {batch['strategy']} | {float(cast(float, batch['completion_rate'])):.0%} | {float(cast(float, batch['collapse_rate'])):.0%} | "
+                f"| {batch['strategy']} | {float(cast(float, batch['completion_rate'])):.0%} | {float(cast(float, batch['death_rate'])):.0%} | "
                 f"{float(cast(float, batch['average_final_blood'])):.1f} | {float(cast(float, batch['median_final_blood'])):.1f} | "
                 f"{batch['table_choices']} | {float(cast(float, batch['identical_final_body_rate'])):.0%} |"
             )

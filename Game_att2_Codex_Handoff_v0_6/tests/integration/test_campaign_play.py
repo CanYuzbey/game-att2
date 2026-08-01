@@ -9,6 +9,7 @@ from game_att2_sim.campaign_play import (
     CampaignConsole,
     campaign_session,
     campaign_snapshot,
+    render_campaign_intro,
     render_campaign_result,
     render_campaign_state,
     render_campaign_summary,
@@ -18,16 +19,23 @@ from game_att2_sim.play_cli import main
 
 FULL_SEQUENCE = [
     "claim_the_cut:right_arm",
-    "grip_strike:right_arm",
-    "hell_saw:right_arm",
-    "grip_strike:left_arm",
-    "grip_strike:left_arm",
+    "accept_jeff_bargain",
     "emergency_graft",
     "focus",
     "guard_flesh",
+    "grip_strike:right_arm",
+    "grip_strike:right_arm",
     "accept_anna_trade",
     "table:integrate_arm",
 ]
+
+
+def test_campaign_intro_explains_current_survival_and_defence_contracts() -> None:
+    intro = render_campaign_intro()
+    assert "Blood 0 ölümdür" in intro
+    assert "Limb for Life" in intro
+    assert "Brace manuel" in intro
+    assert "Braced Legs otomatik" in intro
 
 
 def test_campaign_player_path_reaches_every_approved_phase() -> None:
@@ -42,7 +50,7 @@ def test_campaign_player_path_reaches_every_approved_phase() -> None:
     assert session.outcome == "COMPLETED"
     assert session.anna_path == "stabilization_trade"
     assert session.metrics.table_choice == "integrate_arm"
-    assert session.player.blood == 25
+    assert session.player.blood == 36
 
 
 def test_campaign_state_exposes_objective_and_causal_source_hint() -> None:
@@ -71,7 +79,7 @@ def test_campaign_result_answers_pillar_five_questions() -> None:
     for question in (
         "1. Ne hedeflendi?",
         "2. Ne değişti?",
-        "3. Blood maliyeti?",
+        "3. Bedeli neydi?",
         "4. Ne kazanıldı?",
         "5. Hangi yeni risk doğdu?",
     ):
@@ -90,7 +98,7 @@ def test_focus_result_reports_information_as_the_gained_state() -> None:
         session.log.events[event_start:],
     )
     assert "Görünen niyet:" in text
-    assert "left_arm against torso" in text
+    assert "left_arm against left_arm" in text
     assert "focus_resolved" in text
 
 
@@ -117,6 +125,22 @@ def test_campaign_menus_explain_causal_targets_and_low_value_brace() -> None:
         "DEFANS",
     )
     assert any("mevcut düşman Knockdown kullanmıyor" in line for line in output)
+
+
+def test_campaign_resolution_menu_can_accept_jeffs_natural_bargain() -> None:
+    session = campaign_session(42)
+    session.perform("claim_the_cut:right_arm", confirmed=True)
+    answers = iter(["5", "1", "e"])
+    console = CampaignConsole(
+        session,
+        input_fn=lambda _prompt: next(answers),
+        output_fn=lambda _text: None,
+    )
+
+    console._decision()
+
+    assert session.encounter == "Post-Jeff"
+    assert session.jeff_bargain_accepted
 
 
 def test_campaign_summary_does_not_claim_owner_or_external_evidence() -> None:
@@ -147,4 +171,4 @@ def test_default_play_cli_runs_full_campaign_script(
     assert main(["--seed", "42", "--script", str(script)]) == 0
     output = capsys.readouterr().out
     assert "Outcome: COMPLETED" in output
-    assert "Final Blood: 25" in output
+    assert "Final Blood: 36" in output

@@ -96,7 +96,7 @@ def test_brace_downed_fast_stand_and_action_rejection() -> None:
     assert any(event.event_type == "main_action_rejected" for event in session.log.events)
 
 
-def test_failed_knockdown_preserves_brace_and_bleeding_can_collapse() -> None:
+def test_failed_knockdown_preserves_brace_and_bleeding_can_kill() -> None:
     session = _session("mini_campaign", 42, "balanced", load_config())
     player = session.player
     legs = player.body.slots[Slot.LEGS]
@@ -107,4 +107,4 @@ def test_failed_knockdown_preserves_brace_and_bleeding_can_collapse() -> None:
     player.blood = 3
     player.body.slots[Slot.TORSO].tags.add(LimbTag.BLEEDING)
     session.engine.start_round(player)
-    assert player.blood == 12 and player.soft_collapse_used
+    assert player.blood == 12 and player.limb_for_life_used

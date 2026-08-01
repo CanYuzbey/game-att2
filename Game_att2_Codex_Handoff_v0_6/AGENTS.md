@@ -47,7 +47,8 @@ Implement the smallest trustworthy Python simulator that reproduces the currentl
 ## Mandatory behaviors
 
 - Six body slots.
-- Blood spending/gaining, collapse, Panic Pulse, and one tutorial soft-collapse valve.
+- Blood spending/gaining, Blood-0 death, Panic Pulse, and one tutorial-scope Limb for
+  Life death-prevention sacrifice.
 - Limb integrity/state transitions and acting-limb impairment.
 - Basic attacks cannot create premium Clean Harvest by themselves.
 - Clean/Stressed/Ruined harvest quality.

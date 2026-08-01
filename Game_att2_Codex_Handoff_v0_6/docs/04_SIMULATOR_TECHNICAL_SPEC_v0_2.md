@@ -160,7 +160,9 @@ class CombatantRuntime:
     inventory: dict[str, int]
     plead_pressure: int = 0
     panic_pulse_used: bool = False
-    soft_collapse_used: bool = False
+    limb_for_life_used: bool = False
+    collapsed: bool = False  # internal encounter-inactive compatibility state
+    dead: bool = False
 
 @dataclass(frozen=True)
 class ActionDefinition:
@@ -236,7 +238,7 @@ Owns blood transactions and threshold triggers. It does not select actions or pr
 spend(actor, amount, reason, context) -> list[Event]
 gain(actor, amount, reason, context) -> list[Event]
 check_panic_pulse(actor, context) -> list[Event]
-resolve_collapse(actor, context) -> list[Event]
+resolve_zero_blood(actor, context) -> list[Event]
 ```
 
 ### LimbSystem
@@ -353,7 +355,7 @@ Per run:
 - limb-state transitions;
 - Clean/Stressed/Ruined counts;
 - emergency graft/stability result;
-- Panic Pulse and soft-collapse use;
+- Panic Pulse, Limb for Life use, and final death;
 - plea/trade decisions;
 - table choice;
 - final body summary;
@@ -361,7 +363,7 @@ Per run:
 
 Batch:
 
-- success/collapse rates;
+- success/death rates;
 - distributions/means/medians where useful;
 - dominant action frequencies;
 - path selection rates;

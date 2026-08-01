@@ -19,7 +19,7 @@ scenarios:
       - no_clean_harvest_from_grip_strike_only
       - incapacity_surrender_allowed
   failed_hell_saw:
-    description: Forced failure, Rage, bleeding and collapse pressure.
+    description: Forced failure, Rage, bleeding and death pressure.
     start_body: s001
     encounters: [jeff]
     default_strategy: reckless_sever

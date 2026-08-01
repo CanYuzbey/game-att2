@@ -1,5 +1,9 @@
 # Minotaur Human Test Analysis Template v0.1
 
+Status: supporting template for the active v0.2 bounded paper packet. Do not use until
+eight valid P01–P08 records exist; current policy labels are A/B and conditions are
+Known/Unknown as defined by the active packet.
+
 Do not complete this until real records exist. Treat every row as either observed fact, participant statement, facilitator interpretation, design inference, or recommendation; never collapse those categories.
 
 ## Comparison table

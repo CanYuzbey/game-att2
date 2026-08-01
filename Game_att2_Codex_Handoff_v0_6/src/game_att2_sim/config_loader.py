@@ -8,7 +8,16 @@ from typing import Any
 
 import yaml  # type: ignore[import-untyped]
 
-from .enums import LimbState, Slot
+from .encounter_goals import (
+    EncounterDesignDefinition,
+    MotivationKind,
+    MotivationProfile,
+    OutcomeLevel,
+    ResolutionKind,
+    VictoryRouteDefinition,
+    VictoryRouteKind,
+)
+from .enums import HarvestQuality, LimbState, Slot
 from .errors import ConfigValidationError
 from .models import ActionDefinition, LimbDefinition
 
@@ -23,6 +32,8 @@ class SimulatorConfig:
     enemies: dict[str, dict[str, Any]]
     table_options: dict[str, dict[str, Any]]
     scenarios: dict[str, dict[str, Any]]
+    motivation_profiles: dict[str, MotivationProfile]
+    encounter_designs: dict[str, EncounterDesignDefinition]
     schema_version: str
     content_version: str
     scenario_version: str
@@ -53,7 +64,7 @@ def _slot(value: str) -> Slot:
 
 def load_config(directory: Path | None = None) -> SimulatorConfig:
     directory = directory or default_config_directory()
-    rules = _load_yaml(directory / "combat_rules_v0_4.yaml")
+    rules = _load_yaml(directory / "combat_rules_v0_5.yaml")
     content = _load_yaml(directory / "content_v0_1.yaml")
     scenario_file = _load_yaml(directory / "scenarios_v0_1.yaml")
     limb_data = content.get("limbs", {})
@@ -87,6 +98,13 @@ def load_config(directory: Path | None = None) -> SimulatorConfig:
         cost = raw.get("cost", 0)
         if not isinstance(cost, int) or cost < 0:
             raise ConfigValidationError(f"action {action_id} has invalid cost")
+        duration_rounds = raw.get("duration_rounds", 0)
+        if (
+            not isinstance(duration_rounds, int)
+            or isinstance(duration_rounds, bool)
+            or duration_rounds < 0
+        ):
+            raise ConfigValidationError(f"action {action_id} has invalid duration_rounds")
         actions[action_id] = ActionDefinition(
             id=action_id,
             name=str(raw.get("name", action_id)),
@@ -97,9 +115,39 @@ def load_config(directory: Path | None = None) -> SimulatorConfig:
             damage_type=raw.get("damage_type"),
             reduction=float(raw.get("reduction", 0.0)),
             can_clean_sever=bool(raw.get("can_clean_sever", False)),
+            duration_rounds=duration_rounds,
+            implementation_status=str(raw.get("implementation_status", "implemented")),
         )
     if actions.get("grip_strike") is None or actions["grip_strike"].can_clean_sever:
         raise ConfigValidationError("Grip Strike must exist and cannot clean sever")
+    cover_it = actions.get("cover_it")
+    if cover_it is None or cover_it.duration_rounds != 1:
+        raise ConfigValidationError("Cover It must declare exactly one round of duration")
+    if cover_it.implementation_status != "deferred_until_protection_tradeoff_is_approved":
+        raise ConfigValidationError(
+            "Cover It must remain deferred until its protection trade-off is approved"
+        )
+    limb_for_life = rules.get("limb_for_life")
+    if not isinstance(limb_for_life, dict):
+        raise ConfigValidationError("rules require limb_for_life")
+    blood_rules = rules.get("blood")
+    if (
+        not isinstance(blood_rules, dict)
+        or blood_rules.get("zero_result") != "death"
+        or blood_rules.get("death_at") != 0
+    ):
+        raise ConfigValidationError("Blood zero_result must be death")
+    if limb_for_life.get("sacrifice_selection") != "seeded_random_usable_non_core_limb":
+        raise ConfigValidationError("Limb for Life requires the approved sacrifice selection")
+    if (
+        limb_for_life.get("enabled") is not True
+        or limb_for_life.get("max_uses_per_run") != 1
+        or not isinstance(limb_for_life.get("restore_blood"), int)
+        or int(limb_for_life["restore_blood"]) <= 0
+    ):
+        raise ConfigValidationError("Limb for Life must be enabled once with positive Blood")
+    motivation_profiles = _load_motivation_profiles(content)
+    encounter_designs = _load_encounter_designs(content, motivation_profiles)
     slots = set(Slot)
     for body_id, raw in content.get("starting_bodies", {}).items():
         body_slots = {_slot(slot) for slot in raw.get("slots", {})}
@@ -120,12 +168,125 @@ def load_config(directory: Path | None = None) -> SimulatorConfig:
         enemies=dict(content.get("enemies", {})),
         table_options=dict(content.get("table_options", {})),
         scenarios=dict(scenario_file.get("scenarios", {})),
+        motivation_profiles=motivation_profiles,
+        encounter_designs=encounter_designs,
         schema_version=str(content.get("schema_version", "")),
         content_version=str(content.get("content_version", "")),
         scenario_version=str(scenario_file.get("scenario_version", "")),
     )
     _validate_approved_sequence(config)
     return config
+
+
+def _load_motivation_profiles(content: dict[str, Any]) -> dict[str, MotivationProfile]:
+    raw_profiles = content.get("motivation_profiles", {})
+    if not isinstance(raw_profiles, dict):
+        raise ConfigValidationError("motivation_profiles must be a mapping")
+    profiles: dict[str, MotivationProfile] = {}
+    for profile_id, raw in raw_profiles.items():
+        if not isinstance(raw, dict):
+            raise ConfigValidationError(f"motivation profile {profile_id} must be a mapping")
+        try:
+            profile = MotivationProfile(
+                id=str(profile_id),
+                kind=MotivationKind(str(raw["kind"])),
+                summary=str(raw["summary"]),
+                desired_assets=tuple(str(value) for value in raw.get("desired_assets", [])),
+                preserve_slots=tuple(_slot(str(value)) for value in raw.get("preserve_slots", [])),
+                acceptable_resolutions=tuple(
+                    ResolutionKind(str(value))
+                    for value in raw.get("acceptable_resolutions", [])
+                ),
+                lethality=str(raw["lethality"]),
+                escalation_triggers=tuple(
+                    str(value) for value in raw.get("escalation_triggers", [])
+                ),
+            )
+        except (KeyError, TypeError, ValueError) as error:
+            raise ConfigValidationError(
+                f"invalid motivation profile {profile_id}: {error}"
+            ) from error
+        if not profile.summary.strip() or not profile.lethality.strip():
+            raise ConfigValidationError(
+                f"motivation profile {profile_id} requires summary and lethality"
+            )
+        profiles[profile.id] = profile
+    return profiles
+
+
+def _load_encounter_designs(
+    content: dict[str, Any],
+    profiles: dict[str, MotivationProfile],
+) -> dict[str, EncounterDesignDefinition]:
+    raw_designs = content.get("encounter_designs", {})
+    if not isinstance(raw_designs, dict):
+        raise ConfigValidationError("encounter_designs must be a mapping")
+    designs: dict[str, EncounterDesignDefinition] = {}
+    for encounter_id, raw in raw_designs.items():
+        if not isinstance(raw, dict) or not isinstance(raw.get("actor_motivations"), dict):
+            raise ConfigValidationError(
+                f"encounter design {encounter_id} requires actor_motivations"
+            )
+        actor_motivations = {
+            str(actor): str(profile_id)
+            for actor, profile_id in raw["actor_motivations"].items()
+        }
+        if set(actor_motivations) != {"player", "enemy"}:
+            raise ConfigValidationError(
+                f"encounter design {encounter_id} requires exactly player and enemy motivations"
+            )
+        raw_parameters = raw.get("parameters", {})
+        if not isinstance(raw_parameters, dict):
+            raise ConfigValidationError(
+                f"encounter design {encounter_id} parameters must be a mapping"
+            )
+        for actor, profile_id in actor_motivations.items():
+            if actor not in {"player", "enemy"}:
+                raise ConfigValidationError(
+                    f"encounter design {encounter_id} has invalid actor {actor}"
+                )
+            if profile_id not in profiles:
+                raise ConfigValidationError(
+                    f"encounter design {encounter_id} references unknown motivation {profile_id}"
+                )
+        routes: list[VictoryRouteDefinition] = []
+        route_ids: set[str] = set()
+        for raw_route in raw.get("victory_routes", []):
+            if not isinstance(raw_route, dict):
+                raise ConfigValidationError(
+                    f"encounter design {encounter_id} has malformed victory route"
+                )
+            try:
+                route = VictoryRouteDefinition(
+                    id=str(raw_route["id"]),
+                    actor=str(raw_route["actor"]),
+                    kind=VictoryRouteKind(str(raw_route["kind"])),
+                    predicate=str(raw_route["predicate"]),
+                    success_level=OutcomeLevel(str(raw_route["success_level"])),
+                )
+            except (KeyError, ValueError) as error:
+                raise ConfigValidationError(
+                    f"invalid victory route in {encounter_id}: {error}"
+                ) from error
+            if route.id in route_ids or route.actor not in actor_motivations:
+                raise ConfigValidationError(
+                    f"encounter design {encounter_id} has duplicate/invalid route {route.id}"
+                )
+            if not route.predicate.strip():
+                raise ConfigValidationError(f"victory route {route.id} requires a predicate")
+            route_ids.add(route.id)
+            routes.append(route)
+        if not routes:
+            raise ConfigValidationError(
+                f"encounter design {encounter_id} requires at least one victory route"
+            )
+        designs[str(encounter_id)] = EncounterDesignDefinition(
+            id=str(encounter_id),
+            actor_motivations=actor_motivations,
+            victory_routes=tuple(routes),
+            parameters=dict(raw_parameters),
+        )
+    return designs
 
 
 def _validate_approved_sequence(config: SimulatorConfig) -> None:
@@ -157,6 +318,79 @@ def _validate_approved_sequence(config: SimulatorConfig) -> None:
         "table_loan",
         "leave",
     }
+    jeff_design = config.encounter_designs.get("jeff")
+    if jeff_design is None:
+        raise ConfigValidationError("approved sequence requires Jeff encounter design")
+    required_jeff_parameters: dict[str, type[Any]] = {
+        "bargain_asset": str,
+        "bargain_limb": str,
+        "bargain_quality": str,
+        "bargain_score": int,
+        "offense_target": str,
+        "offense_target_score": int,
+        "pressure_target": str,
+        "pressure_target_score": int,
+        "repetition_penalty": int,
+    }
+    for parameter, expected_type in required_jeff_parameters.items():
+        value = jeff_design.parameters.get(parameter)
+        if not isinstance(value, expected_type) or (
+            expected_type is int and isinstance(value, bool)
+        ):
+            raise ConfigValidationError(
+                f"Jeff encounter design requires {parameter} as {expected_type.__name__}"
+            )
+    bargain_asset = str(jeff_design.parameters["bargain_asset"])
+    if bargain_asset not in config.items:
+        raise ConfigValidationError("Jeff bargain_asset must reference a configured item")
+    bargain_slot = _slot(str(jeff_design.parameters["bargain_limb"]))
+    if bargain_slot is not Slot.RIGHT_ARM:
+        raise ConfigValidationError(
+            "Jeff bargain_limb must remain right_arm in the approved campaign"
+        )
+    _slot(str(jeff_design.parameters["offense_target"]))
+    _slot(str(jeff_design.parameters["pressure_target"]))
+    try:
+        bargain_quality = HarvestQuality(str(jeff_design.parameters["bargain_quality"]))
+    except ValueError as error:
+        raise ConfigValidationError("Jeff bargain_quality is invalid") from error
+    if bargain_quality is not HarvestQuality.CLEAN:
+        raise ConfigValidationError("Jeff approved bargain_quality must be clean")
+    for score_name in (
+        "bargain_score",
+        "offense_target_score",
+        "pressure_target_score",
+        "repetition_penalty",
+    ):
+        score_value = jeff_design.parameters[score_name]
+        if not isinstance(score_value, int) or isinstance(score_value, bool):
+            raise ConfigValidationError(f"Jeff {score_name} must be an integer")
+        if score_value < 0:
+            raise ConfigValidationError(f"Jeff {score_name} must not be negative")
+    jeff_profile = config.motivation_profiles[jeff_design.actor_motivations["enemy"]]
+    if bargain_asset not in jeff_profile.desired_assets:
+        raise ConfigValidationError("Jeff bargain_asset must be a desired motivation asset")
+    if bargain_slot not in jeff_profile.preserve_slots:
+        raise ConfigValidationError("Jeff bargain_limb must be preserved by his motivation")
+    if "bargain_rejected" not in jeff_profile.escalation_triggers:
+        raise ConfigValidationError(
+            "Jeff motivation must declare bargain_rejected as an escalation trigger"
+        )
+    allowed_jeff_predicates = {
+        "player_has_graftable_jeff_right_arm",
+        "jeff_offensive_sources_unusable",
+        "jeff_surrendered",
+        "jeff_has_clotting_cream",
+        "player_dead",
+        "jeff_survived_resolution",
+    }
+    if any(
+        route.predicate not in allowed_jeff_predicates
+        for route in jeff_design.victory_routes
+    ):
+        raise ConfigValidationError(
+            "Jeff victory route uses a predicate unsupported by the approved campaign"
+        )
     for action_id in sorted(required_actions):
         if action_id not in config.actions:
             raise ConfigValidationError(f"approved sequence requires action {action_id}")

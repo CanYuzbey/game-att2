@@ -1,12 +1,11 @@
 [
   "claim_the_cut:right_arm",
-  "grip_strike:right_arm",
-  "hell_saw:right_arm",
-  "grip_strike:left_arm",
-  "grip_strike:left_arm",
+  "accept_jeff_bargain",
   "emergency_graft",
   "focus",
   "guard_flesh",
+  "grip_strike:right_arm",
+  "grip_strike:right_arm",
   "accept_anna_trade",
   "table:integrate_arm"
 ]

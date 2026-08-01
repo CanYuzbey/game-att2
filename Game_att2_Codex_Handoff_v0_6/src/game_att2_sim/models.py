@@ -30,6 +30,8 @@ class ActionDefinition:
     damage_type: str | None = None
     reduction: float = 0.0
     can_clean_sever: bool = False
+    duration_rounds: int = 0
+    implementation_status: str = "implemented"
 
 
 @dataclass
@@ -68,8 +70,9 @@ class CombatantRuntime:
     plead_pressure: int = 0
     plead_triggers: set[str] = field(default_factory=set)
     panic_pulse_used: bool = False
-    soft_collapse_used: bool = False
+    limb_for_life_used: bool = False
     collapsed: bool = False
+    dead: bool = False
     debt: int = 0
     rage: bool = False
     guard_active: bool = False
@@ -136,7 +139,7 @@ class ScenarioMetrics:
     stressed_harvests: int = 0
     ruined_harvests: int = 0
     panic_pulse_used: bool = False
-    soft_collapse_used: bool = False
+    limb_for_life_used: bool = False
     plea_triggered: bool = False
     grafts_attempted: int = 0
     stable_grafts: int = 0

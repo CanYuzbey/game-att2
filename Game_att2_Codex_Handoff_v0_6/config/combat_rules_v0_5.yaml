@@ -1,5 +1,5 @@
 schema_version: "0.1"
-rules_version: "0.4"
+rules_version: "0.5"
 body_slots: [head, torso, left_arm, right_arm, legs, core]
 limb_thresholds:
   intact_above: 0.70
@@ -10,7 +10,8 @@ acting_limb_multipliers:
   damaged: 0.75
   critical: 0.5
 blood:
-  collapse_at: 0
+  death_at: 0
+  zero_result: death
   critical_max: 20
   dangerous_max: 50
   normal_max: 100
@@ -20,10 +21,12 @@ panic_pulse:
   gain: 10
   cap: 35
   uses_per_fight: 1
-soft_collapse:
+limb_for_life:
   enabled: true
   restore_blood: 12
   max_uses_per_run: 1
+  sacrifice_selection: seeded_random_usable_non_core_limb
+  role: explicit_death_prevention
 bleeding:
   basic_loss: 5
   severe_loss: 8

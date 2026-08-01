@@ -4,9 +4,9 @@ Status: owner-approved requirements for paper testing only. Encounter 3 runtime 
 
 ## Approved decisions
 
-Encounter 3 is a bounded causal pressure encounter, not pure endurance. The paper-only Warden has three target zones and two offensive action sources. Player actions may weaken or disable those sources, immediately changing legal Warden actions. Multiple state-derived non-collapse paths are permitted; no action is designated “the solution.”
+Encounter 3 is a bounded causal pressure encounter, not pure endurance. The paper-only Warden has three target zones and two offensive action sources. Player actions may weaken or disable those sources, immediately changing legal Warden actions. Multiple state-derived non-death paths are permitted; no action is designated “the solution.”
 
-The encounter resolves only through player collapse under existing rules, bounded Warden combat incapacity, or `UNRESOLVED — ROUND CAP` after eight completed rounds. Warden death, harvest, internal anatomy, organs, penetration, surrender, bargaining, escape, personality, generalized AI, runtime implementation, and Unity remain unapproved.
+The encounter resolves only through player death at Blood 0 (Limb for Life is unavailable in this fixture), bounded Warden combat incapacity, or `UNRESOLVED — ROUND CAP` after eight completed rounds. Warden death, harvest, internal anatomy, organs, penetration, surrender, bargaining, escape, personality, generalized AI, runtime implementation, and Unity remain unapproved.
 
 ## Fixed fixture: E3-PRETABLE-01
 
@@ -41,6 +41,9 @@ The first valid Knockdown attempt each fight is automatically prevented. This do
 
 ## Evidence and gate
 
-Run eight real, individually moderated, free-choice sessions using `Game_att2_Encounter_3_Session_Record_Pack_v0_1.md`. `SELF-S01` and `SELF-S02` remain contaminated designer diagnostics and never count toward P01–P08. `SELF-S03` and `SELF-S04` are unnecessary before this gate.
+Run eight real, individually moderated, free-choice sessions using
+`SESSION_RECORD_PACK_v0_1.md`. `SELF-S01` and `SELF-S02` remain contaminated designer
+diagnostics and never count toward P01–P08. The unused SELF-S03/SELF-S04 placeholders
+were removed when the stopped protocol was archived.
 
 Paper-test approval does not authorize simulator code, runtime configuration, production content, or Unity. Full mechanics, policies, conditions, records, and acceptance criteria are in the current Encounter 3 packet referenced by README.

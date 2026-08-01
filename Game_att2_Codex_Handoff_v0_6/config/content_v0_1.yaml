@@ -1,5 +1,5 @@
 schema_version: "0.1"
-content_version: "0.1"
+content_version: "0.2"
 limbs:
   human_head:
     name: Human Head
@@ -80,7 +80,7 @@ actions:
     source_slot: right_arm
     reduction: 0.5
   brace:
-    name: Brace
+    name: Brace — Manual Stance
     timing: main
     cost: 0
     source_slot: legs
@@ -101,6 +101,8 @@ actions:
     name: Cover It
     timing: enemy
     cost: 0
+    duration_rounds: 1
+    implementation_status: deferred_until_protection_tradeoff_is_approved
   black_stitch:
     name: Black Stitch
     timing: enemy
@@ -190,6 +192,71 @@ enemies:
       legs: {name: Human Legs, max_integrity: 35, size: large}
       core: {name: Leaking Heart, max_integrity: 35, size: medium}
     actions: [surgical_jab, black_stitch, calm_guard, trade_offer]
+
+motivation_profiles:
+  player_body_reconstruction:
+    kind: restoration
+    summary: Obtain a usable Right Arm while preserving enough Blood and body function to continue.
+    desired_assets: [graftable_jeff_right_arm]
+    preserve_slots: []
+    acceptable_resolutions: [objective, bargain, surrender, incapacity]
+    lethality: route_dependent
+    escalation_triggers: [objective_becomes_unavailable]
+  jeff_reciprocal_repair:
+    kind: restoration
+    summary: Obtain the player's Clotting Cream for the Open Wound Torso and survive the exchange.
+    desired_assets: [clotting_cream]
+    preserve_slots: [right_arm]
+    acceptable_resolutions: [bargain, surrender, escape, incapacity]
+    lethality: nonlethal_coercion
+    escalation_triggers: [bargain_rejected, marked_limb_threatened, failed_hell_saw]
+
+encounter_designs:
+  jeff:
+    actor_motivations:
+      player: player_body_reconstruction
+      enemy: jeff_reciprocal_repair
+    parameters:
+      bargain_asset: clotting_cream
+      bargain_limb: right_arm
+      bargain_quality: clean
+      bargain_score: 100
+      offense_target: left_arm
+      offense_target_score: 55
+      pressure_target: torso
+      pressure_target_score: 50
+      repetition_penalty: 20
+    victory_routes:
+      - id: player_secures_graftable_right_arm
+        actor: player
+        kind: objective_completion
+        predicate: player_has_graftable_jeff_right_arm
+        success_level: complete
+      - id: player_breaks_jeff_offense
+        actor: player
+        kind: capability_break
+        predicate: jeff_offensive_sources_unusable
+        success_level: partial
+      - id: player_forces_jeff_surrender
+        actor: player
+        kind: surrender
+        predicate: jeff_surrendered
+        success_level: partial
+      - id: jeff_obtains_clotting_cream
+        actor: enemy
+        kind: objective_completion
+        predicate: jeff_has_clotting_cream
+        success_level: complete
+      - id: jeff_kills_player
+        actor: enemy
+        kind: blood_death
+        predicate: player_dead
+        success_level: complete
+      - id: jeff_survives_resolution
+        actor: enemy
+        kind: objective_completion
+        predicate: jeff_survived_resolution
+        success_level: partial
 
 table_options:
   integrate_arm:

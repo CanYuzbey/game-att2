@@ -2,7 +2,11 @@
 
 Canonical repository: <https://github.com/CanYuzbey/game-att2>
 
-Game att2 is a single-player PC hell-loop limb-grafting roguelike/roguelite concept. The player survives ritualized turn-based duels by damaging, extracting, grafting, stabilizing, and integrating body parts while spending Blood as health, currency, and ability fuel.
+Game att2 is a single-player PC hell-loop limb-grafting roguelike/roguelite concept.
+Its current core direction combines strategic turn-based duels with bounded reflexive
+execution moments. The player damages, extracts, grafts, stabilizes, and integrates
+body parts while spending Blood as health, currency, and ability fuel. The reflex layer
+is design-approved but not yet implemented in the simulator.
 
 > You are not collecting weapons. You are becoming the weapon, piece by piece, using your own blood as money.
 
@@ -10,7 +14,8 @@ This repository is currently a **design-research and deterministic Python simula
 
 ## Current status
 
-Evidence baseline: **2026-07-23**. CLI/documentation alignment rechecked: **2026-07-31**.
+Evidence baseline: **2026-07-23**. Rules/CLI/documentation alignment rechecked:
+**2026-08-01**.
 
 - Current maturity: pre-production rules validation / simulator stage.
 - Approved digital scope: the narrow Python simulator for S-001 → Jeff → emergency graft → Anna → Grafting Table.
@@ -19,17 +24,25 @@ Evidence baseline: **2026-07-23**. CLI/documentation alignment rechecked: **2026
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
 - Unity graybox: **blocked**.
-- Latest local verification: **163 tests passed**, **87% line coverage**, Ruff passed, and strict mypy passed.
+- Latest local verification: **186 tests passed**, **87% line coverage**, Ruff passed, and strict mypy passed.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
 - Playable CLI: the default interface now covers **S-001 → Jeff → emergency graft
   → Anna → Grafting Table**. The Jeff-only Phase 1 diagnostic remains behind
   `--phase-1`. No valid external human-play evidence exists yet.
+- General combat motivation and state-derived victory routes are implemented as a
+  survey prototype. Jeff can pursue reciprocal repair, offer an existing asset trade,
+  vary legal targets, and record mutual or asymmetric outcomes without hard-coded
+  endings.
 
 The historical paper result of 37 Blood is preserved as evidence but is not an automated target. Its arithmetic includes an unconfigured spare-arm sale. The current 25-Blood result follows the configured costs and seeded events. Neither number is an approved balance target.
 
-For the full evidence-backed assessment, known defects, risks, timeline, and questions, read [docs/12_CURRENT_PROJECT_REPORT_2026-07-23.md](docs/12_CURRENT_PROJECT_REPORT_2026-07-23.md).
+For current document status and navigation, read [docs/README.md](docs/README.md).
+New core-gameplay conversations should start from
+[docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md](docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md).
+The detailed unresolved-rule register remains
+[docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md](docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md).
 
 ## Vision and player fantasy
 
@@ -71,7 +84,8 @@ wake damaged
 The simulator validates rules, timing, reproducibility, and numerical behavior for:
 
 - six body slots: Head, Torso, Left Arm, Right Arm, Legs, and Core;
-- Blood spending, gaining, Panic Pulse, collapse, and one tutorial soft-collapse valve;
+- Blood spending/gaining, Blood-0 death, Panic Pulse, and one tutorial-scope Limb for
+  Life death-prevention sacrifice;
 - limb integrity, state transitions, tags, and acting-limb impairment;
 - basic attacks that can disable or ruin but cannot independently create premium Clean Harvest;
 - Clean, Stressed, and Ruined harvest quality;
@@ -82,7 +96,8 @@ The simulator validates rules, timing, reproducibility, and numerical behavior f
 - Grafting Table v0.2;
 - structured event logs, seeded runs, scenario metrics, and batch diagnostics;
 - a non-canonical post-table consequence probe;
-- owner-approved Downed, Stand, and automatic Brace behavior.
+- owner-approved Downed/Stand, manual Brace, and separate Braced Legs automatic-charge
+  behavior.
 
 The simulator is a validation tool. Its strategies are test drivers, not models of real player behavior.
 
@@ -105,14 +120,11 @@ Paper-test approval is not runtime implementation approval.
 
 ```text
 AGENTS.md                         Binding project rules
-CODEX_TASK.md                     Original simulator implementation brief
 config/                           Authoritative tunable simulator data
-docs/                             Product, rules, technical, test, and status documents
+docs/                             Active documents, Encounter 3 packet, and archive index
 src/game_att2_sim/                Python simulator package
 tests/                            Unit and integration tests
 research/                         Paper/self-play records and blank test templates
-Game_att2_*Results*.md            Generated or reviewed evidence artifacts
-Game_att2_Encounter_3_*.md        Paper-only Encounter 3 materials
 pyproject.toml                    Package and development-tool configuration
 ```
 
@@ -122,6 +134,10 @@ Important code boundaries:
 - `config_loader.py` loads and validates YAML.
 - `rng.py` centralizes seeded and scripted randomness.
 - `rules.py` owns Blood, limbs, actions, harvesting, grafting, conditions, and table rules.
+- `encounter_goals.py` defines general motivations, victory routes, resolutions, and
+  per-actor state-derived outcomes.
+- `enemy_behavior.py` ranks legal intent candidates deterministically and penalizes
+  exact repetition.
 - `scenarios.py` owns the approved scenario drivers and strategy batches.
 - `events.py` and `reporting.py` keep domain logic separate from output rendering.
 - `probe.py` contains explicitly non-canonical validation probes.
@@ -143,10 +159,10 @@ Important code boundaries:
 Anyone changing rules, simulator behavior, tests, or project status must read these files in order:
 
 1. `AGENTS.md`
-2. `CODEX_TASK.md`
+2. `docs/README.md`
 3. `docs/01_PROJECT_STATE_HISTORY_VISION.md`
 4. `docs/02_DEVELOPMENT_MASTER_v0_6.md`
-5. `docs/03_COMBAT_RULES_v0_4.md`
+5. `docs/03_COMBAT_RULES_v0_5.md`
 6. `docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md`
 7. `docs/05_CONTENT_CATALOG_v0_1.md` and `config/*.yaml`
 8. `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`
@@ -155,19 +171,20 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 11. `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md`
 12. `docs/10_CODEX_RETURN_CONTRACT.md`
 13. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`
-14. `Game_att2_Encounter_3_Owner_Decision_Reconciliation_v0_1.md`
-15. `Game_att2_Encounter_3_Bounded_Causal_Paper_Spec_v0_2.md`
-16. `Game_att2_Encounter_3_Participant_Cards_v0_2.md`
-17. `Game_att2_Encounter_3_Facilitator_Policy_Cards_v0_1.md`
-18. `Game_att2_Encounter_3_Session_Record_Pack_v0_1.md`
-19. `docs/12_CURRENT_PROJECT_REPORT_2026-07-23.md`
+14. `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`
+15. `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`
+16. `docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`
+
+Read `docs/encounter_3/README.md` and its ordered packet only when working on the
+paper-only Encounter 3 gate. The completed original implementation brief and reports
+are under `docs/archive/`; they are evidence, not current instruction.
 
 When sources conflict, use this precedence:
 
 ```text
 AGENTS.md
 → Development Master v0.6
-→ Combat Rules v0.4
+→ Combat Rules v0.5
 → Simulator Technical Spec v0.2
 → config/*.yaml for tunable values
 → Test Plan / Acceptance
@@ -252,10 +269,13 @@ python -m game_att2_sim.play_cli --phase-1 --seed 42
 python -m game_att2_sim.play_cli --phase-1 --seed 42 --script examples/play_cli_win_sequence.json
 ```
 
-Current scope and blocked identity decisions are recorded in
-`docs/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md` and
-`docs/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md`. The older Phase 1 report remains
-a historical record of that compatibility interface.
+Current motivation and outcome behavior is recorded in
+`docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`. The hybrid core-gameplay
+direction and compressed owner-decision gate are in
+`docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; detailed subordinate
+combat, movement, defense, wound, and negotiation dependencies remain in
+`docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`. Completed CLI alignment reports are
+preserved under `docs/archive/implementation_reports/`.
 
 ## Run Interactive Research Shell v0.1
 
@@ -277,7 +297,7 @@ python -m game_att2_sim.research_cli `
 Use `EXTERNAL_PILOT` only for a genuinely external participant and
 `AUTOMATED_REGRESSION` only for scripted automation. The retained implementation
 report and owner-diagnostic evidence are in
-`Game_att2_Interactive_Research_Shell_Report_v0_1.md` and
+`docs/archive/implementation_reports/Game_att2_Interactive_Research_Shell_Report_v0_1.md` and
 `research/interactive_shell/`.
 
 Supported formats are text, JSON, and Markdown. Use `--verbose` for detailed events and `--output PATH` to save output.
@@ -303,18 +323,19 @@ python -m mypy src
 python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 ```
 
-Current verification on 2026-07-31:
+Current verification on 2026-08-01:
 
 ```text
-pytest: 163 passed
+pytest: 186 passed
 coverage: 87%
 ruff: all checks passed
-mypy: success, no issues in 22 source files
+mypy: success, no issues in 24 source files
 mini_campaign seed 42: completed, 25 Blood
+playable campaign seed 42: completed, 36 Blood
 ```
 
-The repository identity, CLI roles, current smoke commands, and readiness limits are
-recorded in [docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md](docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md).
+The historical repository/CLI readiness record is preserved under
+`docs/archive/implementation_reports/`; current commands and limits live here.
 
 ## Evidence status
 
@@ -326,7 +347,8 @@ Confirmed:
 - body acquisition changes later legal actions;
 - seeded event logs expose Blood and limb-state changes;
 - conditional post-table effects are observable in non-canonical probes;
-- Downed, Stand, and Brace are implemented and tested.
+- Downed, Stand, manual Brace, Braced Legs automatic charge, Blood-0 death, and Limb
+  for Life prevention are implemented and tested.
 
 Not confirmed:
 
@@ -347,12 +369,21 @@ The automated suite passes, but passing tests do not erase known gaps:
 - **P1 — product gate:** simulator evidence does not establish fun, balance, or readiness for Unity.
 - **P2 — player evidence:** the interactive shell has owner-diagnostic and automated
   coverage, but no valid external-pilot session.
-- **P1 — unresolved identity rules:** Jeff's direct Blood threat, the consequence of
-  a Ruined player torso, `Cover It` protection, and the conflicting Brace definitions
-  require owner decisions and are not invented by the CLI.
-- **Documentation age:** several historical files describe “simulator pending” or superseded outputs. Use the current report and review-gate documents to interpret them.
+- **P1 — physical rules:** wound classes/values and the exact Ruined Torso chain remain
+  open; ordinary limb damage therefore does not yet invent Blood loss.
+- **P1 — defense:** Cover It lasts one round, but its source, target, effect, and
+  trade-off against manual Brace/Braced Legs/Guard Flesh remain open.
+- **P1 — combat structure:** movement, reachability, and final action economy are not
+  defined beyond the current survey harness.
+- **P1 — resolution:** generalized mental defeat and the multi-round negotiation
+  minigame remain design-approved directions without complete runtime contracts.
+- **Documentation:** completed and superseded reports are isolated under
+  `docs/archive/`; active navigation starts at `docs/README.md`.
 
-The 2026-07-23 causal-integrity correction resolved centralized Main-action consumption and round-end Guard expiry. The current authoritative implementation evidence is `Game_att2_Combat_Simulator_Results_v0_2.md`.
+The 2026-07-23 causal-integrity correction resolved centralized Main-action
+consumption and round-end Guard expiry. Its completed evidence is preserved at
+`docs/archive/results/Game_att2_Combat_Simulator_Results_v0_2.md`; current rule
+authority is Combat Rules v0.5.
 
 ## Project timeline
 

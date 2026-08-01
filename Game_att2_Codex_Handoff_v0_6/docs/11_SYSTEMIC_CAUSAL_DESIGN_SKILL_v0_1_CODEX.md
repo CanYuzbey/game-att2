@@ -66,7 +66,9 @@ Not every prototype must simulate every category. Mark unsupported categories `D
 
 ## 4. Forced, chosen, and exceptional outcomes
 
-- **Forced systemic:** an established rule compels the result—for example collapse at approved Blood state, unusable required source, mandatory Stand, or no legal action.
+- **Forced systemic:** an established rule compels the result—for example Blood-0
+  death after explicit prevention checks, unusable required source, mandatory Stand,
+  or no legal action.
 - **Rational actor:** multiple legal outcomes remain; documented goals and behavior select surrender, retreat, bargain, or continued fighting.
 - **Owner-authored exception:** a documented supernatural, berserk, contractual, or special-source rule changes ordinary behavior. Record its source. Never invent an exception during resolution.
 

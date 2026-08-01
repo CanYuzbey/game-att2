@@ -10,7 +10,11 @@ Not tested: loot, grafting Warden zones, species anatomy, organs, penetration, d
 
 ## Fixture and table
 
-Use `E3-PRETABLE-01` exactly as recorded in `Game_att2_Encounter_3_Owner_Decision_Reconciliation_v0_1.md`. Offer only Integrate (25 Blood), Repair (22), Strengthen (28), or Leave (40). Table Loan and all medical items are unavailable. Strengthened legs gain the paper-only Anchored rule; Brace remains a once-per-fight main action and protects its round.
+Use `E3-PRETABLE-01` exactly as recorded in
+`OWNER_DECISION_RECONCILIATION_v0_1.md`. Offer only Integrate (25 Blood), Repair (22),
+Strengthen (28), or Leave (40). Table Loan and all medical items are unavailable.
+Strengthened legs gain the paper-only Anchored rule; manual Brace remains a
+once-per-fight Main action and protects its round.
 
 ## Warden target zones
 
@@ -60,7 +64,8 @@ At each Warden response, derive intent from current state, expose visible intent
 
 ## Resolution
 
-- **Player collapse:** existing Blood/collapse rules, with no hidden rescue.
+- **Player death:** Blood 0 is death. Limb for Life is unavailable in this non-tutorial
+  fixture; there is no hidden rescue.
 - **Warden combat incapacity:** torso is Disabled/Ruined/Severed, or both legs and right arm are unusable. This is bounded inability to continue, not death.
 - **Unresolved:** stop after eight completed rounds and record `UNRESOLVED — ROUND CAP`; this is an operational boundary, not victory.
 

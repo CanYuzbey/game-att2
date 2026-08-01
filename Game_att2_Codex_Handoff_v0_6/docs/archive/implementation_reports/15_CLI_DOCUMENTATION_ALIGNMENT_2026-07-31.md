@@ -1,5 +1,8 @@
 # Game att2 — CLI / Documentation Alignment Work Record
 
+> **ARCHIVED IMPLEMENTATION REPORT.** Preserved as delivery evidence; it is not
+> a current rule or operating instruction.
+
 Status date: 2026-07-31
 
 Branch: `codex/cli-documentation-alignment`
@@ -40,6 +43,10 @@ AGENTS.md
 | Full playable campaign | RQ-007–013; S6 | Player-facing orchestration over existing RuleEngine rules | Jeff -> graft -> Anna -> table completes by free choice | Ready by owner directive |
 | Player-facing causal affordances | Pillar 5; Production Skill §17 | Renderer only; no rule mutation | Source, cost, target, consequence and disabled reason visible | Ready |
 | Playtest evidence capture | RQ-014–015 | Versioned local evidence; no gameplay authority | Consent and version fields preserved | Ready |
+| General motivation model | 2026-07-31 owner decision | Data-defined actor motivations guide legal response scoring | Jeff intent records motivation and responds to assets/body state | Ready as survey prototype |
+| Multiple state-derived victory routes | 2026-07-31 owner decision; systemic causal rule | Predicates evaluate mutated state separately for each actor | Bargain permits mutual success; incapacity/surrender remain distinct routes | Ready as survey prototype |
+| Jeff behavior variety | Survey-test need | Legal intent candidates use configured scores and exact-repeat penalty | Target changes when repetition penalty changes ranking | Ready as survey prototype |
+| Natural Jeff bargain | 2026-07-31 owner decision | Existing marked limb and inventory asset enable or disable exchange | Accept transfers assets; hostile action rejects and escalates | Ready as survey prototype |
 | Jeff Blood threat | D-011 and active Blood-economy risk | Requires a new approved damage/Bleeding/torso consequence rule | Collapse route is state-derived and deterministic | BLOCKED — owner decision |
 | Ruined player torso consequence | Undefined physical-viability rule | Cannot be inferred from generic limb state | Explicit consequence and recovery path tested | BLOCKED — owner decision |
 | `Cover It` protection effect | Jeff content lists the action but no effect magnitude/duration | Cannot invent reduction, redirection, or charge | Configured effect is visible and testable | BLOCKED — owner decision |
@@ -82,6 +89,9 @@ AGENTS.md
   has no meaningful current payoff.
 - Optional feedback is local, versioned, opt-in, non-overwriting, transcript-free,
   and labeled `UNCLASSIFIED_HUMAN_PLAY` with independence unverified.
-- Verification: 163 tests passed; total line coverage 87%; Ruff and strict mypy pass.
+- The campaign questionnaire measures inferred enemy motivation, perceived victory
+  routes, and whether resolution felt natural. The retained Phase 1 questionnaire is
+  unchanged so the two evidence sets are not mixed.
+- Verification: 181 tests passed; total line coverage 87%; Ruff and strict mypy pass.
 
 The four blocked items in the table remain intentionally unchanged.

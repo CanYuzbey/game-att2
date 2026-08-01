@@ -9,6 +9,7 @@ from game_att2_sim.campaign_play import campaign_session
 from game_att2_sim.play_cli import FeedbackConsole
 from game_att2_sim.play_feedback import (
     FEEDBACK_SCHEMA_VERSION,
+    QUESTIONNAIRE_VERSION,
     build_feedback_record,
     write_feedback_record,
 )
@@ -27,13 +28,12 @@ def completed_campaign_session():
     session = campaign_session(42)
     actions = (
         "claim_the_cut:right_arm",
-        "grip_strike:right_arm",
-        "hell_saw:right_arm",
-        "grip_strike:left_arm",
-        "grip_strike:left_arm",
+        "accept_jeff_bargain",
         "emergency_graft",
         "focus",
         "guard_flesh",
+        "grip_strike:right_arm",
+        "grip_strike:right_arm",
         "accept_anna_trade",
         "table:integrate_arm",
     )
@@ -55,6 +55,7 @@ def test_phase_one_feedback_combines_versions_gameplay_and_answers() -> None:
     )
 
     assert record["schema_version"] == FEEDBACK_SCHEMA_VERSION
+    assert record["questionnaire_version"] == QUESTIONNAIRE_VERSION
     assert record["consent"] == {
         "local_design_research": True,
         "model_training": False,
@@ -88,6 +89,14 @@ def test_campaign_feedback_covers_full_sequence_without_claiming_independence() 
     assert gameplay["outcome"] == "COMPLETED"
     assert gameplay["anna_path"] == "stabilization_trade"
     assert gameplay["table_choice"] == "integrate_arm"
+    motivation_test = gameplay["motivation_test"]
+    assert motivation_test["signals"] == {
+        "bargain_offered": True,
+        "bargain_rejected": False,
+        "bargain_accepted": True,
+    }
+    assert motivation_test["jeff_profile"]["id"] == "jeff_reciprocal_repair"
+    assert motivation_test["encounter_outcomes"][0]["resolution"] == "bargain"
     pressure = gameplay["current_pressure_model"]
     assert pressure["jeff_blood_threat"] == "deferred_owner_decision"
 
@@ -154,3 +163,39 @@ def test_feedback_console_saves_partial_answers_after_consented_eof() -> None:
     assert record is not None
     assert record["collection_status"] == "partial"
     assert record["ratings"] == {"goal_clarity": 4}
+
+
+def test_phase_one_questionnaire_does_not_ask_campaign_motivation_questions() -> None:
+    prompts: list[str] = []
+    answers = iter(["e", "h", *("" for _ in range(10))])
+
+    def input_fn(prompt: str) -> str:
+        prompts.append(prompt)
+        return next(answers)
+
+    record = FeedbackConsole(
+        ended_phase_one_session(), input_fn=input_fn, output_fn=lambda _text: None
+    ).collect()
+
+    assert record is not None
+    prompt_text = "\n".join(prompts)
+    assert "Jeff ne istiyordu" not in prompt_text
+    assert "farklı yollarla" not in prompt_text
+
+
+def test_campaign_questionnaire_asks_motivation_and_victory_route_questions() -> None:
+    prompts: list[str] = []
+    answers = iter(["e", "h", *("" for _ in range(20))])
+
+    def input_fn(prompt: str) -> str:
+        prompts.append(prompt)
+        return next(answers)
+
+    record = FeedbackConsole(
+        completed_campaign_session(), input_fn=input_fn, output_fn=lambda _text: None
+    ).collect()
+
+    assert record is not None
+    prompt_text = "\n".join(prompts)
+    assert "Jeff ne istiyordu" in prompt_text
+    assert "farklı yollarla" in prompt_text

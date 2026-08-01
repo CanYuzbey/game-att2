@@ -36,8 +36,18 @@ Tests prove faithful implementation and detect numerical/systemic problems. They
 - insufficient blood action is illegal unless a documented effect allows debt;
 - Panic Pulse triggers from damage, bleeding, or voluntary spending crossing below 25;
 - Pulse triggers once and caps at 35;
-- collapse at zero;
-- soft collapse removes seeded non-core limb and restores 12 once.
+- Blood 0 creates death when no approved prevention resolves;
+- Limb for Life removes one seeded usable non-Core limb, restores 12 once, and logs
+  that death was prevented;
+- no eligible limb or an already-used Limb for Life produces final death.
+
+### Deferred wound and Cover It contracts
+
+- config locks Cover It duration to exactly one round while its effect remains
+  explicitly runtime-deferred;
+- no test may infer Cover It damage reduction, redirection, target, or source;
+- ordinary limb damage must not create unapproved wound-to-Blood loss;
+- future wound tests require an owner-approved wound mapping and numeric table.
 
 ### Timing
 
@@ -118,7 +128,7 @@ Pass invariants:
 
 - failure is explicit;
 - projected/actual critical state visible;
-- Panic/soft-collapse timing correct;
+- Panic/Limb for Life/death timing correct;
 - no hidden rescue.
 
 ### S4 Anna Stabilization Path
@@ -174,7 +184,7 @@ Run default 100 seeds for each:
 
 Minimum report:
 
-- encounter completion and collapse rate;
+- encounter completion and death rate;
 - average/median final blood;
 - blood spent/gained;
 - Clean/Stressed/Ruined outcomes;
@@ -191,7 +201,7 @@ This is paper evidence only and does not alter simulator implementation acceptan
 A positive signal requires all ten:
 
 1. At least six participants explain one target-damage → weakened/lost Warden-action relationship.
-2. At least two strategic families produce a non-collapse result.
+2. At least two strategic families produce a non-death result.
 3. No player action is required in every successful session.
 4. No Warden action executes from an unusable source.
 5. No facilitator invents anatomy or a hidden weak point.
@@ -201,7 +211,7 @@ A positive signal requires all ten:
 9. No undocumented rescue, immunity, or narrative override occurs.
 10. Every participant encounters a meaningful consequence of the table choice.
 
-Revise if Strengthen is nearly mandatory; one policy causes unavoidable collapse; 40-Blood Leave dominates; Knockdown is not understood; source disabling is trivial/irrelevant; Guard or Repair lacks defensible use; the round cap frequently decides outcomes; moderators need biological judgment; or success relies on an unpublished rule.
+Revise if Strengthen is nearly mandatory; one policy causes unavoidable death; 40-Blood Leave dominates; Knockdown is not understood; source disabling is trivial/irrelevant; Guard or Repair lacks defensible use; the round cap frequently decides outcomes; moderators need biological judgment; or success relies on an unpublished rule.
 
 A material facilitator deviation contaminates that session and excludes it from aggregate conclusions. Eight valid sessions—not merely eight attempts—are required. Human testing does not authorize runtime implementation or Unity.
 

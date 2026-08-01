@@ -38,4 +38,7 @@ Do not show the capability summary until the encounter begins. Visible current i
 
 ## Ending card
 
-The test ends if you collapse, the Warden becomes combat-incapacitated under the represented target rules, or eight rounds complete. Incapacity is not death. This test has no Warden loot, surrender, escape, bargain, or harvest.
+The test ends if your Blood reaches 0 and you die, the Warden becomes
+combat-incapacitated under the represented target rules, or eight rounds complete.
+Warden incapacity is not death. Limb for Life is unavailable in this fixture. This
+test has no Warden loot, surrender, escape, bargain, or harvest.

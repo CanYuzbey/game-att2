@@ -8,6 +8,7 @@ import pytest
 import yaml
 
 from game_att2_sim.config_loader import load_config
+from game_att2_sim.encounter_goals import OutcomeLevel, ResolutionKind
 from game_att2_sim.enums import LimbState, Slot
 from game_att2_sim.errors import ConfigValidationError
 from game_att2_sim.research_shell import (
@@ -20,13 +21,12 @@ from game_att2_sim.research_shell import (
 FIXED_TIMESTAMP = "2026-07-23T12:00:00+03:00"
 FULL_SEQUENCE = [
     {"action": "claim_the_cut:right_arm", "confirmed": True},
-    {"action": "grip_strike:right_arm", "confirmed": True},
-    {"action": "hell_saw:right_arm", "confirmed": True},
-    {"action": "grip_strike:left_arm", "confirmed": True},
-    {"action": "grip_strike:left_arm", "confirmed": True},
+    {"action": "accept_jeff_bargain", "confirmed": True},
     {"action": "emergency_graft", "confirmed": True},
     {"action": "focus"},
     {"action": "guard_flesh", "confirmed": True},
+    {"action": "grip_strike:right_arm", "confirmed": True},
+    {"action": "grip_strike:right_arm", "confirmed": True},
     {"action": "accept_anna_trade", "confirmed": True},
     {"action": "table:integrate_arm", "confirmed": True},
 ]
@@ -101,7 +101,7 @@ def test_confirmed_main_commits_once_and_focus_fast_remain_non_main() -> None:
     assert "unclear" in session.current_intent
     session.perform("focus")
     assert session.current_intent == session.exact_intent
-    assert "left_arm against torso" in session.current_intent
+    assert "left_arm against left_arm" in session.current_intent
     session.perform("blood_bag")
     assert not session.player.normal_action_consumed
     session.perform("grip_strike:right_arm", confirmed=True)
@@ -118,8 +118,8 @@ def test_replay_is_byte_identical_and_exports_required_fields() -> None:
     assert first.export_json() == second.export_json()
     payload = json.loads(first.export_json())
     assert payload["metadata"]["parent_baseline"].startswith("9b3f72b")
-    assert payload["metadata"]["interface_version"] == "0.1"
-    assert payload["metadata"]["rules_version"] == "0.4"
+    assert payload["metadata"]["interface_version"] == "0.2"
+    assert payload["metadata"]["rules_version"] == "0.5"
     assert payload["decision_points"]
     assert payload["events"]
     assert payload["outcome"] == "COMPLETED"
@@ -137,10 +137,11 @@ def test_different_legal_choices_produce_different_trajectories() -> None:
             {"action": "grip_strike:right_arm", "confirmed": True},
             {"action": "grip_strike:left_arm", "confirmed": True},
             {"action": "grip_strike:left_arm", "confirmed": True},
+            {"action": "end_session", "confirmed": True},
         ],
     )
     assert intended.outcome == "COMPLETED"
-    assert no_spend.outcome == "INCOMPLETE_NO_GRAFTABLE_RIGHT_ARM"
+    assert no_spend.outcome == "ENDED_BY_PARTICIPANT"
     assert intended.export_json() != no_spend.export_json()
 
 
@@ -160,12 +161,12 @@ def test_research_shell_revalidates_declared_jeff_source_without_fallback() -> N
     source = session.enemy.body.slots[Slot.LEFT_ARM]  # type: ignore[union-attr]
     source.integrity = 5
     source.state = LimbState.CRITICAL
-    torso = session.player.body.slots[Slot.TORSO]
-    before = torso.integrity
+    player_left_arm = session.player.body.slots[Slot.LEFT_ARM]
+    before = player_left_arm.integrity
 
     session.perform("grip_strike:left_arm", confirmed=True)
 
-    assert torso.integrity == before
+    assert player_left_arm.integrity == before
     assert any(
         event.event_type == "enemy_action_cancelled"
         and event.payload["source_slot"] == Slot.LEFT_ARM.value
@@ -173,11 +174,59 @@ def test_research_shell_revalidates_declared_jeff_source_without_fallback() -> N
     )
 
 
-def test_research_shell_uses_a_usable_marked_arm_on_the_next_round() -> None:
+def test_marked_arm_and_available_cream_create_a_state_derived_bargain() -> None:
     session = InteractiveResearchSession(metadata())
     session.perform("claim_the_cut:right_arm", confirmed=True)
 
+    assert session.current_intent_action == "jeff_bargain"
+    assert offers_by_id(session)["accept_jeff_bargain"].enabled  # type: ignore[union-attr]
+    assert session.jeff_bargain_offered
+
+
+def test_bargain_disables_when_required_asset_is_no_longer_owned() -> None:
+    session = InteractiveResearchSession(metadata())
+    session.perform("claim_the_cut:right_arm", confirmed=True)
+    session.player.inventory["clotting_cream"] = 0
+
+    bargain = offers_by_id(session)["accept_jeff_bargain"]
+    assert not bargain.enabled  # type: ignore[union-attr]
+    assert "unavailable" in bargain.reason  # type: ignore[union-attr]
+    assert session.perform("accept_jeff_bargain", confirmed=True) != "executed"
+
+
+def test_accepting_jeff_bargain_records_mutual_success() -> None:
+    session = InteractiveResearchSession(metadata())
+    session.perform("claim_the_cut:right_arm", confirmed=True)
+
+    assert session.perform("accept_jeff_bargain", confirmed=True) == "executed"
+
+    assert session.encounter == "Post-Jeff"
+    assert session.player.inventory["clotting_cream"] == 0
+    assert session.harvested_jeff_arm is not None
+    assert session.harvested_jeff_arm.quality.value == "clean"
+    outcome = session.encounter_outcomes[-1]
+    assert outcome.resolution is ResolutionKind.BARGAIN
+    assert {actor.actor: actor.level for actor in outcome.actors} == {
+        "player": OutcomeLevel.COMPLETE,
+        "enemy": OutcomeLevel.COMPLETE,
+    }
+
+
+def test_hostile_main_naturally_rejects_bargain_then_uses_marked_arm() -> None:
+    session = InteractiveResearchSession(metadata())
+    session.perform("claim_the_cut:right_arm", confirmed=True)
+    session.perform("grip_strike:right_arm", confirmed=True)
+
+    assert session.jeff_bargain_rejected
+    assert session.current_intent_action == "desperate_swing"
     assert session.current_intent_source is Slot.RIGHT_ARM
+    resumed = next(
+        event
+        for event in session.log.events
+        if event.event_type == "enemy_behavior_triggered"
+    )
+    assert resumed.payload["response"] == "resume_combat"
+    assert resumed.payload["stat_modifier_applied"] is False
     assert any(
         event.event_type == "jeff_marked_source_selected"
         and event.payload["source_slot"] == Slot.RIGHT_ARM.value
@@ -185,18 +234,21 @@ def test_research_shell_uses_a_usable_marked_arm_on_the_next_round() -> None:
     )
 
 
-def test_guard_consumption_expiry_and_plead_resolution_are_exported() -> None:
+def test_jeff_target_selection_penalizes_exact_repetition() -> None:
+    session = InteractiveResearchSession(metadata())
+    assert session.current_intent_target is Slot.LEFT_ARM
+    session.perform("grip_strike:right_arm", confirmed=True)
+    assert session.current_intent_target is Slot.TORSO
+
+
+def test_guard_bargain_and_outcome_resolution_are_exported() -> None:
     completed = replay_session(metadata(), FULL_SEQUENCE)
     event_types = [event.event_type for event in completed.log.events]
     assert "guard_consumed" in event_types
-    assert "generic_plead_resolved" in event_types
-    assert any(
-        event.event_type == "plead_pressure_changed"
-        and event.payload["pressure"] >= 2
-        for event in completed.log.events
-    )
+    assert "negotiated_exchange_completed" in event_types
+    assert "encounter_outcome_evaluated" in event_types
 
-    through_graft = replay_session(metadata("AUTO-GUARD-EXPIRY"), FULL_SEQUENCE[:6])
+    through_graft = replay_session(metadata("AUTO-GUARD-EXPIRY"), FULL_SEQUENCE[:3])
     through_graft.engine.guard_flesh(through_graft.player)
     through_graft.engine.end_round(through_graft.player)
     assert not through_graft.player.guard_active

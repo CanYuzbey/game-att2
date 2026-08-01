@@ -11,6 +11,12 @@ from pathlib import Path
 from typing import Any
 
 from .config_loader import SimulatorConfig, load_config
+from .encounter_goals import (
+    EncounterOutcome,
+    ResolutionKind,
+    evaluate_encounter_outcome,
+)
+from .enemy_behavior import IntentCandidate, select_intent
 from .enums import HarvestQuality, LimbTag, Slot
 from .errors import IllegalActionError
 from .events import EventLog
@@ -24,7 +30,7 @@ from .models import (
 from .rng import RNGService, SeededRNG
 from .rules import RuleEngine, is_usable
 
-INTERFACE_VERSION = "0.1"
+INTERFACE_VERSION = "0.2"
 APPROVED_SEQUENCE = "S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table"
 
 
@@ -125,6 +131,15 @@ class InteractiveResearchSession:
     current_intent: str = field(init=False, default="")
     exact_intent: str = field(init=False, default="")
     current_intent_source: Slot | None = field(init=False, default=None)
+    current_intent_target: Slot | None = field(init=False, default=None)
+    current_intent_action: str = field(init=False, default="")
+    last_enemy_action: str | None = field(init=False, default=None)
+    last_enemy_target: Slot | None = field(init=False, default=None)
+    jeff_bargain_offered: bool = field(init=False, default=False)
+    jeff_bargain_rejected: bool = field(init=False, default=False)
+    jeff_bargain_accepted: bool = field(init=False, default=False)
+    jeff_surrendered: bool = field(init=False, default=False)
+    encounter_outcomes: list[EncounterOutcome] = field(init=False, default_factory=list)
     decisions: list[DecisionRecord] = field(init=False, default_factory=list)
     action_sequence: list[dict[str, Any]] = field(init=False, default_factory=list)
     harvested_jeff_arm: HarvestedLimb | None = field(init=False, default=None)
@@ -163,24 +178,17 @@ class InteractiveResearchSession:
     def _start_round(self) -> None:
         self.engine.start_round(self.player)
         if self.encounter == "Jeff":
-            source = self._choose_jeff_intent_source()
-            self.current_intent_source = source
-            self.exact_intent = (
-                f"Desperate Swing from {source.value} against torso"
-                if source is not None
-                else "No valid Desperate Swing source"
-            )
-            self.current_intent = (
-                "Jeff prepares Desperate Swing (source and target unclear)"
-                if source is not None
-                else self.exact_intent
-            )
+            self._select_jeff_intent()
         elif self.encounter == "Anna":
+            self.current_intent_action = "surgical_jab"
             self.current_intent_source = Slot.RIGHT_ARM
+            self.current_intent_target = Slot.TORSO
             self.exact_intent = "Surgical Jab from right_arm against torso"
             self.current_intent = "Anna prepares Surgical Jab (source and target unclear)"
         else:
+            self.current_intent_action = ""
             self.current_intent_source = None
+            self.current_intent_target = None
             self.exact_intent = ""
             self.current_intent = ""
 
@@ -197,14 +205,141 @@ class InteractiveResearchSession:
         for slot in (Slot.RIGHT_ARM, Slot.LEFT_ARM):
             limb = self.enemy.body.slots[slot]
             if LimbTag.MARKED in limb.tags and is_usable(limb):
-                self.log.emit(
-                    "jeff_marked_source_selected",
-                    self.enemy.id,
-                    source_slot=slot.value,
-                    response="aggressive_use",
-                )
                 return slot
         return self._first_usable_enemy_arm()
+
+    def _jeff_bargain_available(self) -> bool:
+        assert self.enemy is not None
+        design = self.config.encounter_designs["jeff"]
+        asset_id = str(design.parameters["bargain_asset"])
+        bargain_slot = Slot(str(design.parameters["bargain_limb"]))
+        offered_limb = self.enemy.body.slots[bargain_slot]
+        return (
+            not self.jeff_bargain_rejected
+            and not self.jeff_bargain_accepted
+            and LimbTag.MARKED in offered_limb.tags
+            and is_usable(offered_limb)
+            and self.player.inventory.get(asset_id, 0) > 0
+            and ResolutionKind.BARGAIN
+            in self.config.motivation_profiles[
+                design.actor_motivations["enemy"]
+            ].acceptable_resolutions
+        )
+
+    def _jeff_int_parameter(self, name: str) -> int:
+        value = self.config.encounter_designs["jeff"].parameters[name]
+        if not isinstance(value, int) or isinstance(value, bool):
+            raise TypeError(f"Jeff encounter parameter {name} must be an integer")
+        return value
+
+    def _select_jeff_intent(self) -> None:
+        assert self.enemy is not None
+        profile = self.config.motivation_profiles[
+            self.config.encounter_designs["jeff"].actor_motivations["enemy"]
+        ]
+        parameters = self.config.encounter_designs["jeff"].parameters
+        bargain_asset = str(parameters["bargain_asset"])
+        bargain_slot = Slot(str(parameters["bargain_limb"]))
+        offense_target = Slot(str(parameters["offense_target"]))
+        pressure_target = Slot(str(parameters["pressure_target"]))
+        asset_name = str(self.config.items[bargain_asset]["name"])
+        candidates: list[IntentCandidate] = []
+        if self._jeff_bargain_available():
+            candidates.append(
+                IntentCandidate(
+                    action_id="jeff_bargain",
+                    source_slot=None,
+                    target_slot=bargain_slot,
+                    score=self._jeff_int_parameter("bargain_score"),
+                    reasons=("desired repair asset is available", "marked arm can be exchanged"),
+                    public_text=(
+                        "Jeff slows down, guarding the marked arm while watching your supplies."
+                    ),
+                    exact_text=(
+                        f"Jeff offers his marked {bargain_slot.value} for your {asset_name}; "
+                        "a hostile Main action rejects the offer."
+                    ),
+                )
+            )
+        source = self._choose_jeff_intent_source()
+        if source is not None:
+            candidates.extend(
+                (
+                    IntentCandidate(
+                        action_id="desperate_swing",
+                        source_slot=source,
+                        target_slot=offense_target,
+                        score=self._jeff_int_parameter("offense_target_score"),
+                        reasons=(
+                            "reduce the player's current offensive capability",
+                            "preserve the desired repair item",
+                        ),
+                        public_text=(
+                            "Jeff prepares a Desperate Swing (source and target unclear)."
+                        ),
+                        exact_text=(
+                            f"Desperate Swing from {source.value} against {offense_target.value}"
+                        ),
+                        legal=is_usable(self.player.body.slots[offense_target]),
+                        exclusion_reason=f"player {offense_target.value} is already unusable",
+                    ),
+                    IntentCandidate(
+                        action_id="desperate_swing",
+                        source_slot=source,
+                        target_slot=pressure_target,
+                        score=self._jeff_int_parameter("pressure_target_score"),
+                        reasons=("create surrender pressure without consuming the desired item",),
+                        public_text=(
+                            "Jeff prepares a Desperate Swing (source and target unclear)."
+                        ),
+                        exact_text=(
+                            f"Desperate Swing from {source.value} against {pressure_target.value}"
+                        ),
+                    ),
+                )
+            )
+        selection = select_intent(
+            tuple(candidates),
+            last_action_id=self.last_enemy_action,
+            last_target_slot=self.last_enemy_target,
+            repetition_penalty=self._jeff_int_parameter("repetition_penalty"),
+        )
+        if selection is None:
+            self.current_intent_action = ""
+            self.current_intent_source = None
+            self.current_intent_target = None
+            self.exact_intent = "No legal Jeff action remains"
+            self.current_intent = self.exact_intent
+            return
+        chosen = selection.candidate
+        self.current_intent_action = chosen.action_id
+        self.current_intent_source = chosen.source_slot
+        self.current_intent_target = chosen.target_slot
+        self.exact_intent = chosen.exact_text
+        self.current_intent = chosen.public_text
+        if chosen.action_id == "jeff_bargain":
+            self.jeff_bargain_offered = True
+        elif chosen.source_slot is not None and LimbTag.MARKED in self.enemy.body.slots[
+            chosen.source_slot
+        ].tags:
+            self.log.emit(
+                "jeff_marked_source_selected",
+                self.enemy.id,
+                source_slot=chosen.source_slot.value,
+                response="aggressive_use",
+            )
+        self.log.emit(
+            "enemy_intent_selected",
+            self.enemy.id,
+            action=chosen.action_id,
+            source_slot=chosen.source_slot.value if chosen.source_slot is not None else None,
+            target_slot=chosen.target_slot.value if chosen.target_slot is not None else None,
+            motivation_id=profile.id,
+            motivation_kind=profile.kind.value,
+            lethality=profile.lethality,
+            score=selection.final_score,
+            reasons=list(chosen.reasons),
+        )
 
     def _statuses(self) -> list[str]:
         statuses: list[str] = []
@@ -212,6 +347,12 @@ class InteractiveResearchSession:
             statuses.append("Downed")
         if self.player.guard_active:
             statuses.append("Guard Flesh active")
+        if self.player.brace_active:
+            statuses.append("Brace manual stance active")
+        if self.player.brace_charges:
+            statuses.append(f"Braced Legs automatic charge {self.player.brace_charges}")
+        if self.player.limb_for_life_used:
+            statuses.append("Limb for Life used")
         if self.player.debt:
             statuses.append(f"Debt {self.player.debt}")
         for slot, limb in self.player.body.slots.items():
@@ -270,6 +411,24 @@ class InteractiveResearchSession:
             offers.append(self.engine.main_action_availability(self.player, "guard_flesh"))
             offers.append(self.engine.main_action_availability(self.player, "brace"))
             offers.append(self.engine.main_action_availability(self.player, "stand"))
+            if self.encounter == "Jeff" and self.current_intent_action == "jeff_bargain":
+                parameters = self.config.encounter_designs["jeff"].parameters
+                bargain_asset = str(parameters["bargain_asset"])
+                bargain_slot = Slot(str(parameters["bargain_limb"]))
+                asset_name = str(self.config.items[bargain_asset]["name"])
+                offers.append(
+                    ActionAvailability(
+                        "accept_jeff_bargain",
+                        f"Give {asset_name} for Jeff's marked {bargain_slot.value}",
+                        "resolution",
+                        self._jeff_bargain_available(),
+                        None
+                        if self._jeff_bargain_available()
+                        else "The required marked arm or Clotting Cream is unavailable",
+                        irreversible=True,
+                        risk="Clotting Cream is transferred; the encounter ends by bargain",
+                    )
+                )
             if self.encounter == "Anna":
                 enabled, reason = self.engine.anna_trade_available(self.player, self.enemy)
                 offers.append(
@@ -410,6 +569,21 @@ class InteractiveResearchSession:
             self.anna_path = "stabilization_trade"
             self._begin_table()
             return
+        if selection == "accept_jeff_bargain":
+            assert self.enemy is not None
+            parameters = self.config.encounter_designs["jeff"].parameters
+            bargain_slot = Slot(str(parameters["bargain_limb"]))
+            offered_limb = self.enemy.body.slots[bargain_slot]
+            self.harvested_jeff_arm = self.engine.negotiated_item_for_limb_exchange(
+                self.player,
+                self.enemy,
+                str(parameters["bargain_asset"]),
+                offered_limb,
+                HarvestQuality(str(parameters["bargain_quality"])),
+            )
+            self.jeff_bargain_accepted = True
+            self._finish_jeff(ResolutionKind.BARGAIN)
+            return
         if selection.startswith("table:"):
             choice = selection.split(":", 1)[1]
             self.engine.integrate(self.player, choice)
@@ -474,7 +648,8 @@ class InteractiveResearchSession:
                     self.enemy.id,
                     pressure=self.enemy.plead_pressure,
                 )
-                self._finish_jeff()
+                self.jeff_surrendered = True
+                self._finish_jeff(ResolutionKind.SURRENDER)
                 return True
             if both_unusable:
                 self.log.emit(
@@ -482,7 +657,8 @@ class InteractiveResearchSession:
                     self.enemy.id,
                     reason="both arm sources unusable",
                 )
-                self._finish_jeff()
+                self.jeff_surrendered = True
+                self._finish_jeff(ResolutionKind.INCAPACITY)
                 return True
         elif self.encounter == "Anna":
             arm = self.enemy.body.slots[Slot.RIGHT_ARM]
@@ -497,7 +673,41 @@ class InteractiveResearchSession:
                 return True
         return False
 
-    def _finish_jeff(self) -> None:
+    def _jeff_outcome_facts(self) -> dict[str, bool]:
+        assert self.enemy is not None
+        arms = (
+            self.enemy.body.slots[Slot.LEFT_ARM],
+            self.enemy.body.slots[Slot.RIGHT_ARM],
+        )
+        return {
+            "player_has_graftable_jeff_right_arm": self.harvested_jeff_arm is not None,
+            "jeff_offensive_sources_unusable": all(not is_usable(arm) for arm in arms),
+            "jeff_surrendered": self.jeff_surrendered,
+            "jeff_has_clotting_cream": self.enemy.inventory.get("clotting_cream", 0) > 0,
+            "player_dead": self.player.dead,
+            "jeff_survived_resolution": not self.enemy.collapsed,
+        }
+
+    def _record_jeff_outcome(self, resolution: ResolutionKind) -> None:
+        if any(outcome.encounter_id == "jeff" for outcome in self.encounter_outcomes):
+            return
+        assert self.enemy is not None
+        outcome = evaluate_encounter_outcome(
+            self.config.encounter_designs["jeff"],
+            self._jeff_outcome_facts(),
+            resolution,
+        )
+        self.encounter_outcomes.append(outcome)
+        self.log.emit(
+            "encounter_outcome_evaluated",
+            self.enemy.id,
+            encounter_id="jeff",
+            resolution=resolution.value,
+            actor_outcomes=[asdict(actor) for actor in outcome.actors],
+        )
+
+    def _finish_jeff(self, resolution: ResolutionKind) -> None:
+        self._record_jeff_outcome(resolution)
         if self.harvested_jeff_arm is None:
             self.outcome = "INCOMPLETE_NO_GRAFTABLE_RIGHT_ARM"
             self.log.emit(
@@ -508,13 +718,46 @@ class InteractiveResearchSession:
             return
         self.encounter = "Post-Jeff"
         self.enemy = None
+        self.current_intent_action = ""
+        self.current_intent_source = None
+        self.current_intent_target = None
         self.current_intent = ""
 
     def _resolve_enemy_action(self) -> None:
         assert self.enemy is not None
         if self.encounter == "Jeff":
+            if self.current_intent_action == "jeff_bargain":
+                bargain_slot = Slot(
+                    str(self.config.encounter_designs["jeff"].parameters["bargain_limb"])
+                )
+                self.jeff_bargain_rejected = True
+                self.last_enemy_action = "jeff_bargain"
+                self.last_enemy_target = bargain_slot
+                self.log.emit(
+                    "jeff_bargain_rejected",
+                    self.enemy.id,
+                    reason="player continued with a hostile Main action",
+                )
+                profile = self.config.motivation_profiles[
+                    self.config.encounter_designs["jeff"].actor_motivations["enemy"]
+                ]
+                self.log.emit(
+                    "enemy_behavior_triggered",
+                    self.enemy.id,
+                    trigger="bargain_rejected",
+                    response="resume_combat",
+                    motivation_id=profile.id,
+                    stat_modifier_applied=False,
+                )
+                return
             source = self.current_intent_source
-            if source is None or not is_usable(self.enemy.body.slots[source]):
+            target = self.current_intent_target
+            if (
+                self.current_intent_action != "desperate_swing"
+                or source is None
+                or target is None
+                or not is_usable(self.enemy.body.slots[source])
+            ):
                 self.log.emit(
                     "enemy_action_cancelled",
                     self.enemy.id,
@@ -523,8 +766,14 @@ class InteractiveResearchSession:
                 )
                 return
             self.engine.enemy_attack(
-                self.enemy, self.player, source, Slot.TORSO, 10
+                self.enemy,
+                self.player,
+                source,
+                target,
+                self.config.actions["desperate_swing"].damage,
             )
+            self.last_enemy_action = self.current_intent_action
+            self.last_enemy_target = target
         elif self.encounter == "Anna":
             self.engine.enemy_attack(
                 self.enemy,
@@ -534,8 +783,10 @@ class InteractiveResearchSession:
                 8,
                 can_bleed=True,
             )
-        if self.player.collapsed:
-            self.outcome = "PLAYER_COLLAPSE"
+        if self.player.dead:
+            self.outcome = "PLAYER_DEATH"
+            if self.encounter == "Jeff":
+                self._record_jeff_outcome(ResolutionKind.DEATH)
             self.log.emit("research_session_ended", self.player.id, reason=self.outcome)
 
     def _begin_anna(self) -> None:
@@ -553,6 +804,9 @@ class InteractiveResearchSession:
         self.engine.end_round(self.player)
         self.encounter = "Grafting Table"
         self.enemy = None
+        self.current_intent_action = ""
+        self.current_intent_source = None
+        self.current_intent_target = None
         self.current_intent = ""
 
     def export_payload(self) -> dict[str, Any]:
@@ -570,6 +824,23 @@ class InteractiveResearchSession:
             },
             "decision_points": [asdict(decision) for decision in self.decisions],
             "action_sequence": self.action_sequence,
+            "encounter_design": {
+                "jeff": {
+                    "actor_motivations": dict(
+                        self.config.encounter_designs["jeff"].actor_motivations
+                    ),
+                    "victory_routes": [
+                        asdict(route)
+                        for route in self.config.encounter_designs["jeff"].victory_routes
+                    ],
+                }
+            },
+            "encounter_outcomes": [asdict(outcome) for outcome in self.encounter_outcomes],
+            "jeff_test_signals": {
+                "bargain_offered": self.jeff_bargain_offered,
+                "bargain_rejected": self.jeff_bargain_rejected,
+                "bargain_accepted": self.jeff_bargain_accepted,
+            },
             "outcome": self.outcome,
             "anna_path": self.anna_path,
             "table_choice": self.metrics.table_choice,

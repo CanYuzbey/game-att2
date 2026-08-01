@@ -28,7 +28,7 @@ from .models import (
 from .rng import RNGService, SeededRNG
 from .rules import RuleEngine, is_usable
 
-PLAY_INTERFACE_VERSION = "0.1"
+PLAY_INTERFACE_VERSION = "0.2"
 LOCKED_START_BODY = "s001"
 LOCKED_ENEMY = "jeff"
 LOCKED_SCOPE = "S-001 -> Jeff (no graft, no Anna, no Grafting Table)"
@@ -43,7 +43,7 @@ FAST_ITEMS = ("blood_bag", "clotting_cream")
 JEFF_SWING_DAMAGE = 10
 ONE_USE_TOOLS = ("claim_the_cut", "bone_scissors", "hell_saw")
 
-_BAND_ORDER = ("COLLAPSE", "CRITICAL", "DANGEROUS", "NORMAL", "STRONG", "OVERFULL")
+_BAND_ORDER = ("DEAD", "CRITICAL", "DANGEROUS", "NORMAL", "STRONG", "OVERFULL")
 
 _SLOT_LABELS = {
     Slot.HEAD: "Kafa",
@@ -91,7 +91,7 @@ def tag_label(tag: LimbTag) -> str:
 class PlayOutcome(str, Enum):
     IN_PROGRESS = "IN_PROGRESS"
     JEFF_YIELDED = "JEFF_YIELDED"
-    PLAYER_COLLAPSE = "PLAYER_COLLAPSE"
+    PLAYER_DEATH = "PLAYER_DEATH"
     ENDED_BY_PLAYER = "ENDED_BY_PLAYER"
     ROUND_LIMIT_REACHED = "ROUND_LIMIT_REACHED"
 
@@ -211,8 +211,8 @@ class _Snapshot:
 
 def blood_band(blood: int, rules: dict[str, Any]) -> str:
     tiers = rules["blood"]
-    if blood <= int(tiers["collapse_at"]):
-        return "COLLAPSE"
+    if blood <= int(tiers["death_at"]):
+        return "DEAD"
     if blood <= int(tiers["critical_max"]):
         return "CRITICAL"
     if blood <= int(tiers["dangerous_max"]):
@@ -290,14 +290,14 @@ class PlaySession:
         if self.player.guard_active:
             statuses.append("Guard Flesh aktif")
         if self.player.brace_active:
-            statuses.append("Brace aktif")
+            statuses.append("Brace (manuel duruş) aktif")
         elif not self.player.brace_used and is_usable(self.player.body.slots[Slot.LEGS]):
-            statuses.append("Brace hazır")
+            statuses.append("Brace (manuel duruş) hazır")
         if self.player.brace_charges:
-            statuses.append(f"Brace yükü {self.player.brace_charges}")
+            statuses.append(f"Braced Legs otomatik yükü {self.player.brace_charges}")
         if self.player.panic_pulse_used:
             statuses.append("Panic Pulse tükendi")
-        if self.player.soft_collapse_used:
+        if self.player.limb_for_life_used:
             statuses.append("Limb for Life kullanıldı")
         if self.player.debt:
             statuses.append(f"Borç {self.player.debt}")
@@ -526,9 +526,9 @@ class PlaySession:
         )
 
         if pre_main:
-            # Focus and Fast items still spend Blood, so they can collapse you
+            # Focus and Fast items still spend Blood, so they can kill you
             # before the Main action is ever chosen.
-            self._check_collapse()
+            self._check_death()
             return PerformResult(True, "executed", tuple(reports))
 
         if yielded:
@@ -547,7 +547,7 @@ class PlaySession:
                     start=enemy_start,
                 )
             )
-        if self._check_collapse():
+        if self._check_death():
             return PerformResult(True, "executed", tuple(reports))
 
         if self.log.round_number >= self.round_limit:
@@ -561,14 +561,14 @@ class PlaySession:
             return PerformResult(True, "executed", tuple(reports))
 
         self._start_round()
-        # Start-of-round Bleeding is its own collapse route.
-        self._check_collapse()
+        # Start-of-round Bleeding is its own Blood-zero death route.
+        self._check_death()
         return PerformResult(True, "executed", tuple(reports))
 
-    def _check_collapse(self) -> bool:
-        if not self.player.collapsed or self.complete:
+    def _check_death(self) -> bool:
+        if not self.player.dead or self.complete:
             return False
-        self.outcome = PlayOutcome.PLAYER_COLLAPSE
+        self.outcome = PlayOutcome.PLAYER_DEATH
         self.log.emit("play_session_ended", self.player.id, reason=self.outcome.value)
         return True
 
@@ -693,7 +693,7 @@ class PlaySession:
     def _choose_jeff_intent_source(self) -> Slot | None:
         """Select a legal source without replacing it later in the same phase.
 
-        Combat Rules v0.4 permits Jeff to protect or aggressively use a Marked
+        Combat Rules v0.5 permits Jeff to protect or aggressively use a Marked
         limb.  Protection has no approved numeric rule, so the reversible,
         source-backed response is to aggressively use the usable Marked arm.
         """
@@ -863,9 +863,9 @@ class PlaySession:
             elif kind == "bleeding_removed":
                 lines.append(f"Kanama durdu: {payload['slot']}")
             elif kind == "knockdown_prevented_by_brace":
-                lines.append("Brace yükü devrilmeyi engelledi")
+                lines.append("Braced Legs otomatik yükü devrilmeyi engelledi")
             elif kind == "knockdown_prevented_by_active_brace":
-                lines.append("Aktif Brace devrilmeyi engelledi")
+                lines.append("Manuel Brace devrilmeyi engelledi")
             elif kind == "guard_consumed":
                 lines.append(
                     f"Guard Flesh hasarı {payload['before']} -> {payload['after']} indirdi"
@@ -912,12 +912,12 @@ class PlaySession:
                 lines.append(
                     f"Panic Pulse harcandı (+{payload['gained']} Blood, bir daha yok)"
                 )
-            elif kind == "soft_collapse":
+            elif kind == "limb_for_life":
                 lines.append(
-                    f"Limb for Life: {payload['slot']} feda edildi, tek kullanım bitti"
+                    f"Limb for Life: {payload['slot']} feda edildi; Blood 0 ölümü önlendi"
                 )
-            elif kind == "collapse":
-                lines.append("Çöktün — oturum kaybedildi")
+            elif kind == "death":
+                lines.append("Blood 0: öldün — oturum kaybedildi")
             elif kind == "ache_stress_roll" and payload.get("disabled_next_round"):
                 lines.append(f"{payload['slot']} önümüzdeki tur devre dışı")
             elif kind == "hell_saw_roll" and not payload.get("valid"):

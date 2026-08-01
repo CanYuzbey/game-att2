@@ -1,5 +1,8 @@
 # Game att2 — Full Campaign Playable CLI Implementation Report
 
+> **ARCHIVED IMPLEMENTATION REPORT.** Preserved as delivery evidence; use the
+> repository README and active rules for current behavior.
+
 Date: 2026-07-31
 
 Status: implemented within approved digital scope; identity-rule decisions remain
@@ -24,6 +27,12 @@ table rules. The earlier Jeff-only playable loop is retained with `--phase-1`.
   with their reason.
 - Target lines identify limbs that source Jeff's Desperate Swing or Anna's Surgical
   Jab.
+- Jeff's motivation and victory routes are data-defined. His legal intents are scored
+  from current body/inventory state, with a configured penalty for repeating the exact
+  same action and target.
+- Marking Jeff's Right Arm while retaining Clotting Cream can naturally expose a
+  reciprocal-repair bargain. Accepting transfers the cream and a Clean severed arm;
+  continuing with a hostile Main action rejects the offer and escalates Jeff.
 - A declared enemy source is checked again immediately before resolution. If the
   player made that exact source unusable, the action is cancelled; it cannot fall
   back to another limb in the same phase.
@@ -35,7 +44,7 @@ table rules. The earlier Jeff-only playable loop is retained with `--phase-1`.
 ## Feedback evidence boundary
 
 After interactive play, the participant may opt into a local questionnaire. The
-record includes interface/rule/content/scenario versions, deterministic gameplay
+record includes interface/rule/content/scenario/questionnaire versions, deterministic gameplay
 facts, ratings, and optional reflections. It excludes the raw terminal transcript,
 does not upload automatically, never overwrites an existing record, and keeps model
 training consent separate from local design-research consent.
@@ -52,17 +61,21 @@ python -m game_att2_sim.play_cli `
   --script examples/play_cli_full_campaign_sequence.json
 ```
 
-The recorded sequence reaches every approved phase and ends `COMPLETED` with 25
-Blood through the Anna stabilization trade and `integrate_arm` table choice.
+The recorded sequence reaches every approved phase and ends `COMPLETED` with 36
+Blood through the Jeff reciprocal-repair bargain, Anna stabilization trade, and
+`integrate_arm` table choice. This playable campaign result is not the historical
+`mini_campaign` simulator regression, which remains 25 Blood; neither number is a
+balance target.
 
 ## Verification
 
 ```text
-pytest: 163 passed
+pytest: 181 passed
 coverage: 87%
 ruff: all checks passed
-mypy: success, no issues in 22 source files
+mypy: success, no issues in 24 source files
 mini_campaign seed 42: completed, 25 Blood
+playable campaign seed 42: completed, 36 Blood
 ```
 
 ## Owner decisions still required

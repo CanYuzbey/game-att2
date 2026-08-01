@@ -15,7 +15,8 @@ from .campaign_play import CAMPAIGN_INTERFACE_VERSION
 from .play_session import LOCKED_SCOPE, PLAY_INTERFACE_VERSION, PlaySession, blood_band
 from .research_shell import APPROVED_SEQUENCE, InteractiveResearchSession
 
-FEEDBACK_SCHEMA_VERSION = "0.2"
+FEEDBACK_SCHEMA_VERSION = "0.3"
+QUESTIONNAIRE_VERSION = "0.2"
 CONSENT_TEXT_VERSION = "0.1"
 DEFAULT_FEEDBACK_DIRECTORY = Path("reports/play_feedback")
 
@@ -43,7 +44,7 @@ def _phase_one_gameplay(session: PlaySession) -> dict[str, object]:
         "blood_spent": session.metrics.blood_spent,
         "blood_gained": session.metrics.blood_gained,
         "panic_pulse_used": session.player.panic_pulse_used,
-        "limb_for_life_used": session.player.soft_collapse_used,
+        "limb_for_life_used": session.player.limb_for_life_used,
         "graftable_right_arm": (
             None
             if graft is None
@@ -73,7 +74,7 @@ def _phase_one_gameplay(session: PlaySession) -> dict[str, object]:
         ],
         "event_type_counts": dict(sorted(event_counts.items())),
         "current_pressure_model": {
-            "player_defeat_route": "Blood reaches collapse threshold after rescue checks",
+            "player_defeat_route": "Blood 0 causes death unless Limb for Life resolves first",
             "jeff_direct_blood_loss": False,
             "jeff_swing_target": "torso_integrity",
             "ruined_torso_defeat_rule": "deferred_owner_decision",
@@ -83,6 +84,14 @@ def _phase_one_gameplay(session: PlaySession) -> dict[str, object]:
 
 def _campaign_gameplay(session: InteractiveResearchSession) -> dict[str, object]:
     event_counts = Counter(event.event_type for event in session.log.events)
+    payload = session.export_payload()
+    jeff_profile_id = session.config.encounter_designs["jeff"].actor_motivations["enemy"]
+    jeff_profile = session.config.motivation_profiles[jeff_profile_id]
+    intent_target_counts = Counter(
+        str(event.payload.get("target_slot"))
+        for event in session.log.events
+        if event.event_type == "enemy_intent_selected"
+    )
     return {
         "outcome": session.outcome,
         "rounds": session.log.round_number,
@@ -91,18 +100,25 @@ def _campaign_gameplay(session: InteractiveResearchSession) -> dict[str, object]
         "blood_gained": session.metrics.blood_gained,
         "anna_path": session.anna_path,
         "table_choice": session.metrics.table_choice,
-        "final_body": session.export_payload()["final_body"],
+        "final_body": payload["final_body"],
         "action_counts": dict(sorted(session.metrics.actions.items())),
         "action_sequence": list(session.action_sequence),
         "decision_points": [asdict(decision) for decision in session.decisions],
         "event_type_counts": dict(sorted(event_counts.items())),
+        "motivation_test": {
+            "jeff_profile": asdict(jeff_profile),
+            "signals": payload["jeff_test_signals"],
+            "encounter_outcomes": payload["encounter_outcomes"],
+            "intent_target_counts": dict(sorted(intent_target_counts.items())),
+        },
         "current_pressure_model": {
-            "player_defeat_route": "Blood reaches collapse threshold after rescue checks",
+            "player_defeat_route": "Blood 0 causes death unless Limb for Life resolves first",
             "jeff_direct_blood_loss": False,
             "jeff_swing_target": "torso_integrity",
             "declared_enemy_source_revalidated_before_resolution": True,
             "ruined_torso_defeat_rule": "deferred_owner_decision",
             "cover_it_protection": "deferred_owner_decision",
+            "cover_it_duration_rounds": session.config.actions["cover_it"].duration_rounds,
             "brace_conflict": "deferred_owner_decision",
             "jeff_blood_threat": "deferred_owner_decision",
         },
@@ -157,6 +173,7 @@ def build_feedback_record(
         gameplay = _campaign_gameplay(session)
     return {
         "schema_version": FEEDBACK_SCHEMA_VERSION,
+        "questionnaire_version": QUESTIONNAIRE_VERSION,
         "record_type": record_type,
         "session_id": record_id,
         "recorded_at_utc": timestamp,

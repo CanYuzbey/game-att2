@@ -1,5 +1,10 @@
 # Game att2 — Project State, History, Objective, and Future Vision
 
+Status note: historical vision/evidence context. Current combat authority is Rules
+v0.5. New core-gameplay work starts from
+`19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; detailed subordinate questions
+remain in `18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`.
+
 Version: 0.6  
 Owner: Can Yüzbey  
 Current development stage: pre-digital prototype / simulator handoff
@@ -106,7 +111,7 @@ Resolution:
 
 - blood danger must be projected clearly;
 - emergency medical items can be `Fast`;
-- one tutorial soft-collapse/low-blood escape valve is allowed;
+- one tutorial-scope Limb for Life death-prevention sacrifice is allowed;
 - danger is retained, but failure should be readable rather than surprising.
 
 ### Focus versus heavy threat
@@ -150,7 +155,7 @@ S-001 start → Jeff → emergency graft → Anna → stabilization trade → gr
 
 The run began at 85 blood with a missing right arm. The player took Jeff's right arm, emergency-grafted it, rolled Unstable, sold the spare arm, and entered Anna's encounter with the new `Guard Flesh` action and graft risk. Against Anna, the player used Focus, defended the graft, managed blood, and ultimately accepted medical stabilization instead of taking another arm. At the table, the arm was integrated. The run ended at 37 blood with an Integrated Grafted Human Right Arm and the torso vulnerability still unresolved.
 
-The historical paper record was 37 Blood. It remains evidence, not an automated expected value. The current source-compliant seed-42 simulator result is 25 Blood under Combat Rules v0.4 and configuration. The difference is an unreconciled arithmetic/source-history contradiction, including an unconfigured spare-arm sale; neither isolated number is the intended balance target. Future balance decisions require distributions and playtests.
+The historical paper record was 37 Blood. It remains evidence, not an automated expected value. The 2026-07-23 source-compliant seed-42 simulator result was 25 Blood under the then-current Combat Rules v0.4 and configuration. The difference is an unreconciled arithmetic/source-history contradiction, including an unconfigured spare-arm sale; neither isolated number is the intended balance target. Combat Rules v0.5 now governs runtime semantics. Future balance decisions require distributions and playtests.
 
 The important result was not the exact number 37. It was the coherent body arc:
 

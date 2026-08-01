@@ -1,6 +1,13 @@
-# Game att2 — Combat Rules v0.4 (Simulator Baseline)
+# Game att2 — Combat Rules v0.5 (Simulator Baseline)
 
-Status: approved for simulator testing, not final balance.
+Status: approved for simulator testing, not final balance. Supersedes v0.4.
+
+Owner amendment date: 2026-08-01.
+
+v0.5 locks Blood 0 as death, promotes Limb for Life to an explicit limb-sacrifice
+death-prevention rule, distinguishes manual Brace from the Braced Legs automatic
+charge, and fixes Cover It duration at one round. Wound-to-Blood mappings and the
+actual Cover It protection effect remain deferred and must not be invented by runtime.
 
 ## 1. Round sequence
 
@@ -11,7 +18,7 @@ Status: approved for simulator testing, not final balance.
 5. Player may use at most one Fast item.
 6. Player selects and resolves one main action.
 7. Resolve enemy action if its source and conditions remain valid.
-8. Run end checks: Panic/Collapse if needed, plea, incapacity surrender, victory, trade/bargain, temporary expiration.
+8. Run end checks: Panic/Limb for Life/death if needed, plea, incapacity surrender, victory, trade/bargain, temporary expiration.
 
 The implementation should model phases explicitly enough for tests to verify timing.
 
@@ -62,7 +69,7 @@ If the enemy's declared source becomes unusable before enemy resolution, cancel 
 Blood is health, currency, and action fuel.
 
 ```text
-0: collapse
+0: death unless an explicit death-prevention effect resolves first
 1–20: critical
 21–50: dangerous
 51–100: normal
@@ -80,15 +87,35 @@ All changes are transactions with reason, before, delta, after, and trigger even
 - Gain 10 blood.
 - Result cannot exceed 35.
 
-### Collapse and tutorial soft collapse
+### Death and Limb for Life
 
 At blood <= 0:
 
-- normal outcome is collapse;
-- once in the tutorial mini-campaign, `Limb for Life` may remove a seeded random non-core limb and restore blood to 12;
-- if no removable non-core limb exists or the valve was used, the run collapses.
+- normal outcome is death;
+- once per run in the approved tutorial scope, `Limb for Life` may remove one
+  seeded-random usable non-Core limb and restore Blood to 12 before death finalizes;
+- if no eligible limb exists or Limb for Life was already used, death is final;
+- the sacrificed limb is a cost that may keep a victory route viable; the sacrifice
+  is not itself a victory or encounter ending. This resolves the earlier `C04`
+  question: a designed victory route may require the sacrifice as an intermediate
+  mechanic when its explicit route predicate says so.
 
-Soft collapse is a test valve, not a final locked game mechanic.
+The current seeded-random selection is retained from the approved prototype. Whether
+the final player chooses the sacrificed limb remains an open decision.
+
+### Wounds and Blood-loss direction
+
+Owner-approved direction:
+
+- limb damage may cause Blood loss when the resulting wound class requires it;
+- wounds may cause immediate loss, periodic loss, both, or no Blood loss;
+- severe limb loss and open wounds may create major Blood pressure;
+- Ruined Torso may cause catastrophic Blood loss, ongoing Bleeding, capability loss,
+  or death.
+
+Deferred for runtime: wound classes, state/action-to-wound mapping, Blood values,
+functional penalties, stabilization rules, and the exact Ruined Torso chain. Until
+those are approved, ordinary limb damage does not automatically reduce Blood.
 
 ## 6. Player actions
 
@@ -130,10 +157,18 @@ At the next action opportunity, the character must spend their normal action to 
 
 ### Brace
 
-- Strengthened/Braced Human Legs grant one automatic Brace charge per encounter.
-- On the first otherwise-successful Knockdown, Brace cancels the Knockdown, consumes the charge, and prevents Downed.
-- Brace does not trigger on failed attempts, while already Downed, without a charge, or if the legs are unusable.
-- The charge refreshes at encounter start. There is no reaction prompt or manual Brace timing.
+Two distinct mechanics share related language and must remain visibly separate:
+
+- **Brace — Manual Stance:** a player-selected Main action sourced by usable Legs;
+  protects only the current round against one otherwise-successful Knockdown; expires
+  unused at round end; limited to once per encounter in the current prototype.
+- **Braced Legs automatic charge:** Strengthened/Braced Human Legs provide one passive
+  automatic prevention per encounter; it requires usable legs and does not consume
+  the manual Brace opportunity.
+
+The automatic charge does not trigger on failed attempts or while already Downed and
+refreshes at encounter start. The final trade-off between manual Brace, Braced Legs,
+Guard Flesh, and Cover It remains open.
 
 ## 7. Fast items
 
@@ -266,7 +301,12 @@ The required roll must be visible in logs before commitment.
 ### Jeff
 
 - simple intent: Desperate Swing or Cover It;
-- marked limb causes a configurable protect/use response;
+- Cover It lasts only the round in which it is used and never persists automatically;
+- Jeff may choose Cover It again on a later round only by spending another enemy
+  action;
+- its protected target, damage handling, source requirement, and trade-off against
+  Brace remain deferred, so Cover It is not an active runtime intent yet;
+- marked limb causes a configurable protect/use response once that effect is approved;
 - loss/disable of action arms changes available actions;
 - surrender conditions above.
 

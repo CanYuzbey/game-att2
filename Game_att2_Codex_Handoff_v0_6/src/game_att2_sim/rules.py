@@ -129,11 +129,11 @@ def _thresholds(
         gained = min(pulse["gain"], pulse["cap"] - actor.blood)
         gain_blood(actor, gained, "Panic Pulse", config, log, metrics)
         log.emit("panic_pulse", actor.id, gained=gained)
-    if actor.blood <= config.rules["blood"]["collapse_at"]:
-        _collapse(actor, config, log, metrics, tutorial, rng)
+    if actor.blood <= config.rules["blood"]["death_at"]:
+        _resolve_zero_blood(actor, config, log, metrics, tutorial, rng)
 
 
-def _collapse(
+def _resolve_zero_blood(
     actor: CombatantRuntime,
     config: SimulatorConfig,
     log: EventLog,
@@ -141,7 +141,13 @@ def _collapse(
     tutorial: bool,
     rng: RNGService | None,
 ) -> None:
-    if tutorial and actor.role == "player" and not actor.soft_collapse_used and rng is not None:
+    if (
+        tutorial
+        and bool(config.rules["limb_for_life"]["enabled"])
+        and actor.role == "player"
+        and not actor.limb_for_life_used
+        and rng is not None
+    ):
         candidates = [
             limb
             for slot, limb in actor.body.slots.items()
@@ -152,13 +158,21 @@ def _collapse(
             old = limb.state
             limb.integrity = 0
             limb.state = LimbState.SEVERED
-            actor.soft_collapse_used = True
-            actor.blood = config.rules["soft_collapse"]["restore_blood"]
+            actor.limb_for_life_used = True
+            actor.blood = config.rules["limb_for_life"]["restore_blood"]
             _record_state(limb, old, log, actor, "Limb for Life")
-            log.emit("soft_collapse", actor.id, slot=limb.slot.value, restored_blood=actor.blood)
+            log.emit(
+                "limb_for_life",
+                actor.id,
+                slot=limb.slot.value,
+                restored_blood=actor.blood,
+                death_prevented=True,
+                selection=str(config.rules["limb_for_life"]["sacrifice_selection"]),
+            )
             return
     actor.collapsed = True
-    log.emit("collapse", actor.id, blood=actor.blood)
+    actor.dead = True
+    log.emit("death", actor.id, blood=actor.blood, reason="Blood reached zero")
 
 
 def apply_damage(
@@ -856,6 +870,55 @@ class RuleEngine:
         clone = LimbRuntime(target.definition, target.definition.max_integrity, LimbState.INTACT)
         self.log.emit("harvest_created", target_id=None, slot=target.slot.value, quality=quality.value, limb=target.name)
         return HarvestedLimb(clone, quality)
+
+    def negotiated_item_for_limb_exchange(
+        self,
+        buyer: CombatantRuntime,
+        seller: CombatantRuntime,
+        item_id: str,
+        target: LimbRuntime,
+        quality: HarvestQuality,
+    ) -> HarvestedLimb:
+        """Exchange an owned item for a non-Core limb through explicit state changes."""
+        if buyer.inventory.get(item_id, 0) <= 0:
+            raise IllegalActionError(f"{buyer.name} does not have {item_id}")
+        if target.slot is Slot.CORE:
+            raise InvalidTargetError("Core cannot be exchanged as a harvested limb")
+        if not is_usable(target):
+            raise InvalidTargetError("negotiated limb must still be usable")
+        if quality is not HarvestQuality.CLEAN:
+            raise InvalidTargetError("controlled negotiated exchange requires Clean quality")
+        buyer.inventory[item_id] -= 1
+        seller.inventory[item_id] = seller.inventory.get(item_id, 0) + 1
+        self.log.emit(
+            "asset_transferred",
+            buyer.id,
+            target_id=seller.id,
+            asset=item_id,
+            amount=1,
+            reason="negotiated limb exchange",
+        )
+        sever_quality = apply_damage(
+            seller,
+            target,
+            target.integrity,
+            "Negotiated limb exchange",
+            self.log,
+            clean=True,
+        )
+        if sever_quality is not HarvestQuality.CLEAN:
+            raise AssertionError("validated negotiated sever did not produce a Clean state")
+        harvested = self.harvest(target, quality)
+        self.log.emit(
+            "negotiated_exchange_completed",
+            buyer.id,
+            target_id=seller.id,
+            asset_given=item_id,
+            limb_received=target.name,
+            slot=target.slot.value,
+            quality=quality.value,
+        )
+        return harvested
 
     def emergency_graft(self, player: CombatantRuntime, harvested: HarvestedLimb, target_slot: Slot) -> None:
         if harvested.quality is HarvestQuality.RUINED:

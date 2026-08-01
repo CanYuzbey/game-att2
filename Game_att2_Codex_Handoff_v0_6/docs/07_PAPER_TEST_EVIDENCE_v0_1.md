@@ -1,5 +1,8 @@
 # Game att2 — Paper-Test Evidence v0.1
 
+Status note: preserved evidence history. It does not override Combat Rules v0.5 or
+the active decision ledger.
+
 ## Evidence classification
 
 All tests so far are designer-run internal paper simulations, sometimes with Can making player choices. They are useful for contradiction/exploit discovery. They are not blind playtests and do not establish market demand, accessibility, emotional impact, or fun across players.
@@ -116,7 +119,7 @@ Sequence:
 - integrate arm at table;
 - finish at 37 blood with changed body and remaining damaged torso.
 
-Reconciliation note: 37 Blood is retained as historical paper evidence only. Current authoritative simulation resolves seed 42 to 25 Blood under Combat Rules v0.4/configuration. The missing configured spare-arm sale and paper arithmetic make the records unreconciled; 37 is not an automated expected value and 25 is not an intended balance target.
+Reconciliation note: 37 Blood is retained as historical paper evidence only. The 2026-07-23 authoritative simulation resolved seed 42 to 25 Blood under the then-current Combat Rules v0.4/configuration. The missing configured spare-arm sale and paper arithmetic make the records unreconciled; 37 is not an automated expected value and 25 is not an intended balance target. Combat Rules v0.5 now governs runtime semantics.
 
 Gate result:
 

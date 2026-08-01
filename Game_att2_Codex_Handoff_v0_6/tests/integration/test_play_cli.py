@@ -9,6 +9,7 @@ from game_att2_sim.enums import HarvestQuality, LimbState, LimbTag, Slot
 from game_att2_sim.play_cli import PlayConsole, main
 from game_att2_sim.play_render import (
     localize_reason,
+    render_intro,
     render_report,
     render_state,
     render_summary,
@@ -33,6 +34,14 @@ WIN_SEQUENCE = [
 
 def session(seed: int = 42, **kwargs: object) -> PlaySession:
     return PlaySession(seed=seed, **kwargs)  # type: ignore[arg-type]
+
+
+def test_phase_one_intro_explains_current_survival_and_defence_contracts() -> None:
+    intro = render_intro(session())
+    assert "Blood 0 ölümdür" in intro
+    assert "Limb for Life" in intro
+    assert "Brace manuel" in intro
+    assert "Braced Legs otomatik" in intro
 
 
 def run(actions: list[str], seed: int = 42) -> PlaySession:
@@ -313,15 +322,16 @@ def test_grip_only_path_never_produces_a_graftable_arm() -> None:
     assert play.enemy.body.slots[Slot.RIGHT_ARM].state is LimbState.RUINED
 
 
-def test_collapse_in_the_pre_main_window_ends_the_session() -> None:
+def test_death_in_the_pre_main_window_ends_the_session() -> None:
     play = session()
-    # Exactly the Focus cost, so the spend lands on the collapse threshold.
+    # Exactly the Focus cost, so the spend lands on the death threshold.
     play.player.blood = 3
     play.player.panic_pulse_used = True
-    play.player.soft_collapse_used = True
+    play.player.limb_for_life_used = True
     assert play.perform("focus").accepted
     assert play.player.collapsed
-    assert play.outcome is PlayOutcome.PLAYER_COLLAPSE
+    assert play.player.dead
+    assert play.outcome is PlayOutcome.PLAYER_DEATH
     assert not play.perform("grip_strike:torso").accepted
 
 

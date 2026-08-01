@@ -56,9 +56,9 @@ def _close(session: ScenarioSession, notes: list[str] | None = None) -> Scenario
     session.engine.end_round(player)
     session.metrics.final_blood = player.blood
     session.metrics.panic_pulse_used = player.panic_pulse_used
-    session.metrics.soft_collapse_used = player.soft_collapse_used
-    if player.collapsed:
-        session.metrics.result = "collapsed"
+    session.metrics.limb_for_life_used = player.limb_for_life_used
+    if player.dead:
+        session.metrics.result = "dead"
     summary = body_summary(player)
     session.metrics.final_body_summary = "; ".join(f"{slot}: {value}" for slot, value in summary.items())
     return ScenarioResult(session.metrics, session.log.events, summary, notes or [])
@@ -158,7 +158,7 @@ def _random_legal_campaign(session: ScenarioSession) -> None:
     harvested: HarvestedLimb | None = None
     for _ in range(6):
         session.engine.start_round(player)
-        if player.collapsed or not is_usable(right):
+        if player.dead or not is_usable(right):
             break
         choices: list[str] = ["grip_right", "grip_left"]
         if LimbTag.MARKED not in right.tags and player.inventory.get("claim_the_cut", 0):
@@ -368,7 +368,13 @@ def run_batch(
         event.event_type
         for result in results
         for event in result.events
-        if event.event_type in {"collapse", "soft_collapse", "campaign_incomplete", "diagnostic_incomplete", "table_choice_unaffordable"}
+        if event.event_type in {
+            "death",
+            "limb_for_life",
+            "campaign_incomplete",
+            "diagnostic_incomplete",
+            "table_choice_unaffordable",
+        }
     ]
     return {
         "scenario": scenario,
@@ -377,11 +383,11 @@ def run_batch(
         "seed": seed,
         "completion_rate": sum(result.metrics.result == "completed" for result in results) / count,
         "incomplete_rate": sum(result.metrics.result == "incomplete" for result in results) / count,
-        "collapse_rate": sum(result.metrics.result == "collapsed" for result in results) / count,
-        "survival_without_soft_rescue_rate": sum(
-            result.metrics.result == "completed" and not result.metrics.soft_collapse_used for result in results
+        "death_rate": sum(result.metrics.result == "dead" for result in results) / count,
+        "completion_without_limb_for_life_rate": sum(
+            result.metrics.result == "completed" and not result.metrics.limb_for_life_used for result in results
         ) / count,
-        "soft_collapse_rate": sum(result.metrics.soft_collapse_used for result in results) / count,
+        "limb_for_life_rate": sum(result.metrics.limb_for_life_used for result in results) / count,
         "panic_pulse_rate": sum(result.metrics.panic_pulse_used for result in results) / count,
         "average_final_blood": mean(blood),
         "median_final_blood": median(blood),
@@ -472,10 +478,10 @@ def _counts(values: list[str]) -> dict[str, int]:
 
 def _blood_bands(blood: list[int], config: SimulatorConfig) -> dict[str, int]:
     rules = config.rules["blood"]
-    counts = {"collapsed": 0, "critical": 0, "dangerous": 0, "normal": 0, "strong": 0, "rich": 0}
+    counts = {"dead": 0, "critical": 0, "dangerous": 0, "normal": 0, "strong": 0, "rich": 0}
     for value in blood:
-        if value <= rules["collapse_at"]:
-            counts["collapsed"] += 1
+        if value <= rules["death_at"]:
+            counts["dead"] += 1
         elif value <= rules["critical_max"]:
             counts["critical"] += 1
         elif value <= rules["dangerous_max"]:

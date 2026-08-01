@@ -62,4 +62,5 @@ def test_batch_runs_each_required_strategy(strategy: str) -> None:
     assert batch["count"] == 3
     assert 0 <= batch["completion_rate"] <= 1
     assert "final_blood_bands" in batch
-    assert "survival_without_soft_rescue_rate" in batch
+    assert "completion_without_limb_for_life_rate" in batch
+    assert "death_rate" in batch

@@ -332,6 +332,8 @@ def render_intro(session: PlaySession) -> str:
             "  Her tur: başlangıç etkileri -> niyet -> Focus -> Fast eşya -> ana eylem",
             "  -> düşman eylemi -> bitiş kontrolleri.",
             "  Focus ve Fast eşya ana eylemi harcamaz; ana eylem turu kapatır.",
+            "  Blood 0 ölümdür; Limb for Life uygun bir uzvu feda ederek bunu bir kez önleyebilir.",
+            "  Brace manuel bir tur duruşudur; Braced Legs otomatik yükü bundan ayrıdır.",
             f"  Kapsam kilidi: {', '.join(ATTACK_ACTIONS)} + Focus + eşya + defans.",
             "  Graft, Anna ve Grafting Table bu arayüzde YOK.",
             "",

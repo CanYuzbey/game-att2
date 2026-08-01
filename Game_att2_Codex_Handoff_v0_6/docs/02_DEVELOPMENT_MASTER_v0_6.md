@@ -2,8 +2,33 @@
 
 Prepared for: Can Yüzbey  
 Project: Game att2  
-Stage after this file: Sprint 0.5 — Codex implementation of Combat Loop Simulator v0.1  
-Status: **Paper mini-campaign passed for simple simulator. Unity remains delayed.**
+Current stage: hybrid core-gameplay definition after the deterministic simulator
+Status: **Turn-based strategy plus reflexive execution is owner-directed; H1 is not yet implemented. Unity remains delayed.**
+
+## 2026-08-01 owner amendment
+
+This amendment supersedes conflicting v0.4 wording without rewriting historical paper
+evidence:
+
+- Combat Rules v0.5 is the current simulator rule authority.
+- Blood 0 means death unless an explicit death-prevention rule resolves first.
+- Limb for Life is the approved once-per-run exception: sacrifice one seeded-random
+  usable non-Core limb and restore 12 Blood. It is a costly continuation mechanic,
+  not an encounter victory by itself.
+- Wounds may create immediate, periodic, combined, or zero Blood loss, but wound
+  mappings and values remain open; runtime must not infer them.
+- Cover It lasts one round and must be chosen again on later rounds. Its protection
+  effect and trade-off are still open, so it remains runtime-deferred.
+- Brace is a manual one-round Main-action stance. Braced Legs separately provide one
+  automatic Knockdown prevention charge per encounter.
+- Movement capability, reachability, and the final main combat/action-economy model
+  are now subordinate to the hybrid macro direction in
+  `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` and remain unimplemented.
+- Strategic combat remains turn-based. Bounded reflexive execution moments—starting
+  with a timing-based Block hypothesis—must reinforce body state, intent reading, and
+  Blood decisions rather than bypass them.
+- `18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md` is a dependency register, not a sequence
+  of independent owner interviews.
 
 ---
 
@@ -38,7 +63,11 @@ This is not a final GDD. It is the **current product source of truth** for Codex
 
 ### Encounter 3 paper-research reconciliation — 2026-07-18
 
-The owner approved Encounter 3 as a bounded causal pressure encounter for moderated paper testing only. Use fixed fixture `E3-PRETABLE-01`, four table options, three Warden paper target zones, state-aware Policies A/B, bounded combat incapacity, and an eight-round unresolved cap as defined in `Game_att2_Encounter_3_Bounded_Causal_Paper_Spec_v0_2.md`.
+The owner approved Encounter 3 as a bounded causal pressure encounter for moderated
+paper testing only. Use fixed fixture `E3-PRETABLE-01`, four table options, three
+Warden paper target zones, state-aware Policies A/B, bounded combat incapacity, and
+an eight-round unresolved cap as defined in
+`encounter_3/BOUNDED_CAUSAL_PAPER_SPEC_v0_2.md`.
 
 This may test source damage and capability loss. It does not approve Warden runtime/config, death, harvest, anatomy, organs, penetration, surrender, bargaining, escape, personality, generalized AI, or Unity. Eight valid P01–P08 human sessions are the next evidence gate. `SELF-S01` and `SELF-S02` remain contaminated designer diagnostics.
 
@@ -115,7 +144,7 @@ The player is not a hero. The player is a mostly silent self-insert trapped insi
 | D-019 | Focus is pre-action information | Approved for simulator |
 | D-020 | Fast medical item tag exists | Approved for simulator |
 | D-021 | Plead Pressure exists | Approved for simulator |
-| D-022 | Combat Rules v0.4 are first simulator ruleset | Recommended |
+| D-022 | Combat Rules v0.5 are current simulator ruleset | Owner-amended |
 | D-023 | Unity remains delayed until simulator results | Recommended |
 | D-024 | Anna is correct second encounter after Jeff | Recommended |
 
@@ -178,7 +207,7 @@ Player reads intent.
 Player spends blood or preserves blood.
 Player damages/disables/severs target limbs.
 Enemy reacts through attacks, protection, medical actions, or pleading.
-Player wins, bargains, collapses, or retreats.
+Player wins, bargains, dies, becomes otherwise incapacitated, or retreats.
 Player harvests, grafts, sells, preserves, or refuses parts.
 Body state changes.
 Next encounter tests the consequences.
@@ -224,25 +253,25 @@ Move to simple simulator.
 
 ---
 
-## 9. Combat Rules v0.4 — Simulator Baseline
+## 9. Combat Rules v0.5 — Simulator Baseline
 
 ### 9.1 Round Order
 
 ```text
-1. Start-of-round effects: bleeding, debt, curse placeholder, unstable graft checks
+1. Start-of-round effects: approved bleeding, debt, and unstable graft checks
 2. Enemy visible intent
 3. Optional Focus: pre-action info, does not consume main action
 4. Optional Fast medical item: max 1 per round
 5. Player main action
 6. Enemy action resolution
-7. End-of-round checks: collapse, plea, victory, bargain, temporary states expire
+7. End-of-round checks: death/incapacity, plea, victory, bargain, temporary states expire
 ```
 
 ### 9.2 Blood Ranges
 
 | Blood | Meaning |
 |---:|---|
-| 0 | collapse |
+| 0 | death unless Limb for Life resolves first |
 | 1–20 | critical |
 | 21–50 | dangerous |
 | 51–100 | normal |
@@ -666,7 +695,7 @@ metrics:
   limbs_stressed_harvested
   limbs_ruined
   player_limb_state_changes
-  collapse_count
+  death_count
   panic_pulse_used
   fast_items_used
   focus_used
@@ -689,18 +718,19 @@ What problem remains?
 
 Reason: the central promise is body transformation.
 
-#### E) Soft Collapse State
+#### E) Limb for Life
 
 For simulator v0.1, include only one soft-loss valve:
 
 ```text
 Limb for Life:
-If blood reaches 0 once during tutorial sequence,
-lose random non-core limb and survive at 12 blood.
-Then mark "soft collapse used".
+If Blood reaches 0 once during the approved tutorial scope,
+sacrifice one seeded-random usable non-Core limb and survive at 12 Blood.
+Then mark "Limb for Life used". Without an eligible sacrifice, Blood 0 is death.
 ```
 
-Reason: death spiral was a major risk. One controlled soft-loss valve helps test continuation without making death meaningless.
+Reason: death spiral was a major risk. The sacrifice makes continuation costly and
+may be necessary to preserve a victory route without making Blood 0 non-lethal.
 
 #### F) Tool Availability Reset Rule
 
@@ -925,7 +955,7 @@ slots: dict[Slot, Limb]
 blood: int
 active_effects: list[Effect]
 panic_pulse_used: bool
-soft_collapse_used: bool
+limb_for_life_used: bool
 ```
 
 #### Class: Combatant
@@ -984,7 +1014,7 @@ clean_harvest_count: int
 stressed_harvest_count: int
 ruined_harvest_count: int
 panic_pulse_used: bool
-soft_collapse_used: bool
+limb_for_life_used: bool
 plea_triggered: bool
 grafts_attempted: int
 unstable_results: int
@@ -1016,7 +1046,7 @@ apply_table_choice(player, choice)
 |---|---|---|
 | S1 — Jeff Baseline Acquisition | Intended limb acquisition chain | Player ends with grafted arm, blood above 20 |
 | S2 — Jeff No-Spend Exploit | Verify free attacks cannot clean harvest | Player may force surrender but gains no clean limb |
-| S3 — Failed Hell Saw Spiral | Check death spiral and soft collapse | Failure is dangerous but readable |
+| S3 — Failed Hell Saw Spiral | Check death spiral and Limb for Life | Failure is dangerous but readable |
 | S4 — Anna Stabilization Path | Test body maintenance | Player sometimes accepts stabilization |
 | S5 — Anna Greed Path | Test risky limb greed | Player can get arm with danger; trade remains attractive |
 | S6 — Mini-Campaign | Run Jeff → graft → Anna → table | Player ends with changed body and clear next pressure |
@@ -1050,7 +1080,7 @@ The simulator is acceptable only if:
 | Requirement ID | Requirement | Source | Priority | Module | Acceptance Criteria | Test |
 |---|---|---|---|---|---|---|
 | RQ-001 | Player has 6 body slots | Locked design | Critical | BodySystem | slots exist and hold limbs | all |
-| RQ-002 | Blood is health/currency/fuel | Locked design | Critical | BloodSystem | blood can be spent/gained/collapse | all |
+| RQ-002 | Blood is health/currency/fuel | Locked design | Critical | BloodSystem | Blood can be spent/gained; zero causes death unless Limb for Life resolves | all |
 | RQ-003 | Limb damage changes state | Core combat | Critical | LimbStateSystem | thresholds update states | all combat |
 | RQ-004 | Acting limb state modifies actions | Paper tests | Critical | ActionResolver | damaged/critical reduce effect | Jeff/Anna |
 | RQ-005 | Basic attacks cannot clean harvest | Exploit test | Critical | HarvestSystem | Grip Strike to 0 creates Ruined/Disabled | Jeff exploit |
@@ -1083,7 +1113,8 @@ Tests: 30 → 20 becomes Damaged; 20 → 10 becomes Critical; basic attack to 0 
 ### BloodSystem
 
 Purpose: track blood as health/currency/fuel.  
-Tests: costs reduce blood; gains increase blood; Panic Pulse triggers below 25; collapse/soft collapse at 0.
+Tests: costs reduce Blood; gains increase Blood; Panic Pulse triggers below 25; Limb
+for Life may prevent Blood-0 death once; otherwise death finalizes.
 
 ### ActionResolver
 
@@ -1128,7 +1159,7 @@ Tests: every action logs cost/result; every blood change logs before/after; ever
 |---|---|---:|---:|---|---|---|---|
 | Blood hoarding returns | Design | Medium | Very High | no-spend wins with good body reward | clean sever gate, simulator exploit tests | Systems | Controlled |
 | Blood Bag too strong | Balance | High | Medium | always best early use | variant tests | Systems | Watch |
-| Death spiral | Design | Medium | Very High | player collapses after one failed roll | soft collapse, Fast medical, warnings | Systems | Controlled |
+| Death spiral | Design | Medium | Very High | player dies after one failed roll | Limb for Life, Fast medical, warnings | Systems | Controlled |
 | Limb system becomes stat gear | Design | Medium | Very High | limbs only add numbers | every limb needs action/passive/tradeoff | Design | Watch |
 | Table choices obvious | Design | High | Medium | always integrate arm | add torso/legs/loan competition | Design | Active |
 | Anna path under-tested | Design | Medium | Medium | only stabilization path validated | Anna greed scenario | QA | Open |
@@ -1241,7 +1272,7 @@ No-spend exploit remains blocked.
 Anna stabilization and greed paths both work.
 Mini-campaign ends with meaningful body change.
 Blood Bag is not always optimal.
-Collapse rate is dangerous but not absurd.
+Death rate is dangerous but not absurd.
 Table choices vary across scenarios.
 ```
 
@@ -1293,7 +1324,7 @@ Grafting Table v0.2
 Unstable v0.4
 Harvest quality
 Plead Pressure
-Soft collapse / low-blood escape
+Limb for Life / low-Blood death prevention
 Event logs
 Metrics
 Seeded randomness
@@ -1344,7 +1375,7 @@ It should not try to feel like the final game yet.
 The next correct file after implementation is:
 
 ```text
-Game_att2_Combat_Simulator_Results_v0_1.md
+archive/results/Game_att2_Combat_Simulator_Results_v0_1.md
 ```
 
 Only after simulator results pass should the project consider:
@@ -1365,7 +1396,7 @@ Codex must use this precedence when implementation sources differ:
 ```text
 AGENTS.md
 → this Development Master v0.6
-→ Combat Rules v0.4
+→ Combat Rules v0.5
 → Simulator Technical Spec v0.2
 → config values
 → Test Plan / Acceptance
@@ -1378,7 +1409,11 @@ A numeric value in config may override a duplicated tunable value in prose, but 
 
 ### Enemy blood versus limb integrity
 
-They are separate resources. Limb damage does not automatically reduce blood in simulator v0.1. Body loss instead changes action availability, Plead Pressure, or special surrender conditions. Future tests may add blood loss from severing, but Codex must not assume it now.
+They are separate resources, but the owner approved wound-class-driven Blood loss as
+the future integration rule. Simulator v0.5 still does not automatically reduce Blood
+from ordinary limb damage because wound mappings and values are not approved. Body
+loss currently changes action availability, Plead Pressure, or special surrender
+conditions. Codex must not invent the missing wound table.
 
 ### Disabled versus severed
 
@@ -1433,7 +1468,7 @@ claim simulator metrics prove fun
 source code
 unit/integration tests
 scenario and batch CLI
-Game_att2_Combat_Simulator_Results_v0_1.md
+archive/results/Game_att2_Combat_Simulator_Results_v0_1.md
 Codex completion report
 known gaps and reversible recommendations
 ```

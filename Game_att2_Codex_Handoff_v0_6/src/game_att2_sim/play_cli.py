@@ -52,11 +52,25 @@ SCALE_QUESTIONS: tuple[tuple[str, str], ...] = (
     ("replay_intent", "Bir kez daha oynama isteğin ne kadar yüksek?"),
 )
 
+MOTIVATION_SCALE_QUESTIONS: tuple[tuple[str, str], ...] = (
+    ("enemy_motivation_clarity", "Rakibin ne istediğini ne kadar anlayabildin?"),
+    ("victory_route_breadth", "Karşılaşmayı farklı yollarla çözebilme alanı ne kadar genişti?"),
+    ("resolution_naturalness", "Karşılaşma sonuçları durumun doğal devamı gibi hissettirdi mi?"),
+)
+
 TEXT_QUESTIONS: tuple[tuple[str, str], ...] = (
     ("ending_cause", "Sence bu oyun deneyimi neden bu sonuçla bitti?"),
     ("blood_strategy", "Blood harcarken veya saklarken ne düşündün?"),
     ("threat_model", "Seni güvende ya da ölüm tehlikesinde hissettiren neydi?"),
     ("desired_change", "Tek bir şeyi değiştirebilseydin neyi değiştirirdin?"),
+)
+
+MOTIVATION_TEXT_QUESTIONS: tuple[tuple[str, str], ...] = (
+    ("enemy_motivation_inference", "Sence Jeff ne istiyordu ve bunu sana ne düşündürdü?"),
+    (
+        "perceived_victory_routes",
+        "Jeff karşılaşmasını hangi farklı yollarla sonuçlandırabileceğini düşündün?",
+    ),
 )
 
 
@@ -228,7 +242,20 @@ class FeedbackConsole:
         )
         self.output_fn("1 = hiç / çok kötü, 5 = çok / çok iyi; Enter = atla.")
         ratings: dict[str, int | None] = {}
-        for key, prompt in SCALE_QUESTIONS:
+        scale_questions = SCALE_QUESTIONS
+        text_questions = TEXT_QUESTIONS
+        if not isinstance(self.session, PlaySession):
+            scale_questions = (
+                *SCALE_QUESTIONS[:-1],
+                *MOTIVATION_SCALE_QUESTIONS,
+                SCALE_QUESTIONS[-1],
+            )
+            text_questions = (
+                *TEXT_QUESTIONS[:-1],
+                *MOTIVATION_TEXT_QUESTIONS,
+                TEXT_QUESTIONS[-1],
+            )
+        for key, prompt in scale_questions:
             if self._stopped:
                 break
             rating = self._ask_scale(f"{prompt} [1-5]: ")
@@ -239,7 +266,7 @@ class FeedbackConsole:
         reflections: dict[str, str] = {}
         if not self._stopped:
             self.output_fn("Kısa cevaplar isteğe bağlıdır; Enter ile atlayabilirsin.")
-        for key, prompt in TEXT_QUESTIONS:
+        for key, prompt in text_questions:
             if self._stopped:
                 break
             reflections[key] = self._ask_text(f"{prompt}\n> ")

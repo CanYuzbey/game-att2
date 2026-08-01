@@ -5,7 +5,7 @@ Package version: 0.6
 > Historical delivery manifest. The hashes below describe the original v0.6
 > handoff and are not a live inventory of later repository changes. For the
 > canonical repository, current checkout, CLI structure, and verification state,
-> see `docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md` and Git.
+> see `../../README.md`, `../../docs/README.md`, and Git.
 
 ## Files
 

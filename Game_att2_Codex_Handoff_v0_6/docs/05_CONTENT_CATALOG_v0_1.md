@@ -40,7 +40,12 @@ Purpose: immediate desire for Jeff's right arm while retaining enough agency and
 ### Weak Human Legs
 
 - Legs, max integrity 35.
-- Provides Brace.
+- Provides `Brace — Manual Stance`, a player-selected one-round Knockdown posture.
+
+### Braced Human Legs
+
+- Retains manual Brace.
+- Provides one separate automatic Knockdown-prevention charge per encounter.
 
 ### Human Heart
 
@@ -71,7 +76,9 @@ Role: teach acquisition and action-limb impairment.
 Actions:
 
 - Desperate Swing, source arm, base 10, target player arm or torso.
-- Cover It, protect threatened limb.
+- Cover It, one-round enemy posture. It must be selected again to recur; protection
+  target/effect/source and its trade-off against Brace remain deferred, so the current
+  CLI does not execute it.
 - Plead/incapacity surrender.
 
 Rewards/path:

@@ -1,5 +1,8 @@
 # Game att2 — Current Project Report
 
+> **ARCHIVED IMPLEMENTATION SNAPSHOT.** “Current” below means 2026-07-23. Use
+> `../../README.md` and `../README.md` for the active documentation map.
+
 Report date: 2026-07-23
 Repository branch: `codex/simulator-causal-integrity`
 Assessment role: skeptical senior multidisciplinary game-development leadership and hostile technical reviewer

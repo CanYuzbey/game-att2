@@ -1,6 +1,10 @@
 # Game att2 Combat Simulator Results v0.2
 
-Status: **current authoritative simulator implementation evidence**
+> **ARCHIVED RESULT SNAPSHOT.** This report remains regression evidence for the
+> 2026-07-23 simulator state. It does not override Combat Rules v0.5, the active
+> documentation index, or current verification output.
+
+Historical status at publication: **current authoritative simulator implementation evidence**
 Correction: Simulator Causal Integrity
 Date: 2026-07-23
 Scope: S-001 → Jeff → emergency graft → Anna → Grafting Table only

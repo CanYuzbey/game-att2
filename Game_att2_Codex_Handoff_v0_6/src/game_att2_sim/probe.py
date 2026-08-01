@@ -168,10 +168,15 @@ def _run_profile(session: Any, profile: str) -> tuple[dict[str, Any], list[str]]
             session.engine.start_round(session.player)
         except InsufficientBloodError:
             # The baseline engine deliberately rejects unaffordable voluntary spends.  This
-            # probe-only mapping makes unavoidable Bleeding pressure observable as collapse.
+            # Probe-only mapping makes unavoidable Bleeding pressure observable as death.
             session.player.blood = 0
             session.player.collapsed = True
-            session.log.emit("noncanonical_probe_bleeding_collapse", session.player.id, marker=PROBE_MARKER)
+            session.player.dead = True
+            session.log.emit(
+                "noncanonical_probe_bleeding_death",
+                session.player.id,
+                marker=PROBE_MARKER,
+            )
             break
         totals["rounds"] = cast(int, totals["rounds"]) + 1
         if selected == "knockdown_pressure":
@@ -196,7 +201,7 @@ def _run_profile(session: Any, profile: str) -> tuple[dict[str, Any], list[str]]
         result = _graft_round(session) if selected == "graft_pressure" else _torso_round(session)
         for key, value in result.items():
             totals[key] = cast(int, totals.get(key, 0)) + value
-        if session.player.collapsed:
+        if session.player.dead:
             break
     return totals, sorted(set(notes))
 
@@ -255,9 +260,9 @@ def run_post_table_probe(
     session.engine.end_round(session.player)
     session.metrics.final_blood = session.player.blood
     session.metrics.panic_pulse_used = session.player.panic_pulse_used
-    session.metrics.soft_collapse_used = session.player.soft_collapse_used
-    if session.player.collapsed:
-        session.metrics.result = "collapsed"
+    session.metrics.limb_for_life_used = session.player.limb_for_life_used
+    if session.player.dead:
+        session.metrics.result = "dead"
     summary = body_summary(session.player)
     session.metrics.final_body_summary = "; ".join(f"{slot}: {value}" for slot, value in summary.items())
     events = session.log.events
@@ -294,9 +299,9 @@ def run_probe_matrix(config: SimulatorConfig, seeds: int = 1000) -> list[dict[st
                     "count": seeds,
                     "legal_option_rate": len(legal) / seeds,
                     "completion_rate": sum(result.metrics.result == "completed" for result in results) / seeds,
-                    "collapse_rate": sum(result.metrics.result == "collapsed" for result in results) / seeds,
+                    "death_rate": sum(result.metrics.result == "dead" for result in results) / seeds,
                     "debt_failure_rate": sum(result.metrics.result == "debt_failed" for result in results) / seeds,
-                    "soft_collapse_rate": sum(result.metrics.soft_collapse_used for result in results) / seeds,
+                    "limb_for_life_rate": sum(result.metrics.limb_for_life_used for result in results) / seeds,
                     "minimum_final_blood": min(blood), "median_final_blood": median(blood), "average_final_blood": mean(blood), "maximum_final_blood": max(blood),
                     "panic_rate": sum(result.metrics.panic_pulse_used for result in results) / seeds,
                     "unstable_events": mean(cast(int, result.metrics.probe_metrics["unstable_events"]) for result in results),

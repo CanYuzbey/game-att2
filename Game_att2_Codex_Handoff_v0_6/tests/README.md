@@ -13,7 +13,13 @@ The acceptance source is `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`.
 - `integration/test_campaign_play.py` checks the default Jeff → graft → Anna → table
   player path, causal hints, and Pillar 5 output.
 - `unit/test_play_feedback.py` checks consented, versioned, non-overwriting local
-  feedback records for both playable modes.
+  feedback records for both playable modes and keeps campaign-only motivation
+  questions out of the retained Phase 1 instrument.
+- `unit/test_encounter_design.py` checks motivation/route configuration, mutual actor
+  outcomes, capability-break outcomes, deterministic repeat-aware intent scoring,
+  and the deferred one-round Cover It contract.
+- `unit/test_rules.py` includes the atomic item-for-limb exchange contract used by the
+  Jeff survey bargain, Blood-0 death, and Limb for Life death prevention.
 - `integration/test_research_cli.py` checks research CLI exports and input contracts.
 - `integration/test_console_entrypoints.py` launches all three documented `python -m` commands as subprocesses.
 - `integration/test_research_shell.py` and `integration/test_post_table_probe.py` check the evidence shell and non-canonical probes.

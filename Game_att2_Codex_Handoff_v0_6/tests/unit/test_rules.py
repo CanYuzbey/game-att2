@@ -4,7 +4,7 @@ import pytest
 
 from game_att2_sim.config_loader import load_config
 from game_att2_sim.enums import HarvestQuality, LimbState, LimbTag, Slot
-from game_att2_sim.errors import IllegalActionError, InsufficientBloodError
+from game_att2_sim.errors import IllegalActionError, InsufficientBloodError, InvalidTargetError
 from game_att2_sim.events import EventLog
 from game_att2_sim.factory import enemy_from_config, player_from_start
 from game_att2_sim.models import HarvestedLimb, ScenarioMetrics
@@ -57,6 +57,59 @@ def test_clean_scissors_and_marked_harvest() -> None:
     assert metrics.clean_harvests == 1
 
 
+def test_negotiated_item_for_limb_exchange_mutates_both_assets() -> None:
+    resolver, player, _ = engine()
+    jeff = enemy_from_config(resolver.config, "jeff")
+    right_arm = jeff.body.slots[Slot.RIGHT_ARM]
+
+    harvested = resolver.negotiated_item_for_limb_exchange(
+        player,
+        jeff,
+        "clotting_cream",
+        right_arm,
+        HarvestQuality.CLEAN,
+    )
+
+    assert player.inventory["clotting_cream"] == 0
+    assert jeff.inventory["clotting_cream"] == 1
+    assert right_arm.state is LimbState.SEVERED
+    assert harvested.quality is HarvestQuality.CLEAN
+    assert any(
+        event.event_type == "negotiated_exchange_completed" for event in resolver.log.events
+    )
+
+
+def test_negotiated_exchange_rejects_core_or_missing_item() -> None:
+    resolver, player, _ = engine()
+    jeff = enemy_from_config(resolver.config, "jeff")
+    player.inventory["clotting_cream"] = 0
+    with pytest.raises(IllegalActionError):
+        resolver.negotiated_item_for_limb_exchange(
+            player,
+            jeff,
+            "clotting_cream",
+            jeff.body.slots[Slot.RIGHT_ARM],
+            HarvestQuality.CLEAN,
+        )
+    player.inventory["clotting_cream"] = 1
+    with pytest.raises(InvalidTargetError):
+        resolver.negotiated_item_for_limb_exchange(
+            player,
+            jeff,
+            "clotting_cream",
+            jeff.body.slots[Slot.CORE],
+            HarvestQuality.CLEAN,
+        )
+    with pytest.raises(InvalidTargetError, match="requires Clean"):
+        resolver.negotiated_item_for_limb_exchange(
+            player,
+            jeff,
+            "clotting_cream",
+            jeff.body.slots[Slot.RIGHT_ARM],
+            HarvestQuality.STRESSED,
+        )
+
+
 def test_source_impairment_and_unusable_source() -> None:
     resolver, player, _ = engine()
     source = player.body.slots[Slot.LEFT_ARM]
@@ -68,17 +121,33 @@ def test_source_impairment_and_unusable_source() -> None:
         resolver.grip(player, player, player.body.slots[Slot.TORSO])
 
 
-def test_panic_pulse_and_soft_collapse_are_logged() -> None:
+def test_panic_pulse_and_limb_for_life_death_prevention_are_logged() -> None:
     resolver, player, metrics = engine([0])
     player.blood = 30
     spend_blood(player, 7, "test", resolver.config, resolver.log, metrics, True, resolver.rng)
     assert player.blood == 33
     assert player.panic_pulse_used
     player.blood = 5
-    spend_blood(player, 5, "test collapse", resolver.config, resolver.log, metrics, True, resolver.rng)
+    spend_blood(player, 5, "test death", resolver.config, resolver.log, metrics, True, resolver.rng)
     assert player.blood == 12
-    assert player.soft_collapse_used
-    assert any(event.event_type == "soft_collapse" for event in resolver.log.events)
+    assert player.limb_for_life_used
+    rescue = next(event for event in resolver.log.events if event.event_type == "limb_for_life")
+    assert rescue.payload["death_prevented"] is True
+    assert not player.dead
+
+
+def test_blood_zero_is_death_when_limb_for_life_is_unavailable() -> None:
+    resolver, player, metrics = engine([0])
+    player.panic_pulse_used = True
+    player.limb_for_life_used = True
+    player.blood = 1
+
+    spend_blood(player, 1, "fatal test", resolver.config, resolver.log, metrics)
+
+    assert player.blood == 0
+    assert player.collapsed
+    assert player.dead
+    assert any(event.event_type == "death" for event in resolver.log.events)
 
 
 def test_insufficient_blood_fails_loudly() -> None:

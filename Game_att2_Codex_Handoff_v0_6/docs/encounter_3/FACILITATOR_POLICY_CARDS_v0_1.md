@@ -11,7 +11,7 @@ Facilitator-only. Never reveal future priority decisions. Apply the systemic cau
 5. Recompute mutated zone states and Warden capabilities.
 6. Revalidate intent. If invalid, cancel and log; choose no replacement this phase.
 7. If valid, resolve the scaled action and player consequences.
-8. Check player collapse, Warden incapacity, and eight-round cap.
+8. Check player Blood-0 death, Warden incapacity, and eight-round cap.
 
 Never infer horns, hooves, organs, weapon targeting, Bleeding, surrender, escape, death, or an unpublished fallback.
 
