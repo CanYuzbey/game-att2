@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game att2 Production"
+  short_description: "Evidence-gated Game att2 design and simulator work"
+  default_prompt: "Use $game-att2-production to audit or change Game att2 without rule drift or scope creep."

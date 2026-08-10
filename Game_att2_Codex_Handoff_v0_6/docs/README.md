@@ -15,7 +15,7 @@ not make it current authority.
 | `06_TEST_PLAN_ACCEPTANCE_v0_2.md` | Acceptance and evidence gate |
 | `07_PAPER_TEST_EVIDENCE_v0_1.md` | Existing paper evidence classification |
 | `08_DECISIONS_RISKS_OPEN_QUESTIONS.md` | Owner decisions and risk ledger |
-| `09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md` | Production workflow skill |
+| `09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md` | Compatibility entry point for the canonical repository skill at `../../.agents/skills/game-att2-production/SKILL.md` |
 | `10_CODEX_RETURN_CONTRACT.md` | Completion-report contract |
 | `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` | Causal design skill |
 | `17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md` | Current motivation/outcome prototype |

@@ -38,14 +38,15 @@ The active handoff package lives in
 [`Game_att2_Codex_Handoff_v0_6`](Game_att2_Codex_Handoff_v0_6/).
 
 - [Full project overview](Game_att2_Codex_Handoff_v0_6/README.md)
-- [Current evidence-backed report](Game_att2_Codex_Handoff_v0_6/docs/12_CURRENT_PROJECT_REPORT_2026-07-23.md)
+- [Current documentation map](Game_att2_Codex_Handoff_v0_6/docs/README.md)
 - [Development master](Game_att2_Codex_Handoff_v0_6/docs/02_DEVELOPMENT_MASTER_v0_6.md)
-- [Combat rules](Game_att2_Codex_Handoff_v0_6/docs/03_COMBAT_RULES_v0_4.md)
+- [Combat rules](Game_att2_Codex_Handoff_v0_6/docs/03_COMBAT_RULES_v0_5.md)
 - [Simulator technical specification](Game_att2_Codex_Handoff_v0_6/docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md)
 - [Tests and acceptance criteria](Game_att2_Codex_Handoff_v0_6/docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md)
-- [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
-- [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
-- [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)
+- [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
+- [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
+- [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)
+- [Repository production skill](.agents/skills/game-att2-production/SKILL.md)
 
 ## Run the simulator
 
@@ -73,8 +74,8 @@ python -m ruff check src tests
 python -m mypy src
 ```
 
-The latest recorded local verification is 163 passing tests, 87% line coverage,
-a clean Ruff run, and a clean strict mypy run. See the linked project report for the current
+The latest local verification is 186 passing tests, 87% line coverage,
+a clean Ruff run, and a clean strict mypy run. See the documentation map for current
 evidence limits, known debt, and production gates, and
-[the Phase 1 CLI report](Game_att2_Codex_Handoff_v0_6/Game_att2_Playable_CLI_Phase1_Report_v0_1.md)
+[the Phase 1 CLI report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/Game_att2_Playable_CLI_Phase1_Report_v0_1.md)
 for that interface's scope lock and assumptions.

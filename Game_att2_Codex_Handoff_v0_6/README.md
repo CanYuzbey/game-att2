@@ -120,6 +120,8 @@ Paper-test approval is not runtime implementation approval.
 
 ```text
 AGENTS.md                         Binding project rules
+../.agents/skills/game-att2-production/
+                                  Discoverable production workflow skill
 config/                           Authoritative tunable simulator data
 docs/                             Active documents, Encounter 3 packet, and archive index
 src/game_att2_sim/                Python simulator package
@@ -168,7 +170,8 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 8. `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`
 9. `docs/07_PAPER_TEST_EVIDENCE_v0_1.md`
 10. `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md`
-11. `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md`
+11. `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md`, then the canonical
+    `../.agents/skills/game-att2-production/SKILL.md`
 12. `docs/10_CODEX_RETURN_CONTRACT.md`
 13. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`
 14. `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`
