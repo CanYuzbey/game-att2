@@ -2,11 +2,12 @@
 
 Status date: 2026-08-12
 
-Status: owner-resolved attack-led input ownership plus design proposal after
-`OWNER-H1-DIAG-004`. This document records why the fixed one-second terminal
-diagnostic is insufficient and organizes the next owner decisions. It does not
-approve broader reflex runtime implementation, final controls, timing values,
-movement, wounds, Unity, or player-experience claims.
+Status: owner-resolved attack-led input ownership, timing shape, state pressure, and
+shared-readiness boundary after `OWNER-H1-DIAG-004`. This document records why the
+fixed one-second terminal diagnostic is insufficient and organizes the remaining
+research variables. It does not approve the visual lab, broader reflex runtime
+implementation, final controls, timing values, movement, wounds, Unity, or
+player-experience claims.
 
 Authority: the owner feedback recorded after `OWNER-H1-DIAG-004`, interpreted under
 the H1 owner decisions in `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` and
@@ -184,22 +185,24 @@ meaningful risk rather than maintain indefinite defense.
 
 The pressure must be visible before execution and derived from recorded state. It
 must not use an unexplained hidden penalty. The original minimal proposal used a small
-Block-repetition state rather than a universal resource. The owner has since proposed
-evaluating a lightweight Stamina system as the clearer generalization; that proposal
-is `DEFERRED` and does not approve runtime implementation. The exact accumulation,
-maximum shrinkage, floor, and reset rules remain open.
+Block-repetition state rather than a universal resource. The owner has now approved
+one visible shared-readiness resource as the visual-lab research direction, with
+repeated Block represented as stronger family-specific strain. This is research
+planning authority, not runtime or lab-implementation approval. Exact accumulation,
+maximum shrinkage, floor, recovery, and terminology remain open.
 
 Explicit body impairments separately affect response legality, possible grade ceiling,
 or effectiveness. A disabled source still removes its response rather than merely
 making its timing harder.
 
-### Lightweight Stamina proposal — 2026-08-12 (`DEFERRED`)
+### Lightweight shared-readiness direction — 2026-08-12
 
-The owner proposes a small, visible Stamina system because repeated Block pressure is
-not unique to Block. Repeated physical actions should lose effectiveness, while
-repeated Blocks should be affected more strongly. Blood remains health, currency, and
-ability fuel; Stamina would represent short-term physical readiness and must not
-become a second health bar, a death trigger, or a competing universal payment system.
+The owner approves investigating a small, visible readiness system because repeated
+Block pressure is not unique to Block. Repeated physical actions should lose
+effectiveness, while repeated Blocks should be affected more strongly. Blood remains
+health, currency, and ability fuel; readiness represents short-term physical capacity
+and must not become a second health bar, a death trigger, or a competing universal
+payment system.
 
 The recommended research model uses **one general Stamina value plus a derived
 repetition multiplier**, not a separate Stamina bar and a separate permanent
@@ -238,10 +241,11 @@ than silently impossible. A required disabled limb remains an independent legali
 failure. This preserves the difference between exhaustion, which asks for a tactical
 change, and body loss, which removes a capability.
 
-Before a Stamina gate can be proposed, the owner must decide whether this one-resource
-model replaces the standalone Block-pressure state. The recommendation is **yes**:
-make repeated Block a specially weighted use of general Stamina, so players read one
-readiness resource rather than two overlapping fatigue meters.
+The boundary decision is **yes** for the visual-lab hypothesis: this one-resource
+model replaces the standalone Block-pressure state, and repeated Block is a specially
+weighted use of general readiness. Exact values and recovery behavior remain
+reversible variables in `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Production
+combat remains unchanged unless later evidence supports a separately approved gate.
 
 ## 7. Revised diagnostic requirements
 
@@ -290,11 +294,13 @@ The questions are ordered by how many later decisions depend on them:
 3. **State pressure — resolved:** Repeated Block use is the primary cause of a shorter
    later Block window; low Blood visibly amplifies that pressure. Explicit body
    impairment separately changes legality or effectiveness.
-4. **Lightweight Stamina boundary:** Does one visible general Stamina resource replace
-   the standalone Block-pressure state, with repeated Block receiving a stronger
-   family-specific penalty?
-5. **Stamina recovery:** Which state change restores a little readiness, which creates
-   a larger reset, and how do we prevent trivial recovery loops?
+4. **Shared-readiness boundary — resolved for research:** One visible general
+   readiness resource replaces the standalone Block-pressure state in the lab
+   hypothesis, with repeated Block receiving stronger family-specific strain.
+5. **Recovery variables — bounded by the proposed lab plan:** Small recovery follows
+   threat resolution or a defensively meaningful choice; larger recovery requires a
+   genuine state-derived pressure break. Menus and ordinary item use do not create
+   free recovery. Exact values remain provisional.
 6. **Multiple-input meaning:** Should multi-input actions use ordered meaningful
    checkpoints by default, reserving rapid repetition for rare force/struggle actions?
 7. **Family coverage:** Which first three concrete responses should represent timed,
@@ -305,9 +311,10 @@ The questions are ordered by how many later decisions depend on them:
 9. **Accommodation equivalence:** Which changes may assisted input make to timing,
    pace, and gesture while preserving the same strategic decision?
 
-Questions 1 through 3 are resolved. Question 4 is now the highest-impact open
-decision because it determines whether repeated Block pressure remains a narrow
-exception or becomes part of one readable, lightweight readiness system.
+Questions 1 through 4 are resolved at the research-direction level. Question 5 has a
+reversible default and anti-loop boundary in the proposed lab plan; it is not an
+approved final rule. Questions 6 through 9 remain downstream research questions and
+must not expand the first Block-only lab.
 
 ## 9. Scope and gate
 
@@ -316,7 +323,8 @@ Cover It, wounds, new content, Encounter 3 runtime, and Unity remain blocked. Th
 current H1 code remains a valid deterministic fidelity fixture but is not an adequate
 human reflex instrument.
 
-The input-ownership question is resolved, but no implementation gate opens from that
-decision alone. A bounded visual-lab plan still requires the remaining high-impact
-interaction decisions, explicit test cases, evidence fields, rollback, and non-claims
-to receive owner approval.
+The shared-readiness direction is resolved, but no implementation gate opens from
+that decision alone. `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` now defines the
+Block-only scope, provisional recovery behavior, explicit comparisons, evidence
+fields, rollback, and non-claims. The current owner gate is to approve, revise, or
+reject that plan before implementation.

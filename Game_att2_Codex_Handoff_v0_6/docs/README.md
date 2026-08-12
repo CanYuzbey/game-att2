@@ -24,7 +24,9 @@ not make it current authority.
 | `20_H1_HYBRID_COMBAT_SPEC_v0_1.md` | Owner-approved H1 contract; execution governed by the bounded plan below |
 | `21_H1_IMPLEMENTATION_PLAN_v0_1.md` | Executed owner-approved bounded H1 implementation plan |
 | `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` | Verified H1 fidelity results, traceability, and remaining evidence limits |
-| `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Owner-directed reflex-family proposal and revised diagnostic requirements; no runtime approval |
+| `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Owner-resolved interaction directions, shared-readiness boundary, and revised diagnostic requirements; no runtime approval |
+| `24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md` | Current cross-discipline status, production critical path, and design-route gates |
+| `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` | Proposed local visual-lab implementation plan; owner approval required before execution |
 
 ## Encounter 3 paper testing
 

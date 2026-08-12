@@ -3,7 +3,7 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 research implementation passed its fidelity gate on 2026-08-12. Human-experience evidence remains absent and Unity remains delayed.**
+Status: **The bounded H1 fidelity fixture is verified. The shared-readiness boundary is approved for visual-lab research planning, but the lab still requires plan approval; human-experience evidence remains absent and Unity remains delayed.**
 
 ## 2026-08-12 owner diagnostic amendment
 
@@ -38,23 +38,18 @@ standard modifier. A specifically defined harder attack may use different early 
 late consequences when the distinction is visible and action-derived. Asymmetric
 timing is never a hidden global punishment.
 
-**State pressure resolved later on 2026-08-12:** repeated reliance on Block is the
-primary cause of shorter later Block opportunities. Low Blood visibly amplifies that
-pressure but does not create the full penalty by itself. The purpose is to prevent an
-indefinite no-progress loop where the player blocks repeatedly without creating a
-significant response. Explicit body impairment separately changes legality or
-effectiveness. No Stamina resource, numeric shrinkage, pressure-reset rule, or runtime
-implementation is approved by this decision.
+**Shared-readiness direction resolved later on 2026-08-12:** for the bounded visual-lab
+research hypothesis, one small visible readiness resource replaces a separate
+Block-pressure meter. Physical action families draw from that common resource, while
+repeated Block creates stronger family-specific strain. Low Blood visibly amplifies
+existing strain, and explicit body impairment remains a separate legality or
+effectiveness cause. The intent is to prevent indefinite no-progress defense while
+keeping Blood as the primary health/currency/fuel system.
 
-**Stamina proposal raised later on 2026-08-12 (`DEFERRED`):** the owner proposes a
-lightweight shared Stamina/readiness system. Repeated physical actions would weaken
-through this common resource, with repeated Block exerting a stronger family-specific
-penalty. Not using Block would recover a little readiness only after the associated
-threat resolves; a material change in pressure could recover more. Blood remains the
-primary health/currency/fuel system and may amplify existing strain, not become a
-second hidden motor penalty. This is a design investigation only. The current H1
-scope still excludes a Stamina runtime system until a separate owner-approved plan
-proves it necessary and tests it against the simpler Block-pressure alternative.
+This decision authorizes research planning only. It does not approve a Stamina/runtime
+system, exact values, recovery rates, final terminology, campaign integration, or
+player-experience claims. `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` contains the
+reversible proposal and must receive explicit owner approval before implementation.
 
 ## 2026-08-11 owner amendment
 

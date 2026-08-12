@@ -16,3 +16,4 @@ dist/
 reports/*.json
 reports/*.log
 reports/play_feedback/
+tmp/

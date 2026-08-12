@@ -20,6 +20,11 @@ The current simulator and default playable CLI cover the bounded sequence from
 S-001 through Jeff, emergency grafting, Anna, and the Grafting Table. The older
 Jeff-only diagnostic remains available as an explicit compatibility mode.
 
+The current product gate is approval of a bounded visual interaction-lab plan. The
+owner has approved one visible shared Stamina/readiness resource as the research
+hypothesis replacing a separate Block-pressure meter; no runtime Stamina system,
+production UI, content expansion, or engine work is approved.
+
 ## Design pillars
 
 - **Body as Build** - limbs create actions, passives, tradeoffs, and tactical
@@ -43,6 +48,8 @@ The active handoff package lives in
 - [Combat rules](Game_att2_Codex_Handoff_v0_6/docs/03_COMBAT_RULES_v0_5.md)
 - [Simulator technical specification](Game_att2_Codex_Handoff_v0_6/docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md)
 - [Tests and acceptance criteria](Game_att2_Codex_Handoff_v0_6/docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md)
+- [Current development lead brief](Game_att2_Codex_Handoff_v0_6/docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md)
+- [Bounded visual interaction-lab plan](Game_att2_Codex_Handoff_v0_6/docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md)
 - [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
 - [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
 - [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)
@@ -74,7 +81,7 @@ python -m ruff check src tests
 python -m mypy src
 ```
 
-The latest local verification is 186 passing tests, 87% line coverage,
+The latest local verification is 242 passing tests, 87% line coverage,
 a clean Ruff run, and a clean strict mypy run. See the documentation map for current
 evidence limits, known debt, and production gates, and
 [the Phase 1 CLI report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/Game_att2_Playable_CLI_Phase1_Report_v0_1.md)

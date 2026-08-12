@@ -27,16 +27,16 @@ The timing shape is also resolved: routine attacks use a symmetric early/late cu
 for learnability, while specifically defined harder attacks may use different visible
 early and late state consequences.
 
-State pressure is also resolved at the directional level: repeated Block use is the
-primary cause of shorter later Block opportunities, low Blood visibly amplifies that
-pressure, and explicit body impairments separately alter legality or effectiveness.
-The exact accumulation and reset rule remains open.
+The readiness boundary is resolved for visual-lab research planning: one small,
+visible shared readiness resource replaces a standalone Block-pressure meter in the
+lab hypothesis. Repeated Block creates stronger family-specific strain, low Blood
+visibly amplifies existing strain, and explicit body impairment separately changes
+legality or effectiveness. Blood remains the core health/currency/fuel resource.
 
-The owner has proposed evaluating a lightweight shared Stamina/readiness system as a
-possible generalization of repeated-Block pressure. It would make repeated physical
-actions less effective, with a stronger repeated-Block effect, while preserving Blood
-as the core health/currency/fuel resource. This is `DEFERRED`: H1 remains limited to
-its current isolated Block fixture and no Stamina runtime gate is open.
+This is not production-system or runtime approval. Exact accumulation, recovery,
+terminology, and campaign integration remain provisional. The current product gate is
+owner approval of `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; the current H1
+fixture remains unchanged until that plan passes.
 
 ## 1. Why this document exists
 
@@ -139,8 +139,9 @@ Use this modifiable phase model for the first hybrid prototype:
 - one physical source cannot simultaneously perform incompatible Main and reflex jobs;
 - movement uses abstract range and either occupies Preparation for a short step or
   Main for a major reposition/disengage;
-- do not add Stamina or another universal resource until Blood/body/tempo prove
-  insufficient.
+- do not add Stamina or another universal resource to production combat until
+  Blood/body/tempo and the approved lab evidence prove it necessary; an isolated
+  shared-readiness lab hypothesis is permitted only after its bounded plan passes.
 
 This intentionally replaces the current survey convenience of using both Focus and a
 Fast item before the Main action. Retain the old behavior only as a comparison variant.
@@ -311,8 +312,8 @@ deferred until H1 produces evidence.
 - one reflex type: Block;
 - prepared Guard versus unprepared Block comparison;
 - source loss cancels attacks/reflexes;
-- no new enemy, limb roster, Stamina, full negotiation, full movement map, art, or
-  engine work.
+- no new enemy, limb roster, production Stamina system, full negotiation, full
+  movement map, art, or engine work.
 
 ### Hypothesis
 
@@ -388,16 +389,22 @@ Use this document for macro direction and
 `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` for the current evidence. The four owner
 questions in section 6 are resolved and the bounded fidelity implementation is
 complete. Use `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` for the
-owner-directed diagnostic correction and the next question order. Do not restart the archived question-by-question interview, promote
-provisional values before human testing, or expand content or presentation.
+diagnostic correction, `24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md` for current
+cross-discipline status, and `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` for the
+single active approval gate. Do not restart the archived question-by-question
+interview, promote provisional values before human testing, or expand content or
+presentation.
 
 Suggested opening request:
 
 > Read `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`,
 > `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`,
 > `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`,
-> `docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`, and the mandatory repository skill files.
+> `docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`,
+> `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`,
+> `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`,
+> `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`, and the mandatory repository skill files.
 > Treat the four owner decisions as resolved, the H1 values as configurable research
-> variables, and the bounded fidelity implementation as complete. Review its evidence
-> limits before proposing another gate; do not reopen minor questions unless one
-> creates a P0 contradiction.
+> variables, the bounded fidelity implementation as complete, and shared readiness as
+> approved for lab research planning only. Review the evidence limits and proposed lab
+> plan; do not reopen minor questions unless one creates a P0 contradiction.

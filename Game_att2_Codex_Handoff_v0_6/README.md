@@ -31,6 +31,10 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   the six approved paired comparisons; this establishes implementation fidelity only.
 - H1 owner diagnostic: completed, but the fixed one-second terminal task was rejected
   as an inadequate reflex-system test; interaction-family revision is now required.
+- Shared-readiness boundary: owner-approved for bounded visual-lab research planning.
+  One visible general readiness resource replaces a separate Block-pressure meter in
+  the research hypothesis; repeated Block receives stronger family-specific strain.
+- Current product gate: approve or revise the bounded visual interaction-lab plan.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
@@ -57,6 +61,10 @@ The detailed unresolved-rule register remains
 [docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md](docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md).
 The owner-directed reflex-family proposal and revised diagnostic path are in
 [docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md](docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md).
+The current production view is
+[docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md](docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md),
+and the proposed next implementation contract is
+[docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md](docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md).
 
 ## Vision and player fantasy
 
@@ -195,6 +203,8 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 18. `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`
 19. `docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`
 20. `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`
+21. `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`
+22. `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -458,10 +468,10 @@ These timestamps are repository events, not complete labor-hour records. No auth
 
 ## Recommended next step
 
-Resolve the lightweight-Stamina boundary in
-`docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`: whether one
-visible readiness resource should replace the standalone Block-pressure state, with
-repeated Block receiving a stronger family-specific penalty.
+Review and explicitly approve, revise, or reject
+`docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Approval opens only its isolated
+local implementation-fidelity work; it does not open story, final UI, content,
+Encounter 3 runtime, or engine production.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
 

@@ -28,7 +28,9 @@ Codex must use that skill for Game att2 requirement, design, simulator, test, ev
 - Encounter 3 remains paper-only; Warden runtime and Unity remain blocked.
 - Combat Rules v0.5 governs current simulator semantics.
 - State-derived outcomes remain mandatory; actions mutate state and never select endings directly.
-- H1 hybrid combat is owner-directed but not implemented or automatically approved.
+- The bounded H1 fidelity fixture is implemented. Its one-second terminal diagnostic
+  is inadequate for human-facing evidence; the current gate is owner approval of the
+  bounded visual interaction-lab plan.
 - Passing tests proves implementation fidelity, not fun, accessibility, balance, or market demand.
 
 ## Compatibility rule

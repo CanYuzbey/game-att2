@@ -1,6 +1,8 @@
 # H1 Hybrid-Combat Research Operations
 
-Status: deterministic research instrument implemented and verified on 2026-08-12.
+Status: deterministic fidelity fixture implemented and verified on 2026-08-12. Its
+fixed terminal timing task is retained for reproducibility but is not an adequate
+human-facing diagnostic. The replacement visual-lab plan is proposed, not approved.
 
 H1 tests one controlled post-Jeff interaction against Anna's existing Surgical Jab.
 It is not an eighth approved scenario, a full encounter rewrite, or production combat.
@@ -15,6 +17,11 @@ It is not an eighth approved scenario, a full encounter rewrite, or production c
 Neither class establishes fun, balance, accessibility, fairness, market demand, or
 production readiness. External participants require a separately approved consent and
 session protocol; H1 performs no upload and stores no participant identity.
+
+Read `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` for the
+diagnostic finding and `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` for the
+current approval gate. Do not extend this runner or treat the plan as implementation
+authority before owner approval.
 
 ## Deterministic replay
 

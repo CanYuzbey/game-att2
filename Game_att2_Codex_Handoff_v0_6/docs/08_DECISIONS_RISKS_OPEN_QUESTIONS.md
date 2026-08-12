@@ -31,20 +31,19 @@ effects when the physical distinction is declared by the attack and communicated
 the player. The result cannot be selected retrospectively or used as a hidden extra
 failure penalty.
 
-**State pressure resolved:** repeated Block use is the primary input that shortens
-later Block opportunities, while low Blood visibly amplifies the shortening. This is
-intended to break a defensive no-progress loop and encourage a different response or
-meaningful counterpressure. Explicit impairments separately affect legality or
-effectiveness. Exact accumulation, minimum window, maximum pressure, and reset rules
-remain open and no Stamina resource is implied.
+**Shared-readiness boundary resolved for research planning:** one small, visible
+general readiness resource replaces a separate Block-pressure meter in the proposed
+visual lab. Physical action families use the common resource; repeated Block creates
+stronger family-specific strain. Low Blood visibly amplifies existing strain rather
+than independently imposing a hidden control penalty, and explicit impairment remains
+a separate legality/effectiveness cause. Blood remains health/currency/fuel.
 
-**Stamina proposal (`DEFERRED`):** the owner proposes evaluating one small, visible
-general Stamina/readiness resource. Physical actions would use it; repeated Blocks
-would create stronger action-family pressure than other moves. Forgoing Block against
-a resolved threat could recover a little readiness, while changing the pressure state
-could recover more. Blood remains health/currency/fuel and amplifies existing strain
-rather than independently imposing a hidden control penalty. This does not approve a
-Stamina runtime system or replace the current narrow H1 scope.
+Exact values, recovery, final terminology, runtime integration, and experience claims
+remain open. This decision does not approve a production Stamina system or replace the
+current campaign rules. The proposed implementation boundary, comparison cases,
+evidence fields, and rollback are in
+`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; that plan still requires explicit
+owner approval before work begins.
 
 ## 2026-08-11 owner decision: H1 skill, frequency, failure, and body-build proof
 
