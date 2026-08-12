@@ -1,5 +1,86 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-12 owner diagnostic finding: reflex interactions require separation
+
+The owner found that `OWNER-H1-DIAG-004` did not validate reflex usage adequately.
+Estimating one hidden second and pressing Enter tested only one narrow timing behavior,
+without a representative attack telegraph or sufficient explanation of how early,
+late, directional, or multi-input performance changes state.
+
+Future reflex design must classify reusable interaction families. Timed single input,
+directional drag/movement, and multiple meaningful inputs must be considered
+separately and used only where they represent the chosen physical response. Attack,
+telegraph, preparation, health/body state, and accessibility may tune opportunity and
+consequence through explicit causal rules. Exact mappings and values remain open.
+
+`23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` records the proposed
+taxonomy, explains the current H1 timing outcomes, defines the revised diagnostic
+requirements, and orders the remaining owner questions. This finding does not approve
+broader runtime implementation.
+
+**Input ownership resolved:** the rival's attack normally defines the compatible
+input/response routes, expected route, and baseline difficulty. The player may direct
+the input type by choosing another legal route supported by the attack, body source,
+reach, and current state. Attacks may intentionally require easy or hard responses,
+but the difference must be readable and action-defined. Exact interaction mappings
+and values remain open.
+
+**Timing shape resolved:** ordinary timed interactions use a symmetric curve by
+default. Specifically defined harder attacks may use different early and late state
+effects when the physical distinction is declared by the attack and communicated to
+the player. The result cannot be selected retrospectively or used as a hidden extra
+failure penalty.
+
+**State pressure resolved:** repeated Block use is the primary input that shortens
+later Block opportunities, while low Blood visibly amplifies the shortening. This is
+intended to break a defensive no-progress loop and encourage a different response or
+meaningful counterpressure. Explicit impairments separately affect legality or
+effectiveness. Exact accumulation, minimum window, maximum pressure, and reset rules
+remain open and no Stamina resource is implied.
+
+**Stamina proposal (`DEFERRED`):** the owner proposes evaluating one small, visible
+general Stamina/readiness resource. Physical actions would use it; repeated Blocks
+would create stronger action-family pressure than other moves. Forgoing Block against
+a resolved threat could recover a little readiness, while changing the pressure state
+could recover more. Blood remains health/currency/fuel and amplifies existing strain
+rather than independently imposing a hidden control penalty. This does not approve a
+Stamina runtime system or replace the current narrow H1 scope.
+
+## 2026-08-11 owner decision: H1 skill, frequency, failure, and body-build proof
+
+**Skill balance:** Strategy leads. Reflex execution usually makes modest changes to
+approved consequences. Exceptional execution may rarely convert an extreme but still
+legally recoverable situation into a costly survivable one. It cannot restore an
+unusable source, waive costs, ignore reach, directly select an outcome, or repeatedly
+erase a structurally bad plan.
+
+**Frequency and effect scale:** Reflex opportunities should be broadly present across
+readable physical interactions. Routine opportunities have small effects; prepared or
+strongly telegraphed opportunities may have material effects; life-changing effects
+are rare and remain constrained by legal sources and current state.
+
+**Failure:** An ordinary miss applies only the original consequence. Additional
+exposure is allowed only when a high-risk response is clearly disclosed and
+voluntarily selected before execution. The added consequence must derive from the
+committed source and cannot be an unrelated punishment.
+
+**Body-as-Build proof:** In the existing post-Jeff to Anna chain, the grafted Right Arm
+must both enable the strongest defensive response and become a body asset placed at
+risk by that response. Damage or loss must weaken or remove the capability.
+
+**Specification and boundary:** `20_H1_HYBRID_COMBAT_SPEC_v0_1.md` defines the
+smallest controlled comparison using Anna's existing Surgical Jab. The owner approved
+the specification on 2026-08-11 as the contract for implementation planning only.
+This decision does not change Combat Rules v0.5, current runtime/config/tests, wound
+rules, active Cover It, movement, content, Encounter 3, or Unity. Execution is governed
+only by the separately approved bounded plan below.
+
+**Execution status:** `21_H1_IMPLEMENTATION_PLAN_v0_1.md` maps the approved contract to
+code, tests, evidence, rollback, and stop conditions. The owner approved the plan for
+execution on 2026-08-11. The bounded implementation passed its automated fidelity gate
+on 2026-08-12; `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` records the result. This does not
+open scope outside that plan or establish player-experience claims.
+
 ## 2026-08-01 owner decision: hybrid strategic/reflex core direction
 
 Combat remains turn-based at the strategic layer and must also contain reflexive

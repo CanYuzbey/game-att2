@@ -16,6 +16,7 @@ from .models import (
     LimbRuntime,
     ScenarioMetrics,
 )
+from .reflex import AttackModifier
 from .rng import RNGService
 
 
@@ -730,17 +731,102 @@ class RuleEngine:
         )
         return HarvestedLimb(harvested.limb, quality, force_unstable)
 
-    def enemy_attack(self, enemy: CombatantRuntime, player: CombatantRuntime, source_slot: Slot, target_slot: Slot, base_damage: int, can_bleed: bool = False) -> None:
+    def enemy_attack(
+        self,
+        enemy: CombatantRuntime,
+        player: CombatantRuntime,
+        source_slot: Slot,
+        target_slot: Slot,
+        base_damage: int,
+        can_bleed: bool = False,
+        modifier: AttackModifier | None = None,
+    ) -> None:
+        resolved_modifier = modifier or AttackModifier.neutral()
+        if not 0 <= resolved_modifier.damage_reduction_basis_points <= 10000:
+            raise ValueError("attack modifier reduction must be between 0 and 10000")
+        if resolved_modifier.source_exposure_damage < 0:
+            raise ValueError("attack modifier exposure cannot be negative")
+        if resolved_modifier.source_exposure_damage and resolved_modifier.exposed_source is None:
+            raise ValueError("attack modifier exposure requires a declared source")
+        if resolved_modifier.source_exposure_damage and (
+            resolved_modifier.required_source is None
+            or resolved_modifier.exposed_source is not resolved_modifier.required_source
+        ):
+            raise ValueError("attack modifier exposure must derive from its required source")
+        if (
+            resolved_modifier.damage_reduction_basis_points
+            and resolved_modifier.required_source is None
+        ):
+            raise ValueError("non-neutral attack modifier requires a physical source")
         self.log.set_phase(Phase.ENEMY)
         source = enemy.body.slots[source_slot]
         if not is_usable(source):
             self.log.emit("enemy_action_cancelled", enemy.id, reason="unusable source", slot=source_slot.value)
             return
+        if resolved_modifier.required_source is not None and not is_usable(
+            player.body.slots[resolved_modifier.required_source]
+        ):
+            self.log.emit(
+                "reflex_opportunity_cancelled",
+                player.id,
+                target_id=enemy.id,
+                reason="blocking_source_unusable_at_revalidation",
+                source=resolved_modifier.required_source.value,
+            )
+            if player.guard_active:
+                player.guard_active = False
+                self.log.emit(
+                    "guard_cancelled_source_unusable",
+                    player.id,
+                    target_id=enemy.id,
+                    source=resolved_modifier.required_source.value,
+                )
+            resolved_modifier = AttackModifier.neutral()
         target = player.body.slots[target_slot]
         damage = action_damage(enemy, source, base_damage + (5 if enemy.rage else 0))
         enemy.rage = False
         damage = self.apply_guard_reduction(player, damage, source=enemy.id)
+        if resolved_modifier.damage_reduction_basis_points:
+            before_modifier = damage
+            damage = round_half_up(
+                Decimal(damage)
+                * (
+                    Decimal(1)
+                    - Decimal(resolved_modifier.damage_reduction_basis_points) / Decimal(10000)
+                )
+            )
+            self.log.emit(
+                "reflex_modifier_applied",
+                player.id,
+                target_id=enemy.id,
+                before=before_modifier,
+                after=damage,
+                reduction_basis_points=resolved_modifier.damage_reduction_basis_points,
+                grade=(resolved_modifier.grade.value if resolved_modifier.grade else None),
+                profile_id=resolved_modifier.profile_id,
+                risk_class=(
+                    resolved_modifier.risk_class.value if resolved_modifier.risk_class else None
+                ),
+            )
         apply_damage(player, target, damage, "Enemy attack", self.log)
+        if resolved_modifier.source_exposure_damage:
+            if resolved_modifier.exposed_source is None:
+                raise AssertionError("validated exposure lost its source")
+            exposed = player.body.slots[resolved_modifier.exposed_source]
+            apply_damage(
+                player,
+                exposed,
+                resolved_modifier.source_exposure_damage,
+                "Disclosed high-risk Block exposure",
+                self.log,
+            )
+            self.log.emit(
+                "reflex_source_exposed",
+                player.id,
+                target_id=enemy.id,
+                source=resolved_modifier.exposed_source.value,
+                damage=resolved_modifier.source_exposure_damage,
+            )
         if can_bleed:
             roll = self.rng.randint(1, 6)
             threshold = 4 if target.state in {LimbState.DAMAGED, LimbState.CRITICAL} else 5

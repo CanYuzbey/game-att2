@@ -20,7 +20,11 @@ not make it current authority.
 | `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` | Causal design skill |
 | `17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md` | Current motivation/outcome prototype |
 | `18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md` | Detailed subordinate decision/dependency register |
-| `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` | New-conversation entry point; five macro decisions and hybrid turn/reflex direction |
+| `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` | Macro hybrid direction and resolved owner decisions |
+| `20_H1_HYBRID_COMBAT_SPEC_v0_1.md` | Owner-approved H1 contract; execution governed by the bounded plan below |
+| `21_H1_IMPLEMENTATION_PLAN_v0_1.md` | Executed owner-approved bounded H1 implementation plan |
+| `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` | Verified H1 fidelity results, traceability, and remaining evidence limits |
+| `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Owner-directed reflex-family proposal and revised diagnostic requirements; no runtime approval |
 
 ## Encounter 3 paper testing
 

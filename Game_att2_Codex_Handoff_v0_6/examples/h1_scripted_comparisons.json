@@ -1,0 +1,18 @@
+{
+  "schema_version": "h1-script-0.1",
+  "evidence_class": "AUTOMATED_REGRESSION",
+  "inputs": {
+    "H1-C1-unprepared": 120,
+    "H1-C1-prepared": 120,
+    "H1-C2-usable": 0,
+    "H1-C2-unusable": 0,
+    "H1-C3-ordinary": 999,
+    "H1-C3-high-risk": 999,
+    "H1-C4-vague": 120,
+    "H1-C4-exact": 120,
+    "H1-C5-precise": 120,
+    "H1-C5-assisted": 120,
+    "H1-C6-normal": 0,
+    "H1-C6-threshold": 0
+  }
+}

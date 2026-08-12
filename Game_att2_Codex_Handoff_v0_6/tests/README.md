@@ -23,6 +23,11 @@ The acceptance source is `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`.
 - `integration/test_research_cli.py` checks research CLI exports and input contracts.
 - `integration/test_console_entrypoints.py` launches all three documented `python -m` commands as subprocesses.
 - `integration/test_research_shell.py` and `integration/test_post_table_probe.py` check the evidence shell and non-canonical probes.
+- `unit/test_h1_config.py` and `unit/test_reflex.py` validate the isolated H1 schema,
+  pure legality, grades, risk commitment, assisted input, and prohibited scope.
+- `integration/test_h1_research.py` and `integration/test_h1_cli.py` cover H1-C1 through
+  H1-C6, deterministic exports, capability recomputation, and CLI boundaries without
+  adding H1 to the approved scenario runner.
 
 ## Complete automated gate
 
@@ -46,6 +51,10 @@ python -m game_att2_sim.research_cli `
   --participant-code AUTO-SMOKE `
   --seed 42 `
   --script research/interactive_shell/example_action_sequence.json
+python -m game_att2_sim.h1_cli `
+  --all-comparisons `
+  --script examples/h1_scripted_comparisons.json `
+  --format json
 ```
 
 Use scripted/fake RNG for branch-level unit tests and seeded RNG for reproducibility

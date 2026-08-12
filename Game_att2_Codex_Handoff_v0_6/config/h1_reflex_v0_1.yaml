@@ -1,0 +1,73 @@
+schema_version: "h1-reflex-config-0.1"
+spec_version: "H1-0.1"
+implementation_status: research_only
+provisional_label: PROVISIONAL_H1_RESEARCH_ONLY
+
+grade_order: [miss, limited, strong, exceptional]
+
+timing_profiles:
+  precise:
+    assisted: false
+    bands:
+      - {grade: exceptional, max_error: 40}
+      - {grade: strong, max_error: 90}
+      - {grade: limited, max_error: 160}
+      - {grade: miss, max_error: 300}
+  assisted:
+    assisted: true
+    bands:
+      - {grade: exceptional, max_error: 80}
+      - {grade: strong, max_error: 160}
+      - {grade: limited, max_error: 300}
+      - {grade: miss, max_error: 600}
+
+strategy_modifiers:
+  prepared_error_bonus: 40
+  prepared_min_grade: limited
+  intent_error_penalty:
+    vague: 80
+    partial: 40
+    exact: 0
+
+mitigation_basis_points:
+  routine:
+    miss: 0
+    limited: 1500
+    strong: 3000
+    exceptional: 5000
+  significant:
+    miss: 0
+    limited: 2500
+    strong: 5000
+    exceptional: 7500
+  critical:
+    miss: 0
+    limited: 2500
+    strong: 5500
+    exceptional: 10000
+
+ordinary_exposure_damage:
+  miss: 0
+  limited: 0
+  strong: 0
+  exceptional: 0
+
+high_risk_exposure:
+  affected_source: right_arm
+  damage_by_grade:
+    miss: 30
+    limited: 15
+    strong: 8
+    exceptional: 4
+
+fixture:
+  fixture_id: H1-F0
+  incoming_action: surgical_jab
+  attacker_id: anna
+  attacker_source: right_arm
+  target: torso
+  blocking_source: right_arm
+  guard_action: guard_flesh
+  base_damage: 8
+  normal_torso_integrity: 45
+  threshold_torso_integrity: 8

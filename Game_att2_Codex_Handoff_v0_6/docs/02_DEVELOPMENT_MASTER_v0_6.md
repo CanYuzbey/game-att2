@@ -3,7 +3,87 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **Turn-based strategy plus reflexive execution is owner-directed; H1 is not yet implemented. Unity remains delayed.**
+Status: **The bounded H1 research implementation passed its fidelity gate on 2026-08-12. Human-experience evidence remains absent and Unity remains delayed.**
+
+## 2026-08-12 owner diagnostic amendment
+
+The owner found that the fixed one-second terminal diagnostic does not adequately
+validate the intended reflex layer. It tests a narrow single-input timing behavior
+without a representative physical telegraph and without sufficiently exposing how
+different timings or input forms change combat state.
+
+Future design must classify reflex interaction families. Most readable physical
+actions may use a timed single click/press, while some responses may use directional
+drag/movement or multiple meaningful inputs when that interaction better represents
+the physical adaptation. Attack type, telegraph, body state, and other approved state
+facts may tune opportunity and consequence through explicit causal rules.
+
+This amendment approves the need for classification and a revised diagnostic, not the
+exact taxonomy, control mapping, timing thresholds, broader runtime implementation,
+movement, wounds, Unity, or experience claims. The design proposal and optimized
+owner-question order are in
+`23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`.
+
+**Input ownership resolved later on 2026-08-12:** the rival's attack normally defines
+the compatible response/input routes, expected route, and baseline difficulty. The
+player can direct the input type by explicitly choosing another legal response route.
+Some attacks are intended to have easy responses and others hard responses; that
+difficulty must be declared through readable attack/route parameters rather than an
+unexplained global timing test. This decision does not approve exact mappings or
+implementation.
+
+**Timing shape resolved later on 2026-08-12:** ordinary timed interactions use a
+symmetric response curve, so equally early and late inputs receive the same grade and
+standard modifier. A specifically defined harder attack may use different early and
+late consequences when the distinction is visible and action-derived. Asymmetric
+timing is never a hidden global punishment.
+
+**State pressure resolved later on 2026-08-12:** repeated reliance on Block is the
+primary cause of shorter later Block opportunities. Low Blood visibly amplifies that
+pressure but does not create the full penalty by itself. The purpose is to prevent an
+indefinite no-progress loop where the player blocks repeatedly without creating a
+significant response. Explicit body impairment separately changes legality or
+effectiveness. No Stamina resource, numeric shrinkage, pressure-reset rule, or runtime
+implementation is approved by this decision.
+
+**Stamina proposal raised later on 2026-08-12 (`DEFERRED`):** the owner proposes a
+lightweight shared Stamina/readiness system. Repeated physical actions would weaken
+through this common resource, with repeated Block exerting a stronger family-specific
+penalty. Not using Block would recover a little readiness only after the associated
+threat resolves; a material change in pressure could recover more. Blood remains the
+primary health/currency/fuel system and may amplify existing strain, not become a
+second hidden motor penalty. This is a design investigation only. The current H1
+scope still excludes a Stamina runtime system until a separate owner-approved plan
+proves it necessary and tests it against the simpler Block-pressure alternative.
+
+## 2026-08-11 owner amendment
+
+This amendment resolves the four H1 owner questions and records the later bounded H1
+execution approval without changing Combat Rules v0.5:
+
+- Strategy remains primary. Reflex skill usually makes modest state-level
+  improvements, while exceptional execution may rarely rescue an extreme but still
+  legally recoverable situation.
+- Reflex opportunities should be broadly present in readable physical interactions;
+  most have small effects, prepared or strongly telegraphed opportunities may have
+  material effects, and life-changing effects are rare.
+- Ordinary reflex misses apply only the original consequence. Additional exposure is
+  permitted only for a clearly disclosed, voluntarily selected high-risk response.
+- Jeff's grafted Right Arm must be both the strongest defensive response source
+  against Anna and a body asset placed at risk by using it. Damage or loss weakens or
+  removes the response.
+- The smallest testable contract is
+  `20_H1_HYBRID_COMBAT_SPEC_v0_1.md`. The owner approved it on 2026-08-11 for
+  implementation planning. Exact values remain configurable research variables. The
+  separate execution gate passed later the same date for the bounded plan below.
+
+The current simulator action economy, Guard Flesh effect, Anna behavior, configuration,
+and tests remain unchanged by this amendment.
+
+The traceable code/test plan is
+`21_H1_IMPLEMENTATION_PLAN_v0_1.md`. The owner approved that plan for execution on
+2026-08-11. Its bounded research implementation passed verification on 2026-08-12;
+results and evidence limits are recorded in `22_H1_IMPLEMENTATION_RESULTS_v0_1.md`.
 
 ## 2026-08-01 owner amendment
 
