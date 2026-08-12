@@ -10,6 +10,7 @@ from game_att2_sim.errors import IllegalActionError, InsufficientBloodError, Inv
 from game_att2_sim.events import EventLog
 from game_att2_sim.factory import enemy_from_config, player_from_start
 from game_att2_sim.models import CombatantRuntime, HarvestedLimb, ScenarioMetrics
+from game_att2_sim.reflex import AttackModifier, ExecutionGrade, RiskClass
 from game_att2_sim.rng import ScriptedRNG
 from game_att2_sim.rules import RuleEngine
 from game_att2_sim.scenarios import run_all
@@ -213,6 +214,106 @@ def test_guard_does_not_survive_cancelled_enemy_action() -> None:
     event_types = [event.event_type for event in engine.log.events]
     assert "enemy_action_cancelled" in event_types
     assert "guard_expired" in event_types
+
+
+def test_default_neutral_attack_modifier_preserves_existing_event_sequence() -> None:
+    default_engine, default_player = make_engine([1])
+    explicit_engine, explicit_player = make_engine([1])
+    default_anna = enemy_from_config(default_engine.config, "anna")
+    explicit_anna = enemy_from_config(explicit_engine.config, "anna")
+
+    default_engine.enemy_attack(
+        default_anna, default_player, Slot.RIGHT_ARM, Slot.TORSO, 8, can_bleed=True
+    )
+    explicit_engine.enemy_attack(
+        explicit_anna,
+        explicit_player,
+        Slot.RIGHT_ARM,
+        Slot.TORSO,
+        8,
+        can_bleed=True,
+        modifier=AttackModifier.neutral(),
+    )
+
+    assert default_player.body.slots[Slot.TORSO].integrity == (
+        explicit_player.body.slots[Slot.TORSO].integrity
+    )
+    assert default_engine.log.events == explicit_engine.log.events
+
+
+def test_attack_modifier_revalidates_source_before_any_reflex_mutation() -> None:
+    engine, player = make_engine([1])
+    graft_right_arm(engine, player)
+    anna = enemy_from_config(engine.config, "anna")
+    arm = player.body.slots[Slot.RIGHT_ARM]
+    torso = player.body.slots[Slot.TORSO]
+    arm.state = LimbState.DISABLED
+    before = (arm.integrity, torso.integrity, player.blood)
+    modifier = AttackModifier(
+        damage_reduction_basis_points=10000,
+        required_source=Slot.RIGHT_ARM,
+        exposed_source=Slot.RIGHT_ARM,
+        source_exposure_damage=4,
+        grade=ExecutionGrade.EXCEPTIONAL,
+        profile_id="precise",
+        risk_class=RiskClass.HIGH_RISK,
+    )
+
+    engine.enemy_attack(
+        anna,
+        player,
+        Slot.RIGHT_ARM,
+        Slot.TORSO,
+        8,
+        modifier=modifier,
+    )
+
+    assert arm.integrity == before[0]
+    assert torso.integrity == before[1] - 8
+    assert player.blood == before[2]
+    assert "reflex_opportunity_cancelled" in {
+        event.event_type for event in engine.log.events
+    }
+    assert "reflex_modifier_applied" not in {
+        event.event_type for event in engine.log.events
+    }
+
+
+def test_attack_modifier_rejects_exposure_from_an_unrelated_source_atomically() -> None:
+    engine, player = make_engine([1])
+    graft_right_arm(engine, player)
+    anna = enemy_from_config(engine.config, "anna")
+    before = (
+        player.body.slots[Slot.TORSO].integrity,
+        player.body.slots[Slot.LEFT_ARM].integrity,
+        player.blood,
+        tuple(engine.log.events),
+    )
+    modifier = AttackModifier(
+        required_source=Slot.RIGHT_ARM,
+        exposed_source=Slot.LEFT_ARM,
+        source_exposure_damage=4,
+        grade=ExecutionGrade.EXCEPTIONAL,
+        profile_id="precise",
+        risk_class=RiskClass.HIGH_RISK,
+    )
+
+    with pytest.raises(ValueError, match="derive from"):
+        engine.enemy_attack(
+            anna,
+            player,
+            Slot.RIGHT_ARM,
+            Slot.TORSO,
+            8,
+            modifier=modifier,
+        )
+
+    assert (
+        player.body.slots[Slot.TORSO].integrity,
+        player.body.slots[Slot.LEFT_ARM].integrity,
+        player.blood,
+        tuple(engine.log.events),
+    ) == before
 
 
 def test_destroyed_action_source_cannot_resolve_or_commit() -> None:

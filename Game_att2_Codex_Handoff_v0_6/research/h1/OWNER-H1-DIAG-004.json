@@ -1,0 +1,2233 @@
+{
+  "artifact": "Game att2 H1 deterministic research evidence",
+  "claims_boundary": "This evidence establishes implementation fidelity and determinism only; it does not establish fun, balance, comprehension, or accessibility.",
+  "evidence_class": "OWNER_DIAGNOSTIC",
+  "runs": [
+    {
+      "changed_condition": "unprepared",
+      "comparison_id": "H1-C1",
+      "config_version": "h1-reflex-config-0.1",
+      "deferred": [
+        "wound_class",
+        "wound_to_blood_mapping",
+        "ruined_torso_downstream_result"
+      ],
+      "events": [
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "blood_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 73,
+            "before": 85,
+            "delta": -12,
+            "reason": "Emergency graft"
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 1,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "emergency_graft",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "quality": "clean",
+            "roll": 6,
+            "slot": "right_arm",
+            "unstable": false
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 2,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_reset",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 0
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 3,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "main_action_committed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "action": "brace"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 4,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_activated",
+          "fixture_id": "H1-F0",
+          "payload": {},
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 5,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_fixture_started",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "attacking_source": "right_arm",
+            "comparison_id": "H1-C1",
+            "config_version": "h1-reflex-config-0.1",
+            "fixture_id": "H1-F0",
+            "incoming_action": "surgical_jab",
+            "spec_version": "H1-0.1",
+            "target": "torso",
+            "variant_id": "H1-C1-unprepared"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 6,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_opportunity_offered",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "comparison_id": "H1-C1",
+            "fixture_id": "H1-F0",
+            "intent_clarity": "exact",
+            "prepared": false,
+            "tier": "routine",
+            "variant_id": "H1-C1-unprepared"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 7,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_input_recorded",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "assisted": false,
+            "effective_timing_error": 1523,
+            "profile_id": "precise",
+            "raw_timing_error": 1523
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 8,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_grade_resolved",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "grade": "miss",
+            "reduction_basis_points": 0,
+            "state_modifier_only": true
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 9,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_damaged",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 37,
+            "before": 45,
+            "damage": 8,
+            "limb": "Damaged Human Torso",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 10,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_capability_recomputed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "guard_flesh_available": true,
+            "source": "right_arm",
+            "source_state": "intact"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 11,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-unprepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_comparison_completed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "capability_retained": true,
+            "comparison_id": "H1-C1",
+            "source_damage": 0,
+            "target_damage": 8,
+            "variant_id": "H1-C1-unprepared"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 12,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-unprepared"
+        }
+      ],
+      "evidence_class": "OWNER_DIAGNOSTIC",
+      "final_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "guard_flesh_available": true,
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "target_integrity": 37,
+        "target_state": "intact"
+      },
+      "fixture_id": "H1-F0",
+      "metrics": {
+        "blocking_source_damage": 0,
+        "blood_delta_during_measured_interaction": 0,
+        "capability_retained": true,
+        "disabled_reason": null,
+        "grade": "miss",
+        "opportunity_offered": true,
+        "target_damage": 8,
+        "target_damage_prevented_from_base": 0,
+        "threshold_preserved": false
+      },
+      "prior_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "intent_clarity": "exact",
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "preparation": "brace",
+        "target_integrity": 45,
+        "target_state": "intact"
+      },
+      "request": {
+        "blocking_source_compatible": true,
+        "blocking_source_state": null,
+        "changed_condition": "unprepared",
+        "comparison_id": "H1-C1",
+        "high_risk_acknowledged": false,
+        "intent_clarity": "exact",
+        "invalidate_source_after_resolution": false,
+        "prepared": false,
+        "profile_id": "precise",
+        "risk_class": "ordinary",
+        "threshold_pressure": false,
+        "tier": "routine",
+        "timing_error": 1523,
+        "variant_id": "H1-C1-unprepared"
+      },
+      "resolution": {
+        "availability": {
+          "legal": true,
+          "reason": null
+        },
+        "effective_timing_error": 1523,
+        "grade": "miss",
+        "modifier": {
+          "damage_reduction_basis_points": 0,
+          "exposed_source": null,
+          "grade": "miss",
+          "profile_id": "precise",
+          "required_source": "right_arm",
+          "risk_class": "ordinary",
+          "source_exposure_damage": 0
+        },
+        "profile_id": "precise",
+        "raw_timing_error": 1523,
+        "risk_class": "ordinary"
+      },
+      "spec_version": "H1-0.1",
+      "variant_id": "H1-C1-unprepared"
+    },
+    {
+      "changed_condition": "guard_flesh_prepared",
+      "comparison_id": "H1-C1",
+      "config_version": "h1-reflex-config-0.1",
+      "deferred": [
+        "wound_class",
+        "wound_to_blood_mapping",
+        "ruined_torso_downstream_result"
+      ],
+      "events": [
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "blood_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 73,
+            "before": 85,
+            "delta": -12,
+            "reason": "Emergency graft"
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 1,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "emergency_graft",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "quality": "clean",
+            "roll": 6,
+            "slot": "right_arm",
+            "unstable": false
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 2,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_reset",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 0
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 3,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "main_action_committed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "action": "guard_flesh"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 4,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "blood_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 69,
+            "before": 73,
+            "delta": -4,
+            "reason": "Guard Flesh"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 5,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "guard_flesh",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "reduction": 0.5
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 6,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_fixture_started",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "attacking_source": "right_arm",
+            "comparison_id": "H1-C1",
+            "config_version": "h1-reflex-config-0.1",
+            "fixture_id": "H1-F0",
+            "incoming_action": "surgical_jab",
+            "spec_version": "H1-0.1",
+            "target": "torso",
+            "variant_id": "H1-C1-prepared"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 7,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_opportunity_offered",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "comparison_id": "H1-C1",
+            "fixture_id": "H1-F0",
+            "intent_clarity": "exact",
+            "prepared": true,
+            "tier": "significant",
+            "variant_id": "H1-C1-prepared"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 8,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_input_recorded",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "assisted": false,
+            "effective_timing_error": 140,
+            "profile_id": "precise",
+            "raw_timing_error": 180
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 9,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_grade_resolved",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "grade": "limited",
+            "reduction_basis_points": 2500,
+            "state_modifier_only": true
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 10,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "guard_consumed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 4,
+            "before": 8
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 11,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_modifier_applied",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 3,
+            "before": 4,
+            "grade": "limited",
+            "profile_id": "precise",
+            "reduction_basis_points": 2500,
+            "risk_class": "ordinary"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 12,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_damaged",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 42,
+            "before": 45,
+            "damage": 3,
+            "limb": "Damaged Human Torso",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 13,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_capability_recomputed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "guard_flesh_available": true,
+            "source": "right_arm",
+            "source_state": "intact"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 14,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C1-prepared"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C1",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_comparison_completed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "capability_retained": true,
+            "comparison_id": "H1-C1",
+            "source_damage": 0,
+            "target_damage": 3,
+            "variant_id": "H1-C1-prepared"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 15,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C1-prepared"
+        }
+      ],
+      "evidence_class": "OWNER_DIAGNOSTIC",
+      "final_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 69,
+        "guard_active": false,
+        "guard_flesh_available": true,
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "target_integrity": 42,
+        "target_state": "intact"
+      },
+      "fixture_id": "H1-F0",
+      "metrics": {
+        "blocking_source_damage": 0,
+        "blood_delta_during_measured_interaction": 0,
+        "capability_retained": true,
+        "disabled_reason": null,
+        "grade": "limited",
+        "opportunity_offered": true,
+        "target_damage": 3,
+        "target_damage_prevented_from_base": 5,
+        "threshold_preserved": false
+      },
+      "prior_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 69,
+        "guard_active": true,
+        "intent_clarity": "exact",
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "preparation": "guard_flesh",
+        "target_integrity": 45,
+        "target_state": "intact"
+      },
+      "request": {
+        "blocking_source_compatible": true,
+        "blocking_source_state": null,
+        "changed_condition": "guard_flesh_prepared",
+        "comparison_id": "H1-C1",
+        "high_risk_acknowledged": false,
+        "intent_clarity": "exact",
+        "invalidate_source_after_resolution": false,
+        "prepared": true,
+        "profile_id": "precise",
+        "risk_class": "ordinary",
+        "threshold_pressure": false,
+        "tier": "significant",
+        "timing_error": 180,
+        "variant_id": "H1-C1-prepared"
+      },
+      "resolution": {
+        "availability": {
+          "legal": true,
+          "reason": null
+        },
+        "effective_timing_error": 140,
+        "grade": "limited",
+        "modifier": {
+          "damage_reduction_basis_points": 2500,
+          "exposed_source": null,
+          "grade": "limited",
+          "profile_id": "precise",
+          "required_source": "right_arm",
+          "risk_class": "ordinary",
+          "source_exposure_damage": 0
+        },
+        "profile_id": "precise",
+        "raw_timing_error": 180,
+        "risk_class": "ordinary"
+      },
+      "spec_version": "H1-0.1",
+      "variant_id": "H1-C1-prepared"
+    },
+    {
+      "changed_condition": "ordinary_block",
+      "comparison_id": "H1-C3",
+      "config_version": "h1-reflex-config-0.1",
+      "deferred": [
+        "wound_class",
+        "wound_to_blood_mapping",
+        "ruined_torso_downstream_result"
+      ],
+      "events": [
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "blood_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 73,
+            "before": 85,
+            "delta": -12,
+            "reason": "Emergency graft"
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 1,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "emergency_graft",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "quality": "clean",
+            "roll": 6,
+            "slot": "right_arm",
+            "unstable": false
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 2,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_reset",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 0
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 3,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "main_action_committed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "action": "brace"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 4,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_activated",
+          "fixture_id": "H1-F0",
+          "payload": {},
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 5,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_fixture_started",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "attacking_source": "right_arm",
+            "comparison_id": "H1-C3",
+            "config_version": "h1-reflex-config-0.1",
+            "fixture_id": "H1-F0",
+            "incoming_action": "surgical_jab",
+            "spec_version": "H1-0.1",
+            "target": "torso",
+            "variant_id": "H1-C3-ordinary"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 6,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_opportunity_offered",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "comparison_id": "H1-C3",
+            "fixture_id": "H1-F0",
+            "intent_clarity": "exact",
+            "prepared": false,
+            "tier": "critical",
+            "variant_id": "H1-C3-ordinary"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 7,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_input_recorded",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "assisted": false,
+            "effective_timing_error": 346,
+            "profile_id": "precise",
+            "raw_timing_error": 346
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 8,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_grade_resolved",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "grade": "miss",
+            "reduction_basis_points": 0,
+            "state_modifier_only": true
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 9,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_damaged",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 8,
+            "damage": 8,
+            "limb": "Damaged Human Torso",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 10,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_state_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "limb": "Damaged Human Torso",
+            "new": "ruined",
+            "old": "critical",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 11,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_capability_recomputed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "guard_flesh_available": true,
+            "source": "right_arm",
+            "source_state": "intact"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 12,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-ordinary"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_comparison_completed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "capability_retained": true,
+            "comparison_id": "H1-C3",
+            "source_damage": 0,
+            "target_damage": 8,
+            "variant_id": "H1-C3-ordinary"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 13,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C3-ordinary"
+        }
+      ],
+      "evidence_class": "OWNER_DIAGNOSTIC",
+      "final_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "guard_flesh_available": true,
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - ruined"
+        },
+        "target_integrity": 0,
+        "target_state": "ruined"
+      },
+      "fixture_id": "H1-F0",
+      "metrics": {
+        "blocking_source_damage": 0,
+        "blood_delta_during_measured_interaction": 0,
+        "capability_retained": true,
+        "disabled_reason": null,
+        "grade": "miss",
+        "opportunity_offered": true,
+        "target_damage": 8,
+        "target_damage_prevented_from_base": 0,
+        "threshold_preserved": false
+      },
+      "prior_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "intent_clarity": "exact",
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - critical"
+        },
+        "preparation": "brace",
+        "target_integrity": 8,
+        "target_state": "critical"
+      },
+      "request": {
+        "blocking_source_compatible": true,
+        "blocking_source_state": null,
+        "changed_condition": "ordinary_block",
+        "comparison_id": "H1-C3",
+        "high_risk_acknowledged": false,
+        "intent_clarity": "exact",
+        "invalidate_source_after_resolution": false,
+        "prepared": false,
+        "profile_id": "precise",
+        "risk_class": "ordinary",
+        "threshold_pressure": true,
+        "tier": "critical",
+        "timing_error": 346,
+        "variant_id": "H1-C3-ordinary"
+      },
+      "resolution": {
+        "availability": {
+          "legal": true,
+          "reason": null
+        },
+        "effective_timing_error": 346,
+        "grade": "miss",
+        "modifier": {
+          "damage_reduction_basis_points": 0,
+          "exposed_source": null,
+          "grade": "miss",
+          "profile_id": "precise",
+          "required_source": "right_arm",
+          "risk_class": "ordinary",
+          "source_exposure_damage": 0
+        },
+        "profile_id": "precise",
+        "raw_timing_error": 346,
+        "risk_class": "ordinary"
+      },
+      "spec_version": "H1-0.1",
+      "variant_id": "H1-C3-ordinary"
+    },
+    {
+      "changed_condition": "disclosed_high_risk_block",
+      "comparison_id": "H1-C3",
+      "config_version": "h1-reflex-config-0.1",
+      "deferred": [
+        "wound_class",
+        "wound_to_blood_mapping",
+        "ruined_torso_downstream_result"
+      ],
+      "events": [
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "blood_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 73,
+            "before": 85,
+            "delta": -12,
+            "reason": "Emergency graft"
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 1,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "emergency_graft",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "quality": "clean",
+            "roll": 6,
+            "slot": "right_arm",
+            "unstable": false
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 2,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_reset",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 0
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 3,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "main_action_committed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "action": "brace"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 4,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_activated",
+          "fixture_id": "H1-F0",
+          "payload": {},
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 5,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_fixture_started",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "attacking_source": "right_arm",
+            "comparison_id": "H1-C3",
+            "config_version": "h1-reflex-config-0.1",
+            "fixture_id": "H1-F0",
+            "incoming_action": "surgical_jab",
+            "spec_version": "H1-0.1",
+            "target": "torso",
+            "variant_id": "H1-C3-high-risk"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 6,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_opportunity_offered",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "comparison_id": "H1-C3",
+            "fixture_id": "H1-F0",
+            "intent_clarity": "exact",
+            "prepared": false,
+            "tier": "critical",
+            "variant_id": "H1-C3-high-risk"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 7,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_risk_previewed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "acknowledged": true,
+            "damage_by_grade": {
+              "exceptional": 4,
+              "limited": 15,
+              "miss": 30,
+              "strong": 8
+            },
+            "source": "right_arm"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 8,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_input_recorded",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "assisted": false,
+            "effective_timing_error": 388,
+            "profile_id": "precise",
+            "raw_timing_error": 388
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 9,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_grade_resolved",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "grade": "miss",
+            "reduction_basis_points": 0,
+            "state_modifier_only": true
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 10,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_damaged",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 8,
+            "damage": 8,
+            "limb": "Damaged Human Torso",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 11,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_state_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "limb": "Damaged Human Torso",
+            "new": "ruined",
+            "old": "critical",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 12,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_damaged",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 30,
+            "damage": 30,
+            "limb": "Human Right Arm",
+            "reason": "Disclosed high-risk Block exposure",
+            "slot": "right_arm"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 13,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_state_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "limb": "Human Right Arm",
+            "new": "ruined",
+            "old": "intact",
+            "reason": "Disclosed high-risk Block exposure",
+            "slot": "right_arm"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 14,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_source_exposed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "damage": 30,
+            "source": "right_arm"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 15,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_capability_recomputed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "guard_flesh_available": false,
+            "source": "right_arm",
+            "source_state": "ruined"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 16,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C3-high-risk"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C3",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_comparison_completed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "capability_retained": false,
+            "comparison_id": "H1-C3",
+            "source_damage": 30,
+            "target_damage": 8,
+            "variant_id": "H1-C3-high-risk"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 17,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C3-high-risk"
+        }
+      ],
+      "evidence_class": "OWNER_DIAGNOSTIC",
+      "final_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 0,
+        "blocking_source_state": "ruined",
+        "blood": 73,
+        "guard_active": false,
+        "guard_flesh_available": false,
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - ruined (grafted)",
+          "torso": "Damaged Human Torso - ruined"
+        },
+        "target_integrity": 0,
+        "target_state": "ruined"
+      },
+      "fixture_id": "H1-F0",
+      "metrics": {
+        "blocking_source_damage": 30,
+        "blood_delta_during_measured_interaction": 0,
+        "capability_retained": false,
+        "disabled_reason": null,
+        "grade": "miss",
+        "opportunity_offered": true,
+        "target_damage": 8,
+        "target_damage_prevented_from_base": 0,
+        "threshold_preserved": false
+      },
+      "prior_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "intent_clarity": "exact",
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - critical"
+        },
+        "preparation": "brace",
+        "target_integrity": 8,
+        "target_state": "critical"
+      },
+      "request": {
+        "blocking_source_compatible": true,
+        "blocking_source_state": null,
+        "changed_condition": "disclosed_high_risk_block",
+        "comparison_id": "H1-C3",
+        "high_risk_acknowledged": true,
+        "intent_clarity": "exact",
+        "invalidate_source_after_resolution": false,
+        "prepared": false,
+        "profile_id": "precise",
+        "risk_class": "high_risk",
+        "threshold_pressure": true,
+        "tier": "critical",
+        "timing_error": 388,
+        "variant_id": "H1-C3-high-risk"
+      },
+      "resolution": {
+        "availability": {
+          "legal": true,
+          "reason": null
+        },
+        "effective_timing_error": 388,
+        "grade": "miss",
+        "modifier": {
+          "damage_reduction_basis_points": 0,
+          "exposed_source": "right_arm",
+          "grade": "miss",
+          "profile_id": "precise",
+          "required_source": "right_arm",
+          "risk_class": "high_risk",
+          "source_exposure_damage": 30
+        },
+        "profile_id": "precise",
+        "raw_timing_error": 388,
+        "risk_class": "high_risk"
+      },
+      "spec_version": "H1-0.1",
+      "variant_id": "H1-C3-high-risk"
+    },
+    {
+      "changed_condition": "precise_profile",
+      "comparison_id": "H1-C5",
+      "config_version": "h1-reflex-config-0.1",
+      "deferred": [
+        "wound_class",
+        "wound_to_blood_mapping",
+        "ruined_torso_downstream_result"
+      ],
+      "events": [
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "blood_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 73,
+            "before": 85,
+            "delta": -12,
+            "reason": "Emergency graft"
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 1,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "emergency_graft",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "quality": "clean",
+            "roll": 6,
+            "slot": "right_arm",
+            "unstable": false
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 2,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_reset",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 0
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 3,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "main_action_committed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "action": "brace"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 4,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_activated",
+          "fixture_id": "H1-F0",
+          "payload": {},
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 5,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_fixture_started",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "attacking_source": "right_arm",
+            "comparison_id": "H1-C5",
+            "config_version": "h1-reflex-config-0.1",
+            "fixture_id": "H1-F0",
+            "incoming_action": "surgical_jab",
+            "spec_version": "H1-0.1",
+            "target": "torso",
+            "variant_id": "H1-C5-precise"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 6,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_opportunity_offered",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "comparison_id": "H1-C5",
+            "fixture_id": "H1-F0",
+            "intent_clarity": "exact",
+            "prepared": false,
+            "tier": "routine",
+            "variant_id": "H1-C5-precise"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 7,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_input_recorded",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "assisted": false,
+            "effective_timing_error": 549,
+            "profile_id": "precise",
+            "raw_timing_error": 549
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 8,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_grade_resolved",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "grade": "miss",
+            "reduction_basis_points": 0,
+            "state_modifier_only": true
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 9,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_damaged",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 37,
+            "before": 45,
+            "damage": 8,
+            "limb": "Damaged Human Torso",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 10,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_capability_recomputed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "guard_flesh_available": true,
+            "source": "right_arm",
+            "source_state": "intact"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 11,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-precise"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_comparison_completed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "capability_retained": true,
+            "comparison_id": "H1-C5",
+            "source_damage": 0,
+            "target_damage": 8,
+            "variant_id": "H1-C5-precise"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 12,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C5-precise"
+        }
+      ],
+      "evidence_class": "OWNER_DIAGNOSTIC",
+      "final_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "guard_flesh_available": true,
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "target_integrity": 37,
+        "target_state": "intact"
+      },
+      "fixture_id": "H1-F0",
+      "metrics": {
+        "blocking_source_damage": 0,
+        "blood_delta_during_measured_interaction": 0,
+        "capability_retained": true,
+        "disabled_reason": null,
+        "grade": "miss",
+        "opportunity_offered": true,
+        "target_damage": 8,
+        "target_damage_prevented_from_base": 0,
+        "threshold_preserved": false
+      },
+      "prior_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "intent_clarity": "exact",
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "preparation": "brace",
+        "target_integrity": 45,
+        "target_state": "intact"
+      },
+      "request": {
+        "blocking_source_compatible": true,
+        "blocking_source_state": null,
+        "changed_condition": "precise_profile",
+        "comparison_id": "H1-C5",
+        "high_risk_acknowledged": false,
+        "intent_clarity": "exact",
+        "invalidate_source_after_resolution": false,
+        "prepared": false,
+        "profile_id": "precise",
+        "risk_class": "ordinary",
+        "threshold_pressure": false,
+        "tier": "routine",
+        "timing_error": 549,
+        "variant_id": "H1-C5-precise"
+      },
+      "resolution": {
+        "availability": {
+          "legal": true,
+          "reason": null
+        },
+        "effective_timing_error": 549,
+        "grade": "miss",
+        "modifier": {
+          "damage_reduction_basis_points": 0,
+          "exposed_source": null,
+          "grade": "miss",
+          "profile_id": "precise",
+          "required_source": "right_arm",
+          "risk_class": "ordinary",
+          "source_exposure_damage": 0
+        },
+        "profile_id": "precise",
+        "raw_timing_error": 549,
+        "risk_class": "ordinary"
+      },
+      "spec_version": "H1-0.1",
+      "variant_id": "H1-C5-precise"
+    },
+    {
+      "changed_condition": "assisted_profile",
+      "comparison_id": "H1-C5",
+      "config_version": "h1-reflex-config-0.1",
+      "deferred": [
+        "wound_class",
+        "wound_to_blood_mapping",
+        "ruined_torso_downstream_result"
+      ],
+      "events": [
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "blood_changed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 73,
+            "before": 85,
+            "delta": -12,
+            "reason": "Emergency graft"
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 1,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "emergency_graft",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "quality": "clean",
+            "roll": 6,
+            "slot": "right_arm",
+            "unstable": false
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 2,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_reset",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 0,
+            "before": 0
+          },
+          "phase": "start",
+          "round_number": 0,
+          "sequence": 3,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "main_action_committed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "action": "brace"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 4,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "brace_activated",
+          "fixture_id": "H1-F0",
+          "payload": {},
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 5,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_fixture_started",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "attacking_source": "right_arm",
+            "comparison_id": "H1-C5",
+            "config_version": "h1-reflex-config-0.1",
+            "fixture_id": "H1-F0",
+            "incoming_action": "surgical_jab",
+            "spec_version": "H1-0.1",
+            "target": "torso",
+            "variant_id": "H1-C5-assisted"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 6,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_opportunity_offered",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "comparison_id": "H1-C5",
+            "fixture_id": "H1-F0",
+            "intent_clarity": "exact",
+            "prepared": false,
+            "tier": "routine",
+            "variant_id": "H1-C5-assisted"
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 7,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_input_recorded",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "assisted": true,
+            "effective_timing_error": 424,
+            "profile_id": "assisted",
+            "raw_timing_error": 424
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 8,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_grade_resolved",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "grade": "miss",
+            "reduction_basis_points": 0,
+            "state_modifier_only": true
+          },
+          "phase": "main",
+          "round_number": 1,
+          "sequence": 9,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "limb_damaged",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "after": 37,
+            "before": 45,
+            "damage": 8,
+            "limb": "Damaged Human Torso",
+            "reason": "Enemy attack",
+            "slot": "torso"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 10,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "reflex_capability_recomputed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "guard_flesh_available": true,
+            "source": "right_arm",
+            "source_state": "intact"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 11,
+          "spec_version": "H1-0.1",
+          "target_id": null,
+          "variant_id": "H1-C5-assisted"
+        },
+        {
+          "actor_id": "s001",
+          "comparison_id": "H1-C5",
+          "config_version": "h1-reflex-config-0.1",
+          "event_type": "h1_comparison_completed",
+          "fixture_id": "H1-F0",
+          "payload": {
+            "capability_retained": true,
+            "comparison_id": "H1-C5",
+            "source_damage": 0,
+            "target_damage": 8,
+            "variant_id": "H1-C5-assisted"
+          },
+          "phase": "enemy",
+          "round_number": 1,
+          "sequence": 12,
+          "spec_version": "H1-0.1",
+          "target_id": "anna",
+          "variant_id": "H1-C5-assisted"
+        }
+      ],
+      "evidence_class": "OWNER_DIAGNOSTIC",
+      "final_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "guard_flesh_available": true,
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "target_integrity": 37,
+        "target_state": "intact"
+      },
+      "fixture_id": "H1-F0",
+      "metrics": {
+        "blocking_source_damage": 0,
+        "blood_delta_during_measured_interaction": 0,
+        "capability_retained": true,
+        "disabled_reason": null,
+        "grade": "miss",
+        "opportunity_offered": true,
+        "target_damage": 8,
+        "target_damage_prevented_from_base": 0,
+        "threshold_preserved": false
+      },
+      "prior_state": {
+        "anna_body": {
+          "core": "Leaking Heart - intact",
+          "head": "Dazed Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Human Legs - intact",
+          "right_arm": "Crude Graft Arm - intact",
+          "torso": "Stitched Torso - intact"
+        },
+        "blocking_source_integrity": 30,
+        "blocking_source_state": "intact",
+        "blood": 73,
+        "guard_active": false,
+        "intent_clarity": "exact",
+        "player_body": {
+          "core": "Human Heart - intact",
+          "head": "Human Head - intact",
+          "left_arm": "Human Left Arm - intact",
+          "legs": "Weak Human Legs - intact",
+          "right_arm": "Human Right Arm - intact (grafted)",
+          "torso": "Damaged Human Torso - intact"
+        },
+        "preparation": "brace",
+        "target_integrity": 45,
+        "target_state": "intact"
+      },
+      "request": {
+        "blocking_source_compatible": true,
+        "blocking_source_state": null,
+        "changed_condition": "assisted_profile",
+        "comparison_id": "H1-C5",
+        "high_risk_acknowledged": false,
+        "intent_clarity": "exact",
+        "invalidate_source_after_resolution": false,
+        "prepared": false,
+        "profile_id": "assisted",
+        "risk_class": "ordinary",
+        "threshold_pressure": false,
+        "tier": "routine",
+        "timing_error": 424,
+        "variant_id": "H1-C5-assisted"
+      },
+      "resolution": {
+        "availability": {
+          "legal": true,
+          "reason": null
+        },
+        "effective_timing_error": 424,
+        "grade": "miss",
+        "modifier": {
+          "damage_reduction_basis_points": 0,
+          "exposed_source": null,
+          "grade": "miss",
+          "profile_id": "assisted",
+          "required_source": "right_arm",
+          "risk_class": "ordinary",
+          "source_exposure_damage": 0
+        },
+        "profile_id": "assisted",
+        "raw_timing_error": 424,
+        "risk_class": "ordinary"
+      },
+      "spec_version": "H1-0.1",
+      "variant_id": "H1-C5-assisted"
+    }
+  ],
+  "session_metadata": {
+    "consent_confirmed": true,
+    "facilitator_deviations": [],
+    "input_mode": "terminal_timing_capture",
+    "participant_identity_collected": false,
+    "selected_comparisons": [
+      "H1-C1",
+      "H1-C3",
+      "H1-C5"
+    ],
+    "session_id": "OWNER-H1-DIAG-004"
+  }
+}

@@ -6,7 +6,8 @@ Game att2 is a single-player PC hell-loop limb-grafting roguelike/roguelite conc
 Its current core direction combines strategic turn-based duels with bounded reflexive
 execution moments. The player damages, extracts, grafts, stabilizes, and integrates
 body parts while spending Blood as health, currency, and ability fuel. The reflex layer
-is design-approved but not yet implemented in the simulator.
+is represented by an isolated, deterministic H1 research runner; it is not part of the
+seven approved scenarios or the playable campaign.
 
 > You are not collecting weapons. You are becoming the weapon, piece by piece, using your own blood as money.
 
@@ -14,8 +15,8 @@ This repository is currently a **design-research and deterministic Python simula
 
 ## Current status
 
-Evidence baseline: **2026-07-23**. Rules/CLI/documentation alignment rechecked:
-**2026-08-01**.
+Evidence baseline: **2026-07-23**. H1 implementation and repository verification:
+**2026-08-12**.
 
 - Current maturity: pre-production rules validation / simulator stage.
 - Approved digital scope: the narrow Python simulator for S-001 → Jeff → emergency graft → Anna → Grafting Table.
@@ -24,7 +25,12 @@ Evidence baseline: **2026-07-23**. Rules/CLI/documentation alignment rechecked:
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
 - Unity graybox: **blocked**.
-- Latest local verification: **186 tests passed**, **87% line coverage**, Ruff passed, and strict mypy passed.
+- Latest local verification: **242 tests passed**, **87% line coverage**, Ruff passed,
+  and strict mypy passed across 28 source files.
+- H1 hybrid-combat research slice: implemented and deterministically replayable across
+  the six approved paired comparisons; this establishes implementation fidelity only.
+- H1 owner diagnostic: completed, but the fixed one-second terminal task was rejected
+  as an inadequate reflex-system test; interaction-family revision is now required.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
@@ -40,9 +46,17 @@ The historical paper result of 37 Blood is preserved as evidence but is not an a
 
 For current document status and navigation, read [docs/README.md](docs/README.md).
 New core-gameplay conversations should start from
-[docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md](docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md).
+[docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md](docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md),
+then use [docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md](docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md)
+for the owner-approved, documentation-only H1 implementation-planning contract. The
+owner-approved bounded execution plan is
+[docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md](docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md). Its
+verified result is
+[docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md](docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md).
 The detailed unresolved-rule register remains
 [docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md](docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md).
+The owner-directed reflex-family proposal and revised diagnostic path are in
+[docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md](docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md).
 
 ## Vision and player fantasy
 
@@ -175,8 +189,12 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 12. `docs/10_CODEX_RETURN_CONTRACT.md`
 13. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`
 14. `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`
-15. `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`
-16. `docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`
+15. `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`
+16. `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`
+17. `docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`
+18. `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`
+19. `docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`
+20. `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -274,11 +292,35 @@ python -m game_att2_sim.play_cli --phase-1 --seed 42 --script examples/play_cli_
 
 Current motivation and outcome behavior is recorded in
 `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`. The hybrid core-gameplay
-direction and compressed owner-decision gate are in
-`docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; detailed subordinate
+direction and resolved owner decisions are in
+`docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; the smallest testable H1
+research contract is `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`, and its bounded
+code/test plan is `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`. The plan is approved for
+execution and its verified implementation result is
+`docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`. Detailed subordinate
 combat, movement, defense, wound, and negotiation dependencies remain in
 `docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`. Completed CLI alignment reports are
 preserved under `docs/archive/implementation_reports/`.
+
+## Run the isolated H1 research slice
+
+H1 reuses the post-Jeff player and Anna's Surgical Jab in a controlled research
+fixture. It does not add an eighth approved scenario or change the playable campaign.
+
+```powershell
+python -m game_att2_sim.h1_cli `
+  --all-comparisons `
+  --script examples/h1_scripted_comparisons.json `
+  --format markdown
+```
+
+Use `--format json` for the complete event evidence. `--comparison H1-C1` through
+`H1-C6` selects one pair, and `--profile precise|assisted` overrides the input profile
+outside the profile comparison. Running without a script is explicitly
+`OWNER_DIAGNOSTIC`; it cannot establish fun, balance, comprehension, or accessibility.
+
+The research-only provisional values live in `config/h1_reflex_v0_1.yaml` and do not
+enter the normal configuration loader.
 
 ## Run Interactive Research Shell v0.1
 
@@ -326,15 +368,16 @@ python -m mypy src
 python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 ```
 
-Current verification on 2026-08-01:
+Current verification on 2026-08-12:
 
 ```text
-pytest: 186 passed
+pytest: 242 passed
 coverage: 87%
 ruff: all checks passed
-mypy: success, no issues in 24 source files
+mypy: success, no issues in 28 source files
 mini_campaign seed 42: completed, 25 Blood
 playable campaign seed 42: completed, 36 Blood
+H1 scripted comparisons: 12 variants, byte-identical replay
 ```
 
 The historical repository/CLI readiness record is preserved under
@@ -378,6 +421,10 @@ The automated suite passes, but passing tests do not erase known gaps:
   trade-off against manual Brace/Braced Legs/Guard Flesh remain open.
 - **P1 — combat structure:** movement, reachability, and final action economy are not
   defined beyond the current survey harness.
+- **P1 — H1 experience evidence:** the automated Block comparisons pass fidelity,
+  but the owner diagnostic exposed an inadequate single-input instrument. Provisional
+  timing/mitigation/exposure values, interaction families, and prompt cadence have no
+  valid external human evidence.
 - **P1 — resolution:** generalized mental defeat and the multi-round negotiation
   minigame remain design-approved directions without complete runtime contracts.
 - **Documentation:** completed and superseded reports are isolated under
@@ -404,17 +451,17 @@ Known Git history:
 | 2026-07-18 19:37 +03:00 | Systemic causal design skill added |
 | 2026-07-18 20:11 +03:00 | Encounter 3 paper requirements reconciled |
 | 2026-07-23 | Repository re-audited; current project report and README consolidated |
+| 2026-08-11 | Four H1 owner questions resolved; bounded specification and execution plan approved |
+| 2026-08-12 | Isolated H1 research implementation passed deterministic fidelity verification |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 
 ## Recommended next step
 
-The evidence-backed recommendation is:
-
-1. review the new authoritative simulator results artifact;
-2. obtain owner answers to the remaining consolidated questions in the current project report;
-3. conduct eight valid P01–P08 moderated human paper sessions;
-4. review evidence before approving any Encounter 3 runtime work or Unity proposal.
+Resolve the lightweight-Stamina boundary in
+`docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`: whether one
+visible readiness resource should replace the standalone Block-pressure state, with
+repeated Block receiving a stronger family-specific penalty.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
 

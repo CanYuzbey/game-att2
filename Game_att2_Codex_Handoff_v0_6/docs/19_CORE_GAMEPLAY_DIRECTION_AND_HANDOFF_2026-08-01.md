@@ -1,10 +1,42 @@
 # Game att2 — Core Gameplay Direction and New-Conversation Handoff
 
-Status date: 2026-08-01
+Status date: 2026-08-12
 
-Status: owner-directed core-gameplay direction plus reversible prototype defaults.
-This document is a design handoff, not runtime approval or evidence that the loop is
-fun. Exact timing, damage, wound, and balance values require prototyping and playtest.
+Status: owner-resolved core-gameplay direction plus reversible prototype defaults.
+The four H1 owner questions were resolved on 2026-08-11 and are specified in
+`20_H1_HYBRID_COMBAT_SPEC_v0_1.md`, which the owner approved for implementation
+planning on the same date. The separate bounded execution approval is recorded in
+`21_H1_IMPLEMENTATION_PLAN_v0_1.md`, and the verified 2026-08-12 fidelity result is in
+`22_H1_IMPLEMENTATION_RESULTS_v0_1.md`. This implementation is not evidence that the
+loop is fun. Exact timing, damage, wound, and balance values remain research variables
+requiring human playtest.
+
+The 2026-08-12 owner diagnostic found that the fixed one-second terminal task is not
+an adequate reflex-system test. The required interaction-family separation, current
+timing-outcome explanation, revised diagnostic requirements, and optimized next
+questions are recorded in
+`23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`. Its taxonomy and
+exact mappings remain proposals; no broader runtime gate is open.
+
+The first question from that revision is resolved: the rival's attack normally
+defines compatible response/input routes, the expected route, and their baseline
+difficulty, while the player may direct the input type by choosing another legal
+route. Some attacks intentionally have easy responses and others hard responses.
+
+The timing shape is also resolved: routine attacks use a symmetric early/late curve
+for learnability, while specifically defined harder attacks may use different visible
+early and late state consequences.
+
+State pressure is also resolved at the directional level: repeated Block use is the
+primary cause of shorter later Block opportunities, low Blood visibly amplifies that
+pressure, and explicit body impairments separately alter legality or effectiveness.
+The exact accumulation and reset rule remains open.
+
+The owner has proposed evaluating a lightweight shared Stamina/readiness system as a
+possible generalization of repeated-Block pressure. It would make repeated physical
+actions less effective, with a stronger repeated-Block effect, while preserving Blood
+as the core health/currency/fuel resource. This is `DEFERRED`: H1 remains limited to
+its current isolated Block fixture and no Stamina runtime gate is open.
 
 ## 1. Why this document exists
 
@@ -249,20 +281,24 @@ Do not reopen these as independent owner interviews unless testing finds a P0 co
 Treat these as data/configuration, UX implementation, or balance-test variables. Surface
 them to the owner only when a result would materially change the target experience.
 
-## 6. Only four owner-level questions remain for the next conversation
+## 6. Four owner-level questions — resolved 2026-08-11
 
-1. **Skill balance:** Should strategy remain dominant with reflex as meaningful
-   mitigation, or should high reflex skill be capable of overcoming a substantially bad
-   strategic plan?
-2. **Reflex frequency:** Should almost every incoming attack offer a reflex opportunity,
-   or only clearly telegraphed/heavy/special attacks?
-3. **Failure severity:** Should a missed reflex merely take the original consequence,
-   or may some committed responses create additional exposure?
-4. **Body-build proof:** Which existing second pressure should explicitly test the
-   capability gained or lost in the first encounter?
+1. **Skill balance:** Strategy leads. Reflex skill usually makes modest improvements,
+   while exceptional execution may rarely rescue an extreme but still legally
+   recoverable situation. Reflexes cannot repeatedly erase a structurally bad plan.
+2. **Reflex frequency:** Reflexes are broadly present in readable physical
+   interactions. Most have small effects, prepared or strongly telegraphed moments may
+   have material effects, and life-changing effects are rare.
+3. **Failure severity:** Ordinary misses apply only the original consequence.
+   Additional exposure is legal only for a clearly disclosed and voluntarily selected
+   high-risk response.
+4. **Body-build proof:** Jeff's grafted Right Arm is both the strongest defensive
+   response source against Anna and a body asset put at risk by using it. Damage or
+   loss weakens or removes the response.
 
-All other current questions should be answered beneath these decisions or deferred
-until the first hybrid prototype produces evidence.
+The smallest testable contract derived from these decisions is
+`20_H1_HYBRID_COMBAT_SPEC_v0_1.md`. All other current questions remain subordinate or
+deferred until H1 produces evidence.
 
 ## 7. First hybrid prototype — H1
 
@@ -343,19 +379,25 @@ restore broken sources, or bypass the shared consequence loop.
 | Defense dominates offense | Prepared defense consumes Main tempo; unprepared response is weaker/riskier |
 | Motor skill blocks the game | Timing profiles must support configurable tolerance and non-single-channel telegraphs |
 | System explodes into exceptions | One reflex-event contract; add response modules only after Block passes |
-| More questions replace fewer | Escalate only the four owner-level questions in section 6 |
+| More questions replace fewer | Treat section 6 as resolved; escalate only a P0 contradiction found by H1 |
 
 ## 10. New-conversation starting instruction
 
-Use this exact repository document as the handoff source. Begin with the four owner
-questions in section 6, then design H1. Do not restart the archived question-by-question
-interview, do not implement exact numeric balance before the hybrid cadence is approved,
-and do not expand content or presentation.
+Use this document for macro direction and
+`20_H1_HYBRID_COMBAT_SPEC_v0_1.md` for the research contract, then read
+`22_H1_IMPLEMENTATION_RESULTS_v0_1.md` for the current evidence. The four owner
+questions in section 6 are resolved and the bounded fidelity implementation is
+complete. Use `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` for the
+owner-directed diagnostic correction and the next question order. Do not restart the archived question-by-question interview, promote
+provisional values before human testing, or expand content or presentation.
 
 Suggested opening request:
 
-> Read `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` and the mandatory
-> repository skill files. Treat its owner-approved direction as binding and its
-> prototype defaults as reversible. Help me resolve only the four owner-level questions,
-> then produce the smallest testable H1 hybrid-combat specification. Do not reopen minor
-> questions unless one creates a P0 contradiction.
+> Read `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`,
+> `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`,
+> `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`,
+> `docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`, and the mandatory repository skill files.
+> Treat the four owner decisions as resolved, the H1 values as configurable research
+> variables, and the bounded fidelity implementation as complete. Review its evidence
+> limits before proposing another gate; do not reopen minor questions unless one
+> creates a P0 contradiction.
