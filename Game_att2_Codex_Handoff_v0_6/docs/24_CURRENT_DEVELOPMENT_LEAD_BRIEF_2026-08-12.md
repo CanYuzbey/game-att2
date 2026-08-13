@@ -14,9 +14,9 @@ valid external evidence for fun, comprehension, accessibility, fairness, balance
 production readiness.
 
 The current product task is not story production, final UI, engine selection, or a
-small content roster. It is to turn the completed H1 Block fidelity fixture into a
-bounded visual diagnostic that can test one readable combat interaction without
-changing the approved campaign or declaring final combat rules.
+small content roster. The bounded visual diagnostic is now implemented and
+fidelity-verified without changing the approved campaign or declaring final combat
+rules. The active gate is whether to open its counterbalanced owner diagnostic.
 
 ## 2. Owner decision recorded on 2026-08-12
 
@@ -33,9 +33,10 @@ The owner approved the shared-readiness design method:
 - this is approval to plan and compare the model, not approval for runtime Stamina,
   final values, campaign integration, or a production mechanic.
 
-The bounded implementation plan is proposed in
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. That plan still requires explicit
-owner approval before implementation.
+The owner approved VL-WP1 through VL-WP3 of
+`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` on 2026-08-12. Their verified results
+are in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was not
+opened by that approval.
 
 ## 3. Verified repository baseline
 
@@ -43,13 +44,15 @@ Fresh local verification on 2026-08-12:
 
 | Evidence | Result | What it supports |
 |---|---|---|
-| Automated tests | 242 passed | Current implementation fidelity |
+| Automated tests | 261 passed | Current implementation fidelity |
 | Coverage | 87% line coverage | Broad automated branch exercise, not product quality |
 | Ruff | Passed | Static style/lint health |
-| Strict mypy | Passed across 28 source files | Current type-contract health |
+| Strict mypy | Passed across 32 source files | Current type-contract health |
 | Seven scenarios, seed 42 | Passed; mini-campaign ends at 25 Blood | Deterministic scenario behavior |
 | Playable campaign replay, seed 42 | Completed at 36 Blood | Current CLI path remains usable |
 | H1 scripted comparisons | Deterministic | H1 fidelity and causal traceability |
+| Visual-lab scripted comparisons | 20 variants, byte-identical | VL-WP1 through VL-WP3 fidelity only |
+| Local browser inspection | Passed with no console warnings/errors | Visual control and risk-gate fidelity only |
 
 The five required 100-seed strategy batches remain diagnostic only. Four scripted
 strategies completed 44% of runs and Blood Hoarder completed 0%, with no deaths. This
@@ -66,11 +69,11 @@ isolated counterfactual overlays for actual comparison work.
 |---|---|---|
 | Core identity | Locked strongly enough to protect | Preserve Body as Build and Blood as volatile bankroll |
 | Simulator engineering | Fidelity gate passed with maintenance debt | Change only for an approved research requirement |
-| Hybrid combat | Direction approved; H1 Block fixture complete | Visual diagnostic plan approval |
+| Hybrid combat | Direction approved; H1 fixture and visual-lab fidelity complete | Owner diagnostic approval |
 | Human evidence | Owner diagnostics only; no valid external pilot | Separate consented pilot after owner diagnostic |
 | Combat systems | Wounds, movement, defense balance, recovery, and resolution incomplete | Make packages timely from lab evidence |
 | Story and characters | Theme and encounter functions exist; canon remains thin | Wait until combat and information grammar stabilize |
-| UI/UX | Pillar 5 and information-layer requirements exist | Build only the research lab, not final UI |
+| UI/UX | Research lab implements the narrow information contract | Diagnose it; do not treat it as final UI |
 | Art/audio | Directional inspiration only | No production asset gate |
 | Content | S-001, Jeff, Anna, and Table only in runtime | No roster or item expansion |
 | Encounter 3 | Moderated paper packet prepared; P01-P08 pending | Runtime remains blocked |
@@ -80,8 +83,8 @@ isolated counterfactual overlays for actual comparison work.
 
 ```text
 shared-readiness boundary - RESOLVED FOR RESEARCH PLANNING
--> owner approval of the bounded visual-lab plan
--> isolated local implementation-fidelity check
+-> bounded visual-lab plan approval - COMPLETE
+-> isolated local implementation-fidelity check - COMPLETE
 -> repeated, counterbalanced owner diagnostic
 -> separately approved external pilot
 -> evidence-led wound / movement / defense / recovery packages
@@ -133,11 +136,11 @@ design around unresolved rules.
 - Generated render/cache material belongs under ignored `tmp/` and must not be
   committed.
 - Local deterministic development must remain functional without plugins.
-- The installed visualization capability is the preferred future lab surface after
-  plan approval; no external participant or project data should be transferred.
+- The isolated local visualization is implemented; no external participant or project
+  data is transferred.
 
 ## 9. Current owner gate
 
-Approve, revise, or reject
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Approval would open only the local
-lab implementation described there.
+Review `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md` and approve, revise,
+or reject VL-WP4. Approval would open only the local counterbalanced owner diagnostic;
+it would not approve an external pilot or production integration.

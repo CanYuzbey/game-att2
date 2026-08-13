@@ -40,10 +40,11 @@ a separate legality/effectiveness cause. Blood remains health/currency/fuel.
 
 Exact values, recovery, final terminology, runtime integration, and experience claims
 remain open. This decision does not approve a production Stamina system or replace the
-current campaign rules. The proposed implementation boundary, comparison cases,
-evidence fields, and rollback are in
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; that plan still requires explicit
-owner approval before work begins.
+current campaign rules. The owner approved only VL-WP1 through VL-WP3 in
+`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; the isolated implementation and its
+fidelity evidence are complete in
+`26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 owner diagnostics
+and any external pilot remain separate open gates.
 
 ## 2026-08-11 owner decision: H1 skill, frequency, failure, and body-build proof
 

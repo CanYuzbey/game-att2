@@ -25,16 +25,16 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
 - Unity graybox: **blocked**.
-- Latest local verification: **242 tests passed**, **87% line coverage**, Ruff passed,
-  and strict mypy passed across 28 source files.
+- Latest local verification: **261 tests passed**, **87% source-only line coverage**,
+  Ruff passed, and strict mypy passed across 32 source files.
 - H1 hybrid-combat research slice: implemented and deterministically replayable across
   the six approved paired comparisons; this establishes implementation fidelity only.
 - H1 owner diagnostic: completed, but the fixed one-second terminal task was rejected
   as an inadequate reflex-system test; interaction-family revision is now required.
-- Shared-readiness boundary: owner-approved for bounded visual-lab research planning.
-  One visible general readiness resource replaces a separate Block-pressure meter in
-  the research hypothesis; repeated Block receives stronger family-specific strain.
-- Current product gate: approve or revise the bounded visual interaction-lab plan.
+- Shared-readiness visual lab: VL-WP1 through VL-WP3 are owner-approved, implemented,
+  and fidelity-verified. The research hypothesis uses one visible readiness resource
+  and stronger family-specific repeated-Block strain; all values remain provisional.
+- Current product gate: approve, revise, or reject the VL-WP4 owner diagnostic.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
@@ -63,8 +63,15 @@ The owner-directed reflex-family proposal and revised diagnostic path are in
 [docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md](docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md).
 The current production view is
 [docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md](docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md),
-and the proposed next implementation contract is
-[docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md](docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md).
+the approved lab contract is
+[docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md](docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md),
+and its verified implementation record is
+[docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md](docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md).
+
+The owner-approved local Block lab is operated from
+[research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
+from campaign configuration and does not open the owner-diagnostic or external-pilot
+gates by itself.
 
 ## Vision and player fantasy
 
@@ -205,6 +212,7 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 20. `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`
 21. `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`
 22. `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`
+23. `docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -332,6 +340,38 @@ outside the profile comparison. Running without a script is explicitly
 The research-only provisional values live in `config/h1_reflex_v0_1.yaml` and do not
 enter the normal configuration loader.
 
+## Run the bounded visual interaction lab
+
+Generate the isolated local fragment or replay all twenty deterministic variants:
+
+```powershell
+python -m game_att2_sim.visual_lab_cli --page --output visual-lab.html
+python -m game_att2_sim.visual_lab_cli `
+  --script examples/visual_lab_scripted_comparisons.json `
+  --all-comparisons `
+  --format json
+```
+
+The fragment performs no network request and refuses to overwrite an existing output.
+Its values are research-only. Operation, evidence boundaries, and the separately gated
+owner diagnostic are documented in `research/visual_lab/README.md`.
+
+## Run the plain-language movement demo
+
+The disposable browser demo is intentionally separate from the simulator and research
+lab. It teaches only one thing: press Block when Anna's blue Jab reaches the red line.
+Double-click `demo/start-demo.bat` to open it immediately; no install is needed.
+
+Optional local-server mode:
+
+```powershell
+npm install
+npm.cmd run demo
+```
+
+Open the local address printed by the command. Its setup and boundary are in
+`demo/README.md`.
+
 ## Run Interactive Research Shell v0.1
 
 The shell is limited to S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table.
@@ -381,13 +421,14 @@ python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 Current verification on 2026-08-12:
 
 ```text
-pytest: 242 passed
+pytest: 261 passed
 coverage: 87%
 ruff: all checks passed
-mypy: success, no issues in 28 source files
+mypy: success, no issues in 32 source files
 mini_campaign seed 42: completed, 25 Blood
 playable campaign seed 42: completed, 36 Blood
 H1 scripted comparisons: 12 variants, byte-identical replay
+visual-lab scripted comparisons: 20 variants, byte-identical replay
 ```
 
 The historical repository/CLI readiness record is preserved under
@@ -468,10 +509,10 @@ These timestamps are repository events, not complete labor-hour records. No auth
 
 ## Recommended next step
 
-Review and explicitly approve, revise, or reject
-`docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Approval opens only its isolated
-local implementation-fidelity work; it does not open story, final UI, content,
-Encounter 3 runtime, or engine production.
+Review the verified lab and explicitly approve, revise, or reject VL-WP4 in
+`docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. Approval opens only
+the counterbalanced local owner diagnostic; it does not open story, final UI, content,
+an external pilot, Encounter 3 runtime, or engine production.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
 

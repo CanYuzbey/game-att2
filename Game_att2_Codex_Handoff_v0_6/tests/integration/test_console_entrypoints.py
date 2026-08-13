@@ -62,6 +62,17 @@ def test_research_module_entrypoint_replays_the_example_sequence() -> None:
     assert "Outcome: COMPLETED" in result.stdout
 
 
+def test_visual_lab_module_entrypoint_replays_all_comparisons() -> None:
+    result = run_module(
+        "game_att2_sim.visual_lab_cli",
+        "--script",
+        str(PROJECT_ROOT / "examples" / "visual_lab_scripted_comparisons.json"),
+        "--all-comparisons",
+    )
+    assert result.returncode == 0
+    assert len(json.loads(result.stdout)["runs"]) == 20
+
+
 def test_entrypoint_input_error_is_clean_and_nonzero() -> None:
     result = run_module("game_att2_sim.play_cli", "--round-limit", "0")
     assert result.returncode == 2

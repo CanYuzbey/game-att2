@@ -1,0 +1,74 @@
+schema_version: "visual-lab-config-0.1"
+plan_version: "VL-0.1"
+implementation_status: research_only
+provisional_label: PROVISIONAL_VISUAL_LAB_ONLY
+
+fixture:
+  fixture_id: H1-F0
+  incoming_action: surgical_jab
+  attacker_id: anna
+  attacker_source: right_arm
+  target: torso
+  blocking_source: right_arm
+  guard_action: guard_flesh
+  base_damage: 8
+  blocking_source_integrity: 30
+  normal_blood: 65
+  low_blood: 18
+
+telegraph:
+  duration_ms: 1600
+  contact_ms: 1200
+  practice_attempts_required: 2
+  recorded_order: [a, b, b, a]
+
+readiness:
+  maximum: 100
+  bands:
+    - {id: ready, minimum: 61}
+    - {id: strained, minimum: 31}
+    - {id: exhausted, minimum: 0}
+  block_cost: 18
+  repeated_block_extra_cost: 8
+  low_blood_threshold: 20
+  low_blood_cost_multiplier_basis_points: 12500
+  modest_recovery: 12
+  pressure_break_recovery: 35
+  menu_item_recovery: 0
+
+timing:
+  profiles:
+    precise:
+      assisted: false
+      bands:
+        - {grade: exceptional, max_absolute_offset_ms: 45}
+        - {grade: strong, max_absolute_offset_ms: 100}
+        - {grade: limited, max_absolute_offset_ms: 180}
+        - {grade: miss, max_absolute_offset_ms: 1000}
+    assisted:
+      assisted: true
+      bands:
+        - {grade: exceptional, max_absolute_offset_ms: 90}
+        - {grade: strong, max_absolute_offset_ms: 180}
+        - {grade: limited, max_absolute_offset_ms: 330}
+        - {grade: miss, max_absolute_offset_ms: 1400}
+  prepared_tolerance_bonus_ms: 45
+  vague_intent_penalty_ms: 70
+  repeated_block_penalty_ms: 25
+  low_blood_penalty_ms: 20
+  readiness_band_penalty_ms:
+    ready: 0
+    strained: 30
+    exhausted: 70
+
+mitigation_basis_points:
+  miss: 0
+  limited: 1500
+  strong: 3000
+  exceptional: 5000
+
+high_risk_exposure_damage:
+  miss: 30
+  limited: 15
+  strong: 8
+  exceptional: 4

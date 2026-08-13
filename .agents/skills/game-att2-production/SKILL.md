@@ -1,6 +1,6 @@
 ---
 name: game-att2-production
-description: Lead, audit, design, implement, test, document, or research Game att2 and its deterministic Python simulator. Use for project status, production planning, requirements, combat rules, YAML configuration, simulator code or CLI, tests, evidence reports, playtest materials, skill/plugin routing, production gates, the H1 hybrid-combat fixture, the proposed visual interaction lab, or cross-discipline recommendations. Enforce source precedence, state-derived causality, deterministic evidence, scope locks, and the Codex return contract; do not treat this skill as approval for new runtime content, Encounter 3 implementation, Unity, or product claims.
+description: Lead, audit, design, implement, test, document, or research Game att2 and its deterministic Python simulator. Use for project status, production planning, requirements, combat rules, YAML configuration, simulator code or CLI, tests, evidence reports, playtest materials, skill/plugin routing, production gates, the H1 hybrid-combat fixture, the bounded visual interaction lab, or cross-discipline recommendations. Enforce source precedence, state-derived causality, deterministic evidence, scope locks, and the Codex return contract; do not treat this skill as approval for new runtime content, Encounter 3 implementation, Unity, or product claims.
 ---
 
 # Game att2 Production
@@ -35,7 +35,7 @@ Choose one lane before planning:
 - **Simulator maintenance:** preserve approved behavior and add a requirement-to-test trace.
 - **Approved simulator change:** confirm authority, implement the smallest reversible change, and update tests/config/docs together.
 - **Design proposal:** label proposals and alternatives; do not write them into runtime as approved rules.
-- **H1 and interaction-lab research:** read active documents 19 through 25 in order. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. The current owner gate is approval of the bounded visual-lab plan; do not extend H1 or build the lab before that plan is explicitly approved.
+- **H1 and interaction-lab research:** read active documents 19 through 26 in order. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. The current owner gate is approval of the counterbalanced VL-WP4 owner diagnostic; do not open that diagnostic, an external pilot, or production integration without its separate approval.
 - **Encounter 3 paper research:** read `Game_att2_Codex_Handoff_v0_6/docs/encounter_3/README.md` and its ordered packet; keep all work paper-only unless a separate runtime gate is explicitly approved.
 - **Out-of-scope request:** identify the missing approval and offer the smallest in-scope research or specification step.
 
@@ -63,7 +63,7 @@ Read `Game_att2_Codex_Handoff_v0_6/docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_COD
 
 - Keep the approved digital scope at S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table unless the owner explicitly opens another gate.
 - Keep Encounter 3 and the Warden out of runtime source, runtime config, production content, and engine work.
-- Keep Unity, final presentation, full wounds, active Cover It behavior, generalized mental defeat, multi-round negotiation, movement, broader reflex families, and the visual interaction lab unimplemented until their documented gates pass. Preserve the existing isolated H1 fidelity runner without presenting it as production combat.
+- Keep Unity, final presentation, full wounds, active Cover It behavior, generalized mental defeat, multi-round negotiation, movement, and broader reflex families unimplemented until their documented gates pass. Keep the implemented visual interaction lab isolated and provisional. Preserve the existing H1 and visual-lab fidelity runners without presenting either as production combat.
 - Do not silently change costs, probabilities, thresholds, meanings, encounter order, rewards, or product identity.
 - Resolve a purely technical ambiguity only when the interpretation is reversible and cannot alter player experience. Otherwise record one focused owner question and mark the affected link `DEFERRED`.
 - Add no runtime dependency without explicit justification and approval.
@@ -116,8 +116,8 @@ as the current cross-discipline status and critical path, after the authoritativ
 order. Keep only one product gate in progress:
 
 ```text
-owner approval of bounded visual-lab plan
--> local implementation-fidelity check
+bounded visual-lab plan approval - COMPLETE
+-> local implementation-fidelity check - COMPLETE
 -> owner diagnostic
 -> separately approved external pilot
 -> core combat packages made timely by evidence
