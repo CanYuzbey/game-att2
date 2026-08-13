@@ -25,6 +25,13 @@ current product gate is separate approval of its counterbalanced owner diagnosti
 The shared Stamina/readiness model remains a provisional research hypothesis; no
 runtime Stamina system, production UI, content expansion, or engine work is approved.
 
+> **Collaborator verification note — 2026-08-13:** `main` contains the verified
+> visual interaction lab and the separate local Block-pressure demo. To review the
+> current evidence, start with the implementation results linked below; to reproduce
+> the automated checks, use the verification commands in the handoff package. These
+> checks establish implementation fidelity only—not final game balance, player
+> comprehension, or approval to begin production content.
+
 ## Design pillars
 
 - **Body as Build** - limbs create actions, passives, tradeoffs, and tactical
