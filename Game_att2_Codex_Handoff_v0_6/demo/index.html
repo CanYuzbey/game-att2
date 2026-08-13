@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game att2 - Block pressure drill</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro" aria-labelledby="demo-title">
+        <p class="eyebrow">GAME ATT2 / RESEARCH-ONLY INTERACTION DRILL</p>
+        <h1 id="demo-title">Block the jab. Read the pressure.</h1>
+        <p class="lead">Anna's blue jab meets the red line. Press <strong>Block</strong> or Space at contact, then read how your body source, readiness, preparation, and Blood band changed the result.</p>
+        <p class="scope-note">This is a disposable visual study, not the game runtime or an approved balance model. “Readiness” is a provisional research cue—not a production Stamina system.</p>
+        <p class="boot-message" id="boot-message">Loading controls… If this message stays here, double-click <code>start-demo.bat</code> in this folder.</p>
+      </section>
+
+      <section class="demo-grid" aria-label="Block pressure drill">
+        <aside class="setup-panel" aria-labelledby="setup-title">
+          <p class="eyebrow">READ THE SITUATION</p>
+          <h2 id="setup-title">Set the pressure</h2>
+          <p class="panel-copy">These options change only this local drill. Every effect is shown before you begin.</p>
+
+          <fieldset>
+            <legend>Blood band</legend>
+            <label><input type="radio" name="blood" value="steady" checked /> Steady <small>No strain amplifier</small></label>
+            <label><input type="radio" name="blood" value="low" /> Low <small>Amplifies existing Block strain</small></label>
+          </fieldset>
+          <fieldset>
+            <legend>Readiness</legend>
+            <label><input type="radio" name="readiness" value="fresh" checked /> Fresh <small>100 readiness</small></label>
+            <label><input type="radio" name="readiness" value="strained" /> Strained <small>58 readiness</small></label>
+          </fieldset>
+          <fieldset>
+            <legend>Defense commitment</legend>
+            <label><input type="radio" name="guard" value="unprepared" checked /> Unprepared <small>Normal timing window</small></label>
+            <label><input type="radio" name="guard" value="prepared" /> Guard Flesh prepared <small>Wider timing window; committed arm</small></label>
+          </fieldset>
+          <fieldset>
+            <legend>Response source</legend>
+            <label><input type="radio" name="arm" value="usable" checked /> Right Arm usable <small>Block is legal</small></label>
+            <label><input type="radio" name="arm" value="unusable" /> Right Arm unusable <small>Block is unavailable</small></label>
+          </fieldset>
+          <fieldset>
+            <legend>Input profile</legend>
+            <label><input type="radio" name="profile" value="precise" checked /> Precise <small>Standard tolerance</small></label>
+            <label><input type="radio" name="profile" value="assisted" /> Assisted <small>Same consequence, wider tolerance</small></label>
+          </fieldset>
+          <button class="secondary" id="reset-pressure">Reset drill pressure</button>
+        </aside>
+
+        <section class="demo-card" aria-labelledby="round-title">
+          <div class="round-header">
+            <div><p class="eyebrow">PRACTICE ROUND</p><h2 id="round-title">Anna: Surgical Jab</h2></div>
+            <p class="status" id="status" role="status" aria-live="polite">Set the situation, then begin.</p>
+          </div>
+
+          <div class="state-row" aria-label="Current combat state">
+            <article class="state-card"><span>Blood</span><strong id="blood-state">Steady</strong><small id="blood-detail">No extra strain</small></article>
+            <article class="state-card"><span>Readiness</span><strong id="readiness-state">100 / 100</strong><div class="meter"><span id="readiness-meter"></span></div><small id="readiness-detail">Ready</small></article>
+            <article class="state-card"><span>Block source</span><strong id="arm-state">Right Arm</strong><small id="arm-detail">Usable</small></article>
+            <article class="state-card"><span>Pressure</span><strong id="pressure-state">0 Blocks</strong><small id="pressure-detail">Next use: 18 readiness</small></article>
+          </div>
+
+          <div class="arena" id="arena" data-phase="ready">
+            <div class="fighter player" aria-label="Player, Torso target"><div class="body"></div><span>YOU</span><small>Torso target</small></div>
+            <div class="contact" aria-label="Ideal Block moment"><span>BLOCK HERE</span></div>
+            <div class="jab" id="jab" aria-hidden="true"><span></span></div>
+            <div class="fighter anna" aria-label="Anna, Right Arm attack source"><div class="body"></div><span>ANNA</span><small>Right Arm source</small></div>
+          </div>
+          <div class="timing-track" aria-hidden="true"><span class="safe-window" id="safe-window"></span><span class="timing-cursor" id="cursor"></span><span class="contact-tick"></span></div>
+          <p class="track-label"><span>Attack starts</span><span>Red tick = ideal Block</span></p>
+          <p class="window-copy" id="window-copy">Standard window: ±180 ms. A perfect Block reduces 8 Torso damage to 4.</p>
+
+          <div class="controls"><button id="start" class="primary">Start attack</button><button id="block" disabled>Block <kbd>Space</kbd></button><button id="retry" hidden>Next attack</button></div>
+          <section class="outcome" id="outcome" data-result="none" aria-live="polite"><p class="outcome-label">What happened</p><h3>Read the situation first.</h3><p>Choose a pressure state, then start Anna's attack.</p></section>
+        </section>
+      </section>
+    </main>
+    <script src="./src/main.js" defer></script>
+  </body>
+</html>

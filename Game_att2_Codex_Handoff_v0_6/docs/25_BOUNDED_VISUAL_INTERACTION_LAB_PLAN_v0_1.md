@@ -2,10 +2,10 @@
 
 Status date: 2026-08-12
 
-Status: proposed owner-approval plan. Do not implement until the owner explicitly
-approves this document. Approval would open only the isolated research instrument
-described here; it would not approve production combat, campaign integration, final
-controls, content, wounds, movement, Unity, or experience claims.
+Status: owner-approved on 2026-08-12 for VL-WP1 through VL-WP3 only. Those bounded
+work packages are implemented and fidelity-verified in document 26. VL-WP4 remains a
+separate owner gate. This approval does not cover production combat, campaign
+integration, final controls, content, wounds, movement, Unity, or experience claims.
 
 Authority: the owner-approved shared-readiness direction in the Development Master,
 the interaction taxonomy in document 23, the H1 contract/results in documents 20-22,
@@ -184,18 +184,20 @@ Can Yüzbey.
 
 ## 10. Work packages
 
-1. **VL-WP0 - plan approval:** review this scope, comparisons, non-goals, and evidence.
-2. **VL-WP1 - isolated contracts:** create research-only definitions/configuration and
-   validation without touching production configuration.
-3. **VL-WP2 - static visual surface:** implement telegraph, input capture, immediate
-   state feedback, and assisted profile locally with zero network use.
-4. **VL-WP3 - deterministic evidence:** add scripted replay, negative tests, exports,
-   and current-campaign regression checks.
-5. **VL-WP4 - owner diagnostic:** run repeated counterbalanced trials, preserve
-   contamination notes, and issue continue/revise/kill disposition.
+1. **VL-WP0 - plan approval: COMPLETE.** The owner approved this plan on 2026-08-12.
+2. **VL-WP1 - isolated contracts: COMPLETE.** Research-only definitions,
+   configuration, and strict validation are isolated from production configuration.
+3. **VL-WP2 - static visual surface: COMPLETE.** The local fragment provides the
+   telegraph, signed input capture, immediate state feedback, assisted profile, and
+   explicit high-risk acknowledgement with zero network use.
+4. **VL-WP3 - deterministic evidence: COMPLETE.** Scripted replay, negative tests,
+   local export, and current-campaign regressions pass; see document 26.
+5. **VL-WP4 - owner diagnostic: NOT OPEN.** Repeated counterbalanced trials,
+   contamination notes, and a continue/revise/kill disposition require a separate
+   owner approval after reviewing implementation fidelity.
 
-Each work package has a stop gate. Approval of this plan would open VL-WP1 through
-VL-WP3 only; the owner diagnostic is run separately after fidelity verification.
+Each work package has a stop gate. The completed approval opened VL-WP1 through
+VL-WP3 only; it did not automatically open the owner diagnostic.
 
 ## 11. Stop and rollback conditions
 
@@ -213,8 +215,9 @@ Rollback is removal of the isolated lab surface, its research configuration, tes
 and generated evidence. The current simulator, H1 fixture, campaign, and rules remain
 unchanged.
 
-## 12. Approval gate
+## 12. Current gate
 
-The owner may approve, revise, or reject this plan. Approval opens only bounded local
-implementation-fidelity work. It does not approve the future paper content set or the
-final game-design document.
+The bounded local implementation-fidelity work passed. The owner may now approve,
+revise, or reject VL-WP4 after reviewing document 26 and the local lab. No decision in
+this document approves an external pilot, future paper content set, or final game-design
+document.

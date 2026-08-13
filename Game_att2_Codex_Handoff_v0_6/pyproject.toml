@@ -21,6 +21,7 @@ dev = [
 game-att2-sim = "game_att2_sim.cli:main"
 game-att2-research = "game_att2_sim.research_cli:main"
 game-att2-play = "game_att2_sim.play_cli:main"
+game-att2-visual-lab = "game_att2_sim.visual_lab_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,0 +1,26 @@
+{
+  "schema_version": "visual-lab-script-0.1",
+  "evidence_class": "AUTOMATED_REGRESSION",
+  "signed_offsets_ms": {
+    "VL-C1-first": 120,
+    "VL-C1-repeated": 120,
+    "VL-C2-normal-blood": 120,
+    "VL-C2-low-blood": 120,
+    "VL-C3-unprepared": 120,
+    "VL-C3-prepared": 120,
+    "VL-C4-exact": 120,
+    "VL-C4-vague": 120,
+    "VL-C5-precise": 150,
+    "VL-C5-assisted": 150,
+    "VL-C6-early": -120,
+    "VL-C6-late": 120,
+    "VL-C7-block": 120,
+    "VL-C7-forgo": 0,
+    "VL-C8-continued-pressure": 0,
+    "VL-C8-pressure-break": 0,
+    "VL-C9-usable": 0,
+    "VL-C9-unusable": 0,
+    "VL-C10-ordinary": 500,
+    "VL-C10-high-risk": 500
+  }
+}

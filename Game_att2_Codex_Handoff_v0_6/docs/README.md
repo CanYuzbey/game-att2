@@ -26,7 +26,8 @@ not make it current authority.
 | `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` | Verified H1 fidelity results, traceability, and remaining evidence limits |
 | `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Owner-resolved interaction directions, shared-readiness boundary, and revised diagnostic requirements; no runtime approval |
 | `24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md` | Current cross-discipline status, production critical path, and design-route gates |
-| `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` | Proposed local visual-lab implementation plan; owner approval required before execution |
+| `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` | Owner-approved bounded visual-lab plan; VL-WP1 through VL-WP3 complete, VL-WP4 separately gated |
+| `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md` | Verified visual-lab fidelity results, traceability, scope audit, and current owner-diagnostic gate |
 
 ## Encounter 3 paper testing
 

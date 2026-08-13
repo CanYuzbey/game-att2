@@ -21,13 +21,19 @@ The acceptance source is `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`.
 - `unit/test_rules.py` includes the atomic item-for-limb exchange contract used by the
   Jeff survey bargain, Blood-0 death, and Limb for Life death prevention.
 - `integration/test_research_cli.py` checks research CLI exports and input contracts.
-- `integration/test_console_entrypoints.py` launches all three documented `python -m` commands as subprocesses.
+- `integration/test_console_entrypoints.py` launches the documented simulator,
+  playable, research-shell, and visual-lab `python -m` commands as subprocesses.
 - `integration/test_research_shell.py` and `integration/test_post_table_probe.py` check the evidence shell and non-canonical probes.
 - `unit/test_h1_config.py` and `unit/test_reflex.py` validate the isolated H1 schema,
   pure legality, grades, risk commitment, assisted input, and prohibited scope.
 - `integration/test_h1_research.py` and `integration/test_h1_cli.py` cover H1-C1 through
   H1-C6, deterministic exports, capability recomputation, and CLI boundaries without
   adding H1 to the approved scenario runner.
+- `unit/test_visual_lab_config.py` and `unit/test_visual_lab.py` check the isolated
+  readiness, recovery, signed timing, body-source, and failure contracts.
+- `integration/test_visual_lab_research.py` and `integration/test_visual_lab_cli.py`
+  check VL-C1 through VL-C10, deterministic evidence, local page generation, claims
+  boundaries, and campaign isolation.
 
 ## Complete automated gate
 
@@ -54,6 +60,10 @@ python -m game_att2_sim.research_cli `
 python -m game_att2_sim.h1_cli `
   --all-comparisons `
   --script examples/h1_scripted_comparisons.json `
+  --format json
+python -m game_att2_sim.visual_lab_cli `
+  --script examples/visual_lab_scripted_comparisons.json `
+  --all-comparisons `
   --format json
 ```
 

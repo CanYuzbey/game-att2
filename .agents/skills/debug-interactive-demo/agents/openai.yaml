@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interactive Demo Debugging"
+  short_description: "Diagnose local web demo startup and input failures."
+  default_prompt: "Debug this local interactive web demo from launch through user input and visual feedback."

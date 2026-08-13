@@ -3,7 +3,7 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fidelity fixture is verified. The shared-readiness boundary is approved for visual-lab research planning, but the lab still requires plan approval; human-experience evidence remains absent and Unity remains delayed.**
+Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner diagnostic still requires separate approval; human-experience evidence remains absent and Unity remains delayed.**
 
 ## 2026-08-12 owner diagnostic amendment
 
@@ -46,10 +46,11 @@ existing strain, and explicit body impairment remains a separate legality or
 effectiveness cause. The intent is to prevent indefinite no-progress defense while
 keeping Blood as the primary health/currency/fuel system.
 
-This decision authorizes research planning only. It does not approve a Stamina/runtime
-system, exact values, recovery rates, final terminology, campaign integration, or
-player-experience claims. `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` contains the
-reversible proposal and must receive explicit owner approval before implementation.
+The owner subsequently approved only VL-WP1 through VL-WP3 of
+`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Their isolated implementation passed
+fidelity verification in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`.
+This does not approve a Stamina/runtime system, exact production values, final
+terminology, campaign integration, player-experience claims, or VL-WP4 owner testing.
 
 ## 2026-08-11 owner amendment
 

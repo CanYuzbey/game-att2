@@ -1,0 +1,636 @@
+<div id="game-att2-readiness-lab">
+  <style>
+    #game-att2-readiness-lab {
+      color: var(--foreground, CanvasText);
+      background: transparent;
+      font: 400 var(--font-size-base, 16px) system-ui, sans-serif;
+      max-width: 100%;
+    }
+    #game-att2-readiness-lab * { box-sizing: border-box; }
+    #game-att2-readiness-lab h2,
+    #game-att2-readiness-lab h3,
+    #game-att2-readiness-lab p { margin: 0; }
+    #game-att2-readiness-lab .vl-stack { display: grid; gap: 14px; }
+    #game-att2-readiness-lab .vl-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    #game-att2-readiness-lab .vl-acknowledgement {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border, ButtonBorder);
+      border-radius: 10px;
+      background: var(--card, Canvas);
+    }
+    #game-att2-readiness-lab .vl-acknowledgement[hidden] { display: none; }
+    #game-att2-readiness-lab .vl-heading { justify-content: space-between; }
+    #game-att2-readiness-lab .vl-subtle { color: var(--muted-foreground, GrayText); }
+    #game-att2-readiness-lab .vl-controls {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) minmax(150px, 0.45fr);
+      gap: 12px;
+    }
+    #game-att2-readiness-lab label { display: grid; gap: 6px; }
+    #game-att2-readiness-lab select,
+    #game-att2-readiness-lab textarea,
+    #game-att2-readiness-lab button {
+      color: inherit;
+      background: var(--card, Canvas);
+      border: 1px solid var(--border, ButtonBorder);
+      border-radius: 8px;
+      padding: 9px 11px;
+      font: inherit;
+    }
+    #game-att2-readiness-lab button { cursor: pointer; }
+    #game-att2-readiness-lab button:disabled { cursor: not-allowed; opacity: 0.55; }
+    #game-att2-readiness-lab button[data-primary="true"] {
+      background: var(--primary, AccentColor);
+      color: var(--primary-foreground, AccentColorText);
+    }
+    #game-att2-readiness-lab .vl-condition[aria-pressed="true"] {
+      background: var(--primary, AccentColor);
+      color: var(--primary-foreground, AccentColorText);
+    }
+    #game-att2-readiness-lab .vl-status-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    #game-att2-readiness-lab .vl-status {
+      background: var(--card, Canvas);
+      color: var(--card-foreground, CanvasText);
+      border: 1px solid var(--border, ButtonBorder);
+      border-radius: 10px;
+      padding: 10px;
+      min-width: 0;
+    }
+    #game-att2-readiness-lab .vl-status span { display: block; }
+    #game-att2-readiness-lab .vl-status strong { font-weight: 500; }
+    #game-att2-readiness-lab .vl-meter {
+      height: 8px;
+      margin-top: 8px;
+      background: var(--muted, Field);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    #game-att2-readiness-lab .vl-meter > span {
+      height: 100%;
+      width: 100%;
+      background: var(--viz-series-1, Highlight);
+      transition: width 180ms ease;
+    }
+    #game-att2-readiness-lab .vl-arena {
+      position: relative;
+      min-height: 230px;
+      overflow: hidden;
+      border: 1px solid var(--border, ButtonBorder);
+      border-radius: 12px;
+      background: var(--card, Canvas);
+    }
+    #game-att2-readiness-lab .vl-actor {
+      position: absolute;
+      top: 26px;
+      bottom: 26px;
+      width: 118px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+    #game-att2-readiness-lab .vl-player { left: 18px; }
+    #game-att2-readiness-lab .vl-anna { right: 18px; }
+    #game-att2-readiness-lab .vl-body {
+      width: 62px;
+      height: 112px;
+      border: 2px solid currentColor;
+      border-radius: 44% 44% 35% 35%;
+      position: relative;
+      opacity: 0.82;
+    }
+    #game-att2-readiness-lab .vl-arm {
+      position: absolute;
+      top: 30px;
+      width: 38px;
+      height: 14px;
+      border: 2px solid currentColor;
+      border-radius: 8px;
+    }
+    #game-att2-readiness-lab .vl-player .vl-arm { right: -31px; }
+    #game-att2-readiness-lab .vl-anna .vl-arm { left: -31px; }
+    #game-att2-readiness-lab .vl-arm[data-usable="false"] {
+      color: var(--destructive, Mark);
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+    #game-att2-readiness-lab .vl-contact {
+      position: absolute;
+      left: 35%;
+      top: 18px;
+      bottom: 18px;
+      width: 2px;
+      background: var(--viz-series-2, Highlight);
+      opacity: 0.7;
+    }
+    #game-att2-readiness-lab .vl-contact span {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      white-space: nowrap;
+      color: var(--muted-foreground, GrayText);
+    }
+    #game-att2-readiness-lab .vl-strike {
+      position: absolute;
+      top: 108px;
+      left: calc(100% - 150px);
+      width: 62px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--viz-series-3, Highlight);
+      transform: translateX(0);
+      will-change: transform;
+    }
+    #game-att2-readiness-lab .vl-strike::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: -6px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 12px solid var(--viz-series-3, Highlight);
+    }
+    #game-att2-readiness-lab .vl-timeline {
+      position: absolute;
+      left: 150px;
+      right: 150px;
+      bottom: 24px;
+      height: 20px;
+      border-top: 2px solid var(--border, ButtonBorder);
+    }
+    #game-att2-readiness-lab .vl-cursor {
+      position: absolute;
+      z-index: 2;
+      top: -10px;
+      height: 20px;
+      width: 3px;
+      background: currentColor;
+      border-radius: 999px;
+      transform: translateX(-1px);
+    }
+    #game-att2-readiness-lab .vl-arena[data-contact="true"] .vl-cursor,
+    #game-att2-readiness-lab .vl-arena[data-contact="true"] .vl-strike {
+      color: var(--primary, Highlight);
+      background: var(--primary, Highlight);
+    }
+    #game-att2-readiness-lab .vl-window {
+      position: absolute;
+      left: 45%;
+      width: 10%;
+      top: -6px;
+      height: 12px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--viz-series-1, Highlight) 45%, transparent);
+    }
+    #game-att2-readiness-lab .vl-result {
+      min-height: 78px;
+      border-left: 3px solid var(--viz-series-1, Highlight);
+      padding: 10px 12px;
+      background: color-mix(in srgb, var(--card, Canvas) 88%, transparent);
+    }
+    #game-att2-readiness-lab .vl-result[data-grade="miss"] {
+      border-left-color: var(--destructive, Mark);
+    }
+    #game-att2-readiness-lab .vl-result-line { font-weight: 500; }
+    #game-att2-readiness-lab .vl-questionnaire {
+      display: none;
+      gap: 10px;
+      border-top: 1px solid var(--border, ButtonBorder);
+      padding-top: 14px;
+    }
+    #game-att2-readiness-lab .vl-questionnaire[data-open="true"] { display: grid; }
+    #game-att2-readiness-lab textarea { min-height: 62px; resize: vertical; }
+    @media (max-width: 620px) {
+      #game-att2-readiness-lab .vl-controls,
+      #game-att2-readiness-lab .vl-status-grid { grid-template-columns: 1fr 1fr; }
+      #game-att2-readiness-lab .vl-actor { width: 90px; }
+      #game-att2-readiness-lab .vl-player { left: 4px; }
+      #game-att2-readiness-lab .vl-anna { right: 4px; }
+      #game-att2-readiness-lab .vl-timeline { left: 98px; right: 98px; }
+    }
+    @media (max-width: 390px) {
+      #game-att2-readiness-lab .vl-controls,
+      #game-att2-readiness-lab .vl-status-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #game-att2-readiness-lab .vl-meter > span { transition: none; }
+    }
+  </style>
+
+  <div class="vl-stack">
+    <div class="vl-row vl-heading">
+      <div>
+        <h2>Anna - Surgical Jab / Block lab</h2>
+        <p class="vl-subtle">H1-F0 / local research only / values provisional</p>
+      </div>
+      <strong id="vl-progress">Practice 0 / 2</strong>
+    </div>
+
+    <div class="vl-controls">
+      <label>
+        Comparison
+        <select id="vl-comparison">
+          <option value="VL-C1">C1 / first vs repeated Block</option>
+          <option value="VL-C2">C2 / normal vs low Blood</option>
+          <option value="VL-C3">C3 / unprepared vs Guard prepared</option>
+          <option value="VL-C4">C4 / exact vs vague intent</option>
+          <option value="VL-C5">C5 / precise vs assisted input</option>
+          <option value="VL-C6">C6 / equally early vs late</option>
+          <option value="VL-C7">C7 / Block again vs forgo Block</option>
+          <option value="VL-C8">C8 / continued pressure vs pressure break</option>
+          <option value="VL-C9">C9 / usable vs unusable Right Arm</option>
+          <option value="VL-C10">C10 / ordinary vs high-risk miss</option>
+        </select>
+      </label>
+      <label>
+        Timing profile
+        <select id="vl-profile">
+          <option value="precise">Precise</option>
+          <option value="assisted">Assisted</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="vl-row" aria-label="Comparison conditions">
+      <button type="button" class="vl-condition" id="vl-condition-a" aria-pressed="true">A / First Block</button>
+      <button type="button" class="vl-condition" id="vl-condition-b" aria-pressed="false">B / Repeated Block</button>
+      <span class="vl-subtle" id="vl-condition-detail">Same Jab and timing; only Block repetition changes.</span>
+    </div>
+
+    <div class="vl-status-grid" aria-label="Current state">
+      <div class="vl-status">
+        <span class="vl-subtle">Blood band</span>
+        <strong id="vl-blood">65 / Normal</strong>
+      </div>
+      <div class="vl-status">
+        <span class="vl-subtle">Readiness</span>
+        <strong id="vl-readiness">100 / Ready</strong>
+        <div class="vl-meter" aria-hidden="true"><span id="vl-readiness-fill"></span></div>
+      </div>
+      <div class="vl-status">
+        <span class="vl-subtle">Repeated Block</span>
+        <strong id="vl-repetition">0 prior uses</strong>
+      </div>
+      <div class="vl-status">
+        <span class="vl-subtle">Preparation / intent</span>
+        <strong id="vl-preparation">Unprepared / Exact intent</strong>
+      </div>
+      <div class="vl-status">
+        <span class="vl-subtle">Required source</span>
+        <strong id="vl-source">Right Arm / Usable</strong>
+      </div>
+    </div>
+
+    <div class="vl-arena" role="img" aria-label="Anna telegraphs a Right-Arm Surgical Jab toward the player's Torso; the vertical line marks contact.">
+      <div class="vl-actor vl-player">
+        <div class="vl-body"><span class="vl-arm" id="vl-player-arm" data-usable="true"></span></div>
+        <span>Player<br><span class="vl-subtle">Torso target</span></span>
+      </div>
+      <div class="vl-contact"><span>contact</span></div>
+      <div class="vl-strike" id="vl-strike"></div>
+      <div class="vl-actor vl-anna">
+        <div class="vl-body"><span class="vl-arm"></span></div>
+        <span>Anna<br><span class="vl-subtle">Right Arm source</span></span>
+      </div>
+      <div class="vl-timeline" aria-hidden="true"><span class="vl-window" id="vl-window"></span><span class="vl-cursor" id="vl-cursor"></span></div>
+    </div>
+
+    <div class="vl-row">
+      <button type="button" id="vl-start" data-primary="true">Start telegraph</button>
+      <button type="button" id="vl-block" disabled>Block / Space</button>
+      <button type="button" id="vl-forgo" disabled>Forgo Block</button>
+      <button type="button" id="vl-export">Download local evidence</button>
+    </div>
+
+    <label class="vl-acknowledgement" id="vl-high-risk-row" hidden>
+      <input type="checkbox" id="vl-high-risk-ack">
+      <span>I understand this disclosed high-risk response can damage the grafted Right Arm in addition to Anna's original attack.</span>
+    </label>
+
+    <div class="vl-result" id="vl-result" role="status" aria-live="polite" data-grade="none">
+      <p class="vl-result-line">Choose a comparison, then run two practice attempts.</p>
+      <p class="vl-subtle">The moving Jab crosses the contact line at the ideal Block moment.</p>
+    </div>
+
+    <div class="vl-questionnaire" id="vl-questionnaire" data-open="false">
+      <h3>Comprehension record</h3>
+      <p class="vl-subtle">Used only during the separately approved owner diagnostic.</p>
+      <label>What threat was coming?<textarea id="vl-q-threat"></textarea></label>
+      <label>Why was Block available or unavailable?<textarea id="vl-q-availability"></textarea></label>
+      <label>What changed because of timing, readiness, or preparation?<textarea id="vl-q-change"></textarea></label>
+      <label>What new cost or risk exists now?<textarea id="vl-q-risk"></textarea></label>
+      <h3>Diagnostic debrief</h3>
+      <label>Fairness (1 low - 5 high)<select id="vl-d-fairness"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+      <label>Clarity (1 low - 5 high)<select id="vl-d-clarity"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+      <label>Control (1 low - 5 high)<select id="vl-d-control"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+      <label>Fatigue (1 low - 5 high)<select id="vl-d-fatigue"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+      <label>Which condition do you prefer, and why?<textarea id="vl-d-preference"></textarea></label>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      "use strict";
+      const root = document.getElementById("game-att2-readiness-lab");
+      if (!root || root.dataset.ready === "true") return;
+      root.dataset.ready = "true";
+      const config = __VISUAL_LAB_CONFIG__;
+      const $ = (id) => root.querySelector(`#${id}`);
+      const comparison = $("vl-comparison");
+      const profile = $("vl-profile");
+      const conditionA = $("vl-condition-a");
+      const conditionB = $("vl-condition-b");
+      const strike = $("vl-strike");
+      const arena = root.querySelector(".vl-arena");
+      const cursor = $("vl-cursor");
+      const startButton = $("vl-start");
+      const blockButton = $("vl-block");
+      const forgoButton = $("vl-forgo");
+      const resultBox = $("vl-result");
+      const highRiskRow = $("vl-high-risk-row");
+      const highRiskAck = $("vl-high-risk-ack");
+      const evidence = [];
+      let condition = "a";
+      let practiceCount = 0;
+      let recordedCount = 0;
+      let running = false;
+      let startedAt = 0;
+      let animationId = 0;
+      let travelToContact = 0;
+
+      const comparisons = {
+        "VL-C1": { labels: ["First Block", "Repeated Block"], detail: "Same Jab and timing; only Block repetition changes.", a: {}, b: { readiness: 52, repeats: 2 } },
+        "VL-C2": { labels: ["Normal Blood", "Low Blood"], detail: "Readiness and repetition match; low Blood only amplifies existing strain.", a: { readiness: 70, repeats: 1 }, b: { blood: 18, readiness: 70, repeats: 1 } },
+        "VL-C3": { labels: ["Unprepared", "Guard prepared"], detail: "Guard Flesh spends the strategic Main action to improve this response.", a: {}, b: { prepared: true } },
+        "VL-C4": { labels: ["Exact intent", "Vague intent"], detail: "Body state matches; only knowledge of Anna's source and target changes.", a: {}, b: { exact: false } },
+        "VL-C5": { labels: ["Precise", "Assisted"], detail: "The same legality and consequence path uses a wider assisted tolerance.", a: { profile: "precise" }, b: { profile: "assisted" } },
+        "VL-C6": { labels: ["Early input", "Late input"], detail: "Routine timing is symmetric: equal early and late offsets receive equal results.", a: {}, b: {} },
+        "VL-C7": { labels: ["Block again", "Forgo Block"], detail: "Forgoing accepts the original Jab before limited readiness recovery.", a: { readiness: 40, repeats: 2 }, b: { readiness: 40, repeats: 2, action: "forgo" } },
+        "VL-C8": { labels: ["Pressure continues", "Pressure broken"], detail: "Both accept the original consequence; only the explicit pressure state changes recovery.", a: { readiness: 40, repeats: 2, action: "forgo" }, b: { readiness: 40, repeats: 2, action: "forgo", pressureBreak: true } },
+        "VL-C9": { labels: ["Right Arm usable", "Right Arm unusable"], detail: "Readiness and perfect timing never replace a disabled body source.", a: {}, b: { sourceUsable: false } },
+        "VL-C10": { labels: ["Ordinary response", "High-risk response"], detail: "Only the acknowledged high-risk route can expose the grafted Right Arm.", a: {}, b: { risk: "high_risk" } }
+      };
+
+      function readinessBand(value) {
+        return config.readiness.bands.find((band) => value >= band.minimum).id;
+      }
+
+      function currentState() {
+        const item = comparisons[comparison.value];
+        const override = item[condition];
+        return {
+          blood: override.blood ?? config.fixture.normal_blood,
+          readiness: override.readiness ?? config.readiness.maximum,
+          repeats: override.repeats ?? 0,
+          prepared: override.prepared ?? false,
+          exact: override.exact ?? true,
+          sourceUsable: override.sourceUsable ?? true,
+          action: override.action ?? "block",
+          pressureBreak: override.pressureBreak ?? false,
+          risk: override.risk ?? "ordinary",
+          highRiskAcknowledged: (override.risk ?? "ordinary") === "high_risk" && highRiskAck.checked,
+          profile: override.profile ?? profile.value
+        };
+      }
+
+      function updateState() {
+        const item = comparisons[comparison.value];
+        const state = currentState();
+        conditionA.textContent = `A / ${item.labels[0]}`;
+        conditionB.textContent = `B / ${item.labels[1]}`;
+        $("vl-condition-detail").textContent = item.detail;
+        $("vl-blood").textContent = `${state.blood} / ${state.blood <= config.readiness.low_blood_threshold ? "Critical" : "Normal"}`;
+        const band = readinessBand(state.readiness);
+        $("vl-readiness").textContent = `${state.readiness} / ${band[0].toUpperCase()}${band.slice(1)}`;
+        $("vl-readiness-fill").style.width = `${state.readiness}%`;
+        $("vl-repetition").textContent = `${state.repeats} prior ${state.repeats === 1 ? "use" : "uses"}`;
+        $("vl-preparation").textContent = `${state.prepared ? "Guard prepared" : "Unprepared"} / ${state.exact ? "Exact intent" : "Vague intent"}`;
+        $("vl-source").textContent = `Right Arm / ${state.sourceUsable ? "Usable" : "Unusable"}`;
+        $("vl-player-arm").dataset.usable = String(state.sourceUsable);
+        const bandPenalty = config.timing.readiness_band_penalty_ms[band];
+        const repeatPenalty = state.repeats * config.timing.repeated_block_penalty_ms;
+        const bloodPenalty = state.blood <= config.readiness.low_blood_threshold ? config.timing.low_blood_penalty_ms : 0;
+        const intentPenalty = state.exact ? 0 : config.timing.vague_intent_penalty_ms;
+        const prepBonus = state.prepared ? config.timing.prepared_tolerance_bonus_ms : 0;
+        const limitedBand = config.timing.profiles[state.profile].bands.find((item) => item.grade === "limited");
+        const rawHalfWindow = Math.max(0, limitedBand.max_absolute_offset_ms - bandPenalty - repeatPenalty - bloodPenalty - intentPenalty + prepBonus);
+        const windowWidth = 100 * (rawHalfWindow * 2) / config.telegraph.duration_ms;
+        $("vl-window").style.width = `${windowWidth}%`;
+        $("vl-window").style.left = `${100 * config.telegraph.contact_ms / config.telegraph.duration_ms - windowWidth / 2}%`;
+        conditionA.setAttribute("aria-pressed", String(condition === "a"));
+        conditionB.setAttribute("aria-pressed", String(condition === "b"));
+        const recordedPhase = practiceCount >= config.telegraph.practice_attempts_required;
+        conditionA.disabled = recordedPhase;
+        conditionB.disabled = recordedPhase;
+        profile.disabled = recordedPhase;
+        forgoButton.textContent = state.pressureBreak ? "Resolve pressure break" : "Forgo Block";
+        forgoButton.hidden = state.action !== "forgo";
+        blockButton.hidden = state.action === "forgo";
+        highRiskRow.hidden = state.risk !== "high_risk";
+        startButton.disabled = state.risk === "high_risk" && !state.highRiskAcknowledged;
+      }
+
+      function resetTrials() {
+        cancelAnimationFrame(animationId);
+        running = false;
+        practiceCount = 0;
+        recordedCount = 0;
+        highRiskAck.checked = false;
+        strike.style.transform = "translateX(0)";
+        cursor.style.left = "0%";
+        arena.dataset.contact = "false";
+        startButton.disabled = false;
+        blockButton.disabled = true;
+        forgoButton.disabled = true;
+        $("vl-progress").textContent = `Practice 0 / ${config.telegraph.practice_attempts_required}`;
+        $("vl-questionnaire").dataset.open = "false";
+        resultBox.dataset.grade = "none";
+        resultBox.innerHTML = `<p class="vl-result-line">Run two practice attempts before recorded A/B/B/A trials.</p><p class="vl-subtle">Practice results are not included in measured evidence.</p>`;
+        updateState();
+      }
+
+      function animate(now) {
+        if (!running) return;
+        const elapsed = now - startedAt;
+        const contactProgress = Math.min(1, elapsed / config.telegraph.contact_ms);
+        strike.style.transform = `translateX(${travelToContact * contactProgress}px)`;
+        cursor.style.left = `${100 * config.telegraph.contact_ms / config.telegraph.duration_ms * contactProgress}%`;
+        arena.dataset.contact = String(elapsed >= config.telegraph.contact_ms);
+        if (elapsed < config.telegraph.duration_ms) animationId = requestAnimationFrame(animate);
+        else resolveTrial(config.telegraph.duration_ms - config.telegraph.contact_ms, "missed");
+      }
+
+      function startTelegraph() {
+        if (running) return;
+        const state = currentState();
+        if (state.risk === "high_risk" && !state.highRiskAcknowledged) {
+          resultBox.dataset.grade = "miss";
+          resultBox.innerHTML = `<p class="vl-result-line">High-risk acknowledgement required.</p><p>Review and acknowledge the disclosed Right-Arm exposure before this response can start.</p>`;
+          return;
+        }
+        running = true;
+        strike.style.transform = "translateX(0)";
+        cursor.style.left = "0%";
+        arena.dataset.contact = "false";
+        const strikeBox = strike.getBoundingClientRect();
+        const contactBox = root.querySelector(".vl-contact").getBoundingClientRect();
+        const arrowTipOffset = 10;
+        travelToContact = contactBox.left + arrowTipOffset - strikeBox.left;
+        startedAt = performance.now();
+        startButton.disabled = true;
+        blockButton.disabled = false;
+        forgoButton.disabled = false;
+        resultBox.dataset.grade = "none";
+        resultBox.innerHTML = `<p class="vl-result-line">Jab is moving toward the contact line.</p><p class="vl-subtle">Block when the cursor and Jab reach contact.</p>`;
+        animationId = requestAnimationFrame(animate);
+      }
+
+      function gradeFor(profileId, effective) {
+        return config.timing.profiles[profileId].bands.find((band) => effective <= band.max_absolute_offset_ms).grade;
+      }
+
+      function resolveState(state, signedOffset, inputKind) {
+        const originalDamage = config.fixture.base_damage;
+        if (state.risk === "high_risk" && !state.highRiskAcknowledged) {
+          return { legal: false, grade: null, signedOffset, effective: null, targetDamage: originalDamage, sourceDamage: 0, readinessCost: 0, readinessAfter: state.readiness, recovery: 0, explanation: "The high-risk response was unavailable because its Right-Arm exposure was not acknowledged." };
+        }
+        if (state.action === "forgo" || inputKind === "forgo") {
+          const recovery = state.pressureBreak ? config.readiness.pressure_break_recovery : config.readiness.modest_recovery;
+          return { legal: true, grade: null, signedOffset, effective: null, targetDamage: originalDamage, sourceDamage: 0, readinessCost: 0, readinessAfter: Math.min(config.readiness.maximum, state.readiness + recovery), recovery, explanation: state.pressureBreak ? "The original Jab landed. A declared pressure break restored more readiness after resolution." : "The original Jab landed. Forgoing Block restored limited readiness after resolution." };
+        }
+        if (!state.sourceUsable) return { legal: false, grade: null, signedOffset, effective: null, targetDamage: originalDamage, sourceDamage: 0, readinessCost: 0, readinessAfter: state.readiness, recovery: 0, explanation: "Block was unavailable: the grafted Right Arm is unusable. Timing could not replace it." };
+        const band = readinessBand(state.readiness);
+        let effective = Math.abs(signedOffset) + state.repeats * config.timing.repeated_block_penalty_ms + config.timing.readiness_band_penalty_ms[band];
+        if (state.blood <= config.readiness.low_blood_threshold) effective += config.timing.low_blood_penalty_ms;
+        if (state.prepared) effective = Math.max(0, effective - config.timing.prepared_tolerance_bonus_ms);
+        if (!state.exact) effective += config.timing.vague_intent_penalty_ms;
+        const grade = gradeFor(state.profile, effective);
+        const mitigation = config.mitigation_basis_points[grade];
+        const targetDamage = Math.floor((originalDamage * (10000 - mitigation) + 5000) / 10000);
+        let cost = config.readiness.block_cost + state.repeats * config.readiness.repeated_block_extra_cost;
+        if (state.blood <= config.readiness.low_blood_threshold) cost = Math.ceil(cost * config.readiness.low_blood_cost_multiplier_basis_points / 10000);
+        const sourceDamage = state.risk === "high_risk" ? config.high_risk_exposure_damage[grade] : 0;
+        return { legal: true, grade, signedOffset, effective, targetDamage, sourceDamage, readinessCost: cost, readinessAfter: Math.max(0, state.readiness - cost), recovery: 0, explanation: `The ${grade} Block changed Torso damage from ${originalDamage} to ${targetDamage} and used ${cost} readiness.` };
+      }
+
+      function resolveTrial(signedOffset, inputKind) {
+        if (!running) return;
+        running = false;
+        cancelAnimationFrame(animationId);
+        arena.dataset.contact = "false";
+        blockButton.disabled = true;
+        forgoButton.disabled = true;
+        startButton.disabled = false;
+        const state = currentState();
+        const result = resolveState(state, Math.round(signedOffset), inputKind);
+        const sourceCapabilityRetained = state.sourceUsable && result.sourceDamage < config.fixture.blocking_source_integrity;
+        const isPractice = practiceCount < config.telegraph.practice_attempts_required;
+        const record = {
+          comparisonId: comparison.value,
+          condition,
+          practice: isPractice,
+          signedOffsetMs: result.signedOffset,
+          grade: result.grade,
+          legal: result.legal,
+          targetDamage: result.targetDamage,
+          sourceExposureDamage: result.sourceDamage,
+          sourceCapabilityRetained,
+          readinessBefore: state.readiness,
+          readinessAfter: result.readinessAfter,
+          readinessCost: result.readinessCost,
+          readinessRecovery: result.recovery,
+          blood: state.blood,
+          bloodDelta: 0,
+          repeatedBlockCount: state.repeats,
+          prepared: state.prepared,
+          exactIntent: state.exact,
+          sourceUsable: state.sourceUsable,
+          profileId: state.profile,
+          risk: state.risk,
+          highRiskAcknowledged: state.highRiskAcknowledged,
+          evidenceClass: "OWNER_DIAGNOSTIC_PENDING_SEPARATE_APPROVAL",
+          provisionalLabel: config.provisional_label
+        };
+        evidence.push(record);
+        resultBox.dataset.grade = result.grade ?? (result.legal ? "none" : "miss");
+        const timing = result.effective === null ? "No timing grade" : `${result.signedOffset < 0 ? "early" : result.signedOffset > 0 ? "late" : "on contact"} ${Math.abs(result.signedOffset)} ms / effective ${result.effective} ms`;
+        resultBox.innerHTML = `<p class="vl-result-line">${result.grade ? result.grade[0].toUpperCase() + result.grade.slice(1) : result.legal ? "Resolved without Block" : "Block unavailable"} / ${timing}</p><p>${result.explanation} Right-Arm exposure: ${result.sourceDamage}. Right Arm after: ${sourceCapabilityRetained ? "Usable" : "Unusable"}. Blood change: 0.</p>`;
+        if (isPractice) {
+          practiceCount += 1;
+          if (practiceCount < config.telegraph.practice_attempts_required) {
+            $("vl-progress").textContent = `Practice ${practiceCount} / ${config.telegraph.practice_attempts_required}`;
+          } else {
+            condition = config.telegraph.recorded_order[0];
+            $("vl-progress").textContent = "Recorded 0 / 4 / order A/B/B/A";
+            updateState();
+          }
+        } else {
+          recordedCount += 1;
+          $("vl-progress").textContent = `Recorded ${recordedCount} / ${config.telegraph.recorded_order.length} / order A/B/B/A`;
+          if (recordedCount < config.telegraph.recorded_order.length) {
+            condition = config.telegraph.recorded_order[recordedCount];
+            updateState();
+          } else {
+            $("vl-questionnaire").dataset.open = "true";
+          }
+        }
+      }
+
+      function blockNow() {
+        const elapsed = performance.now() - startedAt;
+        resolveTrial(elapsed - config.telegraph.contact_ms, "block");
+      }
+
+      comparison.addEventListener("change", resetTrials);
+      profile.addEventListener("change", updateState);
+      conditionA.addEventListener("click", () => { if (!running) { condition = "a"; highRiskAck.checked = false; updateState(); } });
+      conditionB.addEventListener("click", () => { if (!running) { condition = "b"; highRiskAck.checked = false; updateState(); } });
+      highRiskAck.addEventListener("change", updateState);
+      startButton.addEventListener("click", startTelegraph);
+      blockButton.addEventListener("click", blockNow);
+      forgoButton.addEventListener("click", () => resolveTrial(0, "forgo"));
+      root.addEventListener("keydown", (event) => {
+        if (event.code === "Space" && running && !blockButton.hidden) {
+          event.preventDefault();
+          blockNow();
+        }
+      });
+      $("vl-export").addEventListener("click", () => {
+        const answers = {
+          threat: $("vl-q-threat").value,
+          availability: $("vl-q-availability").value,
+          change: $("vl-q-change").value,
+          risk: $("vl-q-risk").value
+        };
+        const debrief = {
+          fairness: $("vl-d-fairness").value,
+          clarity: $("vl-d-clarity").value,
+          control: $("vl-d-control").value,
+          fatigue: $("vl-d-fatigue").value,
+          preference: $("vl-d-preference").value
+        };
+        const payload = { artifact: "game-att2-owner-visual-lab-local-record-0.1", claimsBoundary: "Owner diagnostic only; no external-player or product claims.", participantIdentityCollected: false, fixtureId: "H1-F0", planVersion: config.plan_version, practiceTrials: evidence.filter((trial) => trial.practice), recordedTrials: evidence.filter((trial) => !trial.practice), comprehension: answers, debrief };
+        const blob = new Blob([JSON.stringify(payload, null, 2) + String.fromCharCode(10)], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "game-att2-visual-lab-local-evidence.json";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      });
+      resetTrials();
+    })();
+  </script>
+</div>

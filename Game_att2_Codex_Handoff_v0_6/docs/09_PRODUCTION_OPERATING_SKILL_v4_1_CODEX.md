@@ -29,8 +29,9 @@ Codex must use that skill for Game att2 requirement, design, simulator, test, ev
 - Combat Rules v0.5 governs current simulator semantics.
 - State-derived outcomes remain mandatory; actions mutate state and never select endings directly.
 - The bounded H1 fidelity fixture is implemented. Its one-second terminal diagnostic
-  is inadequate for human-facing evidence; the current gate is owner approval of the
-  bounded visual interaction-lab plan.
+  is inadequate for human-facing evidence; the bounded visual lab is now
+  fidelity-verified and the current gate is separate approval of its VL-WP4 owner
+  diagnostic.
 - Passing tests proves implementation fidelity, not fun, accessibility, balance, or market demand.
 
 ## Compatibility rule

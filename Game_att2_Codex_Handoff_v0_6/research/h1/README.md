@@ -2,7 +2,8 @@
 
 Status: deterministic fidelity fixture implemented and verified on 2026-08-12. Its
 fixed terminal timing task is retained for reproducibility but is not an adequate
-human-facing diagnostic. The replacement visual-lab plan is proposed, not approved.
+human-facing diagnostic. The replacement visual lab is implemented and
+fidelity-verified; its owner diagnostic remains separately gated.
 
 H1 tests one controlled post-Jeff interaction against Anna's existing Surgical Jab.
 It is not an eighth approved scenario, a full encounter rewrite, or production combat.
@@ -20,8 +21,9 @@ session protocol; H1 performs no upload and stores no participant identity.
 
 Read `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` for the
 diagnostic finding and `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` for the
-current approval gate. Do not extend this runner or treat the plan as implementation
-authority before owner approval.
+approved bounded plan. Its results and current owner-diagnostic gate are in
+`docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. Do not extend this
+runner or the visual lab beyond that authority.
 
 ## Deterministic replay
 
