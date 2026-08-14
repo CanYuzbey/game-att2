@@ -1,5 +1,76 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-14 owner decision: approve provisional WNR-0.1 numeric direction
+
+The owner approved document 30's WNR-0.1: bounded immediate/periodic wound values, two-tick
+Control, encounter Stabilization, percentage repair with ceilings, visible
+wounded-limb self-risk, and a next-Main-opportunity Ruined-Torso deadline. Exact
+values remain tunable after dependency review. This is paper authority only and does
+not change configuration or simulator behavior without a separate implementation
+gate.
+
+## 2026-08-14 owner-delegated decision: approve Attention Slot architecture
+
+The owner delegated researched optimization and design-direction approval for the
+brain-slot proposal. Document 29 approves the paper baseline: three Attention Slots
+develop toward five and add choices rather than plays; flexible
+Commitment/Response/Adaptive duties replace rigid card compartments; unused valid
+cards persist; Decision Refresh refills Spent/Invalid slots; one Reconsider is
+available per round; the body owns eligibility; the brain owns selection; and shared
+physical commitments replace generic action points and pairwise bans.
+
+This closes the architecture-level strategic card/action-economy gate. It does not
+approve exact selection weights, individual cards/content, Fast-item limits, final
+slot balance, production Stamina, detailed reflex execution, UI, or runtime. The next
+gate is the wound-to-Blood, repair, treatment, wounded-limb self-risk, and exact
+Ruined-Torso rescue numeric package.
+
+## 2026-08-13 owner decision: approve complete aimed-wound direction
+
+The owner approved every recommendation and all eight decisions in
+`27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`.
+
+Approved meanings:
+
+- four wound families: Closed Trauma, Open Wound, Major Wound, Severed Stump;
+- one dominant wound per slot and four treatment states;
+- second qualifying Major result Ruins an arm/Legs at 0 Integrity while it remains
+  attached, unusable, non-Clean, and not automatically Severed;
+- shared Field Repair and rare Reconstructive Repair boundaries, with grafting owning
+  Severed/Missing replacement;
+- repair, treatment, Blood restoration, and grafting remain separate unless an effect
+  explicitly combines them;
+- clean severance lowers stump pressure relative to violent severance;
+- symmetric player/enemy rules with visible explicit exceptions only;
+- basic-attack Ruin creates Major Wound pressure but not Clean harvest;
+- Ruined Torso causes conditional fatality with one explicit rescue window.
+
+This approval closes the physical-consequence meaning gate. It does not approve
+runtime implementation, new repair content, or numbers. Thresholds, Blood values,
+repair amounts/costs, treatment duration, worsening, cap tuning, and exact Torso rescue
+timing were deferred until space/reach and action economy/cadence were defined. Those
+architecture gates are now resolved on paper. Wound/Blood/repair/treatment values and
+exact rescue timing are the active next gate.
+
+## 2026-08-13 owner decision: defer reflex work and VL-WP4
+
+The owner deferred VL-WP4 and broader reflex-mechanics development until later. This
+supersedes the earlier same-day approval before the diagnostic was executed; no
+VL-WP4 human evidence was collected. The isolated lab remains available as fidelity
+infrastructure only.
+
+The next owner decisions must be taken in dependency order so later packages consume
+earlier facts without redefining them. Start with physical-consequence meanings and
+defer exact numbers until space and action cadence are known.
+
+## 2026-08-13 owner decision: open VL-WP4 local diagnostic
+
+The owner approved the counterbalanced VL-WP4 owner diagnostic. The approved work is
+limited to local owner trials, contamination notes, evidence capture, and a
+continue/revise/kill disposition using the verified visual lab. External participants,
+production integration, final values, characters/items, Encounter 3 runtime, and
+Unity remain blocked by their existing separate gates.
+
 ## 2026-08-12 owner diagnostic finding: reflex interactions require separation
 
 The owner found that `OWNER-H1-DIAG-004` did not validate reflex usage adequately.
@@ -43,8 +114,9 @@ remain open. This decision does not approve a production Stamina system or repla
 current campaign rules. The owner approved only VL-WP1 through VL-WP3 in
 `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; the isolated implementation and its
 fidelity evidence are complete in
-`26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 owner diagnostics
-and any external pilot remain separate open gates.
+`26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was separately
+approved and then deferred before execution on 2026-08-13; any external pilot remains
+a separate closed gate.
 
 ## 2026-08-11 owner decision: H1 skill, frequency, failure, and body-build proof
 
@@ -112,6 +184,10 @@ framework level; route-specific predicates remain content work). Limb wounds may
 immediate Blood loss, periodic loss, both, or no Blood loss; the wound mapping,
 numbers, functional penalties, and exact Ruined Torso sequence remain open.
 
+**Later disposition (2026-08-13):** document 27 resolves the qualitative wound
+mapping and selects conditional fatality with one Torso rescue window. Numeric values,
+Torso capability details, and exact rescue timing remain open.
+
 **Capability defeat:** Offensive incapacity occurs when an actor has no legal attack
 remaining. The game should warn as the final offensive source is endangered and expose
 surrender/negotiation before the dead end. Offensive incapacity informs mental defeat
@@ -166,6 +242,9 @@ or evidence that players understand the system. The full definitions, hypotheses
 deferred decisions are in `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`.
 `Cover It` effect/trade-off, wound mappings, Ruined player-Torso consequences, and
 final surrender psychology remain owner decisions.
+
+**Later disposition (2026-08-13):** wound mappings and the Ruined-Torso direction are
+now approved in document 27. Cover It and final surrender psychology remain open.
 
 ## 2026-07-23 owner decision: simulator causal-integrity correction
 
@@ -243,6 +322,20 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - hell-loop limb-grafting duel roguelike/roguelite;
 - dark/disturbing tone with satirical relief;
 - Buckshot Roulette is atmosphere influence, not copied mechanics;
+- combat must not collapse into a repeated stat-menu attack loop resembling an
+  upgraded *Swords and Sandals* system;
+- meaningful combat identity comes from a bounded card-like tactical hand,
+  body-sourced action legality, reflex execution, and lasting physical consequences;
+- space/reach supports that loop and must not become the primary combat activity;
+- Clinch, Engaged, and Distant are shared action-produced combat states, not freely
+  editable movement positions;
+- action, defense, and reflex outcomes may change range, and multi-range actions may
+  use different visible profiles at each state;
+- unmaintained exceptional range settles toward Engaged, while dedicated range builds
+  may sustain it through authored tactical opportunities;
+- unmaintained Clinch receives one complete later playable round and unmaintained
+  Distant receives two before settling to Engaged;
+- side-view presentation creates no grid, block, or travel-turn rules;
 - limbs are the main build engine;
 - blood is health/currency/fuel for prototype;
 - six slots for first demo;
@@ -277,7 +370,14 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - store/release strategy;
 - final debt economy;
 - final save/load format;
-- final Limb for Life selection/control rules beyond the approved seeded prototype.
+- final Limb for Life selection/control rules beyond the approved seeded prototype;
+- exact Attention Slot selection weights, repetition damping, final capacity balance,
+  Fast-item limits, and individual card content beyond the approved document 29
+  lifecycle;
+- exact range profile and maintenance effects for each action/card;
+- whether approved cognitive capacity/selection progression is anatomical, Head-
+  linked, shop/table/skill delivered, or represented through another fiction;
+- exact cognitive biases such as reflex readiness, offense, or adrenaline behavior.
 
 ## Implementation questions Codex may resolve reversibly
 
@@ -296,6 +396,10 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 | Blood Bag dominance | High | Medium | immediate use nearly universal | variant/config report |
 | Death spiral | Medium | Very high | one failed roll makes later actions irrelevant | Panic, Fast items, soft-loss metrics |
 | Limb system becomes stats | Medium | Very high | body changes do not change legal actions | final body/action summary |
+| Combat becomes upgraded stat-menu dueling | High | Very high | repeated attack selection and damage comparison dominate while cards/reflexes are decorative | require body-sourced hand changes, meaningful reflex consequences, and identity review of every combat package |
+| Space becomes the main game | Medium | High | optimal play repeats standalone approach/retreat instead of choosing tactical actions | prohibit a universal reposition command; range changes through action/defense/reflex outcomes |
+| Neutral range creates dead turns | Medium | High | general builds wait for a movement draw or cannot use their hand | multi-range profiles plus visible settling toward Engaged; validate hand usability later |
+| Cognitive progression invalidates body builds | Medium | Very high | Attention Slot upgrades guarantee ideal hands or overpower limb-granted actions | slots add choices rather than plays; selector cannot invent capabilities; test three versus five and withhold a sixth without evidence |
 | Table has one answer | High | Medium | integrate selected almost universally | strategy/batch table rates |
 | Unstable hated/ignored | Medium | High | always stabilize or never graft | path and collapse metrics |
 | Anna path one-sided | Medium | Medium | offer always accepted/rejected | two integration scenarios |

@@ -20,10 +20,21 @@ The current simulator and default playable CLI cover the bounded sequence from
 S-001 through Jeff, emergency grafting, Anna, and the Grafting Table. The older
 Jeff-only diagnostic remains available as an explicit compatibility mode.
 
-The bounded visual interaction lab is now implemented and fidelity-verified. The
-current product gate is separate approval of its counterbalanced owner diagnostic.
+The bounded visual interaction lab is implemented and fidelity-verified, but the owner
+deferred VL-WP4 and broader reflex-mechanics work on 2026-08-13 before diagnostic
+execution. The fixture is preserved for later research; it is not the active gate.
 The shared Stamina/readiness model remains a provisional research hypothesis; no
 runtime Stamina system, production UI, content expansion, or engine work is approved.
+The owner approved the complete aimed-wound design direction on 2026-08-13. Numeric
+values, specific repair content, and runtime implementation remain deferred. The next
+dependency-safe design gate is strategic card/action economy and cadence. The latest
+action-produced Clinch/Engaged/Distant direction and neutral-settling cadence are
+owner-approved; runtime remains unapproved.
+The owner-approved identity guardrail requires space to support body-sourced tactical
+cards, reflex execution, and lasting physical consequences. Clinch, Engaged, and
+Distant are produced by action/defense/reflex outcomes rather than generic movement.
+This does not approve runtime implementation, a full deck system, individual card
+profiles, or brain progression.
 
 > **Collaborator verification note — 2026-08-13:** `main` contains the verified
 > visual interaction lab and the separate local Block-pressure demo. To review the
@@ -58,6 +69,10 @@ The active handoff package lives in
 - [Current development lead brief](Game_att2_Codex_Handoff_v0_6/docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md)
 - [Bounded visual interaction-lab plan](Game_att2_Codex_Handoff_v0_6/docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md)
 - [Visual interaction-lab implementation results](Game_att2_Codex_Handoff_v0_6/docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md)
+- [Approved aimed-wound design direction](Game_att2_Codex_Handoff_v0_6/docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md)
+- [Approved space-and-reach direction](Game_att2_Codex_Handoff_v0_6/docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md)
+- [Approved strategic card/action-economy direction](Game_att2_Codex_Handoff_v0_6/docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md)
+- [Wound/Blood/repair numeric owner-review package](Game_att2_Codex_Handoff_v0_6/docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md)
 - [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
 - [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
 - [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)

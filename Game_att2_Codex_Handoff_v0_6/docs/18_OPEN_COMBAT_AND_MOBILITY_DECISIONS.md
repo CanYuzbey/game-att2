@@ -12,22 +12,24 @@ approved.
 
 | ID | Decision required | Why it blocks runtime | Depends on |
 |---|---|---|---|
-| W-01 | Name the minimum wound classes represented by the prototype. | Damage cannot create Blood loss without a wound fact. | — |
-| W-02 | Map each action/result to a wound class. | Prevents every hit from bleeding identically. | W-01 |
-| W-03 | Set immediate and periodic Blood loss for each class. | Blood transactions require configured values. | W-01, W-02 |
-| W-04 | Define stabilization, worsening, stacking, and per-round caps. | Determines whether ongoing wounds can be controlled. | W-01–W-03 |
-| W-05 | Choose the exact Ruined Torso chain: fatal immediately, rescue window, or conditional fatality. | Torso viability and death remain undefined. | W-01–W-04 |
+| W-01 — RESOLVED 2026-08-13 | Closed Trauma, Open Wound, Major Wound, and Severed Stump. | Approved minimum wound facts. | — |
+| W-02 — RESOLVED 2026-08-13 | Use the qualitative action/result mapping in document 27. | Numeric thresholds remain W-03. | W-01 |
+| W-07 — RESOLVED 2026-08-13 | Second qualifying Major result Ruins arms/Legs at 0 Integrity; attached, unusable, non-Clean, not Severed. | Preserves existing state meanings and extraction gate. | W-01, W-02 |
+| W-08 — RESOLVED 2026-08-13 | Shared Field/Reconstructive Repair contract; grafting owns Severed/Missing. | Specific sources and values remain later content/balance work. | W-01, W-07 |
+| W-03 — PROVISIONAL PAPER DIRECTION RESOLVED 2026-08-14 | WNR-0.1 defines owner-approved tunable immediate/periodic values and retains aggregate cap 20 in document 30. | Runtime configuration and final tuning remain separately gated. | W-01, W-02, W-07 |
+| W-04 — PROVISIONAL PAPER DIRECTION RESOLVED 2026-08-14 | WNR-0.1 defines two-tick Control, encounter Stabilization, zero passive worsening chance, repair values, and visible Wound Stress. | Exact values may change after dependency review; runtime remains gated. | W-01–W-03, W-07, W-08 |
+| W-05 — PROVISIONAL PAPER DIRECTION RESOLVED 2026-08-14 | WNR-0.1 requires Stabilized/Resolved Torso by the end of the actor's next Main opportunity and preserves a final refusal action. | Catastrophic runtime tests require a separate implementation plan. | W-01–W-04 |
 | W-06 | Define which actions/passives weaken when Torso is Damaged, Critical, or Ruined. | “Physical weakness” needs capability consequences. | W-05 |
 
 ## P0 — Movement and main combat model
 
 | ID | Decision required | Why it blocks runtime | Depends on |
 |---|---|---|---|
-| MOV-01 | Is position represented by no movement, abstract range bands, lanes, or a grid? | Reachability cannot be validated without spatial meaning. | — |
-| MOV-02 | Does movement consume the Main action, use separate movement points, or combine with actions? | Defines the real action economy. | MOV-01 |
+| MOV-01 — RESOLVED 2026-08-13 | One shared action-produced state: Clinch, Engaged, or Distant. No grid, coordinates, blocks, or freely editable movement command. | Exact persistence and card profiles remain open; the representation is fixed. | — |
+| MOV-02 — PARTIAL 2026-08-13 | Range changes belong to full tactical action/defense/reflex outcomes; they have no separate generic movement cost. Neutral settling is approved at one later round for Clinch and two for Distant. Exact action/card costs remain open. | Defines the real action economy without creating a locomotion layer. | MOV-01 |
 | MOV-03 | Which leg states reduce movement, dodge, initiative, reach, or stability? | Legs currently affect only Knockdown/Brace. | MOV-01, MOV-02 |
-| MOV-04 | Can actors disengage, pursue, block, or escape, and what sources those actions? | Survival and escape motivations need legal affordances. | MOV-01–MOV-03 |
-| ACT-01 | Is one Main action plus Focus/Fast the final combat economy or only the survey harness? | The current loop may not represent final combat skill expression. | MOV-02 |
+| MOV-04 | Which authored cards/effects maintain range, pursue, intercept, or enable escape, and what body/tool sources them? | Survival, kiting, and escape motivations need legal affordances without a universal movement command. | MOV-01–MOV-03 |
+| ACT-01 — DESIGN DIRECTION RESOLVED 2026-08-14 | Zero or one Preparation, then zero or one Main commitment, then eligible event-triggered reflex responses. Three starting Attention Slots develop toward five and add choices, not plays. Persistent cards, Decision Refresh, Reconsider, body-owned eligibility, brain-owned selection, and shared physical commitment rules are approved in document 29. Exact weights, Fast-item limits, content, balance, and runtime remain open. | Establishes the hand/action architecture without approving a full deckbuilder or runtime. | MOV-02 |
 | ACT-02 | Are defense choices proactive stances, reactions, or both? | Brace, Guard Flesh, and Cover It currently mix timing models. | DEF-01–DEF-04 |
 | ACT-03 | How are initiative and simultaneous intentions resolved? | Needed when either actor can bargain, move, defend, or attack. | MOV-02, ACT-01 |
 
@@ -117,8 +119,10 @@ approved.
 ## Recommended decision order
 
 ```text
-Wound classes and Ruined Torso
-→ movement representation and action economy
+Wound meanings, repeated-Major collapse, repair boundary, and Torso direction - RESOLVED
+→ movement representation - RESOLVED
+→ action economy and cadence - DESIGN DIRECTION RESOLVED
+→ wound/Blood/repair/treatment values and exact Torso rescue timing - ACTIVE NEXT GATE
 → defense sources/effects/trade-offs
 → Limb for Life player control
 → mental defeat model

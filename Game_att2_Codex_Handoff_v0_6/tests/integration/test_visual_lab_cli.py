@@ -43,6 +43,8 @@ def test_cli_builds_local_fragment_with_required_controls(tmp_path: Path) -> Non
     assert "practiceTrials" in fragment
     assert "recordedTrials" in fragment
     assert "Diagnostic debrief" in fragment
+    assert 'evidenceClass: "OWNER_DIAGNOSTIC_DEFERRED"' in fragment
+    assert "OWNER_DIAGNOSTIC_PENDING_SEPARATE_APPROVAL" not in fragment
     assert "fetch(" not in fragment
     assert "WebSocket" not in fragment
 
