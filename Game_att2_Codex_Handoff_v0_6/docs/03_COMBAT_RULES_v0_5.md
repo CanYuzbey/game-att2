@@ -105,17 +105,43 @@ the final player chooses the sacrificed limb remains an open decision.
 
 ### Wounds and Blood-loss direction
 
-Owner-approved direction:
+Owner-approved design direction, amended 2026-08-13:
 
-- limb damage may cause Blood loss when the resulting wound class requires it;
-- wounds may cause immediate loss, periodic loss, both, or no Blood loss;
-- severe limb loss and open wounds may create major Blood pressure;
-- Ruined Torso may cause catastrophic Blood loss, ongoing Bleeding, capability loss,
-  or death.
+- wound families are Closed Trauma, Open Wound, Major Wound, and Severed Stump;
+- one body slot holds one dominant active wound; a stronger result escalates it rather
+  than stacking duplicate wound records;
+- treatment states are Untreated, Controlled, Stabilized, and Resolved;
+- integrity/limb state owns normal capability, while wound state owns Blood pressure,
+  treatment urgency, and repeat-Major tracking;
+- immediate and periodic Blood loss are separate transactions; Closed Trauma normally
+  has neither;
+- the first qualifying Major result on an arm or Legs records Major Trauma 1/2;
+- a second qualifying Major result before wound resolution sets that attached slot to
+  0 Integrity and Ruined, making all slot-sourced actions illegal without creating
+  Severed or Clean harvest;
+- Field Repair may restore attached Damaged/Critical parts but cannot revive Ruined;
+- rare Reconstructive Repair may restore an attached Ruined part only to Critical;
+- Severed/Missing parts require grafting rather than repair;
+- integrity repair, wound treatment, Blood restoration, and grafting are separate
+  effects unless an action explicitly combines and logs them;
+- clean severance produces lower donor stump pressure than violent severance, but both
+  create a Severed Stump; harvest quality remains a separate record;
+- player and enemy follow the same wound rules except for explicit visible exceptions;
+- a basic attack that Ruins a limb creates Major Wound pressure but still cannot
+  create Clean harvest;
+- Ruined Torso uses conditional fatality with one explicit rescue window rather than
+  ordinary nonfatal treatment or unexplained immediate death.
 
-Deferred for runtime: wound classes, state/action-to-wound mapping, Blood values,
-functional penalties, stabilization rules, and the exact Ruined Torso chain. Until
-those are approved, ordinary limb damage does not automatically reduce Blood.
+The complete approved meaning, causal order, invariants, and acceptance requirements
+are in `27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`.
+
+Document 30 and Development Master Amendment 36 now provide owner-approved provisional
+paper values for wound thresholds, Blood pressure, repair, treatment duration,
+Wound Stress, and Ruined-Torso rescue. Exact numbers remain tunable after connected
+systems are defined. They are still deferred for runtime: configuration migration,
+replacement of the current `BLEEDING` tag, deterministic tests, exploit validation,
+and a separate implementation gate are required. Until then, ordinary runtime limb
+damage does not automatically create the new wound-to-Blood behavior.
 
 ## 6. Player actions
 

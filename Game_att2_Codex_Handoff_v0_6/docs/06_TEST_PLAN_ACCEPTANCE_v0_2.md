@@ -41,13 +41,19 @@ Tests prove faithful implementation and detect numerical/systemic problems. They
   that death was prevented;
 - no eligible limb or an already-used Limb for Life produces final death.
 
-### Deferred wound and Cover It contracts
+### Approved wound direction and deferred runtime contract
 
 - config locks Cover It duration to exactly one round while its effect remains
   explicitly runtime-deferred;
 - no test may infer Cover It damage reduction, redirection, target, or source;
-- ordinary limb damage must not create unapproved wound-to-Blood loss;
-- future wound tests require an owner-approved wound mapping and numeric table.
+- ordinary runtime limb damage must not create the newly approved wound-to-Blood
+  behavior before a separate implementation gate supplies validated numeric config;
+- future wound implementation tests must cover the approved four families, one
+  dominant wound per slot, treatment states, repeat-Major Ruin for arms/Legs, repair
+  boundaries, sever/harvest separation, symmetry, basic-attack no-Clean behavior, and
+  the Ruined-Torso rescue window;
+- runtime acceptance additionally requires an approved numeric table for thresholds,
+  Blood loss, repair, treatment timing, worsening, and caps.
 
 ### Timing
 

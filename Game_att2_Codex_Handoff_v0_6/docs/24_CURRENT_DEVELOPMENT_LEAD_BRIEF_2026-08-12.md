@@ -1,8 +1,8 @@
 # Game att2 - Current Development Lead Brief
 
-Status date: 2026-08-12
+Status date: 2026-08-14
 
-Status: active cross-discipline production brief. Read after documents 19 through 23.
+Status: active cross-discipline production brief. Read with documents 19 through 30.
 This file summarizes current authority; it does not replace the Development Master,
 Combat Rules, technical specification, or decision ledger.
 
@@ -16,7 +16,64 @@ production readiness.
 The current product task is not story production, final UI, engine selection, or a
 small content roster. The bounded visual diagnostic is now implemented and
 fidelity-verified without changing the approved campaign or declaring final combat
-rules. The active gate is whether to open its counterbalanced owner diagnostic.
+rules. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before
+execution. Space/reach and the strategic card/action-economy architecture are now
+approved design directions. The active dependency-ordered gate is the wound-to-Blood,
+repair, treatment, and wounded-limb self-risk numeric package. The physical-
+consequence meanings were approved on 2026-08-13 without final numeric tuning or
+runtime implementation approval.
+
+The owner-approved combat identity guardrail continues to apply: the game must not
+become upgraded stat-menu dueling. Body-sourced tactical
+cards, reflex execution, and lasting physical consequences define the intended loop;
+space is an action-produced supporting state and must not become the primary activity.
+
+## 1A. Latest owner-delegated approval recorded on 2026-08-14
+
+The owner delegated research, optimization, and design-direction approval for the
+brain-slot proposal. Codex approved the document 29 paper architecture: three
+Attention Slots developing toward five, flexible Commitment/Response/Adaptive duties,
+persistent cards with Decision Refresh and one Reconsider per round, body-owned
+eligibility, brain-owned selection, and shared physical compatibility instead of
+generic action points. More slots add choices only. Individual cards, exact weights,
+Fast-item limits, wound/repair values, production Stamina, reflex execution, final UI,
+and runtime remain unapproved.
+
+## 1B. Earlier owner decision recorded on 2026-08-13
+
+The owner approved the complete latest action-produced range direction. Clinch,
+Engaged, and Distant are shared combat states created by action, defense, reflex, and
+other explicit outcomes rather than generic movement. Unmaintained Clinch receives
+one complete later playable round and unmaintained Distant receives two before
+settling to Engaged. Dedicated range builds may explicitly maintain or re-create their
+state. Runtime, individual card profiles, hand rules, and balance remain deferred.
+
+## 1C. Earlier owner decision recorded on 2026-08-13
+
+The owner approved a combat identity guardrail. Strategic play should use a bounded
+card-like hand whose opportunities and legality reflect the body and current state;
+reflex interaction modifies committed execution; Blood, wounds, extraction, and body
+change provide persistence. A repeated select-attack/watch-damage loop is explicitly
+rejected. Space may support or be carried by actions/cards but must not dominate the
+loop. This is identity authority, not approval for a full deck system, draw rules,
+movement implementation, reflex implementation, or new content.
+
+A cognitive capacity/selection role is now approved in document 29. Literal
+brain/Head anatomy, progression delivery, and named reflex/offensive effects remain
+deferred and may not displace limb-based build identity.
+
+## 1D. Earlier owner decision recorded on 2026-08-13
+
+The owner approved every recommendation and all eight decisions in the aimed-wound
+direction. This locks wound families, dominant-wound occupancy, treatment/repair
+separation, repeat-Major Ruin for arms/Legs, sever/harvest separation, symmetry,
+basic-attack Major pressure without Clean harvest, and conditional-fatal Ruined Torso
+with one rescue window. Exact values, exact rescue timing, implementation, and
+specific repair content remain deferred.
+
+VL-WP4 and broader reflex-mechanics work remain deferred; no diagnostic evidence was
+captured. No external pilot, production integration, content, Encounter 3 runtime, or
+engine gate is open.
 
 ## 2. Owner decision recorded on 2026-08-12
 
@@ -35,8 +92,8 @@ The owner approved the shared-readiness design method:
 
 The owner approved VL-WP1 through VL-WP3 of
 `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` on 2026-08-12. Their verified results
-are in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was not
-opened by that approval.
+are in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was
+separately opened and then deferred before execution by the owner on 2026-08-13.
 
 ## 3. Verified repository baseline
 
@@ -69,8 +126,8 @@ isolated counterfactual overlays for actual comparison work.
 |---|---|---|
 | Core identity | Locked strongly enough to protect | Preserve Body as Build and Blood as volatile bankroll |
 | Simulator engineering | Fidelity gate passed with maintenance debt | Change only for an approved research requirement |
-| Hybrid combat | Direction approved; H1 fixture and visual-lab fidelity complete | Owner diagnostic approval |
-| Human evidence | Owner diagnostics only; no valid external pilot | Separate consented pilot after owner diagnostic |
+| Hybrid combat | Strategic direction approved; reflex research preserved but deferred | Complete strategic-combat packages in dependency order |
+| Human evidence | No VL-WP4 evidence and no valid external pilot | Defer until the strategic loop is coherent |
 | Combat systems | Wounds, movement, defense balance, recovery, and resolution incomplete | Make packages timely from lab evidence |
 | Story and characters | Theme and encounter functions exist; canon remains thin | Wait until combat and information grammar stabilize |
 | UI/UX | Research lab implements the narrow information contract | Diagnose it; do not treat it as final UI |
@@ -82,14 +139,18 @@ isolated counterfactual overlays for actual comparison work.
 ## 5. Critical path
 
 ```text
-shared-readiness boundary - RESOLVED FOR RESEARCH PLANNING
--> bounded visual-lab plan approval - COMPLETE
--> isolated local implementation-fidelity check - COMPLETE
--> repeated, counterbalanced owner diagnostic
--> separately approved external pilot
--> evidence-led wound / movement / defense / recovery packages
+reflex diagnostics and broader reflex mechanics - DEFERRED
+-> physical-consequence meanings - APPROVED, VALUES DEFERRED
+-> action-produced range and settling cadence - APPROVED, RUNTIME DEFERRED
+-> strategic card/action economy and cadence - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
+-> wound-to-Blood values and stabilization tuning - PROVISIONAL PAPER DIRECTION APPROVED
+-> strategic defense roles and stacking - NEXT DESIGN GATE
+-> extraction and maintenance rules
+-> encounter resolution rules
+-> information and interaction grammar
+-> later reflex-mechanics gate
 -> minimum complete game-design paper
--> later paper content set for a few characters, items, and encounters
+-> paper content set for a few characters, items, and encounters
 -> engine and production proposal
 ```
 
@@ -101,10 +162,11 @@ archive hygiene may occur in parallel when they do not make product decisions.
 If the diagnostic produces a continue signal, resolve the following as bounded system
 packages rather than a long list of disconnected questions:
 
-1. **Physical consequence package:** minimum wound classes, Blood mappings,
-   stabilization, worsening, and Ruined Torso handling.
-2. **Space and tempo package:** abstract position/reach, movement cost, preparation,
-   Main action, and triggered response timing.
+1. **Physical consequence package:** minimum wound classes, repeated-Major collapse,
+   integrity-repair boundaries, Blood mappings, stabilization, worsening, and Ruined
+   Torso handling.
+2. **Space and tempo package:** action-produced range profiles, neutral settling,
+   action/card cost, preparation, Main action, and triggered response timing.
 3. **Defense and readiness package:** Guard Flesh, Block, Brace, Braced Legs, Cover It,
    shared readiness, repetition, recovery, stacking, and source exposure.
 4. **Extraction and maintenance package:** preservation quality, emergency graft,
@@ -141,6 +203,12 @@ design around unresolved rules.
 
 ## 9. Current owner gate
 
-Review `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md` and approve, revise,
-or reject VL-WP4. Approval would open only the local counterbalanced owner diagnostic;
-it would not approve an external pilot or production integration.
+The owner-approved action-produced range direction remains binding: Clinch, Engaged,
+and Distant are outcomes rather than movement controls. Document 29 resolves the
+strategic hand/action architecture as an approved paper baseline. The owner approved
+document 30's WNR-0.1 numeric wound/Blood/repair package as a provisional paper
+baseline on 2026-08-14, while keeping exact values tunable after connected systems are
+defined. Runtime and configuration remain unchanged. The next dependency-safe design
+gate is strategic defense roles, physical sources, effects, and stacking. Reflex work,
+runtime card/wound implementation, an external pilot, content expansion, and
+production integration remain deferred.

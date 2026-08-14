@@ -34,7 +34,23 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
 - Shared-readiness visual lab: VL-WP1 through VL-WP3 are owner-approved, implemented,
   and fidelity-verified. The research hypothesis uses one visible readiness resource
   and stronger family-specific repeated-Block strain; all values remain provisional.
-- Current product gate: approve, revise, or reject the VL-WP4 owner diagnostic.
+- VL-WP4 owner diagnostic: deferred by the owner on 2026-08-13 before execution;
+  broader reflex-mechanics work is preserved for a later gate.
+- Aimed-wound direction: all eight design decisions owner-approved on 2026-08-13;
+  numeric tuning and runtime implementation remain deferred.
+- Strategic card/action economy: owner-delegated, Codex-approved paper direction;
+  Attention Slots add choices rather than plays, with runtime and final balance gated.
+- WNR-0.1: owner-approved provisional paper values for wound-to-Blood, repair,
+  treatment, wounded-limb self-risk, and Ruined-Torso rescue. Exact numbers remain
+  tunable and runtime/configuration remain gated.
+- Current product gate: strategic defense roles, physical sources, effects, and
+  stacking without reopening the approved wound, range, or hand architecture.
+- Space-and-reach direction: Clinch, Engaged, and Distant are owner-directed shared
+  states produced by action/defense/reflex outcomes, not movement controls. Document
+  28 records the approved neutral-settling cadence; runtime remains unapproved.
+- Combat identity guardrail: body-sourced tactical cards, reflex execution, and
+  lasting physical consequences must define play; space remains subordinate and the
+  game must not become repeated stat-menu dueling.
 - Deterministic regression: `mini_campaign`, seed `42`, ends at **25 Blood** with an Integrated Grafted Human Right Arm.
 - Interactive Research Shell v0.1: implemented and owner-diagnostic verified on the
   same narrow sequence; no external-pilot evidence exists yet.
@@ -67,6 +83,20 @@ the approved lab contract is
 [docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md](docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md),
 and its verified implementation record is
 [docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md](docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md).
+The owner-approved physical-consequence design direction is
+[docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md](docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md);
+its numeric tuning, specific repair content, and runtime implementation remain
+separately gated.
+The approved space-and-reach design direction is
+[docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md](docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md).
+It records the owner-directed action-produced Clinch/Engaged/Distant model for the
+current one-versus-one scope, including one later round for unmaintained Clinch and
+two for unmaintained Distant. Action profiles, card rules, and runtime implementation
+remain separately gated.
+The approved strategic card/action-economy direction is
+[docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md](docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md).
+It defines three-to-five Attention Slots, persistent cards, Decision Refresh,
+Reconsider, and shared physical compatibility. No runtime card system is approved.
 
 The owner-approved local Block lab is operated from
 [research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
@@ -213,6 +243,10 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 21. `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`
 22. `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`
 23. `docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`
+24. `docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
+25. `docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
+26. `docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md`
+27. `docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -466,12 +500,14 @@ The automated suite passes, but passing tests do not erase known gaps:
 - **P1 — product gate:** simulator evidence does not establish fun, balance, or readiness for Unity.
 - **P2 — player evidence:** the interactive shell has owner-diagnostic and automated
   coverage, but no valid external-pilot session.
-- **P1 — physical rules:** wound classes/values and the exact Ruined Torso chain remain
-  open; ordinary limb damage therefore does not yet invent Blood loss.
+- **P1 — physical rules:** wound meanings and the Ruined-Torso direction are approved;
+  numeric values, exact rescue timing, and runtime migration remain open, so ordinary
+  runtime limb damage does not yet create the new wound-to-Blood behavior.
 - **P1 — defense:** Cover It lasts one round, but its source, target, effect, and
   trade-off against manual Brace/Braced Legs/Guard Flesh remain open.
-- **P1 — combat structure:** movement, reachability, and final action economy are not
-  defined beyond the current survey harness.
+- **P1 — combat structure:** movement/range and action-economy architecture are
+  approved on paper, but individual profiles, values, human evidence, and runtime are
+  not defined beyond the current survey harness.
 - **P1 — H1 experience evidence:** the automated Block comparisons pass fidelity,
   but the owner diagnostic exposed an inadequate single-input instrument. Provisional
   timing/mitigation/exposure values, interaction families, and prompt cadence have no
@@ -509,10 +545,10 @@ These timestamps are repository events, not complete labor-hour records. No auth
 
 ## Recommended next step
 
-Review the verified lab and explicitly approve, revise, or reject VL-WP4 in
-`docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. Approval opens only
-the counterbalanced local owner diagnostic; it does not open story, final UI, content,
-an external pilot, Encounter 3 runtime, or engine production.
+Define strategic defense roles, physical sources, effects, and stacking against the
+approved wound, range, and Attention Slot architecture. Reflex diagnostics, story,
+final UI, content expansion, an external pilot, Encounter 3 runtime, and engine
+production remain deferred.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
 

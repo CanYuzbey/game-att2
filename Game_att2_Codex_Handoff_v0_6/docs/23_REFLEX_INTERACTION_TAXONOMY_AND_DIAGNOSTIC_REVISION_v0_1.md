@@ -1,6 +1,6 @@
 # Game att2 — Reflex Interaction Taxonomy and Diagnostic Revision v0.1
 
-Status date: 2026-08-12
+Status date: 2026-08-13
 
 Status: owner-resolved attack-led input ownership, timing shape, state pressure, and
 shared-readiness boundary after `OWNER-H1-DIAG-004`. This document records why the
@@ -324,7 +324,8 @@ current H1 code remains a valid deterministic fidelity fixture but is not an ade
 human reflex instrument.
 
 The shared-readiness direction is resolved, but no implementation gate opens from
-that decision alone. `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` now defines the
+that decision alone. `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` defines the
 Block-only scope, provisional recovery behavior, explicit comparisons, evidence
-fields, rollback, and non-claims. The current owner gate is to approve, revise, or
-reject that plan before implementation.
+fields, rollback, and non-claims. VL-WP1 through VL-WP3 are complete, and VL-WP4 was
+owner-approved and then deferred before execution on 2026-08-13. Reflex work is
+preserved for a later gate after the strategic-combat packages are coherent.

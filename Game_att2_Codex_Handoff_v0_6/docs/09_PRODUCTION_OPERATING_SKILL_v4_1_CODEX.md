@@ -30,8 +30,8 @@ Codex must use that skill for Game att2 requirement, design, simulator, test, ev
 - State-derived outcomes remain mandatory; actions mutate state and never select endings directly.
 - The bounded H1 fidelity fixture is implemented. Its one-second terminal diagnostic
   is inadequate for human-facing evidence; the bounded visual lab is now
-  fidelity-verified and the current gate is separate approval of its VL-WP4 owner
-  diagnostic.
+  fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13
+  before execution; the active path is dependency-ordered strategic-combat design.
 - Passing tests proves implementation fidelity, not fun, accessibility, balance, or market demand.
 
 ## Compatibility rule

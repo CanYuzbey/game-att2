@@ -26,8 +26,12 @@ not make it current authority.
 | `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` | Verified H1 fidelity results, traceability, and remaining evidence limits |
 | `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Owner-resolved interaction directions, shared-readiness boundary, and revised diagnostic requirements; no runtime approval |
 | `24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md` | Current cross-discipline status, production critical path, and design-route gates |
-| `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` | Owner-approved bounded visual-lab plan; VL-WP1 through VL-WP3 complete, VL-WP4 separately gated |
-| `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md` | Verified visual-lab fidelity results, traceability, scope audit, and current owner-diagnostic gate |
+| `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` | Bounded visual-lab plan; VL-WP1 through VL-WP3 complete, VL-WP4 deferred before execution |
+| `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md` | Verified visual-lab fidelity results and scope audit; reflex diagnostics deferred |
+| `27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved aimed-wound design direction; numeric tuning and runtime implementation remain deferred |
+| `28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved action-produced Clinch/Engaged/Distant direction and neutral cadence; card profiles and runtime remain deferred |
+| `29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md` | Owner-delegated, Codex-approved Attention Slot and physical card-economy paper direction; evidence, complete rules, and runtime boundary |
+| `30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md` | Owner-approved provisional WNR-0.1 wound/Blood/treatment/repair/self-risk/Torso paper direction; exact values tunable and runtime gated |
 
 ## Encounter 3 paper testing
 

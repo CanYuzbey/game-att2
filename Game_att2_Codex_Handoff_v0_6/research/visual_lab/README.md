@@ -1,8 +1,8 @@
 # Bounded Visual Interaction Lab v0.1
 
-Status: owner-approved and fidelity-verified local instrument. This lab reuses H1-F0
-only and is not production combat, a campaign rule, final UI, or external-player
-evidence. Results are recorded in
+Status: fidelity-verified local instrument preserved for later research. The owner
+deferred VL-WP4 before execution on 2026-08-13. This lab reuses H1-F0 only and is not
+production combat, a campaign rule, final UI, or external-player evidence. Results are recorded in
 `docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`.
 
 ## What it tests
@@ -35,9 +35,8 @@ configuration and no network request. It refuses to overwrite an existing file.
 Generated `tmp/` output is ignored by Git.
 
 The page requires two practice attempts before four recorded A/B/B/A trials. Practice
-attempts remain labeled and excluded from measured evidence. Any downloaded record
-stays local, collects no participant identity, and remains
-`OWNER_DIAGNOSTIC_PENDING_SEPARATE_APPROVAL` until that gate is explicitly opened.
+attempts remain labeled and excluded from measured evidence. VL-WP4 is deferred, so
+the page must not be used for evidence collection until a later owner gate reopens it.
 
 ## Deterministic replay
 

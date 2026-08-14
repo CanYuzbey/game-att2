@@ -3,7 +3,29 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner diagnostic still requires separate approval; human-experience evidence remains absent and Unity remains delayed.**
+Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Wound meanings, action-produced range, Attention Slot/action economy, and provisional WNR-0.1 wound/Blood/repair/treatment values are owner-approved paper directions. Exact values remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
+
+## 2026-08-13 reflex-work deferral amendment
+
+The owner deferred VL-WP4 and broader reflex-mechanics work until later. This
+supersedes the earlier same-day approval before any VL-WP4 trial or evidence capture
+occurred. The lab and deterministic fixtures remain preserved as isolated research
+infrastructure, but they are not an active gate and must not constrain the next
+strategic-combat decisions.
+
+The physical-consequence meanings were approved later on 2026-08-13. The active
+decision order now begins with space and reach, then action economy/cadence, numeric
+Blood/repair/treatment pressure, strategic defense, extraction/maintenance, encounter
+resolution, and information grammar. Reflex work may return only after those packages
+form a coherent strategic loop and before final balance or production content.
+
+## 2026-08-13 VL-WP4 owner approval amendment
+
+The owner approved the counterbalanced VL-WP4 local owner diagnostic. This opens
+only local owner execution, contamination recording, and a continue/revise/kill
+review under `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. It does not approve an
+external pilot, production Stamina/readiness, final values, campaign integration,
+characters, items, story, Encounter 3 runtime, Unity, or player-experience claims.
 
 ## 2026-08-12 owner diagnostic amendment
 
@@ -50,7 +72,8 @@ The owner subsequently approved only VL-WP1 through VL-WP3 of
 `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Their isolated implementation passed
 fidelity verification in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`.
 This does not approve a Stamina/runtime system, exact production values, final
-terminology, campaign integration, player-experience claims, or VL-WP4 owner testing.
+terminology, campaign integration, or player-experience claims. VL-WP4 owner testing
+was separately approved and then deferred before execution on 2026-08-13.
 
 ## 2026-08-11 owner amendment
 
@@ -1487,9 +1510,11 @@ A numeric value in config may override a duplicated tunable value in prose, but 
 
 They are separate resources, but the owner approved wound-class-driven Blood loss as
 the future integration rule. Simulator v0.5 still does not automatically reduce Blood
-from ordinary limb damage because wound mappings and values are not approved. Body
-loss currently changes action availability, Plead Pressure, or special surrender
-conditions. Codex must not invent the missing wound table.
+from ordinary limb damage. The qualitative wound mappings are approved by the
+2026-08-13 amendment, but thresholds, Blood values, repair values, treatment timing,
+and cap tuning are not. Body loss currently changes action availability, Plead
+Pressure, or special surrender conditions. Codex must not invent the missing numeric
+table or activate the approved meanings without a separate implementation gate.
 
 ### Disabled versus severed
 
@@ -1548,3 +1573,188 @@ archive/results/Game_att2_Combat_Simulator_Results_v0_1.md
 Codex completion report
 known gaps and reversible recommendations
 ```
+
+## 31. Owner Amendment — Approved Aimed Wound Direction (2026-08-13)
+
+The owner approved the complete design direction in
+`27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`.
+
+Locked design meanings:
+
+- Closed Trauma, Open Wound, Major Wound, and Severed Stump are the minimum wound
+  families;
+- one dominant wound is represented per body slot;
+- Untreated, Controlled, Stabilized, and Resolved are the treatment states;
+- the second qualifying Major result on the same unresolved arm or Legs wound sets
+  integrity to 0 and the attached slot to Ruined; it is unusable, non-Clean, and not
+  automatically Severed;
+- standard Field Repair restores eligible attached Damaged/Critical parts;
+- rare Reconstructive Repair may restore an attached Ruined part only to Critical;
+- Severed/Missing parts require grafting;
+- repair, treatment, Blood restoration, and grafting remain separate effects unless
+  explicitly combined;
+- clean severance lowers stump pressure relative to violent severance but does not
+  eliminate the donor wound;
+- player/enemy wound logic is symmetric except for explicit visible exceptions;
+- basic attacks may create Major Wound pressure when they Ruin a limb but still
+  cannot produce Clean harvest;
+- Ruined Torso creates conditional fatality with one explicit rescue window.
+
+This amendment approves meanings, not runtime implementation or numeric tuning. Exact
+thresholds, Blood values, repair values/costs, treatment timing, worsening, round caps,
+and the Ruined-Torso rescue requirement remain deferred until space/reach and action
+economy/cadence are defined. At the time of this amendment, the next product decision
+was space and reach representation. Amendment 33 below resolves that representation
+principle and leaves its exact settling cadence under review.
+
+## 32. Owner Amendment - Combat Identity Guardrail (2026-08-13)
+
+The owner approved the following identity correction before the space-and-reach
+proposal may advance:
+
+- Game att2 must not become an upgraded *Swords and Sandals*-style loop where the
+  player repeatedly selects an attack, compares statistics, watches damage, and
+  repeats;
+- strategic combat should use a bounded, card-like hand of tactical opportunities;
+- actions/cards must be meaningfully sourced by the current body, equipment, and
+  state, so changing or losing a body part changes what can be drawn, selected, or
+  legally executed;
+- reflex interactions are a defining execution layer for committed actions, not
+  decorative quick-time events and not replacements for strategy;
+- Blood, wounds, extraction, and lasting body changes must carry consequences across
+  the card-and-reflex loop;
+- space and reach are supporting grammar. They may enable, prevent, or be changed by
+  actions, but must not become the primary walk-forward/attack/walk-backward loop;
+- where suitable, approach, retreat, push, pull, or hold-position movement should be
+  carried by tactical actions/cards rather than requiring a dominant standalone
+  movement menu.
+
+This amendment approves an identity boundary, not a full deckbuilder, draw algorithm,
+hand size, discard system, movement implementation, reflex implementation, or content
+set. Those rules require later dependency-ordered design and validation.
+
+The owner also supplied a deferred brain/Head progression concept. A future
+Head-associated or shop-upgraded cognitive layer might bias which tactical cards
+appear, improve reflex-defense readiness, or support an adrenaline-oriented offensive
+effect. Whether this is anatomy, a Head buff, a non-replaceable progression track, or
+something else is deliberately undecided. At that decision point it was not current
+scope and could not constrain the space decision. If reopened later, it
+must complement body-sourced cards rather than make limb choice irrelevant.
+
+Amendment 35 later activates only the Attention Slot capacity/selection architecture.
+Literal brain anatomy, named regions, upgrade delivery, and example reflex/adrenaline
+effects remain deferred.
+
+## 33. Owner Amendment - Action-Produced Dynamic Range (2026-08-13)
+
+The owner resolved the representation principle for space and reach:
+
+- the shared states are Clinch, Engaged, and Distant;
+- distance is an outcome of meaningful actions, defenses, reflex results, and other
+  explicit combat events, not a freely editable movement control;
+- the game has no block, tile, coordinate, or repeated walk-turn requirement;
+- the same action may operate at multiple ranges with different visible timing,
+  accuracy, consequence, offensive, defensive, or exposure profiles;
+- Engaged is the neutral state, while unmaintained Clinch and Distant naturally settle
+  back toward Engaged;
+- a range-focused build may legitimately re-create or maintain Distant through its
+  authored body-sourced tactical opportunities;
+- general builds must receive balanced rather than unlimited access to range-changing
+  cards/effects;
+- a two-dimensional side-view presentation does not define mechanical distance.
+
+The owner approved the complete latest version on 2026-08-13. Unmaintained Clinch
+receives one complete later playable round and unmaintained Distant receives two
+before returning to Engaged. An explicit maintenance or new range outcome resets or
+preserves the state. Exact card profiles, hand rules, action values, and runtime
+implementation remain deferred. Document 28 contains the complete operational
+direction and non-goals. At that decision point, the next dependency-safe gate was
+strategic card/action economy and cadence; Amendment 35 records its later resolution.
+
+## 34. Owner Amendment - Staged Strategic Turn (2026-08-13)
+
+The owner approved the first strategic card/action-economy decision:
+
+```text
+one Preparation/utility card
+-> one Main commitment card
+-> eligible event-triggered reflex responses during resolution
+```
+
+Intent reading and a power-up for the coming attack or defense are valid Preparation
+roles. The Main card owns the primary tactical commitment. Reflex responses are not
+additional freely spendable Main cards. An explicitly marked Fast item may later sit
+outside the Main commitment, while ordinary item cards must declare Preparation or
+Main timing.
+
+This amendment did not originally decide hand lifecycle, hand size, generation
+probabilities, Fast-item limits, rare extra plays, individual cards, or runtime
+implementation. Amendment 35 now resolves the architecture-level hand decisions while
+leaving content, numeric tuning, Fast-item limits, and runtime implementation open.
+
+## 35. Owner-Delegated Approval - Attention Slots and Physical Card Economy (2026-08-14)
+
+The owner delegated researched optimization and design-direction approval to Codex.
+Document 29 records the evidence, cautions, complete rules, and paper-test gate. The
+approved architecture is:
+
+- the body owns which opportunities exist and whether their sources can execute;
+- the brain/attention selector chooses among source-supported opportunities but may
+  not invent capabilities or guarantee perfect counters;
+- the paper baseline starts with three Attention Slots and develops toward five;
+  a sixth remains evidence-gated;
+- the initial selection duties are Commitment-capable, Response-capable when a legal
+  response exists, and Adaptive; these are guarantees/biases rather than fixed card
+  compartments;
+- more slots add choices only, never ordinary plays;
+- the normal voluntary budget is zero or one Preparation and zero or one Main,
+  followed by eligible event-triggered reflex responses;
+- unused valid cards persist; Spent or Invalid cards refill only at the next Decision
+  Refresh; temporarily unusable Dormant cards remain visible;
+- one unused card may be marked Reconsider once per round for replacement at the next
+  Decision Refresh;
+- shared timing, source, occupancy, posture/commitment, and response-compatibility
+  facts replace generic action points and pairwise card bans;
+- coordinated multi-limb techniques are one Main card listing every source;
+- item opportunities may enter Adaptive/flexible slots but remain inventory-owned and
+  consume their declared timing;
+- wounded but usable limbs may act; only authored and previewed exertive/special moves
+  worsen wounds, Blood loss, or integrity;
+- player and enemy physical legality is symmetric except for explicit visible
+  exceptions.
+
+This is an approved paper-design baseline, not production proof. Exact selection
+weights, repetition damping, Fast-item limits, individual cards/content, wound and
+repair numbers, production Stamina, reflex execution, final UI, and runtime remain
+unapproved. Document 30 proposed WNR-0.1 for the wound-to-Blood, repair, treatment,
+and wounded-limb self-risk numeric gate; Amendment 36 records its later provisional
+owner approval.
+
+## 36. Owner Amendment - Provisional WNR-0.1 Numeric Direction (2026-08-14)
+
+The owner approved WNR-0.1 in document 30 as the current paper baseline while
+explicitly preserving later numeric rearrangement after every value-affecting and
+value-affected system is defined.
+
+Approved provisional baseline:
+
+- Open Wound `3` immediate / `5` periodic;
+- Major Wound `8` immediate / `8` periodic;
+- clean Stump `10` immediate / `8` periodic;
+- violent/improvised Stump `15` immediate / `12` periodic;
+- aggregate periodic cap `20`;
+- Control cost `8` and two suppressed ticks;
+- Stabilize cost `12` and encounter duration;
+- Field Repair cost `10`, restore 25% maximum integrity, ceiling 70%;
+- Reconstructive Repair cost `18`, restore attached Ruined to 35% Critical,
+  once successfully per slot per encounter;
+- authored Wound Stress `2` for Open and `4` for Major;
+- Ruined Torso must become Stabilized or Resolved by the end of the actor's next Main
+  opportunity; refusal may use one existing legal Main before catastrophic death.
+
+The qualitative ordering and separations are design authority. Exact values are
+provisional tuning variables and may change only through an explicit dependency
+review with updated paper/simulator evidence. This amendment does not approve runtime
+or configuration migration, new treatment/repair content, detailed reflex work,
+final balance, or human-experience claims. The next dependency-safe design gate is
+strategic defense roles, physical sources, effects, and stacking.

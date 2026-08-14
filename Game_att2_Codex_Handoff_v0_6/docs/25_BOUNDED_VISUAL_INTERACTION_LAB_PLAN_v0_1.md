@@ -1,10 +1,10 @@
 # Game att2 - Bounded Visual Interaction Lab Plan v0.1
 
-Status date: 2026-08-12
+Status date: 2026-08-13
 
-Status: owner-approved on 2026-08-12 for VL-WP1 through VL-WP3 only. Those bounded
-work packages are implemented and fidelity-verified in document 26. VL-WP4 remains a
-separate owner gate. This approval does not cover production combat, campaign
+Status: VL-WP1 through VL-WP3 are implemented and fidelity-verified in document 26.
+The owner separately approved and then deferred VL-WP4 before execution on
+2026-08-13. This plan is preserved for later research and does not cover production combat, campaign
 integration, final controls, content, wounds, movement, Unity, or experience claims.
 
 Authority: the owner-approved shared-readiness direction in the Development Master,
@@ -192,12 +192,12 @@ Can Yüzbey.
    explicit high-risk acknowledgement with zero network use.
 4. **VL-WP3 - deterministic evidence: COMPLETE.** Scripted replay, negative tests,
    local export, and current-campaign regressions pass; see document 26.
-5. **VL-WP4 - owner diagnostic: NOT OPEN.** Repeated counterbalanced trials,
-   contamination notes, and a continue/revise/kill disposition require a separate
-   owner approval after reviewing implementation fidelity.
+5. **VL-WP4 - owner diagnostic: DEFERRED BY OWNER 2026-08-13.** No local trial or
+   evidence capture is active. Preserve the counterbalanced protocol for a later
+   owner gate.
 
-Each work package has a stop gate. The completed approval opened VL-WP1 through
-VL-WP3 only; it did not automatically open the owner diagnostic.
+Each work package has a stop gate. VL-WP4 was opened and then deferred before
+execution on 2026-08-13; it does not open any later gate.
 
 ## 11. Stop and rollback conditions
 
@@ -217,7 +217,7 @@ unchanged.
 
 ## 12. Current gate
 
-The bounded local implementation-fidelity work passed. The owner may now approve,
-revise, or reject VL-WP4 after reviewing document 26 and the local lab. No decision in
-this document approves an external pilot, future paper content set, or final game-design
-document.
+The bounded local implementation-fidelity work passed, but VL-WP4 is deferred before
+execution. The active product path now returns to dependency-ordered strategic-combat
+decisions. No decision in this document approves an external pilot, future paper
+content set, or final game-design document.

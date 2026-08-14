@@ -1,6 +1,6 @@
 # Game att2 — Core Gameplay Direction and New-Conversation Handoff
 
-Status date: 2026-08-12
+Status date: 2026-08-13
 
 Status: owner-resolved core-gameplay direction plus reversible prototype defaults.
 The four H1 owner questions were resolved on 2026-08-11 and are specified in
@@ -34,9 +34,10 @@ visibly amplifies existing strain, and explicit body impairment separately chang
 legality or effectiveness. Blood remains the core health/currency/fuel resource.
 
 This is not production-system or runtime approval. Exact accumulation, recovery,
-terminology, and campaign integration remain provisional. The current product gate is
-owner approval of `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; the current H1
-fixture remains unchanged until that plan passes.
+terminology, and campaign integration remain provisional. VL-WP1 through VL-WP3 are
+complete, and the owner approved VL-WP4 on 2026-08-13 for local diagnostic execution
+and review only, then deferred it before execution later that day. The current H1
+fixture remains unchanged and preserved for later research.
 
 ## 1. Why this document exists
 
@@ -64,6 +65,56 @@ final narrative, full run structure, and release planning remain outside this ga
    trade ideal reward for safety, or pressure the opponent into another resolution.
 6. State-derived outcomes remain binding. A reflex input modifies an action's
    execution; it does not teleport to an authored ending or restore an unusable source.
+
+### Combat identity guardrail - approved 2026-08-13
+
+The strategic layer must not evolve into an upgraded *Swords and Sandals*-style loop
+of selecting attacks, comparing statistics, watching damage, and repeating. More
+wounds, equipment, range rules, or numbers would not solve that identity problem by
+themselves.
+
+The intended loop is:
+
+```text
+read the opponent and current bodies
+-> receive a bounded hand of tactical opportunities
+-> choose a body-sourced action/card and commit its target and risk
+-> perform any legal reflex interaction
+-> apply Blood, wound, body, extraction, and position consequences
+-> rebuild the next set of legal opportunities from the changed state
+```
+
+Cards are not merely a visual skin for an unchanged attack menu. The body should help
+determine which opportunities can appear and must determine whether their physical
+sources can execute them. Reflexes are not decorative quick-time events; they modify
+how well a legal strategic commitment resolves. Neither layer may make the other
+decorative.
+
+Space and reach remain subordinate supporting grammar. Clinch, Engaged, and Distant
+are outcomes of actions, defenses, reflex results, or other explicit combat events;
+they are not freely editable movement choices. They can change card legality and
+action profiles, but they must not create a standalone walk-forward/attack/walk-back
+loop. Unmaintained exceptional range settles toward Engaged, while a dedicated range
+build may sustain it through authored tactical opportunities.
+
+The approved neutral cadence gives unmaintained Clinch one complete later playable
+round and unmaintained Distant two complete later playable rounds before the next
+round begins Engaged. Explicit maintenance or a new range outcome preserves or resets
+the state. These are design meanings, not runtime implementation approval.
+
+This guardrail does not approve a full deckbuilder, hand size, draw/discard algorithm,
+movement-card list, broader reflex implementation, or new content.
+
+### Cognitive capacity approved; brain/Head content still deferred
+
+Document 29 now approves the Attention Slot architecture: three starting slots may
+develop toward five, and cognitive selection may bias which body-supported
+opportunities appear. Capacity adds choices, never ordinary plays; selection cannot
+guarantee ideal counters or replace limb eligibility.
+
+Literal brain anatomy, Head attachment, named brain regions, shop/graft/skill upgrade
+delivery, and example reflex/adrenaline effects remain deferred. They must be designed
+later as content/progression choices without displacing body-as-build.
 
 ## 3. Target player experience
 
@@ -109,11 +160,13 @@ Use this modifiable phase model for the first hybrid prototype:
    Apply approved ongoing effects; show public state and broad intent.
 
 2. Preparation phase
-   Choose one: Focus/observe, Fast treatment/item, short dialogue, or short step.
+   Choose one: Focus/observe, Fast treatment/item, short dialogue, or another later-
+   approved preparation action. There is no universal short-step control.
 
 3. Commitment phase
-   Choose one Main action: attack, extraction tool, prepared defense, major movement,
-   treatment, negotiation attempt, surrender/escape attempt, or another legal action.
+   Choose one Main action/card: attack, extraction tool, prepared defense,
+   range-producing tactical action, treatment, negotiation attempt, surrender/escape
+   attempt, or another legal action.
 
 4. Revalidation phase
    Recompute sources, reach, costs, statuses, and objective viability.
@@ -137,8 +190,8 @@ Use this modifiable phase model for the first hybrid prototype:
 - reflex opportunities are event-triggered, not another freely spendable Main action;
 - each committed action names its body/tool source;
 - one physical source cannot simultaneously perform incompatible Main and reflex jobs;
-- movement uses abstract range and either occupies Preparation for a short step or
-  Main for a major reposition/disengage;
+- range has no separate movement-point or generic reposition cost; the full tactical
+  action/card and its defense/reflex result own any range outcome and cost;
 - do not add Stamina or another universal resource to production combat until
   Blood/body/tempo and the approved lab evidence prove it necessary; an isolated
   shared-readiness lab hypothesis is permitted only after its bounded plan passes.
@@ -195,7 +248,7 @@ These use the same reflex-event contract; they are not separate bespoke minigame
 | Brace | Prepared Knockdown defense, not general damage prevention | Main-action tempo and usable Legs |
 | Braced Legs | One automatic Knockdown-prevention charge | Build/limb opportunity cost; no direct damage block |
 | Cover It | Enemy prepared protection of a selected valued limb for one round | Enemy Main action and commitment/exposure of the covering source |
-| Movement | Avoid or change reach rather than absorb the hit | Position and Preparation/Main tempo |
+| Range-producing response | Avoid or change reach through an authored defense/card/reflex result | Its action opportunity, source, execution, and exposure; no universal movement command |
 
 These roles are recommended defaults, not final tuned effects. They answer the minor
 trade-off questions without making them independent identity decisions.
@@ -230,9 +283,11 @@ General target-response evaluation uses:
 Possible responses—protect, heal, substitute, counterpressure, sacrifice, bargain,
 surrender, escape, or deceive—must remain legal under current state.
 
-Exact wound classes and numeric Blood mappings remain a single subordinate design
-package. Select them only after the hybrid turn cadence can be played, because timing,
-mitigation, and attack frequency determine viable numbers.
+The wound classes and qualitative physical-consequence meanings were approved by the
+2026-08-13 owner amendment in document 27. Numeric Blood, repair, treatment, and rescue
+timing remain a later subordinate package. Select those values only after the hybrid
+turn cadence can be played, because timing, mitigation, and attack frequency determine
+viable numbers.
 
 ### Macro E — Encounter resolution and body-build payoff
 
@@ -297,9 +352,11 @@ them to the owner only when a result would materially change the target experien
    response source against Anna and a body asset put at risk by using it. Damage or
    loss weakens or removes the response.
 
-The smallest testable contract derived from these decisions is
-`20_H1_HYBRID_COMBAT_SPEC_v0_1.md`. All other current questions remain subordinate or
-deferred until H1 produces evidence.
+The smallest testable contract originally derived from these decisions was
+`20_H1_HYBRID_COMBAT_SPEC_v0_1.md`. Later owner decisions deferred broader H1/reflex
+work and independently approved wound, range, staged-turn, and Attention Slot design
+directions. Use documents 24 and 27-29 for the current gate rather than treating this
+historical H1 dependency as a blocker.
 
 ## 7. First hybrid prototype — H1
 
@@ -377,6 +434,9 @@ restore broken sources, or bypass the shared consequence loop.
 | Reflex becomes QTE decoration | Every reflex requires a state-valid source and produces an explicit mutation |
 | Reflex invalidates strategy | Prepared state, source condition, reach, and original action still constrain success |
 | Strategy invalidates reflex | Reflex grades must materially change at least one meaningful consequence |
+| Combat becomes a stat-menu loop | Require the body to change tactical opportunities, require reflexes to affect committed resolution, and reject packages whose main activity is repeated attack selection |
+| Space dominates cards and bodies | Prohibit universal reposition; range changes only through meaningful action/defense/reflex outcomes and settles when unmaintained |
+| Card presentation is cosmetic | A changed or unusable body must alter available or legal tactical options, not only displayed damage numbers |
 | Defense dominates offense | Prepared defense consumes Main tempo; unprepared response is weaker/riskier |
 | Motor skill blocks the game | Timing profiles must support configurable tolerance and non-single-channel telegraphs |
 | System explodes into exceptions | One reflex-event contract; add response modules only after Block passes |

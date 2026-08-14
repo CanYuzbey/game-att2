@@ -1,10 +1,10 @@
 # Game att2 - Visual Interaction Lab Implementation Results v0.1
 
-Status date: 2026-08-12
+Status date: 2026-08-13
 
-Status: VL-WP1 through VL-WP3 implemented and fidelity-verified. VL-WP4 owner
-diagnostic is not open until separately approved. No external-player or production
-experience claim is supported by this work.
+Status: VL-WP1 through VL-WP3 implemented and fidelity-verified. The owner approved
+and then deferred VL-WP4 before execution on 2026-08-13. No external-player or
+production experience claim is supported by this work.
 
 ## 1. Executive result
 
@@ -125,7 +125,10 @@ a matching timeline cursor.
 
 The VL-WP1 through VL-WP3 implementation is suitable to merge after normal branch
 review because its acceptance requirements and repository regressions pass and its
-rollback boundary is isolated. Merging it does not open VL-WP4.
+rollback boundary is isolated. VL-WP4 was later opened by separate owner approval on
+2026-08-13 and then deferred before execution later that day.
 
-The single current product gate is owner approval, revision, or rejection of the
-counterbalanced VL-WP4 owner diagnostic using this verified lab.
+The lab has no active human diagnostic gate. The current product gate is the first
+dependency-ordered strategic-combat decision after the owner approved the
+physical-consequence meanings on 2026-08-13: space and reach representation. Wound
+numeric tuning remains later in the dependency chain.
