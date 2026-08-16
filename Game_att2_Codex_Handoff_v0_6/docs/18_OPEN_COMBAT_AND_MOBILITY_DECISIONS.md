@@ -1,6 +1,6 @@
 # Game att2 — Consolidated Combat and Mobility Decision Queue
 
-Status date: 2026-08-01
+Status date: 2026-08-16
 
 Purpose: detailed supporting register of unresolved product questions. Start future
 core-gameplay work from `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; use this
@@ -19,7 +19,7 @@ approved.
 | W-03 — PROVISIONAL PAPER DIRECTION RESOLVED 2026-08-14 | WNR-0.1 defines owner-approved tunable immediate/periodic values and retains aggregate cap 20 in document 30. | Runtime configuration and final tuning remain separately gated. | W-01, W-02, W-07 |
 | W-04 — PROVISIONAL PAPER DIRECTION RESOLVED 2026-08-14 | WNR-0.1 defines two-tick Control, encounter Stabilization, zero passive worsening chance, repair values, and visible Wound Stress. | Exact values may change after dependency review; runtime remains gated. | W-01–W-03, W-07, W-08 |
 | W-05 — PROVISIONAL PAPER DIRECTION RESOLVED 2026-08-14 | WNR-0.1 requires Stabilized/Resolved Torso by the end of the actor's next Main opportunity and preserves a final refusal action. | Catastrophic runtime tests require a separate implementation plan. | W-01–W-04 |
-| W-06 | Define which actions/passives weaken when Torso is Damaged, Critical, or Ruined. | “Physical weakness” needs capability consequences. | W-05 |
+| W-06 — RESOLVED ON PAPER 2026-08-16 | Package D makes Torso affect declared Torso/whole-body sources plus the approved Ruined-Torso deadline; it creates no second global health penalty. | Exact individual action profiles and runtime remain gated. | W-05 |
 
 ## P0 — Movement and main combat model
 
@@ -27,30 +27,29 @@ approved.
 |---|---|---|---|
 | MOV-01 — RESOLVED 2026-08-13 | One shared action-produced state: Clinch, Engaged, or Distant. No grid, coordinates, blocks, or freely editable movement command. | Exact persistence and card profiles remain open; the representation is fixed. | — |
 | MOV-02 — PARTIAL 2026-08-13 | Range changes belong to full tactical action/defense/reflex outcomes; they have no separate generic movement cost. Neutral settling is approved at one later round for Clinch and two for Distant. Exact action/card costs remain open. | Defines the real action economy without creating a locomotion layer. | MOV-01 |
-| MOV-03 | Which leg states reduce movement, dodge, initiative, reach, or stability? | Legs currently affect only Knockdown/Brace. | MOV-01, MOV-02 |
+| MOV-03 — RESOLVED ON PAPER 2026-08-16 | Package D makes Legs state affect only declared Legs-sourced/supporting posture, defense, Stand, and range-producing profiles. Legs never alter Lead automatically. | Individual profiles and runtime remain gated. | MOV-01, MOV-02 |
 | MOV-04 | Which authored cards/effects maintain range, pursue, intercept, or enable escape, and what body/tool sources them? | Survival, kiting, and escape motivations need legal affordances without a universal movement command. | MOV-01–MOV-03 |
-| ACT-01 — DESIGN DIRECTION RESOLVED 2026-08-14 | Zero or one Preparation, then zero or one Main commitment, then eligible event-triggered reflex responses. Three starting Attention Slots develop toward five and add choices, not plays. Persistent cards, Decision Refresh, Reconsider, body-owned eligibility, brain-owned selection, and shared physical commitment rules are approved in document 29. Exact weights, Fast-item limits, content, balance, and runtime remain open. | Establishes the hand/action architecture without approving a full deckbuilder or runtime. | MOV-02 |
-| ACT-02 | Are defense choices proactive stances, reactions, or both? | Brace, Guard Flesh, and Cover It currently mix timing models. | DEF-01–DEF-04 |
-| ACT-03 | How are initiative and simultaneous intentions resolved? | Needed when either actor can bargain, move, defend, or attack. | MOV-02, ACT-01 |
+| ACT-01 — DESIGN DIRECTION RESOLVED 2026-08-14; ITEM BOUNDARY RESOLVED 2026-08-16 | Zero or one Preparation, then zero or one Main commitment, then automatically surfaced eligible reflex events. Three starting Attention Slots develop toward five and add choices, not plays. Persistent cards, Decision Refresh, Reconsider, body-owned eligibility, brain-owned selection, and shared physical commitment rules are approved in documents 29 and 31. Document 34 adds one deliberately readied flexible-slot inventory opportunity, one voluntary inventory action per round, and no paper Fast-item rail. Exact weights, content, balance, runtime, and individual timing exceptions remain open. | Establishes the hand/action and item-readiness architecture without approving a full deckbuilder or runtime. | MOV-02 |
+| ACT-02 — RESOLVED 2026-08-14 | Chosen preparations may shape defense, while the legal reflex-defense event appears automatically from the incoming action and current build. It is not played from the hand. | Document 31 fixes the layered timing roles; exact reflex execution remains later. | DEF-01–DEF-04 |
+| ACT-03 — RESOLVED ON PAPER 2026-08-16 | Public Lead, two intention locks, sequential Lead-first resolution, full recomputation, unchanged Reply revalidation, and explicit cancellation/cost states are approved in document 32. | Runtime, content, exact information display, and special interrupt windows remain gated. | MOV-02, ACT-01 |
 
 ## P0 — Defense trade-offs
 
-Cover It duration is already fixed at one round. Brace is manual; Braced Legs is a
-separate automatic charge. The unresolved questions are:
+Cover It duration is fixed at one round. Brace is manual; Braced Legs is a separate
+automatic charge. Document 31 resolves the architecture-level questions:
 
-| ID | Decision required | Candidate dimensions |
+| ID | Resolved rule | Authority |
 |---|---|---|
-| DEF-01 | What exactly does Cover It protect? | One selected limb, marked limb, threatened limb, or a target category |
-| DEF-02 | What physical source is required? | Covering arm, any usable arm, torso posture, tool, or no source |
-| DEF-03 | What happens to an incoming attack? | Negate, reduce, redirect to covering source, or raise extraction difficulty |
-| DEF-04 | What is the Cover It cost/trade-off? | Enemy action, exposed covering limb, reduced offense, Blood, or limited reuse |
-| DEF-05 | Why choose manual Brace rather than Guard Flesh or movement? | Knockdown breadth must justify losing a Main action |
-| DEF-06 | Why acquire Braced Legs if manual Brace exists? | Passive charge, reliability, action preservation, and limb opportunity cost need comparison |
-| DEF-07 | Can Cover It and Brace/Guard stack? | Stacking order and caps must be explicit |
+| DEF-01 — RESOLVED 2026-08-14 | Cover It protects one declared valued limb for one round. | Document 31 |
+| DEF-02 — RESOLVED 2026-08-14 | Cover It requires another usable declared covering source; another arm is the default paper hypothesis and other sources require explicit content. | Document 31 |
+| DEF-03 — RESOLVED 2026-08-14 | Its automatic Intercept redirects direct structural pressure to the covering source without automatic reduction. | Document 31 |
+| DEF-04 — RESOLVED 2026-08-14 | It spends Main tempo, occupies/exposes the covering source, applies actual consequences there, and expires at round end. | Document 31 |
+| DEF-05 — RESOLVED 2026-08-14 | Manual Brace is reliable prepared Knockdown prevention; it does not reduce damage and occupies Legs/posture. | Document 31 |
+| DEF-06 — RESOLVED 2026-08-14 | Braced Legs preserve Main tempo as a passive fallback and do not spend their charge when an earlier layer already removes Knockdown. | Document 31 |
+| DEF-07 — RESOLVED 2026-08-14 | One preparation may shape one automatic reflex route; one compatible passive applies per unresolved consequence type. Duplicate reductions and multiple active routes are prohibited. | Document 31 |
 
-Recommended test hypothesis, not a decision: Cover It may be broader target protection
-but expose or occupy a physical covering source; manual Brace may protect only against
-Knockdown but be reliable and source-neutral beyond usable Legs.
+The complete owner-approved contract, acceptance requirements, and runtime boundary
+are in `31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`.
 
 ## P1 — Limb for Life
 
@@ -122,11 +121,19 @@ approved.
 Wound meanings, repeated-Major collapse, repair boundary, and Torso direction - RESOLVED
 → movement representation - RESOLVED
 → action economy and cadence - DESIGN DIRECTION RESOLVED
-→ wound/Blood/repair/treatment values and exact Torso rescue timing - ACTIVE NEXT GATE
-→ defense sources/effects/trade-offs
+→ wound/Blood/repair/treatment values and exact Torso rescue timing - PROVISIONAL PAPER DIRECTION RESOLVED
+→ defense sources/effects/trade-offs - RESOLVED ON PAPER
+→ initiative, intention lock, interruption, and simultaneous resolution - RESOLVED ON PAPER
+→ body-state capability mapping - RESOLVED ON PAPER (PACKAGE D)
+→ remaining card and item boundaries - RESOLVED ON PAPER (PACKAGE A2)
+→ range-maintenance action grammar - ACTIVE NEXT GATE
+→ treatment, repair, extraction, and graft commitment flow
 → Limb for Life player control
 → mental defeat model
 → negotiation timing and offer evaluation
 → victory persistence and presentation
-→ motivation profiles and human-test thresholds
+→ information and presentation grammar
+→ numeric reconciliation
+→ content-readiness gate
+→ reflex mechanics only after explicit reopening
 ```

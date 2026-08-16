@@ -122,8 +122,8 @@ responses are required before locking motivation, balance, or final narrative.
 ## Deferred decisions
 
 - Final Jeff canon and dialogue.
-- `Cover It` target, source, damage behavior, and trade-off. Duration is fixed at one
-  round, with no automatic persistence.
+- `Cover It` runtime implementation and exact values. Document 31 later approves its
+  one-round paper target/source/redirection/trade-off contract without activating it.
 - Direct Jeff-to-Blood threat and Ruined player-Torso consequence.
 - Final generalized surrender psychology and boss-specific motivations.
 - Whether all encounters expose motivation clues at the same information level.

@@ -4,6 +4,20 @@
 
 Tests prove faithful implementation and detect numerical/systemic problems. They do not prove fun.
 
+Documents 27 through 33 contain later owner-approved paper directions. They do not
+change this simulator acceptance baseline. Before any implementation of document 32,
+an approved bounded plan must add deterministic tests for Lead assignment and
+alternation, two-lock information order, on-lock versus on-execution costs, changed-
+state Reply revalidation, cancellation states, automatic reflex integration, death
+before Reply, atomic completion, and genuine same-timing batches.
+
+For document 33, a future approved implementation plan must trace its
+SMI-D requirements to deterministic tests for source profiles, weakest-source
+selection, Desperate/Dormant distinction, effect delivery and final-recipient
+ownership, centralized caps/expiry, coherent-baseline snapshots, Echo hard caps,
+one-axis collision suppression, prohibited Echo channels, readable previews, and
+player/enemy symmetry. Illustrative Poison/Burn cases are not production content.
+
 ## 1. Unit tests
 
 ### Configuration and definitions
@@ -45,7 +59,8 @@ Tests prove faithful implementation and detect numerical/systemic problems. They
 
 - config locks Cover It duration to exactly one round while its effect remains
   explicitly runtime-deferred;
-- no test may infer Cover It damage reduction, redirection, target, or source;
+- document 31 supplies the approved paper target/source/redirection contract, but no
+  runtime test may infer or implement it before a separate approved migration plan;
 - ordinary runtime limb damage must not create the newly approved wound-to-Blood
   behavior before a separate implementation gate supplies validated numeric config;
 - future wound implementation tests must cover the approved four families, one

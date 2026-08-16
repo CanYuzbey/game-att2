@@ -1,6 +1,6 @@
 # Game att2 — Core Gameplay Direction and New-Conversation Handoff
 
-Status date: 2026-08-13
+Status date: 2026-08-16
 
 Status: owner-resolved core-gameplay direction plus reversible prototype defaults.
 The four H1 owner questions were resolved on 2026-08-11 and are specified in
@@ -38,6 +38,13 @@ terminology, and campaign integration remain provisional. VL-WP1 through VL-WP3 
 complete, and the owner approved VL-WP4 on 2026-08-13 for local diagnostic execution
 and review only, then deferred it before execution later that day. The current H1
 fixture remains unchanged and preserved for later research.
+
+The 2026-08-16 Package D owner amendment in document 33 resolves body-state
+capability mapping on paper. Local source condition owns Full, Strained, Desperate,
+Dormant, or Invalid profiles; a closed effect-package interface owns reusable effect
+semantics; and capped actor-relative Integrity Echo may alter one micro-axis without
+changing legality, Attention Slots, plays, Lead, or automatic-response availability.
+Runtime and effect content remain unapproved.
 
 ## 1. Why this document exists
 
@@ -153,6 +160,12 @@ need, willingness, or fear. Neither should expose unexplained internal numbers.
 
 ### Macro B — Hybrid turn and reflex structure
 
+**Owner amendment, 2026-08-16:** document 32 supersedes the reversible ordering below
+for future design work with a public Lead, Lead-first lock, bounded telegraph, Reply
+lock, sequential Lead resolution, full state recomputation, and unchanged Reply
+revalidation. It preserves the Preparation/Main budget and automatic reflex boundary.
+The older phase model remains historical context and does not change current runtime.
+
 Use this modifiable phase model for the first hybrid prototype:
 
 ```text
@@ -242,6 +255,12 @@ These use the same reflex-event contract; they are not separate bespoke minigame
 
 #### Provisional defense roles
 
+Owner amendment, 2026-08-14: document 31 supersedes the provisional status of this
+table with the approved layered automatic defense contract. Reflex defense is a
+transient event automatically surfaced from the incoming action and current build,
+not a manually played Response card. The table remains useful role context; document
+31 owns final preparation, automatic-event, passive-stacking, and consequence rules.
+
 | Mechanic | Default role | Primary trade-off |
 |---|---|---|
 | Guard Flesh | Prepared direct-damage defense; improves Block and commits/exposes the guarding arm | Main-action tempo, Blood, and source availability |
@@ -250,8 +269,9 @@ These use the same reflex-event contract; they are not separate bespoke minigame
 | Cover It | Enemy prepared protection of a selected valued limb for one round | Enemy Main action and commitment/exposure of the covering source |
 | Range-producing response | Avoid or change reach through an authored defense/card/reflex result | Its action opportunity, source, execution, and exposure; no universal movement command |
 
-These roles are recommended defaults, not final tuned effects. They answer the minor
-trade-off questions without making them independent identity decisions.
+These roles are now architecture-level approved through document 31, while exact
+success calculation, mitigation, exposure values, reflex inputs, readiness, and
+runtime implementation remain deferred.
 
 ### Macro D — Body consequences and tactical conflict
 

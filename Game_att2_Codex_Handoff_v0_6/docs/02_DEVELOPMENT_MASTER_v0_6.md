@@ -3,7 +3,7 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Wound meanings, action-produced range, Attention Slot/action economy, and provisional WNR-0.1 wound/Blood/repair/treatment values are owner-approved paper directions. Exact values remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
+Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Wound meanings, action-produced range, Attention Slot/action economy, provisional WNR-0.1 values, layered automatic defense, public-Lead sequential conflict resolution, Package D Source-First Modular Integrity, and Package A2 Readied Inventory card/item boundaries are owner-approved paper directions. Exact values and effect content remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
 
 ## 2026-08-13 reflex-work deferral amendment
 
@@ -1678,7 +1678,7 @@ The owner approved the first strategic card/action-economy decision:
 ```text
 one Preparation/utility card
 -> one Main commitment card
--> eligible event-triggered reflex responses during resolution
+-> automatically surfaced eligible reflex events during resolution
 ```
 
 Intent reading and a power-up for the coming attack or defense are valid Preparation
@@ -1703,12 +1703,12 @@ approved architecture is:
   not invent capabilities or guarantee perfect counters;
 - the paper baseline starts with three Attention Slots and develops toward five;
   a sixth remains evidence-gated;
-- the initial selection duties are Commitment-capable, Response-capable when a legal
-  response exists, and Adaptive; these are guarantees/biases rather than fixed card
-  compartments;
+- the initial selection duties are Commitment-capable, Response-supporting when a
+  legal proactive defense/support opportunity exists, and Adaptive; these are
+  guarantees/biases rather than fixed card compartments;
 - more slots add choices only, never ordinary plays;
 - the normal voluntary budget is zero or one Preparation and zero or one Main,
-  followed by eligible event-triggered reflex responses;
+  followed by automatically surfaced eligible reflex events;
 - unused valid cards persist; Spent or Invalid cards refill only at the next Decision
   Refresh; temporarily unusable Dormant cards remain visible;
 - one unused card may be marked Reconsider once per round for replacement at the next
@@ -1756,5 +1756,136 @@ The qualitative ordering and separations are design authority. Exact values are
 provisional tuning variables and may change only through an explicit dependency
 review with updated paper/simulator evidence. This amendment does not approve runtime
 or configuration migration, new treatment/repair content, detailed reflex work,
-final balance, or human-experience claims. The next dependency-safe design gate is
-strategic defense roles, physical sources, effects, and stacking.
+final balance, or human-experience claims. Amendment 37 records the later approved
+  strategic-defense package.
+
+## 37. Owner Amendment - Layered Automatic Strategic Defense (2026-08-14)
+
+The owner approved Package A with one material clarification: reflexive defense is not
+a card the player manually plays. A legal reflex-defense event appears automatically
+from the incoming action, current build, source legality, range, posture, preparation,
+and existing commitments. The build raises or lowers the inspectable response profile;
+it cannot make an unusable source act or guarantee a perfect counter.
+
+The approved paper chain is:
+
+```text
+chosen preparation or stance, if any
+-> automatically surfaced legal reflex-defense event
+-> one compatible passive modifier per unresolved consequence type
+-> final body, wound, Blood, range, and capability consequences
+```
+
+At most one active reflex route resolves against one ordinary incoming action. Guard
+Flesh prepares and improves an automatic arm-sourced Block rather than stacking a
+second reduction. Brace remains a manual Main stance against Knockdown. Braced Legs
+remain a passive fallback whose charge is not consumed when an earlier layer already
+removes Knockdown. Cover It becomes a one-round Main protection of one valued limb,
+using another declared covering source to open an automatic Intercept that redirects
+structural pressure into that source. Ordinary Dodge/Evade is incompatible with a
+whole-body or Legs-heavy Charge.
+
+Reflex-defense events do not occupy Attention Slots or consume voluntary plays.
+Document 29's Response-capable selection duty is clarified as Response-supporting: it
+may surface a proactive guard, stance, intent-reading action, or other strategic
+preparation, but not the transient reflex event itself. Additional slots never grant
+additional reflex events or improved grades.
+
+The full approved contract, causal order, acceptance requirements, hostile review, and
+scope boundary are in
+`31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`.
+
+This is paper authority only. It does not change Guard Flesh's current `50%` simulator
+effect, activate Cover It, implement Dodge/Evade, choose reflex inputs or success
+numbers, promote readiness/Stamina, or alter runtime/configuration. Amendment 38 later
+resolves the initiative/conflict architecture on paper.
+
+## 38. Owner Amendment - Public Lead and Sequential Conflict Resolution (2026-08-16)
+
+The owner approved Package A. Each ordinary round has one public Lead and one Reply.
+The Lead prepares and locks a Main commitment first, the Reply receives the permitted
+telegraph and locks second, then the Lead resolves first. All state mutations and
+forced consequences settle before the Reply's unchanged commitment is revalidated.
+
+The first-round Lead is encounter-authored and public; Lead normally alternates after
+an ordinary completed round. Only an explicit visible action, body effect, or
+encounter rule may seize or retain it. No hidden initiative roll or generic Speed stat
+is approved.
+
+Most locks reserve commitments without paying ordinary execution costs. Prepared
+defenses that must already exist before the first action activate and pay authored
+on-lock costs. A locked action canceled before execution loses its Main tempo but
+preserves unpaid execution resources and item uses. A started atomic action pays its
+costs, becomes Spent, and completes. Reflex defense remains an automatic build-derived
+event inside incoming-action resolution rather than a manually played Response card.
+
+The full contract, cancellation table, requirements, hostile review, and scope
+boundary are in
+`32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md`.
+
+This is paper authority only. Runtime, configuration, individual content, detailed
+interrupt checkpoints, exact intent presentation, and reflex execution remain
+unapproved. Amendment 39 later resolves body-state capability mapping on paper.
+
+## 39. Owner Amendment - Source-First Modular Integrity System (2026-08-16)
+
+The owner approved Package D as the complete paper answer to body-state capability
+mapping. Every action, preparation, item/tool use, and automatic reflex route declares
+its physical sources. Intact sources use Full profiles; Damaged sources use Strained
+profiles; Critical sources require an explicit Desperate profile or become Dormant;
+Disabled, Ruined, Severed, Missing, and otherwise unusable sources are Offline and
+make dependent opportunities Invalid. Occupied/reserved sources create temporary
+Dormancy. Multi-source actions use their weakest required source.
+
+Package D rejects a future universal `100% / 75% / 50%` design in favor of bounded
+shared deterioration axes. It also approves a centralized Effect Package Contract
+with sparse `apply`, `resist`, `cleanse`, and rare `immune` declarations. `POISON` and
+`BURN` are architecture examples only, not production effects or content.
+
+Integrity Echo openly amends the normal local-capability/wound-pressure separation.
+It compares current structural state with the actor's own coherent encounter-start
+build and derives visible Coherent, Shaken, or Fractured bands. It applies at most one
+capped micro-modifier, never changes legality, sources, Attention Slots, plays, Lead,
+automatic-response availability, Blood, death, or encounter outcome, and never stacks
+onto the same axis already worsened by the local profile.
+
+The full contract, causal order, paper cases, requirements, hostile review, and scope
+boundary are in
+`33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md`.
+
+This is paper authority only. Existing simulator impairment, configuration, values,
+cards, items, effects, Guard Flesh, reflex behavior, and scenarios remain unchanged.
+At the close of Amendment 39 the next dependency-safe design gate was remaining card
+and item boundaries; Amendment 40 records its later resolution.
+
+## 40. Owner Amendment - Readied Inventory Card/Item Boundary (2026-08-16)
+
+The owner approved Package A2 after a comparable-system review and authorized its
+continuation as the paper answer to remaining card and item boundaries. Document 34
+records the full contract, evidence limits, acceptance cases, requirements, and
+hostile review.
+
+Every opportunity now declares one primary origin: body, inventory, state, or
+automatic. During Decision Refresh, an actor may deliberately assign at most one
+eligible owned item or tool to an Adaptive/flexible Attention Slot. The item is not
+randomly injected, the whole inventory is not freely playable, and the minimum
+Commitment-capable body opportunity remains protected.
+
+Activated inventory opportunities use Preparation or Main timing. Package A2 creates
+no free Fast-item rail and permits at most one voluntary inventory-origin action per
+actor per round. Reconsider may replace the readied inventory opportunity before use,
+but cannot refresh its Spent slot or create a second item action. Inventory owns uses,
+expiry, and legality; execution-time uses are deducted only when execution begins;
+multi-source tools use their weakest required source and cannot silently substitute
+tool, grip, or source after lock.
+
+Approved state-required affordances are guaranteed into the appropriate existing slot
+duty and remain tied to real ownership, sources, costs, and timing; they create no
+bonus slot or play. Passive equipment and Reflexive Defence remain automatic;
+an activated equipment use still requires the readied inventory opportunity. A
+card/action may name at most one governed signature override, but it cannot waive
+ownership, source legality, timing budget, causal order, or evidence.
+
+This is paper authority only. Existing runtime Focus/Fast-item/Main behavior,
+configuration, tests, production cards/items, values, balance, UI, and content remain
+unchanged. The next dependency-safe design gate is range-maintenance action grammar.

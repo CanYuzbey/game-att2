@@ -43,8 +43,21 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
 - WNR-0.1: owner-approved provisional paper values for wound-to-Blood, repair,
   treatment, wounded-limb self-risk, and Ruined-Torso rescue. Exact numbers remain
   tunable and runtime/configuration remain gated.
-- Current product gate: strategic defense roles, physical sources, effects, and
-  stacking without reopening the approved wound, range, or hand architecture.
+- Strategic defense contract: Package A is owner-approved on paper. Reflex defense
+  appears automatically from the incoming action and current build rather than being
+  manually played as a Response card; preparation and passives remain bounded layers.
+- Initiative and conflict resolution: Package A is owner-approved on paper. Public
+  Lead, two intention locks, sequential causal resolution, and explicit cancellation
+  states are fixed; runtime and configuration remain gated.
+- Body-state capability mapping: Package D is owner-approved on paper. Source-owned
+  Full/Strained/Desperate profiles, centralized modular effect packages, and bounded
+  actor-relative Integrity Echo are fixed as architecture; values, content, runtime,
+  and configuration remain gated.
+- Card/item boundaries: Package A2 is owner-approved on paper. One deliberately
+  readied inventory opportunity occupies a flexible Attention Slot, inventory uses
+  the Preparation/Main budget, and no free Fast-item rail is approved. Runtime and
+  production content remain unchanged.
+- Current product gate: range-maintenance action grammar.
 - Space-and-reach direction: Clinch, Engaged, and Distant are owner-directed shared
   states produced by action/defense/reflex outcomes, not movement controls. Document
   28 records the approved neutral-settling cadence; runtime remains unapproved.
@@ -97,6 +110,26 @@ The approved strategic card/action-economy direction is
 [docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md](docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md).
 It defines three-to-five Attention Slots, persistent cards, Decision Refresh,
 Reconsider, and shared physical compatibility. No runtime card system is approved.
+The owner-approved provisional wound/Blood/repair numeric direction is
+[docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md](docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md).
+The owner-approved layered automatic defense contract is
+[docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md](docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md).
+It separates chosen preparation, automatically surfaced build-derived reflex events,
+compatible passive protection, and final consequence resolution. Runtime remains
+unchanged.
+The owner-approved initiative and conflict-resolution contract is
+[docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md](docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md).
+It fixes public Lead, two intention locks, sequential revalidation, cost timing, and
+cancellation states without changing runtime.
+The owner-approved Source-First Modular Integrity contract is
+[docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md](docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md).
+It fixes source-owned capability profiles, a bounded central effect-package
+interface, and capped Integrity Echo without approving effect content or runtime.
+The owner-approved card/item boundary is
+[docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md](docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md).
+It fixes deliberate one-slot inventory readiness, one voluntary inventory action per
+round, shared Preparation/Main timing, item lifecycle, tool/source handling, and the
+automatic/state-action boundary without changing runtime.
 
 The owner-approved local Block lab is operated from
 [research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
@@ -247,6 +280,9 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 25. `docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
 26. `docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md`
 27. `docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md`
+28. `docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`
+29. `docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md`
+30. `docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -500,11 +536,12 @@ The automated suite passes, but passing tests do not erase known gaps:
 - **P1 — product gate:** simulator evidence does not establish fun, balance, or readiness for Unity.
 - **P2 — player evidence:** the interactive shell has owner-diagnostic and automated
   coverage, but no valid external-pilot session.
-- **P1 — physical rules:** wound meanings and the Ruined-Torso direction are approved;
-  numeric values, exact rescue timing, and runtime migration remain open, so ordinary
-  runtime limb damage does not yet create the new wound-to-Blood behavior.
-- **P1 — defense:** Cover It lasts one round, but its source, target, effect, and
-  trade-off against manual Brace/Braced Legs/Guard Flesh remain open.
+- **P1 — physical rules:** wound meanings, provisional WNR-0.1 values, and the
+  Ruined-Torso rescue direction are approved on paper; runtime migration remains open,
+  so ordinary runtime limb damage does not yet create the new wound-to-Blood behavior.
+- **P1 — defense implementation:** the automatic layered defense architecture and
+  Cover It role are approved on paper, but success calculation, exact mitigation,
+  detailed reflex execution, configuration, and runtime remain unapproved.
 - **P1 — combat structure:** movement/range and action-economy architecture are
   approved on paper, but individual profiles, values, human evidence, and runtime are
   not defined beyond the current survey harness.
@@ -545,9 +582,10 @@ These timestamps are repository events, not complete labor-hour records. No auth
 
 ## Recommended next step
 
-Define strategic defense roles, physical sources, effects, and stacking against the
-approved wound, range, and Attention Slot architecture. Reflex diagnostics, story,
-final UI, content expansion, an external pilot, Encounter 3 runtime, and engine
+Resolve range-maintenance action grammar: determine which existing action profiles
+can maintain, release, or exploit Clinch/Engaged/Distant without creating a universal
+movement command, new production content, or runtime behavior. Reflex diagnostics,
+story, final UI, content expansion, an external pilot, Encounter 3 runtime, and engine
 production remain deferred.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.

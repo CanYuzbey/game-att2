@@ -7,7 +7,19 @@ Owner amendment date: 2026-08-01.
 v0.5 locks Blood 0 as death, promotes Limb for Life to an explicit limb-sacrifice
 death-prevention rule, distinguishes manual Brace from the Braced Legs automatic
 charge, and fixes Cover It duration at one round. Wound-to-Blood mappings and the
-actual Cover It protection effect remain deferred and must not be invented by runtime.
+actual Cover It protection effect remain unimplemented in runtime and must not be
+inferred without a separate implementation gate. Document 31 now supplies the later
+owner-approved paper direction without changing this simulator ruleset.
+Document 32 supplies the later owner-approved Public Lead and two-lock sequential
+resolution direction. Its initiative, revalidation, and cancellation rules are also
+paper authority only and do not replace the runtime sequence below.
+Document 33 supplies the later owner-approved Source-First Modular Integrity paper
+direction. Its Full/Strained/Desperate profiles, effect-package interface, and
+Integrity Echo do not replace the runtime `100% / 75% / 50%` impairment rules below.
+Document 34 supplies the later owner-approved Readied Inventory card/item boundary.
+Its deliberate flexible-slot readiness, one voluntary inventory action per round,
+and paper rejection of a free Fast-item rail do not replace the implemented Focus,
+Fast-item, and Main sequence below.
 
 ## 1. Round sequence
 
@@ -194,7 +206,8 @@ Two distinct mechanics share related language and must remain visibly separate:
 
 The automatic charge does not trigger on failed attempts or while already Downed and
 refreshes at encounter start. The final trade-off between manual Brace, Braced Legs,
-Guard Flesh, and Cover It remains open.
+Guard Flesh, and Cover It remains unimplemented in this simulator baseline. Its later
+paper architecture is approved in document 31.
 
 ## 7. Fast items
 
@@ -331,7 +344,8 @@ The required roll must be visible in logs before commitment.
 - Jeff may choose Cover It again on a later round only by spending another enemy
   action;
 - its protected target, damage handling, source requirement, and trade-off against
-  Brace remain deferred, so Cover It is not an active runtime intent yet;
+  Brace are approved on paper in document 31 but remain runtime-deferred, so Cover It
+  is not an active runtime intent yet;
 - marked limb causes a configurable protect/use response once that effect is approved;
 - loss/disable of action arms changes available actions;
 - surrender conditions above.

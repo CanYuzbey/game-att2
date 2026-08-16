@@ -1,6 +1,6 @@
 # Game att2 - Strategic Card and Action Economy Direction
 
-Status date: 2026-08-14
+Status date: 2026-08-16
 
 Status: **OWNER-DELEGATED, CODEX-APPROVED DESIGN DIRECTION - PAPER BASELINE ONLY; RUNTIME, CONTENT, AND FINAL BALANCE NOT APPROVED**
 
@@ -14,6 +14,12 @@ specification. It does not authorize production code, a full deckbuilder, indivi
 character or item cards, production Stamina, exact draw weights, final UI, or claims
 that the system is fun, balanced, accessible, or scientifically optimal.
 
+Owner amendment, 2026-08-14: document 31 clarifies that reflex-defense events are
+automatically surfaced from the incoming action and current build. They are not cards
+the player manually plays and do not occupy Attention Slots. The selection duty below
+is therefore read as Response-supporting strategic preparation, not a reflex-response
+card guarantee.
+
 ## 1. Plain-language summary
 
 The body decides what the fighter is physically capable of. The brain decides which
@@ -25,7 +31,7 @@ current body + equipment + combat state
 -> eligible tactical opportunities
 -> a small persistent brain/attention hand
 -> at most one Preparation and one Main commitment
--> eligible event-triggered reflex responses
+-> automatically surfaced eligible reflex events from the attack and current build
 -> physical consequences change the next opportunity pool
 ```
 
@@ -76,16 +82,17 @@ The starting three slots use flexible guarantees:
 
 1. **Commitment-capable:** at least one currently executable Main opportunity when
    the actor has any legal Main opportunity.
-2. **Response-capable:** one legal defensive or reflex-supporting opportunity when
-   the current body and state support one.
+2. **Response-supporting:** one legal proactive guard, stance, intent-reading action,
+   or other strategic preparation when the current body and state support one.
 3. **Adaptive:** a Preparation, utility, treatment, item, control, alternative Main,
    or build-specific opportunity.
 
 These are selection duties, not permanent Attack/Dodge/Utility compartments. A card
-may satisfy more than one intent. A Response-capable offer is not automatically the
-expected or best answer to the enemy's exact attack, and reflex execution can still
-fail. If no Response-capable opportunity exists, that selection duty becomes
-Adaptive; the system must not fabricate a Dodge unsupported by the body.
+may satisfy more than one intent. A Response-supporting offer is not the reflex event
+itself and does not guarantee the expected or best answer to the enemy's exact attack.
+If no Response-supporting strategic opportunity exists, that selection duty becomes
+Adaptive; the automatic reflex system must not fabricate a Dodge unsupported by the
+body.
 
 Later slots are flexible or specialized by an approved cognitive progression effect.
 The selection system must not guarantee an ideal answer to every enemy intention.
@@ -97,12 +104,13 @@ The staged turn remains:
 ```text
 zero or one Preparation
 -> zero or one Main commitment
--> eligible event-triggered reflex responses during resolution
+-> automatically surfaced eligible reflex events during resolution
 ```
 
 Preparation and Main may be voluntarily skipped. Skipping does not bank an extra play
-for a later round. Reflex responses are opened by events and compatibility, not spent
-from a general pool of extra Main actions.
+for a later round. Reflex responses are opened automatically by the incoming event,
+build legality, and physical compatibility. They are not spent from the hand or from a
+general pool of extra Main actions.
 
 No generic movement points or action points are added to the baseline. Dynamic range
 continues to be produced by action, defense, and reflex outcomes.
@@ -214,7 +222,7 @@ The selector pipeline for the paper specification is:
 enumerate source-supported opportunities
 -> remove permanently impossible opportunities
 -> calculate current profiles, costs, and risk
--> satisfy Commitment/Response/Adaptive duties where possible
+-> satisfy Commitment/Response-supporting/Adaptive duties where possible
 -> fill flexible slots using declared weights
 -> produce a seeded, inspectable selection record
 ```
@@ -248,8 +256,10 @@ Approved general rules:
 4. A Preparation may reserve or commit a source; the preview must show which later
    Main and Response routes it disables.
 5. A card that is illegal before commitment cannot be paid or consumed.
-6. A committed card interrupted during resolution follows its authored interruption
-   rule; the event log must distinguish cancellation from a resolved failure.
+6. Document 32 now supplies the default: a locked card canceled before execution loses
+   Main tempo, preserves unpaid execution resources, and recomputes Ready, Dormant, or
+   Invalid. A card whose atomic execution began pays its costs, becomes Spent, and
+   completes. An authored special checkpoint may override only when explicit.
 7. An exception must be visible before commitment and pass through the same source,
    cost, consequence, and logging rules.
 
@@ -307,8 +317,9 @@ by the wound/Blood/treatment numeric gate.
 - Range changes are results written into action, defense, and later reflex profiles;
   there is no universal Walk card or freely editable range control.
 - Dormant cards explain which state prevents use.
-- Reflex responses must be both event-eligible and physically compatible with the
-  committed sources and posture.
+- Reflex events are automatically surfaced only when they are event-eligible and
+  physically compatible with the committed sources and posture; they never require a
+  persistent Response card.
 - The exact reflex interaction families remain deferred as previously ordered.
 
 ## 9. Information shown to the player
@@ -453,15 +464,17 @@ direction:
 
 - three starting Attention Slots and five as the normal developed paper baseline;
 - sixth slot deferred;
-- flexible Commitment/Response/Adaptive selection duties;
+- flexible Commitment/Response-supporting/Adaptive selection duties;
 - slot growth expands choice only;
-- zero-or-one Preparation, zero-or-one Main, then eligible reflex responses;
+- zero-or-one Preparation, zero-or-one Main, then automatically surfaced eligible
+  reflex events;
 - persistent unused cards, Decision Refresh, and one Reconsider per round;
 - Ready/Dormant/Invalid/Spent lifecycle;
 - body-owned eligibility and brain-owned selection;
 - shared timing/source/commitment compatibility instead of generic action points;
 - one-card treatment of coordinated multi-limb techniques;
-- bounded Adaptive/flexible item injection;
+- bounded Adaptive/flexible inventory opportunity, with its exact access rule then
+  resolved by document 34;
 - authored, previewed wounded-limb self-risk;
 - player/enemy physical-rule symmetry.
 
@@ -470,7 +483,7 @@ Not approved yet:
 - individual cards, characters, items, skills, or spells;
 - exact selection weights and repetition damping;
 - final slot cap or progression cost after human evidence;
-- Fast-item count and exact item timing;
+- individual item timing/content and any exception to document 34's default;
 - wound-to-Blood, integrity, repair, treatment, and self-risk numbers;
 - production Stamina;
 - detailed reflex execution;
@@ -479,3 +492,43 @@ Not approved yet:
 The owner approved document 30's WNR-0.1 as the provisional wound-to-Blood, repair,
 treatment, and wounded-limb self-risk paper baseline. It uses this approved turn and
 hand cadence without rewriting them; exact numbers remain tunable and runtime-gated.
+
+Document 31 later clarifies the response boundary: Attention Slots may surface
+strategic preparations that support defense, but the reflex-defense event itself is a
+transient build-derived affordance and never a played card.
+
+## 15. Later Package D reconciliation (2026-08-16)
+
+Document 33 formalizes body-owned card capability as Full, Strained, optional
+Desperate, Dormant, or Invalid source profiles. The weakest required source governs a
+multi-source action; occupied/reserved sources create Dormancy; offline sources create
+Invalidity. Decision Refresh and Reconsider select only from the resulting current
+eligible pool.
+
+Cards may reference centralized effect packages through sparse apply/resist/cleanse
+declarations and may deliver compatible source-owned payloads. They do not own private
+effect timing, stacking, or cap rules. Each card also declares one Integrity Echo
+sensitivity and may name one collision-only fallback, but at most one Echo modifier
+can apply. Echo cannot change slot count, draw duties, Preparation/Main budget, card
+legality, or automatic-response availability.
+
+Individual profiles, item timing classes, Fast-item limits, signature overrides, and
+the minimum complete paper card set remain the next design gate.
+
+## 16. Later Package A2 reconciliation (2026-08-16)
+
+Document 34 resolves the architecture-level item boundary with Package A2. A usable
+owned item or tool is deliberately readied in at most one Adaptive/flexible Attention
+Slot during Decision Refresh; it is not randomly injected and the whole inventory is
+not freely playable. Reconsider may replace the readied item before inventory
+execution, but cannot refresh a Spent inventory slot or create a second item action.
+
+Every activated item uses Preparation or Main timing. At most one voluntary
+inventory-origin action executes per actor per round, while approved state-required
+actions remain contextual and automatic Reflexive Defence remains outside the hand.
+Inventory continues to own uses, expiry, sources, and loss. Multi-source tools use
+their weakest required source and cannot substitute tool or grip after lock.
+
+This supersedes the earlier open Fast-item/access boundary at architecture level.
+Individual production items, signature timing exceptions, values, runtime, and the
+simulator's existing Fast-item sequence remain deferred.

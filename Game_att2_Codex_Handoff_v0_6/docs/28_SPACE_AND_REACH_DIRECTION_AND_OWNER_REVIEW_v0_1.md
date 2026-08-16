@@ -1,6 +1,6 @@
 # Game att2 - Action-Produced Space and Reach Direction
 
-Status date: 2026-08-13
+Status date: 2026-08-16
 
 Status: **OWNER-APPROVED DESIGN DIRECTION - RUNTIME IMPLEMENTATION NOT APPROVED**
 
@@ -499,7 +499,9 @@ This direction does not decide or approve:
 - numeric timing, accuracy, damage, offense, defense, or exposure values;
 - broader reflex interactions or timing windows;
 - exact Legs impairment effects on range cards;
-- pursuit, escape, initiative, simultaneous commitment, or cancellation costs;
+- pursuit or escape content; initiative, simultaneous commitment, and cancellation
+  architecture are resolved later by document 32, while individual action profiles
+  and special checkpoints remain deferred;
 - multi-actor combat, maps, terrain, facing, line of sight, or collision;
 - new weapons, characters, items, skills, spells, or production UI;
 - the deferred brain/Head progression concept;
@@ -524,3 +526,12 @@ This direction does not decide or approve:
 
 Card availability, hand rules, individual range profiles, action costs, and strategic
 cadence come later. None is approved by the space-direction approval.
+
+## 21. Later Package D reconciliation (2026-08-16)
+
+Document 33 makes an action's current range consequence one permitted local
+deterioration axis. Only an action that declares a required/supporting body source and
+an authored Full/Strained/Desperate range profile may change that profile through
+source damage. Integrity Echo has no independent range axis and cannot move actors,
+change reach, or preserve an invalid plan. Individual range cards remain part of the
+remaining card/content gate.

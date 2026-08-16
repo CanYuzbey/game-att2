@@ -32,6 +32,10 @@ not make it current authority.
 | `28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved action-produced Clinch/Engaged/Distant direction and neutral cadence; card profiles and runtime remain deferred |
 | `29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md` | Owner-delegated, Codex-approved Attention Slot and physical card-economy paper direction; evidence, complete rules, and runtime boundary |
 | `30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md` | Owner-approved provisional WNR-0.1 wound/Blood/treatment/repair/self-risk/Torso paper direction; exact values tunable and runtime gated |
+| `31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md` | Owner-approved layered automatic defense contract; reflex events are build-derived rather than played Response cards; runtime and detailed reflex execution remain gated |
+| `32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md` | Owner-approved public-Lead, two-lock, sequential conflict-resolution paper contract; runtime, content, and exact presentation remain gated |
+| `33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md` | Owner-approved Package D source profiles, centralized effect-package interface, and bounded Integrity Echo; values, production effects, and runtime remain gated |
+| `34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md` | Owner-approved Package A2 deliberate inventory readiness, one-inventory-action limit, item/tool lifecycle, and card/item origin boundary; runtime and content remain gated |
 
 ## Encounter 3 paper testing
 

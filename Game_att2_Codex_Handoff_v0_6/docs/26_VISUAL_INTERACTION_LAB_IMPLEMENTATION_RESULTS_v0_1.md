@@ -128,7 +128,7 @@ review because its acceptance requirements and repository regressions pass and i
 rollback boundary is isolated. VL-WP4 was later opened by separate owner approval on
 2026-08-13 and then deferred before execution later that day.
 
-The lab has no active human diagnostic gate. The current product gate is the first
-dependency-ordered strategic-combat decision after the owner approved the
-physical-consequence meanings on 2026-08-13: space and reach representation. Wound
-numeric tuning remains later in the dependency chain.
+The lab has no active human diagnostic gate. At this result's decision point, space
+and reach was the first dependency-ordered strategic-combat gate after approval of
+the physical-consequence meanings. Documents 28 through 32 now record the later
+paper decisions; document 24 owns the current product gate.

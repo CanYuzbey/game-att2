@@ -77,8 +77,8 @@ Actions:
 
 - Desperate Swing, source arm, base 10, target player arm or torso.
 - Cover It, one-round enemy posture. It must be selected again to recur; protection
-  target/effect/source and its trade-off against Brace remain deferred, so the current
-  CLI does not execute it.
+  target/effect/source and its trade-off against Brace are approved on paper in
+  document 31, but runtime remains deferred, so the current CLI does not execute it.
 - Plead/incapacity surrender.
 
 Rewards/path:
@@ -118,3 +118,6 @@ Actions:
 ## Excluded content
 
 Bone-Minotaur, Many-Eyed Flesh, Octopus Fingers, Predator Eyes, angelic parts, Rotten Core, Mechanical Heart, curses, rot, Regrowth Vaccine, Wrong Recipient, Sell the Pain, full Promise debt, shops, random loot, meta unlocks.
+
+Document 33's `POISON`, `BURN`, Venomous Right Arm, and Needle Jab are illustrative
+architecture fixtures only. They are not additions to this content catalogue.

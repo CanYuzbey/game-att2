@@ -1,6 +1,6 @@
 # Game att2 - Wound, Blood, Repair, and Torso Numeric Package
 
-Status date: 2026-08-14
+Status date: 2026-08-16
 
 Status: **OWNER-APPROVED PROVISIONAL PAPER BASELINE - RUNTIME NOT APPROVED; EXACT VALUES REMAIN TUNABLE**
 
@@ -441,3 +441,15 @@ This approval promotes the package for future paper specifications and dependenc
 analysis only. Runtime/configuration implementation requires a separate approved plan,
 migration away from the loose `BLEEDING` tag, deterministic tests, exploit checks,
 and a fresh balance review.
+
+## 15. Later Package D reconciliation (2026-08-16)
+
+Package D does not change WNR-0.1 values. A modular effect that creates a wound,
+Blood loss, treatment, repair, or `WOUND_STRESS` must invoke this numeric contract
+explicitly rather than reproducing its arithmetic.
+
+Structural repair may improve a source profile and reduce Integrity Echo when it
+restores the actor toward the encounter-start coherent baseline. Control,
+Stabilization, or Resolution without structural repair changes wound/Blood pressure
+only and does not restore local capability or Integrity Echo. Exact Echo thresholds
+and micro-values are separate tunable paper variables.

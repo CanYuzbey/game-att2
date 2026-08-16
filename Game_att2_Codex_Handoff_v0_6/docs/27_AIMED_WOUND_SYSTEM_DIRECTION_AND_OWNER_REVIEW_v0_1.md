@@ -1,6 +1,6 @@
 # Game att2 - Approved Aimed Wound System Direction
 
-Status date: 2026-08-13
+Status date: 2026-08-16
 
 Status: **OWNER-APPROVED DESIGN DIRECTION — RUNTIME IMPLEMENTATION NOT APPROVED**
 
@@ -874,3 +874,19 @@ This document's former next dependencies—space/reach and strategic cadence—w
 resolved in documents 28 and 29. The owner approved document 30's WNR-0.1 as a
 provisional numeric paper baseline on 2026-08-14. Exact values remain tunable and
 outside runtime until a separate implementation gate.
+
+## 22. Later Package D reconciliation (2026-08-16)
+
+Document 33 preserves structural state as the primary owner of local capability and
+wounds as the owner of Blood/treatment pressure. Full/Strained/Desperate profiles
+replace a future universal percentage ladder without changing the current runtime.
+
+Integrity Echo is an explicit bounded amendment: in-encounter structural deterioration
+relative to the actor's own coherent start may alter one additional micro-axis. It
+cannot change source legality, duplicate a wound/Blood consequence, or stack onto the
+same axis already degraded locally. Structural repair may reduce derived Echo; wound
+treatment without structural repair does not.
+
+Central effect packages may change structure, wound, treatment, repair, or Blood only
+by invoking this document's existing contracts at an explicit causal stage. Package D
+does not approve Poison, Burn, or another production effect family.

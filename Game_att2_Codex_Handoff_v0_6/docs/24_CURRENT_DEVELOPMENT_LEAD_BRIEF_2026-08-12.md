@@ -1,8 +1,8 @@
 # Game att2 - Current Development Lead Brief
 
-Status date: 2026-08-14
+Status date: 2026-08-16
 
-Status: active cross-discipline production brief. Read with documents 19 through 30.
+Status: active cross-discipline production brief. Read with documents 19 through 34.
 This file summarizes current authority; it does not replace the Development Master,
 Combat Rules, technical specification, or decision ledger.
 
@@ -17,29 +17,88 @@ The current product task is not story production, final UI, engine selection, or
 small content roster. The bounded visual diagnostic is now implemented and
 fidelity-verified without changing the approved campaign or declaring final combat
 rules. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before
-execution. Space/reach and the strategic card/action-economy architecture are now
-approved design directions. The active dependency-ordered gate is the wound-to-Blood,
-repair, treatment, and wounded-limb self-risk numeric package. The physical-
-consequence meanings were approved on 2026-08-13 without final numeric tuning or
-runtime implementation approval.
+execution. Space/reach, the strategic card/action-economy architecture, provisional
+WNR-0.1 values, layered automatic defense, public-Lead sequential conflict
+resolution, Package D Source-First Modular Integrity, and Package A2 Readied
+Inventory card/item boundaries are now approved paper directions. The active
+dependency-ordered gate is range-maintenance action grammar. Runtime implementation
+remains unapproved.
 
 The owner-approved combat identity guardrail continues to apply: the game must not
 become upgraded stat-menu dueling. Body-sourced tactical
 cards, reflex execution, and lasting physical consequences define the intended loop;
 space is an action-produced supporting state and must not become the primary activity.
 
-## 1A. Latest owner-delegated approval recorded on 2026-08-14
+## 1A. Latest owner decision recorded on 2026-08-16
+
+The owner approved Package A2 as the paper answer to remaining card and item
+boundaries. Document 34 fixes one deliberately selected Readied Inventory opportunity
+in a flexible Attention Slot, one voluntary inventory-origin action per actor per
+round, Preparation/Main timing with no free Fast-item rail, inventory-owned lifecycle,
+and Reconsider swapping that cannot refresh a Spent inventory slot.
+
+State-required approved affordances are guaranteed into the appropriate existing slot
+duty without adding a slot/play and remain tied to real ownership and legality.
+Passive equipment and Reflexive Defence remain automatic; activated tools
+require readiness, declare exact sources, use their weakest required source, and
+cannot substitute tool or grip after lock. Runtime, production content, individual
+values/exceptions, UI, balance, and human-experience claims remain deferred. The next
+gate is range-maintenance action grammar.
+
+## 1B. Earlier owner decision recorded on 2026-08-16
+
+The owner approved Package D as the complete paper answer to body-state capability
+mapping. Document 33 fixes source-owned Full/Strained/Desperate profiles, weakest-
+required-source handling, centralized modular effect packages, source payload
+delivery to the actual recipient, and Coherent/Shaken/Fractured Integrity Echo.
+
+Echo compares against the actor's own encounter-start body, changes at most one
+micro-axis, never double-stacks with local degradation, and cannot change legality,
+Attention Slots, plays, Lead, reflex-route existence, Blood/death, or outcomes.
+Poison and Burn are illustrative architecture fixtures only. Runtime, configuration,
+effect content, individual card profiles, exact Echo thresholds/values, and final
+presentation remain deferred. Document 34 later resolves the card/item boundary.
+
+## 1C. Earlier owner decision recorded on 2026-08-16
+
+The owner approved Package A for initiative and conflict resolution. Each round uses
+one public Lead and one Reply. The Lead prepares and locks first; the Reply sees the
+permitted telegraph and locks second; the Lead resolves; all state and forced
+consequences settle; then the Reply's unchanged commitment is revalidated. Lead
+normally alternates and may be seized or retained only by an explicit visible effect.
+
+Document 32 fixes prepared-defense on-lock activation, ordinary on-execution costs,
+three cancellation states, no replacement action after cancellation, atomic started
+actions, and genuine same-timing batches. Reflex defense remains automatic inside an
+incoming action. This is paper authority only; runtime, configuration, content,
+exact presentation, and reflex execution remain deferred. Document 33 later resolves
+body-state capability mapping on paper.
+
+## 1D. Earlier owner decision recorded on 2026-08-14
+
+The owner approved Package A with a clarification that reflexive defense is not a card
+the player manually plays. The incoming action and current build automatically surface
+one legal reflex-defense event when its physical requirements are satisfied. Chosen
+preparation may shape that event, and one compatible passive may modify each remaining
+consequence type. Document 31 records the Guard Flesh, Brace, Braced Legs, Cover It,
+Dodge/Evade, source-invalidation, Attention Slot, and wound-consequence boundaries.
+
+This is paper authority only. Exact success calculation, detailed reflex execution,
+readiness, runtime, and configuration remain deferred. Document 32 later resolves the
+initiative/conflict architecture on paper.
+
+## 1E. Owner-delegated approval recorded on 2026-08-14
 
 The owner delegated research, optimization, and design-direction approval for the
 brain-slot proposal. Codex approved the document 29 paper architecture: three
-Attention Slots developing toward five, flexible Commitment/Response/Adaptive duties,
+Attention Slots developing toward five, flexible Commitment/Response-supporting/Adaptive duties,
 persistent cards with Decision Refresh and one Reconsider per round, body-owned
 eligibility, brain-owned selection, and shared physical compatibility instead of
 generic action points. More slots add choices only. Individual cards, exact weights,
 Fast-item limits, wound/repair values, production Stamina, reflex execution, final UI,
 and runtime remain unapproved.
 
-## 1B. Earlier owner decision recorded on 2026-08-13
+## 1F. Earlier owner decision recorded on 2026-08-13
 
 The owner approved the complete latest action-produced range direction. Clinch,
 Engaged, and Distant are shared combat states created by action, defense, reflex, and
@@ -48,7 +107,7 @@ one complete later playable round and unmaintained Distant receives two before
 settling to Engaged. Dedicated range builds may explicitly maintain or re-create their
 state. Runtime, individual card profiles, hand rules, and balance remain deferred.
 
-## 1C. Earlier owner decision recorded on 2026-08-13
+## 1G. Earlier owner decision recorded on 2026-08-13
 
 The owner approved a combat identity guardrail. Strategic play should use a bounded
 card-like hand whose opportunities and legality reflect the body and current state;
@@ -62,7 +121,7 @@ A cognitive capacity/selection role is now approved in document 29. Literal
 brain/Head anatomy, progression delivery, and named reflex/offensive effects remain
 deferred and may not displace limb-based build identity.
 
-## 1D. Earlier owner decision recorded on 2026-08-13
+## 1H. Earlier owner decision recorded on 2026-08-13
 
 The owner approved every recommendation and all eight decisions in the aimed-wound
 direction. This locks wound families, dominant-wound occupancy, treatment/repair
@@ -128,7 +187,7 @@ isolated counterfactual overlays for actual comparison work.
 | Simulator engineering | Fidelity gate passed with maintenance debt | Change only for an approved research requirement |
 | Hybrid combat | Strategic direction approved; reflex research preserved but deferred | Complete strategic-combat packages in dependency order |
 | Human evidence | No VL-WP4 evidence and no valid external pilot | Defer until the strategic loop is coherent |
-| Combat systems | Wounds, movement, defense balance, recovery, and resolution incomplete | Make packages timely from lab evidence |
+| Combat systems | Wounds, movement, action economy, WNR-0.1, defense, conflict timing, Package D capability mapping, and Package A2 card/item boundaries approved on paper; range maintenance and encounter resolution remain incomplete | Continue the dependency-ordered paper packages |
 | Story and characters | Theme and encounter functions exist; canon remains thin | Wait until combat and information grammar stabilize |
 | UI/UX | Research lab implements the narrow information contract | Diagnose it; do not treat it as final UI |
 | Art/audio | Directional inspiration only | No production asset gate |
@@ -144,10 +203,16 @@ reflex diagnostics and broader reflex mechanics - DEFERRED
 -> action-produced range and settling cadence - APPROVED, RUNTIME DEFERRED
 -> strategic card/action economy and cadence - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
 -> wound-to-Blood values and stabilization tuning - PROVISIONAL PAPER DIRECTION APPROVED
--> strategic defense roles and stacking - NEXT DESIGN GATE
--> extraction and maintenance rules
--> encounter resolution rules
+-> strategic defense roles and stacking - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
+-> initiative and conflict timing - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
+-> body-state capability mapping - APPROVED PACKAGE D PAPER DIRECTION, RUNTIME DEFERRED
+-> remaining card and item boundaries - APPROVED PACKAGE A2 PAPER DIRECTION, RUNTIME DEFERRED
+-> range-maintenance action grammar - NEXT DESIGN GATE
+-> treatment, repair, extraction, and graft commitment flow
+-> Limb for Life and catastrophic survival
+-> mental defeat, surrender, negotiation, and encounter resolution rules
 -> information and interaction grammar
+-> numeric reconciliation
 -> later reflex-mechanics gate
 -> minimum complete game-design paper
 -> paper content set for a few characters, items, and encounters
@@ -167,8 +232,13 @@ packages rather than a long list of disconnected questions:
    Torso handling.
 2. **Space and tempo package:** action-produced range profiles, neutral settling,
    action/card cost, preparation, Main action, and triggered response timing.
-3. **Defense and readiness package:** Guard Flesh, Block, Brace, Braced Legs, Cover It,
-   shared readiness, repetition, recovery, stacking, and source exposure.
+3. **Defense and conflict architecture - approved in documents 31 and 32:** Guard Flesh, automatic
+   build-derived reflex defense, Brace, Braced Legs, Cover It, stacking, and source
+   exposure; public Lead, two locks, sequential revalidation, and cancellation states.
+   Shared readiness, repetition, and detailed reflex execution remain at the later
+   reflex gate. Package D resolves body-state capability architecture and Package A2
+   resolves card/item boundaries; range-maintenance action grammar is the active next
+   package.
 4. **Extraction and maintenance package:** preservation quality, emergency graft,
    integration, repair, item timing, and downstream body consequences.
 5. **Encounter resolution package:** offensive incapacity, surrender, one bounded
@@ -205,10 +275,12 @@ design around unresolved rules.
 
 The owner-approved action-produced range direction remains binding: Clinch, Engaged,
 and Distant are outcomes rather than movement controls. Document 29 resolves the
-strategic hand/action architecture as an approved paper baseline. The owner approved
-document 30's WNR-0.1 numeric wound/Blood/repair package as a provisional paper
-baseline on 2026-08-14, while keeping exact values tunable after connected systems are
-defined. Runtime and configuration remain unchanged. The next dependency-safe design
-gate is strategic defense roles, physical sources, effects, and stacking. Reflex work,
-runtime card/wound implementation, an external pilot, content expansion, and
-production integration remain deferred.
+strategic hand/action architecture, document 30 provides provisional WNR-0.1 values,
+document 31 resolves layered automatic defense, document 32 resolves public-Lead
+sequential conflict timing, document 33 resolves Source-First Modular Integrity, and
+document 34 resolves Readied Inventory card/item boundaries on paper. A legal reflex-
+defense event is build-derived and automatically surfaced rather than manually played
+from an Attention Slot. Runtime and configuration remain unchanged. The next
+dependency-safe gate is range-maintenance action grammar. Detailed reflex work,
+runtime card/wound/defense/timing/integrity/item implementation, an external pilot,
+content expansion, and production integration remain deferred.

@@ -1,5 +1,81 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-16 owner decision: approve Package A2 Readied Inventory boundary
+
+The owner approved Package A2 as the paper answer to remaining card and item
+boundaries after reviewing comparable shipped systems. One eligible owned item or
+tool may be deliberately readied in an Adaptive/flexible Attention Slot during
+Decision Refresh. It is not randomly injected and inspecting the inventory does not
+make every carried item playable.
+
+Activated inventory opportunities use Preparation or Main timing. There is no paper
+Fast-item rail, and at most one voluntary inventory-origin action executes per actor
+per round. Reconsider may replace the readied item before use but cannot refresh a
+Spent inventory slot. Inventory owns uses, expiry, and legality; multi-source tools
+use their weakest required source and cannot substitute item, grip, or source after
+lock.
+
+State-required approved affordances are guaranteed into the appropriate existing slot
+duty, create no bonus slot/play, and remain tied to real ownership and legality.
+Passive equipment and Reflexive Defence remain automatic; activated
+equipment still requires readiness. This is paper authority only. Runtime,
+configuration, production content, individual values/exceptions, UI, balance, and
+human-experience claims remain deferred. The next dependency-safe gate is
+range-maintenance action grammar.
+
+## 2026-08-16 owner decision: approve Package D Source-First Modular Integrity
+
+The owner approved Package D as the paper answer to body-state capability mapping.
+Local source state derives Full, Strained, Desperate, Dormant, or Invalid capability;
+multi-source actions use their weakest required source. Shared profile axes replace a
+future universal percentage ladder without changing the current runtime baseline.
+
+Package D also approves a closed centralized effect-package interface and sparse
+apply/resist/cleanse/immune declarations. Poison and Burn remain illustrative
+architecture fixtures, not content. Source payloads deliver only through compatible
+cards and effects follow the actual recipient after automatic defense/redirection.
+
+Integrity Echo compares current structure with the actor's own coherent encounter-
+start build. Its Coherent/Shaken/Fractured bands may apply at most one capped
+micro-modifier, never alter legality, slots, plays, Lead, reflex-route existence,
+Blood/death, or outcomes, and never double-punish the local degradation axis.
+
+This is paper authority only. Runtime, configuration, exact values, production
+effects/cards/items, and final presentation remain deferred. At that decision point
+the next gate was remaining card and item boundaries; document 34 later resolves it.
+
+## 2026-08-16 owner decision: approve public-Lead sequential conflict resolution
+
+The owner approved Package A in document 32. One visible Lead prepares and locks
+first, the Reply receives bounded intent information and locks second, then the Lead
+resolves. State and forced consequences fully settle before the Reply's unchanged
+commitment is revalidated. Lead normally alternates; explicit visible effects may
+seize or retain it. Hidden initiative rolls and a generic Speed stat are rejected.
+
+Prepared defenses that must exist before first resolution activate and pay on lock.
+Ordinary execution costs and item uses are paid only when execution begins. A locked
+action canceled before execution loses Main tempo but preserves unpaid execution
+resources; no replacement source, target, or action is selected. Automatic reflex
+defense remains inside the incoming action and is not manually played.
+
+This is paper authority only. Runtime, configuration, individual content, exact
+intent presentation, and detailed reflex execution remain deferred. Document 33 later
+resolves body-state capability mapping on paper.
+
+## 2026-08-14 owner decision: approve layered automatic strategic defense
+
+The owner approved Package A and clarified that reflexive defense is not manually
+played. A legal Block, Intercept, Dodge/Evade, or later reflex-defense event appears
+automatically from the incoming action and current build. Chosen preparation shapes
+that event; one compatible passive may then modify each unresolved consequence type.
+The event consumes neither an Attention Slot nor another voluntary play.
+
+Document 31 fixes the architecture-level roles of Guard Flesh, Brace, Braced Legs,
+Cover It, and Dodge/Evade; limits one ordinary incoming action to one active reflex
+route; and assigns wounds/Blood to the final recipient and damage. Success numbers,
+input families, readiness, runtime, and configuration remain deferred. Document 32
+later resolves the initiative/conflict architecture on paper.
+
 ## 2026-08-14 owner decision: approve provisional WNR-0.1 numeric direction
 
 The owner approved document 30's WNR-0.1: bounded immediate/periodic wound values, two-tick
@@ -14,7 +90,7 @@ gate.
 The owner delegated researched optimization and design-direction approval for the
 brain-slot proposal. Document 29 approves the paper baseline: three Attention Slots
 develop toward five and add choices rather than plays; flexible
-Commitment/Response/Adaptive duties replace rigid card compartments; unused valid
+Commitment/Response-supporting/Adaptive duties replace rigid card compartments; unused valid
 cards persist; Decision Refresh refills Spent/Invalid slots; one Reconsider is
 available per round; the body owns eligibility; the brain owns selection; and shared
 physical commitments replace generic action points and pairwise bans.
@@ -49,8 +125,8 @@ This approval closes the physical-consequence meaning gate. It does not approve
 runtime implementation, new repair content, or numbers. Thresholds, Blood values,
 repair amounts/costs, treatment duration, worsening, cap tuning, and exact Torso rescue
 timing were deferred until space/reach and action economy/cadence were defined. Those
-architecture gates are now resolved on paper. Wound/Blood/repair/treatment values and
-exact rescue timing are the active next gate.
+architecture gates are now resolved on paper. Document 30 later resolved the
+provisional wound/Blood/repair/treatment values and rescue timing on paper.
 
 ## 2026-08-13 owner decision: defer reflex work and VL-WP4
 
@@ -199,6 +275,11 @@ stance; Braced Legs separately provide one automatic Knockdown-prevention charge
 encounter. The final balance among Cover It, Brace, Braced Legs, and Guard Flesh is not
 approved.
 
+**Later disposition (2026-08-14):** document 31 resolves these architecture-level
+roles through chosen preparation, one automatically surfaced build-derived reflex
+event, compatible passive protection, and final consequence ownership. Runtime and
+detailed reflex execution remain deferred.
+
 **Negotiation and mental defeat:** Defeat acceptance is a background mental state
 derived from objective viability, recovery hope, desperation, honor, and character
 traits. It may lead to negotiation, surrender, resistance, escape, or awaiting mercy.
@@ -243,8 +324,9 @@ deferred decisions are in `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.
 `Cover It` effect/trade-off, wound mappings, Ruined player-Torso consequences, and
 final surrender psychology remain owner decisions.
 
-**Later disposition (2026-08-13):** wound mappings and the Ruined-Torso direction are
-now approved in document 27. Cover It and final surrender psychology remain open.
+**Later disposition (2026-08-14):** wound mappings and the Ruined-Torso direction are
+approved in document 27, and the Cover It paper architecture is approved in document
+31. Final surrender psychology and all associated runtime gates remain open.
 
 ## 2026-07-23 owner decision: simulator causal-integrity correction
 
@@ -336,6 +418,10 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - unmaintained Clinch receives one complete later playable round and unmaintained
   Distant receives two before settling to Engaged;
 - side-view presentation creates no grid, block, or travel-turn rules;
+- reflex-defense events appear automatically from attack/build legality and are not
+  manually played Response cards;
+- chosen preparation, one automatic reflex route, compatible passive protection, and
+  final consequence resolution form the bounded defense chain;
 - limbs are the main build engine;
 - blood is health/currency/fuel for prototype;
 - six slots for first demo;
@@ -372,12 +458,21 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - final save/load format;
 - final Limb for Life selection/control rules beyond the approved seeded prototype;
 - exact Attention Slot selection weights, repetition damping, final capacity balance,
-  Fast-item limits, and individual card content beyond the approved document 29
-  lifecycle;
+  individual item/card content, and any signature timing exception beyond documents
+  29 and 34;
 - exact range profile and maintenance effects for each action/card;
 - whether approved cognitive capacity/selection progression is anatomical, Head-
   linked, shop/table/skill delivered, or represented through another fiction;
 - exact cognitive biases such as reflex readiness, offense, or adrenaline behavior.
+- exact automatic reflex-defense success model, timing/input families, mitigation,
+  source exposure, readiness/repetition effects, and accessibility equivalence beyond
+  the approved document 31 architecture.
+- exact Package D Full/Strained/Desperate card profiles, Integrity Echo thresholds and
+  micro-values, in-encounter coherence recalibration, and individual signature
+  overrides;
+- any production modular-effect catalogue or final Poison/Burn semantics and content.
+- exact range-maintenance profiles: which existing actions maintain, release, or
+  exploit Clinch/Engaged/Distant without a universal movement command.
 
 ## Implementation questions Codex may resolve reversibly
 
@@ -400,6 +495,8 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 | Space becomes the main game | Medium | High | optimal play repeats standalone approach/retreat instead of choosing tactical actions | prohibit a universal reposition command; range changes through action/defense/reflex outcomes |
 | Neutral range creates dead turns | Medium | High | general builds wait for a movement draw or cannot use their hand | multi-range profiles plus visible settling toward Engaged; validate hand usability later |
 | Cognitive progression invalidates body builds | Medium | Very high | Attention Slot upgrades guarantee ideal hands or overpower limb-granted actions | slots add choices rather than plays; selector cannot invent capabilities; test three versus five and withhold a sixth without evidence |
+| Readied inventory becomes a mandatory healing slot | Medium | High | the same treatment is readied regardless of body, range, or opponent | protect body commitment access; record repeated readiness and revise Package A2 if inventory choice collapses |
+| Reconsider creates item chains | Low | Very high | a Spent inventory slot is swapped/refilled for a second item action | document 34 forbids refresh after inventory execution; add negative lifecycle cases before runtime approval |
 | Table has one answer | High | Medium | integrate selected almost universally | strategy/batch table rates |
 | Unstable hated/ignored | Medium | High | always stabilize or never graft | path and collapse metrics |
 | Anna path one-sided | Medium | Medium | offer always accepted/rejected | two integration scenarios |
