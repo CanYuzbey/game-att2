@@ -32,6 +32,7 @@ approved.
 | ACT-01 — DESIGN DIRECTION RESOLVED 2026-08-14; ITEM BOUNDARY RESOLVED 2026-08-16 | Zero or one Preparation, then zero or one Main commitment, then automatically surfaced eligible reflex events. Three starting Attention Slots develop toward five and add choices, not plays. Persistent cards, Decision Refresh, Reconsider, body-owned eligibility, brain-owned selection, and shared physical commitment rules are approved in documents 29 and 31. Document 34 adds one deliberately readied flexible-slot inventory opportunity, one voluntary inventory action per round, and no paper Fast-item rail. Exact weights, content, balance, runtime, and individual timing exceptions remain open. | Establishes the hand/action and item-readiness architecture without approving a full deckbuilder or runtime. | MOV-02 |
 | ACT-02 — RESOLVED 2026-08-14 | Chosen preparations may shape defense, while the legal reflex-defense event appears automatically from the incoming action and current build. It is not played from the hand. | Document 31 fixes the layered timing roles; exact reflex execution remains later. | DEF-01–DEF-04 |
 | ACT-03 — RESOLVED ON PAPER 2026-08-16 | Public Lead, two intention locks, sequential Lead-first resolution, full recomputation, unchanged Reply revalidation, and explicit cancellation/cost states are approved in document 32. | Runtime, content, exact information display, and special interrupt windows remain gated. | MOV-02, ACT-01 |
+| PROC-01 — RESOLVED ON PAPER 2026-08-17 | Package B keeps treatment, Blood restoration, repair, extraction, and grafting separate; assigns Preparation/Main/contextual defaults; reserves exact sources; pays ordinary costs on execution; and makes started procedure chains atomic. | Document 36 resolves architecture only. Production profiles/values, runtime, detailed interruption checkpoints, and post-combat opponent-access predicates remain gated. | W-01–W-08, ACT-01–ACT-03 |
 
 ## P0 — Defense trade-offs
 
@@ -127,8 +128,8 @@ Wound meanings, repeated-Major collapse, repair boundary, and Torso direction - 
 → body-state capability mapping - RESOLVED ON PAPER (PACKAGE D)
 → remaining card and item boundaries - RESOLVED ON PAPER (PACKAGE A2)
 → range-maintenance action grammar - RESOLVED ON PAPER (PACKAGE C)
-→ treatment, repair, extraction, and graft commitment flow - ACTIVE NEXT GATE
-→ Limb for Life player control
+→ treatment, repair, extraction, and graft commitment flow - RESOLVED ON PAPER (PACKAGE B)
+→ Limb for Life and catastrophic survival - ACTIVE NEXT GATE
 → mental defeat model
 → negotiation timing and offer evaluation
 → victory persistence and presentation

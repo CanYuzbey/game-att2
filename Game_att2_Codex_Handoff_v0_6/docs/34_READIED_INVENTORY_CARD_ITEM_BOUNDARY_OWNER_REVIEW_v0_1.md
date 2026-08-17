@@ -484,4 +484,15 @@ Main tool may produce only the range result declared by its exact current source
 range profile; cancellation preserves unpaid use but provides no maintenance. The
 neutral `RANGE_DIAGNOSTIC_MAIN` record is paper evidence only and cannot enter the
 inventory or content catalogue. Runtime remains unchanged. The next dependency-safe
-gate is treatment, repair, extraction, and graft commitment flow.
+gate was treatment, repair, extraction, and graft commitment flow; section 21 records
+its later resolution.
+
+## 21. Later Package B resolution (2026-08-17)
+
+Document 36 resolves that gate with Tiered Atomic Commitments. Authored treatment and
+Blood-restoration items may use Preparation; Claim and extraction tools use Main;
+ordinary uses pay on execution; exact items/tools/sources cannot substitute after
+lock; and pre-execution cancellation preserves unpaid uses. One inventory Preparation
+cannot be followed by a second voluntary inventory Main in the same round. Contextual
+salvage/graft never invents ownership or a bonus slot/play. Runtime and production
+content remain unchanged.

@@ -2,7 +2,7 @@
 
 Status date: 2026-08-17
 
-Status: active cross-discipline production brief. Read with documents 19 through 35.
+Status: active cross-discipline production brief. Read with documents 19 through 36.
 This file summarizes current authority; it does not replace the Development Master,
 Combat Rules, technical specification, or decision ledger.
 
@@ -20,9 +20,10 @@ rules. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before
 execution. Space/reach, the strategic card/action-economy architecture, provisional
 WNR-0.1 values, layered automatic defense, public-Lead sequential conflict
 resolution, Package D Source-First Modular Integrity, Package A2 Readied Inventory
-card/item boundaries, and Package C Resolution-Bound Range Tenure are now approved
-paper directions. The active dependency-ordered gate is treatment, repair,
-extraction, and graft commitment flow. Runtime implementation remains unapproved.
+card/item boundaries, Package C Resolution-Bound Range Tenure, and Package B Tiered
+Atomic Commitments are now approved paper directions. The active dependency-ordered
+gate is Limb for Life and catastrophic survival. Runtime implementation remains
+unapproved.
 
 The owner-approved combat identity guardrail continues to apply: the game must not
 become upgraded stat-menu dueling. Body-sourced tactical
@@ -30,6 +31,20 @@ cards, reflex execution, and lasting physical consequences define the intended l
 space is an action-produced supporting state and must not become the primary activity.
 
 ## 1A. Latest owner decision recorded on 2026-08-17
+
+The owner approved Package B as the paper answer to treatment, repair, extraction,
+and graft commitment flow. Document 36 keeps treatment, Blood restoration,
+structural repair, extraction, and grafting separate; fixes their default
+Preparation/Main/contextual timing; reserves exact sources; pays ordinary costs and
+uses on execution; and makes started procedure chains atomic.
+
+Extraction creates a separate donor wound/consequence and harvested-part object.
+Salvage and graft remain contextual and cannot invent access, ownership, or bonus
+combat tempo. Runtime, production profiles/values, content, UI, detailed interrupts,
+and human-experience claims remain deferred. The next gate is Limb for Life and
+catastrophic survival.
+
+## 1B. Earlier owner decision recorded on 2026-08-17
 
 The owner approved Package C as the paper answer to range-maintenance action grammar.
 Document 35 fixes Neutral/Exploit/Maintain/Shift/Create/Release classifications,
@@ -39,10 +54,11 @@ boundaries, source-profile revalidation, and sequential Lead/Reply range contest
 No current production action becomes a maintainer or intentional releaser by
 implication. One neutral diagnostic profile may exercise positive cases without
 entering content or runtime. Production profiles, exact values, UI, balance, runtime,
-and human-experience claims remain deferred. The next gate is treatment, repair,
-extraction, and graft commitment flow.
+and human-experience claims remain deferred. At that point, the next gate was
+treatment, repair, extraction, and graft commitment flow; section 1A records its
+later resolution.
 
-## 1B. Earlier owner decision recorded on 2026-08-16
+## 1C. Earlier owner decision recorded on 2026-08-16
 
 The owner approved Package A2 as the paper answer to remaining card and item
 boundaries. Document 34 fixes one deliberately selected Readied Inventory opportunity
@@ -56,10 +72,10 @@ Passive equipment and Reflexive Defence remain automatic; activated tools
 require readiness, declare exact sources, use their weakest required source, and
 cannot substitute tool or grip after lock. Runtime, production content, individual
 values/exceptions, UI, balance, and human-experience claims remain deferred. At that
-decision point, the next gate was range-maintenance action grammar; section 1A
+decision point, the next gate was range-maintenance action grammar; section 1B
 records its later resolution.
 
-## 1C. Earlier owner decision recorded on 2026-08-16
+## 1D. Earlier owner decision recorded on 2026-08-16
 
 The owner approved Package D as the complete paper answer to body-state capability
 mapping. Document 33 fixes source-owned Full/Strained/Desperate profiles, weakest-
@@ -73,7 +89,7 @@ Poison and Burn are illustrative architecture fixtures only. Runtime, configurat
 effect content, individual card profiles, exact Echo thresholds/values, and final
 presentation remain deferred. Document 34 later resolves the card/item boundary.
 
-## 1D. Earlier owner decision recorded on 2026-08-16
+## 1E. Earlier owner decision recorded on 2026-08-16
 
 The owner approved Package A for initiative and conflict resolution. Each round uses
 one public Lead and one Reply. The Lead prepares and locks first; the Reply sees the
@@ -88,7 +104,7 @@ incoming action. This is paper authority only; runtime, configuration, content,
 exact presentation, and reflex execution remain deferred. Document 33 later resolves
 body-state capability mapping on paper.
 
-## 1E. Earlier owner decision recorded on 2026-08-14
+## 1F. Earlier owner decision recorded on 2026-08-14
 
 The owner approved Package A with a clarification that reflexive defense is not a card
 the player manually plays. The incoming action and current build automatically surface
@@ -101,7 +117,7 @@ This is paper authority only. Exact success calculation, detailed reflex executi
 readiness, runtime, and configuration remain deferred. Document 32 later resolves the
 initiative/conflict architecture on paper.
 
-## 1F. Owner-delegated approval recorded on 2026-08-14
+## 1G. Owner-delegated approval recorded on 2026-08-14
 
 The owner delegated research, optimization, and design-direction approval for the
 brain-slot proposal. Codex approved the document 29 paper architecture: three
@@ -112,7 +128,7 @@ generic action points. More slots add choices only. Individual cards, exact weig
 Fast-item limits, wound/repair values, production Stamina, reflex execution, final UI,
 and runtime remain unapproved.
 
-## 1G. Earlier owner decision recorded on 2026-08-13
+## 1H. Earlier owner decision recorded on 2026-08-13
 
 The owner approved the complete latest action-produced range direction. Clinch,
 Engaged, and Distant are shared combat states created by action, defense, reflex, and
@@ -121,7 +137,7 @@ one complete later playable round and unmaintained Distant receives two before
 settling to Engaged. Dedicated range builds may explicitly maintain or re-create their
 state. Runtime, individual card profiles, hand rules, and balance remain deferred.
 
-## 1H. Earlier owner decision recorded on 2026-08-13
+## 1I. Earlier owner decision recorded on 2026-08-13
 
 The owner approved a combat identity guardrail. Strategic play should use a bounded
 card-like hand whose opportunities and legality reflect the body and current state;
@@ -135,7 +151,7 @@ A cognitive capacity/selection role is now approved in document 29. Literal
 brain/Head anatomy, progression delivery, and named reflex/offensive effects remain
 deferred and may not displace limb-based build identity.
 
-## 1I. Earlier owner decision recorded on 2026-08-13
+## 1J. Earlier owner decision recorded on 2026-08-13
 
 The owner approved every recommendation and all eight decisions in the aimed-wound
 direction. This locks wound families, dominant-wound occupancy, treatment/repair
@@ -201,7 +217,7 @@ isolated counterfactual overlays for actual comparison work.
 | Simulator engineering | Fidelity gate passed with maintenance debt | Change only for an approved research requirement |
 | Hybrid combat | Strategic direction approved; reflex research preserved but deferred | Complete strategic-combat packages in dependency order |
 | Human evidence | No VL-WP4 evidence and no valid external pilot | Defer until the strategic loop is coherent |
-| Combat systems | Wounds, movement, action economy, WNR-0.1, defense, conflict timing, Package D capability mapping, Package A2 card/item boundaries, and Package C range maintenance approved on paper; treatment/repair/extraction/graft flow and encounter resolution remain incomplete | Continue the dependency-ordered paper packages |
+| Combat systems | Wounds, movement, action economy, WNR-0.1, defense, conflict timing, Package D capability mapping, Package A2 card/item boundaries, Package C range maintenance, and Package B procedure commitments approved on paper; catastrophic survival and encounter resolution remain incomplete | Continue the dependency-ordered paper packages |
 | Story and characters | Theme and encounter functions exist; canon remains thin | Wait until combat and information grammar stabilize |
 | UI/UX | Research lab implements the narrow information contract | Diagnose it; do not treat it as final UI |
 | Art/audio | Directional inspiration only | No production asset gate |
@@ -222,8 +238,8 @@ reflex diagnostics and broader reflex mechanics - DEFERRED
 -> body-state capability mapping - APPROVED PACKAGE D PAPER DIRECTION, RUNTIME DEFERRED
 -> remaining card and item boundaries - APPROVED PACKAGE A2 PAPER DIRECTION, RUNTIME DEFERRED
 -> range-maintenance action grammar - APPROVED PACKAGE C PAPER DIRECTION, RUNTIME DEFERRED
--> treatment, repair, extraction, and graft commitment flow - NEXT DESIGN GATE
--> Limb for Life and catastrophic survival
+-> treatment, repair, extraction, and graft commitment flow - APPROVED PACKAGE B PAPER DIRECTION, RUNTIME DEFERRED
+-> Limb for Life and catastrophic survival - NEXT DESIGN GATE
 -> mental defeat, surrender, negotiation, and encounter resolution rules
 -> information and interaction grammar
 -> numeric reconciliation
@@ -251,9 +267,11 @@ packages rather than a long list of disconnected questions:
    exposure; public Lead, two locks, sequential revalidation, and cancellation states.
    Shared readiness, repetition, and detailed reflex execution remain at the later
    reflex gate. Package D resolves body-state capability architecture, Package A2
-   resolves card/item boundaries, and Package C resolves range maintenance; the
-   treatment, repair, extraction, and graft commitment package is active next.
-4. **Treatment, repair, extraction, and graft commitment package:** preservation
+   resolves card/item boundaries, Package C resolves range maintenance, and Package B
+   resolves procedure commitment flow. Limb for Life/catastrophic survival is active
+   next.
+4. **Treatment, repair, extraction, and graft commitment package - approved in
+   document 36:** preservation
    quality, emergency graft, integration, repair, item timing, and downstream body
    consequences.
 5. **Encounter resolution package:** offensive incapacity, surrender, one bounded
@@ -293,10 +311,11 @@ and Distant are outcomes rather than movement controls. Document 29 resolves the
 strategic hand/action architecture, document 30 provides provisional WNR-0.1 values,
 document 31 resolves layered automatic defense, document 32 resolves public-Lead
 sequential conflict timing, document 33 resolves Source-First Modular Integrity, and
-document 34 resolves Readied Inventory card/item boundaries, and document 35 resolves
-execution-bound range maintenance on paper. A legal reflex-defense event is build-
+document 34 resolves Readied Inventory card/item boundaries, document 35 resolves
+execution-bound range maintenance, and document 36 resolves tiered atomic procedure
+commitments on paper. A legal reflex-defense event is build-
 derived and automatically surfaced rather than manually played from an Attention
 Slot. Runtime and configuration remain unchanged. The next dependency-safe gate is
-treatment, repair, extraction, and graft commitment flow. Detailed reflex work,
+Limb for Life and catastrophic survival. Detailed reflex work,
 runtime card/wound/defense/timing/integrity/item implementation, an external pilot,
 content expansion, and production integration remain deferred.

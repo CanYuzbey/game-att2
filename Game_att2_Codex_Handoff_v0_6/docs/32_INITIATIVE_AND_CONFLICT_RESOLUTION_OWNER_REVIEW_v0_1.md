@@ -339,3 +339,12 @@ if Reply legally executes, its later authored result may replace Lead's state. A
 canceled Reply provides no maintenance, release, substitute, or consolation action.
 Counters refresh only after legal execution and never stack. Runtime remains
 unchanged.
+
+## 18. Later Package B disposition (2026-08-17)
+
+Document 36 applies this lock/revalidation contract to procedures. Exact sources and
+targets reserve at lock; ordinary Blood costs and item/tool uses pay on execution. A
+pre-execution cancellation loses its reserved tempo but preserves unpaid execution
+resources and creates no partial mutation. Once treatment, repair, extraction,
+salvage, graft, or table execution begins, its declared success/failure chain
+completes atomically before forced consequences. Runtime remains unchanged.

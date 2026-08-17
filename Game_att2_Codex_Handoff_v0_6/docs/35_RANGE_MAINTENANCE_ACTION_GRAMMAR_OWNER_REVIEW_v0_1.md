@@ -380,10 +380,20 @@ Deferred:
 - new cards, limbs, items, tools, characters, encounters, and rewards;
 - final UI, accessibility implementation, balance, Unity, and product claims.
 
-## 17. Recommended next decision
+## 17. Recommended next decision at Package C approval
 
 Resolve treatment, repair, extraction, and graft commitment flow as one paper package:
 which actions use Preparation or Main, which activate on lock or execution, how source
 occupation and cancellation work, and how those commitments preserve the separation
 between treatment, structural repair, Blood restoration, extraction quality, and
 grafting. Do not implement runtime or add production content from this recommendation.
+
+## 18. Later Package B resolution (2026-08-17)
+
+Document 36 resolves that decision with Tiered Atomic Commitments. Treatment, Blood
+restoration, repair, Claim, extraction, salvage, graft, and table procedures are
+range-neutral by default and gain no maintenance or release authority by implication.
+Their Preparation/Main/contextual timing, exact-source reservation, execution-time
+payment, cancellation, and atomic chains remain inside documents 29, 32, 33, and 34.
+Runtime and production profiles remain unchanged. The next dependency-safe gate is
+Limb for Life and catastrophic survival.

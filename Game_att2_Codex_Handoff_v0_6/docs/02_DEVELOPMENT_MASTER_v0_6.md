@@ -1918,3 +1918,31 @@ This is paper authority only. Existing runtime order, configuration, tests, acti
 profiles, items, characters, values, and scenarios remain unchanged. The next
 dependency-safe design gate is treatment, repair, extraction, and graft commitment
 flow.
+
+## 42. Owner Amendment - Tiered Atomic Commitments (2026-08-17)
+
+The owner approved Package B as the paper answer to treatment, repair, extraction,
+and graft commitment flow. Document 36 records the complete contract, future
+acceptance requirements, evidence limits, and hostile review.
+
+Treatment, Blood restoration, structural repair, extraction, and grafting remain
+separate effects. Authored wound Control and Blood-restoration opportunities may use
+Preparation; structural repair, Claim the Cut, extraction, and ordinary Stabilize use
+Main by default. A future source may explicitly define a visible Preparation
+Stabilize signature, but Package B approves no production exception.
+
+Locked commitments reserve their exact declared patient, donor, target, item/tool,
+body sources, harvested part, and destination. Ordinary costs and uses are paid on
+execution. Pre-execution cancellation loses the reserved tempo while preserving
+unpaid execution costs and item/tool uses. Once execution begins, the declared
+success or failure chain completes atomically before forced consequences.
+
+Extraction creates both the donor's separate wound/consequence and one harvested-part
+object. Later donor care never improves that object's quality. Emergency Salvage and
+emergency graft are contextual only after prior state establishes legal access and
+ownership; they do not invent a part or grant bonus combat tempo. Player and enemy
+procedures use the same causal rules.
+
+This is paper authority only. Existing runtime Fast-item behavior, procedures,
+configuration, tests, production content, values, scenarios, and UI remain unchanged.
+The next dependency-safe design gate is Limb for Life and catastrophic survival.

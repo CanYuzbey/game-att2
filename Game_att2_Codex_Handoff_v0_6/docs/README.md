@@ -37,6 +37,7 @@ not make it current authority.
 | `33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md` | Owner-approved Package D source profiles, centralized effect-package interface, and bounded Integrity Echo; values, production effects, and runtime remain gated |
 | `34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md` | Owner-approved Package A2 deliberate inventory readiness, one-inventory-action limit, item/tool lifecycle, and card/item origin boundary; runtime and content remain gated |
 | `35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md` | Owner-approved Package C execution-bound, non-stacking range-maintenance grammar; current production profiles and runtime remain gated |
+| `36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md` | Owner-approved Package B Preparation/Main/contextual procedure timing, exact-source reservation, pay-on-execution cancellation, and atomic treatment/repair/extraction/graft chains; runtime and content remain gated |
 
 ## Encounter 3 paper testing
 

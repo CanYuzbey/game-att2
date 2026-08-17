@@ -544,3 +544,11 @@ Release. Acting at Clinch or Distant does not implicitly maintain it; successful
 authored maintenance refreshes the approved `1`/`2` counter without stacking.
 Preparation cannot refresh range alone, and no current production action becomes a
 maintainer or releaser by implication. Runtime and production profiles remain gated.
+
+## 23. Later Package B reconciliation (2026-08-17)
+
+Document 36 makes treatment, Blood restoration, repair, extraction, salvage, graft,
+and table procedures range-neutral unless an explicit future action profile declares
+a separately approved spatial result. Performing a procedure at Clinch or Distant
+does not maintain it. Contextual post-combat access cannot be inferred from range.
+Runtime and production profiles remain unchanged.

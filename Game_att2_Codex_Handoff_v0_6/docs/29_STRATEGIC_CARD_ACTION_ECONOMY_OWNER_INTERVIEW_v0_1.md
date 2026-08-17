@@ -541,3 +541,12 @@ Distant by itself. A resolved Main or the final authored spatial result of an
 incoming-action/automatic-defense chain may maintain, shift, or release range.
 Maintenance grants no extra slot, Preparation, Main, reflex event, or refill. Runtime
 and individual production profiles remain deferred.
+
+## 18. Later Package B reconciliation (2026-08-17)
+
+Document 36 assigns authored Control and Blood restoration to Preparation while
+repair, Claim, extraction, and default Stabilize use Main. Contextual salvage, graft,
+and table procedures create no combat play. The one voluntary inventory-origin action
+per round remains binding: an inventory Preparation may be followed by a body Main,
+but not by a second inventory Main. Claim and an inventory extraction tool therefore
+normally require separate rounds. Runtime remains unchanged.

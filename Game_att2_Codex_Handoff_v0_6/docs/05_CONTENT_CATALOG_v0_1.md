@@ -123,3 +123,8 @@ Document 33's `POISON`, `BURN`, Venomous Right Arm, and Needle Jab are illustrat
 architecture fixtures only. They are not additions to this content catalogue.
 Document 35's `RANGE_DIAGNOSTIC_MAIN` is also a neutral paper fixture only. It is not
 an action, card, item, ability, or addition to this content catalogue.
+
+Document 36 maps existing treatment, Blood-restoration, extraction, salvage, graft,
+and table content into Package B timing and atomicity for paper review only. Its
+TAC-B fixtures are neutral acceptance cases, not actions, cards, items, abilities,
+characters, or additions to this catalogue. Runtime content remains unchanged.

@@ -521,3 +521,12 @@ never inherits or infers a refresh. Dormant or Invalid sources cannot maintain, 
 multi-source opportunities use their weakest required source. Integrity Echo cannot
 create, remove, maintain, shift, or release range. Runtime and production profiles
 remain deferred.
+
+## 16. Later Package B reconciliation (2026-08-17)
+
+Document 36 requires every procedure to declare and reserve its exact body, item,
+tool, patient, donor, target, harvested-part, and destination sources. Full, Strained,
+explicit Desperate, Dormant, Invalid, weakest-source, and no-substitution rules remain
+binding through pre-execution revalidation. Treatment, repair, Blood restoration,
+extraction, and graft effects invoke their separate owners rather than a generic
+effect package. Runtime and production profiles remain deferred.

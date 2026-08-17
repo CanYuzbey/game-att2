@@ -1,5 +1,26 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-17 owner decision: approve Package B Tiered Atomic Commitments
+
+The owner approved Package B as the paper answer to treatment, repair, extraction,
+and graft commitment flow. Treatment, Blood restoration, structural repair,
+extraction, and grafting remain separate effects. Authored wound Control and Blood
+restoration may use Preparation; repair, Claim the Cut, extraction, and ordinary
+Stabilize use Main by default. Salvage, emergency graft, and table procedures are
+contextual and require already-established access and ownership.
+
+Commitments reserve exact sources and targets. Ordinary costs and item/tool uses are
+paid on execution. Pre-execution cancellation loses the reserved tempo but preserves
+unpaid execution resources. Once execution starts, the declared success or failure
+chain completes atomically before forced consequences. Extraction creates a separate
+donor wound/consequence and harvested-part object; later donor care cannot improve
+harvest quality. Player and enemy procedures use the same causal rules.
+
+Document 36 is the complete paper authority. Runtime, configuration, production
+profiles, values, content, UI, detailed reflex interruptions, and human-experience
+claims remain deferred. The next dependency-safe gate is Limb for Life and
+catastrophic survival.
+
 ## 2026-08-17 owner decision: approve Package C Resolution-Bound Range Tenure
 
 The owner approved Package C as the paper answer to range-maintenance action grammar.
@@ -18,8 +39,9 @@ No current production action becomes a maintainer or intentional releaser by
 implication. A neutral diagnostic profile may validate the positive grammar without
 entering content or runtime. This is paper authority only. Runtime, configuration,
 production profiles, exact values, UI, balance, and human-experience claims remain
-deferred. The next dependency-safe gate is treatment, repair, extraction, and graft
-commitment flow.
+deferred. At that decision point, the next dependency-safe gate was treatment,
+repair, extraction, and graft commitment flow; the Package B entry above records its
+later resolution.
 
 ## 2026-08-16 owner decision: approve Package A2 Readied Inventory boundary
 
@@ -495,8 +517,12 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
   micro-values, in-encounter coherence recalibration, and individual signature
   overrides;
 - any production modular-effect catalogue or final Poison/Burn semantics and content.
-- treatment, repair, extraction, and graft commitment timing, source occupation,
-  cancellation, and cross-system flow.
+- exact production treatment/repair/extraction/graft profiles, values, sources,
+  signature timing exceptions, and item/tool quantities beyond document 36;
+- the encounter-resolution predicate that establishes legal access to a living,
+  resisting, surrendered, escaped, or otherwise resolved opponent or their parts;
+- Limb for Life player control, refusal, eligibility, availability source, and its
+  ordering against Blood-0 and Ruined-Torso catastrophic consequences.
 
 ## Implementation questions Codex may resolve reversibly
 

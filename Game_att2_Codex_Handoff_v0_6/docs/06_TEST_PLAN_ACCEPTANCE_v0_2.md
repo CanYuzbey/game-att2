@@ -282,3 +282,26 @@ Report a positive simulator signal—not an automatic Unity approval—if:
 ### Unity remains blocked
 
 Even passing simulator tests do not automatically approve Unity. Produce a review recommendation first.
+
+## 5. Future Package B paper/runtime obligations
+
+Document 36 adds future acceptance requirements `TAC-B-001` through `TAC-B-015`.
+They are obligations for any later approved paper instrument or runtime migration;
+they do not alter the current simulator acceptance gate.
+
+At minimum, future evidence must prove:
+
+- separate ownership of treatment, Blood restoration, structural repair, extraction,
+  and graft effects;
+- explicit origin, timing, exact sources, target, cost/use stage, and ordered effects;
+- the one-voluntary-inventory-action limit across Preparation and Main;
+- pre-execution cancellation without resource/tool loss and without partial mutation;
+- complete atomic success/failure chains after execution begins;
+- attachment, wound-state, structural-band, and ceiling checks for repair;
+- donor-wound and harvested-object separation with invariant harvest quality;
+- contextual access and ownership before salvage or graft;
+- no bonus combat action or implicit healing from emergency graft;
+- isolated table effects and player/enemy causal symmetry.
+
+The bounded cases are `TAC-B-01` through `TAC-B-14`. No test implementation,
+fixture data, configuration, or production content is approved by this section.

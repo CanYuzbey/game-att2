@@ -388,3 +388,12 @@ defense route produce one authored final spatial outcome; Block, Intercept, and
 Dodge/Evade receive no default maintenance. Source invalidation still removes the
 route, and no reflex event gains a slot or voluntary play. Runtime and detailed
 defense/range profiles remain deferred.
+
+## 15. Later Package B disposition (2026-08-17)
+
+Document 36 does not create an automatic medical event or a universal procedure
+interrupt. Procedures are voluntary Preparation, Main, or contextual commitments;
+automatic defense remains sourced only by an incoming action. If incoming resolution
+invalidates a later locked procedure, document 32 cancellation applies. A procedure
+does not gain mitigation, Intercept, or range authority merely because it is medical.
+Runtime and detailed interruption rules remain deferred.
