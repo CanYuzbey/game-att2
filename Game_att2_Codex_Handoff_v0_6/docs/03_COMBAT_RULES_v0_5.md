@@ -20,6 +20,9 @@ Document 34 supplies the later owner-approved Readied Inventory card/item bounda
 Its deliberate flexible-slot readiness, one voluntary inventory action per round,
 and paper rejection of a free Fast-item rail do not replace the implemented Focus,
 Fast-item, and Main sequence below.
+Document 35 supplies the later owner-approved Resolution-Bound Range Tenure grammar.
+Its execution-bound maintenance classifications, non-stacking counters, and
+Lead/Reply range contest do not add runtime range state or change this sequence.
 
 ## 1. Round sequence
 

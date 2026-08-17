@@ -535,3 +535,12 @@ an authored Full/Strained/Desperate range profile may change that profile throug
 source damage. Integrity Echo has no independent range axis and cannot move actors,
 change reach, or preserve an invalid plan. Individual range cards remain part of the
 remaining card/content gate.
+
+## 22. Later Package C resolution (2026-08-17)
+
+Document 35 resolves maintenance grammar without changing this document's states or
+cadence. Future profiles declare Neutral, Exploit, Maintain, Shift/Create, or
+Release. Acting at Clinch or Distant does not implicitly maintain it; successful
+authored maintenance refreshes the approved `1`/`2` counter without stacking.
+Preparation cannot refresh range alone, and no current production action becomes a
+maintainer or releaser by implication. Runtime and production profiles remain gated.

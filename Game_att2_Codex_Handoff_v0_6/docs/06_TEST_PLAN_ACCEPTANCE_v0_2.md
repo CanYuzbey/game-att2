@@ -4,7 +4,7 @@
 
 Tests prove faithful implementation and detect numerical/systemic problems. They do not prove fun.
 
-Documents 27 through 33 contain later owner-approved paper directions. They do not
+Documents 27 through 35 contain later owner-approved paper directions. They do not
 change this simulator acceptance baseline. Before any implementation of document 32,
 an approved bounded plan must add deterministic tests for Lead assignment and
 alternation, two-lock information order, on-lock versus on-execution costs, changed-
@@ -17,6 +17,18 @@ selection, Desperate/Dormant distinction, effect delivery and final-recipient
 ownership, centralized caps/expiry, coherent-baseline snapshots, Echo hard caps,
 one-axis collision suppression, prohibited Echo channels, readable previews, and
 player/enemy symmetry. Illustrative Poison/Burn cases are not production content.
+
+For document 34, a future approved implementation plan must cover deliberate
+inventory readiness, one inventory action per round, Reconsider lifecycle, item use
+timing, source/tool loss, no substitution, state-required ownership, and automatic-
+defense separation.
+
+For document 35, a future approved implementation plan must trace `RMG-C-001`
+through `RMG-C-012` to deterministic tests for explicit range classifications,
+non-stacking maintenance, Preparation negative cases, source-state revalidation,
+automatic-defense spatial outcomes, sequential Lead/Reply contest, no implicit
+production maintainer/releaser, neutral-fixture quarantine, readable counters, and
+player/enemy symmetry.
 
 ## 1. Unit tests
 

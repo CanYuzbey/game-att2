@@ -121,3 +121,5 @@ Bone-Minotaur, Many-Eyed Flesh, Octopus Fingers, Predator Eyes, angelic parts, R
 
 Document 33's `POISON`, `BURN`, Venomous Right Arm, and Needle Jab are illustrative
 architecture fixtures only. They are not additions to this content catalogue.
+Document 35's `RANGE_DIAGNOSTIC_MAIN` is also a neutral paper fixture only. It is not
+an action, card, item, ability, or addition to this content catalogue.

@@ -377,4 +377,14 @@ Document 34 resolves card/item boundaries without changing this defense contract
 Preparation items consume Preparation, activated tools consume their declared timing,
 and automatic Reflexive Defence/Intercept/passives remain outside cards and the one-
 inventory-action limit. Passive equipment does not make an activated use free.
-Runtime remains unchanged. The next decision is range-maintenance action grammar.
+Runtime remains unchanged. At that decision point, the next decision was
+range-maintenance action grammar; section 14 records its later resolution.
+
+## 14. Later Package C disposition (2026-08-17)
+
+Document 35 resolves the range consequence boundary. Preparation such as Guard Flesh
+cannot refresh range by itself. An incoming action and its one legal automatic
+defense route produce one authored final spatial outcome; Block, Intercept, and
+Dodge/Evade receive no default maintenance. Source invalidation still removes the
+route, and no reflex event gains a slot or voluntary play. Runtime and detailed
+defense/range profiles remain deferred.

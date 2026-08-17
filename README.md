@@ -26,10 +26,11 @@ execution. The fixture is preserved for later research; it is not the active gat
 The shared Stamina/readiness model remains a provisional research hypothesis; no
 runtime Stamina system, production UI, content expansion, or engine work is approved.
 The owner approved the complete aimed-wound design direction on 2026-08-13. Numeric
-values, specific repair content, and runtime implementation remain deferred. The next
-dependency-safe design gate is strategic card/action economy and cadence. The latest
-action-produced Clinch/Engaged/Distant direction and neutral-settling cadence are
-owner-approved; runtime remains unapproved.
+values, specific repair content, and runtime implementation remain deferred. The
+action-produced Clinch/Engaged/Distant direction, neutral-settling cadence, and
+Package C Resolution-Bound Range Tenure grammar are owner-approved on paper; runtime
+remains unapproved. The active design gate is treatment, repair, extraction, and
+graft commitment flow.
 The owner-approved identity guardrail requires space to support body-sourced tactical
 cards, reflex execution, and lasting physical consequences. Clinch, Engaged, and
 Distant are produced by action/defense/reflex outcomes rather than generic movement.
@@ -73,6 +74,7 @@ The active handoff package lives in
 - [Approved space-and-reach direction](Game_att2_Codex_Handoff_v0_6/docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md)
 - [Approved strategic card/action-economy direction](Game_att2_Codex_Handoff_v0_6/docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md)
 - [Wound/Blood/repair numeric owner-review package](Game_att2_Codex_Handoff_v0_6/docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md)
+- [Approved range-maintenance action grammar](Game_att2_Codex_Handoff_v0_6/docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md)
 - [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
 - [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
 - [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)

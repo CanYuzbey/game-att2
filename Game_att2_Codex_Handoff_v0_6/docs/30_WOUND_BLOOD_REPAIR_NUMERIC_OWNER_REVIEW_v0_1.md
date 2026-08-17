@@ -453,3 +453,11 @@ restores the actor toward the encounter-start coherent baseline. Control,
 Stabilization, or Resolution without structural repair changes wound/Blood pressure
 only and does not restore local capability or Integrity Echo. Exact Echo thresholds
 and micro-values are separate tunable paper variables.
+
+## 16. Later Package C reconciliation (2026-08-17)
+
+Package C adds no Blood, wound, treatment, repair, integrity, or readiness cost for
+range maintenance. Any such consequence must be explicitly authored and previewed by
+the action profile, then invoke this numeric contract. Range cannot treat a wound,
+restore Blood, repair structure, rescue a Ruined Torso, or alter `WOUND_STRESS`.
+Runtime and values remain unchanged.

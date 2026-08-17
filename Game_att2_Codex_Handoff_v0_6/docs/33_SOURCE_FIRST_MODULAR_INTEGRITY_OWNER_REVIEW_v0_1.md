@@ -509,5 +509,15 @@ opportunity in a flexible Attention Slot, one voluntary inventory-origin action 
 round, Preparation/Main timing, inventory-owned lifecycle, weakest-source tools, and
 governed signature overrides. It preserves Package D source profiles, effect delivery,
 Integrity Echo restrictions, and automatic-defense boundaries. Runtime, content, and
-exact values remain gated. The next dependency-safe design gate is range-maintenance
-action grammar.
+exact values remain gated. At that decision point, the next dependency-safe design
+gate was range-maintenance action grammar; the later Package C disposition below
+records its resolution.
+
+## 15. Later Package C resolution (2026-08-17)
+
+Document 35 resolves range maintenance under Package D. Full, Strained, and explicit
+Desperate profiles declare their own range classification; missing maintenance data
+never inherits or infers a refresh. Dormant or Invalid sources cannot maintain, and
+multi-source opportunities use their weakest required source. Integrity Echo cannot
+create, remove, maintain, shift, or release range. Runtime and production profiles
+remain deferred.

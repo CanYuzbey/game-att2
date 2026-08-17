@@ -532,3 +532,12 @@ their weakest required source and cannot substitute tool or grip after lock.
 This supersedes the earlier open Fast-item/access boundary at architecture level.
 Individual production items, signature timing exceptions, values, runtime, and the
 simulator's existing Fast-item sequence remain deferred.
+
+## 17. Later Package C reconciliation (2026-08-17)
+
+Document 35 fixes execution-bound range maintenance within this action budget.
+Preparation may enable or improve a later range result but never refreshes Clinch or
+Distant by itself. A resolved Main or the final authored spatial result of an
+incoming-action/automatic-defense chain may maintain, shift, or release range.
+Maintenance grants no extra slot, Preparation, Main, reflex event, or refill. Runtime
+and individual production profiles remain deferred.

@@ -470,8 +470,18 @@ Deferred:
 - new cards, items, tools, effects, characters, or encounters;
 - final UI, accessibility implementation, Unity, and product claims.
 
-## 19. Recommended next decision
+## 19. Recommended next decision at Package A2 approval
 
 Resolve the range-maintenance action grammar: which existing action profiles can
 maintain, release, or exploit Clinch/Engaged/Distant without creating a universal
 movement command, new content, or runtime implementation.
+
+## 20. Later Package C resolution (2026-08-17)
+
+Document 35 resolves that decision with execution-bound, non-stacking maintenance.
+Readied inventory Preparation cannot refresh exceptional range by itself. A readied
+Main tool may produce only the range result declared by its exact current source and
+range profile; cancellation preserves unpaid use but provides no maintenance. The
+neutral `RANGE_DIAGNOSTIC_MAIN` record is paper evidence only and cannot enter the
+inventory or content catalogue. Runtime remains unchanged. The next dependency-safe
+gate is treatment, repair, extraction, and graft commitment flow.
