@@ -532,3 +532,21 @@ their weakest required source and cannot substitute tool or grip after lock.
 This supersedes the earlier open Fast-item/access boundary at architecture level.
 Individual production items, signature timing exceptions, values, runtime, and the
 simulator's existing Fast-item sequence remain deferred.
+
+## 17. Later Package C reconciliation (2026-08-17)
+
+Document 35 fixes execution-bound range maintenance within this action budget.
+Preparation may enable or improve a later range result but never refreshes Clinch or
+Distant by itself. A resolved Main or the final authored spatial result of an
+incoming-action/automatic-defense chain may maintain, shift, or release range.
+Maintenance grants no extra slot, Preparation, Main, reflex event, or refill. Runtime
+and individual production profiles remain deferred.
+
+## 18. Later Package B reconciliation (2026-08-17)
+
+Document 36 assigns authored Control and Blood restoration to Preparation while
+repair, Claim, extraction, and default Stabilize use Main. Contextual salvage, graft,
+and table procedures create no combat play. The one voluntary inventory-origin action
+per round remains binding: an inventory Preparation may be followed by a body Main,
+but not by a second inventory Main. Claim and an inventory extraction tool therefore
+normally require separate rounds. Runtime remains unchanged.

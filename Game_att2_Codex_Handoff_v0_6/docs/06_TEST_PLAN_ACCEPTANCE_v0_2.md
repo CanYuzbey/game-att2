@@ -4,7 +4,7 @@
 
 Tests prove faithful implementation and detect numerical/systemic problems. They do not prove fun.
 
-Documents 27 through 33 contain later owner-approved paper directions. They do not
+Documents 27 through 35 contain later owner-approved paper directions. They do not
 change this simulator acceptance baseline. Before any implementation of document 32,
 an approved bounded plan must add deterministic tests for Lead assignment and
 alternation, two-lock information order, on-lock versus on-execution costs, changed-
@@ -17,6 +17,18 @@ selection, Desperate/Dormant distinction, effect delivery and final-recipient
 ownership, centralized caps/expiry, coherent-baseline snapshots, Echo hard caps,
 one-axis collision suppression, prohibited Echo channels, readable previews, and
 player/enemy symmetry. Illustrative Poison/Burn cases are not production content.
+
+For document 34, a future approved implementation plan must cover deliberate
+inventory readiness, one inventory action per round, Reconsider lifecycle, item use
+timing, source/tool loss, no substitution, state-required ownership, and automatic-
+defense separation.
+
+For document 35, a future approved implementation plan must trace `RMG-C-001`
+through `RMG-C-012` to deterministic tests for explicit range classifications,
+non-stacking maintenance, Preparation negative cases, source-state revalidation,
+automatic-defense spatial outcomes, sequential Lead/Reply contest, no implicit
+production maintainer/releaser, neutral-fixture quarantine, readable counters, and
+player/enemy symmetry.
 
 ## 1. Unit tests
 
@@ -270,3 +282,26 @@ Report a positive simulator signal—not an automatic Unity approval—if:
 ### Unity remains blocked
 
 Even passing simulator tests do not automatically approve Unity. Produce a review recommendation first.
+
+## 5. Future Package B paper/runtime obligations
+
+Document 36 adds future acceptance requirements `TAC-B-001` through `TAC-B-015`.
+They are obligations for any later approved paper instrument or runtime migration;
+they do not alter the current simulator acceptance gate.
+
+At minimum, future evidence must prove:
+
+- separate ownership of treatment, Blood restoration, structural repair, extraction,
+  and graft effects;
+- explicit origin, timing, exact sources, target, cost/use stage, and ordered effects;
+- the one-voluntary-inventory-action limit across Preparation and Main;
+- pre-execution cancellation without resource/tool loss and without partial mutation;
+- complete atomic success/failure chains after execution begins;
+- attachment, wound-state, structural-band, and ceiling checks for repair;
+- donor-wound and harvested-object separation with invariant harvest quality;
+- contextual access and ownership before salvage or graft;
+- no bonus combat action or implicit healing from emergency graft;
+- isolated table effects and player/enemy causal symmetry.
+
+The bounded cases are `TAC-B-01` through `TAC-B-14`. No test implementation,
+fixture data, configuration, or production content is approved by this section.

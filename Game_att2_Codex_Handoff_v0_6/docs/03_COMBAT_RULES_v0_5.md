@@ -20,6 +20,9 @@ Document 34 supplies the later owner-approved Readied Inventory card/item bounda
 Its deliberate flexible-slot readiness, one voluntary inventory action per round,
 and paper rejection of a free Fast-item rail do not replace the implemented Focus,
 Fast-item, and Main sequence below.
+Document 35 supplies the later owner-approved Resolution-Bound Range Tenure grammar.
+Its execution-bound maintenance classifications, non-stacking counters, and
+Lead/Reply range contest do not add runtime range state or change this sequence.
 
 ## 1. Round sequence
 
@@ -367,3 +370,16 @@ The required roll must be visible in logs before commitment.
 - Leave unchanged: cost 0.
 
 No randomized shop or table favor in v0.1.
+
+## 16. Paper-only Package B commitment clarification (2026-08-17)
+
+Document 36 is later paper authority for future treatment, repair, extraction, and
+graft commitment flow. It keeps treatment, Blood restoration, structural repair,
+extraction, and grafting as separate effects; assigns their default Preparation,
+Main, or contextual timing; reserves exact sources; pays ordinary costs on execution;
+and makes started procedure chains atomic.
+
+This clarification does not migrate into Combat Rules v0.5 runtime behavior. The
+existing Fast items, extraction tools, salvage, emergency graft, Table v0.2 values,
+configuration, and simulator tests remain unchanged until a separate implementation
+gate is approved.

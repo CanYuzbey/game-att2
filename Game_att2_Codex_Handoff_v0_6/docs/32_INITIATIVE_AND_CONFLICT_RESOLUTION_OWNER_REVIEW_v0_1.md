@@ -327,5 +327,24 @@ Document 34 resolves card/item boundaries within this timing model. A readied it
 tool uses Preparation or Main; at most one voluntary inventory-origin action executes
 per actor per round; Reconsider cannot refresh a Spent inventory slot; and locked
 tools, items, grips, or sources cannot be substituted. Execution-time uses remain
-unpaid when a lock is canceled before execution. Runtime remains unchanged. The next
-decision is range-maintenance action grammar.
+unpaid when a lock is canceled before execution. Runtime remains unchanged. At that
+decision point, the next decision was range-maintenance action grammar; the later
+Package C disposition below records its resolution.
+
+## 17. Later Package C disposition (2026-08-17)
+
+Document 35 resolves range contest through this existing order. Lead applies its
+authored spatial result; Reply revalidates the same locked action at the new range;
+if Reply legally executes, its later authored result may replace Lead's state. A
+canceled Reply provides no maintenance, release, substitute, or consolation action.
+Counters refresh only after legal execution and never stack. Runtime remains
+unchanged.
+
+## 18. Later Package B disposition (2026-08-17)
+
+Document 36 applies this lock/revalidation contract to procedures. Exact sources and
+targets reserve at lock; ordinary Blood costs and item/tool uses pay on execution. A
+pre-execution cancellation loses its reserved tempo but preserves unpaid execution
+resources and creates no partial mutation. Once treatment, repair, extraction,
+salvage, graft, or table execution begins, its declared success/failure chain
+completes atomically before forced consequences. Runtime remains unchanged.

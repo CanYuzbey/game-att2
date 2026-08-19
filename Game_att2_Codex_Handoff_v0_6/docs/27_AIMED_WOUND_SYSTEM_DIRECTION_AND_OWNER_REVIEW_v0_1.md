@@ -890,3 +890,12 @@ treatment without structural repair does not.
 Central effect packages may change structure, wound, treatment, repair, or Blood only
 by invoking this document's existing contracts at an explicit causal stage. Package D
 does not approve Poison, Burn, or another production effect family.
+
+## 23. Later Package B reconciliation (2026-08-17)
+
+Document 36 preserves this document's separate wound, structure, Blood, extraction,
+and graft ownership. Control and Stabilize change treatment state only; repair changes
+eligible attached structure only; emergency graft does not erase a Stump wound or add
+an automatic fresh-graft wound. Extraction creates a separate donor wound and
+harvested object, so later donor treatment cannot improve harvest quality. Runtime
+and production profiles remain unchanged.

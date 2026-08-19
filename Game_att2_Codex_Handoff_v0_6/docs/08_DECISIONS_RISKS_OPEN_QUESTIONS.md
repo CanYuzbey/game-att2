@@ -1,5 +1,48 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-17 owner decision: approve Package B Tiered Atomic Commitments
+
+The owner approved Package B as the paper answer to treatment, repair, extraction,
+and graft commitment flow. Treatment, Blood restoration, structural repair,
+extraction, and grafting remain separate effects. Authored wound Control and Blood
+restoration may use Preparation; repair, Claim the Cut, extraction, and ordinary
+Stabilize use Main by default. Salvage, emergency graft, and table procedures are
+contextual and require already-established access and ownership.
+
+Commitments reserve exact sources and targets. Ordinary costs and item/tool uses are
+paid on execution. Pre-execution cancellation loses the reserved tempo but preserves
+unpaid execution resources. Once execution starts, the declared success or failure
+chain completes atomically before forced consequences. Extraction creates a separate
+donor wound/consequence and harvested-part object; later donor care cannot improve
+harvest quality. Player and enemy procedures use the same causal rules.
+
+Document 36 is the complete paper authority. Runtime, configuration, production
+profiles, values, content, UI, detailed reflex interruptions, and human-experience
+claims remain deferred. The next dependency-safe gate is Limb for Life and
+catastrophic survival.
+
+## 2026-08-17 owner decision: approve Package C Resolution-Bound Range Tenure
+
+The owner approved Package C as the paper answer to range-maintenance action grammar.
+Every future range profile declares Neutral, Exploit, Maintain, Shift/Create, or
+Release. Acting at Clinch or Distant never maintains it implicitly. Preparation may
+enable a later result but cannot refresh range by itself.
+
+A legal resolved Main or the single final authored spatial result of an incoming-
+action/automatic-defense chain may refresh exceptional range. Clinch refreshes to
+one complete later playable round and Distant to two; counters never stack. Package
+D source profiles, weakest-source handling, document 32 revalidation, and no-
+substitution rules remain binding. Range contest uses sequential Lead/Reply outcomes
+without another phase or roll.
+
+No current production action becomes a maintainer or intentional releaser by
+implication. A neutral diagnostic profile may validate the positive grammar without
+entering content or runtime. This is paper authority only. Runtime, configuration,
+production profiles, exact values, UI, balance, and human-experience claims remain
+deferred. At that decision point, the next dependency-safe gate was treatment,
+repair, extraction, and graft commitment flow; the Package B entry above records its
+later resolution.
+
 ## 2026-08-16 owner decision: approve Package A2 Readied Inventory boundary
 
 The owner approved Package A2 as the paper answer to remaining card and item
@@ -20,8 +63,9 @@ duty, create no bonus slot/play, and remain tied to real ownership and legality.
 Passive equipment and Reflexive Defence remain automatic; activated
 equipment still requires readiness. This is paper authority only. Runtime,
 configuration, production content, individual values/exceptions, UI, balance, and
-human-experience claims remain deferred. The next dependency-safe gate is
-range-maintenance action grammar.
+human-experience claims remain deferred. At that decision point, the next
+dependency-safe gate was range-maintenance action grammar; the 2026-08-17 entry
+above records its later resolution.
 
 ## 2026-08-16 owner decision: approve Package D Source-First Modular Integrity
 
@@ -460,7 +504,9 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - exact Attention Slot selection weights, repetition damping, final capacity balance,
   individual item/card content, and any signature timing exception beyond documents
   29 and 34;
-- exact range profile and maintenance effects for each action/card;
+- exact production range profiles for each action/card, including which future
+  profiles receive owner-approved Maintain, Shift/Create, or Release results under
+  document 35;
 - whether approved cognitive capacity/selection progression is anatomical, Head-
   linked, shop/table/skill delivered, or represented through another fiction;
 - exact cognitive biases such as reflex readiness, offense, or adrenaline behavior.
@@ -471,8 +517,12 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
   micro-values, in-encounter coherence recalibration, and individual signature
   overrides;
 - any production modular-effect catalogue or final Poison/Burn semantics and content.
-- exact range-maintenance profiles: which existing actions maintain, release, or
-  exploit Clinch/Engaged/Distant without a universal movement command.
+- exact production treatment/repair/extraction/graft profiles, values, sources,
+  signature timing exceptions, and item/tool quantities beyond document 36;
+- the encounter-resolution predicate that establishes legal access to a living,
+  resisting, surrendered, escaped, or otherwise resolved opponent or their parts;
+- Limb for Life player control, refusal, eligibility, availability source, and its
+  ordering against Blood-0 and Ruined-Torso catastrophic consequences.
 
 ## Implementation questions Codex may resolve reversibly
 

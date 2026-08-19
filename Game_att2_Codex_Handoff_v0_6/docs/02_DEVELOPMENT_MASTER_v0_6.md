@@ -3,7 +3,7 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Wound meanings, action-produced range, Attention Slot/action economy, provisional WNR-0.1 values, layered automatic defense, public-Lead sequential conflict resolution, Package D Source-First Modular Integrity, and Package A2 Readied Inventory card/item boundaries are owner-approved paper directions. Exact values and effect content remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
+Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Wound meanings, action-produced range, Attention Slot/action economy, provisional WNR-0.1 values, layered automatic defense, public-Lead sequential conflict resolution, Package D Source-First Modular Integrity, Package A2 Readied Inventory card/item boundaries, and Package C Resolution-Bound Range Tenure are owner-approved paper directions. Exact values and production profiles remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
 
 ## 2026-08-13 reflex-work deferral amendment
 
@@ -1888,4 +1888,61 @@ ownership, source legality, timing budget, causal order, or evidence.
 
 This is paper authority only. Existing runtime Focus/Fast-item/Main behavior,
 configuration, tests, production cards/items, values, balance, UI, and content remain
-unchanged. The next dependency-safe design gate is range-maintenance action grammar.
+unchanged. At the close of Amendment 40, the next dependency-safe design gate was
+range-maintenance action grammar; Amendment 41 records its later resolution.
+
+## 41. Owner Amendment - Resolution-Bound Range Tenure (2026-08-17)
+
+The owner approved Package C as the paper answer to range-maintenance action grammar.
+Document 35 records the complete contract, evidence limits, acceptance cases, and
+hostile review.
+
+Every future range profile declares Neutral, Exploit, Maintain, Shift/Create, or
+Release. Merely acting at Clinch or Distant does not maintain it. A legal resolved
+Main or the one final authored spatial outcome of an incoming-action/automatic-
+defense chain may refresh range; Preparation may enable or improve that result but
+cannot refresh range by itself.
+
+Successful maintenance refreshes Clinch to its approved base of one complete later
+playable round or Distant to its approved base of two. Counters never stack. Package
+D source profiles, weakest-source handling, Dormant/Invalid distinctions, document
+32 revalidation, and no-substitution rules remain binding. Lead and Reply contest
+range only through their sequential authored outcomes; there is no movement phase or
+separate contest roll.
+
+No existing production action is approved as a maintainer or intentional releaser by
+implication. The first positive maintenance/release cases use one neutral diagnostic
+record that cannot enter runtime or the content catalogue.
+
+This is paper authority only. Existing runtime order, configuration, tests, action
+profiles, items, characters, values, and scenarios remain unchanged. The next
+dependency-safe design gate is treatment, repair, extraction, and graft commitment
+flow.
+
+## 42. Owner Amendment - Tiered Atomic Commitments (2026-08-17)
+
+The owner approved Package B as the paper answer to treatment, repair, extraction,
+and graft commitment flow. Document 36 records the complete contract, future
+acceptance requirements, evidence limits, and hostile review.
+
+Treatment, Blood restoration, structural repair, extraction, and grafting remain
+separate effects. Authored wound Control and Blood-restoration opportunities may use
+Preparation; structural repair, Claim the Cut, extraction, and ordinary Stabilize use
+Main by default. A future source may explicitly define a visible Preparation
+Stabilize signature, but Package B approves no production exception.
+
+Locked commitments reserve their exact declared patient, donor, target, item/tool,
+body sources, harvested part, and destination. Ordinary costs and uses are paid on
+execution. Pre-execution cancellation loses the reserved tempo while preserving
+unpaid execution costs and item/tool uses. Once execution begins, the declared
+success or failure chain completes atomically before forced consequences.
+
+Extraction creates both the donor's separate wound/consequence and one harvested-part
+object. Later donor care never improves that object's quality. Emergency Salvage and
+emergency graft are contextual only after prior state establishes legal access and
+ownership; they do not invent a part or grant bonus combat tempo. Player and enemy
+procedures use the same causal rules.
+
+This is paper authority only. Existing runtime Fast-item behavior, procedures,
+configuration, tests, production content, values, scenarios, and UI remain unchanged.
+The next dependency-safe design gate is Limb for Life and catastrophic survival.
