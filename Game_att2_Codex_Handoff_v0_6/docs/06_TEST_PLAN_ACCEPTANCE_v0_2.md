@@ -305,3 +305,27 @@ At minimum, future evidence must prove:
 
 The bounded cases are `TAC-B-01` through `TAC-B-14`. No test implementation,
 fixture data, configuration, or production content is approved by this section.
+
+## 6. Future Package A catastrophic-survival obligations
+
+Document 37 adds future acceptance requirements `CIS-A-001` through `CIS-A-016`.
+They govern any later approved paper harness or runtime migration and do not change
+the current simulator acceptance gate.
+
+At minimum, future evidence must prove:
+
+- Blood-0 rescue occurs only after the current atomic chain and Panic Pulse;
+- one visible tutorial-scope charge, exact eligible arm/Legs choice, and Accept Death;
+- no random sacrifice, Head/Torso/Core eligibility, or hidden objective immunity;
+- one atomic severance, Untreated Stump, no-harvest, final-net-12 chain;
+- later stump pressure without a duplicate immediate post-reset loss;
+- zero Preparation/Main/inventory/readiness/defense/Reply/Lead consumption;
+- complete body-source, capability, Attention Slot, Integrity Echo, range, and lock
+  recomputation;
+- Blood-0 rescue without prevention or delay of catastrophic Torso failure;
+- actor-explicit availability with symmetric causality and no generic victory-route
+  requirement;
+- a complete preview and deterministic fatality-source trace.
+
+The bounded cases are `CIS-A-01` through `CIS-A-16`. No test implementation, fixture
+data, configuration, UI, or production content is approved by this section.

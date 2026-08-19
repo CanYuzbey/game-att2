@@ -1,6 +1,6 @@
 # Game att2 — Consolidated Combat and Mobility Decision Queue
 
-Status date: 2026-08-16
+Status date: 2026-08-19
 
 Purpose: detailed supporting register of unresolved product questions. Start future
 core-gameplay work from `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; use this
@@ -54,13 +54,13 @@ are in `31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`.
 
 ## P1 — Limb for Life
 
-| ID | Decision required | Current prototype |
+| ID | Resolved paper rule | Authority |
 |---|---|---|
-| LIFE-01 | Does the player choose the sacrificed limb or does seeded randomness remain final? | Seeded-random usable non-Core limb |
-| LIFE-02 | May the player refuse sacrifice and accept death? | Not represented |
-| LIFE-03 | Are grafted, integrated, critical, or objective-critical limbs eligible? | Any usable non-Core limb |
-| LIFE-04 | Is Limb for Life always available once, granted by an item/body part, or earned during a run? | Tutorial-scope once-per-run rule |
-| LIFE-05 | Which specific victory-route predicates require sacrifice? | `C04` permits it as an intermediate requirement; no current route requires it yet |
+| LIFE-01 — RESOLVED 2026-08-19 | Player chooses the exact eligible limb; seeded randomness is not final selection. | Document 37 |
+| LIFE-02 — RESOLVED 2026-08-19 | The prompt always includes Accept Death. | Document 37 |
+| LIFE-03 — RESOLVED 2026-08-19 | Attached usable Left Arm, Right Arm, or Legs is eligible, including grafted/integrated/Critical/objective-critical parts; Head/Torso/Core and unusable/detached parts are excluded. | Document 37 |
+| LIFE-04 — RESOLVED 2026-08-19 | Current tutorial player has one visible run-level affordance; other actors require an explicit grant and then use symmetric rules. | Document 37 |
+| LIFE-05 — RESOLVED 2026-08-19 | No generic victory route requires sacrifice; future reactions or requirements need separate approved content. | Document 37 |
 
 ## P1 — Mental defeat, surrender, and mercy
 
@@ -129,8 +129,8 @@ Wound meanings, repeated-Major collapse, repair boundary, and Torso direction - 
 → remaining card and item boundaries - RESOLVED ON PAPER (PACKAGE A2)
 → range-maintenance action grammar - RESOLVED ON PAPER (PACKAGE C)
 → treatment, repair, extraction, and graft commitment flow - RESOLVED ON PAPER (PACKAGE B)
-→ Limb for Life and catastrophic survival - ACTIVE NEXT GATE
-→ mental defeat model
+→ Limb for Life and catastrophic survival - RESOLVED ON PAPER (PACKAGE A)
+→ mental defeat, surrender, and mercy - ACTIVE NEXT GATE
 → negotiation timing and offer evaluation
 → victory persistence and presentation
 → information and presentation grammar

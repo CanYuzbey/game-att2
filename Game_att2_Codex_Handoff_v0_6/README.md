@@ -66,7 +66,11 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   owner-approved on paper. Separate effects use authored Preparation/Main/contextual
   timing, exact-source reservation, execution-time payment, and atomic started chains.
   Runtime and production profiles remain unchanged.
-- Current product gate: Limb for Life and catastrophic survival.
+- Catastrophic survival: Package A Chosen Irrevocable Sacrifice is owner-approved on
+  paper. Blood-0 rescue offers an exact eligible arm/Legs sacrifice or death, creates
+  an untreated stump with no harvested object, finishes at provisional net Blood 12,
+  and never prevents catastrophic Torso failure. Runtime remains unchanged.
+- Current product gate: mental defeat, surrender, and mercy.
 - Space-and-reach direction: Clinch, Engaged, and Distant are owner-directed shared
   states produced by action/defense/reflex outcomes, not movement controls. Document
   28 records the approved neutral-settling cadence; runtime remains unapproved.
@@ -149,6 +153,11 @@ The owner-approved treatment, repair, extraction, and graft commitment flow is
 It fixes separate effect ownership, tiered Preparation/Main/contextual timing,
 exact-source reservation, execution-time payment, pre-execution cancellation, and
 atomic started procedures without approving runtime or production content.
+The owner-approved catastrophic-survival contract is
+[docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md](docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md).
+It fixes exact eligible-limb choice plus death refusal, the untreated-stump/no-harvest
+atomic chain, final net Blood 12, post-sacrifice capability revalidation, and strict
+separation from catastrophic Torso failure without changing runtime.
 
 The owner-approved local Block lab is operated from
 [research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
@@ -305,6 +314,7 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 31. `docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md`
 32. `docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md`
 33. `docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md`
+34. `docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -601,16 +611,17 @@ Known Git history:
 | 2026-08-12 | Isolated H1 research implementation passed deterministic fidelity verification |
 | 2026-08-17 | Package C Resolution-Bound Range Tenure approved and reconciled as paper authority; runtime unchanged |
 | 2026-08-17 | Package B Tiered Atomic Commitments approved and reconciled as paper authority; runtime unchanged |
+| 2026-08-19 | Package A Chosen Irrevocable Sacrifice approved and reconciled as paper authority; runtime unchanged |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 
 ## Recommended next step
 
-Resolve Limb for Life and catastrophic survival as one paper package: player choice
-or randomness, refusal, eligible limbs, availability source, and ordering against
-Blood-0 and Ruined-Torso consequences. Reflex diagnostics, story, final UI, content
-expansion, an external pilot, Encounter 3 runtime, and engine production remain
-deferred.
+Resolve mental defeat, surrender, and mercy as the next paper package: state-derived
+surrender thresholds, voluntary surrender, mercy/refusal outcomes, and their exact
+order after physical incapacity and catastrophic survival. Negotiation, reflex
+diagnostics, story, final UI, content expansion, external pilots, Encounter 3 runtime,
+and engine production remain deferred.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
 

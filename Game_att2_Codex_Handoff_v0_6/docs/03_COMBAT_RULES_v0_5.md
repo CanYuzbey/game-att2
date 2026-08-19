@@ -383,3 +383,16 @@ This clarification does not migrate into Combat Rules v0.5 runtime behavior. The
 existing Fast items, extraction tools, salvage, emergency graft, Table v0.2 values,
 configuration, and simulator tests remain unchanged until a separate implementation
 gate is approved.
+
+## 17. Paper-only Package A catastrophic-survival clarification (2026-08-19)
+
+Document 37 is later paper authority for a future Limb for Life migration. After an
+atomic consequence and Panic Pulse, Blood-0 may present one exact eligible attached
+usable Left Arm, Right Arm, or Legs plus Accept Death. The choice is not random.
+Acceptance creates an Untreated Severed Stump, no harvested object, and a provisional
+final net Blood value of 12, then recomputes body capability and later locks.
+
+Limb for Life prevents Blood-0 death only. It does not Stabilize Ruined Torso, clear
+its pending deadline, or prevent `CATASTROPHIC_TORSO_FAILURE`. This clarification does
+not change Rules v0.5's current seeded-random runtime behavior, configuration, tests,
+characters, actions, items, or values.

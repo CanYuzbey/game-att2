@@ -28,9 +28,10 @@ runtime Stamina system, production UI, content expansion, or engine work is appr
 The owner approved the complete aimed-wound design direction on 2026-08-13. Numeric
 values, specific repair content, and runtime implementation remain deferred. The
 action-produced Clinch/Engaged/Distant direction, neutral-settling cadence, and
-Package C Resolution-Bound Range Tenure grammar and Package B Tiered Atomic
-Commitments are owner-approved on paper; runtime remains unapproved. The active
-design gate is Limb for Life and catastrophic survival.
+Package C Resolution-Bound Range Tenure grammar, Package B Tiered Atomic
+Commitments, and Package A Chosen Irrevocable Sacrifice are owner-approved on paper;
+runtime remains unapproved. The active design gate is mental defeat, surrender, and
+mercy.
 The owner-approved identity guardrail requires space to support body-sourced tactical
 cards, reflex execution, and lasting physical consequences. Clinch, Engaged, and
 Distant are produced by action/defense/reflex outcomes rather than generic movement.

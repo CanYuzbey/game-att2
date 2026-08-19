@@ -1,5 +1,24 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-19 owner decision: approve Package A Chosen Irrevocable Sacrifice
+
+The owner approved Package A as the paper answer to Limb for Life and catastrophic
+survival. After an atomic consequence and Panic Pulse, an actor at Blood 0 with one
+available charge chooses an exact eligible attached usable Left Arm, Right Arm, or
+Legs, or accepts death. Grafted, integrated, Critical, and objective-critical limbs
+are eligible; Head, Torso, Core, and unusable/detached structures are not.
+
+Acceptance atomically consumes the charge, severs the exact structure, creates one
+Untreated Severed Stump and no harvested object, and ends the exceptional survival
+chain at provisional net Blood 12. Later stump pressure remains. All body-derived
+capability and later commitments recompute. Limb for Life prevents Blood-0 death only;
+it never Stabilizes Ruined Torso, clears its pending deadline, or prevents
+`CATASTROPHIC_TORSO_FAILURE`.
+
+Document 37 is the complete paper authority. Existing seeded-random runtime behavior,
+configuration, tests, production content, final value, UI, fiction, and human evidence
+remain deferred. The next dependency-safe gate is mental defeat, surrender, and mercy.
+
 ## 2026-08-17 owner decision: approve Package B Tiered Atomic Commitments
 
 The owner approved Package B as the paper answer to treatment, repair, extraction,
@@ -500,7 +519,8 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - store/release strategy;
 - final debt economy;
 - final save/load format;
-- final Limb for Life selection/control rules beyond the approved seeded prototype;
+- final Limb for Life fiction, production availability, restore value, AI choice
+  policy, and presentation beyond document 37;
 - exact Attention Slot selection weights, repetition damping, final capacity balance,
   individual item/card content, and any signature timing exception beyond documents
   29 and 34;
@@ -521,8 +541,8 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
   signature timing exceptions, and item/tool quantities beyond document 36;
 - the encounter-resolution predicate that establishes legal access to a living,
   resisting, surrendered, escaped, or otherwise resolved opponent or their parts;
-- Limb for Life player control, refusal, eligibility, availability source, and its
-  ordering against Blood-0 and Ruined-Torso catastrophic consequences.
+- mental defeat, voluntary surrender, mercy/refusal causality, and their order after
+  physical incapacity and catastrophic survival.
 
 ## Implementation questions Codex may resolve reversibly
 

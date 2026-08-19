@@ -38,6 +38,7 @@ not make it current authority.
 | `34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md` | Owner-approved Package A2 deliberate inventory readiness, one-inventory-action limit, item/tool lifecycle, and card/item origin boundary; runtime and content remain gated |
 | `35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md` | Owner-approved Package C execution-bound, non-stacking range-maintenance grammar; current production profiles and runtime remain gated |
 | `36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md` | Owner-approved Package B Preparation/Main/contextual procedure timing, exact-source reservation, pay-on-execution cancellation, and atomic treatment/repair/extraction/graft chains; runtime and content remain gated |
+| `37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md` | Owner-approved Package A exact limb-or-death choice, untreated-stump/no-harvest survival chain, final net Blood 12, and strict catastrophic-Torso boundary; runtime and content remain gated |
 
 ## Encounter 3 paper testing
 

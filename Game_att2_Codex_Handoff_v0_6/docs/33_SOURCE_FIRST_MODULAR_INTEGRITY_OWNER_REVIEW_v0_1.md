@@ -530,3 +530,11 @@ explicit Desperate, Dormant, Invalid, weakest-source, and no-substitution rules 
 binding through pre-execution revalidation. Treatment, repair, Blood restoration,
 extraction, and graft effects invoke their separate owners rather than a generic
 effect package. Runtime and production profiles remain deferred.
+
+## 17. Later Package A catastrophic-survival reconciliation (2026-08-19)
+
+Document 37 sacrifices one exact attached body source, then re-derives its local
+profile and every dependent source. Full/Strained/explicit Desperate, Dormant,
+Invalid, weakest-source, Attention Slot, Integrity Echo, and no-substitution rules
+remain binding. A grafted or integrated arm has no immunity, and the sacrifice cause
+cannot create an alternative usable source. Runtime and profiles remain unchanged.

@@ -348,3 +348,11 @@ pre-execution cancellation loses its reserved tempo but preserves unpaid executi
 resources and creates no partial mutation. Once treatment, repair, extraction,
 salvage, graft, or table execution begins, its declared success/failure chain
 completes atomically before forced consequences. Runtime remains unchanged.
+
+## 19. Later Package A catastrophic-survival disposition (2026-08-19)
+
+Document 37 checks Panic Pulse and Limb for Life only after the current atomic action,
+procedure, or same-timing batch. An accepted sacrifice then recomputes all derived
+state. A later locked Reply whose exact source became illegal cancels under this
+document's existing rules: no substitute source, retarget, revenge action, or
+replacement commitment is granted. Runtime remains unchanged.

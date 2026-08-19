@@ -128,3 +128,12 @@ responses are required before locking motivation, balance, or final narrative.
 - Final generalized surrender psychology and boss-specific motivations.
 - Whether all encounters expose motivation clues at the same information level.
 - Multi-round negotiation timing, offer vocabulary, evaluation, and exit rules.
+
+## Later Package A catastrophic-survival reconciliation (2026-08-19)
+
+Document 37 supersedes the prototype's broad `usable non-Core limb` selection for
+future paper design. The actor chooses an exact eligible attached usable Left Arm,
+Right Arm, or Legs, or accepts death; selection is not random. The sacrifice may
+preserve an otherwise viable route but never completes an objective by itself, and no
+generic victory route requires Limb for Life. Existing prototype runtime and content
+remain unchanged.

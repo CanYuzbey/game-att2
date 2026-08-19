@@ -397,3 +397,11 @@ automatic defense remains sourced only by an incoming action. If incoming resolu
 invalidates a later locked procedure, document 32 cancellation applies. A procedure
 does not gain mitigation, Intercept, or range authority merely because it is medical.
 Runtime and detailed interruption rules remain deferred.
+
+## 16. Later Package A catastrophic-survival disposition (2026-08-19)
+
+Document 37 does not create a defense card, automatic reflex route, preparation, or
+passive mitigation. Panic Pulse and Limb for Life occur only after the incoming
+action and its automatic-defense/consequence chain finish. The sacrifice cannot
+interrupt, reduce, redirect, or roll back that action. Runtime and detailed reflex
+execution remain unchanged.
