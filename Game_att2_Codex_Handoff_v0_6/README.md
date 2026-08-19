@@ -93,7 +93,12 @@ The historical paper result of 37 Blood is preserved as evidence but is not an a
 For current document status and navigation, read [docs/README.md](docs/README.md).
 New core-gameplay conversations should start from
 [docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md](docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md),
-then use [docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md](docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md)
+then read the status-labelled owner working record in
+[docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md](docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md)
+so accepted directions, reversible hypotheses, examples, and deferrals are not
+conflated. Document 38 guides new design discussion but does not authorize runtime,
+content, final UI, engine work, or production claims. Then use
+[docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md](docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md)
 for the owner-approved, documentation-only H1 contract. Its executed plan, verified
 result, and evidence limits are consolidated in
 [docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md](docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md).
@@ -308,6 +313,7 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 30. `docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md`
 31. `docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md`
 32. `docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md`
+33. `docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports

@@ -16,6 +16,10 @@ Implement the smallest trustworthy Python simulator that reproduces the currentl
 ## Required workflow
 
 1. Read the handoff in the order in `README.md`.
+   For a new owner-led core-gameplay conversation, include
+   `docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md` and preserve
+   its `OWNER DIRECTION`, `WORKING HYPOTHESIS`, `EXAMPLE ONLY`, and `DEFERRED`
+   distinctions; it is discussion context, not runtime authority.
 2. Inspect the repository before modifying it.
 3. Produce a short implementation plan mapped to requirements and tests.
 4. Implement in small modules with type hints and explicit ownership.

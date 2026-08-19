@@ -36,6 +36,7 @@ not make it current authority.
 | `35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md` | Owner-approved Package C execution-bound, non-stacking range-maintenance grammar; current production profiles and runtime remain gated |
 | `36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md` | Owner-approved Package B Preparation/Main/contextual procedure timing, exact-source reservation, pay-on-execution cancellation, and atomic treatment/repair/extraction/graft chains; runtime and content remain gated |
 | `37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md` | Owner-approved Package A exact limb-or-death choice, untreated-stump/no-harvest survival chain, final net Blood 12, and strict catastrophic-Torso boundary; runtime and content remain gated |
+| `38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md` | Status-labelled owner working record for product intent, hybrid combat, anatomical-deckbuilder exploration, card acquisition, explicit examples, and deferrals; required context for new core-gameplay discussion, not runtime authority |
 | `DOCUMENT_CLEANUP_CLASSIFICATION_2026-08-19.md` | Repository-document cleanup policy and applied KEEP/MERGE/ARCHIVE/DELETE decisions |
 
 ## Encounter 3 paper testing
