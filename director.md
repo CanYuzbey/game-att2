@@ -1,7 +1,7 @@
 # Game att2 — Director Handoff ve Karar Metodolojisi
 
-Son güncelleme: 2026-08-19  
-Belge türü: operasyonel yönlendirme ve bilgisayarlar arası devamlılık kaydı  
+Son güncelleme: 2026-08-19
+Belge türü: operasyonel yönlendirme ve bilgisayarlar arası devamlılık kaydı
 Karar sahibi: Can Yüzbey
 
 ## 1. Bu belgenin amacı
