@@ -23,7 +23,7 @@ form a coherent strategic loop and before final balance or production content.
 
 The owner approved the counterbalanced VL-WP4 local owner diagnostic. This opens
 only local owner execution, contamination recording, and a continue/revise/kill
-review under `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. It does not approve an
+review under `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. It does not approve an
 external pilot, production Stamina/readiness, final values, campaign integration,
 characters, items, story, Encounter 3 runtime, Unity, or player-experience claims.
 
@@ -68,9 +68,9 @@ existing strain, and explicit body impairment remains a separate legality or
 effectiveness cause. The intent is to prevent indefinite no-progress defense while
 keeping Blood as the primary health/currency/fuel system.
 
-The owner subsequently approved only VL-WP1 through VL-WP3 of
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Their isolated implementation passed
-fidelity verification in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`.
+The owner subsequently approved only VL-WP1 through VL-WP3. Their executed plan and
+isolated fidelity result are consolidated in
+`25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`.
 This does not approve a Stamina/runtime system, exact production values, final
 terminology, campaign integration, or player-experience claims. VL-WP4 owner testing
 was separately approved and then deferred before execution on 2026-08-13.
@@ -99,10 +99,10 @@ execution approval without changing Combat Rules v0.5:
 The current simulator action economy, Guard Flesh effect, Anna behavior, configuration,
 and tests remain unchanged by this amendment.
 
-The traceable code/test plan is
-`21_H1_IMPLEMENTATION_PLAN_v0_1.md`. The owner approved that plan for execution on
-2026-08-11. Its bounded research implementation passed verification on 2026-08-12;
-results and evidence limits are recorded in `22_H1_IMPLEMENTATION_RESULTS_v0_1.md`.
+The owner approved the traceable code/test plan for execution on 2026-08-11. Its
+bounded research implementation passed verification on 2026-08-12; the executed plan,
+result, and evidence limits are consolidated in
+`21_H1_IMPLEMENTATION_RECORD_v0_1.md`.
 
 ## 2026-08-01 owner amendment
 

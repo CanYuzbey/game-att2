@@ -250,10 +250,9 @@ a separate legality/effectiveness cause. Blood remains health/currency/fuel.
 
 Exact values, recovery, final terminology, runtime integration, and experience claims
 remain open. This decision does not approve a production Stamina system or replace the
-current campaign rules. The owner approved only VL-WP1 through VL-WP3 in
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; the isolated implementation and its
-fidelity evidence are complete in
-`26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was separately
+current campaign rules. The owner approved only VL-WP1 through VL-WP3; their executed
+plan and isolated fidelity evidence are consolidated in
+`25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. VL-WP4 was separately
 approved and then deferred before execution on 2026-08-13; any external pilot remains
 a separate closed gate.
 
@@ -286,10 +285,10 @@ This decision does not change Combat Rules v0.5, current runtime/config/tests, w
 rules, active Cover It, movement, content, Encounter 3, or Unity. Execution is governed
 only by the separately approved bounded plan below.
 
-**Execution status:** `21_H1_IMPLEMENTATION_PLAN_v0_1.md` maps the approved contract to
-code, tests, evidence, rollback, and stop conditions. The owner approved the plan for
-execution on 2026-08-11. The bounded implementation passed its automated fidelity gate
-on 2026-08-12; `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` records the result. This does not
+**Execution status:** the owner approved the bounded code/test plan on 2026-08-11.
+The implementation passed its automated fidelity gate on 2026-08-12; the executed
+plan, result, and evidence limits are consolidated in
+`21_H1_IMPLEMENTATION_RECORD_v0_1.md`. This does not
 open scope outside that plan or establish player-experience claims.
 
 ## 2026-08-01 owner decision: hybrid strategic/reflex core direction

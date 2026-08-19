@@ -2,8 +2,8 @@
 
 Status: fidelity-verified local instrument preserved for later research. The owner
 deferred VL-WP4 before execution on 2026-08-13. This lab reuses H1-F0 only and is not
-production combat, a campaign rule, final UI, or external-player evidence. Results are recorded in
-`docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`.
+production combat, a campaign rule, final UI, or external-player evidence. The executed
+plan and result are recorded in `docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`.
 
 ## What it tests
 
@@ -17,7 +17,7 @@ production combat, a campaign rule, final UI, or external-player evidence. Resul
 - ordinary versus acknowledged high-risk failure.
 
 The ten deterministic comparison pairs are VL-C1 through VL-C10 in
-`docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Directional, sequence, and
+`docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. Directional, sequence, and
 sustained input families remain unimplemented.
 
 ## Build the local page

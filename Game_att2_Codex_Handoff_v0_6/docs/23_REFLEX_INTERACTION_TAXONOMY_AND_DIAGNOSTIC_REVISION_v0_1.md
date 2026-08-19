@@ -244,7 +244,7 @@ change, and body loss, which removes a capability.
 The boundary decision is **yes** for the visual-lab hypothesis: this one-resource
 model replaces the standalone Block-pressure state, and repeated Block is a specially
 weighted use of general readiness. Exact values and recovery behavior remain
-reversible variables in `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Production
+reversible variables in `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. Production
 combat remains unchanged unless later evidence supports a separately approved gate.
 
 ## 7. Revised diagnostic requirements
@@ -324,7 +324,7 @@ current H1 code remains a valid deterministic fidelity fixture but is not an ade
 human reflex instrument.
 
 The shared-readiness direction is resolved, but no implementation gate opens from
-that decision alone. `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` defines the
+that decision alone. `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` preserves the
 Block-only scope, provisional recovery behavior, explicit comparisons, evidence
 fields, rollback, and non-claims. VL-WP1 through VL-WP3 are complete, and VL-WP4 was
 owner-approved and then deferred before execution on 2026-08-13. Reflex work is
