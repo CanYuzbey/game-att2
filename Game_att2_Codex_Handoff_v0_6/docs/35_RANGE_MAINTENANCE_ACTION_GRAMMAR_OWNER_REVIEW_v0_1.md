@@ -397,3 +397,12 @@ Their Preparation/Main/contextual timing, exact-source reservation, execution-ti
 payment, cancellation, and atomic chains remain inside documents 29, 32, 33, and 34.
 Runtime and production profiles remain unchanged. The next dependency-safe gate is
 Limb for Life and catastrophic survival.
+
+## 19. Later Package A catastrophic-survival resolution (2026-08-19)
+
+Document 37 makes Limb for Life range-neutral: it does not Maintain, Shift/Create,
+Release, refresh, or settle range. The sacrificed source may nevertheless invalidate
+later range-producing commitments when body and range legality recompute. Such a
+commitment cancels without a maintenance or release consolation result. Runtime and
+production profiles remain unchanged. The next dependency-safe gate is mental
+defeat, surrender, and mercy.

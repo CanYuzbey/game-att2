@@ -496,3 +496,11 @@ lock; and pre-execution cancellation preserves unpaid uses. One inventory Prepar
 cannot be followed by a second voluntary inventory Main in the same round. Contextual
 salvage/graft never invents ownership or a bonus slot/play. Runtime and production
 content remain unchanged.
+
+## 22. Later Package A catastrophic-survival resolution (2026-08-19)
+
+Document 37 makes the Limb for Life charge a visible run-level affordance rather than
+an item, tool, card, inventory object, ready-slot occupant, or state-required action.
+It needs no readiness and consumes no inventory action. Its severed limb creates no
+harvested object or owned inventory record. Runtime and production content remain
+unchanged.

@@ -128,3 +128,8 @@ Document 36 maps existing treatment, Blood-restoration, extraction, salvage, gra
 and table content into Package B timing and atomicity for paper review only. Its
 TAC-B fixtures are neutral acceptance cases, not actions, cards, items, abilities,
 characters, or additions to this catalogue. Runtime content remains unchanged.
+
+Document 37 maps the existing tutorial-scope Limb for Life affordance into Package A
+catastrophic-survival causality for paper review only. Its CIS-A fixtures, evidence
+marker examples, and exact-choice prompt are not characters, cards, items, abilities,
+wounds, routes, or additions to this catalogue. Runtime content remains unchanged.

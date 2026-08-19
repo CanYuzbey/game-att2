@@ -1946,3 +1946,34 @@ procedures use the same causal rules.
 This is paper authority only. Existing runtime Fast-item behavior, procedures,
 configuration, tests, production content, values, scenarios, and UI remain unchanged.
 The next dependency-safe design gate is Limb for Life and catastrophic survival.
+
+## 43. Owner Amendment - Chosen Irrevocable Sacrifice (2026-08-19)
+
+The owner approved Package A as the paper answer to Limb for Life and catastrophic
+survival. Document 37 records the complete contract, future acceptance requirements,
+evidence limits, runtime divergences, and hostile review.
+
+After a complete atomic consequence and Panic Pulse, an actor at Blood 0 with one
+available Limb for Life charge chooses an exact eligible attached usable Left Arm,
+Right Arm, or Legs, or chooses death. Grafted, integrated, Critical, and
+objective-critical limbs receive no hidden immunity. Head, Torso, Core, Disabled,
+Ruined, Severed, and Missing structures are ineligible. Selection is never random.
+
+Acceptance atomically consumes the charge, severs the chosen structure, creates one
+Untreated Severed Stump, creates no harvested-part object, and finishes the survival
+chain at provisional net Blood 12. The stump's later periodic pressure remains. Body
+sources, capability profiles, Attention Slots, Integrity Echo, range legality, and
+later locked commitments are recomputed; invalid commitments cancel without a
+replacement action. The consequence consumes no Preparation, Main, inventory action,
+Attention Slot, defense event, Reply, or Lead.
+
+Limb for Life prevents Blood-0 death only. It does not Stabilize Ruined Torso, clear
+`TORSO_FATALITY_PENDING`, extend its deadline, or prevent
+`CATASTROPHIC_TORSO_FAILURE`. A legal Stabilize chain that drives Blood to 0 completes
+atomically before Blood survival resolves. No generic victory route requires
+sacrifice, and only actors explicitly granted the run-level affordance may use it.
+
+This is paper authority only. Existing seeded-random runtime selection,
+configuration, tests, production content, provisional value 12, and UI remain
+unchanged. The next dependency-safe design gate is mental defeat, surrender, and
+mercy.

@@ -899,3 +899,11 @@ eligible attached structure only; emergency graft does not erase a Stump wound o
 an automatic fresh-graft wound. Extraction creates a separate donor wound and
 harvested object, so later donor treatment cannot improve harvest quality. Runtime
 and production profiles remain unchanged.
+
+## 24. Later Package A catastrophic-survival reconciliation (2026-08-19)
+
+Document 37 makes an accepted Limb for Life choice sever one exact eligible attached
+arm or Legs and create one Untreated Severed Stump. The event creates no harvested
+object or quality. Its exceptional survival chain finishes at provisional net Blood
+12 without reapplying the stump's creation loss after the reset; later periodic stump
+pressure remains active. Runtime and production wound content remain unchanged.

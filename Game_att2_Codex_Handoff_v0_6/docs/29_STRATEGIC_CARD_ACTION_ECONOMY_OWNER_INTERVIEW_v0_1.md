@@ -550,3 +550,11 @@ and table procedures create no combat play. The one voluntary inventory-origin a
 per round remains binding: an inventory Preparation may be followed by a body Main,
 but not by a second inventory Main. Claim and an inventory extraction tool therefore
 normally require separate rounds. Runtime remains unchanged.
+
+## 19. Later Package A catastrophic-survival reconciliation (2026-08-19)
+
+Document 37 defines Limb for Life as a forced consequence window, not a card, item,
+body-source opportunity, Attention Slot, Preparation, Main, inventory-origin action,
+Reply, or Lead effect. The current atomic action completes before the choice. After
+sacrifice, later commitments revalidate and may cancel without replacement. Runtime
+and card/item content remain unchanged.

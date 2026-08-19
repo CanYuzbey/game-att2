@@ -468,3 +468,17 @@ Resolve **Limb for Life and catastrophic survival** as the next paper gate: play
 choice or randomness, refusal, eligible limbs, availability source, and ordering
 against Ruined-Torso rescue and Blood-0 consequences. Do not implement runtime or add
 production content from this recommendation.
+
+## 21. Later Package A catastrophic-survival resolution (2026-08-19)
+
+Document 37 resolves that gate with Chosen Irrevocable Sacrifice. A started procedure,
+including a Stabilize whose execution cost reaches Blood 0, completes its declared
+atomic chain before Panic Pulse and Limb for Life. The later sacrifice is not a
+procedure, consumes no action budget, and cannot create treatment, repair, access,
+ownership, or a harvested object. It creates one Untreated Severed Stump and finishes
+the exceptional survival chain at provisional net Blood 12.
+
+Limb for Life may restore Blood while Ruined-Torso fatality is pending, but it never
+Stabilizes the Torso or prevents the deadline's catastrophic failure. Runtime,
+configuration, procedures, values, and production content remain unchanged. The next
+dependency-safe gate is mental defeat, surrender, and mercy.

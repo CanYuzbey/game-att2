@@ -470,3 +470,13 @@ profiles remain explicit. Ordinary costs pay on execution, and a pre-execution
 cancellation does not spend Blood or apply partial treatment/repair. The Ruined-Torso
 rescue appears only when a real legal Stabilize source exists and uses the normal
 timing budget. Runtime and values remain unchanged.
+
+## 18. Later Package A catastrophic-survival reconciliation (2026-08-19)
+
+Document 37 resolves the previously open case 15 boundary. Limb for Life may answer
+Blood 0 after Ruined-Torso creation, but `TORSO_FATALITY_PENDING` and its deadline
+remain. It never answers `CATASTROPHIC_TORSO_FAILURE`. A legal Stabilize procedure
+whose execution cost reaches Blood 0 completes atomically before Blood survival is
+checked. The accepted sacrifice creates an Untreated Stump and ends its exceptional
+chain at provisional net Blood 12; later stump pressure remains. WNR-0.1 values and
+runtime remain unchanged.
