@@ -5,9 +5,9 @@ Status date: 2026-08-16
 Status: owner-resolved core-gameplay direction plus reversible prototype defaults.
 The four H1 owner questions were resolved on 2026-08-11 and are specified in
 `20_H1_HYBRID_COMBAT_SPEC_v0_1.md`, which the owner approved for implementation
-planning on the same date. The separate bounded execution approval is recorded in
-`21_H1_IMPLEMENTATION_PLAN_v0_1.md`, and the verified 2026-08-12 fidelity result is in
-`22_H1_IMPLEMENTATION_RESULTS_v0_1.md`. This implementation is not evidence that the
+planning on the same date. The bounded execution approval and verified 2026-08-12
+fidelity result are consolidated in `21_H1_IMPLEMENTATION_RECORD_v0_1.md`. This
+implementation is not evidence that the
 loop is fun. Exact timing, damage, wound, and balance values remain research variables
 requiring human playtest.
 
@@ -466,12 +466,12 @@ restore broken sources, or bypass the shared consequence loop.
 
 Use this document for macro direction and
 `20_H1_HYBRID_COMBAT_SPEC_v0_1.md` for the research contract, then read
-`22_H1_IMPLEMENTATION_RESULTS_v0_1.md` for the current evidence. The four owner
+`21_H1_IMPLEMENTATION_RECORD_v0_1.md` for the current evidence. The four owner
 questions in section 6 are resolved and the bounded fidelity implementation is
 complete. Use `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` for the
 diagnostic correction, `24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md` for current
-cross-discipline status, and `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` for the
-single active approval gate. Do not restart the archived question-by-question
+cross-discipline status, and `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` for the
+preserved lab result and deferred gate. Do not restart the archived question-by-question
 interview, promote provisional values before human testing, or expand content or
 presentation.
 
@@ -479,11 +479,10 @@ Suggested opening request:
 
 > Read `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`,
 > `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`,
-> `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`,
-> `docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`,
+> `docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md`,
 > `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`,
 > `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`,
-> `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`, and the mandatory repository skill files.
+> `docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`, and the mandatory repository skill files.
 > Treat the four owner decisions as resolved, the H1 values as configurable research
 > variables, the bounded fidelity implementation as complete, and shared readiness as
 > approved for lab research planning only. Review the evidence limits and proposed lab

@@ -20,9 +20,8 @@ production readiness. External participants require a separately approved consen
 session protocol; H1 performs no upload and stores no participant identity.
 
 Read `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` for the
-diagnostic finding and `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` for the
-approved bounded plan. Its results and current owner-diagnostic gate are in
-`docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. Do not extend this
+diagnostic finding and `docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` for the
+executed bounded plan, result, and deferred owner-diagnostic gate. Do not extend this
 runner or the visual lab beyond that authority.
 
 ## Deterministic replay

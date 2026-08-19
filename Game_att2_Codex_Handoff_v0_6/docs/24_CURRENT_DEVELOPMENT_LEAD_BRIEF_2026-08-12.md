@@ -192,9 +192,9 @@ The owner approved the shared-readiness design method:
 - this is approval to plan and compare the model, not approval for runtime Stamina,
   final values, campaign integration, or a production mechanic.
 
-The owner approved VL-WP1 through VL-WP3 of
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` on 2026-08-12. Their verified results
-are in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was
+The owner approved VL-WP1 through VL-WP3 on 2026-08-12. Their executed plan and
+verified results are consolidated in
+`25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. VL-WP4 was
 separately opened and then deferred before execution by the owner on 2026-08-13.
 
 ## 3. Verified repository baseline
