@@ -1,13 +1,20 @@
 # Game att2 - Strategic Card and Action Economy Direction
 
-Status date: 2026-08-16
+Status date: 2026-08-21
 
-Status: **OWNER-DELEGATED, CODEX-APPROVED DESIGN DIRECTION - PAPER BASELINE ONLY; RUNTIME, CONTENT, AND FINAL BALANCE NOT APPROVED**
+Status: **HISTORICAL OWNER-DELEGATED PAPER BASELINE; SUPERSEDED IN PART BY DOCUMENT 38; RUNTIME, CONTENT, AND FINAL BALANCE NOT APPROVED**
 
-This document is the current design authority for brain/attention slots, the tactical
-hand lifecycle, voluntary card plays, body-sourced card eligibility, and physical
-compatibility. It develops the owner's recommendations using the existing body,
-wound, dynamic-range, staged-turn, and deferred-reflex decisions.
+Owner amendment, 2026-08-21: document 38 is the current authority for Brain Parts,
+weighted Attention Slot selection, slot counts as test fixtures, Blood-paid immediate
+redraw, and inventory outside the Brain hand. This document remains authority for the
+staged Preparation/Main budget, body-owned capability, exact physical-source
+commitments, persistent-card state vocabulary, and automatic-reflex boundary where
+document 38 does not replace them.
+
+This document was the original design authority for brain/attention slots, the
+tactical hand lifecycle, voluntary card plays, body-sourced card eligibility, and
+physical compatibility. Its preserved rules remain authority only where the 2026-08-21
+amendment and document 38 do not supersede them.
 
 Approval here means the architecture is coherent enough to guide the next paper
 specification. It does not authorize production code, a full deckbuilder, individual
@@ -558,3 +565,39 @@ body-source opportunity, Attention Slot, Preparation, Main, inventory-origin act
 Reply, or Lead effect. The current atomic action completes before the choice. After
 sacrifice, later commitments revalidate and may cancel without replacement. Runtime
 and card/item content remain unchanged.
+
+## 20. Owner-approved Brain Module reconciliation (2026-08-21)
+
+Document 38 supersedes the following parts of this historical baseline:
+
+- three starting and five developed slots are comparison fixtures, not final approved
+  capacity numbers;
+- Commitment-capable, Response-supporting, and Adaptive are no longer composition
+  guarantees;
+- ordinary selection is weighted without replacement and may produce all-Attack,
+  all-Defence, or other uneven hands when the usable pool supports them;
+- hard-filtered Brain Part slots resolve before flexible slots and may shade when no
+  eligible match exists;
+- free delayed Reconsider is replaced by one validated, immediate, Blood-paid redraw
+  before commitment per round;
+- inventory no longer occupies an Attention Slot and remains directly accessible
+  under document 34's preserved timing, ownership, source, use, and one-action rules;
+- permanent Brain Parts persist through death, are configured one per slot before a
+  run, and remain locked during that run;
+- future enemies use the same internal hidden-hand/source-legality engine while the
+  player sees only approved intent and action results.
+
+Still preserved:
+
+- zero or one Preparation and zero or one Main under the staged turn;
+- body-owned opportunity existence and exact-source legality;
+- persistent Ready/Dormant/Invalid/Spent distinctions;
+- no mid-exchange replacement draw after use or source invalidation;
+- shared physical compatibility and one-card multi-source techniques;
+- automatic cardless reflex defence;
+- no generic extra plays from ordinary slot growth.
+
+Rare Brain effects on execution, inventory, reflexes, or additional card plays remain
+explicit future exceptions. Final counts, weights, costs, cards, Brain Parts,
+Head/Stun behavior, reward content, runtime, save data, UI, and human evidence remain
+unapproved.

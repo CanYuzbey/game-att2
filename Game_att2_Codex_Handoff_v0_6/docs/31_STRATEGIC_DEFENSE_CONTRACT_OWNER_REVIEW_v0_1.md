@@ -227,7 +227,9 @@ No Dodge/Evade content or runtime behavior is approved here.
 
 ## 5. Attention Slot reconciliation
 
-Reflex defenses do not enter the persistent Attention Slot hand. Document 29's
+Reflex defenses do not enter the persistent Attention Slot hand. The guaranteed
+Response-supporting duty below is historical after document 38, but its cardless
+reflex boundary remains binding. Document 29's
 Response-capable selection duty is clarified as **Response-supporting**:
 
 - when the body has an eligible proactive guard, stance, intent-reading action, or
@@ -243,6 +245,10 @@ Response-capable selection duty is clarified as **Response-supporting**:
 
 This amendment preserves three starting slots, five developed slots, and the approved
 zero-or-one Preparation plus zero-or-one Main budget.
+
+Document 38 later replaces those counts as approved values and removes the
+Response-supporting composition guarantee. It preserves the Preparation/Main budget
+and automatic cardless reflex event.
 
 ## 6. Source invalidation and interruption boundary
 
@@ -405,3 +411,16 @@ passive mitigation. Panic Pulse and Limb for Life occur only after the incoming
 action and its automatic-defense/consequence chain finish. The sacrifice cannot
 interrupt, reduce, redirect, or roll back that action. Runtime and detailed reflex
 execution remain unchanged.
+
+## 17. Brain Module disposition (2026-08-21)
+
+Document 38 removes every Attack/Defence/Response-supporting hand guarantee. A
+proactive guard or stance may appear only through ordinary source-valid weighted
+selection or an explicit Brain Part rule. Automatic Block, Intercept, Dodge/Evade,
+and later reflex events remain outside Attention Slots and require no card draw.
+
+Rare Brain Parts may later modify an authored reflex profile, but no current Brain
+Part, reflex value, additional event, or content is approved. Ordinary slot growth
+still grants no extra reflex event, better grade, or perfect counter. Final slot
+counts, Head/Stun interaction, detailed reflex execution, runtime, and UI remain
+deferred.

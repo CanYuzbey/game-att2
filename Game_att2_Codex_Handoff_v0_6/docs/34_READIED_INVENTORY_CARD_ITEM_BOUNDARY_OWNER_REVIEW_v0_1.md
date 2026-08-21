@@ -1,10 +1,18 @@
 # Game att2 - Readied Inventory Card/Item Boundary Owner Review v0.1
 
-Status date: 2026-08-16
+Status date: 2026-08-21
 
-Status: **Package A2 - Readied Inventory Attention Slot is owner-approved as paper
-design authority. Runtime, configuration, individual production cards/items, final
-timing values, balance, UI, and human-experience claims remain unapproved.**
+Status: **HISTORICAL PACKAGE A2 PAPER AUTHORITY; DOCUMENT 38 SUPERSEDES REQUIRED
+ATTENTION SLOT READINESS WHILE PRESERVING INVENTORY OWNERSHIP, TIMING, SOURCE, USE,
+ONE-ACTION, AND NO-SUBSTITUTION RULES. RUNTIME REMAINS UNAPPROVED.**
+
+Owner amendment, 2026-08-21: inventory is directly accessed outside the ordinary
+Brain hand. The Readied Inventory slot, inventory-focused Reconsider cases, and
+requirements that depend on slot occupancy are historical evidence only. The origin
+taxonomy, Preparation/Main timing, one voluntary inventory-origin action per round,
+ownership, quantities/expiry, exact-source reservation, pay-on-execution, weakest-
+source tools, passive/active boundary, signature overrides, and no substitution remain
+current paper authority under document 38.
 
 ## 1. Decision and authority boundary
 
@@ -504,3 +512,34 @@ an item, tool, card, inventory object, ready-slot occupant, or state-required ac
 It needs no readiness and consumes no inventory action. Its severed limb creates no
 harvested object or owned inventory record. Runtime and production content remain
 unchanged.
+
+## 23. Brain Module supersession (2026-08-21)
+
+Document 38 removes inventory from ordinary Attention Slot selection. Owned legal
+items and tools are inspected and selected directly from inventory, so the following
+Package A2 requirements are superseded rather than combined with the Brain Module:
+
+- one Readied Inventory opportunity occupying a flexible slot;
+- protection of a Commitment-capable slot from inventory competition;
+- inventory-specific use of Reconsider;
+- `owned/readied` as an Attention Slot lifecycle distinction;
+- state-required inventory rescue occupying an existing selection duty.
+
+The following remain binding:
+
+- one primary origin per opportunity;
+- real ownership, quantities, uses, expiry, item state, and required sources;
+- authored Preparation/Main timing and no paper free Fast-item rail;
+- at most one voluntary inventory-origin action per actor per round;
+- execution-time payment/use unless an explicit on-lock state says otherwise;
+- exact item/tool/source reservation, weakest required source, and no substitution;
+- automatic passive/reflex separation;
+- direct state-required surfacing only from real legal state and ownership;
+- one governed signature override and complete preview/evidence requirements;
+- current simulator Focus/Fast-item/Main behavior unchanged until implementation
+  approval.
+
+Future paper cases must rewrite CIB-A2-002 through CIB-A2-004, CIB-A2-007,
+CIB-A2-015, and related readiness cases around direct inventory access. They must not
+be used as runtime acceptance criteria in their superseded form. Runtime, item
+content, values, UI, inventory capacity, and human evidence remain deferred.

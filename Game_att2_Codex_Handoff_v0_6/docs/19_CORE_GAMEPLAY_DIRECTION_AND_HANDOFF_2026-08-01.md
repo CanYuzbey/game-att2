@@ -1,6 +1,6 @@
 # Game att2 — Core Gameplay Direction and New-Conversation Handoff
 
-Status date: 2026-08-16
+Status date: 2026-08-21
 
 Status: owner-resolved core-gameplay direction plus reversible prototype defaults.
 The four H1 owner questions were resolved on 2026-08-11 and are specified in
@@ -112,16 +112,20 @@ the state. These are design meanings, not runtime implementation approval.
 This guardrail does not approve a full deckbuilder, hand size, draw/discard algorithm,
 movement-card list, broader reflex implementation, or new content.
 
-### Cognitive capacity approved; brain/Head content still deferred
+### Brain Module progression approved; final numbers and Head interaction deferred
 
-Document 29 now approves the Attention Slot architecture: three starting slots may
-develop toward five, and cognitive selection may bias which body-supported
-opportunities appear. Capacity adds choices, never ordinary plays; selection cannot
-guarantee ideal counters or replace limb eligibility.
+Document 38 is the current Brain/Attention authority. Rare Brain Parts persist through
+death, are configured one per Attention Slot before a run, and remain locked for that
+run. Usable body sources contribute exact card instances; weighted selection without
+replacement guarantees neither Attack nor Defence. Hard-filtered slots resolve before
+flexible slots and shade when no eligible match exists.
 
-Literal brain anatomy, Head attachment, named brain regions, shop/graft/skill upgrade
-delivery, and example reflex/adrenaline effects remain deferred. They must be designed
-later as content/progression choices without displacing body-as-build.
+Unused legal cards persist. Spent/Invalid replacement waits for Decision Refresh, and
+one validated immediate redraw per round spends a later-authored Blood cost. Inventory
+remains directly accessible outside Attention Slots. Reflex defence remains automatic
+and cardless. Final slot counts, weights, redraw cost, Brain Part/card content,
+Head/Stun interaction, rare extra plays, save/runtime implementation, and UI remain
+deferred. The historical three-slot/five-slot values are comparison fixtures only.
 
 ## 3. Target player experience
 

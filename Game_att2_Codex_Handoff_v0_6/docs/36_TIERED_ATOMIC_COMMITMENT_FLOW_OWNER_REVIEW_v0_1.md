@@ -482,3 +482,17 @@ Limb for Life may restore Blood while Ruined-Torso fatality is pending, but it n
 Stabilizes the Torso or prevents the deadline's catastrophic failure. Runtime,
 configuration, procedures, values, and production content remain unchanged. The next
 dependency-safe gate is mental defeat, surrender, and mercy.
+
+## 22. Brain Module inventory reconciliation (2026-08-21)
+
+Document 38 removes the Readied Inventory slot but does not change this package's
+procedure timing or atomicity. Inventory treatment, Blood restoration, Claim, and
+extraction tools are selected directly from owned legal inventory. They still consume
+their authored Preparation or Main timing, obey the one-voluntary-inventory-action
+limit, reserve exact sources/targets/items, pay on execution, and cannot substitute
+after lock.
+
+No procedure enters the body-card hand by implication. A rare future Brain Part may
+explicitly affect an inventory action, but it cannot waive ownership, timing, the one-
+inventory-action limit, source legality, atomic execution, or structured evidence.
+Runtime, procedure content, Brain content, values, and UI remain unchanged.

@@ -1,5 +1,33 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-21 owner decision: approve Brain Module and Weighted Attention Slots
+
+The owner approved document 38 as the current paper authority for permanent Brain
+Part progression and the body-card hand. Brain Parts are rare permanent unlocks,
+persist through death, are configured one per Attention Slot before a run, and remain
+locked for that run. Ordinary parts primarily change selection weights or filters;
+rare authored parts may modify slot-local execution or explicitly affect reflex,
+inventory, other non-body actions, or future extra-card timing.
+
+Usable body sources generate one or more exact card instances. Weighted selection is
+without replacement per instance, guarantees neither Attack nor Defence, resolves
+hard filters before flexible slots, and shades unmatched slots. Unused legal cards
+persist; Spent/Invalid replacement waits for Decision Refresh. One valid immediate
+redraw per round spends a later-authored Blood cost and follows ordinary Blood
+consequences.
+
+Inventory remains directly accessible outside Attention Slots while retaining
+Preparation/Main timing, the one-voluntary-inventory-action limit, ownership, uses,
+exact-source reservation, pay-on-execution, and no substitution. Reflex defence stays
+automatic and cardless. Enemy hands use the same future internal engine but remain
+hidden behind visible intent and observed results.
+
+This supersedes document 29's composition guarantees, fixed three-to-five approval,
+and free delayed Reconsider, plus document 34's required inventory-slot readiness.
+All final counts, weights, costs, content, Head/Stun interaction, rare extra plays,
+runtime, save data, configuration, UI, and human evidence remain deferred. The active
+product gate remains mental defeat, surrender, and mercy.
+
 ## 2026-08-19 owner decision: approve Package A Chosen Irrevocable Sacrifice
 
 The owner approved Package A as the paper answer to Limb for Life and catastrophic
@@ -62,7 +90,7 @@ deferred. At that decision point, the next dependency-safe gate was treatment,
 repair, extraction, and graft commitment flow; the Package B entry above records its
 later resolution.
 
-## 2026-08-16 owner decision: approve Package A2 Readied Inventory boundary
+## 2026-08-16 owner decision: approve Package A2 Readied Inventory boundary — slot readiness superseded 2026-08-21
 
 The owner approved Package A2 as the paper answer to remaining card and item
 boundaries after reviewing comparable shipped systems. One eligible owned item or
@@ -85,6 +113,10 @@ configuration, production content, individual values/exceptions, UI, balance, an
 human-experience claims remain deferred. At that decision point, the next
 dependency-safe gate was range-maintenance action grammar; the 2026-08-17 entry
 above records its later resolution.
+
+Document 38 later removes required inventory occupancy from Attention Slots while
+preserving this entry's ownership, timing, one-action, use, source, passive/active,
+and no-substitution rules.
 
 ## 2026-08-16 owner decision: approve Package D Source-First Modular Integrity
 
@@ -148,7 +180,7 @@ values remain tunable after dependency review. This is paper authority only and 
 not change configuration or simulator behavior without a separate implementation
 gate.
 
-## 2026-08-14 owner-delegated decision: approve Attention Slot architecture
+## 2026-08-14 owner-delegated decision: approve Attention Slot architecture — superseded in part 2026-08-21
 
 The owner delegated researched optimization and design-direction approval for the
 brain-slot proposal. Document 29 approves the paper baseline: three Attention Slots
@@ -163,6 +195,11 @@ approve exact selection weights, individual cards/content, Fast-item limits, fin
 slot balance, production Stamina, detailed reflex execution, UI, or runtime. The next
 gate is the wound-to-Blood, repair, treatment, wounded-limb self-risk, and exact
 Ruined-Torso rescue numeric package.
+
+Document 38 later replaces the fixed comparison counts as approved numbers, the
+Commitment/Response-supporting/Adaptive composition guarantees, and free delayed
+Reconsider with weighted no-guarantee selection, test-only counts, and Blood-paid
+immediate redraw. Body-owned eligibility and shared physical commitments remain.
 
 ## 2026-08-13 owner decision: approve complete aimed-wound direction
 

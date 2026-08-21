@@ -1,8 +1,8 @@
 # Game att2 - Current Development Lead Brief
 
-Status date: 2026-08-19
+Status date: 2026-08-21
 
-Status: active cross-discipline production brief. Read with documents 19 through 37.
+Status: active cross-discipline production brief. Read with documents 19 through 38.
 This file summarizes current authority; it does not replace the Development Master,
 Combat Rules, technical specification, or decision ledger.
 
@@ -19,16 +19,36 @@ fidelity-verified without changing the approved campaign or declaring final comb
 rules. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before
 execution. Space/reach, the strategic card/action-economy architecture, provisional
 WNR-0.1 values, layered automatic defense, public-Lead sequential conflict
-resolution, Package D Source-First Modular Integrity, Package A2 Readied Inventory
-card/item boundaries, Package C Resolution-Bound Range Tenure, Package B Tiered
-Atomic Commitments, and Package A Chosen Irrevocable Sacrifice are now approved paper
-directions. The active dependency-ordered gate is mental defeat, surrender, and
-mercy. Runtime implementation remains unapproved.
+resolution, Package D Source-First Modular Integrity, the preserved Package A2
+inventory legality/timing boundary, Package C Resolution-Bound Range Tenure, Package
+B Tiered Atomic Commitments, Package A Chosen Irrevocable Sacrifice, and the document
+38 Brain Module are now approved paper directions. Document 38 supersedes required
+inventory-slot readiness. The active dependency-ordered gate is mental defeat,
+surrender, and mercy. Runtime implementation remains unapproved.
 
 The owner-approved combat identity guardrail continues to apply: the game must not
 become upgraded stat-menu dueling. Body-sourced tactical
 cards, reflex execution, and lasting physical consequences define the intended loop;
 space is an action-produced supporting state and must not become the primary activity.
+
+## Owner decision addendum - 2026-08-21
+
+The owner approved document 38 as the current Brain/Attention authority. Rare Brain
+Parts persist through death, are configured one per slot before a run, and remain
+locked during that run. Usable body sources contribute exact card instances;
+selection is weighted without replacement, guarantees neither Attack nor Defence,
+resolves hard filters first, and shades unmatched slots.
+
+Unused legal cards persist; Spent/Invalid replacement waits for Decision Refresh.
+One validated immediate redraw per round spends a later-authored Blood cost. Inventory
+is directly accessible outside Attention Slots while retaining its Preparation/Main,
+one-action, ownership, source, use, and no-substitution rules. Reflex defence remains
+automatic and cardless. Future enemies share the hidden internal hand/legality engine,
+but the player sees only intent and action results.
+
+Final counts, weights, costs, Brain/card content, Head/Stun interaction, rare extra
+plays, runtime, save data, UI, and human evidence remain deferred. This paper approval
+does not replace the active mental-defeat/surrender/mercy product gate.
 
 ## 1A. Latest owner decision recorded on 2026-08-19
 
@@ -88,6 +108,10 @@ values/exceptions, UI, balance, and human-experience claims remain deferred. At 
 decision point, the next gate was range-maintenance action grammar; section 1C
 records its later resolution.
 
+Document 38 later supersedes only the required Readied Inventory slot and inventory-
+focused Reconsider behavior. Direct inventory access now sits outside the Brain hand;
+the one-action, timing, ownership, source, use, and no-substitution safeguards remain.
+
 ## 1E. Earlier owner decision recorded on 2026-08-16
 
 The owner approved Package D as the complete paper answer to body-state capability
@@ -141,6 +165,10 @@ generic action points. More slots add choices only. Individual cards, exact weig
 Fast-item limits, wound/repair values, production Stamina, reflex execution, final UI,
 and runtime remain unapproved.
 
+Document 38 later supersedes the fixed comparison counts as approved values, the
+three composition duties, and free delayed Reconsider. It preserves body-owned
+eligibility, persistent-card lifecycle, automatic reflexes, and physical compatibility.
+
 ## 1I. Earlier owner decision recorded on 2026-08-13
 
 The owner approved the complete latest action-produced range direction. Clinch,
@@ -160,8 +188,9 @@ rejected. Space may support or be carried by actions/cards but must not dominate
 loop. This is identity authority, not approval for a full deck system, draw rules,
 movement implementation, reflex implementation, or new content.
 
-A cognitive capacity/selection role is now approved in document 29. Literal
-brain/Head anatomy, progression delivery, and named reflex/offensive effects remain
+Document 38 now approves rare permanent Brain Parts, run-start slot configuration,
+weighted body-card selection, and Blood-paid redraw. Exact Head anatomy, reward
+content, values, rare reflex/offensive effects, runtime progression, and UI remain
 deferred and may not displace limb-based build identity.
 
 ## 1K. Earlier owner decision recorded on 2026-08-13
@@ -245,6 +274,7 @@ reflex diagnostics and broader reflex mechanics - DEFERRED
 -> physical-consequence meanings - APPROVED, VALUES DEFERRED
 -> action-produced range and settling cadence - APPROVED, RUNTIME DEFERRED
 -> strategic card/action economy and cadence - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
+-> Brain Module weighted body-card selection and permanent Brain Parts - APPROVED PAPER DIRECTION, NUMBERS/RUNTIME DEFERRED
 -> wound-to-Blood values and stabilization tuning - PROVISIONAL PAPER DIRECTION APPROVED
 -> strategic defense roles and stacking - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
 -> initiative and conflict timing - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
@@ -324,12 +354,14 @@ The owner-approved action-produced range direction remains binding: Clinch, Enga
 and Distant are outcomes rather than movement controls. Document 29 resolves the
 strategic hand/action architecture, document 30 provides provisional WNR-0.1 values,
 document 31 resolves layered automatic defense, document 32 resolves public-Lead
-sequential conflict timing, document 33 resolves Source-First Modular Integrity, and
-document 34 resolves Readied Inventory card/item boundaries, document 35 resolves
+sequential conflict timing, document 33 resolves Source-First Modular Integrity,
+document 34 preserves inventory ownership/timing/source rules, document 35 resolves
 execution-bound range maintenance, document 36 resolves tiered atomic procedure
-commitments, and document 37 resolves chosen catastrophic survival on paper. A legal reflex-defense event is build-
-derived and automatically surfaced rather than manually played from an Attention
-Slot. Runtime and configuration remain unchanged. The next dependency-safe gate is
+commitments, document 37 resolves chosen catastrophic survival, and document 38
+resolves the Brain Module while superseding required inventory-slot readiness on
+paper. A legal reflex-defense event is build-derived and automatically surfaced
+rather than manually played from an Attention Slot. Runtime and configuration remain
+unchanged. The next dependency-safe gate is
 mental defeat, surrender, and mercy. Detailed reflex work,
 runtime card/wound/defense/timing/integrity/item implementation, an external pilot,
 content expansion, and production integration remain deferred.

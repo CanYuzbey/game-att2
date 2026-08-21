@@ -29,14 +29,16 @@ The owner approved the complete aimed-wound design direction on 2026-08-13. Nume
 values, specific repair content, and runtime implementation remain deferred. The
 action-produced Clinch/Engaged/Distant direction, neutral-settling cadence, and
 Package C Resolution-Bound Range Tenure grammar, Package B Tiered Atomic
-Commitments, and Package A Chosen Irrevocable Sacrifice are owner-approved on paper;
-runtime remains unapproved. The active design gate is mental defeat, surrender, and
-mercy.
+Commitments, Package A Chosen Irrevocable Sacrifice, and the Brain Module/weighted
+Attention Slot architecture are owner-approved on paper; runtime remains unapproved.
+The active design gate is mental defeat, surrender, and mercy.
 The owner-approved identity guardrail requires space to support body-sourced tactical
 cards, reflex execution, and lasting physical consequences. Clinch, Engaged, and
 Distant are produced by action/defense/reflex outcomes rather than generic movement.
-This does not approve runtime implementation, a full deck system, individual card
-profiles, or brain progression.
+The Brain Module now approves rare permanent Brain Parts, run-start slot
+configuration, probabilistic body-only selection, and Blood-paid redraw on paper. It
+does not approve runtime implementation, final slot counts/weights, individual card
+or Brain Part content, save data, Head/Stun rules, or production UI.
 
 > **Collaborator verification note — 2026-08-13:** `main` contains the verified
 > visual interaction lab and the separate local Block-pressure demo. To review the
@@ -74,6 +76,7 @@ The active handoff package lives in
 - [Approved aimed-wound design direction](Game_att2_Codex_Handoff_v0_6/docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md)
 - [Approved space-and-reach direction](Game_att2_Codex_Handoff_v0_6/docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md)
 - [Approved strategic card/action-economy direction](Game_att2_Codex_Handoff_v0_6/docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md)
+- [Approved Brain Module and weighted Attention Slots](Game_att2_Codex_Handoff_v0_6/docs/38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md)
 - [Wound/Blood/repair numeric owner-review package](Game_att2_Codex_Handoff_v0_6/docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md)
 - [Approved range-maintenance action grammar](Game_att2_Codex_Handoff_v0_6/docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md)
 - [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/13_REPOSITORY_CLI_READINESS_2026-07-30.md)

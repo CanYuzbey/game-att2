@@ -30,15 +30,16 @@ not make it current authority.
 | `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md` | Verified visual-lab fidelity results and scope audit; reflex diagnostics deferred |
 | `27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved aimed-wound design direction; numeric tuning and runtime implementation remain deferred |
 | `28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved action-produced Clinch/Engaged/Distant direction and neutral cadence; card profiles and runtime remain deferred |
-| `29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md` | Owner-delegated, Codex-approved Attention Slot and physical card-economy paper direction; evidence, complete rules, and runtime boundary |
+| `29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md` | Historical Attention Slot/card-economy baseline; document 38 supersedes its guarantees, fixed comparison counts, Reconsider cost/timing, and inventory-slot assumptions |
 | `30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md` | Owner-approved provisional WNR-0.1 wound/Blood/treatment/repair/self-risk/Torso paper direction; exact values tunable and runtime gated |
 | `31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md` | Owner-approved layered automatic defense contract; reflex events are build-derived rather than played Response cards; runtime and detailed reflex execution remain gated |
 | `32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md` | Owner-approved public-Lead, two-lock, sequential conflict-resolution paper contract; runtime, content, and exact presentation remain gated |
 | `33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md` | Owner-approved Package D source profiles, centralized effect-package interface, and bounded Integrity Echo; values, production effects, and runtime remain gated |
-| `34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md` | Owner-approved Package A2 deliberate inventory readiness, one-inventory-action limit, item/tool lifecycle, and card/item origin boundary; runtime and content remain gated |
+| `34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md` | Package A2 history and continuing inventory ownership/timing/source safeguards; document 38 supersedes required Attention Slot readiness |
 | `35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md` | Owner-approved Package C execution-bound, non-stacking range-maintenance grammar; current production profiles and runtime remain gated |
 | `36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md` | Owner-approved Package B Preparation/Main/contextual procedure timing, exact-source reservation, pay-on-execution cancellation, and atomic treatment/repair/extraction/graft chains; runtime and content remain gated |
 | `37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md` | Owner-approved Package A exact limb-or-death choice, untreated-stump/no-harvest survival chain, final net Blood 12, and strict catastrophic-Torso boundary; runtime and content remain gated |
+| `38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md` | Owner-approved permanent Brain Part progression, probabilistic body-only Attention Slots, Blood-paid redraw, direct-inventory boundary, and hidden enemy-hand paper direction; all numbers/content/runtime remain gated |
 
 ## Encounter 3 paper testing
 

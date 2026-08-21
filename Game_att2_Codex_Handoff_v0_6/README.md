@@ -38,8 +38,10 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   broader reflex-mechanics work is preserved for a later gate.
 - Aimed-wound direction: all eight design decisions owner-approved on 2026-08-13;
   numeric tuning and runtime implementation remain deferred.
-- Strategic card/action economy: owner-delegated, Codex-approved paper direction;
-  Attention Slots add choices rather than plays, with runtime and final balance gated.
+- Brain Module/card economy: owner-approved paper direction. Rare permanent Brain
+  Parts configure weighted, body-only Attention Slots at run start; selection may
+  produce uneven hands, and one validated immediate redraw spends Blood. Final slot
+  counts, weights, content, save/runtime implementation, and balance remain gated.
 - WNR-0.1: owner-approved provisional paper values for wound-to-Blood, repair,
   treatment, wounded-limb self-risk, and Ruined-Torso rescue. Exact numbers remain
   tunable and runtime/configuration remain gated.
@@ -53,10 +55,11 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   Full/Strained/Desperate profiles, centralized modular effect packages, and bounded
   actor-relative Integrity Echo are fixed as architecture; values, content, runtime,
   and configuration remain gated.
-- Card/item boundaries: Package A2 is owner-approved on paper. One deliberately
-  readied inventory opportunity occupies a flexible Attention Slot, inventory uses
-  the Preparation/Main budget, and no free Fast-item rail is approved. Runtime and
-  production content remain unchanged.
+- Card/item boundaries: document 38 supersedes Package A2's required inventory-slot
+  readiness. Inventory is directly accessible outside the Brain hand while retaining
+  Preparation/Main timing, one voluntary inventory-origin action per round,
+  ownership/use/source rules, and no free paper Fast-item rail. Runtime and production
+  content remain unchanged.
 - Range-maintenance action grammar: Package C Resolution-Bound Range Tenure is
   owner-approved on paper. Only a resolved authored tactical outcome may refresh
   exceptional range; Preparation cannot maintain range by itself, counters do not
@@ -121,8 +124,9 @@ two for unmaintained Distant. Action profiles, card rules, and runtime implement
 remain separately gated.
 The approved strategic card/action-economy direction is
 [docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md](docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md).
-It defines three-to-five Attention Slots, persistent cards, Decision Refresh,
-Reconsider, and shared physical compatibility. No runtime card system is approved.
+It preserves the staged action budget, persistent-card vocabulary, and shared
+physical compatibility; document 38 supersedes its guarantees, fixed comparison
+counts, free delayed Reconsider, and inventory-slot assumptions.
 The owner-approved provisional wound/Blood/repair numeric direction is
 [docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md](docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md).
 The owner-approved layered automatic defense contract is
@@ -140,9 +144,9 @@ It fixes source-owned capability profiles, a bounded central effect-package
 interface, and capped Integrity Echo without approving effect content or runtime.
 The owner-approved card/item boundary is
 [docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md](docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md).
-It fixes deliberate one-slot inventory readiness, one voluntary inventory action per
-round, shared Preparation/Main timing, item lifecycle, tool/source handling, and the
-automatic/state-action boundary without changing runtime.
+Its inventory ownership, one-action, Preparation/Main timing, lifecycle,
+tool/source, and automatic/state-action safeguards remain current; document 38
+supersedes the one-slot readiness requirement without changing runtime.
 The owner-approved range-maintenance grammar is
 [docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md](docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md).
 It fixes execution-bound, non-stacking Clinch/Distant maintenance, Preparation and
@@ -158,6 +162,12 @@ The owner-approved catastrophic-survival contract is
 It fixes exact eligible-limb choice plus death refusal, the untreated-stump/no-harvest
 atomic chain, final net Blood 12, post-sacrifice capability revalidation, and strict
 separation from catastrophic Torso failure without changing runtime.
+The owner-approved Brain Module is
+[docs/38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md](docs/38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md).
+It fixes permanent run-configured Brain Parts, weighted source-valid body-card hands,
+Blood-paid immediate redraw, inventory outside Attention Slots, and hidden enemy hands
+on paper. All final numbers, content, Head/Stun interaction, runtime, persistence code,
+and UI remain gated.
 
 The owner-approved local Block lab is operated from
 [research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
@@ -227,7 +237,7 @@ The current repository does not approve:
 
 - Unity or another final engine;
 - graphics, animation, final UI, audio, or final art;
-- save/load, meta progression, a run map, or procedural generation;
+- save/load or runtime meta progression, a run map, or procedural generation;
 - multiplayer, platform/store work, or release planning;
 - a large inventory, full card/deck system, full debt economy, or dialogue framework;
 - additional runtime enemies, including the Encounter 3 Warden;
@@ -315,6 +325,7 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 32. `docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md`
 33. `docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md`
 34. `docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md`
+35. `docs/38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -612,6 +623,7 @@ Known Git history:
 | 2026-08-17 | Package C Resolution-Bound Range Tenure approved and reconciled as paper authority; runtime unchanged |
 | 2026-08-17 | Package B Tiered Atomic Commitments approved and reconciled as paper authority; runtime unchanged |
 | 2026-08-19 | Package A Chosen Irrevocable Sacrifice approved and reconciled as paper authority; runtime unchanged |
+| 2026-08-21 | Brain Module and weighted Attention Slots approved and reconciled as paper authority; numbers/content/runtime unchanged |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 

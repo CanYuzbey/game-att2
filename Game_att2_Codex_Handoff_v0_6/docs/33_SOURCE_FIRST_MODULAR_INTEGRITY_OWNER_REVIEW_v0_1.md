@@ -538,3 +538,17 @@ profile and every dependent source. Full/Strained/explicit Desperate, Dormant,
 Invalid, weakest-source, Attention Slot, Integrity Echo, and no-substitution rules
 remain binding. A grafted or integrated arm has no immunity, and the sacrifice cause
 cannot create an alternative usable source. Runtime and profiles remain unchanged.
+
+## 18. Brain Module reconciliation (2026-08-21)
+
+Document 38 preserves Package D source ownership while allowing one source to
+contribute multiple distinct card instances. Full/Strained/explicit Desperate,
+Dormant, Invalid, weakest-source, occupied-source, and no-substitution rules apply to
+every instance independently and again before commitment. Selection weighting cannot
+improve an Offline source or conceal a Strained/Desperate profile.
+
+Integrity Echo still cannot alter Attention Slot capacity, card legality, Brain Part
+configuration, redraw availability, or automatic-reflex existence. Brain Parts are a
+separate explicit progression owner, not an Integrity Echo effect. Ordinary Head/body
+damage cannot permanently destroy Brain Parts; any temporary Stun interaction remains
+deferred. Runtime, profiles, Brain content, and values remain unchanged.

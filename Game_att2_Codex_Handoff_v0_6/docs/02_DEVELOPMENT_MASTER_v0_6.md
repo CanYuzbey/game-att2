@@ -1977,3 +1977,50 @@ This is paper authority only. Existing seeded-random runtime selection,
 configuration, tests, production content, provisional value 12, and UI remain
 unchanged. The next dependency-safe design gate is mental defeat, surrender, and
 mercy.
+
+## 44. Owner Amendment - Brain Module and Weighted Attention Slots (2026-08-21)
+
+The owner approved document 38 as the current paper authority for the Brain Module,
+permanent Brain Part progression, weighted Attention Slot selection, the body-card
+hand lifecycle, and the Brain/inventory boundary.
+
+The body continues to own which opportunities exist. One usable body part may
+contribute multiple distinct source-owned card instances, multi-tag cards are
+permitted, and identical actions from separate physical sources remain distinct.
+Selection is weighted and without replacement per instance. It guarantees neither
+Attack nor Defence and may produce uneven hands. Hard-filtered slots resolve before
+flexible slots and shade rather than inventing a card when no match exists.
+
+Brain Parts are rare permanent unlocks from later-authored boss, side-mission, or
+other non-ordinary-enemy reward families. They persist through death, are assigned one
+per Attention Slot before a run, do not stack, and cannot be changed during that run.
+Ordinary parts primarily change selection weights or filters; rarer parts may modify
+a card played from their slot. Final capacity, weights, costs, content, reward rules,
+and persistence implementation remain deferred. The historical three-slot and five-
+slot values are comparison fixtures, not final approved numbers.
+
+Unused valid cards persist. Spent and Invalid slots refill only at Decision Refresh,
+and source invalidation never creates a mid-exchange draw. Once per round before lock,
+the player may pay a later-authored Blood cost to redraw one unused card immediately
+when another eligible instance exists. The redraw excludes the discarded instance
+when an alternative exists and follows all ordinary Blood consequences.
+
+Inventory now remains directly accessible outside the ordinary Brain hand. Document
+38 supersedes Amendment 40 only where Package A2 required one Readied Inventory
+opportunity in an Attention Slot. Inventory ownership, Preparation/Main timing, one
+voluntary inventory-origin action per actor per round, uses/expiry, exact-source
+reservation, pay-on-execution, weakest-source tools, and no-substitution remain
+binding. State-required actions and automatic Reflexive Defence also remain outside
+the hand.
+
+Reflex defence stays cardless. Rare Brain effects on reflexes, inventory, other non-
+body actions, or additional card plays are possible future explicit exceptions, not
+approved content or timing. Ordinary Head/body damage cannot permanently destroy
+Brain Parts; temporary Stun/disruption and the exact Head/Brain/body-slot relationship
+remain deferred.
+
+Future enemies use the same internal source-valid hand/selection engine with fixed
+hidden profiles. The player sees intent and action results, not enemy hands or Brain
+Parts. This is paper direction only: runtime, configuration, save data, tests, final
+UI, new effects/content, and human-experience claims remain unapproved. The active
+dependency-ordered product gate remains mental defeat, surrender, and mercy.
