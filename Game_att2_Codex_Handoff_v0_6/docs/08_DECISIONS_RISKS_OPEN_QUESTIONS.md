@@ -1,8 +1,26 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+## 2026-08-21 owner-delegated decision: reconcile current systems and documents
+
+The owner directed a complete comparison of current project layers, logical closure
+of already-answerable collisions, documentation cleanup, and integration with current
+`main`. Document 40 records the resulting matrix and authority disposition.
+
+The approved baseline does not add a conventional collectible-technique or active-
+deck layer. Usable body sources author the card-instance pool and run-configured Brain
+Parts author weighted Attention access. Multi-tag instances count once, redraw
+exclusion lasts only for that redraw, slot-local modifiers remain with their slot,
+empty pools shade, and `run` is only the Brain-configuration lock interval. These are
+reversible paper resolutions, not runtime or content approval.
+
+The remote documentation consolidation is preserved: documents 21 and 25 replace
+their former plan/result pairs, the Director's Choice record remains document 38, the
+Brain authority is document 39, and the cross-system audit is document 40. No further
+tracked material was proven redundant or evidence-free enough to delete.
+
 ## 2026-08-21 owner decision: approve Brain Module and Weighted Attention Slots
 
-The owner approved document 38 as the current paper authority for permanent Brain
+The owner approved document 39 as the current paper authority for permanent Brain
 Part progression and the body-card hand. Brain Parts are rare permanent unlocks,
 persist through death, are configured one per Attention Slot before a run, and remain
 locked for that run. Ordinary parts primarily change selection weights or filters;
@@ -114,7 +132,7 @@ human-experience claims remain deferred. At that decision point, the next
 dependency-safe gate was range-maintenance action grammar; the 2026-08-17 entry
 above records its later resolution.
 
-Document 38 later removes required inventory occupancy from Attention Slots while
+Document 39 later removes required inventory occupancy from Attention Slots while
 preserving this entry's ownership, timing, one-action, use, source, passive/active,
 and no-substitution rules.
 
@@ -196,7 +214,7 @@ slot balance, production Stamina, detailed reflex execution, UI, or runtime. The
 gate is the wound-to-Blood, repair, treatment, wounded-limb self-risk, and exact
 Ruined-Torso rescue numeric package.
 
-Document 38 later replaces the fixed comparison counts as approved numbers, the
+Document 39 later replaces the fixed comparison counts as approved numbers, the
 Commitment/Response-supporting/Adaptive composition guarantees, and free delayed
 Reconsider with weighted no-guarantee selection, test-only counts, and Blood-paid
 immediate redraw. Body-owned eligibility and shared physical commitments remain.
@@ -287,10 +305,9 @@ a separate legality/effectiveness cause. Blood remains health/currency/fuel.
 
 Exact values, recovery, final terminology, runtime integration, and experience claims
 remain open. This decision does not approve a production Stamina system or replace the
-current campaign rules. The owner approved only VL-WP1 through VL-WP3 in
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`; the isolated implementation and its
-fidelity evidence are complete in
-`26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was separately
+current campaign rules. The owner approved only VL-WP1 through VL-WP3; their executed
+plan and isolated fidelity evidence are consolidated in
+`25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. VL-WP4 was separately
 approved and then deferred before execution on 2026-08-13; any external pilot remains
 a separate closed gate.
 
@@ -323,10 +340,10 @@ This decision does not change Combat Rules v0.5, current runtime/config/tests, w
 rules, active Cover It, movement, content, Encounter 3, or Unity. Execution is governed
 only by the separately approved bounded plan below.
 
-**Execution status:** `21_H1_IMPLEMENTATION_PLAN_v0_1.md` maps the approved contract to
-code, tests, evidence, rollback, and stop conditions. The owner approved the plan for
-execution on 2026-08-11. The bounded implementation passed its automated fidelity gate
-on 2026-08-12; `22_H1_IMPLEMENTATION_RESULTS_v0_1.md` records the result. This does not
+**Execution status:** the owner approved the bounded code/test plan on 2026-08-11.
+The implementation passed its automated fidelity gate on 2026-08-12; the executed
+plan, result, and evidence limits are consolidated in
+`21_H1_IMPLEMENTATION_RECORD_v0_1.md`. This does not
 open scope outside that plan or establish player-experience claims.
 
 ## 2026-08-01 owner decision: hybrid strategic/reflex core direction
@@ -544,13 +561,13 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - Grafting Table v0.2;
 - scripted deterministic sequence.
 
-## Open product decisions — Codex must not decide
+## Product and evidence decisions that remain deliberately deferred
 
 - final title;
 - final engine;
 - final art style;
 - complete run/map structure;
-- meta progression;
+- meta progression beyond the approved permanent Brain Part layer;
 - long-term enemy/limb roster;
 - dialogue system;
 - store/release strategy;
@@ -559,13 +576,13 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 - final Limb for Life fiction, production availability, restore value, AI choice
   policy, and presentation beyond document 37;
 - exact Attention Slot selection weights, repetition damping, final capacity balance,
-  individual item/card content, and any signature timing exception beyond documents
-  29 and 34;
+  individual item/card/Brain Part content, and any signature timing exception beyond
+  document 39;
 - exact production range profiles for each action/card, including which future
   profiles receive owner-approved Maintain, Shift/Create, or Release results under
   document 35;
-- whether approved cognitive capacity/selection progression is anatomical, Head-
-  linked, shop/table/skill delivered, or represented through another fiction;
+- Brain Part acquisition fiction, Head/Stun interaction, and whether capacity upgrades
+  are represented through a shop, table, mission, or another authored source;
 - exact cognitive biases such as reflex readiness, offense, or adrenaline behavior.
 - exact automatic reflex-defense success model, timing/input families, mitigation,
   source exposure, readiness/repetition effects, and accessibility equivalence beyond
@@ -601,9 +618,9 @@ Sprint 0.6 is a non-canonical table-consequence probe only. Simulator product ev
 | Combat becomes upgraded stat-menu dueling | High | Very high | repeated attack selection and damage comparison dominate while cards/reflexes are decorative | require body-sourced hand changes, meaningful reflex consequences, and identity review of every combat package |
 | Space becomes the main game | Medium | High | optimal play repeats standalone approach/retreat instead of choosing tactical actions | prohibit a universal reposition command; range changes through action/defense/reflex outcomes |
 | Neutral range creates dead turns | Medium | High | general builds wait for a movement draw or cannot use their hand | multi-range profiles plus visible settling toward Engaged; validate hand usability later |
-| Cognitive progression invalidates body builds | Medium | Very high | Attention Slot upgrades guarantee ideal hands or overpower limb-granted actions | slots add choices rather than plays; selector cannot invent capabilities; test three versus five and withhold a sixth without evidence |
-| Readied inventory becomes a mandatory healing slot | Medium | High | the same treatment is readied regardless of body, range, or opponent | protect body commitment access; record repeated readiness and revise Package A2 if inventory choice collapses |
-| Reconsider creates item chains | Low | Very high | a Spent inventory slot is swapped/refilled for a second item action | document 34 forbids refresh after inventory execution; add negative lifecycle cases before runtime approval |
+| Cognitive progression invalidates body builds | Medium | Very high | Attention upgrades guarantee ideal hands or slot modifiers overpower limb-granted actions | no composition guarantee or invented capability; compare candidate counts including historical three/five fixtures before approving a cap |
+| Direct inventory access becomes mandatory healing | Medium | High | the same treatment is used regardless of body, range, or opponent | preserve Preparation/Main timing, one voluntary inventory-origin action, ownership, and exact-source legality; measure repeated choice later |
+| Brain redraw creates item or action chains | Low | Very high | redraw refreshes inventory, reflexes, Spent slots, or voluntary play count | redraw targets one unused body card only; inventory/reflex/action budget remain outside it |
 | Table has one answer | High | Medium | integrate selected almost universally | strategy/batch table rates |
 | Unstable hated/ignored | Medium | High | always stabilize or never graft | path and collapse metrics |
 | Anna path one-sided | Medium | Medium | offer always accepted/rejected | two integration scenarios |

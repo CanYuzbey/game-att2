@@ -485,7 +485,7 @@ dependency-safe gate is mental defeat, surrender, and mercy.
 
 ## 22. Brain Module inventory reconciliation (2026-08-21)
 
-Document 38 removes the Readied Inventory slot but does not change this package's
+Document 39 removes the Readied Inventory slot but does not change this package's
 procedure timing or atomicity. Inventory treatment, Blood restoration, Claim, and
 extraction tools are selected directly from owned legal inventory. They still consume
 their authored Preparation or Main timing, obey the one-voluntary-inventory-action

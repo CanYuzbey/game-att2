@@ -1,12 +1,18 @@
 # Game att2 — Consolidated Combat and Mobility Decision Queue
 
-Status date: 2026-08-19
+Status date: 2026-08-21
 
 Purpose: detailed supporting register of unresolved product questions. Start future
 core-gameplay work from `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; use this
 file only to inspect subordinate dependencies. Do not walk every row as an independent
 owner interview, and do not implement an item until its blocking macro decision is
 approved.
+
+Document 40 completed the current cross-system collision audit. Brain/card access,
+inventory separation, instance semantics, and document organization are resolved on
+paper. The unanswered rows below remain open because they concern outcome psychology,
+content, persistence, presentation, or human-evidence thresholds rather than a safe
+Brain implementation detail.
 
 ## P0 — Wounds, Blood, and physical viability
 
@@ -29,7 +35,7 @@ approved.
 | MOV-02 — PARTIAL 2026-08-13 | Range changes belong to full tactical action/defense/reflex outcomes; they have no separate generic movement cost. Neutral settling is approved at one later round for Clinch and two for Distant. Exact action/card costs remain open. | Defines the real action economy without creating a locomotion layer. | MOV-01 |
 | MOV-03 — RESOLVED ON PAPER 2026-08-16 | Package D makes Legs state affect only declared Legs-sourced/supporting posture, defense, Stand, and range-producing profiles. Legs never alter Lead automatically. | Individual profiles and runtime remain gated. | MOV-01, MOV-02 |
 | MOV-04 — RANGE MAINTENANCE RESOLVED ON PAPER 2026-08-17 | Package C classifies profiles as Neutral, Exploit, Maintain, Shift/Create, or Release. Maintenance is execution-bound, non-stacking, source-revalidated, and never implicit; no current production action becomes a maintainer/releaser by implication. Pursuit and escape content remain later gates. | Document 35 resolves maintenance grammar without a universal movement command; individual production profiles and runtime remain gated. | MOV-01–MOV-03, ACT-01–ACT-03 |
-| ACT-01 — BRAIN MODULE RESOLVED ON PAPER 2026-08-21 | Zero or one Preparation, then zero or one Main commitment, then automatically surfaced eligible reflex events. Document 38 supersedes the older guaranteed-role and Readied Inventory slot model: usable body sources generate exact card instances; weighted selection guarantees neither Attack nor Defence; hard filters resolve first and may shade; unused cards persist; Spent/Invalid replacement waits for Decision Refresh; and one validated immediate redraw per round spends Blood. Brain Parts are rare permanent unlocks configured one per slot at run start. Inventory is directly accessible outside Attention Slots while retaining one voluntary inventory-origin action per round and its timing/ownership/source rules. Final slot counts, weights, redraw cost, content, balance, runtime, and rare exceptions remain open. | Establishes the body/Brain/inventory architecture without approving final numbers, full progression content, or runtime. | MOV-02 |
+| ACT-01 — BRAIN MODULE RESOLVED ON PAPER 2026-08-21 | Zero or one Preparation, then zero or one Main commitment, then automatically surfaced eligible reflex events. Document 39 supersedes the older guaranteed-role and Readied Inventory slot model: usable body sources generate exact card instances; weighted selection guarantees neither Attack nor Defence; hard filters resolve first and may shade; unused cards persist; Spent/Invalid replacement waits for Decision Refresh; and one validated immediate redraw per round spends Blood. Brain Parts are rare permanent unlocks configured one per slot at run start. Inventory is directly accessible outside Attention Slots while retaining one voluntary inventory-origin action per round and its timing/ownership/source rules. Final slot counts, weights, redraw cost, content, balance, runtime, and rare exceptions remain open. | Establishes the body/Brain/inventory architecture without approving final numbers, full progression content, or runtime. | MOV-02 |
 | ACT-02 — RESOLVED 2026-08-14 | Chosen preparations may shape defense, while the legal reflex-defense event appears automatically from the incoming action and current build. It is not played from the hand. | Document 31 fixes the layered timing roles; exact reflex execution remains later. | DEF-01–DEF-04 |
 | ACT-03 — RESOLVED ON PAPER 2026-08-16 | Public Lead, two intention locks, sequential Lead-first resolution, full recomputation, unchanged Reply revalidation, and explicit cancellation/cost states are approved in document 32. | Runtime, content, exact information display, and special interrupt windows remain gated. | MOV-02, ACT-01 |
 | PROC-01 — RESOLVED ON PAPER 2026-08-17 | Package B keeps treatment, Blood restoration, repair, extraction, and grafting separate; assigns Preparation/Main/contextual defaults; reserves exact sources; pays ordinary costs on execution; and makes started procedure chains atomic. | Document 36 resolves architecture only. Production profiles/values, runtime, detailed interruption checkpoints, and post-combat opponent-access predicates remain gated. | W-01–W-08, ACT-01–ACT-03 |

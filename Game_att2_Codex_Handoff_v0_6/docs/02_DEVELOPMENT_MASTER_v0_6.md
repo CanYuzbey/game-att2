@@ -3,7 +3,7 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Wound meanings, action-produced range, Attention Slot/action economy, provisional WNR-0.1 values, layered automatic defense, public-Lead sequential conflict resolution, Package D Source-First Modular Integrity, Package A2 Readied Inventory card/item boundaries, and Package C Resolution-Bound Range Tenure are owner-approved paper directions. Exact values and production profiles remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
+Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Documents 27 through 39 now hold the owner-approved physical, range, action, wound/Blood, defense, initiative, source-integrity, inventory, procedure, catastrophic-survival, and Brain paper directions. Document 40 reconciles those layers and removes a separate conventional active deck from the approved baseline. Exact values and production profiles remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
 
 ## 2026-08-13 reflex-work deferral amendment
 
@@ -23,7 +23,7 @@ form a coherent strategic loop and before final balance or production content.
 
 The owner approved the counterbalanced VL-WP4 local owner diagnostic. This opens
 only local owner execution, contamination recording, and a continue/revise/kill
-review under `25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. It does not approve an
+review under `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. It does not approve an
 external pilot, production Stamina/readiness, final values, campaign integration,
 characters, items, story, Encounter 3 runtime, Unity, or player-experience claims.
 
@@ -68,9 +68,9 @@ existing strain, and explicit body impairment remains a separate legality or
 effectiveness cause. The intent is to prevent indefinite no-progress defense while
 keeping Blood as the primary health/currency/fuel system.
 
-The owner subsequently approved only VL-WP1 through VL-WP3 of
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`. Their isolated implementation passed
-fidelity verification in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`.
+The owner subsequently approved only VL-WP1 through VL-WP3. Their executed plan and
+isolated fidelity result are consolidated in
+`25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`.
 This does not approve a Stamina/runtime system, exact production values, final
 terminology, campaign integration, or player-experience claims. VL-WP4 owner testing
 was separately approved and then deferred before execution on 2026-08-13.
@@ -99,10 +99,10 @@ execution approval without changing Combat Rules v0.5:
 The current simulator action economy, Guard Flesh effect, Anna behavior, configuration,
 and tests remain unchanged by this amendment.
 
-The traceable code/test plan is
-`21_H1_IMPLEMENTATION_PLAN_v0_1.md`. The owner approved that plan for execution on
-2026-08-11. Its bounded research implementation passed verification on 2026-08-12;
-results and evidence limits are recorded in `22_H1_IMPLEMENTATION_RESULTS_v0_1.md`.
+The owner approved the traceable code/test plan for execution on 2026-08-11. Its
+bounded research implementation passed verification on 2026-08-12; the executed plan,
+result, and evidence limits are consolidated in
+`21_H1_IMPLEMENTATION_RECORD_v0_1.md`.
 
 ## 2026-08-01 owner amendment
 
@@ -1980,7 +1980,7 @@ mercy.
 
 ## 44. Owner Amendment - Brain Module and Weighted Attention Slots (2026-08-21)
 
-The owner approved document 38 as the current paper authority for the Brain Module,
+The owner approved document 39 as the current paper authority for the Brain Module,
 permanent Brain Part progression, weighted Attention Slot selection, the body-card
 hand lifecycle, and the Brain/inventory boundary.
 
@@ -2006,7 +2006,7 @@ when another eligible instance exists. The redraw excludes the discarded instanc
 when an alternative exists and follows all ordinary Blood consequences.
 
 Inventory now remains directly accessible outside the ordinary Brain hand. Document
-38 supersedes Amendment 40 only where Package A2 required one Readied Inventory
+39 supersedes Amendment 40 only where Package A2 required one Readied Inventory
 opportunity in an Attention Slot. Inventory ownership, Preparation/Main timing, one
 voluntary inventory-origin action per actor per round, uses/expiry, exact-source
 reservation, pay-on-execution, weakest-source tools, and no-substitution remain
@@ -2024,3 +2024,33 @@ hidden profiles. The player sees intent and action results, not enemy hands or B
 Parts. This is paper direction only: runtime, configuration, save data, tests, final
 UI, new effects/content, and human-experience claims remain unapproved. The active
 dependency-ordered product gate remains mental defeat, surrender, and mercy.
+
+## 45. Owner-Delegated Amendment - Cross-System Reconciliation (2026-08-21)
+
+The owner directed a comparison of every current project layer, logical resolution of
+collisions and already-answerable gaps, documentation cleanup, and integration with
+current `main`. Document 40 is the resulting reconciliation authority.
+
+The approved baseline has no separate collectible-technique or active-deck layer.
+The usable body authors the body-card instance pool; the run-start Brain Part
+configuration authors weighted Attention access. A conventional deck-construction
+system remains closed unless later evidence identifies an authorship problem that
+body plus Brain configuration cannot solve.
+
+Document 40 also resolves card-instance semantics: multi-tag cards remain single
+instances, redraw exclusion lasts only for the current redraw, slot-local execution
+modifiers stay with their slot, empty eligible pools shade rather than fabricate a
+card, and `run` is only the Brain-configuration lock interval. These are reversible
+paper clarifications, not values, content, or runtime behavior.
+
+The 2026-08-19 remote documentation cleanup is retained. Consolidated documents 21
+and 25 replace their former plan/result pairs, the duplicate operating-skill copy and
+unused fixed-column research templates remain deleted, the legacy PDF remains
+archived, the Director's Choice record remains document 38, the Brain authority is
+renumbered to document 39, and document 40 provides current navigation. No additional
+tracked document was proven evidence-free or redundant enough to delete.
+
+All simulator source, configuration, scenarios, tests, H1 behavior, and visual-lab
+behavior remain unchanged. Counts, weights, costs, content, Head/Stun behavior,
+complete run structure, final UI, human-experience claims, and production integration
+remain deferred. The active product gate remains mental defeat, surrender, and mercy.

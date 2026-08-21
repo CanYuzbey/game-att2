@@ -2,7 +2,7 @@
 
 Status date: 2026-08-21
 
-Status: **HISTORICAL PACKAGE A2 PAPER AUTHORITY; DOCUMENT 38 SUPERSEDES REQUIRED
+Status: **HISTORICAL PACKAGE A2 PAPER AUTHORITY; DOCUMENT 39 SUPERSEDES REQUIRED
 ATTENTION SLOT READINESS WHILE PRESERVING INVENTORY OWNERSHIP, TIMING, SOURCE, USE,
 ONE-ACTION, AND NO-SUBSTITUTION RULES. RUNTIME REMAINS UNAPPROVED.**
 
@@ -12,7 +12,7 @@ requirements that depend on slot occupancy are historical evidence only. The ori
 taxonomy, Preparation/Main timing, one voluntary inventory-origin action per round,
 ownership, quantities/expiry, exact-source reservation, pay-on-execution, weakest-
 source tools, passive/active boundary, signature overrides, and no substitution remain
-current paper authority under document 38.
+current paper authority under document 39.
 
 ## 1. Decision and authority boundary
 
@@ -515,7 +515,7 @@ unchanged.
 
 ## 23. Brain Module supersession (2026-08-21)
 
-Document 38 removes inventory from ordinary Attention Slot selection. Owned legal
+Document 39 removes inventory from ordinary Attention Slot selection. Owned legal
 items and tools are inspected and selected directly from inventory, so the following
 Package A2 requirements are superseded rather than combined with the Brain Module:
 

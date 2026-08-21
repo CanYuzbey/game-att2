@@ -2,7 +2,7 @@
 
 Status date: 2026-08-21
 
-Status: active cross-discipline production brief. Read with documents 19 through 38.
+Status: active cross-discipline production brief. Read with documents 19 through 40.
 This file summarizes current authority; it does not replace the Development Master,
 Combat Rules, technical specification, or decision ledger.
 
@@ -22,7 +22,7 @@ WNR-0.1 values, layered automatic defense, public-Lead sequential conflict
 resolution, Package D Source-First Modular Integrity, the preserved Package A2
 inventory legality/timing boundary, Package C Resolution-Bound Range Tenure, Package
 B Tiered Atomic Commitments, Package A Chosen Irrevocable Sacrifice, and the document
-38 Brain Module are now approved paper directions. Document 38 supersedes required
+39 Brain Module are now approved paper directions. Document 39 supersedes required
 inventory-slot readiness. The active dependency-ordered gate is mental defeat,
 surrender, and mercy. Runtime implementation remains unapproved.
 
@@ -33,7 +33,7 @@ space is an action-produced supporting state and must not become the primary act
 
 ## Owner decision addendum - 2026-08-21
 
-The owner approved document 38 as the current Brain/Attention authority. Rare Brain
+The owner approved document 39 as the current Brain/Attention authority. Rare Brain
 Parts persist through death, are configured one per slot before a run, and remain
 locked during that run. Usable body sources contribute exact card instances;
 selection is weighted without replacement, guarantees neither Attack nor Defence,
@@ -49,6 +49,13 @@ but the player sees only intent and action results.
 Final counts, weights, costs, Brain/card content, Head/Stun interaction, rare extra
 plays, runtime, save data, UI, and human evidence remain deferred. This paper approval
 does not replace the active mental-defeat/surrender/mercy product gate.
+
+Document 40 reconciles the Brain Module with the Director's Choice exploration and
+every approved paper package. The current baseline has no separate conventional
+active deck: body construction authors the eligible card pool and Brain configuration
+authors access. Multi-tag, redraw-return, slot-modifier, empty-pool, and local run-lock
+semantics are resolved on paper. Values, content, runtime, and full run structure stay
+deferred.
 
 ## 1A. Latest owner decision recorded on 2026-08-19
 
@@ -108,7 +115,7 @@ values/exceptions, UI, balance, and human-experience claims remain deferred. At 
 decision point, the next gate was range-maintenance action grammar; section 1C
 records its later resolution.
 
-Document 38 later supersedes only the required Readied Inventory slot and inventory-
+Document 39 later supersedes only the required Readied Inventory slot and inventory-
 focused Reconsider behavior. Direct inventory access now sits outside the Brain hand;
 the one-action, timing, ownership, source, use, and no-substitution safeguards remain.
 
@@ -165,7 +172,7 @@ generic action points. More slots add choices only. Individual cards, exact weig
 Fast-item limits, wound/repair values, production Stamina, reflex execution, final UI,
 and runtime remain unapproved.
 
-Document 38 later supersedes the fixed comparison counts as approved values, the
+Document 39 later supersedes the fixed comparison counts as approved values, the
 three composition duties, and free delayed Reconsider. It preserves body-owned
 eligibility, persistent-card lifecycle, automatic reflexes, and physical compatibility.
 
@@ -188,7 +195,7 @@ rejected. Space may support or be carried by actions/cards but must not dominate
 loop. This is identity authority, not approval for a full deck system, draw rules,
 movement implementation, reflex implementation, or new content.
 
-Document 38 now approves rare permanent Brain Parts, run-start slot configuration,
+Document 39 now approves rare permanent Brain Parts, run-start slot configuration,
 weighted body-card selection, and Blood-paid redraw. Exact Head anatomy, reward
 content, values, rare reflex/offensive effects, runtime progression, and UI remain
 deferred and may not displace limb-based build identity.
@@ -221,14 +228,14 @@ The owner approved the shared-readiness design method:
 - this is approval to plan and compare the model, not approval for runtime Stamina,
   final values, campaign integration, or a production mechanic.
 
-The owner approved VL-WP1 through VL-WP3 of
-`25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md` on 2026-08-12. Their verified results
-are in `26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`. VL-WP4 was
+The owner approved VL-WP1 through VL-WP3 on 2026-08-12. Their executed plan and
+verified results are consolidated in
+`25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`. VL-WP4 was
 separately opened and then deferred before execution by the owner on 2026-08-13.
 
 ## 3. Verified repository baseline
 
-Fresh local verification on 2026-08-12:
+Reverified locally on 2026-08-21 after documentation and branch reconciliation:
 
 | Evidence | Result | What it supports |
 |---|---|---|
@@ -357,7 +364,7 @@ document 31 resolves layered automatic defense, document 32 resolves public-Lead
 sequential conflict timing, document 33 resolves Source-First Modular Integrity,
 document 34 preserves inventory ownership/timing/source rules, document 35 resolves
 execution-bound range maintenance, document 36 resolves tiered atomic procedure
-commitments, document 37 resolves chosen catastrophic survival, and document 38
+commitments, document 37 resolves chosen catastrophic survival, and document 39
 resolves the Brain Module while superseding required inventory-slot readiness on
 paper. A legal reflex-defense event is build-derived and automatically surfaced
 rather than manually played from an Attention Slot. Runtime and configuration remain

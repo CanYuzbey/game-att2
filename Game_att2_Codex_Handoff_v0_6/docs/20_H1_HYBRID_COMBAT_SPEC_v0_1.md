@@ -349,8 +349,8 @@ This specification was owner-approved on 2026-08-11 as the contract for an H1
 implementation plan. The owner approved execution of that bounded plan on 2026-08-11;
 the implementation passed its automated fidelity gate on 2026-08-12.
 
-The approved execution plan is `21_H1_IMPLEMENTATION_PLAN_v0_1.md`.
-The verified implementation report is `22_H1_IMPLEMENTATION_RESULTS_v0_1.md`.
+The executed plan, verified implementation result, and evidence limits are
+consolidated in `21_H1_IMPLEMENTATION_RECORD_v0_1.md`.
 
 After H1 evidence, revisit only the dependency packages that the results make timely:
 

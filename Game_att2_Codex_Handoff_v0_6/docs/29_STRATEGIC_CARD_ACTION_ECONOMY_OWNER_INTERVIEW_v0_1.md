@@ -2,19 +2,19 @@
 
 Status date: 2026-08-21
 
-Status: **HISTORICAL OWNER-DELEGATED PAPER BASELINE; SUPERSEDED IN PART BY DOCUMENT 38; RUNTIME, CONTENT, AND FINAL BALANCE NOT APPROVED**
+Status: **HISTORICAL OWNER-DELEGATED PAPER BASELINE; SUPERSEDED IN PART BY DOCUMENT 39; RUNTIME, CONTENT, AND FINAL BALANCE NOT APPROVED**
 
-Owner amendment, 2026-08-21: document 38 is the current authority for Brain Parts,
+Owner amendment, 2026-08-21: document 39 is the current authority for Brain Parts,
 weighted Attention Slot selection, slot counts as test fixtures, Blood-paid immediate
 redraw, and inventory outside the Brain hand. This document remains authority for the
 staged Preparation/Main budget, body-owned capability, exact physical-source
 commitments, persistent-card state vocabulary, and automatic-reflex boundary where
-document 38 does not replace them.
+document 39 does not replace them.
 
 This document was the original design authority for brain/attention slots, the
 tactical hand lifecycle, voluntary card plays, body-sourced card eligibility, and
 physical compatibility. Its preserved rules remain authority only where the 2026-08-21
-amendment and document 38 do not supersede them.
+amendment and document 39 do not supersede them.
 
 Approval here means the architecture is coherent enough to guide the next paper
 specification. It does not authorize production code, a full deckbuilder, individual
@@ -568,7 +568,7 @@ and card/item content remain unchanged.
 
 ## 20. Owner-approved Brain Module reconciliation (2026-08-21)
 
-Document 38 supersedes the following parts of this historical baseline:
+Document 39 supersedes the following parts of this historical baseline:
 
 - three starting and five developed slots are comparison fixtures, not final approved
   capacity numbers;

@@ -4,8 +4,9 @@
 
 Tests prove faithful implementation and detect numerical/systemic problems. They do not prove fun.
 
-Documents 27 through 35 contain later owner-approved paper directions. They do not
-change this simulator acceptance baseline. Before any implementation of document 32,
+Documents 27 through 39 contain later owner-approved paper directions, and document
+40 reconciles their system boundaries. They do not change this simulator acceptance
+baseline. Before any implementation of document 32,
 an approved bounded plan must add deterministic tests for Lead assignment and
 alternation, two-lock information order, on-lock versus on-execution costs, changed-
 state Reply revalidation, cancellation states, automatic reflex integration, death

@@ -228,7 +228,7 @@ No Dodge/Evade content or runtime behavior is approved here.
 ## 5. Attention Slot reconciliation
 
 Reflex defenses do not enter the persistent Attention Slot hand. The guaranteed
-Response-supporting duty below is historical after document 38, but its cardless
+Response-supporting duty below is historical after document 39, but its cardless
 reflex boundary remains binding. Document 29's
 Response-capable selection duty is clarified as **Response-supporting**:
 
@@ -246,7 +246,7 @@ Response-capable selection duty is clarified as **Response-supporting**:
 This amendment preserves three starting slots, five developed slots, and the approved
 zero-or-one Preparation plus zero-or-one Main budget.
 
-Document 38 later replaces those counts as approved values and removes the
+Document 39 later replaces those counts as approved values and removes the
 Response-supporting composition guarantee. It preserves the Preparation/Main budget
 and automatic cardless reflex event.
 
@@ -414,7 +414,7 @@ execution remain unchanged.
 
 ## 17. Brain Module disposition (2026-08-21)
 
-Document 38 removes every Attack/Defence/Response-supporting hand guarantee. A
+Document 39 removes every Attack/Defence/Response-supporting hand guarantee. A
 proactive guard or stance may appear only through ordinary source-valid weighted
 selection or an explicit Brain Part rule. Automatic Block, Intercept, Dodge/Evade,
 and later reflex events remain outside Attention Slots and require no card draw.

@@ -42,6 +42,9 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   Parts configure weighted, body-only Attention Slots at run start; selection may
   produce uneven hands, and one validated immediate redraw spends Blood. Final slot
   counts, weights, content, save/runtime implementation, and balance remain gated.
+- Cross-system reconciliation: the body-generated card pool plus Brain configuration
+  is the approved baseline; no separate collectible-technique or active-deck layer is
+  required. Document 40 records the complete collision audit and deferrals.
 - WNR-0.1: owner-approved provisional paper values for wound-to-Blood, repair,
   treatment, wounded-limb self-risk, and Ruined-Torso rescue. Exact numbers remain
   tunable and runtime/configuration remain gated.
@@ -55,7 +58,7 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   Full/Strained/Desperate profiles, centralized modular effect packages, and bounded
   actor-relative Integrity Echo are fixed as architecture; values, content, runtime,
   and configuration remain gated.
-- Card/item boundaries: document 38 supersedes Package A2's required inventory-slot
+- Card/item boundaries: document 39 supersedes Package A2's required inventory-slot
   readiness. Inventory is directly accessible outside the Brain hand while retaining
   Preparation/Main timing, one voluntary inventory-origin action per round,
   ownership/use/source rules, and no free paper Fast-item rail. Runtime and production
@@ -96,22 +99,23 @@ The historical paper result of 37 Blood is preserved as evidence but is not an a
 For current document status and navigation, read [docs/README.md](docs/README.md).
 New core-gameplay conversations should start from
 [docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md](docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md),
-then use [docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md](docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md)
-for the owner-approved, documentation-only H1 implementation-planning contract. The
-owner-approved bounded execution plan is
-[docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md](docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md). Its
-verified result is
-[docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md](docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md).
+then read the status-labelled owner working record in
+[docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md](docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md)
+so accepted directions, reversible hypotheses, examples, and deferrals are not
+conflated. Document 38 guides new design discussion but does not authorize runtime,
+content, final UI, engine work, or production claims. Then use
+[docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md](docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md)
+for the owner-approved, documentation-only H1 contract. Its executed plan, verified
+result, and evidence limits are consolidated in
+[docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md](docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md).
 The detailed unresolved-rule register remains
 [docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md](docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md).
 The owner-directed reflex-family proposal and revised diagnostic path are in
 [docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md](docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md).
 The current production view is
 [docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md](docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md),
-the approved lab contract is
-[docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md](docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md),
-and its verified implementation record is
-[docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md](docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md).
+the executed lab plan and verified result are consolidated in
+[docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md](docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md).
 The owner-approved physical-consequence design direction is
 [docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md](docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md);
 its numeric tuning, specific repair content, and runtime implementation remain
@@ -125,7 +129,7 @@ remain separately gated.
 The approved strategic card/action-economy direction is
 [docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md](docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md).
 It preserves the staged action budget, persistent-card vocabulary, and shared
-physical compatibility; document 38 supersedes its guarantees, fixed comparison
+physical compatibility; document 39 supersedes its guarantees, fixed comparison
 counts, free delayed Reconsider, and inventory-slot assumptions.
 The owner-approved provisional wound/Blood/repair numeric direction is
 [docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md](docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md).
@@ -145,7 +149,7 @@ interface, and capped Integrity Echo without approving effect content or runtime
 The owner-approved card/item boundary is
 [docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md](docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md).
 Its inventory ownership, one-action, Preparation/Main timing, lifecycle,
-tool/source, and automatic/state-action safeguards remain current; document 38
+tool/source, and automatic/state-action safeguards remain current; document 39
 supersedes the one-slot readiness requirement without changing runtime.
 The owner-approved range-maintenance grammar is
 [docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md](docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md).
@@ -163,11 +167,15 @@ It fixes exact eligible-limb choice plus death refusal, the untreated-stump/no-h
 atomic chain, final net Blood 12, post-sacrifice capability revalidation, and strict
 separation from catastrophic Torso failure without changing runtime.
 The owner-approved Brain Module is
-[docs/38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md](docs/38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md).
+[docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md](docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md).
 It fixes permanent run-configured Brain Parts, weighted source-valid body-card hands,
 Blood-paid immediate redraw, inventory outside Attention Slots, and hidden enemy hands
 on paper. All final numbers, content, Head/Stun interaction, runtime, persistence code,
 and UI remain gated.
+The current cross-system comparison and collision audit is
+[docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md](docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md).
+It reconciles runtime, paper packages, director hypotheses, Brain progression,
+document organization, and explicit deferrals without opening implementation.
 
 The owner-approved local Block lab is operated from
 [research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
@@ -300,32 +308,31 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 8. `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`
 9. `docs/07_PAPER_TEST_EVIDENCE_v0_1.md`
 10. `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md`
-11. `docs/09_PRODUCTION_OPERATING_SKILL_v4_1_CODEX.md`, then the canonical
-    `../.agents/skills/game-att2-production/SKILL.md`
+11. `../.agents/skills/game-att2-production/SKILL.md`
 12. `docs/10_CODEX_RETURN_CONTRACT.md`
 13. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`
 14. `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`
 15. `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`
 16. `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`
 17. `docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`
-18. `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`
-19. `docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`
-20. `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`
-21. `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`
-22. `docs/25_BOUNDED_VISUAL_INTERACTION_LAB_PLAN_v0_1.md`
-23. `docs/26_VISUAL_INTERACTION_LAB_IMPLEMENTATION_RESULTS_v0_1.md`
-24. `docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
-25. `docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
-26. `docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md`
-27. `docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md`
-28. `docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`
-29. `docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md`
-30. `docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md`
-31. `docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md`
-32. `docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md`
-33. `docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md`
-34. `docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md`
-35. `docs/38_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md`
+18. `docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md`
+19. `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`
+20. `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`
+21. `docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`
+22. `docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
+23. `docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
+24. `docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md`
+25. `docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md`
+26. `docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`
+27. `docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md`
+28. `docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md`
+29. `docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md`
+30. `docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md`
+31. `docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md`
+32. `docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md`
+33. `docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md`
+34. `docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md`
+35. `docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md`
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -425,10 +432,9 @@ Current motivation and outcome behavior is recorded in
 `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`. The hybrid core-gameplay
 direction and resolved owner decisions are in
 `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; the smallest testable H1
-research contract is `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`, and its bounded
-code/test plan is `docs/21_H1_IMPLEMENTATION_PLAN_v0_1.md`. The plan is approved for
-execution and its verified implementation result is
-`docs/22_H1_IMPLEMENTATION_RESULTS_v0_1.md`. Detailed subordinate
+research contract is `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`; its executed plan,
+verified implementation result, and evidence limits are consolidated in
+`docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md`. Detailed subordinate
 combat, movement, defense, wound, and negotiation dependencies remain in
 `docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`. Completed CLI alignment reports are
 preserved under `docs/archive/implementation_reports/`.
@@ -531,7 +537,7 @@ python -m mypy src
 python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 ```
 
-Current verification on 2026-08-12:
+Current verification on 2026-08-21 after documentation and branch reconciliation:
 
 ```text
 pytest: 261 passed
@@ -624,6 +630,7 @@ Known Git history:
 | 2026-08-17 | Package B Tiered Atomic Commitments approved and reconciled as paper authority; runtime unchanged |
 | 2026-08-19 | Package A Chosen Irrevocable Sacrifice approved and reconciled as paper authority; runtime unchanged |
 | 2026-08-21 | Brain Module and weighted Attention Slots approved and reconciled as paper authority; numbers/content/runtime unchanged |
+| 2026-08-21 | Current systems, director hypotheses, document cleanup, and Brain authority cross-audited; conventional active-deck duplication removed from the approved baseline |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 

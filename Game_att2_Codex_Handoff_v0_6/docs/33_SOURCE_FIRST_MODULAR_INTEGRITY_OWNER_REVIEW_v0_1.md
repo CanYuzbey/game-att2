@@ -541,7 +541,7 @@ cannot create an alternative usable source. Runtime and profiles remain unchange
 
 ## 18. Brain Module reconciliation (2026-08-21)
 
-Document 38 preserves Package D source ownership while allowing one source to
+Document 39 preserves Package D source ownership while allowing one source to
 contribute multiple distinct card instances. Full/Strained/explicit Desperate,
 Dormant, Invalid, weakest-source, occupied-source, and no-substitution rules apply to
 every instance independently and again before commitment. Selection weighting cannot

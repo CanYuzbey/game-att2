@@ -259,6 +259,35 @@ This shared internal model is the approved implementation direction because it a
 parallel player-card and enemy-action legality systems while preserving hidden enemy
 information. It remains runtime-gated.
 
+## 11A. Owner-delegated collision resolutions
+
+On 2026-08-21 the owner asked Codex to compare the current systems, resolve collisions,
+and use logic for unanswered Brain details. The following paper-only interpretations
+close reversible gaps without approving numbers, content, or runtime:
+
+- The approved baseline has no separate collectible technique deck or active-deck
+  editor. The current body defines the card-instance pool; Brain configuration shapes
+  access. A conventional deck layer requires a later justification and approval.
+- A multi-tag card is one instance. It may satisfy any hard filter matching at least
+  one tag, but it is never duplicated or counted twice merely because two tags match.
+- A card rejected through the paid redraw is excluded only from that redraw's
+  candidate set when an alternative exists. It is not destroyed and may return at a
+  later Decision Refresh if still source-valid.
+- `Run start` and `run end` are local Brain-configuration boundaries only. They do not
+  define map topology, room cadence, checkpoints, body retention, or the fiction of
+  death and restart.
+- Brain Part ownership is separate from body anatomy, inventory ownership, and any
+  future technique knowledge. Only Brain Parts are approved as permanent progression
+  here.
+- Slot-local execution modifiers follow the slot when it refills; they never attach
+  permanently to a discarded, Spent, Invalid, or redrawn card instance.
+- If no body card can satisfy any open slot, the slots shade. Direct inventory,
+  state-required actions, and automatic reflexes remain available only when their own
+  rules make them legal; none fabricates a body card.
+
+These choices are reversible at paper level. They remove duplicate progression and
+ambiguous instance behavior while preserving body-as-build.
+
 ## 12. Requirements
 
 | ID | Owner-approved paper requirement |
@@ -280,6 +309,12 @@ information. It remains runtime-gated.
 | BRN-015 | Enemies use the shared hidden hand/legality engine without exposing hand or Brain Parts to the player. |
 | BRN-016 | Slot counts, weights, Blood cost, individual Brain Parts/cards, and rare extra plays remain unapproved values/content. |
 | BRN-017 | All selection randomness uses injected RNG and produces a structured explanation trace. |
+| BRN-018 | The approved baseline uses the body-generated pool plus Brain configuration, not a separate collectible or active technique deck. |
+| BRN-019 | A multi-tag card remains one instance and can satisfy any matching filter without duplicate weighting by tag count. |
+| BRN-020 | A redrawn-away card is excluded only for that redraw and may return at a later legal Decision Refresh. |
+| BRN-021 | The run boundary locks Brain configuration but does not define world, checkpoint, body-retention, or restart structure. |
+| BRN-022 | Brain Part ownership is separate from body, inventory, and any future technique-knowledge ownership. |
+| BRN-023 | Slot-local execution modifiers remain with their slot and do not permanently modify card instances. |
 
 ## 13. Minimum paper comparisons
 

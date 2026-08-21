@@ -23,7 +23,7 @@ Fast-item, and Main sequence below.
 Document 35 supplies the later owner-approved Resolution-Bound Range Tenure grammar.
 Its execution-bound maintenance classifications, non-stacking counters, and
 Lead/Reply range contest do not add runtime range state or change this sequence.
-Document 38 supplies the later owner-approved Brain Module and weighted Attention Slot
+Document 39 supplies the later owner-approved Brain Module and weighted Attention Slot
 paper direction. Its permanent Brain Parts, probabilistic body-only hand, Blood-paid
 redraw, direct inventory access, and hidden enemy hands do not add runtime card or
 progression state and do not replace the implemented sequence below.
