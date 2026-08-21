@@ -11,14 +11,14 @@ into the next version of your own.
 
 ## Project status
 
-This repository is currently a **design-research project and deterministic
-Python simulator**. It validates combat rules, timing, reproducibility, and the
-body-as-build economy. It is not yet a production game, Unity project, playable
-vertical slice, or proof that the design is fun.
+The active product target is now a **bounded three-encounter playable demo** set in a
+provisional underground Rot Market. The current gate is its paper D0 contract: exact
+failure/restart behavior and the thirty-second interaction view. No engine project has
+been approved or created yet.
 
-The current simulator and default playable CLI cover the bounded sequence from
-S-001 through Jeff, emergency grafting, Anna, and the Grafting Table. The older
-Jeff-only diagnostic remains available as an explicit compatibility mode.
+The deterministic Python simulator and its S-001 -> Jeff -> Anna campaign are frozen
+legacy evidence. They remain reviewable, but they are not the new demo's content plan,
+engine foundation, or active feature backlog.
 
 The bounded visual interaction lab is implemented and fidelity-verified, but the owner
 deferred VL-WP4 and broader reflex-mechanics work on 2026-08-13 before diagnostic
@@ -28,9 +28,9 @@ runtime Stamina system, production UI, content expansion, or engine work is appr
 The current paper design is consolidated into five living documents covering the
 game-director brief, encounter/run loop, body combat, deck/Brain relationship, and
 world/progression decisions. The former numbered design packages remain available as
-dated provenance, but they are no longer the active reading surface. Encounter and
-run structure is the current macro design gap. Numeric values, content, runtime
-implementation, production UI, and engine work remain separately gated.
+dated provenance, but they are no longer the active reading surface. The Underground
+City container now bounds the demo run; its detailed failure loop, interaction slice,
+and encounter implementations remain gated.
 
 > **Collaborator verification note — 2026-08-13:** `main` contains the verified
 > visual interaction lab and the separate local Block-pressure demo. To review the

@@ -61,7 +61,12 @@ Read `Game_att2_Codex_Handoff_v0_6/docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_COD
 
 ## Preserve scope and ownership
 
-- Keep the approved digital scope at S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table unless the owner explicitly opens another gate.
+- Treat S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table as frozen legacy
+  simulator evidence. Do not expand or port it unless the owner approves one isolated
+  maintenance or mechanic-experiment gate.
+- The owner opened planning for a separate three-encounter Underground City demo.
+  Planning does not authorize an engine project: complete D0 and obtain explicit
+  approval before creating the one-room Guard interaction spike.
 - Keep Encounter 3 and the Warden out of runtime source, runtime config, production content, and engine work.
 - Keep Unity, final presentation, full wounds, active Cover It behavior, generalized mental defeat, multi-round negotiation, movement, and broader reflex families unimplemented until their documented gates pass. Keep the implemented visual interaction lab isolated and provisional. Preserve the existing H1 and visual-lab fidelity runners without presenting either as production combat.
 - Do not silently change costs, probabilities, thresholds, meanings, encounter order, rewards, or product identity.
@@ -121,15 +126,18 @@ bounded visual-lab plan approval - COMPLETE
 -> VL-WP4 owner diagnostic - DEFERRED BEFORE EXECUTION
 -> strategic-combat and Brain packages - CONSOLIDATED PAPER DIRECTION,
    RUNTIME DEFERRED
--> encounter and run structure - CURRENT OWNER DESIGN GATE
--> Brain implementation detail, mental defeat, surrender, and mercy - DOWNSTREAM
+-> legacy Python campaign - FROZEN EVIDENCE, NOT ACTIVE PRODUCT BACKLOG
+-> Underground City demo D0 contract and thirty-second view - CURRENT OWNER GATE
+-> one-room Guard interaction spike - REQUIRES EXPLICIT IMPLEMENTATION APPROVAL
+-> Merchant negotiation and Exit Keeper - DOWNSTREAM
 -> later separately approved reflex diagnostic / external pilot / production work
 ```
 
-Do not start story production, final UI, engine selection, content expansion, or a
-vertical slice merely because parallel work is possible. Permit exploratory notes only
-when they are explicitly non-canonical, reversible, and cannot constrain the active
-systems gate. End each production-lead report with one recommended next step and the
+Do not start story production, final UI, an engine project, content expansion, or a
+vertical slice merely because parallel work is possible. D0 may compare engines and
+define spike acceptance as a reversible working hypothesis; installation,
+scaffolding, dependencies, and implementation remain blocked until explicit spike
+approval. End each production-lead report with one recommended next step and the
 single owner decision, if any, that gates it.
 
 ## Research comparable work

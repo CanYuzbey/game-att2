@@ -1,8 +1,8 @@
 # Documentation Map
 
-The repository separates the game-director reading surface from protected runtime,
-engineering, evidence, research, and history. A preserved file is not automatically
-current game-design authority.
+The repository separates the active playable-demo direction from the frozen legacy
+simulator, protected engineering evidence, research, and history. A preserved file is
+not automatically current product authority.
 
 ## Five living game-design documents
 
@@ -16,8 +16,9 @@ Read these for owner-led design work, in order:
 | `DECK_BRAIN_AND_ACTIONS.md` | Anatomical deckbuilder ownership, action budget, inventory boundary, Brain doctrine, and open implementation details |
 | `WORLD_PROGRESSION_AND_DECISIONS.md` | Narrative/progression direction, compact decision ledger, foundational open questions, scope locks, and current focus |
 
-These five files are paper game-design authority only. They do not change runtime,
-configuration, tests, content, final UI, engine, or production scope.
+These five files are current paper game-design authority. They open D0 planning for a
+bounded Underground City demo, but do not by themselves create an engine project or
+change legacy runtime, configuration, tests, dependencies, or executable content.
 
 ## Protected authority and engineering documents
 

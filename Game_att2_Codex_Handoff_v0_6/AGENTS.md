@@ -2,15 +2,21 @@
 
 ## Mission
 
-Implement the smallest trustworthy Python simulator that reproduces the currently approved paper-prototype rules for Game att2. Preserve design traceability, deterministic behavior, and reviewability. Do not redesign the game or expand content.
+Preserve the frozen legacy Python simulator as trustworthy, deterministic evidence.
+The active product target is a separate bounded playable demo described by the five
+living design documents. Do not expand or port the legacy campaign unless the owner
+explicitly approves one isolated mechanic experiment or maintenance task.
 
 ## Authority and scope
 
 - Can Yüzbey owns identity-level and product decisions.
-- The simulator exists to test rules, not to become a production game.
+- The simulator is legacy rules evidence, not the production game or the new demo's
+  content/engine foundation.
 - Do not silently change costs, probabilities, thresholds, encounter order, rewards, or meanings.
 - When a rule is ambiguous, choose the simplest reversible implementation, make it configurable, and list the ambiguity in the final report.
-- Additional enemies and encounters may be defined in documentation and tested through owner-approved paper protocols. They must not be added to simulator source code, runtime configuration, production content, or Unity without a separate owner-approved implementation gate. Paper-test approval is not runtime approval.
+- Underground-city demo encounters may be defined in the living documents. They must
+  not be added to legacy simulator source/configuration. A new engine project requires
+  its own explicit implementation gate and scope instructions.
 - Do not add runtime enemies, items, systems, lore, UI frameworks, networking, persistence, or engine integrations outside the currently approved simulator implementation scope.
 
 ## Required workflow

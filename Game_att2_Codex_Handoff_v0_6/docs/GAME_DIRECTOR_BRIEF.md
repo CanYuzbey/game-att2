@@ -12,6 +12,11 @@ validated configuration.
 
 ## Product intent
 
+- The current production target is one bounded, playable PC demo rather than another
+  general-purpose simulator or a miniature version of the full 10-12 hour game.
+- The demo must prove the distinctive interaction: read a pressure, use a body-sourced
+  technique, accept bodily/Blood consequences, rebuild, and carry the altered body
+  into the next encounter.
 - A contained single-player PC game, provisionally finishable in one weekend and
   roughly 10-12 hours.
 - USD 8-12 remains a commercial hypothesis, not market evidence or a store decision.
@@ -73,6 +78,8 @@ No specific sanity, corruption, or instability meter is approved by this stateme
 - Narrative mystery cannot substitute for a playable core.
 - More documentation is not progress unless it closes a player-facing decision or
   supports a bounded test.
+- Legacy simulator breadth is not a production requirement. A mechanic enters the
+  demo only because the demo needs it and a player can encounter its consequence.
 
 ## Living design set
 

@@ -11,20 +11,33 @@ seven approved scenarios or the playable campaign.
 
 > You are not collecting weapons. You are becoming the weapon, piece by piece, using your own blood as money.
 
-This repository is currently a **design-research and deterministic Python simulator project**. It is not a production game, Unity project, playable vertical slice, or proof that the design is fun.
+The active product target is a bounded three-encounter Underground City demo. The
+existing deterministic Python simulator is frozen legacy evidence; it is not the new
+demo's engine or content foundation.
 
-## Current status
+## Current product target
+
+- D0 paper contract: **open and active**.
+- Working container: captive in an underground Rot Market -> Guard -> Merchant ->
+  Exit Keeper -> upward tunnel.
+- Current decisions: failure/restart contract and thirty-second interaction view.
+- Recommended engine hypothesis: Godot 4, subject to a separately approved one-room
+  Guard spike.
+- Engine project/runtime content: **not approved or created yet**.
+- Source of current direction: the five living documents in `docs/README.md`.
+
+## Legacy simulator status (frozen)
 
 Evidence baseline: **2026-07-23**. H1 implementation and repository verification:
 **2026-08-12**.
 
-- Current maturity: pre-production rules validation / simulator stage.
-- Approved digital scope: the narrow Python simulator for S-001 → Jeff → emergency graft → Anna → Grafting Table.
+- Historical maturity: pre-production rules validation / simulator stage.
+- Frozen digital scope: the narrow Python simulator for S-001 → Jeff → emergency graft → Anna → Grafting Table.
 - Simulator implementation gate: **passes with known technical and diagnostic debt**.
 - Product evidence: **insufficient for a continue-to-production decision**.
 - Encounter 3: approved only for bounded, moderated paper testing.
 - Human Encounter 3 evidence: P01–P08 are still pending.
-- Unity graybox: **blocked**.
+- Legacy Unity graybox proposal: **never opened**.
 - Latest local verification: **261 tests passed**, **87% source-only line coverage**,
   Ruff passed, and strict mypy passed across 32 source files.
 - H1 hybrid-combat research slice: implemented and deterministically replayable across
@@ -77,8 +90,8 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   paper. Blood-0 rescue offers an exact eligible arm/Legs sacrifice or death, creates
   an untreated stump with no harvested object, finishes at provisional net Blood 12,
   and never prevents catastrophic Torso failure. Runtime remains unchanged.
-- Current owner-design gate: define encounter and run structure at the macro level.
-  Brain implementation detail, mental defeat, surrender, and mercy are downstream.
+- Historical owner-design gate: encounter/run definition. It is superseded by the
+  current D0 Underground City demo contract above.
 - Space-and-reach direction: Clinch, Engaged, and Distant are owner-directed shared
   states produced by action/defense/reflex outcomes, not movement controls. Document
   28 records the approved neutral-settling cadence; runtime remains unapproved.
@@ -553,16 +566,16 @@ Known Git history:
 | 2026-08-21 | Current systems, director hypotheses, document cleanup, and Brain authority cross-audited; conventional active-deck duplication removed from the approved baseline |
 | 2026-08-21 | Later owner doctrine superseded weighted Brain access: player-authored active deck plus deterministic hand modification and embodied instability became the current paper direction |
 | 2026-08-21 | Active game-design surface consolidated into five living documents; former 01, 17-19, 24, and 27-41 packets archived intact as provenance |
+| 2026-08-21 | Python campaign frozen as legacy evidence; bounded Underground City demo D0 planning opened |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 
 ## Recommended next step
 
-Define encounter and run structure at the macro level before returning to Brain
-implementation detail, mental defeat, negotiation, reflex diagnostics, story, final
-UI, content expansion, external pilots, Encounter 3 runtime, or engine production.
-
-Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
+Define the Underground City demo's exact failure/restart contract and thirty-second
+interaction view. Do not create the engine project, implement the Merchant or Exit
+Keeper, add the Warden to legacy runtime, or start final content production before D0
+and a separately approved Guard-room spike.
 
 ## Ownership
 

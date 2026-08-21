@@ -2,8 +2,28 @@
 
 Prepared for: Can Yüzbey  
 Project: Game att2  
-Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work before execution. Five living design documents now consolidate the current paper direction; former documents 01, 17-19, 24, and 27-41 are archived provenance. Encounter/run structure is the current macro design gap. Exact implementation, values, progression delivery, runtime, and human-experience evidence remain gated; Unity remains delayed.**
+Current stage: bounded playable-demo definition after the deterministic simulator
+Status: **The owner has frozen the Python campaign as legacy rules evidence and opened planning for a separate three-encounter Underground City demo. The current gate is D0: define its failure contract and thirty-second interaction view. No engine project, runtime content, or production dependency is approved by this planning amendment alone.**
+
+## 2026-08-21 bounded playable-demo target amendment
+
+The owner selected one minimal playable demo as the active product target. The current
+working container is an underground Rot Market escape with a damaged captive starting
+body, three authored encounters, continuous body/Blood consequences, and one upward
+exit tunnel. Exact fiction and content remain revisable; `CORE_LOOP_ENCOUNTER_AND_RUN.md`
+and `WORLD_PROGRESSION_AND_DECISIONS.md` hold the current bounded hypothesis.
+
+The existing S-001 -> Jeff -> Anna Python campaign is now frozen legacy evidence. Its
+source, configuration, tests, reports, H1 runner, and visual lab remain preserved for
+traceability and isolated mechanic reference, but they no longer define the active
+product backlog or require feature expansion. No mechanic is automatically ported to
+the demo.
+
+This amendment opens documentation planning only. A one-room engine spike requires a
+separate explicit implementation approval after D0; it must live outside the legacy
+simulator runtime and carry its own scope contract. Until that approval, Combat Rules,
+technical specification, YAML, source, tests, dependencies, and executable behavior
+remain unchanged.
 
 ## 2026-08-21 living-design consolidation amendment
 
@@ -32,8 +52,10 @@ versus-control tradeoff rather than hidden random punishment.
 This supersedes document 39's weighted-access identity and permanent Brain Parts as
 the only approved progression wrapper, plus document 40 INT-002. Tree, collectible
 part, hybrid, exact acquisition/deck rules, compatibility model, content, values,
-runtime, persistence, and UI remain deferred. The current paper gate is the minimal
-implementation model for this doctrine; mental defeat, surrender, and mercy follows.
+runtime, persistence, and UI remain deferred. At that decision point, the next paper
+gate was the minimal implementation model for this doctrine, followed by mental
+defeat, surrender, and mercy. The later bounded-demo amendment above supersedes that
+production order.
 
 ## 2026-08-13 reflex-work deferral amendment
 
@@ -2082,4 +2104,5 @@ tracked document was proven evidence-free or redundant enough to delete.
 All simulator source, configuration, scenarios, tests, H1 behavior, and visual-lab
 behavior remain unchanged. Counts, weights, costs, content, Head/Stun behavior,
 complete run structure, final UI, human-experience claims, and production integration
-remain deferred. The active product gate remains mental defeat, surrender, and mercy.
+remain deferred. At that historical decision point the active product gate was mental
+defeat, surrender, and mercy; the later bounded-demo amendment supersedes that order.

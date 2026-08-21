@@ -2,8 +2,8 @@
 
 Status date: 2026-08-21
 
-Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. THE COMBAT DECISION LOOP IS A PAPER
-DIRECTION; ENCOUNTER AND RUN STRUCTURE REMAIN OPEN. NO RUNTIME APPROVAL.**
+Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. THE UNDERGROUND-CITY DEMO SUPPLIES A
+BOUNDED RUN HYPOTHESIS; THE FULL-GAME RUN REMAINS OPEN. NO RUNTIME APPROVAL.**
 
 ## What is currently solid
 
@@ -82,7 +82,53 @@ survive or resolve a pressure
 Treatment, Blood restoration, structural repair, extraction, grafting, and
 integration are separate effects. An option performs only what it declares.
 
-## Run structure: OPEN
+## Underground City demo container
+
+`APPROVED DIRECTION`: the next product target is a short playable demo with three
+authored encounters. It is not an expansion of the Python mini-campaign.
+
+`WORKING HYPOTHESIS`: the player is a captive being prepared for sale in an
+underground Rot Market. The starting body is already commodified: the Right Arm is
+Missing and the Torso is Damaged. Blood functions as currency because the market's
+economy treats living bodies as stock. The player crosses the market toward one
+upward tunnel, rebuilding only as needed to escape.
+
+This container gives the demo a provisional run:
+
+```text
+captivity with a damaged body
+-> Guard: learn physical conflict, wounds, extraction, and a new arm
+-> maintenance/rebuild consequence
+-> Merchant: test leverage, bargain, surrender, refusal, and controlled violence
+-> maintenance/carry-forward consequence
+-> Exit Keeper: test the accumulated body, deck, Blood, and prior decisions
+-> reach the upward tunnel and escape
+```
+
+Success is reaching the tunnel. Exact death, capture, checkpoint, restart, and
+voluntary-surrender behavior remains `OPEN`; the demo cannot enter production without
+one explicit failure contract.
+
+### Three encounter responsibilities
+
+| Encounter | Actor motivation | What the demo must prove | Non-goal |
+|---|---|---|---|
+| Guard | Duty: return the escaping asset | Basic read/commit/execute/consequence loop; wound, disable/kill distinction, extraction and graft | General negotiation system |
+| Rot-Market Merchant | Control and retained asset value | Leverage, offer/counteroffer/refusal, mental defeat or surrender, and an exit route that pure damage cannot create alone | A dialogue tree detached from body state |
+| Exit Keeper | `OPEN` | Accumulated body/deck/Blood state changes the available routes; escape/death/surrender can resolve causally | A boss that ignores prior consequences |
+
+The Exit Keeper's motivation is an identity-level content decision. Until chosen, it
+must not be filled by a generic desire to kill or a scripted final twist.
+
+## Demo presentation hypothesis
+
+`WORKING HYPOTHESIS`: exploration and confrontation share one fixed-angle isometric
+3D scene. Entering conflict tightens the camera and opens the hand/body interface over
+the scene rather than teleporting to a separate combat screen. Cards select intent,
+source, target, and disclosed risk; bounded physical execution resolves in the same
+space. This is the first interaction slice to test, not a final camera lock.
+
+## Full-game run structure: OPEN
 
 The project does **not** yet have an approved definition of a run. The current Python
 mini-campaign and the phrase "hell loop" do not decide the production structure.
@@ -104,7 +150,7 @@ should masquerade as an answer to this missing structure.
 
 ## Current design focus
 
-The foundational focus is to make encounter and run structure coherent with the
-active-play loop. Brain implementation detail, mental defeat, negotiation depth,
-content expansion, story production, final UI, engine selection, and a vertical slice
-remain downstream until this macro structure can be stated plainly.
+The current gate is to define and approve the smallest Guard-room interaction slice
+that could prove the read/commit/execute/consequence/rebuild chain. Merchant
+negotiation, the Exit Keeper, full Brain implementation, final content, and polish
+must not be built first.
