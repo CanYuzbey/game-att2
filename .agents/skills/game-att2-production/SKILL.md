@@ -35,7 +35,7 @@ Choose one lane before planning:
 - **Simulator maintenance:** preserve approved behavior and add a requirement-to-test trace.
 - **Approved simulator change:** confirm authority, implement the smallest reversible change, and update tests/config/docs together.
 - **Design proposal:** label proposals and alternatives; do not write them into runtime as approved rules.
-- **H1 and interaction-lab research:** read active documents 19 through 26 in order. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. The current owner gate is approval of the counterbalanced VL-WP4 owner diagnostic; do not open that diagnostic, an external pilot, or production integration without its separate approval.
+- **H1 and interaction-lab research:** read active documents 19 through 26 in order. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. VL-WP4 was approved and then deferred by the owner before execution on 2026-08-13; there is no active owner-diagnostic, external-pilot, or production-integration gate. Do not execute or reopen any of them without a later explicit owner approval.
 - **Encounter 3 paper research:** read `Game_att2_Codex_Handoff_v0_6/docs/encounter_3/README.md` and its ordered packet; keep all work paper-only unless a separate runtime gate is explicitly approved.
 - **Out-of-scope request:** identify the missing approval and offer the smallest in-scope research or specification step.
 
@@ -118,9 +118,11 @@ order. Keep only one product gate in progress:
 ```text
 bounded visual-lab plan approval - COMPLETE
 -> local implementation-fidelity check - COMPLETE
--> owner diagnostic
--> separately approved external pilot
--> core combat packages made timely by evidence
+-> VL-WP4 owner diagnostic - DEFERRED BEFORE EXECUTION
+-> strategic-combat and Brain packages through document 40 - PAPER-APPROVED,
+   RUNTIME DEFERRED
+-> mental defeat, surrender, and mercy - CURRENT PRODUCT GATE
+-> later separately approved reflex diagnostic / external pilot / production work
 ```
 
 Do not start story production, final UI, engine selection, content expansion, or a
