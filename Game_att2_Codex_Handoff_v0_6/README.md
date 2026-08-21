@@ -38,15 +38,14 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   broader reflex-mechanics work is preserved for a later gate.
 - Aimed-wound direction: all eight design decisions owner-approved on 2026-08-13;
   numeric tuning and runtime implementation remain deferred.
-- Brain/card doctrine: document 41 supersedes weighted Brain card access. The body
-  owns physical capability, the player authors a bounded active deck, and the Brain
-  deterministically modifies the current hand to expose embodied power/control
-  tradeoffs. Exact acquisition, deck cadence, instability inputs, progression form,
-  content, save/runtime implementation, and balance remain gated.
-- Cross-system reconciliation: documents 39 and 40 preserve the earlier weighted-
-  Attention decision history. Document 41 supersedes their no-active-deck and Brain-
-  as-access-author conclusions while retaining source, inventory, reflex, action-
-  budget, preview, and consequence safeguards.
+- Living game-design surface: five unnumbered documents now consolidate product
+  direction, core loop/run, combat/body/Blood, deck/Brain/actions, and the compact
+  decision ledger. Former documents 01, 17-19, 24, and 27-41 are historical
+  provenance under `docs/archive/design_history_2026-08-21/`.
+- Brain/card doctrine: the body owns capability, the player authors a bounded active
+  deck, and the Brain deterministically modifies the current hand to expose embodied
+  power/control tradeoffs. Exact acquisition, cadence, instability inputs,
+  progression form, content, save/runtime implementation, and balance remain gated.
 - WNR-0.1: owner-approved provisional paper values for wound-to-Blood, repair,
   treatment, wounded-limb self-risk, and Ruined-Torso rescue. Exact numbers remain
   tunable and runtime/configuration remain gated.
@@ -78,8 +77,8 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   paper. Blood-0 rescue offers an exact eligible arm/Legs sacrifice or death, creates
   an untreated stump with no harvested object, finishes at provisional net Blood 12,
   and never prevents catastrophic Torso failure. Runtime remains unchanged.
-- Current owner-design gate: paper implementation of the Brain hand-modifier and
-  embodied-instability doctrine. Mental defeat, surrender, and mercy is next.
+- Current owner-design gate: define encounter and run structure at the macro level.
+  Brain implementation detail, mental defeat, surrender, and mercy are downstream.
 - Space-and-reach direction: Clinch, Engaged, and Distant are owner-directed shared
   states produced by action/defense/reflex outcomes, not movement controls. Document
   28 records the approved neutral-settling cadence; runtime remains unapproved.
@@ -100,89 +99,19 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
 The historical paper result of 37 Blood is preserved as evidence but is not an automated target. Its arithmetic includes an unconfigured spare-arm sale. The current 25-Blood result follows the configured costs and seeded events. Neither number is an approved balance target.
 
 For current document status and navigation, read [docs/README.md](docs/README.md).
-New core-gameplay conversations should start from
-[docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md](docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md),
-then read the status-labelled owner working record in
-[docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md](docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md)
-so accepted directions, reversible hypotheses, examples, and deferrals are not
-conflated. Document 38 guides new design discussion but does not authorize runtime,
-content, final UI, engine work, or production claims. Then use
-[docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md](docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md)
-for the owner-approved, documentation-only H1 contract. Its executed plan, verified
-result, and evidence limits are consolidated in
-[docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md](docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md).
-The detailed unresolved-rule register remains
-[docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md](docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md).
-The owner-directed reflex-family proposal and revised diagnostic path are in
-[docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md](docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md).
-The current production view is
-[docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md](docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md),
-the executed lab plan and verified result are consolidated in
-[docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md](docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md).
-The owner-approved physical-consequence design direction is
-[docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md](docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md);
-its numeric tuning, specific repair content, and runtime implementation remain
-separately gated.
-The approved space-and-reach design direction is
-[docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md](docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md).
-It records the owner-directed action-produced Clinch/Engaged/Distant model for the
-current one-versus-one scope, including one later round for unmaintained Clinch and
-two for unmaintained Distant. Action profiles, card rules, and runtime implementation
-remain separately gated.
-The approved strategic card/action-economy direction is
-[docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md](docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md).
-It preserves the staged action budget, persistent-card vocabulary, and shared
-physical compatibility; document 39 supersedes its guarantees, fixed comparison
-counts, free delayed Reconsider, and inventory-slot assumptions.
-The owner-approved provisional wound/Blood/repair numeric direction is
-[docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md](docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md).
-The owner-approved layered automatic defense contract is
-[docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md](docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md).
-It separates chosen preparation, automatically surfaced build-derived reflex events,
-compatible passive protection, and final consequence resolution. Runtime remains
-unchanged.
-The owner-approved initiative and conflict-resolution contract is
-[docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md](docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md).
-It fixes public Lead, two intention locks, sequential revalidation, cost timing, and
-cancellation states without changing runtime.
-The owner-approved Source-First Modular Integrity contract is
-[docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md](docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md).
-It fixes source-owned capability profiles, a bounded central effect-package
-interface, and capped Integrity Echo without approving effect content or runtime.
-The owner-approved card/item boundary is
-[docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md](docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md).
-Its inventory ownership, one-action, Preparation/Main timing, lifecycle,
-tool/source, and automatic/state-action safeguards remain current; document 39
-supersedes the one-slot readiness requirement without changing runtime.
-The owner-approved range-maintenance grammar is
-[docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md](docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md).
-It fixes execution-bound, non-stacking Clinch/Distant maintenance, Preparation and
-automatic-defense boundaries, source revalidation, and sequential Lead/Reply range
-contest without approving production profiles or runtime.
-The owner-approved treatment, repair, extraction, and graft commitment flow is
-[docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md](docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md).
-It fixes separate effect ownership, tiered Preparation/Main/contextual timing,
-exact-source reservation, execution-time payment, pre-execution cancellation, and
-atomic started procedures without approving runtime or production content.
-The owner-approved catastrophic-survival contract is
-[docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md](docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md).
-It fixes exact eligible-limb choice plus death refusal, the untreated-stump/no-harvest
-atomic chain, final net Blood 12, post-sacrifice capability revalidation, and strict
-separation from catastrophic Torso failure without changing runtime.
-The superseded-in-part Brain Module history is
-[docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md](docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md).
-Document 41 replaces its weighted card access, no-active-deck baseline, redraw
-identity, and permanent Brain Parts as the only approved progression wrapper; its
-named source, inventory, reflex, action-budget, preview, and consequence safeguards
-survive. Runtime was never opened. The earlier cross-system comparison and collision
-audit is
-[docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md](docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md).
-It preserves the prior reconciliation history; document 41 supersedes INT-002 and
-its weighted Brain-access conclusions. The current owner-approved Brain doctrine is
-[docs/41_BRAIN_HAND_MODIFIER_AND_EMBODIED_INSTABILITY_DOCTRINE_2026-08-21.md](docs/41_BRAIN_HAND_MODIFIER_AND_EMBODIED_INSTABILITY_DOCTRINE_2026-08-21.md).
-It fixes player authorship of a bounded active deck, deterministic current-hand Brain
-modification, and visible embodied power/control tradeoffs on paper. Progression
-delivery, exact mechanics, values, content, runtime, persistence, and UI remain gated.
+New core-gameplay conversations read the five living design documents beginning with
+[GAME_DIRECTOR_BRIEF.md](docs/GAME_DIRECTOR_BRIEF.md), followed by
+[CORE_LOOP_ENCOUNTER_AND_RUN.md](docs/CORE_LOOP_ENCOUNTER_AND_RUN.md),
+[COMBAT_BODY_AND_BLOOD.md](docs/COMBAT_BODY_AND_BLOOD.md),
+[DECK_BRAIN_AND_ACTIONS.md](docs/DECK_BRAIN_AND_ACTIONS.md), and
+[WORLD_PROGRESSION_AND_DECISIONS.md](docs/WORLD_PROGRESSION_AND_DECISIONS.md).
+The dated design packets are preserved under
+[design history](docs/archive/design_history_2026-08-21/README.md) and are not part of
+the ordinary director reading order. H1/reflex research remains in documents
+[20](docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md),
+[21](docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md),
+[23](docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md), and
+[25](docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md).
 
 The owner-approved local Block lab is operated from
 [research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
@@ -307,39 +236,25 @@ Anyone changing rules, simulator behavior, tests, or project status must read th
 
 1. `AGENTS.md`
 2. `docs/README.md`
-3. `docs/01_PROJECT_STATE_HISTORY_VISION.md`
-4. `docs/02_DEVELOPMENT_MASTER_v0_6.md`
-5. `docs/03_COMBAT_RULES_v0_5.md`
-6. `docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md`
-7. `docs/05_CONTENT_CATALOG_v0_1.md` and `config/*.yaml`
-8. `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`
-9. `docs/07_PAPER_TEST_EVIDENCE_v0_1.md`
-10. `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md`
-11. `../.agents/skills/game-att2-production/SKILL.md`
-12. `docs/10_CODEX_RETURN_CONTRACT.md`
-13. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`
-14. `docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`
-15. `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`
-16. `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`
-17. `docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`
-18. `docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md`
-19. `docs/23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md`
-20. `docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`
-21. `docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md`
-22. `docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
-23. `docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md`
-24. `docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md`
-25. `docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md`
-26. `docs/31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`
-27. `docs/32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md`
-28. `docs/33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md`
-29. `docs/34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md`
-30. `docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md`
-31. `docs/36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md`
-32. `docs/37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md`
-33. `docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md`
-34. `docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md`
-35. `docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md`
+3. `docs/02_DEVELOPMENT_MASTER_v0_6.md`
+4. `docs/03_COMBAT_RULES_v0_5.md`
+5. `docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md`
+6. `docs/05_CONTENT_CATALOG_v0_1.md` and `config/*.yaml`
+7. `docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md`
+8. `docs/07_PAPER_TEST_EVIDENCE_v0_1.md`
+9. `docs/08_DECISIONS_RISKS_OPEN_QUESTIONS.md`
+10. `../.agents/skills/game-att2-production/SKILL.md`
+11. `docs/10_CODEX_RETURN_CONTRACT.md`
+12. `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`
+13. `docs/GAME_DIRECTOR_BRIEF.md`
+14. `docs/CORE_LOOP_ENCOUNTER_AND_RUN.md`
+15. `docs/COMBAT_BODY_AND_BLOOD.md`
+16. `docs/DECK_BRAIN_AND_ACTIONS.md`
+17. `docs/WORLD_PROGRESSION_AND_DECISIONS.md`
+
+Read documents 20, 21, 23, and 25 only for H1/reflex/visual-lab research. Read the
+dated design packets under `docs/archive/design_history_2026-08-21/` only when
+provenance or exact historical detail is needed.
 
 Read `docs/encounter_3/README.md` and its ordered packet only when working on the
 paper-only Encounter 3 gate. The completed original implementation brief and reports
@@ -435,16 +350,14 @@ python -m game_att2_sim.play_cli --phase-1 --seed 42
 python -m game_att2_sim.play_cli --phase-1 --seed 42 --script examples/play_cli_win_sequence.json
 ```
 
-Current motivation and outcome behavior is recorded in
-`docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`. The hybrid core-gameplay
-direction and resolved owner decisions are in
-`docs/19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`; the smallest testable H1
-research contract is `docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`; its executed plan,
-verified implementation result, and evidence limits are consolidated in
-`docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md`. Detailed subordinate
-combat, movement, defense, wound, and negotiation dependencies remain in
-`docs/18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`. Completed CLI alignment reports are
-preserved under `docs/archive/implementation_reports/`.
+Current game-design direction is the five living-document set in `docs/README.md`.
+The smallest testable H1 research contract remains
+`docs/20_H1_HYBRID_COMBAT_SPEC_v0_1.md`; its executed plan, verified implementation
+result, and evidence limits are consolidated in
+`docs/21_H1_IMPLEMENTATION_RECORD_v0_1.md`. Former motivation, macro-handoff, and
+decision-queue documents are preserved under
+`docs/archive/design_history_2026-08-21/`. Completed CLI alignment reports remain
+under `docs/archive/implementation_reports/`.
 
 ## Run the isolated H1 research slice
 
@@ -639,16 +552,15 @@ Known Git history:
 | 2026-08-21 | Brain Module and weighted Attention Slots approved and reconciled as paper authority; numbers/content/runtime unchanged |
 | 2026-08-21 | Current systems, director hypotheses, document cleanup, and Brain authority cross-audited; conventional active-deck duplication removed from the approved baseline |
 | 2026-08-21 | Later owner doctrine superseded weighted Brain access: player-authored active deck plus deterministic hand modification and embodied instability became the current paper direction |
+| 2026-08-21 | Active game-design surface consolidated into five living documents; former 01, 17-19, 24, and 27-41 packets archived intact as provenance |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 
 ## Recommended next step
 
-Define and compare the first state-derived compatibility input for document 41's
-Brain hand-modifier paper model. Mental defeat, surrender, and mercy remains the next
-dependency package afterward. Negotiation, reflex diagnostics, story, final UI,
-content expansion, external pilots, Encounter 3 runtime, and engine production remain
-deferred.
+Define encounter and run structure at the macro level before returning to Brain
+implementation detail, mental defeat, negotiation, reflex diagnostics, story, final
+UI, content expansion, external pilots, Encounter 3 runtime, or engine production.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
 

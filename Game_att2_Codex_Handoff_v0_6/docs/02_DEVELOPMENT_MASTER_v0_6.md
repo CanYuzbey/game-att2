@@ -3,7 +3,22 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Documents 27 through 40 preserve the approved paper packages and reconciliation history. Document 41 is the later Brain doctrine: the body owns physical capability, the player authors a bounded active deck, and the Brain modifies the current hand through visible embodied power/control tradeoffs. It supersedes weighted Brain access and the earlier no-active-deck conclusion. Exact implementation, values, progression delivery, runtime, and human-experience evidence remain gated; Unity remains delayed.**
+Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work before execution. Five living design documents now consolidate the current paper direction; former documents 01, 17-19, 24, and 27-41 are archived provenance. Encounter/run structure is the current macro design gap. Exact implementation, values, progression delivery, runtime, and human-experience evidence remain gated; Unity remains delayed.**
+
+## 2026-08-21 living-design consolidation amendment
+
+The owner reduced the active game-director reading surface to five living documents:
+`GAME_DIRECTOR_BRIEF.md`, `CORE_LOOP_ENCOUNTER_AND_RUN.md`,
+`COMBAT_BODY_AND_BLOOD.md`, `DECK_BRAIN_AND_ACTIONS.md`, and
+`WORLD_PROGRESSION_AND_DECISIONS.md`. Former design documents 01, 17-19, 24, and
+27-41 are preserved intact under `archive/design_history_2026-08-21/` as provenance,
+not current paper-design authority.
+
+This is a documentation-governance change only. It does not alter this file's
+simulator requirements, Combat Rules, technical specification, YAML, source, tests,
+research evidence, safety directives, or runtime behavior. The living set records
+that encounter/run structure is the current macro design gap; it does not invent an
+answer.
 
 ## 2026-08-21 Brain hand-modifier doctrine amendment
 
@@ -136,13 +151,12 @@ evidence:
 - Brace is a manual one-round Main-action stance. Braced Legs separately provide one
   automatic Knockdown prevention charge per encounter.
 - Movement capability, reachability, and the final main combat/action-economy model
-  are now subordinate to the hybrid macro direction in
-  `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` and remain unimplemented.
+  are now subordinate to the five living design documents and remain unimplemented.
 - Strategic combat remains turn-based. Bounded reflexive execution moments—starting
   with a timing-based Block hypothesis—must reinforce body state, intent reading, and
   Blood decisions rather than bypass them.
-- `18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md` is a dependency register, not a sequence
-  of independent owner interviews.
+- The former detailed dependency register is archived provenance, not a sequence of
+  independent owner interviews.
 
 ---
 
@@ -1591,8 +1605,8 @@ known gaps and reversible recommendations
 
 ## 31. Owner Amendment — Approved Aimed Wound Direction (2026-08-13)
 
-The owner approved the complete design direction in
-`27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`.
+The owner-approved direction is now summarized in `COMBAT_BODY_AND_BLOOD.md`; the
+complete source packet is preserved under `archive/design_history_2026-08-21/`.
 
 Locked design meanings:
 
@@ -1806,9 +1820,9 @@ may surface a proactive guard, stance, intent-reading action, or other strategic
 preparation, but not the transient reflex event itself. Additional slots never grant
 additional reflex events or improved grades.
 
-The full approved contract, causal order, acceptance requirements, hostile review, and
-scope boundary are in
-`31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md`.
+The current summary is in `COMBAT_BODY_AND_BLOOD.md`; the full historical contract,
+acceptance requirements, and hostile review remain under
+`archive/design_history_2026-08-21/`.
 
 This is paper authority only. It does not change Guard Flesh's current `50%` simulator
 effect, activate Cover It, implement Dodge/Evade, choose reflex inputs or success
@@ -1834,9 +1848,9 @@ preserves unpaid execution resources and item uses. A started atomic action pays
 costs, becomes Spent, and completes. Reflex defense remains an automatic build-derived
 event inside incoming-action resolution rather than a manually played Response card.
 
-The full contract, cancellation table, requirements, hostile review, and scope
-boundary are in
-`32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md`.
+The current summary is in `CORE_LOOP_ENCOUNTER_AND_RUN.md`; the full historical
+contract, cancellation table, requirements, and hostile review remain under
+`archive/design_history_2026-08-21/`.
 
 This is paper authority only. Runtime, configuration, individual content, detailed
 interrupt checkpoints, exact intent presentation, and reflex execution remain
@@ -1864,9 +1878,9 @@ capped micro-modifier, never changes legality, sources, Attention Slots, plays, 
 automatic-response availability, Blood, death, or encounter outcome, and never stacks
 onto the same axis already worsened by the local profile.
 
-The full contract, causal order, paper cases, requirements, hostile review, and scope
-boundary are in
-`33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md`.
+The current summary is in `COMBAT_BODY_AND_BLOOD.md`; the full historical contract,
+paper cases, requirements, and hostile review remain under
+`archive/design_history_2026-08-21/`.
 
 This is paper authority only. Existing simulator impairment, configuration, values,
 cards, items, effects, Guard Flesh, reflex behavior, and scenarios remain unchanged.

@@ -25,20 +25,12 @@ deferred VL-WP4 and broader reflex-mechanics work on 2026-08-13 before diagnosti
 execution. The fixture is preserved for later research; it is not the active gate.
 The shared Stamina/readiness model remains a provisional research hypothesis; no
 runtime Stamina system, production UI, content expansion, or engine work is approved.
-The owner approved the complete aimed-wound design direction on 2026-08-13. Numeric
-values, specific repair content, and runtime implementation remain deferred. The
-action-produced Clinch/Engaged/Distant direction, neutral-settling cadence, and
-Package C Resolution-Bound Range Tenure grammar, Package B Tiered Atomic
-Commitments, Package A Chosen Irrevocable Sacrifice, and the Brain Module/weighted
-Attention Slot architecture are owner-approved on paper; runtime remains unapproved.
-The active design gate is mental defeat, surrender, and mercy.
-The owner-approved identity guardrail requires space to support body-sourced tactical
-cards, reflex execution, and lasting physical consequences. Clinch, Engaged, and
-Distant are produced by action/defense/reflex outcomes rather than generic movement.
-The Brain Module now approves rare permanent Brain Parts, run-start slot
-configuration, probabilistic body-only selection, and Blood-paid redraw on paper. It
-does not approve runtime implementation, final slot counts/weights, individual card
-or Brain Part content, save data, Head/Stun rules, or production UI.
+The current paper design is consolidated into five living documents covering the
+game-director brief, encounter/run loop, body combat, deck/Brain relationship, and
+world/progression decisions. The former numbered design packages remain available as
+dated provenance, but they are no longer the active reading surface. Encounter and
+run structure is the current macro design gap. Numeric values, content, runtime
+implementation, production UI, and engine work remain separately gated.
 
 > **Collaborator verification note — 2026-08-13:** `main` contains the verified
 > visual interaction lab and the separate local Block-pressure demo. To review the
@@ -70,15 +62,13 @@ The active handoff package lives in
 - [Combat rules](Game_att2_Codex_Handoff_v0_6/docs/03_COMBAT_RULES_v0_5.md)
 - [Simulator technical specification](Game_att2_Codex_Handoff_v0_6/docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md)
 - [Tests and acceptance criteria](Game_att2_Codex_Handoff_v0_6/docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md)
-- [Current development lead brief](Game_att2_Codex_Handoff_v0_6/docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md)
+- [Game director brief](Game_att2_Codex_Handoff_v0_6/docs/GAME_DIRECTOR_BRIEF.md)
+- [Core loop, encounter, and run](Game_att2_Codex_Handoff_v0_6/docs/CORE_LOOP_ENCOUNTER_AND_RUN.md)
+- [Combat, body, and Blood](Game_att2_Codex_Handoff_v0_6/docs/COMBAT_BODY_AND_BLOOD.md)
+- [Deck, Brain, and actions](Game_att2_Codex_Handoff_v0_6/docs/DECK_BRAIN_AND_ACTIONS.md)
+- [World, progression, and decisions](Game_att2_Codex_Handoff_v0_6/docs/WORLD_PROGRESSION_AND_DECISIONS.md)
 - [Visual interaction-lab record](Game_att2_Codex_Handoff_v0_6/docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md)
-- [Approved aimed-wound design direction](Game_att2_Codex_Handoff_v0_6/docs/27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md)
-- [Approved space-and-reach direction](Game_att2_Codex_Handoff_v0_6/docs/28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md)
-- [Approved strategic card/action-economy direction](Game_att2_Codex_Handoff_v0_6/docs/29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md)
-- [Approved Brain Module and weighted Attention Slots](Game_att2_Codex_Handoff_v0_6/docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md)
-- [Current system comparison and collision audit](Game_att2_Codex_Handoff_v0_6/docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md)
-- [Wound/Blood/repair numeric owner-review package](Game_att2_Codex_Handoff_v0_6/docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md)
-- [Approved range-maintenance action grammar](Game_att2_Codex_Handoff_v0_6/docs/35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md)
+- [Archived design history](Game_att2_Codex_Handoff_v0_6/docs/archive/design_history_2026-08-21/README.md)
 - [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
 - [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
 - [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)

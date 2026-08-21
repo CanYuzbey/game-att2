@@ -35,7 +35,7 @@ Choose one lane before planning:
 - **Simulator maintenance:** preserve approved behavior and add a requirement-to-test trace.
 - **Approved simulator change:** confirm authority, implement the smallest reversible change, and update tests/config/docs together.
 - **Design proposal:** label proposals and alternatives; do not write them into runtime as approved rules.
-- **H1 and interaction-lab research:** read active documents 19 through 26 in order. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. VL-WP4 was approved and then deferred by the owner before execution on 2026-08-13; there is no active owner-diagnostic, external-pilot, or production-integration gate. Do not execute or reopen any of them without a later explicit owner approval.
+- **H1 and interaction-lab research:** read the five living design documents, then documents 20, 21, 23, and 25. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. VL-WP4 was approved and then deferred by the owner before execution on 2026-08-13; there is no active owner-diagnostic, external-pilot, or production-integration gate. Do not execute or reopen any of them without a later explicit owner approval.
 - **Encounter 3 paper research:** read `Game_att2_Codex_Handoff_v0_6/docs/encounter_3/README.md` and its ordered packet; keep all work paper-only unless a separate runtime gate is explicitly approved.
 - **Out-of-scope request:** identify the missing approval and offer the smallest in-scope research or specification step.
 
@@ -110,20 +110,19 @@ For the H1 timing-based Block hypothesis:
 
 ## Lead the current production gate
 
-When asked to lead the project, use
-`Game_att2_Codex_Handoff_v0_6/docs/24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`
-as the current cross-discipline status and critical path, after the authoritative reading
-order. Keep only one product gate in progress:
+When asked to lead the project, use the five living documents listed in
+`Game_att2_Codex_Handoff_v0_6/docs/README.md` as the current design status and
+critical path, after the authoritative reading order. Keep only one product gate in
+progress:
 
 ```text
 bounded visual-lab plan approval - COMPLETE
 -> local implementation-fidelity check - COMPLETE
 -> VL-WP4 owner diagnostic - DEFERRED BEFORE EXECUTION
--> strategic-combat packages through document 40 - PAPER HISTORY/APPROVAL,
+-> strategic-combat and Brain packages - CONSOLIDATED PAPER DIRECTION,
    RUNTIME DEFERRED
--> Brain hand-modifier and embodied-instability doctrine in document 41 -
-   CURRENT OWNER DESIGN GATE, PAPER IMPLEMENTATION OPEN
--> mental defeat, surrender, and mercy - NEXT PRODUCT GATE
+-> encounter and run structure - CURRENT OWNER DESIGN GATE
+-> Brain implementation detail, mental defeat, surrender, and mercy - DOWNSTREAM
 -> later separately approved reflex diagnostic / external pilot / production work
 ```
 

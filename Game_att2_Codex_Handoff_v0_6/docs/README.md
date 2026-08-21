@@ -1,62 +1,71 @@
 # Documentation Map
 
-This index is the entry point for current documentation. A file being preserved does
-not make it current authority.
+The repository separates the game-director reading surface from protected runtime,
+engineering, evidence, research, and history. A preserved file is not automatically
+current game-design authority.
 
-## Active authority and working documents
+## Five living game-design documents
+
+Read these for owner-led design work, in order:
+
+| Document | Responsibility |
+|---|---|
+| `GAME_DIRECTOR_BRIEF.md` | Product intent, identity, experience hierarchy, pillars, and guardrails |
+| `CORE_LOOP_ENCOUNTER_AND_RUN.md` | Active-play loop, encounter logic, between-pressure loop, and the explicitly open run structure |
+| `COMBAT_BODY_AND_BLOOD.md` | Consolidated body, Blood, wounds, defense, range, procedure, and survival paper rules |
+| `DECK_BRAIN_AND_ACTIONS.md` | Anatomical deckbuilder ownership, action budget, inventory boundary, Brain doctrine, and open implementation details |
+| `WORLD_PROGRESSION_AND_DECISIONS.md` | Narrative/progression direction, compact decision ledger, foundational open questions, scope locks, and current focus |
+
+These five files are paper game-design authority only. They do not change runtime,
+configuration, tests, content, final UI, engine, or production scope.
+
+## Protected authority and engineering documents
 
 | Document | Role |
 |---|---|
-| `01_PROJECT_STATE_HISTORY_VISION.md` | Vision, history, and scope context |
-| `02_DEVELOPMENT_MASTER_v0_6.md` | Product source of truth plus dated owner amendments |
-| `03_COMBAT_RULES_v0_5.md` | Current simulator combat-rule authority |
+| `02_DEVELOPMENT_MASTER_v0_6.md` | Product/simulator source of truth and dated governance amendments |
+| `03_COMBAT_RULES_v0_5.md` | Current implemented simulator combat rules |
 | `04_SIMULATOR_TECHNICAL_SPEC_v0_2.md` | Technical contracts |
 | `05_CONTENT_CATALOG_v0_1.md` | Active simulator content summary |
-| `06_TEST_PLAN_ACCEPTANCE_v0_2.md` | Acceptance and evidence gate |
-| `07_PAPER_TEST_EVIDENCE_v0_1.md` | Existing paper evidence classification |
-| `08_DECISIONS_RISKS_OPEN_QUESTIONS.md` | Owner decisions and risk ledger |
+| `06_TEST_PLAN_ACCEPTANCE_v0_2.md` | Acceptance and evidence gates |
+| `07_PAPER_TEST_EVIDENCE_v0_1.md` | Paper evidence classification |
+| `08_DECISIONS_RISKS_OPEN_QUESTIONS.md` | Protected runtime/project decision and risk history |
 | `10_CODEX_RETURN_CONTRACT.md` | Completion-report contract |
-| `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` | Causal design skill |
-| `17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md` | Current motivation/outcome prototype |
-| `18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md` | Detailed subordinate decision/dependency register |
-| `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` | Macro hybrid direction and resolved owner decisions |
-| `20_H1_HYBRID_COMBAT_SPEC_v0_1.md` | Owner-approved H1 contract; execution governed by the bounded plan below |
-| `21_H1_IMPLEMENTATION_RECORD_v0_1.md` | Consolidated executed H1 plan, fidelity result, owner diagnostic, and remaining evidence limits |
-| `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Owner-resolved interaction directions, shared-readiness boundary, and revised diagnostic requirements; no runtime approval |
-| `24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md` | Current cross-discipline status, production critical path, and design-route gates |
-| `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` | Consolidated visual-lab plan, fidelity result, preserved diagnostic protocol, and deferred gate |
-| `27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved aimed-wound design direction; numeric tuning and runtime implementation remain deferred |
-| `28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved action-produced Clinch/Engaged/Distant direction and neutral cadence; card profiles and runtime remain deferred |
-| `29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md` | Historical Attention Slot/card-economy baseline; document 39 superseded its guarantees and inventory assumptions, then document 41 superseded weighted access and approved bounded active-deck authorship as doctrine |
-| `30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md` | Owner-approved provisional WNR-0.1 wound/Blood/treatment/repair/self-risk/Torso paper direction; exact values tunable and runtime gated |
-| `31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md` | Owner-approved layered automatic defense contract; reflex events are build-derived rather than played Response cards; runtime and detailed reflex execution remain gated |
-| `32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md` | Owner-approved public-Lead, two-lock, sequential conflict-resolution paper contract; runtime, content, and exact presentation remain gated |
-| `33_SOURCE_FIRST_MODULAR_INTEGRITY_OWNER_REVIEW_v0_1.md` | Owner-approved Package D source profiles, centralized effect-package interface, and bounded Integrity Echo; values, production effects, and runtime remain gated |
-| `34_READIED_INVENTORY_CARD_ITEM_BOUNDARY_OWNER_REVIEW_v0_1.md` | Package A2 history and continuing inventory ownership/timing/source safeguards; document 39 supersedes required Attention Slot readiness |
-| `35_RANGE_MAINTENANCE_ACTION_GRAMMAR_OWNER_REVIEW_v0_1.md` | Owner-approved Package C execution-bound, non-stacking range-maintenance grammar; current production profiles and runtime remain gated |
-| `36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md` | Owner-approved Package B Preparation/Main/contextual procedure timing, exact-source reservation, pay-on-execution cancellation, and atomic treatment/repair/extraction/graft chains; runtime and content remain gated |
-| `37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md` | Owner-approved Package A exact limb-or-death choice, untreated-stump/no-harvest survival chain, final net Blood 12, and strict catastrophic-Torso boundary; runtime and content remain gated |
-| `38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md` | Status-labelled owner working record for product intent, hybrid combat, anatomical-deckbuilder exploration, card acquisition, explicit examples, and deferrals; required context for new core-gameplay discussion, not runtime authority |
-| `39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md` | Superseded-in-part Brain/weighted-Attention decision history; document 41 replaces weighted access, no-active-deck, redraw identity, and exclusive permanent-part progression while preserving named safeguards |
-| `40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md` | Earlier runtime/paper/working-layer reconciliation; document 41 supersedes INT-002 and weighted Brain-access conclusions |
-| `41_BRAIN_HAND_MODIFIER_AND_EMBODIED_INSTABILITY_DOCTRINE_2026-08-21.md` | Current owner-approved Brain doctrine: player-authored active deck, deterministic current-hand modification, and visible embodied power/control tradeoffs; implementation model remains paper-only |
-| `DOCUMENT_CLEANUP_CLASSIFICATION_2026-08-19.md` | Repository-document cleanup policy and applied KEEP/MERGE/ARCHIVE/DELETE decisions |
+| `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` | Causal design contract |
 
-## Encounter 3 paper testing
+`AGENTS.md`, `.agents/skills/`, `config/`, `src/`, and `tests/` remain protected and
+outside game-design consolidation.
 
-The current non-runtime packet is under `encounter_3/`. Its README defines the five
-operational documents and one analysis template. Encounter 3 runtime and Unity remain
-blocked.
+## Preserved research and evidence
 
-## Archive
+| Document/folder | Role |
+|---|---|
+| `20_H1_HYBRID_COMBAT_SPEC_v0_1.md` | Historical owner-approved H1 research contract |
+| `21_H1_IMPLEMENTATION_RECORD_v0_1.md` | H1 implementation and evidence limits |
+| `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Deferred reflex research direction |
+| `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` | Visual-lab plan, fidelity result, and deferred gate |
+| `encounter_3/` | Bounded paper-test packet; runtime remains blocked |
 
-Completed implementation reports, generated results, superseded rules, governance
-records, and legacy Encounter 3 packets are under `archive/`. They remain evidence or
-decision history but must not override active documents. See `archive/README.md`.
+Research evidence cannot prove fun, accessibility, fairness, balance, or production
+readiness and does not override the living design set.
 
-## Deletion rule
+## Historical design provenance
 
-Delete only empty placeholders, generated caches, exact compatibility copies, or
-material proven to have no evidence/decision value. Superseded evidence is archived
-unless a documented `MERGED` record preserves its audit-relevant content and Git
-retains the detailed chronology.
+Former game-design documents 01, 17-19, 24, and 27-41 are preserved intact under
+`archive/design_history_2026-08-21/`. Read them only for provenance, rejected
+alternatives, exact provisional details, or earlier evidence. If they conflict with
+the five living files, the living files win for paper design; documents 02-06 and
+validated configuration still win for current simulator behavior.
+
+Other archive categories remain evidence/history. See `archive/README.md`.
+
+## Change rule
+
+- Update a living design document instead of creating a new numbered design packet.
+- Record a dated compact entry in `WORLD_PROGRESSION_AND_DECISIONS.md` when authority
+  changes.
+- Create a standalone research/evidence file only when it contains a real protocol,
+  raw evidence, implementation record, or technical contract that does not belong in
+  the living design surface.
+- Never use documentation volume as a substitute for a player-facing decision or a
+  bounded test.

@@ -1,5 +1,12 @@
 # Game att2 — Decisions, Risks, and Open Questions v0.6
 
+> **Living-design consolidation (2026-08-21):** Game-design conclusions and open
+> macro questions are now summarized in the five living files listed by
+> `docs/README.md`. References below to former documents 01, 17-19, 24, and 27-41 are
+> historical provenance under `archive/design_history_2026-08-21/`. This protected
+> ledger remains runtime/project evidence and does not override the living paper-
+> design set.
+
 ## 2026-08-21 owner-delegated decision: reconcile current systems and documents
 
 The owner directed a complete comparison of current project layers, logical closure
@@ -221,8 +228,8 @@ immediate redraw. Body-owned eligibility and shared physical commitments remain.
 
 ## 2026-08-13 owner decision: approve complete aimed-wound direction
 
-The owner approved every recommendation and all eight decisions in
-`27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`.
+The owner-approved result is now summarized in `COMBAT_BODY_AND_BLOOD.md`; the full
+source packet is preserved under `archive/design_history_2026-08-21/`.
 
 Approved meanings:
 
@@ -361,11 +368,10 @@ or dialogue may reveal more. Recovery skill should come from reading intent, seq
 treatment and denial, changing the opponent's option space, and trading ideal reward
 for survival when necessary.
 
-The consolidated new-conversation handoff and reversible defaults are in
-`19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md`. The individual rows in
-`18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md` are now subordinate dependencies rather than
-separate owner-level interview questions. No hybrid runtime implementation is approved
-by this documentation decision alone.
+The current new-conversation handoff is the five living-document set in
+`docs/README.md`. Detailed historical rows are archived provenance rather than
+separate owner-level interview questions. No hybrid runtime implementation is
+approved by this documentation decision alone.
 
 ## 2026-08-01 owner decision: Blood death, sacrifice, defense boundaries, and negotiation
 
@@ -409,8 +415,7 @@ outcome, or refused according to the opponent's motivation and character.
 **Implementation boundary:** Rules v0.5 implements Blood death/Limb for Life semantics,
 the Brace/Braced Legs naming distinction, Cover It's one-round data contract, and
 no-modifier bargain rejection. Wounds, active Cover It behavior, generalized mental
-defeat, and multi-round negotiation remain blocked by the consolidated decision queue
-in `18_OPEN_COMBAT_AND_MOBILITY_DECISIONS.md`.
+defeat, and multi-round negotiation remain blocked by the living design set.
 
 ## 2026-07-31 owner decision: general combat motivation and victory framework
 
@@ -436,8 +441,8 @@ offer and triggers configured escalation. Desperate Swing chooses legal targets 
 state and penalizes exact repetition.
 
 **Evidence boundary:** This is an instrumented survey hypothesis, not final Jeff canon
-or evidence that players understand the system. The full definitions, hypotheses, and
-deferred decisions are in `docs/17_COMBAT_MOTIVATION_AND_VICTORY_FRAMEWORK_v0_1.md`.
+or evidence that players understand the system. Current conclusions and open
+questions are in the living design set; the full source packet is archived.
 `Cover It` effect/trade-off, wound mappings, Ruined player-Torso consequences, and
 final surrender psychology remain owner decisions.
 

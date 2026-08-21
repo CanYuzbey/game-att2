@@ -152,7 +152,8 @@ Owner-approved design direction, amended 2026-08-13:
   ordinary nonfatal treatment or unexplained immediate death.
 
 The complete approved meaning, causal order, invariants, and acceptance requirements
-are in `27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md`.
+are consolidated in `COMBAT_BODY_AND_BLOOD.md`; the detailed source packet is
+preserved under `archive/design_history_2026-08-21/`.
 
 Document 30 and Development Master Amendment 36 now provide owner-approved provisional
 paper values for wound thresholds, Blood pressure, repair, treatment duration,

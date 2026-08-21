@@ -10,8 +10,9 @@ implementation, final controls, timing values, movement, wounds, Unity, or
 player-experience claims.
 
 Authority: the owner feedback recorded after `OWNER-H1-DIAG-004`, interpreted under
-the H1 owner decisions in `19_CORE_GAMEPLAY_DIRECTION_AND_HANDOFF_2026-08-01.md` and
-the causal contract in `11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`.
+the living design set in `docs/README.md` and the causal contract in
+`11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md`. The former macro handoff is preserved
+under `archive/design_history_2026-08-21/`.
 
 ## 1. Owner finding
 

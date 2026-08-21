@@ -4,7 +4,8 @@ Status date: 2026-08-14
 
 Evidence class: **DESIGNER_ARITHMETIC - NOT HUMAN PLAYTEST EVIDENCE**
 
-Package: `docs/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md`
+Current summary: `docs/COMBAT_BODY_AND_BLOOD.md`
+Historical package: `docs/archive/design_history_2026-08-21/30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md`
 
 ## Evidence card
 

@@ -354,7 +354,7 @@ These checks establish arithmetic and decision separation only. They do not esta
 fun, fairness, comprehension, or final balance.
 
 The complete calculations are in the
-[designer-only arithmetic ledger](../research/wound_numeric/WNR_0_1_DESIGNER_ARITHMETIC.md).
+[designer-only arithmetic ledger](../../../research/wound_numeric/WNR_0_1_DESIGNER_ARITHMETIC.md).
 
 ## 11. Required paper cases
 

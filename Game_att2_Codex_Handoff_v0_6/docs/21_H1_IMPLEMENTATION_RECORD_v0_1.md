@@ -97,8 +97,8 @@ The bounded implementation passed on 2026-08-12:
 | H1 replay | Byte-identical repeated output |
 
 These are historical merge-point results, not a substitute for fresh verification.
-The later repository baseline is owned by
-`24_CURRENT_DEVELOPMENT_LEAD_BRIEF_2026-08-12.md`.
+The current game-design baseline is the five living-document set in `docs/README.md`.
+The former lead brief is preserved under `archive/design_history_2026-08-21/`.
 
 ## 7. Owner diagnostic and disposition
 
