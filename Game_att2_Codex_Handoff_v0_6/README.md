@@ -20,8 +20,8 @@ demo's engine or content foundation.
 - D0 paper contract: **open and active**.
 - Working container: captive in an underground Rot Market -> Guard -> Merchant ->
   Exit Keeper -> upward tunnel.
-- Current decisions: failure/restart contract and thirty-second interaction view.
-- Recommended engine hypothesis: Godot 4, subject to a separately approved one-room
+- Current decisions: thirty-second control contract, then failure/restart contract.
+- Owner-preferred engine hypothesis: Unity 6, subject to a separately approved one-room
   Guard spike.
 - Engine project/runtime content: **not approved or created yet**.
 - Source of current direction: the five living documents in `docs/README.md`.
@@ -572,10 +572,10 @@ These timestamps are repository events, not complete labor-hour records. No auth
 
 ## Recommended next step
 
-Define the Underground City demo's exact failure/restart contract and thirty-second
-interaction view. Do not create the engine project, implement the Merchant or Exit
-Keeper, add the Warden to legacy runtime, or start final content production before D0
-and a separately approved Guard-room spike.
+Define the Underground City demo's thirty-second control contract, then its exact
+failure/restart contract. Do not create the Unity project, implement the Merchant or
+Exit Keeper, add the Warden to legacy runtime, or start final content production
+before D0 and a separately approved Guard-room spike.
 
 ## Ownership
 

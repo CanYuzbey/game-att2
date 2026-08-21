@@ -12,9 +12,9 @@ into the next version of your own.
 ## Project status
 
 The active product target is now a **bounded three-encounter playable demo** set in a
-provisional underground Rot Market. The current gate is its paper D0 contract: exact
-failure/restart behavior and the thirty-second interaction view. No engine project has
-been approved or created yet.
+provisional underground Rot Market. The current gate is its paper D0 contract: the
+thirty-second control form followed by exact failure/restart behavior. Unity is the
+owner-preferred working engine, but no engine project has been approved or created.
 
 The deterministic Python simulator and its S-001 -> Jeff -> Anna campaign are frozen
 legacy evidence. They remain reviewable, but they are not the new demo's content plan,

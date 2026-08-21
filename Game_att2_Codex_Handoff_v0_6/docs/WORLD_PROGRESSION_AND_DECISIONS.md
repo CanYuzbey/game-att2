@@ -84,35 +84,38 @@ holding pen / body inspection
 
 ## Engine and program recommendation
 
-This is a `WORKING HYPOTHESIS`, gated by a two-day interaction spike:
+Unity is the owner-preferred `WORKING HYPOTHESIS` because its broader production path
+currently feels more open. It remains gated by a two-day interaction spike; this
+records direction but does not install Unity or create a project.
 
 | Need | Recommended tool | Reason |
 |---|---|---|
-| Runtime | Godot 4 + GDScript | Small PC demo, strong 2D/3D combination, rapid scene/UI iteration, MIT license |
+| Runtime | Unity 6 + C# | Owner-preferred future path; mature 3D, UI, animation, tooling, and asset ecosystem |
 | 3D assets/rig/animation | Blender | One free pipeline for modular bodies, environment, rigging, and animation |
 | Concept, cards, UI, textures | Krita | Free commercial-use painting and texture workflow |
 | SFX editing | Audacity | Free, sufficient for the first impact/ambience pass |
 | Later music/mix, only if needed | REAPER | Add only when multitrack production exceeds the slice's needs |
 | Versioning | Git + Git LFS | Already available; use LFS only for binary art/audio assets |
 
-Godot becomes the chosen engine only if the spike can demonstrate in one room:
+Unity becomes the accepted demo engine only if the spike can demonstrate in one room:
 fixed-camera navigation, a body-part swap, a readable card/intent overlay, one bounded
-execution input, deterministic state mutation, and a Windows build. Unity remains a
-reasonable fallback only if the actual implementer is materially faster in Unity.
-Unreal is rejected for this slice unless the art target changes toward high-fidelity
-3D or the team already has strong Unreal production experience.
+execution input, deterministic state mutation, and a Windows build. Godot remains a
+fallback only if Unity's iteration or asset overhead materially blocks this bounded
+slice. Unreal is rejected unless the art target changes toward high-fidelity 3D or
+the team already has strong Unreal production experience.
 
-Official references: [Godot license](https://godotengine.org/license/), [Godot
-features](https://godotengine.org/features/), [Blender features](https://www.blender.org/features/),
-[Krita license](https://krita.org/en/about/license/), and [Audacity downloads](https://www.audacityteam.org/download/).
+Official references: [Unity Personal](https://unity.com/products/unity-personal/),
+[Unity Runtime Fee cancellation](https://unity.com/blog/terms-update-runtime-fee-cancellation),
+[Blender features](https://www.blender.org/features/), [Krita
+license](https://krita.org/en/about/license/), and [Audacity downloads](https://www.audacityteam.org/download/).
 
 ## Demo decision order
 
 Decide in this order; a later decision may not disguise a missing earlier one:
 
-1. **Demo contract:** target duration and exact death/capture/restart behavior.
-2. **Thirty-second view:** fixed-camera movement, how conflict begins, where the hand
+1. **Thirty-second control contract:** fixed-camera movement, how conflict begins, where the hand
    appears, and how source/target/risk are read.
+2. **Failure contract:** target duration and exact death/capture/restart behavior.
 3. **Guard slice:** minimum cards, source states, wound consequence, disable/kill
    routes, extraction, and graft.
 4. **Carry-forward economy:** what Blood, wounds, parts, and cards persist across the
@@ -122,13 +125,13 @@ Decide in this order; a later decision may not disguise a missing earlier one:
 6. **Exit Keeper:** motivation and state-derived end routes.
 7. **Content budget:** exact parts, cards, animations, sounds, and text required—nothing
    without an encounter responsibility.
-8. **Engine acceptance:** keep or reject Godot after the one-room spike.
+8. **Engine acceptance:** keep or reject Unity after the one-room spike.
 
 ## Production gates
 
 | Gate | Deliverable | Continue criterion |
 |---|---|---|
-| D0 — current | One-page demo contract and decision ledger | Failure loop and thirty-second view can be stated without lore filler |
+| D0 — current | One-page demo contract and decision ledger | Thirty-second control and failure loop can be stated without lore filler |
 | D1 | Guard-room interaction slice in graybox | A fresh observer can read source, target, cost, expected result, and changed capability |
 | D2 | Complete Guard encounter plus graft consequence | The new arm changes the next legal options; damage is not cosmetic |
 | D3 | Merchant encounter | Negotiation follows visible leverage/body state rather than a detached dialogue score |
@@ -230,6 +233,6 @@ part of the ordinary game-director reading order.
 
 ## Current design focus
 
-The active product gate is D0: define the demo failure contract and thirty-second
-view, then approve or revise the one-room Guard interaction spike. Existing Brain,
+The active product gate is D0: define the thirty-second control contract and demo
+failure contract, then approve or revise the Unity Guard-room interaction spike. Existing Brain,
 reflex, and full-game questions do not justify parallel implementation.

@@ -3,7 +3,7 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: bounded playable-demo definition after the deterministic simulator
-Status: **The owner has frozen the Python campaign as legacy rules evidence and opened planning for a separate three-encounter Underground City demo. The current gate is D0: define its failure contract and thirty-second interaction view. No engine project, runtime content, or production dependency is approved by this planning amendment alone.**
+Status: **The owner has frozen the Python campaign as legacy rules evidence and opened planning for a separate three-encounter Underground City demo. The current gate is D0: define its thirty-second control contract, then its failure contract. Unity is the owner-preferred working engine; no engine project, runtime content, or production dependency is approved by this planning amendment alone.**
 
 ## 2026-08-21 bounded playable-demo target amendment
 
