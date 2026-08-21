@@ -119,9 +119,11 @@ order. Keep only one product gate in progress:
 bounded visual-lab plan approval - COMPLETE
 -> local implementation-fidelity check - COMPLETE
 -> VL-WP4 owner diagnostic - DEFERRED BEFORE EXECUTION
--> strategic-combat and Brain packages through document 40 - PAPER-APPROVED,
+-> strategic-combat packages through document 40 - PAPER HISTORY/APPROVAL,
    RUNTIME DEFERRED
--> mental defeat, surrender, and mercy - CURRENT PRODUCT GATE
+-> Brain hand-modifier and embodied-instability doctrine in document 41 -
+   CURRENT OWNER DESIGN GATE, PAPER IMPLEMENTATION OPEN
+-> mental defeat, surrender, and mercy - NEXT PRODUCT GATE
 -> later separately approved reflex diagnostic / external pilot / production work
 ```
 

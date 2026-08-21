@@ -3,7 +3,22 @@
 Prepared for: Can Yüzbey  
 Project: Game att2  
 Current stage: hybrid core-gameplay definition after the deterministic simulator
-Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Documents 27 through 39 now hold the owner-approved physical, range, action, wound/Blood, defense, initiative, source-integrity, inventory, procedure, catastrophic-survival, and Brain paper directions. Document 40 reconciles those layers and removes a separate conventional active deck from the approved baseline. Exact values and production profiles remain tunable, runtime remains gated, human-experience evidence remains absent, and Unity remains delayed.**
+Status: **The bounded H1 fixture and visual-lab implementation are fidelity-verified. The owner deferred VL-WP4 and broader reflex work on 2026-08-13 before execution. Documents 27 through 40 preserve the approved paper packages and reconciliation history. Document 41 is the later Brain doctrine: the body owns physical capability, the player authors a bounded active deck, and the Brain modifies the current hand through visible embodied power/control tradeoffs. It supersedes weighted Brain access and the earlier no-active-deck conclusion. Exact implementation, values, progression delivery, runtime, and human-experience evidence remain gated; Unity remains delayed.**
+
+## 2026-08-21 Brain hand-modifier doctrine amendment
+
+The owner accepted document 41 as the current Brain doctrine. The Brain no longer
+authors ordinary card access through weights or hard filters. The body defines
+source-valid capability, the player authors a bounded active deck, ordinary draw
+operates on that deck, and Brain rules deterministically modify the current hand or
+its visible consequences. Embodied incompatibility must become a previewed power-
+versus-control tradeoff rather than hidden random punishment.
+
+This supersedes document 39's weighted-access identity and permanent Brain Parts as
+the only approved progression wrapper, plus document 40 INT-002. Tree, collectible
+part, hybrid, exact acquisition/deck rules, compatibility model, content, values,
+runtime, persistence, and UI remain deferred. The current paper gate is the minimal
+implementation model for this doctrine; mental defeat, surrender, and mercy follows.
 
 ## 2026-08-13 reflex-work deferral amendment
 

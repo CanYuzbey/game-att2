@@ -2,7 +2,7 @@
 
 Status date: 2026-08-21
 
-Status: active cross-discipline production brief. Read with documents 19 through 40.
+Status: active cross-discipline production brief. Read with documents 19 through 41.
 This file summarizes current authority; it does not replace the Development Master,
 Combat Rules, technical specification, or decision ledger.
 
@@ -21,10 +21,12 @@ execution. Space/reach, the strategic card/action-economy architecture, provisio
 WNR-0.1 values, layered automatic defense, public-Lead sequential conflict
 resolution, Package D Source-First Modular Integrity, the preserved Package A2
 inventory legality/timing boundary, Package C Resolution-Bound Range Tenure, Package
-B Tiered Atomic Commitments, Package A Chosen Irrevocable Sacrifice, and the document
-39 Brain Module are now approved paper directions. Document 39 supersedes required
-inventory-slot readiness. The active dependency-ordered gate is mental defeat,
-surrender, and mercy. Runtime implementation remains unapproved.
+B Tiered Atomic Commitments, and Package A Chosen Irrevocable Sacrifice are approved
+paper directions. Document 41 is the later Brain doctrine and supersedes document
+39's weighted-access identity plus document 40's no-active-deck reconciliation while
+preserving their named safeguards. The active dependency-ordered gate is the paper
+implementation model for Brain hand modification and embodied instability. Mental
+defeat, surrender, and mercy follows. Runtime implementation remains unapproved.
 
 The owner-approved combat identity guardrail continues to apply: the game must not
 become upgraded stat-menu dueling. Body-sourced tactical
@@ -32,6 +34,21 @@ cards, reflex execution, and lasting physical consequences define the intended l
 space is an action-produced supporting state and must not become the primary activity.
 
 ## Owner decision addendum - 2026-08-21
+
+The owner later accepted document 41 as the current Brain doctrine. The body owns
+physical capability, the player authors a bounded active deck, ordinary draw operates
+on that deck, and the Brain deterministically modifies the current hand or its
+visible consequences. Incompatibility must be state-derived, previewed, and usable as
+a voluntary power-versus-control tradeoff. This supersedes weighted/hard-filtered
+Brain card selection, the no-active-deck baseline, Brain-paid redraw as system
+identity, and permanent Brain Parts as the sole approved progression wrapper.
+
+Exact technique acquisition, deck cadence, compatibility inputs, progression form,
+content, values, runtime, save data, and UI remain deferred. The current paper gate
+is the minimal implementation model for this doctrine; mental defeat, surrender, and
+mercy is next.
+
+### Superseded earlier decision from the same date
 
 The owner approved document 39 as the current Brain/Attention authority. Rare Brain
 Parts persist through death, are configured one per slot before a run, and remain
@@ -47,15 +64,16 @@ automatic and cardless. Future enemies share the hidden internal hand/legality e
 but the player sees only intent and action results.
 
 Final counts, weights, costs, Brain/card content, Head/Stun interaction, rare extra
-plays, runtime, save data, UI, and human evidence remain deferred. This paper approval
-does not replace the active mental-defeat/surrender/mercy product gate.
+plays, runtime, save data, UI, and human evidence remain deferred. This earlier paper
+approval is preserved as history and is superseded where document 41 says so.
 
 Document 40 reconciles the Brain Module with the Director's Choice exploration and
 every approved paper package. The current baseline has no separate conventional
 active deck: body construction authors the eligible card pool and Brain configuration
 authors access. Multi-tag, redraw-return, slot-modifier, empty-pool, and local run-lock
-semantics are resolved on paper. Values, content, runtime, and full run structure stay
-deferred.
+semantics were resolved on paper. Values, content, runtime, and full run structure
+stay deferred. Document 41 now supersedes that no-active-deck/access-authorship
+result.
 
 ## 1A. Latest owner decision recorded on 2026-08-19
 
@@ -281,7 +299,7 @@ reflex diagnostics and broader reflex mechanics - DEFERRED
 -> physical-consequence meanings - APPROVED, VALUES DEFERRED
 -> action-produced range and settling cadence - APPROVED, RUNTIME DEFERRED
 -> strategic card/action economy and cadence - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
--> Brain Module weighted body-card selection and permanent Brain Parts - APPROVED PAPER DIRECTION, NUMBERS/RUNTIME DEFERRED
+-> Brain Module weighted body-card selection and permanent Brain Parts - SUPERSEDED-IN-PART HISTORY
 -> wound-to-Blood values and stabilization tuning - PROVISIONAL PAPER DIRECTION APPROVED
 -> strategic defense roles and stacking - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
 -> initiative and conflict timing - APPROVED PAPER DIRECTION, RUNTIME DEFERRED
@@ -290,6 +308,7 @@ reflex diagnostics and broader reflex mechanics - DEFERRED
 -> range-maintenance action grammar - APPROVED PACKAGE C PAPER DIRECTION, RUNTIME DEFERRED
 -> treatment, repair, extraction, and graft commitment flow - APPROVED PACKAGE B PAPER DIRECTION, RUNTIME DEFERRED
 -> Limb for Life and catastrophic survival - APPROVED PACKAGE A PAPER DIRECTION, RUNTIME DEFERRED
+-> Brain hand modifier plus embodied instability - CURRENT OWNER DESIGN GATE, PAPER IMPLEMENTATION OPEN
 -> mental defeat, surrender, and mercy - NEXT DESIGN GATE
 -> negotiation and encounter resolution rules
 -> information and interaction grammar
@@ -364,11 +383,13 @@ document 31 resolves layered automatic defense, document 32 resolves public-Lead
 sequential conflict timing, document 33 resolves Source-First Modular Integrity,
 document 34 preserves inventory ownership/timing/source rules, document 35 resolves
 execution-bound range maintenance, document 36 resolves tiered atomic procedure
-commitments, document 37 resolves chosen catastrophic survival, and document 39
-resolves the Brain Module while superseding required inventory-slot readiness on
-paper. A legal reflex-defense event is build-derived and automatically surfaced
-rather than manually played from an Attention Slot. Runtime and configuration remain
-unchanged. The next dependency-safe gate is
-mental defeat, surrender, and mercy. Detailed reflex work,
+commitments, document 37 resolves chosen catastrophic survival, and document 41
+resolves the current Brain doctrine while retaining document 39's source, inventory,
+reflex, and action-budget safeguards. A legal reflex-defense event is build-derived
+and automatically surfaced rather than manually played from an Attention Slot.
+Runtime and configuration remain
+unchanged. The current dependency-safe gate is the paper implementation of Brain
+hand modification and embodied instability; mental defeat, surrender, and mercy is
+next. Detailed reflex work,
 runtime card/wound/defense/timing/integrity/item implementation, an external pilot,
 content expansion, and production integration remain deferred.

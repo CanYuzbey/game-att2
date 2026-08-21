@@ -6,6 +6,13 @@ Status: **OWNER-APPROVED PAPER DESIGN DIRECTION ONLY; NUMBERS, CONTENT, HUMAN
 EVIDENCE, RUNTIME, CONFIGURATION, PERSISTENCE IMPLEMENTATION, AND FINAL UI NOT
 APPROVED**
 
+> **Later owner amendment (2026-08-21):** Document 41 supersedes this document's
+> weighted/hard-filtered Brain selection, no-active-deck baseline, Brain-paid redraw
+> identity, and permanent Brain Parts as the only approved progression wrapper. This
+> file remains decision history. Its body-source legality, inventory, automatic-
+> reflex, action-budget, preview, and consequence safeguards survive where document
+> 41 preserves them. No runtime behavior was ever approved here.
+
 This document is the current design authority for the Brain Module, permanent Brain
 Part progression, weighted Attention Slot selection, the body-card hand lifecycle,
 and the Brain/inventory boundary. It supersedes document 29 where that document fixes

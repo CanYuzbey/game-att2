@@ -112,26 +112,21 @@ the state. These are design meanings, not runtime implementation approval.
 This guardrail does not approve a full deckbuilder, hand size, draw/discard algorithm,
 movement-card list, broader reflex implementation, or new content.
 
-### Brain Module progression approved; final numbers and Head interaction deferred
+### Brain hand-modifier doctrine approved; paper implementation open
 
-Document 39 is the current Brain/Attention authority. Rare Brain Parts persist through
-death, are configured one per Attention Slot before a run, and remain locked for that
-run. Usable body sources contribute exact card instances; weighted selection without
-replacement guarantees neither Attack nor Defence. Hard-filtered slots resolve before
-flexible slots and shade when no eligible match exists.
+Document 41 is the current Brain authority and supersedes documents 39-40 where they
+make weighted Brain selection the author of card access or exclude a player-authored
+active deck. The body owns source-valid physical capability, the player authors a
+bounded active deck, ordinary draw operates on that deck, and the Brain
+deterministically modifies the current hand or its visible consequences.
 
-Unused legal cards persist. Spent/Invalid replacement waits for Decision Refresh, and
-one validated immediate redraw per round spends a later-authored Blood cost. Inventory
-remains directly accessible outside Attention Slots. Reflex defence remains automatic
-and cardless. Final slot counts, weights, redraw cost, Brain Part/card content,
-Head/Stun interaction, rare extra plays, save/runtime implementation, and UI remain
-deferred. The historical three-slot/five-slot values are comparison fixtures only.
-
-Document 40 resolves the Director-record collision: the approved baseline does not
-add a separate collectible-technique or active-deck layer. Body construction authors
-the eligible card pool and Brain configuration authors access. Conventional deck
-construction remains a future hypothesis only if later evidence exposes a specific
-authorship problem.
+Embodied incompatibility must be inspectable before commitment and create a power-
+versus-control tradeoff rather than hidden random punishment. Brain rules cannot
+fabricate capability, restore an invalid source, waive action/cost legality, or add an
+ordinary play by implication. Inventory safeguards and automatic cardless reflex
+defence survive. Exact technique acquisition, deck cadence, compatibility inputs,
+progression form, Brain/card content, Head interaction, runtime, save implementation,
+and UI remain deferred.
 
 ## 3. Target player experience
 
@@ -384,8 +379,8 @@ them to the owner only when a result would materially change the target experien
 
 The smallest testable contract originally derived from these decisions was
 `20_H1_HYBRID_COMBAT_SPEC_v0_1.md`. Later owner decisions deferred broader H1/reflex
-work and independently approved wound, range, staged-turn, and Attention Slot design
-directions. Use documents 24 and 27-29 for the current gate rather than treating this
+work and independently approved wound, range, staged-turn, and card/Brain design
+directions. Use documents 24 and 27-41 for the current gate rather than treating this
 historical H1 dependency as a blocker.
 
 ## 7. First hybrid prototype — H1

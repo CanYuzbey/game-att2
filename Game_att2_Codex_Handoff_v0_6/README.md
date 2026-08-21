@@ -38,13 +38,15 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   broader reflex-mechanics work is preserved for a later gate.
 - Aimed-wound direction: all eight design decisions owner-approved on 2026-08-13;
   numeric tuning and runtime implementation remain deferred.
-- Brain Module/card economy: owner-approved paper direction. Rare permanent Brain
-  Parts configure weighted, body-only Attention Slots at run start; selection may
-  produce uneven hands, and one validated immediate redraw spends Blood. Final slot
-  counts, weights, content, save/runtime implementation, and balance remain gated.
-- Cross-system reconciliation: the body-generated card pool plus Brain configuration
-  is the approved baseline; no separate collectible-technique or active-deck layer is
-  required. Document 40 records the complete collision audit and deferrals.
+- Brain/card doctrine: document 41 supersedes weighted Brain card access. The body
+  owns physical capability, the player authors a bounded active deck, and the Brain
+  deterministically modifies the current hand to expose embodied power/control
+  tradeoffs. Exact acquisition, deck cadence, instability inputs, progression form,
+  content, save/runtime implementation, and balance remain gated.
+- Cross-system reconciliation: documents 39 and 40 preserve the earlier weighted-
+  Attention decision history. Document 41 supersedes their no-active-deck and Brain-
+  as-access-author conclusions while retaining source, inventory, reflex, action-
+  budget, preview, and consequence safeguards.
 - WNR-0.1: owner-approved provisional paper values for wound-to-Blood, repair,
   treatment, wounded-limb self-risk, and Ruined-Torso rescue. Exact numbers remain
   tunable and runtime/configuration remain gated.
@@ -76,7 +78,8 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   paper. Blood-0 rescue offers an exact eligible arm/Legs sacrifice or death, creates
   an untreated stump with no harvested object, finishes at provisional net Blood 12,
   and never prevents catastrophic Torso failure. Runtime remains unchanged.
-- Current product gate: mental defeat, surrender, and mercy.
+- Current owner-design gate: paper implementation of the Brain hand-modifier and
+  embodied-instability doctrine. Mental defeat, surrender, and mercy is next.
 - Space-and-reach direction: Clinch, Engaged, and Distant are owner-directed shared
   states produced by action/defense/reflex outcomes, not movement controls. Document
   28 records the approved neutral-settling cadence; runtime remains unapproved.
@@ -166,16 +169,20 @@ The owner-approved catastrophic-survival contract is
 It fixes exact eligible-limb choice plus death refusal, the untreated-stump/no-harvest
 atomic chain, final net Blood 12, post-sacrifice capability revalidation, and strict
 separation from catastrophic Torso failure without changing runtime.
-The owner-approved Brain Module is
+The superseded-in-part Brain Module history is
 [docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md](docs/39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md).
-It fixes permanent run-configured Brain Parts, weighted source-valid body-card hands,
-Blood-paid immediate redraw, inventory outside Attention Slots, and hidden enemy hands
-on paper. All final numbers, content, Head/Stun interaction, runtime, persistence code,
-and UI remain gated.
-The current cross-system comparison and collision audit is
+Document 41 replaces its weighted card access, no-active-deck baseline, redraw
+identity, and permanent Brain Parts as the only approved progression wrapper; its
+named source, inventory, reflex, action-budget, preview, and consequence safeguards
+survive. Runtime was never opened. The earlier cross-system comparison and collision
+audit is
 [docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md](docs/40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md).
-It reconciles runtime, paper packages, director hypotheses, Brain progression,
-document organization, and explicit deferrals without opening implementation.
+It preserves the prior reconciliation history; document 41 supersedes INT-002 and
+its weighted Brain-access conclusions. The current owner-approved Brain doctrine is
+[docs/41_BRAIN_HAND_MODIFIER_AND_EMBODIED_INSTABILITY_DOCTRINE_2026-08-21.md](docs/41_BRAIN_HAND_MODIFIER_AND_EMBODIED_INSTABILITY_DOCTRINE_2026-08-21.md).
+It fixes player authorship of a bounded active deck, deterministic current-hand Brain
+modification, and visible embodied power/control tradeoffs on paper. Progression
+delivery, exact mechanics, values, content, runtime, persistence, and UI remain gated.
 
 The owner-approved local Block lab is operated from
 [research/visual_lab/README.md](research/visual_lab/README.md). It remains isolated
@@ -631,16 +638,17 @@ Known Git history:
 | 2026-08-19 | Package A Chosen Irrevocable Sacrifice approved and reconciled as paper authority; runtime unchanged |
 | 2026-08-21 | Brain Module and weighted Attention Slots approved and reconciled as paper authority; numbers/content/runtime unchanged |
 | 2026-08-21 | Current systems, director hypotheses, document cleanup, and Brain authority cross-audited; conventional active-deck duplication removed from the approved baseline |
+| 2026-08-21 | Later owner doctrine superseded weighted Brain access: player-authored active deck plus deterministic hand modification and embodied instability became the current paper direction |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 
 ## Recommended next step
 
-Resolve mental defeat, surrender, and mercy as the next paper package: state-derived
-surrender thresholds, voluntary surrender, mercy/refusal outcomes, and their exact
-order after physical incapacity and catastrophic survival. Negotiation, reflex
-diagnostics, story, final UI, content expansion, external pilots, Encounter 3 runtime,
-and engine production remain deferred.
+Define and compare the first state-derived compatibility input for document 41's
+Brain hand-modifier paper model. Mental defeat, surrender, and mercy remains the next
+dependency package afterward. Negotiation, reflex diagnostics, story, final UI,
+content expansion, external pilots, Encounter 3 runtime, and engine production remain
+deferred.
 
 Do not begin Unity, add the Warden to runtime configuration, or expand production content from the current evidence.
 

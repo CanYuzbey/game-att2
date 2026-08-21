@@ -19,9 +19,10 @@ Implement the smallest trustworthy Python simulator that reproduces the currentl
    For a new owner-led core-gameplay conversation, include
    `docs/38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md` and preserve
    its `OWNER DIRECTION`, `WORKING HYPOTHESIS`, `EXAMPLE ONLY`, and `DEFERRED`
-   distinctions; then read the later Brain authority in document 39 and the
-   cross-system reconciliation in document 40. Documents 38 and 40 are discussion and
-   navigation context; neither authorizes runtime.
+   distinctions; then read the superseded-in-part Brain history in document 39, the
+   earlier cross-system reconciliation in document 40, and the later owner doctrine
+   in document 41. Documents 38 and 40 are discussion and navigation context;
+   document 41 is paper doctrine only and does not authorize runtime.
 2. Inspect the repository before modifying it.
 3. Produce a short implementation plan mapped to requirements and tests.
 4. Implement in small modules with type hints and explicit ownership.

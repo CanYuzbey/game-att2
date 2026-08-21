@@ -5,6 +5,11 @@ Status date: 2026-08-21
 Status: **OWNER-DELEGATED REPOSITORY AND PAPER-DESIGN RECONCILIATION; NO RUNTIME,
 CONFIGURATION, CONTENT, VALUE, ENGINE, OR EXPERIENCE APPROVAL**
 
+> **Later owner amendment (2026-08-21):** Document 41 supersedes INT-002 and every
+> conclusion that makes Brain configuration the author of weighted card access or
+> excludes a player-authored active deck. This audit remains the history of the
+> earlier reconciliation; document 41 is the current Brain doctrine.
+
 ## 1. Purpose and authority
 
 This document compares the current simulator, owner-approved paper packages, the
@@ -158,7 +163,8 @@ claim that the paper model is balanced, fun, understandable, or ready for runtim
 
 ## 8. Current gate
 
-The Brain Module and cross-system architecture are paper-approved and reconciled.
-The simulator, configuration, seven scenarios, H1 fixture, and visual lab remain
-unchanged. The next product gate remains mental defeat, surrender, and mercy; it must
-receive its own bounded owner review before implementation or negotiation expansion.
+This section records the gate at the time of this earlier audit. Document 41 later
+superseded the weighted Brain-access architecture and opened its paper implementation
+model as the current owner-design gate. The simulator, configuration, seven scenarios,
+H1 fixture, and visual lab remain unchanged. Mental defeat, surrender, and mercy now
+follows that Brain doctrine gate.

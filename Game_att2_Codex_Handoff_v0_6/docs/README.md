@@ -27,7 +27,7 @@ not make it current authority.
 | `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` | Consolidated visual-lab plan, fidelity result, preserved diagnostic protocol, and deferred gate |
 | `27_AIMED_WOUND_SYSTEM_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved aimed-wound design direction; numeric tuning and runtime implementation remain deferred |
 | `28_SPACE_AND_REACH_DIRECTION_AND_OWNER_REVIEW_v0_1.md` | Owner-approved action-produced Clinch/Engaged/Distant direction and neutral cadence; card profiles and runtime remain deferred |
-| `29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md` | Historical Attention Slot/card-economy baseline; document 39 supersedes its guarantees, fixed comparison counts, Reconsider cost/timing, and inventory-slot assumptions |
+| `29_STRATEGIC_CARD_ACTION_ECONOMY_OWNER_INTERVIEW_v0_1.md` | Historical Attention Slot/card-economy baseline; document 39 superseded its guarantees and inventory assumptions, then document 41 superseded weighted access and approved bounded active-deck authorship as doctrine |
 | `30_WOUND_BLOOD_REPAIR_NUMERIC_OWNER_REVIEW_v0_1.md` | Owner-approved provisional WNR-0.1 wound/Blood/treatment/repair/self-risk/Torso paper direction; exact values tunable and runtime gated |
 | `31_STRATEGIC_DEFENSE_CONTRACT_OWNER_REVIEW_v0_1.md` | Owner-approved layered automatic defense contract; reflex events are build-derived rather than played Response cards; runtime and detailed reflex execution remain gated |
 | `32_INITIATIVE_AND_CONFLICT_RESOLUTION_OWNER_REVIEW_v0_1.md` | Owner-approved public-Lead, two-lock, sequential conflict-resolution paper contract; runtime, content, and exact presentation remain gated |
@@ -37,8 +37,9 @@ not make it current authority.
 | `36_TIERED_ATOMIC_COMMITMENT_FLOW_OWNER_REVIEW_v0_1.md` | Owner-approved Package B Preparation/Main/contextual procedure timing, exact-source reservation, pay-on-execution cancellation, and atomic treatment/repair/extraction/graft chains; runtime and content remain gated |
 | `37_CHOSEN_IRREVOCABLE_SACRIFICE_CATASTROPHIC_SURVIVAL_OWNER_REVIEW_v0_1.md` | Owner-approved Package A exact limb-or-death choice, untreated-stump/no-harvest survival chain, final net Blood 12, and strict catastrophic-Torso boundary; runtime and content remain gated |
 | `38_DIRECTORS_CHOICE_CORE_GAMEPLAY_WORKING_RECORD_2026-08-19.md` | Status-labelled owner working record for product intent, hybrid combat, anatomical-deckbuilder exploration, card acquisition, explicit examples, and deferrals; required context for new core-gameplay discussion, not runtime authority |
-| `39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md` | Owner-approved permanent Brain Part progression, probabilistic body-only Attention Slots, Blood-paid redraw, direct-inventory boundary, and hidden enemy-hand paper direction; all numbers/content/runtime remain gated |
-| `40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md` | Current runtime/paper/working-layer comparison, collision resolutions, unanswered-question disposition, and document-organization result |
+| `39_BRAIN_MODULE_WEIGHTED_ATTENTION_OWNER_REVIEW_v0_1.md` | Superseded-in-part Brain/weighted-Attention decision history; document 41 replaces weighted access, no-active-deck, redraw identity, and exclusive permanent-part progression while preserving named safeguards |
+| `40_CURRENT_SYSTEM_COMPARISON_AND_COLLISION_AUDIT_2026-08-21.md` | Earlier runtime/paper/working-layer reconciliation; document 41 supersedes INT-002 and weighted Brain-access conclusions |
+| `41_BRAIN_HAND_MODIFIER_AND_EMBODIED_INSTABILITY_DOCTRINE_2026-08-21.md` | Current owner-approved Brain doctrine: player-authored active deck, deterministic current-hand modification, and visible embodied power/control tradeoffs; implementation model remains paper-only |
 | `DOCUMENT_CLEANUP_CLASSIFICATION_2026-08-19.md` | Repository-document cleanup policy and applied KEEP/MERGE/ARCHIVE/DELETE decisions |
 
 ## Encounter 3 paper testing

@@ -4,12 +4,19 @@ Status date: 2026-08-21
 
 Status: **HISTORICAL OWNER-DELEGATED PAPER BASELINE; SUPERSEDED IN PART BY DOCUMENT 39; RUNTIME, CONTENT, AND FINAL BALANCE NOT APPROVED**
 
+Later owner amendment, 2026-08-21: document 41 is the current Brain doctrine. It
+supersedes document 39's weighted-access identity and this document's uncertainty
+about active-deck authorship. The player authors a bounded active deck; exact
+acquisition, editing, draw/discard cadence, and persistence remain open. The body-
+source, staged-action, lifecycle, inventory, and automatic-reflex safeguards survive.
+
 Owner amendment, 2026-08-21: document 39 is the current authority for Brain Parts,
 weighted Attention Slot selection, slot counts as test fixtures, Blood-paid immediate
 redraw, and inventory outside the Brain hand. This document remains authority for the
 staged Preparation/Main budget, body-owned capability, exact physical-source
 commitments, persistent-card state vocabulary, and automatic-reflex boundary where
-document 39 does not replace them.
+document 39 does not replace them. This paragraph is preserved as the earlier same-
+date decision and is superseded where document 41 conflicts.
 
 This document was the original design authority for brain/attention slots, the
 tactical hand lifecycle, voluntary card plays, body-sourced card eligibility, and

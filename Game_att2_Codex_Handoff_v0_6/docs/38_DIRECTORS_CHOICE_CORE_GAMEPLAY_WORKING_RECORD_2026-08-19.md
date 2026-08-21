@@ -23,11 +23,12 @@ Use the following labels literally:
 
 This record does not supersede `02_DEVELOPMENT_MASTER_v0_6.md`, dated owner
 amendments, `03_COMBAT_RULES_v0_5.md`, or the owner-approved paper contracts in
-documents 27 through 39. Document 39 is now the current Brain/Attention authority;
-document 29 retains only the staged-turn, exact-source, and lifecycle rules that
-document 39 preserves. A separate collectible-technique deck, active-deck editor,
-draw/discard piles, and technique persistence remain working exploration rather than
-approved Brain Module requirements.
+documents 27 through 41. Document 41 is now the current Brain doctrine and supersedes
+document 39's weighted-access identity plus document 40's no-active-deck
+reconciliation. Documents 29 and 39 retain only the staged-turn, exact-source,
+inventory, reflex, lifecycle, preview, and consequence safeguards that document 41
+preserves. Active-deck authorship is approved as doctrine; its acquisition, editing,
+draw/discard cadence, and persistence remain open implementation questions.
 
 If this document conflicts with a later explicit owner statement, record the newer
 statement as a dated amendment instead of silently reconciling it. No item below
@@ -384,3 +385,19 @@ Accordingly:
 This resolution removes overlap without changing runtime or making a market/fun
 claim. It may be revised after bounded probability tests and human comprehension
 evidence.
+
+## 12. Brain hand-modifier doctrine amendment (2026-08-21)
+
+Status: `OWNER DIRECTION`; implementation details remain `WORKING HYPOTHESIS`.
+
+The owner rejected the weighted-attention interpretation as insufficiently fun and
+accepted a different doctrine: the player authors the active deck; the body remains
+the source of physical card capability; the Brain modifies the current hand and
+turns transhumanist bodily incompatibility into a visible power-versus-control
+tradeoff. Brain progression may later use a tree, collectible parts, a hybrid, or
+another wrapper, but that delivery decision must not own ordinary card selection.
+
+Document 41 is the dated authority for this amendment. It supersedes this record's
+section 10 frontier and section 11 no-active-deck reconciliation. Technique
+acquisition, deck cadence, compatibility inputs, run/death structure, concrete Brain
+content, values, UI, and runtime remain deferred.
