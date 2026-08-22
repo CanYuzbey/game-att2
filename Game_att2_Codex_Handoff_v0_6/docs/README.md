@@ -55,6 +55,7 @@ outside game-design consolidation.
 | `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Deferred reflex research direction |
 | `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` | Visual-lab plan, fidelity result, and deferred gate |
 | `encounter_3/` | Bounded paper-test packet; runtime remains blocked |
+| `../research/defense_will_npc_balance_v0_1.md` | DWF-0.1 sourced Block/timing/Will/NPC comparison, exact paper calculator, and reject criteria; all values remain working hypotheses |
 
 Research evidence cannot prove fun, accessibility, fairness, balance, or production
 readiness and does not override the living design set.

@@ -19,12 +19,28 @@ demo's engine or content foundation.
 
 - D0 paper contract: **open and active**.
 - Working container: bound Guard negotiation -> weaker but free traversal -> one
-  in-world 1v1 body-card duel -> living surrender/Grafting Table -> same-day reset or
-  a still-open success endpoint.
+  in-world 1v1 body-card duel -> kill for Blood or living surrender/Grafting Table
+  limb transfer -> same-day reset or a still-open success endpoint.
 - Death contract: body/world reset; default cards remain; learned cards are lost; one
   Memory Card is created; run instability clears; persistent Brain buffs remain.
-- Current decisions: Guard payment, turn resource/condition/target contract, duel
-  actor/surrender, graft consequence, Memory/Brain content, and success endpoint.
+- Current open decisions: owner promotion/revision of the exact `G1` Guard and
+  `DWF-0.1` defense/Will comparison; Mana values and card/target details; duel actor;
+  player Broken-Will claim enforcement; kill-Blood yield/presentation; graft
+  consequence; Memory/Brain content; and success endpoint.
+- Same-day learning direction: underlying Blood/limb opportunities reset consistently;
+  prior choices, not wallet-sensitive loot, determine whether the player reaches
+  Blood without the desired limb or the desired limb without enough Blood.
+- Mana direction: available Mana grows as rounds pass; exact growth, cap, refill, and
+  the finite-state anti-stall rule remain open.
+- Defense paper rule: outgoing cards have no attack QTE; Yellow permits Block/Parry,
+  Red requires Evade, and color has a redundant readable cue. Block redirects the hit
+  into a chosen guarding body part; precise Parry prevents incoming damage and reduces
+  visible enemy Will toward living surrender. Exact inputs, values, and timing remain
+  open.
+- Research comparison: [DWF-0.1](research/defense_will_npc_balance_v0_1.md) proposes
+  explicit guarding tags and Block wear, `±90 ms` Parry, `±180 ms` Evade, independent
+  accessibility controls, bilateral `90 Will`, and a goal-driven Guard who accepts a
+  Full Right Arm or `20 Blood`. Every value remains paper-only and provisional.
 - Engine/implementation vehicle remains gated behind those D0 decisions and separate
   explicit approval.
 - Engine project/runtime content: **not approved or created yet**.
@@ -69,9 +85,9 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
 - WNR-0.1: owner-approved provisional paper values for wound-to-Blood, repair,
   treatment, wounded-limb self-risk, and Ruined-Torso rescue. Exact numbers remain
   tunable and runtime/configuration remain gated.
-- Strategic defense contract: Package A is owner-approved on paper. Reflex defense
-  appears automatically from the incoming action and current build rather than being
-  manually played as a Response card; preparation and passives remain bounded layers.
+- Historical strategic-defense Package A remains paper provenance for bounded
+  preparation/passive layers. The active mini-game's later paper amendment now owns
+  its player-facing routes: Yellow Block/Parry and Red Evade.
 - Initiative and conflict resolution: Package A is owner-approved on paper. Public
   Lead, two intention locks, sequential causal resolution, and explicit cancellation
   states are fixed; runtime and configuration remain gated.
@@ -526,18 +542,20 @@ The automated suite passes, but passing tests do not erase known gaps:
 - **P1 — physical rules:** wound meanings, provisional WNR-0.1 values, and the
   Ruined-Torso rescue direction are approved on paper; runtime migration remains open,
   so ordinary runtime limb damage does not yet create the new wound-to-Blood behavior.
-- **P1 — defense implementation:** the automatic layered defense architecture and
-  Cover It role are approved on paper, but success calculation, exact mitigation,
-  detailed reflex execution, configuration, and runtime remain unapproved.
-- **P1 — active-demo combat contract:** no-range direction and multi-card/one-turn
-  combo budget are approved on paper, but the resource, values, body-condition scale,
-  target effects, enemy cadence, human evidence, and runtime remain undefined.
+- **P1 — defense implementation:** Yellow/Red routing, body-cost Block, precision
+  Parry, Evade, and Will-driven surrender are approved only on paper. Inputs, windows,
+  eligible sources, values, assistance, human evidence, configuration, and runtime
+  remain unapproved; DWF-0.1 is only a comparison candidate.
+- **P1 — active-demo combat contract:** no-range direction, growing Mana, multi-card
+  turns, and defense route meanings are approved on paper, but values, body-condition
+  scale, target effects, enemy cadence, human evidence, and runtime remain undefined.
 - **P1 — H1 experience evidence:** the automated Block comparisons pass fidelity,
   but the owner diagnostic exposed an inadequate single-input instrument. Provisional
   timing/mitigation/exposure values, interaction families, and prompt cadence have no
   valid external human evidence.
-- **P1 — resolution:** generalized mental defeat and the multi-round negotiation
-  minigame remain design-approved directions without complete runtime contracts.
+- **P1 — resolution:** Broken Will is the active-demo combat-surrender trigger on
+  paper, but bilateral values, exceptional actors, non-Parry mutations, player claim
+  enforcement, and the broader negotiation contract remain open and unimplemented.
 - **Documentation:** completed and superseded reports are isolated under
   `docs/archive/`; active navigation starts at `docs/README.md`.
 
@@ -573,12 +591,15 @@ Known Git history:
 | 2026-08-21 | Active game-design surface consolidated into five living documents; former 01, 17-19, 24, and 27-41 packets archived intact as provenance |
 | 2026-08-21 | Python campaign frozen as legacy evidence; bounded Underground City demo D0 planning opened |
 | 2026-08-22 | Demo narrowed to a playable same-day mini-game; captive trade, in-world 1v1 card interaction, living-only graft, no-range combat, and death persistence recorded on paper |
+| 2026-08-22 | Active-demo defense recorded on paper: Yellow Block/Parry, Red Evade, body-cost Block, precision Parry, and Will-driven living surrender; runtime unchanged |
+| 2026-08-22 | DWF-0.1 defense/Will and G1 goal-driven Guard comparison documented with research sources, exact provisional values, and reject criteria; no runtime changed |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 
 ## Recommended next step
 
-Decide the Guard's exact payment and the resulting weaker-but-free starting state.
+Promote, revise, or reject the bounded `DWF-0.1 + G1` comparison, including whether
+Broken player Will enforces the disclosed claim or offers one final lethal Defy.
 Do not create an engine project, add encounters, port the Warden, or begin final
 content production before the remaining D0 mini-game contract and a separate runtime
 approval.

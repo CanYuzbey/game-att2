@@ -57,19 +57,39 @@ body compatibility is not guaranteed.
 
 ## Turn budget, combo, and lifecycle
 
-- The active demo uses one visible per-turn budget rather than a zero/one Main limit.
+- The active demo's visible per-turn card/action resource is named `Mana`; Mana is
+  separate from Blood and replaces the previously unnamed budget.
+- Available Mana increases as rounds pass, exposing larger sequences and combos later
+  in the duel. Starting Mana, the per-round increase, cap, refill, and carryover remain
+  `OPEN`.
 - The player may play as many legal cards as that budget permits.
 - Two or more declared compatible cards may form a combo and complete within the same
   turn. Exact combo links and resolution order remain open.
-- Each card pays a disclosed Stamina/Energy/Mana-like cost. The resource name, maximum,
-  refresh rule, carryover, and relationship to Blood remain open; do not silently make
-  Blood the answer.
+- Each card pays a disclosed Mana cost. Mana's maximum, refresh rule, carryover, and
+  relationship to Blood remain open; do not silently make Blood pay ordinary card
+  costs or generate Mana.
 - Automatic reflex-defense consumes neither card nor voluntary play.
+- Committing and resolving an offensive technique card does not start an attack-side
+  QTE. The active demo's short execution input belongs to incoming defense: Yellow
+  allows Block/Parry and Red requires Evade.
 - `Ready`, `Dormant`, `Invalid`, and `Spent` remain useful lifecycle meanings.
 - Temporary source/commitment/turn-budget failure may make a card Dormant; permanent loss
   of every required source makes it Invalid.
 - A locked card canceled before execution pays no unpaid execution cost and receives
   no substitute card/source/target. Whether spent budget is restored remains `OPEN`.
+
+Mana escalation must not become permission for an infinite defensive loop. Repeated
+defense, restoration, redraw, retention, or setup must consume or mutate a finite
+state and may not reproduce the same complete combat position at no cost. Before the
+Mana cap, round growth advances the clock. At or beyond the cap, temporary card/status
+cycling is insufficient: a full round must consume or worsen Blood, integrity, wound
+severity, a finite item/charge, or capability. Exact anti-stall card rules remain a
+`WORKING HYPOTHESIS` until a bounded comparison closes them.
+
+Block supports that constraint directly: its chosen legal guarding part becomes the
+recipient and loses Integrity/capability rather than creating free total-state
+restoration. Parry and Evade remain reflex routes, not cards, and do not pay Mana.
+Their timing, source, and assistance rules remain separate from deck cadence.
 
 ## Inventory boundary
 

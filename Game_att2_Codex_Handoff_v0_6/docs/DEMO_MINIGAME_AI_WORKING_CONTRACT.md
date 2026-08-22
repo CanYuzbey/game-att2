@@ -62,7 +62,8 @@ captive in the Underground City
 -> use dialogue as a route into bargain, refusal, surrender, or card combat
 -> play body-sourced cards against target body regions
 -> produce causal injury, capability, surrender, or death consequences
--> after a living surrender, perform the limb bargain through a Grafting Table transition
+-> kill for Blood and lose limb access, or after living surrender perform the limb
+   bargain through a Grafting Table transition with no kill-Blood reward
 -> continue with the changed body or die
 -> on death, return to the start of the same day under the persistence contract
 ```
@@ -81,6 +82,20 @@ scope. Add content only when it is required to prove the chain above.
 - The exact payment—Blood, time/day pressure, body condition, item, or another cost—is
   `OPEN` and requires an owner decision.
 
+### Current Guard comparison — not an implementation default
+
+`G1 WORKING HYPOTHESIS` is the current exact paper comparison. The Guard's own guarding
+arm is failing before a duty inspection; it seeks a compatible Full Right Arm or
+`20 Blood` for replacement/treatment. The captive comparison starts at `70 Blood` with
+a complete Full body. Blood payment releases at `50 Blood` with the body intact. Arm
+payment releases at `60 Blood` after the provisional `10 Blood` Clean-Stump result,
+with Right Arm Missing and the stump Controlled for two wound ticks. Left-Arm Punch/
+Block/Parry, Kick/Evade, and Headbutt remain.
+
+Do not implement these numbers until the owner promotes the package. If promoted, the
+release must retain at least `35 Blood`, two Ready attack families, one Block source,
+one Parry source, one Evade source, and every mandatory traversal source.
+
 ### Interaction and combat contract — paper rule
 
 - Exploration remains visible. Entering interaction pauses world time and opens one
@@ -94,10 +109,31 @@ scope. Add content only when it is required to prove the chain above.
 - A card declares an exact source/body requirement, minimum source condition, target
   body region, cost, effect, and important consequence. The previously mentioned
   `2/6 arm` and `4/6 legs` values are examples, not approved thresholds.
-- A player may play as many legal cards, including a combo, as the current turn budget
-  permits. A combo resolves within that turn. The resource name, amount, refresh rule,
-  and exact sequencing are `OPEN`.
+- A player may play as many legal cards, including a combo, as the current `Mana`
+  budget permits. A combo resolves within that turn. Mana's amount, refresh rule,
+  carryover, relationship to Blood, and exact sequencing are `OPEN`. Mana capacity
+  increases as rounds pass; starting Mana, increment, cap, and refill remain `OPEN`.
+- Offensive cards resolve without an attack-side QTE. Short input occurs when
+  defending an incoming attack: Yellow permits `Block` or `Parry`; Red requires
+  `Evade`. Red cannot be Blocked or Parried. Color must be reinforced by a distinct
+  icon/shape, animation, or audio cue.
+- Block protects the declared target by making another player-chosen legal usable
+  body part the final structural recipient. That guarding part loses Integrity and may
+  lose dependent capability; it is not a free damage cancel.
+- Successful Parry uses a deliberately difficult precision window, prevents all
+  incoming Integrity/wound/Blood consequence, and reduces enemy `Will (İrade)`.
+  A miss applies the original attack without an extra hidden penalty.
+- Successful Evade prevents a Red attack's consequence and creates no range,
+  distance, or reposition state.
 - Card faces show only decision-critical facts; inspect/hover may reveal layered detail.
+
+`DWF-0.1 WORKING HYPOTHESIS` provides one bounded comparison only: ordinary
+Full/Strained Arms Block/Parry, Full/Strained Legs Evade; Block loss
+`ceil(D * 0.75 * GuardFactor)` with factors `0.80/1.00/1.20`; a `900 ms` cue; Block
+held by `250 ms` before contact; Parry `±90 ms`; Evade `±180 ms`; independent
+`100/140/200%` timing scale, `100/75/50%` defense speed, and per-route automation.
+Body, Blood, and Will may not shrink timing windows. The source research and reject
+criteria are in `../research/defense_will_npc_balance_v0_1.md`.
 
 ### Surrender, limb transfer, and death — paper rule
 
@@ -109,11 +145,27 @@ scope. Add content only when it is required to prove the chain above.
   freely offered consent; presentation must not disguise it.
 - An opponent who has not surrendered still believes survival, victory, escape, or
   meaningful resistance is possible. Surrender cannot be a decorative HP threshold.
+- The active-demo duel exposes visible `Will (İrade)`. Successful Parry reduces it;
+  Broken Will triggers living surrender only while the opponent lives, the agreed
+  limb remains transferable, and the player remains a credible threat. Will break
+  does not itself damage or transfer the limb.
 - Accepting surrender enters a visible Grafting Table transition and completes the
   agreed transfer. Exact animation, timing, attachment cost, and replacement rules
   remain `OPEN`.
 - Killing the opponent resolves the immediate threat but permanently loses that limb
-  reward for the current day.
+  reward for the current day. It instead grants a positive Blood reward sourced from
+  the killed opponent. Accepting surrender grants no kill-Blood reward. Exact Blood
+  yield, collection timing/presentation, wound/yield relationship, and cap remain
+  `OPEN`.
+
+`APPROVED DIRECTION`: consequential NPCs need an independent Goal, Need, Want, Red
+Line, and world-facing behavior. They may pursue player Will and a disclosed claim;
+they may not generate a demand by scanning the player's most valuable asset at the
+moment of defeat. `DWF-0.1` tests bilateral `90 Will`, no passive encounter recovery,
+and `24/30/36` Will loss when a Routine/Committed/Critical attack is successfully
+Parried. Ordinary damage changes Will by zero. These values remain a working
+hypothesis, and whether Broken player Will enforces the claim or permits one final
+lethal Defy remains `OPEN`.
 
 ### Same-day death persistence — paper rule
 
@@ -148,13 +200,28 @@ observable state:
 2. move through the playable section;
 3. enter/leave the contextual interaction without changing scenes;
 4. play a legal card, reject an illegal source/card, choose a target region, pay the
-   turn cost, and observe the resulting capability/state change;
-5. reach at least one state-derived living surrender and complete the Grafting Table
-   transfer;
-6. reach death, reset the day/body/world, lose learned cards, retain defaults, create
+   turn cost, observe Mana capacity increase across rounds, and observe the resulting
+   capability/state change;
+5. observe a redundant Yellow cue, protect the intended target by Block while the
+   selected guarding part weakens, then successfully Parry with no incoming damage
+   and visible enemy Will loss; observe a redundant Red cue that rejects Block/Parry
+   and can be answered by Evade without creating reposition state;
+6. reach Broken Will and observe a legal living surrender/limb bargain;
+7. across repeatable attempts, reach one kill and observe Blood gain with no limb
+   access, then reach one state-derived living surrender and complete the Grafting
+   Table transfer with no kill-Blood gain;
+8. reach death, reset the day/body/world, lose learned cards, retain defaults, create
    one Memory Card, reset instability, and retain a visible Brain buff if one exists;
-7. continue playing after either graft or reset;
-8. reproduce the critical state transitions through logs/tests and a manual smoke run.
+9. continue playing after kill reward, graft, or reset;
+10. reproduce the critical state transitions through logs/tests and a manual smoke run.
+
+The duel must also demonstrate that no repeatable sequence can reproduce the same
+complete meaningful combat state indefinitely without consuming or mutating a named
+finite fact. Mana growth supplies that monotonic fact before its cap; at or beyond the
+cap, every full round must consume or worsen Blood, integrity, wound severity, a
+finite item/charge, or capability. A temporary status cycle is insufficient. The
+exact anti-stall mechanic remains `OPEN`; this is an acceptance constraint, not
+permission to invent a hidden timer.
 
 If only part passes, report only that part as verified.
 
@@ -207,11 +274,22 @@ One recommended next gate
 
 ## 8. Current open owner decisions
 
-- exact Guard payment and released weaker state;
+- owner promotion, revision, or rejection of the exact `G1` Guard payment and released
+  states;
 - exact starting-body generation/reset rule;
-- turn resource name, budget, refresh, and combo resolution order;
+- starting Mana, per-round increase, cap, refresh, carryover, relationship to Blood,
+  and combo resolution order;
+- kill-Blood yield, collection timing/presentation, wound/yield relationship, and cap;
+- exact downstream Blood requirement that makes kill-versus-limb routing meaningful;
+- exact anti-stall rule and any maximum-round fallback;
 - exact body-condition scale and card thresholds;
-- target-region effects, defense timing, and death rules beyond the decisions above;
+- target-region effects and death rules beyond the decisions above;
+- Yellow/Red cue duration and redundant presentation language;
+- promotion/revision of the `DWF-0.1` Block/Parry/Evade sources and input bindings;
+- promotion/revision of the `DWF-0.1` Block loss and wound/Blood boundary;
+- promotion/revision of the `DWF-0.1` timing and accessibility grid;
+- promotion/revision of bilateral `90 Will`, `24/30/36` Parry loss, recovery, named
+  GoalCritical mutations, actor exceptions, and the player Broken-Will consequence;
 - draw, hand, deck size, acquisition cadence, deck-edit points, and learned-card sources;
 - Memory Card generation/content/storage rules;
 - persistent Brain buff sources, limits, and visible tradeoffs;

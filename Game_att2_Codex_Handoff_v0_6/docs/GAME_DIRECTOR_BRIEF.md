@@ -31,7 +31,7 @@ The mini-game must prove this player-facing arc:
 I was trapped and bargained from weakness
 -> I became free at a bodily price
 -> I found options in a one-versus-one duel through cards and anatomy
--> I survived by forcing or accepting a living bargain
+-> I chose Blood through death or a limb through a living bargain
 -> death returned me to the same day with memory but not the same flesh
 ```
 
@@ -43,6 +43,11 @@ I was trapped and bargained from weakness
 The player damages, extracts, grafts, stabilizes, integrates, and risks body parts.
 Blood is health, currency, and ability fuel. Body construction must materially change
 what the player can do, what they can lose, and which problems they can solve.
+
+For the active demo, combat resolution creates one explicit reward tension: killing
+the opponent yields Blood but destroys access to that opponent's limb reward for the
+current day; accepting a living surrender yields the agreed limb through the
+Grafting Table but no kill-Blood reward. This is a paper rule, not runtime evidence.
 
 ## Creative hierarchy
 
@@ -65,11 +70,18 @@ No specific sanity, corruption, or instability meter is approved by this stateme
   source and risk, then physically applies that decision where appropriate.
 - Strategy determines what and why. Execution influences how well the committed
   action resolves, but cannot routinely erase a bad strategic decision.
+- Offensive cards carry the strategic commitment without an attack QTE. The short
+  execution test belongs to defense: read Yellow as Block/Parry and Red as Evade.
+- Block protects one targeted part by sacrificing condition in another chosen part;
+  precise Parry protects the defender and breaks enemy Will toward surrender.
 - Cards, body state, Blood, wounds, and short reflex moments must form one causal
   interaction rather than unrelated minigames.
 - Dialogue is an instrument for pressure, leverage, character, and route selection.
   It supports card combat and non-combat solutions; deep dialogue-tree authorship is
   not the demo's core production burden.
+- A consequential NPC has a goal it would pursue without the player, a need/want and
+  refusal that explain its trade, and a disclosed claim it may pursue after breaking
+  player Will. Blood and limbs are useful to that NPC, not generic score tokens.
 
 ## Design pillars
 
@@ -77,7 +89,8 @@ No specific sanity, corruption, or instability meter is approved by this stateme
    or tactical identity.
 2. **Blood as Volatile Bankroll** - spending power is also spending survival.
 3. **Combat as Extraction** - success may concern what can be preserved or taken,
-   not only reducing health.
+   not only reducing health. The active demo makes the kill-for-Blood versus
+   surrender-for-limb choice explicit.
 4. **Desperate Maintenance** - every useful transformation can create treatment,
    repair, integration, preservation, or debt pressure.
 5. **Ritualized Readability** - source, target, cost, expected result, and new risk
@@ -88,6 +101,8 @@ No specific sanity, corruption, or instability meter is approved by this stateme
 - The game must not become upgraded stat-menu dueling.
 - The body cannot be cosmetic eligibility for generic cards.
 - The reflex layer cannot become an unrelated skill game.
+- Yellow/Red threat meaning cannot depend on color alone; it requires redundant
+  readable shape/icon, animation, or audio language.
 - Space cannot become a walk-forward/attack/walk-back locomotion loop.
 - The active mini-game has no combat range/reposition system. Do not hide the removed
   range model inside card tags, camera states, or renamed distance resources.
@@ -99,6 +114,19 @@ No specific sanity, corruption, or instability meter is approved by this stateme
 - Same-day persistence must create earned familiarity, not erase all consequence:
   flesh and the unaware world reset, while memory-derived progress remains bounded and
   inspectable.
+- NPCs cannot be inventory-scanning punishment functions or idle meat containers.
+  Their demand must pre-exist the player's failure, their combat choices must protect
+  what they want, and their victory/concession must visibly advance or revise a goal.
+
+## Current bounded comparison, not canon
+
+`DWF-0.1` supplies test values for Block source/wear, `±90 ms` Parry, `±180 ms` Evade,
+independent accessibility controls, and bilateral `90 Will`. `G1` supplies an exact
+Guard comparison: a visibly failing guarding arm motivates a Full Right Arm or
+`20 Blood` demand, starting from `70 Blood`; the resulting release is either `50 Blood`
+with the full body or `60 Blood` with a Missing Right Arm and Controlled stump. Both
+remain `WORKING HYPOTHESIS`, not a final design or implemented behavior. Evidence and
+reject criteria live in `../research/defense_will_npc_balance_v0_1.md`.
 
 ## Living design set
 
