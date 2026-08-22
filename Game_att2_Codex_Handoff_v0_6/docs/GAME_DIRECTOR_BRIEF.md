@@ -1,6 +1,6 @@
 # Game att2 - Game Director Brief
 
-Status date: 2026-08-22
+Status date: 2026-08-23
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. PAPER DIRECTION ONLY; NOT RUNTIME,
 CONTENT, FINAL UI, ENGINE, OR PRODUCTION APPROVAL.**
@@ -12,15 +12,32 @@ validated configuration.
 
 ## Product intent
 
-- The current production target is one bounded, playable PC mini-game rather than
+- The current production target is one bounded, playable PC sample demo rather than
   another general-purpose simulator, a content-complete vertical slice, or a miniature
   version of the full game.
+- `APPROVED DIRECTION`: the mini-game objective is to escape the Underground City by
+  defeating the boss at the city gate. Approximately 30 minutes is a non-binding
+  planning reference, not a duration requirement, content ceiling, or acceptance
+  condition. Actual attempt and session duration must be observed from the playable
+  sample rather than decided by prose.
+- `APPROVED DIRECTION`: the minimum proof floor is one captive-Guard concession that
+  buys freedom at a real cost, one or two pre-boss fights that expose limb mechanics,
+  and one gate boss that exercises the integrated combat loop. Additional sample-scale
+  content may be proposed inside D0, or through a later separately approved content
+  gate, only when it owns a named evidence or presentation purpose; this floor is not
+  a fixed encounter cap or runtime authorization.
 - The demo must prove the distinctive interaction: read a pressure, use a body-sourced
-  technique, accept bodily/Blood consequences, rebuild, and carry the altered body
-  into the next encounter.
-- A contained single-player PC game, provisionally finishable in one weekend and
-  roughly 10-12 hours.
-- USD 8-12 remains a commercial hypothesis, not market evidence or a store decision.
+  technique, accept bodily/Blood consequences, rebuild, carry the altered body into a
+  later fight, and ask whether those known rules remain enjoyable in the gate-boss
+  confrontation.
+- The intended sample supports owner self-play and informal friend play, then an
+  internal go/no-go decision about full-time development or investor pursuit. It does
+  not by itself establish market demand, retention, broad-audience fun, or investor
+  readiness.
+- `FULL-GAME WORKING HYPOTHESIS`: a contained single-player PC game, provisionally
+  finishable in one weekend and roughly 10-12 hours. This does not budget the sample.
+- `FULL-GAME WORKING HYPOTHESIS`: USD 8-12 remains a commercial comparison, not market
+  evidence or a store decision.
 - The target is sustained entertainment plus a distinctive, strange aftertaste, not
   a claim that this must be the player's best game ever.
 - The desired player memory is: **"Kendimi yeniden inşa ettiğim bir oyundu."**
@@ -28,12 +45,20 @@ validated configuration.
 The mini-game must prove this player-facing arc:
 
 ```text
-I was trapped and bargained from weakness
--> I became free at a bodily price
--> I found options in a one-versus-one duel through cards and anatomy
+I was trapped and accepted a disclosed loss from weakness
+-> I bought freedom at a disclosed meaningful price and continued weaker but playable
+-> in limb fight A I learned how cards, targets, and anatomy change one another
 -> I chose Blood through death or a limb through a living bargain
--> death returned me to the same day with memory but not the same flesh
+-> I grafted and carried the resulting capability change forward
+-> when needed, limb fight B exposed the graft's benefit and drawback before the boss
+-> if I died, I returned to the same day with memory but not the same flesh
+-> I used the known combat language against the gate boss and escaped the Underground City
 ```
+
+For this sample, the Guard-opening "loss" means accepting a disclosed unfavorable
+concession while bound in order to become free. It does not silently approve a full
+Guard duel, player-Will break enforcement, or the still-`OPEN` claim-versus-`Defy`
+decision.
 
 ## Identity
 

@@ -1,6 +1,6 @@
 # Game att2 - World, Progression, and Decisions
 
-Status date: 2026-08-22
+Status date: 2026-08-23
 
 Status: **CURRENT LIVING GAME-DESIGN LEDGER. APPROVED, WORKING, EXAMPLE, AND OPEN
 ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
@@ -199,37 +199,75 @@ Right Arm/Damaged Torso start, three mandatory encounters, Clinch/Engaged/Distan
 Main per round, undefined demo failure, and fully open death persistence. It does not
 change frozen simulator runtime, configuration, tests, or evidence.
 
-## 2026-08-21 owner direction: one bounded playable demo
+## 2026-08-23 owner direction: one bounded proof-of-potential sample
 
-`APPROVED DIRECTION`: active production planning now targets a minimal playable demo.
+`APPROVED DIRECTION`: active production planning now targets a minimal playable sample
+demo.
 The existing Python campaign is frozen legacy evidence, not the new game's content
 plan or engine foundation. Existing H1/visual-lab experiments remain isolated
 mechanic evidence. A legacy mechanic is reimplemented only when the new demo's player-
 facing contract requires it; no automatic port is implied.
 
-The proposed Underground City fiction and bounded opening/duel/reset chain are a
+The proposed Underground City fiction and bounded opening/graft/boss/reset chain are a
 `WORKING HYPOTHESIS`: concrete enough to define the mini-game, still revisable without
 changing product identity.
 
+`APPROVED DIRECTION`: the player escapes the Underground City after defeating the
+boss at its gate. The sample is for owner self-play and informal friend play, providing
+directional evidence for an internal decision about full-time development or investor
+pursuit. It is not itself evidence of market demand, retention, broad-audience fun, or
+investor readiness.
+
+The minimum proof floor is:
+
+```text
+Guard concession while bound
+-> one or two pre-boss limb-mechanic fights
+-> one gate boss that tests the integrated combat loop
+-> escape, or death and same-day reset
+```
+
+For this sample, the Guard "loss" is the disclosed unfavorable concession accepted to
+buy freedom and continue weaker but playable. It is not a silently approved Guard duel
+or player-Will-break claim branch. One versus two pre-boss fights remains a bounded
+`D0` content decision for the initial fixture; later revision may be playtest-led. The
+first must produce the limb/Blood choice; a second, if used, must uniquely prove the
+graft's benefit and drawback before the boss. The boss
+must not become a graft-shaped key. `WORKING HYPOTHESIS`: for a clean integrated-combat
+test, the boss introduces no new fundamental combat rule; D0 must promote, revise, or
+reject that isolation rule.
+
+Approximately 30 minutes is a soft planning reference only. It is not a duration
+requirement, content ceiling, or acceptance condition. Actual attempt, first-escape,
+and total-session durations are recorded from playable builds.
+
 ## Demo scope box
 
-The first mini-game includes only:
+The first sample includes at minimum:
 
 - one captive Guard negotiation opening;
 - one small traversable Underground City/dungeon section;
-- one one-versus-one escape/progress-blocking interaction;
+- one or two pre-boss limb-mechanic fights, with each retained fight answering a
+  distinct proof question;
+- one city-gate boss confrontation that combines already-taught combat rules, tests
+  the bounded combat-engagement hypothesis through human play, and opens escape when
+  defeated;
 - the minimum hand/deck, body-source, target-region, turn-budget/combo, wound/Blood,
-  kill-for-Blood, living surrender-for-limb, graft, and negotiation behavior required
-  by that interaction;
-- one Grafting Table limb-transfer consequence;
+  kill-for-Blood, living surrender-for-limb, graft, Brain, and negotiation behavior
+  required by those interactions;
+- one Grafting Table limb-transfer consequence before the gate boss, with a visible
+  net capability gain and drawback used or deliberately declined in a later fight;
 - one same-day death/reset with the approved card/Memory/Brain persistence split;
-- one readable success endpoint after the owner defines it.
+- one readable gate-boss defeat -> Underground City escape endpoint.
 
-The first mini-game excludes procedural generation, a world map, three mandatory
-encounters, a full roguelite meta, a full Brain tree/collection, a general dialogue
-engine, broad inventory, crafting, stealth, quests, a large body-part roster, final
-lore revelation, production save architecture, range/reposition combat, and reuse of
-the old simulator campaign as content.
+The proof floor is not a hard encounter or content ceiling. Additional sample-scale
+content may be proposed inside D0 only with a named evidence or presentation purpose;
+after D0 it requires a separately approved content gate, normally supported by an
+observed evidence gap. The sample excludes procedural generation, a world map, a fixed
+total encounter count beyond the proof floor, a full roguelite meta, a full Brain tree/
+collection, a general dialogue engine, broad inventory, crafting, stealth, quests, a
+large body-part roster, final lore revelation, production save architecture, range/
+reposition combat, and reuse of the old simulator campaign as content.
 
 `WORKING HYPOTHESIS`: legacy retirement is staged rather than allowed to consume
 production time. Freeze it now; after D1 has its own tests and reproducible build,
@@ -243,18 +281,21 @@ Use one bounded connected playable section, not an open world:
 
 ```text
 holding/captive space
--> Guard bargain and release threshold
+-> Guard concession and weaker-but-free release
 -> small freely traversable Underground City/dungeon section
--> escape/progress-blocking one-versus-one interaction
--> Grafting Table consequence
--> provisional continuation/success threshold (`OPEN`)
+-> pre-boss limb fight A: source/target and kill-Blood versus living-limb choice
+-> Grafting Table and bounded deck edit
+-> optional pre-boss limb fight B: graft benefit and drawback in ordinary combat
+-> city-gate boss
+-> boss defeat opens escape
 ```
 
 - The tunnel or its upward light should act as the persistent destination landmark.
 - Each space owns one primary pressure and at least one body-dependent route.
 - Encounters resolve in their room; a separate battle arena must earn its existence
   through the interaction test and is currently excluded.
-- More branching is cut until the opening/duel/graft/reset chain works.
+- More branching is cut until the Guard/fight/graft/gate-boss/reset proof chain exists
+  and can be evaluated through real input.
 
 ## Art-direction working hypothesis — pending owner review
 
@@ -302,22 +343,30 @@ license](https://krita.org/en/about/license/), and [Audacity downloads](https://
 
 Decide in this order; a later decision may not disguise a missing earlier one:
 
-1. **Guard payment and released state:** promote, revise, or reject `G1` (`20 Blood`
+1. **Proof floor and evaluation question:** close the Guard concession test, distribute
+   the limb/graft evidence across one or two pre-boss fights, and define what the boss
+   must reveal about understood integrated combat. Record duration after play rather
+   than gating content against 30 minutes.
+2. **Guard payment and released state:** promote, revise, or reject `G1` (`20 Blood`
    versus a Full Right Arm) and its two precisely weaker-but-playable released states.
-2. **Turn/card contract:** define starting Mana, per-round growth, cap, refresh,
+3. **Pre-boss fight roles and graft delta:** choose one versus two fights; define one
+   exact donor limb, transfer/replacement cost, lost and gained capabilities, technique
+   access, drawback, and the later ordinary-combat option it changes.
+4. **Turn/card contract:** define starting Mana, per-round growth, cap, refresh,
    carryover, ordering, condition scale, target-region effects, defense inputs/windows,
    Block loss, Will values, anti-stall rule, and the smallest Punch/Kick/Headbutt combo
    set.
-3. **Duel actor and surrender:** define motivation, threats, desired limb, starting
+5. **Pre-boss actors and boss:** define motivation, threats, desired limb, starting
    Will, exceptional Will rules, and why refusal/resistance is still rational before
-   Will breaks.
-4. **Graft consequence:** define transfer cost, replaced/attached state, and which next
-   legal option visibly changes.
-5. **Memory/Brain persistence:** define the Memory Card recipe and one bounded Brain
-   buff that makes a repeated attempt easier without selecting cards.
-6. **Mini-game success:** define the post-graft endpoint and target playtime.
-7. **Content budget:** count only the rooms, cards, body states, animations, sounds,
-   text, and tests required for the complete loop.
+   Will breaks; separately define why the gate boss guards the exit, how both disclosed
+   reward routes can defeat it, and promote, revise, or reject the no-new-fundamental-
+   rule isolation hypothesis for its combat test.
+6. **Memory/Brain persistence:** define the Memory Card recipe, anti-empty-death rule,
+   and one bounded Brain buff that makes a repeated attempt easier without selecting
+   cards or fabricating body capability.
+7. **Evidence-led content budget:** start from the proof floor; add only rooms, cards,
+   body states, animations, sounds, text, and tests that improve rule fidelity,
+   comprehension, or evaluation of combat appeal.
 8. **Engine/runtime gate:** choose the smallest implementation vehicle only after this
    contract is reviewable; engine creation still requires explicit approval.
 
@@ -325,15 +374,21 @@ Decide in this order; a later decision may not disguise a missing earlier one:
 
 | Gate | Deliverable | Continue criterion |
 |---|---|---|
-| D0 — current | Closed mini-game paper contract and decision ledger | Every item 1-6 above is decided or explicitly excluded; no AI-invented defaults |
-| D1 | Captive Guard opening slice | Refusal remains captivity, attack lethality is legible, and trade causes a verified weaker/free state |
-| D2 | One complete in-world card duel | Player can read source, condition, target, cost/combo, expected result, and changed capability without a detached battle scene |
-| D3 | Kill/surrender reward split plus Grafting Table | Kill grants Blood with no limb; surrender derives from state/motivation and grants the agreed limb with no kill-Blood; graft changes the next legal option |
+| D0 — current | Closed sample-demo paper contract and acceptance matrix | Every item 1-6 above is decided or explicitly excluded; every encounter owns a unique evidence question; no AI-invented defaults |
+| D1 | Captive Guard concession slice | Refusal remains captivity, attack lethality is legible, the accepted loss is understood, and the D0-approved concession causes its declared weaker-but-free playable state; if D0 approves multiple branches, each must pass; at least one accepted branch is required |
+| D2 | Pre-boss limb fight A | Player can read source, condition, target, cost/combo, defense, and consequences; kill and living-surrender routes create the advertised Blood/limb choice |
+| D3 | Grafting Table plus selected downstream proof | Graft produces an exact gain, drawback, and legality change; if fight B exists it proves these in ordinary combat, otherwise the gate-boss evidence is explicitly marked as confounded; the no-graft/Blood route remains viable |
 | D4 | Same-day death/reset loop | Body/world/default/learned/Memory/instability/Brain persistence all match the paper contract and play can continue |
-| D5 | Complete mini-game and external playtest build | Defined success endpoint works in a stable build; no P0/P1 comprehension or progression blocker |
+| D5 | Connected sample and informal external playtest | In a fresh reproducible build with no unresolved P0/P1 rule-fidelity, comprehension, progression, or softlock blocker, real input reaches Guard outcome -> selected limb fight(s) -> graft consequence -> gate boss -> escape/reset; raw observations record comprehension, combat appeal, replay/change-of-plan behavior, facilitator intervention, and observed duration without claiming market validation |
 
-If D1/D2 are not readable or enjoyable, revise the interaction formula before adding
-more encounters, art production, or meta systems.
+Rule fidelity, comprehension, and combat appeal are separate evidence classes. Tests
+and state logs can verify legality, mutation, completion, and absence of softlocks;
+they cannot prove fun. Owner self-play is internal design evidence. Friends who have
+not been taught the system provide informal external evidence, but their relationship
+and convenience sampling must be recorded as bias. If the chain is incorrect, fix the
+rules; if correct but misunderstood, fix interaction language; if understood but the
+boss is not engaging, revise combat rather than covering the result with more rooms,
+story, meta progression, or polish.
 
 ## World and narrative
 
@@ -397,7 +452,9 @@ buff content remain `OPEN`. Permanent Brain Parts are not the only approved form
 | Brain | Deterministic current-hand modifier; visible power/control tradeoff | Approved doctrine |
 | Encounter outcome | State/motivation-derived, potentially mutual | Direction plus survey prototype |
 | Default cards | Punch, Kick, Headbutt; body/condition/target/cost required | Paper rule; values open |
-| Demo run | Captivity -> Guard bargain -> traversal -> blocker duel -> living graft/reset -> success endpoint | Direction; ending open |
+| Demo objective/time | Defeat the Underground City gate boss and escape; no fixed acceptance duration; approximately 30 minutes is a soft planning reference | Objective approved; duration observed from play |
+| Demo proof floor | Guard concession -> one or two pre-boss limb fights -> graft consequence -> integrated gate boss -> escape or same-day reset | Approved direction; exact one/two distribution and content open |
+| Demo decision use | Owner self-play plus informal friend play informs whether to pursue full-time development or investors | Owner play is internal evidence; friends are informal external convenience evidence; neither proves market or investor readiness |
 | Full-game run | Undefined | Open |
 | Demo world structure | One bounded connected Underground City/dungeon section | Working hypothesis |
 | Full-game world structure | Undefined | Open |
@@ -441,7 +498,9 @@ part of the ordinary game-director reading order.
 
 ## Current design focus
 
-The active product gate is D0: answer the six mini-game decisions in order, then
-approve or revise one bounded implementation vehicle. Existing research artifacts,
-additional encounters, final theme, and full-game questions do not justify parallel
+The active product gate is D0: close one reviewable acceptance matrix for the Guard
+concession, selected one-or-two-fight limb/graft chain, integrated gate boss, escape,
+and same-day reset; then explicitly approve or revise one bounded implementation
+vehicle. Existing research artifacts, content without a unique proof question, final
+theme, investor materials, and full-game questions do not justify parallel
 implementation.

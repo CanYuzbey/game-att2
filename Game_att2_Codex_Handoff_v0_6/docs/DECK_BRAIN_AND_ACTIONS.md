@@ -1,6 +1,6 @@
 # Game att2 - Deck, Brain, and Actions
 
-Status date: 2026-08-22
+Status date: 2026-08-23
 
 Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. OWNERSHIP, DEFAULT/LEARNED DEATH
 PERSISTENCE, MEMORY CARD, AND BRAIN RESET DIRECTION ARE APPROVED; VALUES, CONTENT,
@@ -54,6 +54,29 @@ The active-demo starting library currently includes:
 These are persistent default techniques, not rewards selected by the Brain. A card
 whose source requirement is not met remains visible but Dormant/unusable. Starting
 body compatibility is not guaranteed.
+
+### D0 six-card/four-hand comparison — working hypothesis
+
+The smallest concrete cadence to compare, not a promoted rule, is:
+
+- starter library: the three approved default techniques above;
+- starter active deck: six instances — `Punch x2`, `Kick x2`, `Headbutt x2`;
+- opening hand and hand cap: four;
+- round end: the player may retain one unplayed card and discards the rest;
+- next round: draw to four; reshuffle the discard pile only when required;
+- a Dormant card remains visible, occupies a hand position, and may be retained or
+  discarded, but receives no automatic replacement draw;
+- at a Grafting Table, one newly source-compatible known technique may replace one
+  chosen default instance; it is never auto-added or placed in the opening hand by
+  the Brain.
+
+This `6/4 WORKING HYPOTHESIS` aims to make the first draw readable while leaving two
+unknown cards and making every replacement legible. Before promotion it requires an
+exhaustive opening-hand check after every allowed Guard release branch, exact card
+cost/effect values, copy limits, learned-card acquisition, and proof that legal hands
+do not collapse into one obvious play. Revise it if four-card hands clog with Dormant
+cards, the two hidden cards create no meaningful uncertainty, or deck editing is too
+shallow to justify the deck layer.
 
 ## Turn budget, combo, and lifecycle
 
@@ -158,6 +181,43 @@ selecting favorable cards, restoring absent sources, or waiving card legality.
 Memory Card generation recipe, whether it records a used/learned/death-context card,
 copy/storage rules, deck placement, duplicates, caps, Brain buff catalogue, acquisition,
 and numerical power curve remain `OPEN`.
+
+### Memory Imprint and one Brain protocol — working hypothesis
+
+The original demo-facing proposition is:
+
+> Death is the printer; an earned causal lesson is the ink.
+
+Death still produces exactly one Memory Card, but a usable payload requires one
+authored lesson proof from that attempt:
+
+```text
+inspectable prior state
+-> legal voluntary technique or preparation
+-> explicit state mutation
+-> later changed legal affordance or outcome
+```
+
+Mere death, manual abandon/reset, observation without player application, repeated
+QTE execution, self-harm, and cosmetic target variations create no eligible lesson.
+If several eligible attempt-learned techniques exist, the player chooses one through
+a disclosed rule; hidden random selection is excluded. If none exists, death still
+prints one visible `Unresolved Memory` with zero gameplay payload. It does not occupy
+the active deck or mint permanent power.
+
+`WORKING HYPOTHESIS`: the demo stores one usable source-bound Memory Card. A new one
+requires a visible replace/archive choice; duplicates keyed to the same authored
+lesson do not stack. A stored Memory joins the known library but is not auto-slotted,
+auto-drawn, or guaranteed in the opening hand. Normal body-source legality applies,
+including Dormant state after reset.
+
+One bounded persistent Brain comparison is `Mnemonic Grip`: once per encounter, the
+first already-drawn, source-legal Memory Card that would be discarded at round end is
+retained without consuming the ordinary one-card retain allowance. The trigger,
+affected card, one-use limit, and result are visible. It does not change draw order,
+card source, cost, target, enemy state, or QTE timing. Its acquisition must be tied to
+one named first-time causal proof/milestone, not death count; the exact proof remains
+`OPEN`.
 
 ## Embodied instability
 

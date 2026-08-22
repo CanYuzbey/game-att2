@@ -2,7 +2,7 @@
 
 This package has two deliberately separate responsibilities:
 
-1. define the paper contract for a bounded Underground City mini-game; and
+1. define the paper contract for a bounded Underground City sample demo; and
 2. preserve the deterministic Python simulator and isolated research fixtures as
    legacy evidence.
 
@@ -19,19 +19,29 @@ runtime content, production UI, or playable new-demo build exists in this packag
 Do not start with the numbered legacy simulator documents or `docs/archive/` for new
 game-design work.
 
-## Current mini-game contract
+## Current sample-demo contract
 
 The current paper direction is:
 
 ```text
-captive Guard bargain
+captive Guard offer
+-> accept one disclosed, unfavorable concession to buy freedom
 -> weaker but playable release
 -> one small Underground City section
--> one in-world card duel
+-> pre-boss limb fight A
 -> kill for Blood OR living surrender for an agreed limb
 -> Grafting Table consequence
--> success threshold or same-day death/reset
+-> optional pre-boss fight B carries that consequence into ordinary combat
+-> gate boss integrates the already-taught combat rules
+-> defeat opens escape, or death causes same-day reset
 ```
+
+This is a proof floor, not a fixed encounter count, content ceiling, or duration
+requirement. Approximately 30 minutes is only a soft planning reference until real
+sample sessions produce observed durations. The intended artifact is for owner
+self-play and informal friend play, helping decide whether the combat merits further
+full-time development or investor pursuit. Such a convenience sample cannot establish
+general fun, retention, market demand, or investor readiness.
 
 Combat currently separates these resources and outcomes:
 
@@ -120,6 +130,7 @@ prove that the Underground City mini-game exists or is playable.
 - promote, revise, or reject the exact `G1` Guard payment/released-state package;
 - choose enforced disclosed claim versus one lethal `Defy` at player Will zero;
 - set Mana cadence, card costs, defense inputs/windows, Block loss, and Will values;
-- define the duel actor, graft consequence, Memory/Brain persistence details, and
-  mini-game success endpoint;
+- choose one versus two pre-boss limb fights and assign each a unique proof question;
+- define their actors, one exact graft consequence, Memory/Brain persistence details,
+  and the gate boss's integrated-combat test;
 - explicitly open an implementation gate before creating any engine/runtime project.

@@ -1,6 +1,6 @@
 # Game att2 - Combat, Body, and Blood
 
-Status date: 2026-08-22
+Status date: 2026-08-23
 
 Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. PROVISIONAL VALUES ARE LABELLED;
 CURRENT SIMULATOR RULES REMAIN IN DOCUMENT 03. NO MIGRATION OR RUNTIME APPROVAL.**
@@ -305,6 +305,50 @@ limb transfer because refusing means resuming a fight it now expects to lose, li
 by death. This is coerced survival bargaining, not free consent. Acceptance enters a
 Grafting Table transition; the exact animation, attachment cost, replacement, and
 post-procedure state remain `OPEN`.
+
+### Active-demo graft capability-delta comparison
+
+`WORKING HYPOTHESIS`: the first graft is closed as a before/after capability ledger,
+not as an item-level or generic stat upgrade. One comparison must disclose:
+
+```text
+replaced/filled body slot and procedure cost
+-> exact old source capabilities lost or still absent
+-> exact new source capabilities gained
+-> known cards that change Ready/Dormant/Invalid state
+-> one defense, passive, or world-interaction change that is not draw-dependent
+-> one physical drawback, burden, wound, or lost route
+-> one changed option in a later pre-boss fight or the gate-boss confrontation
+```
+
+For the cleanest first causal proof, the relevant technique knowledge exists before
+the graft but is source-incompatible. The graft supplies physical permission only;
+the player must deliberately place the newly compatible technique in the active deck
+at the table. The Brain may not learn it, auto-slot it, or guarantee its draw. A
+non-card source capability must also change so the graft consequence can be observed
+even when that technique is not drawn immediately.
+
+Negative cases are part of the proof: without the graft the technique stays illegal;
+with the graft but without known/slotted technique it does not appear as a card; and a
+lost or ruined source makes it Dormant/Invalid again. The kill-for-Blood route and the
+living-limb route must each retain a disclosed way to defeat the gate boss; neither
+reward may be a disguised mandatory key. Exact limb, technique, cost, drawback, and
+the two boss routes remain `OPEN`.
+
+The gate boss is an integrated-combat test, not a graft-shaped lock. If a second
+pre-boss fight is used, it must carry the cleanest graft before/after proof so the
+boss can combine already-understood rules. If the sample uses only one pre-boss fight,
+the boss must expose the downstream graft delta, but that teaching/evidence overlap must
+remain visible in playtest interpretation.
+
+### Blood-0 wording clarification — OPEN
+
+The owner's phrase "Blood reaches zero and no passive properties remain" is not yet
+promoted as a generic passive rule. Current paper authority checks the named Panic
+Pulse and one tutorial-scope Limb for Life opportunity before final Blood-0 death; an
+unrelated body passive does not currently keep a run alive. If "passive properties"
+means a new family of finite death-prevention charges, that is a separate owner rule
+that must replace or compose explicitly with this sequence.
 
 ## Limb for Life
 

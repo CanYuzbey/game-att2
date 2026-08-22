@@ -1,22 +1,25 @@
 # Game att2 - Demo Mini-Game AI Working Contract
 
-Status date: 2026-08-22
+Status date: 2026-08-23
 
 Status: **BINDING OPERATIONAL CONTRACT FOR AI-ASSISTED DEMO WORK. NOT A DESIGN
 AUTHORITY, RUNTIME APPROVAL, OR CLAIM THAT THE MINI-GAME EXISTS.**
 
 ## 1. Purpose
 
-Direct one developer and their AI toward a small, genuinely playable mini-game. The
-job is not to describe the whole game as finished, build generic future systems, or
-turn every idea in the documents into content.
+Direct one developer and their AI toward a small, genuinely playable sample demo. Its
+eventual purpose is owner self-play and informal friend play, producing directional
+evidence for whether to begin full-time development or pursue investors. The job is
+not to describe the whole game as finished, build generic future systems, or turn
+every idea in the documents into content. This sample cannot by itself establish
+market demand, retention, broad-audience fun, or investor readiness.
 
 The five living design documents remain the paper-design authority. This file controls
 how work is scoped, evidenced, and reported.
 
 ## 2. Current existence baseline
 
-As of 2026-08-22:
+As of 2026-08-23:
 
 - the new Underground City mini-game has paper decisions but **no approved or verified
   product runtime**;
@@ -55,22 +58,49 @@ The intended playable proof is one compact same-day loop:
 
 ```text
 captive in the Underground City
--> negotiate/trade with the Guard while bound
--> become free but leave the bargain weaker
+-> refuse and remain captive, attack and risk death, or accept one disclosed
+   Guard-favorable concession
+-> if accepted, buy freedom at a real cost and leave weaker but playable
 -> traverse one small playable dungeon/city section
--> enter one paused, in-world, one-versus-one interaction
--> use dialogue as a route into bargain, refusal, surrender, or card combat
--> play body-sourced cards against target body regions
--> produce causal injury, capability, surrender, or death consequences
--> kill for Blood and lose limb access, or after living surrender perform the limb
-   bargain through a Grafting Table transition with no kill-Blood reward
--> continue with the changed body or die
+-> complete pre-boss limb fight A using body-sourced cards, target regions, defense,
+   Will, surrender, and death
+-> kill for Blood and lose limb access, or after living surrender perform the agreed
+   limb bargain through a Grafting Table transition with no kill-Blood reward
+-> optionally complete pre-boss limb fight B to expose the graft's exact benefit and
+   drawback in ordinary combat; keep the Blood/no-graft route viable
+-> face a gate boss that combines already-taught combat rules
+-> defeat the gate boss and escape, or die
 -> on death, return to the start of the same day under the persistence contract
 ```
 
-The exact mini-game ending and duration are `OPEN`. Three encounters, a Merchant, an
-Exit Keeper, a complete roguelite meta, and the full game are not implied minimum
-scope. Add content only when it is required to prove the chain above.
+`APPROVED DIRECTION`: the mini-game ends after the city-gate boss is defeated and the
+player escapes. Approximately 30 minutes is a soft planning reference, not a duration
+requirement, content cap, or acceptance criterion. Attempt, first-escape, and total
+session duration are observations to report from playable builds.
+
+The approved proof floor contains the Guard concession opening, one or two pre-boss
+limb-mechanic fights, and the gate boss. The exact one-versus-two choice and distribution
+of the graft tests remain `OPEN`, but D0 must select the initial fixture before runtime
+approval; the choice is not deferred to a runtime playtest that does not yet exist.
+Fight A must create the limb/Blood choice. A retained Fight B must uniquely show the
+graft's gain and drawback in ordinary combat; it may not merely repeat Fight A. If
+there is only one pre-boss fight, the boss also exposes the downstream graft delta and
+the resulting evidence confound must be reported.
+
+`WORKING HYPOTHESIS`: for a clean combat-appeal test, the gate boss introduces no new
+fundamental combat rule. D0 must promote, revise, or reject that isolation rule before
+it becomes runtime acceptance.
+
+Without Fight B or an equivalent bounded non-boss rehearsal of the changed body, the
+connected chain may verify rule fidelity, but gate-boss combat-appeal evidence must be
+reported as tutorial-confounded. It may inform the go/no-go discussion, but cannot
+independently support that judgment or be presented as a clean combat-fun result.
+
+This floor is neither a hard encounter cap nor runtime approval. Additional
+sample-scale content may be proposed inside D0 only with a named evidence or
+presentation purpose; after D0 it requires a separately approved content gate,
+normally supported by an observed evidence gap. A Merchant, generic Exit Keeper,
+complete roguelite meta, and the full game are not implied.
 
 ### Opening contract — paper rule
 
@@ -79,6 +109,9 @@ scope. Add content only when it is required to prove the chain above.
   commitment, and the result follows the bound body state rather than a hidden script.
 - Accepting a Guard-favorable bargain releases the player in a weaker but freely
   controllable state.
+- For this sample, the opening's "loss" is that disclosed unfavorable concession. It
+  is not a full Guard duel, enforced player-Will-break claim, or approval of the
+  still-`OPEN` claim-versus-`Defy` decision.
 - The exact payment—Blood, time/day pressure, body condition, item, or another cost—is
   `OPEN` and requires an owner decision.
 
@@ -196,24 +229,39 @@ test alone does not qualify. Before calling the new artifact a playable mini-gam
 fresh build must allow a player to complete the bounded chain with real input and
 observable state:
 
-1. make the Guard negotiation choice and reach both refusal and release outcomes;
+1. reach Guard refusal and release outcomes, observe the exact concession mutation,
+   and continue from the D0-approved accepted concession branch in its declared
+   weaker-but-playable state; if D0 approves multiple branches, each must pass; at
+   least one accepted branch is required;
 2. move through the playable section;
 3. enter/leave the contextual interaction without changing scenes;
-4. play a legal card, reject an illegal source/card, choose a target region, pay the
+4. complete the selected one-or-two-fight pre-boss set, with every retained fight
+   answering its named limb/graft evidence question;
+5. play a legal card, reject an illegal source/card, choose a target region, pay the
    turn cost, observe Mana capacity increase across rounds, and observe the resulting
    capability/state change;
-5. observe a redundant Yellow cue, protect the intended target by Block while the
+6. observe a redundant Yellow cue, protect the intended target by Block while the
    selected guarding part weakens, then successfully Parry with no incoming damage
    and visible enemy Will loss; observe a redundant Red cue that rejects Block/Parry
    and can be answered by Evade without creating reposition state;
-6. reach Broken Will and observe a legal living surrender/limb bargain;
-7. across repeatable attempts, reach one kill and observe Blood gain with no limb
+7. reach Broken Will and observe a legal living surrender/limb bargain;
+8. across repeatable attempts, reach one kill and observe Blood gain with no limb
    access, then reach one state-derived living surrender and complete the Grafting
    Table transfer with no kill-Blood gain;
-8. reach death, reset the day/body/world, lose learned cards, retain defaults, create
-   one Memory Card, reset instability, and retain a visible Brain buff if one exists;
-9. continue playing after kill reward, graft, or reset;
-10. reproduce the critical state transitions through logs/tests and a manual smoke run.
+9. after D0 promotes an exact graft contract, carry the graft into a later fight and
+   observe its legal capability gain, draw-independent change, and physical drawback;
+   reproduce source-ruin reversal separately through a deterministic negative test;
+10. after D0 promotes the boss isolation and route contract, across repeatable route
+    smoke runs reach the gate boss, keep both the disclosed Blood/no-graft and living-
+    limb/graft routes viable, defeat the boss, and complete the Underground City
+    escape endpoint;
+11. after D0 promotes the exact Memory/Brain contract, earn one bounded persistent
+    Brain advantage, die, reset the day/body/world, lose learned cards, retain defaults,
+    create one Memory Card, reset instability, inspect that the Brain advantage remains,
+    and observe it change one legal next-attempt decision; separately verify that an
+    ineligible empty death creates no usable power payload;
+12. continue playing after kill reward, graft, or reset;
+13. reproduce the critical state transitions through logs/tests and a manual smoke run.
 
 The duel must also demonstrate that no repeatable sequence can reproduce the same
 complete meaningful combat state indefinitely without consuming or mutating a named
@@ -224,6 +272,36 @@ exact anti-stall mechanic remains `OPEN`; this is an acceptance constraint, not
 permission to invent a hidden timer.
 
 If only part passes, report only that part as verified.
+
+### Evidence classes — do not collapse them
+
+1. **Rule fidelity:** automated checks, state logs, and manual route smoke runs may
+   verify legality, exact mutation, completion, and lack of softlocks. A single wrong
+   critical mutation or mutually granted kill-and-limb reward is a blocker. This class
+   cannot establish fun.
+2. **Comprehension:** for each player not previously taught the solution, record
+   whether they can identify what they sacrificed to the Guard, why a card is
+   Ready/Dormant/Invalid, the kill-versus-surrender reward split, and at least one graft
+   gain and drawback. Facilitator interventions and repeated misunderstandings must be
+   logged rather than coached away; the protocol defines its pass/revise threshold
+   before sessions begin.
+3. **Combat appeal:** only human play after the limb/graft rules are understood can
+   test the gate-boss hypothesis. Record whether the player can explain why a plan
+   worked or failed, names a different next plan, voluntarily retries or explores the
+   other route, and identifies the body/limb interaction as a distinctive source of
+   interest. Completion rate alone is not a fun metric.
+
+Owner self-play is internal design evidence. Informal friend sessions are a convenience
+sample; record prior exposure and relationship as bias. They may support a bounded
+go/no-go judgment for further development, but may not be reported as proof of general
+fun, retention, market demand, or investor readiness. Exact participant count and
+numeric thresholds remain `OPEN` until a playtest protocol is approved.
+
+Before any human-play acceptance gate, the protocol must name a versioned build,
+participant consent, prior exposure/relationship, raw observations, facilitator
+instructions and deviations, observed duration, and the owner-approved pass/revise
+interpretation. Do not run an unlabeled acceptance gate while its sample and thresholds
+remain `OPEN`.
 
 ## 6. AI work order
 
@@ -295,5 +373,10 @@ One recommended next gate
 - persistent Brain buff sources, limits, and visible tradeoffs;
 - exact surrender evaluation inputs per opponent;
 - exact Grafting Table cost/replacement procedure;
-- mini-game end condition, target playtime, and replay objective;
+- exact one-versus-two pre-boss fight choice, actor roles, and distribution of the
+  limb/graft evidence questions;
+- exact gate-boss identity/defeat contract, two viable reward routes, and bounded
+  human-play question for integrated combat appeal;
+- observed clean-attempt, first-escape, and total-session pacing; exact external
+  playtest sample and interpretation thresholds;
 - theme, tone details, character identities, art direction, and final presentation.

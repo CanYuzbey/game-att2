@@ -1,10 +1,10 @@
 # Game att2 - Core Loop, Encounter, and Run
 
-Status date: 2026-08-22
+Status date: 2026-08-23
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. THE UNDERGROUND-CITY MINI-GAME HAS A
-BOUNDED SAME-DAY LOOP; ITS ENDING AND THE FULL-GAME RUN REMAIN OPEN. NO RUNTIME
-APPROVAL.**
+BOUNDED SAME-DAY LOOP AND AN ESCAPE/GATE-BOSS END DIRECTION; DETAILED PACING AND THE
+FULL-GAME RUN REMAIN OPEN. NO RUNTIME APPROVAL.**
 
 ## What is currently solid
 
@@ -146,9 +146,11 @@ reward. Exact yield and collection presentation remain `OPEN`.
 
 ## Underground City demo container
 
-`APPROVED DIRECTION`: the next product target is a short playable mini-game proving
-one complete same-day loop. It is not an expansion of the Python mini-campaign and is
-not required to summarize the whole game through three encounters.
+`APPROVED DIRECTION`: the next product target is a short playable sample demo proving
+one complete same-day loop. It is not an expansion of the Python mini-campaign. Its
+proof floor is the Guard concession opening, one or two pre-boss limb-mechanic fights,
+and the gate boss; that floor is neither a summary of the full game nor a fixed
+encounter ceiling.
 
 `WORKING HYPOTHESIS`: the player is a captive in an Underground City/dungeon economy
 that treats living bodies as stock. The old fixed Missing Right Arm/Damaged Torso start
@@ -162,14 +164,31 @@ This container gives the demo a provisional run:
 ```text
 captive and bound
 -> Guard negotiation: refuse and remain captive, attack and likely die, or trade
--> accept a Guard-favorable payment and become weaker but free
+-> if accepted, pay one disclosed Guard-favorable concession and become weaker but free
 -> traverse one small Underground City/dungeon section
--> meet one actor who blocks escape/progress
--> use dialogue, card combat, targeting, and body state to kill or force surrender
--> kill for Blood and lose the limb, or accept a living limb bargain through the
+-> face pre-boss limb fight A
+-> use card sources, body targets, defense, and Will to kill or force surrender
+-> kill for Blood and lose limb access, or accept a living limb bargain through the
    Grafting Table transition
--> continue with the changed body, or die and return to the same day's beginning
+-> optionally face pre-boss limb fight B to expose the graft's gain and drawback in
+   ordinary combat; the Blood/no-graft route remains viable
+-> face the gate boss using the already-taught integrated combat language
+-> defeat the gate boss and escape, or die and return to the same day's beginning
 ```
+
+`APPROVED DIRECTION`: defeating the boss at the Underground City gate and escaping is
+the mini-game success endpoint. Approximately 30 minutes is a soft planning reference,
+not a duration requirement, content cap, or acceptance criterion. Clean-attempt,
+first-escape, and total-session durations are evidence to record from real play.
+
+`WORKING HYPOTHESIS`: the Grafting Table consequence must occur before the gate boss
+and must change at least one inspectable legal option in a later pre-boss fight or in
+the gate-boss confrontation. A limb received only after the final boss cannot prove
+the requested graft-result loop. The exact choice of one versus two pre-boss fights,
+their actors, the limb, the boss, and the changed option remain `OPEN`; this ordering
+is not approval for extra runtime content. With only one pre-boss fight, the boss must
+also expose the graft consequence, which contaminates its separate combat-fun test and
+must be reported as such rather than hidden.
 
 ### G1 Guard comparison — working hypothesis
 
@@ -194,8 +213,14 @@ cost without Goal progress. Refusal leaves captivity; hostile resistance makes t
 same disclosed claim its Will objective rather than authorizing a new inventory scan.
 This is `G1 WORKING HYPOTHESIS`, not final content or runtime behavior.
 
-The exact mini-game victory endpoint and target duration remain `OPEN`. The failure
-contract is decided: death resets the body and unaware world to the same day's start;
+For this sample, "losing at the Guard" means accepting one disclosed unfavorable
+concession while bound so the player can leave captivity weaker but playable. It does
+not promote a full Guard combat, a player-Will-break claim outcome, or the still-open
+claim-versus-`Defy` rule.
+
+The success endpoint is decided at direction level; duration is observed rather than
+accepted against a fixed target. The failure contract is decided: death resets the
+body and unaware world to the same day's start;
 the protagonist remembers; default cards remain; attempt-learned cards are lost; one
 Memory Card is created; run instability clears; persistent Brain buffs remain.
 
@@ -203,13 +228,15 @@ Memory Card is created; run instability clears; persistent Brain buffs remain.
 
 | Interaction | Actor motivation | What the mini-game must prove | Non-goal |
 |---|---|---|---|
-| Bound Guard opening | `G1` candidate: preserve duty by replacing/treating its failing guarding arm | Refusal loops to captivity; warned bound attack can kill; `20 Blood` or a usable Full Right Arm closes the Need and releases a precisely weaker but playable player | A fake choice, universal limb price, or inventory-scanning punishment |
-| Escape/progress blocker | `OPEN`, but must explain why it still expects to survive or win | In-world interaction, body-sourced multi-card turn, target regions, state-derived surrender/death, kill-for-Blood versus surrender-for-limb reward split, living bargain, and graft consequence | A detached battle scene or corpse-limb loot |
+| Bound Guard opening | `G1` candidate: preserve duty by replacing/treating its failing guarding arm | Refusal loops to captivity; warned bound attack can kill; the player can identify the disclosed loss accepted to buy freedom; the D0-approved concession releases its declared weaker-but-playable body; if D0 approves multiple branches, each has a later consequence | A fake choice, a disguised Guard duel, a universal limb price, or inventory-scanning punishment |
+| Pre-boss limb fight A | `OPEN`, but must explain why it still expects to survive or win and why the desired limb matters to it | In-world body-sourced combat, source/target consequences, state-derived surrender/death, and the kill-for-Blood versus surrender-for-limb choice produce the graft decision | A detached battle scene, corpse-limb loot, or acquisition without a causal body decision |
+| Optional pre-boss limb fight B | `OPEN`; include only if it owns the distinct post-graft proof | In ordinary combat, the graft changes one legal capability and one drawback before the boss; the no-graft/Blood route also remains viable | Repeating Fight A, adding content for length, or making the graft a pure stat upgrade |
+| Gate boss | `OPEN`, but must guard the city exit for a goal/duty that exists without the player | `WORKING HYPOTHESIS`: without teaching a new fundamental combat rule, it combines a predeclared multi-layer subset of the already-taught card/body/defense/resource pressures; omitted systems are recorded; defeat opens escape; human observation tests whether the understood loop is engaging and worth another plan | A bespoke graft lock, a tutorial checklist, or a boss disconnected from body/Brain decisions |
 | Death/reset | World has no loop awareness | Same day/world/body reset plus asymmetric card/Brain/memory persistence | A generic roguelite results screen with unexplained reset |
 
-The blocking actor's motivation and the mini-game's success endpoint are identity-level
-content decisions. Until chosen, neither may be filled by a generic desire to kill or
-a scripted final twist.
+The pre-boss actors' and gate boss's motivations remain identity-level content
+decisions. Until chosen, none may be filled by a generic desire to kill or a scripted
+final twist.
 
 ## Demo presentation hypothesis
 
@@ -273,6 +300,7 @@ should masquerade as an answer to this missing structure.
 ## Current design focus
 
 The current gate is to close the remaining `OPEN` choices needed for the smallest
-Guard-opening plus one-duel same-day mini-game contract. Full Brain content, a broad
-dialogue system, additional encounters, final content, and polish must not be built
-first.
+Guard-concession, one-or-two-fight limb/graft proof, integrated gate-boss escape, and
+same-day reset contract. Full Brain content, a broad dialogue system, content that
+does not answer one of those proof questions, final content, and polish must not be
+built first.
