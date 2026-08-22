@@ -11,20 +11,27 @@ seven approved scenarios or the playable campaign.
 
 > You are not collecting weapons. You are becoming the weapon, piece by piece, using your own blood as money.
 
-The active product target is a bounded three-encounter Underground City demo. The
+The active product target is a bounded playable Underground City mini-game. The
 existing deterministic Python simulator is frozen legacy evidence; it is not the new
 demo's engine or content foundation.
 
 ## Current product target
 
 - D0 paper contract: **open and active**.
-- Working container: captive in an underground Rot Market -> Guard -> Merchant ->
-  Exit Keeper -> upward tunnel.
-- Current decisions: thirty-second control contract, then failure/restart contract.
-- Owner-preferred engine hypothesis: Unity 6, subject to a separately approved one-room
-  Guard spike.
+- Working container: bound Guard negotiation -> weaker but free traversal -> one
+  in-world 1v1 body-card duel -> living surrender/Grafting Table -> same-day reset or
+  a still-open success endpoint.
+- Death contract: body/world reset; default cards remain; learned cards are lost; one
+  Memory Card is created; run instability clears; persistent Brain buffs remain.
+- Current decisions: Guard payment, turn resource/condition/target contract, duel
+  actor/surrender, graft consequence, Memory/Brain content, and success endpoint.
+- Engine/implementation vehicle remains gated behind those D0 decisions and separate
+  explicit approval.
 - Engine project/runtime content: **not approved or created yet**.
 - Source of current direction: the five living documents in `docs/README.md`.
+- AI-assisted contributors must also follow
+  `docs/DEMO_MINIGAME_AI_WORKING_CONTRACT.md` and may not report the documented demo as
+  implemented or playable without fresh artifact-specific evidence.
 
 ## Legacy simulator status (frozen)
 
@@ -77,11 +84,9 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   Preparation/Main timing, one voluntary inventory-origin action per round,
   ownership/use/source rules, and no free paper Fast-item rail. Runtime and production
   content remain unchanged.
-- Range-maintenance action grammar: Package C Resolution-Bound Range Tenure is
-  owner-approved on paper. Only a resolved authored tactical outcome may refresh
-  exceptional range; Preparation cannot maintain range by itself, counters do not
-  stack, and no current production action gains maintenance or intentional release
-  by implication. Runtime and production profiles remain unchanged.
+- Historical range-maintenance grammar remains archived paper provenance. The active
+  mini-game has no range/distance/reposition system. Frozen simulator runtime remains
+  unchanged.
 - Treatment/repair/extraction/graft flow: Package B Tiered Atomic Commitments is
   owner-approved on paper. Separate effects use authored Preparation/Main/contextual
   timing, exact-source reservation, execution-time payment, and atomic started chains.
@@ -92,9 +97,9 @@ Evidence baseline: **2026-07-23**. H1 implementation and repository verification
   and never prevents catastrophic Torso failure. Runtime remains unchanged.
 - Historical owner-design gate: encounter/run definition. It is superseded by the
   current D0 Underground City demo contract above.
-- Space-and-reach direction: Clinch, Engaged, and Distant are owner-directed shared
-  states produced by action/defense/reflex outcomes, not movement controls. Document
-  28 records the approved neutral-settling cadence; runtime remains unapproved.
+- Space-and-reach direction for the active mini-game: no combat distance state;
+  ordinary world traversal pauses during the in-world interaction. Earlier Clinch,
+  Engaged, and Distant papers are provenance only.
 - Combat identity guardrail: body-sourced tactical cards, reflex execution, and
   lasting physical consequences must define play; space remains subordinate and the
   game must not become repeated stat-menu dueling.
@@ -524,9 +529,9 @@ The automated suite passes, but passing tests do not erase known gaps:
 - **P1 — defense implementation:** the automatic layered defense architecture and
   Cover It role are approved on paper, but success calculation, exact mitigation,
   detailed reflex execution, configuration, and runtime remain unapproved.
-- **P1 — combat structure:** movement/range and action-economy architecture are
-  approved on paper, but individual profiles, values, human evidence, and runtime are
-  not defined beyond the current survey harness.
+- **P1 — active-demo combat contract:** no-range direction and multi-card/one-turn
+  combo budget are approved on paper, but the resource, values, body-condition scale,
+  target effects, enemy cadence, human evidence, and runtime remain undefined.
 - **P1 — H1 experience evidence:** the automated Block comparisons pass fidelity,
   but the owner diagnostic exposed an inadequate single-input instrument. Provisional
   timing/mitigation/exposure values, interaction families, and prompt cadence have no
@@ -567,15 +572,16 @@ Known Git history:
 | 2026-08-21 | Later owner doctrine superseded weighted Brain access: player-authored active deck plus deterministic hand modification and embodied instability became the current paper direction |
 | 2026-08-21 | Active game-design surface consolidated into five living documents; former 01, 17-19, 24, and 27-41 packets archived intact as provenance |
 | 2026-08-21 | Python campaign frozen as legacy evidence; bounded Underground City demo D0 planning opened |
+| 2026-08-22 | Demo narrowed to a playable same-day mini-game; captive trade, in-world 1v1 card interaction, living-only graft, no-range combat, and death persistence recorded on paper |
 
 These timestamps are repository events, not complete labor-hour records. No authoritative person-hour log exists in the files.
 
 ## Recommended next step
 
-Define the Underground City demo's thirty-second control contract, then its exact
-failure/restart contract. Do not create the Unity project, implement the Merchant or
-Exit Keeper, add the Warden to legacy runtime, or start final content production
-before D0 and a separately approved Guard-room spike.
+Decide the Guard's exact payment and the resulting weaker-but-free starting state.
+Do not create an engine project, add encounters, port the Warden, or begin final
+content production before the remaining D0 mini-game contract and a separate runtime
+approval.
 
 ## Ownership
 

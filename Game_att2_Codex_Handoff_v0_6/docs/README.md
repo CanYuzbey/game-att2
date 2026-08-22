@@ -11,14 +11,23 @@ Read these for owner-led design work, in order:
 | Document | Responsibility |
 |---|---|
 | `GAME_DIRECTOR_BRIEF.md` | Product intent, identity, experience hierarchy, pillars, and guardrails |
-| `CORE_LOOP_ENCOUNTER_AND_RUN.md` | Active-play loop, encounter logic, between-pressure loop, and the explicitly open run structure |
-| `COMBAT_BODY_AND_BLOOD.md` | Consolidated body, Blood, wounds, defense, range, procedure, and survival paper rules |
+| `CORE_LOOP_ENCOUNTER_AND_RUN.md` | Active-play loop, encounter logic, same-day demo reset, and the explicitly open full-game run structure |
+| `COMBAT_BODY_AND_BLOOD.md` | Consolidated body, Blood, wounds, defense, targeting, procedure, and survival paper rules |
 | `DECK_BRAIN_AND_ACTIONS.md` | Anatomical deckbuilder ownership, action budget, inventory boundary, Brain doctrine, and open implementation details |
 | `WORLD_PROGRESSION_AND_DECISIONS.md` | Narrative/progression direction, compact decision ledger, foundational open questions, scope locks, and current focus |
 
 These five files are current paper game-design authority. They open D0 planning for a
 bounded Underground City demo, but do not by themselves create an engine project or
 change legacy runtime, configuration, tests, dependencies, or executable content.
+
+## Active-demo AI operating contract
+
+| Document | Role |
+|---|---|
+| `DEMO_MINIGAME_AI_WORKING_CONTRACT.md` | Operational truth/status rules, bounded mini-game target, work order, acceptance evidence, and anti-overclaiming return format for any AI-assisted contributor |
+
+This is an operational contract, not a sixth living design authority. It summarizes
+the living set for execution hygiene and cannot close an `OPEN` design choice.
 
 ## Protected authority and engineering documents
 

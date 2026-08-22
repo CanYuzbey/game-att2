@@ -2,8 +2,55 @@
 
 Prepared for: Can Yüzbey  
 Project: Game att2  
-Current stage: bounded playable-demo definition after the deterministic simulator
-Status: **The owner has frozen the Python campaign as legacy rules evidence and opened planning for a separate three-encounter Underground City demo. The current gate is D0: define its thirty-second control contract, then its failure contract. Unity is the owner-preferred working engine; no engine project, runtime content, or production dependency is approved by this planning amendment alone.**
+Current stage: bounded playable-mini-game definition after the deterministic simulator
+Status: **The owner has frozen the Python campaign as legacy rules evidence and opened planning for a separate Underground City mini-game. The current gate is D0: close the remaining player-facing loop decisions and acceptance contract. No engine project, runtime content, or production dependency is approved by this planning amendment alone.**
+
+## 2026-08-22 playable-mini-game and same-day loop amendment
+
+The owner narrowed the active product proof from a provisional three-encounter slice
+to one bounded playable mini-game. It begins with an in-game captive negotiation,
+permits a Guard-favorable trade that releases the player in a weaker state, continues
+through one small freely traversable Underground City/dungeon section, and proves one
+in-world one-versus-one card interaction, living surrender, Grafting Table transfer,
+and same-day death reset. Exact duration and ending remain open. A Merchant, Exit
+Keeper, or three-encounter sequence is no longer required minimum content.
+
+For the active demo only, world time pauses while one contextual interaction surface
+shows dialogue, combat routes, body, cards, items, and relevant state over the still-
+visible world. Dialogue delivers leverage and choices; it is not a separate general
+dialogue game. Refusing the Guard's bargain leaves the player captive. Attacking while
+bound is a warned lethal choice. Accepting the bargain releases the player but leaves
+them weaker; the exact payment is open.
+
+The active-demo combat direction is one-versus-one and card-led. `Punch`, `Kick`, and
+`Headbutt` are the current default technique cards. Cards declare exact body source,
+minimum source condition, turn cost, target body region, effect, and consequence. A
+turn budget may support several legal cards and a combo completed in that turn. The
+resource name, values, refresh, order, exact condition scale, and thresholds remain
+open. Earlier paper-only one-Main action economy and Clinch/Engaged/Distant range
+direction are superseded for the active demo. No range or reposition state belongs in
+the active demo. Frozen simulator runtime/config/tests retain their existing rules.
+
+Active-demo limb transfer occurs only from a living surrendered actor. There is no
+corpse extraction. Surrender follows remaining capability, goal, fear, and survival
+expectation rather than an isolated HP threshold. A surrendered actor accepts the
+agreed transfer under the credible alternative of resumed losing combat and likely
+death; this is coerced survival bargaining and must not be mislabeled as free consent.
+Acceptance enters a Grafting Table transition and completes the agreed transfer.
+Killing the actor removes access to that limb reward for the current day.
+
+Death returns the same aware protagonist to the beginning of the same day. The body
+and unaware world/NPCs reset; protagonist/narrative knowledge remains. Default cards
+remain, cards learned during the attempt are lost, and exactly one Memory Card is
+generated at death. An incompatible Memory Card remains Dormant/unusable until its
+source requirements exist. Run-derived Brain instability clears; already-earned
+persistent Brain buffs/bonuses remain and provide an inspectable advantage on later
+attempts without selecting cards or fabricating body capability. Memory generation,
+Brain content, numeric balance, save structure, and presentation remain open.
+
+These are paper decisions only. They do not alter Combat Rules v0.5, YAML, simulator
+source/tests, legacy evidence, dependencies, or executable behavior. Runtime work
+still requires a separate explicit gate and bounded acceptance plan.
 
 ## 2026-08-21 bounded playable-demo target amendment
 

@@ -1,9 +1,10 @@
 # Game att2 - Deck, Brain, and Actions
 
-Status date: 2026-08-21
+Status date: 2026-08-22
 
-Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. OWNERSHIP DOCTRINE IS APPROVED;
-ACQUISITION, COUNTS, CADENCE, CONTENT, PROGRESSION DELIVERY, AND RUNTIME ARE OPEN.**
+Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. OWNERSHIP, DEFAULT/LEARNED DEATH
+PERSISTENCE, MEMORY CARD, AND BRAIN RESET DIRECTION ARE APPROVED; VALUES, CONTENT,
+DELIVERY, AND RUNTIME REMAIN OPEN.**
 
 ## Anatomical deckbuilder thesis
 
@@ -37,18 +38,38 @@ possibilities. Ordinary draw randomness acts on that deck and is not secretly
 weighted by the Brain.
 
 Exact acquisition, deck size, copy limits, edit locations, draw, discard, retention,
-exhaustion, reshuffle, rarity, upgrades, rewards, and death persistence remain open.
+exhaustion, reshuffle, rarity, upgrades, and ordinary rewards remain open. Death
+persistence is bounded below.
 
-## Action budget and lifecycle
+## Default technique cards
 
-- Each actor has zero/one Preparation and zero/one Main in the paper round model.
-- A card supplies an option, not an extra play.
+The active-demo starting library currently includes:
+
+| Card | Required source | Target | Status |
+|---|---|---|---|
+| `Punch` | a qualifying arm | selected opponent body region | Default card; exact cost/effect/threshold open |
+| `Kick` | qualifying Legs | selected opponent body region | Default card; exact cost/effect/threshold open |
+| `Headbutt` | qualifying Head | selected opponent body region | Default card; exact cost/effect/threshold open |
+
+These are persistent default techniques, not rewards selected by the Brain. A card
+whose source requirement is not met remains visible but Dormant/unusable. Starting
+body compatibility is not guaranteed.
+
+## Turn budget, combo, and lifecycle
+
+- The active demo uses one visible per-turn budget rather than a zero/one Main limit.
+- The player may play as many legal cards as that budget permits.
+- Two or more declared compatible cards may form a combo and complete within the same
+  turn. Exact combo links and resolution order remain open.
+- Each card pays a disclosed Stamina/Energy/Mana-like cost. The resource name, maximum,
+  refresh rule, carryover, and relationship to Blood remain open; do not silently make
+  Blood the answer.
 - Automatic reflex-defense consumes neither card nor voluntary play.
 - `Ready`, `Dormant`, `Invalid`, and `Spent` remain useful lifecycle meanings.
-- Temporary source/range/commitment failure may make a card Dormant; permanent loss
+- Temporary source/commitment/turn-budget failure may make a card Dormant; permanent loss
   of every required source makes it Invalid.
-- A locked action canceled before execution loses its Main tempo but pays no unpaid
-  execution cost and receives no substitute card/source/target.
+- A locked card canceled before execution pays no unpaid execution cost and receives
+  no substitute card/source/target. Whether spent budget is restored remains `OPEN`.
 
 ## Inventory boundary
 
@@ -56,10 +77,9 @@ Inventory is not part of ordinary Brain hand selection. Owned items and tools re
 directly inspectable and subject to real ownership, uses, expiry, source, timing,
 target, cost, and commitment rules.
 
-The surviving paper safeguard is at most one voluntary inventory-origin action per
-round. An inventory Preparation may be followed by a body Main, but ordinary item
-chains do not create a third action economy. The exact production presentation of
-inventory access remains open; the old required Attention Slot readiness rule is
+Whether inventory spends the same turn budget or retains one separate bounded use is
+`OPEN`. It must not create an unlimited item/card chain. The exact production
+presentation remains open; the old required Attention Slot readiness rule is
 historical.
 
 ## Brain doctrine
@@ -98,6 +118,27 @@ fabricate capability; restore an invalid source; waive costs or legality; create
 card absent from the library/deck contract; add an ordinary Main; or produce hidden
 random punishment.
 
+## Same-day death persistence
+
+On death:
+
+- persistent default cards remain;
+- technique cards learned during that attempt are removed;
+- exactly one Memory Card is generated;
+- an incompatible Memory Card remains Dormant until the reset body or a later graft
+  supplies its required source; incompatibility produces no replacement reward;
+- run-derived embodied instability clears;
+- already-earned persistent Brain buffs/bonuses remain.
+
+A persistent Brain buff must expose its trigger, legal affected relationship,
+deterministic benefit, limitation, and evidence. It should make later opponents easier
+to pass through an inspectable player advantage, not by secretly lowering enemy state,
+selecting favorable cards, restoring absent sources, or waiving card legality.
+
+Memory Card generation recipe, whether it records a used/learned/death-context card,
+copy/storage rules, deck placement, duplicates, caps, Brain buff catalogue, acquisition,
+and numerical power curve remain `OPEN`.
+
 ## Embodied instability
 
 Instability is not approved as a new global meter. It must derive from inspectable
@@ -120,7 +161,9 @@ Before commitment the player can inspect:
 
 - action and timing;
 - exact physical/tool source;
-- target and current range profile;
+- target body region and target legality;
+- minimum source condition and current source condition;
+- turn cost, remaining budget, and any declared combo relationship;
 - expected effect if unaltered;
 - occupied or reserved sources;
 - Blood, integrity, wound, item-use, and other costs with timing;

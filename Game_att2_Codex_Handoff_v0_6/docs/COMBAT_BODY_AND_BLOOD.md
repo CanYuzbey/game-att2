@@ -1,6 +1,6 @@
 # Game att2 - Combat, Body, and Blood
 
-Status date: 2026-08-21
+Status date: 2026-08-22
 
 Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. PROVISIONAL VALUES ARE LABELLED;
 CURRENT SIMULATOR RULES REMAIN IN DOCUMENT 03. NO MIGRATION OR RUNTIME APPROVAL.**
@@ -24,8 +24,14 @@ weakened merely because both belong to the same actor. Multi-source actions use 
 weakest required source. There is no hidden source substitution after commitment.
 
 Local profiles may alter one declared axis such as effect, cost, exposure,
-information clarity, range consequence, or defense quality. A Desperate profile must
-show its additional price or risk.
+information clarity, target access, or defense quality. A Desperate profile must show
+its additional price or risk.
+
+Every technique card declares the exact source or source set and the minimum source
+condition required to play it. The condition scale and thresholds are `OPEN`; values
+such as `2/6 arm` or `4/6 legs` are examples only. A card that fails its minimum is
+Dormant/illegal, not silently weakened into legality unless that card declares a
+separate Strained/Desperate profile.
 
 ## Whole-body depth
 
@@ -98,7 +104,7 @@ Defense has bounded layers:
 chosen preparation/stance, if any
 -> one automatically surfaced legal reflex-defense route
 -> one compatible passive per unresolved consequence type
--> final recipient, integrity, wound, Blood, range, and capability consequences
+-> final recipient, integrity, wound, Blood, and capability consequences
 ```
 
 Block, Intercept, and Dodge/Evade are response routes, not hand cards. The incoming
@@ -109,21 +115,20 @@ reflex are one defense, not duplicate reductions.
 Guard Flesh, Brace, Braced Legs, and Cover It retain their paper roles and existing
 runtime boundaries. Cover It and detailed Dodge/Evade remain unimplemented.
 
-## Action-produced range
+## Target regions and no-range boundary
 
-Range is one shared relational state: `Clinch`, `Engaged`, or `Distant`. It changes
-through authored action/defense/reflex outcomes, not free movement.
+Each offensive technique selects one declared target body region before commitment.
+The player can inspect whether that target is legal, what state change is expected,
+which capabilities depend on it, and whether the intended limb reward is endangered.
+Targeting is therefore a strategic choice, not a cosmetic damage-location label.
 
-- Unmaintained Clinch receives one complete later playable round before neutral
-  return toward Engaged.
-- Unmaintained Distant receives two.
-- A profile must explicitly Maintain, Shift/Create, or Release range.
-- Merely acting at an exceptional range does not maintain it.
-- Maintenance refreshes the base counter; counters never stack.
-- Preparation may support a later range result but cannot maintain range alone.
+The active demo has no `Clinch`, `Engaged`, `Distant`, reach band, range counter,
+neutral settling, or voluntary reposition system. Do not rename or reintroduce this
+removed system through card tags, target rules, camera changes, or hidden legality.
+Ordinary traversal stops while the interaction state is paused.
 
-Maps, terrain, facing, line of sight, free locomotion, multi-actor positioning, and
-production action profiles remain open.
+Exact target regions, per-region effects, multi-region attacks, defense redirection,
+and target-preview grammar remain `OPEN`.
 
 ## Procedures and inventory
 
@@ -135,6 +140,19 @@ begins, its declared chain completes atomically.
 Extraction creates two separate records: the donor's structural/wound consequence
 and one harvested object. Treating the donor cannot improve that object. Clean quality
 does not imply donor safety. Basic attacks do not create premium Clean harvest.
+
+For the active demo, a harvested/transferred body part can be created only from a
+living actor after state-derived surrender and an accepted survival bargain grant
+access. Corpse extraction is prohibited. Killing the actor removes access to that
+part reward for the current day.
+
+Surrender is not an isolated Blood/HP threshold. Recompute whether the actor can still
+threaten, defend, escape, recover, or achieve its objective and whether it still
+expects meaningful survival or victory. A surrendered actor accepts the agreed limb
+transfer because refusing means resuming a fight it now expects to lose, likely by
+death. This is coerced survival bargaining, not free consent. Acceptance enters a
+Grafting Table transition; the exact animation, attachment cost, replacement, and
+post-procedure state remain `OPEN`.
 
 ## Limb for Life
 
@@ -158,12 +176,12 @@ It consumes no card, item, Preparation, Main, Lead, Reply, or reflex opportunity
 
 ```text
 read prior state
--> validate actor, exact sources, target, timing, range, and costs
+-> validate actor, exact sources, target region, timing, and costs
 -> derive current local profile and visible modifiers
--> lock/revalidate under the Lead/Reply contract
+-> lock/revalidate under the current turn/sequence contract
 -> pay when execution begins
 -> resolve automatic defense and final recipient
--> apply structure, wound, Blood, range, inventory, and procedure mutations
+-> apply structure, wound, Blood, inventory, and procedure mutations
 -> complete started atomic chains
 -> recompute capability and legal affordances
 -> resolve Panic, survival, catastrophic, incapacity, and encounter facts
