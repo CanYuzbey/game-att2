@@ -1,6 +1,6 @@
 # Game att2 - Game Director Brief
 
-Status date: 2026-08-21
+Status date: 2026-08-22
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. PAPER DIRECTION ONLY; NOT RUNTIME,
 CONTENT, FINAL UI, ENGINE, OR PRODUCTION APPROVAL.**
@@ -12,8 +12,9 @@ validated configuration.
 
 ## Product intent
 
-- The current production target is one bounded, playable PC demo rather than another
-  general-purpose simulator or a miniature version of the full 10-12 hour game.
+- The current production target is one bounded, playable PC mini-game rather than
+  another general-purpose simulator, a content-complete vertical slice, or a miniature
+  version of the full game.
 - The demo must prove the distinctive interaction: read a pressure, use a body-sourced
   technique, accept bodily/Blood consequences, rebuild, and carry the altered body
   into the next encounter.
@@ -23,6 +24,16 @@ validated configuration.
 - The target is sustained entertainment plus a distinctive, strange aftertaste, not
   a claim that this must be the player's best game ever.
 - The desired player memory is: **"Kendimi yeniden inşa ettiğim bir oyundu."**
+
+The mini-game must prove this player-facing arc:
+
+```text
+I was trapped and bargained from weakness
+-> I became free at a bodily price
+-> I found options in a one-versus-one duel through cards and anatomy
+-> I survived by forcing or accepting a living bargain
+-> death returned me to the same day with memory but not the same flesh
+```
 
 ## Identity
 
@@ -56,6 +67,9 @@ No specific sanity, corruption, or instability meter is approved by this stateme
   action resolves, but cannot routinely erase a bad strategic decision.
 - Cards, body state, Blood, wounds, and short reflex moments must form one causal
   interaction rather than unrelated minigames.
+- Dialogue is an instrument for pressure, leverage, character, and route selection.
+  It supports card combat and non-combat solutions; deep dialogue-tree authorship is
+  not the demo's core production burden.
 
 ## Design pillars
 
@@ -75,11 +89,16 @@ No specific sanity, corruption, or instability meter is approved by this stateme
 - The body cannot be cosmetic eligibility for generic cards.
 - The reflex layer cannot become an unrelated skill game.
 - Space cannot become a walk-forward/attack/walk-back locomotion loop.
+- The active mini-game has no combat range/reposition system. Do not hide the removed
+  range model inside card tags, camera states, or renamed distance resources.
 - Narrative mystery cannot substitute for a playable core.
 - More documentation is not progress unless it closes a player-facing decision or
   supports a bounded test.
 - Legacy simulator breadth is not a production requirement. A mechanic enters the
   demo only because the demo needs it and a player can encounter its consequence.
+- Same-day persistence must create earned familiarity, not erase all consequence:
+  flesh and the unaware world reset, while memory-derived progress remains bounded and
+  inspectable.
 
 ## Living design set
 

@@ -1,6 +1,6 @@
 # Game att2 - World, Progression, and Decisions
 
-Status date: 2026-08-21
+Status date: 2026-08-22
 
 Status: **CURRENT LIVING GAME-DESIGN LEDGER. APPROVED, WORKING, EXAMPLE, AND OPEN
 ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
@@ -15,6 +15,34 @@ ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
 | `EXAMPLE ONLY` | Illustration, never canon or implied content. |
 | `OPEN` | No answer exists yet; do not fill through convenience. |
 
+## 2026-08-22 owner direction: same-day playable mini-game
+
+`APPROVED DIRECTION`: the demo is a bounded playable mini-game, not a three-encounter
+summary of the future full game. It opens with the player captive and bound. Refusing
+the Guard's bargain leaves the player captive; a warned attack while bound can lead to
+death; accepting a Guard-favorable trade releases the player weaker but free. The
+exact payment remains `OPEN`.
+
+The freed player traverses one small Underground City/dungeon section and meets an
+actor blocking escape or progress. Exploration stays visible during a paused in-world
+interaction that combines dialogue, combat choices, cards, body, items, and state.
+Combat is one-versus-one and permits multiple legal body-sourced cards/combos within a
+turn budget. Cards target body regions. The active demo has no range/distance system.
+
+Body-part transfer occurs only from a living surrendered actor through a coerced
+survival bargain and visible Grafting Table transition. No corpse extraction occurs.
+Killing the actor loses that part reward for the current day.
+
+Death repeats the same day for the aware protagonist. The original body and unaware
+world/NPCs reset. Default cards persist, attempt-learned cards are lost, exactly one
+Memory Card is produced, incompatible Memory Cards remain Dormant, run instability
+clears, and already-earned Brain buffs/bonuses remain as visible legal advantages.
+
+This owner direction supersedes the active-demo paper requirements for a fixed Missing
+Right Arm/Damaged Torso start, three mandatory encounters, Clinch/Engaged/Distant, one
+Main per round, undefined demo failure, and fully open death persistence. It does not
+change frozen simulator runtime, configuration, tests, or evidence.
+
 ## 2026-08-21 owner direction: one bounded playable demo
 
 `APPROVED DIRECTION`: active production planning now targets a minimal playable demo.
@@ -23,26 +51,28 @@ plan or engine foundation. Existing H1/visual-lab experiments remain isolated
 mechanic evidence. A legacy mechanic is reimplemented only when the new demo's player-
 facing contract requires it; no automatic port is implied.
 
-The proposed underground-city fiction and three encounters are a `WORKING
-HYPOTHESIS`: intentionally concrete enough to build, but still revisable without
-changing the product identity.
+The proposed Underground City fiction and bounded opening/duel/reset chain are a
+`WORKING HYPOTHESIS`: concrete enough to define the mini-game, still revisable without
+changing product identity.
 
 ## Demo scope box
 
-The first demo includes only:
+The first mini-game includes only:
 
-- one authored, linear escape route through the Rot Market;
-- one damaged starting body;
-- three encounters with different motivations;
-- the minimum hand/deck, body-source, Blood, wound, extraction, graft, and negotiation
-  behavior required by those encounters;
-- state carried continuously from captivity to the exit tunnel;
-- one readable success ending and one explicitly defined failure/restart contract.
+- one captive Guard negotiation opening;
+- one small traversable Underground City/dungeon section;
+- one one-versus-one escape/progress-blocking interaction;
+- the minimum hand/deck, body-source, target-region, turn-budget/combo, wound/Blood,
+  living surrender, graft, and negotiation behavior required by that interaction;
+- one Grafting Table limb-transfer consequence;
+- one same-day death/reset with the approved card/Memory/Brain persistence split;
+- one readable success endpoint after the owner defines it.
 
-The first demo excludes procedural generation, a world map, meta progression, a full
-Brain tree/collection, a general dialogue engine, broad inventory, crafting, stealth,
-quests, a large body-part roster, final lore revelation, production save architecture,
-and reuse of the old simulator campaign as content.
+The first mini-game excludes procedural generation, a world map, three mandatory
+encounters, a full roguelite meta, a full Brain tree/collection, a general dialogue
+engine, broad inventory, crafting, stealth, quests, a large body-part roster, final
+lore revelation, production save architecture, range/reposition combat, and reuse of
+the old simulator campaign as content.
 
 `WORKING HYPOTHESIS`: legacy retirement is staged rather than allowed to consume
 production time. Freeze it now; after D1 has its own tests and reproducible build,
@@ -52,25 +82,27 @@ demo question.
 
 ## Level-design working hypothesis
 
-Use a linear **string of rooms**, not an open isometric world:
+Use one bounded connected playable section, not an open world:
 
 ```text
-holding pen / body inspection
--> guard ring
--> Rot Market and merchant stall
--> tunnel gate and Exit Keeper
--> upward escape tunnel
+holding/captive space
+-> Guard bargain and release threshold
+-> small freely traversable Underground City/dungeon section
+-> escape/progress-blocking one-versus-one interaction
+-> Grafting Table consequence
+-> provisional continuation/success threshold (`OPEN`)
 ```
 
 - The tunnel or its upward light should act as the persistent destination landmark.
-- Each room owns one primary pressure, one body-dependent route, and one irreversible
-  carry-forward consequence.
+- Each space owns one primary pressure and at least one body-dependent route.
 - Encounters resolve in their room; a separate battle arena must earn its existence
-  through the interaction test.
-- One small optional alcove may test exploration value. More branching is cut until
-  the three-encounter line works.
+  through the interaction test and is currently excluded.
+- More branching is cut until the opening/duel/graft/reset chain works.
 
-## Art-direction working hypothesis
+## Art-direction working hypothesis — pending owner review
+
+The following is preserved from the prior demo proposal. It is not approved for asset
+production and must be reviewed during the upcoming general-theme discussion:
 
 - Fixed-angle stylized low-poly 3D for spaces and modular bodies.
 - Detachable/swappable body modules use clear silhouettes and a shared attachment
@@ -113,33 +145,35 @@ license](https://krita.org/en/about/license/), and [Audacity downloads](https://
 
 Decide in this order; a later decision may not disguise a missing earlier one:
 
-1. **Thirty-second control contract:** fixed-camera movement, how conflict begins, where the hand
-   appears, and how source/target/risk are read.
-2. **Failure contract:** target duration and exact death/capture/restart behavior.
-3. **Guard slice:** minimum cards, source states, wound consequence, disable/kill
-   routes, extraction, and graft.
-4. **Carry-forward economy:** what Blood, wounds, parts, and cards persist across the
-   three rooms; no meta layer.
-5. **Merchant grammar:** leverage facts, offers, counteroffers, refusal, mental defeat,
-   surrender, and why pure damage cannot simply unlock the tunnel.
-6. **Exit Keeper:** motivation and state-derived end routes.
-7. **Content budget:** exact parts, cards, animations, sounds, and text required—nothing
-   without an encounter responsibility.
-8. **Engine acceptance:** keep or reject Unity after the one-room spike.
+1. **Guard payment and released state:** decide what the player gives and precisely why
+   release leaves them weaker but able to play.
+2. **Turn/card contract:** name and define the budget, refresh, ordering, condition
+   scale, target-region effects, and the smallest Punch/Kick/Headbutt combo set.
+3. **Duel actor and surrender:** define motivation, threats, desired limb, surrender
+   evaluation inputs, and why refusal/resistance is still rational before surrender.
+4. **Graft consequence:** define transfer cost, replaced/attached state, and which next
+   legal option visibly changes.
+5. **Memory/Brain persistence:** define the Memory Card recipe and one bounded Brain
+   buff that makes a repeated attempt easier without selecting cards.
+6. **Mini-game success:** define the post-graft endpoint and target playtime.
+7. **Content budget:** count only the rooms, cards, body states, animations, sounds,
+   text, and tests required for the complete loop.
+8. **Engine/runtime gate:** choose the smallest implementation vehicle only after this
+   contract is reviewable; engine creation still requires explicit approval.
 
 ## Production gates
 
 | Gate | Deliverable | Continue criterion |
 |---|---|---|
-| D0 — current | One-page demo contract and decision ledger | Thirty-second control and failure loop can be stated without lore filler |
-| D1 | Guard-room interaction slice in graybox | A fresh observer can read source, target, cost, expected result, and changed capability |
-| D2 | Complete Guard encounter plus graft consequence | The new arm changes the next legal options; damage is not cosmetic |
-| D3 | Merchant encounter | Negotiation follows visible leverage/body state rather than a detached dialogue score |
-| D4 | Exit Keeper and complete escape line | Prior body/Blood/decision state materially changes climax routes |
-| D5 | Art/audio/readability pass and external playtest build | Stable Windows build; no P0/P1 comprehension or progression blocker |
+| D0 — current | Closed mini-game paper contract and decision ledger | Every item 1-6 above is decided or explicitly excluded; no AI-invented defaults |
+| D1 | Captive Guard opening slice | Refusal remains captivity, attack lethality is legible, and trade causes a verified weaker/free state |
+| D2 | One complete in-world card duel | Player can read source, condition, target, cost/combo, expected result, and changed capability without a detached battle scene |
+| D3 | Living surrender plus Grafting Table | Surrender derives from state/motivation; no corpse extraction; graft changes the next legal option |
+| D4 | Same-day death/reset loop | Body/world/default/learned/Memory/instability/Brain persistence all match the paper contract and play can continue |
+| D5 | Complete mini-game and external playtest build | Defined success endpoint works in a stable build; no P0/P1 comprehension or progression blocker |
 
-If D1 is not readable or enjoyable, revise the interaction formula before building
-the Merchant, final encounter, art production, or meta systems.
+If D1/D2 are not readable or enjoyable, revise the interaction formula before adding
+more encounters, art production, or meta systems.
 
 ## World and narrative
 
@@ -164,12 +198,15 @@ Keep these responsibilities separate:
 - **Run/meta state:** what persists across failure or death.
 - **Narrative knowledge:** what the player/character understands about the loop.
 
-`WORKING HYPOTHESIS`: techniques may be discovered through embodied experience and
-later prepared at maintenance/reconstruction points. Knowledge may persist longer
-than flesh. The exact acquisition and persistence model is `OPEN`.
+`APPROVED DIRECTION`: default cards persist through death; technique cards learned in
+the attempt do not. Death generates one Memory Card, which remains Dormant when its
+body-source requirement is unavailable after reset. Exact acquisition and Memory Card
+generation/storage remain `OPEN`.
 
-Brain progression delivery—tree, collectible parts, hybrid, or another wrapper—is
-`OPEN`. Permanent Brain Parts are no longer the only approved form.
+`APPROVED DIRECTION`: run-derived Brain instability resets on death, while already-
+earned persistent Brain buffs/bonuses remain and visibly ease later attempts. Brain
+progression delivery—tree, collectible parts, hybrid, or another wrapper—and exact
+buff content remain `OPEN`. Permanent Brain Parts are not the only approved form.
 
 ## Current compact decision ledger
 
@@ -181,20 +218,22 @@ Brain progression delivery—tree, collectible parts, hybrid, or another wrapper
 | Combat control | Read, choose source/target/risk, lock, bounded execution, consequences | Approved direction |
 | Body capability | Source-first Full/Strained/Desperate/Offline profiles | Paper rule |
 | Wounds | Four wound families; treatment/repair/Blood separated | Paper rule |
-| Range | Action-produced Clinch/Engaged/Distant with neutral settling | Paper rule |
-| Defense | Preparation -> automatic reflex -> compatible passive | Paper rule |
-| Initiative | Public Lead, two locks, Lead-first causal resolution | Paper rule |
+| Combat range | No range, distance, neutral-settling, or reposition system in active demo | Approved direction |
+| Defense | Automatic/source-valid response direction; exact active-demo timing open | Direction/open detail |
+| Turn cadence | Multiple legal cards/one-turn combos within visible budget | Approved direction; values open |
 | Procedures | Exact-source reservation and atomic started chains | Paper rule |
 | Catastrophic Blood survival | Exact eligible limb or death; net 12; no Torso rescue | Paper rule |
 | Deck ownership | Player-authored bounded active deck | Approved doctrine |
 | Brain | Deterministic current-hand modifier; visible power/control tradeoff | Approved doctrine |
 | Encounter outcome | State/motivation-derived, potentially mutual | Direction plus survey prototype |
-| Demo run | Captivity -> Guard -> Merchant -> Exit Keeper -> tunnel | Working hypothesis |
+| Default cards | Punch, Kick, Headbutt; body/condition/target/cost required | Paper rule; values open |
+| Demo run | Captivity -> Guard bargain -> traversal -> blocker duel -> living graft/reset -> success endpoint | Direction; ending open |
 | Full-game run | Undefined | Open |
-| Demo world structure | Linear underground-market room string | Working hypothesis |
+| Demo world structure | One bounded connected Underground City/dungeon section | Working hypothesis |
 | Full-game world structure | Undefined | Open |
-| Demo failure/restart | Undefined | Open — D0 blocker |
-| Full-game death/persistence | Undefined | Open |
+| Demo failure/restart | Same aware protagonist/day; body/world reset; asymmetric card/Memory/Brain persistence | Paper rule |
+| Living limb acquisition | Surrender bargain plus Grafting Table; no corpse extraction | Paper rule |
+| Full-game death/persistence | Demo rule approved; full-game expansion undefined | Partly open |
 | Final narrative truth | Undefined | Open |
 
 ## Full-game open decisions
@@ -203,7 +242,7 @@ These remain important but are downstream of the demo decision order above:
 
 1. What constitutes an encounter, and what are its possible end conditions?
 2. What constitutes a run, what is its goal, and what connects its pressures?
-3. What happens on failure/death, and which body/knowledge/deck/Brain facts persist?
+3. How does the approved demo same-day persistence contract expand across the full game?
 4. What world/topology/presentation structure supports that run?
 5. What exact deck cadence and embodied-instability model make repeated decisions
    enjoyable rather than administrative?
@@ -216,9 +255,8 @@ These remain important but are downstream of the demo decision order above:
 - Encounter 3 and the Warden remain paper-only.
 - VL-WP4, broader reflex work, external pilots, and production integration remain
   deferred until explicitly reopened.
-- Underground-city demo planning and definition of a bounded one-room engine spike
-  are open. Spike implementation and full content production require D0 completion
-  plus explicit owner approval.
+- Underground-city mini-game planning is open. Any engine/runtime spike and content
+  production require D0 completion plus explicit owner approval.
 - Final UI, final art/audio, full-game world production, and large content expansion
   remain closed.
 - Paper directions do not silently change Combat Rules, YAML, simulator code, tests,
@@ -233,6 +271,7 @@ part of the ordinary game-director reading order.
 
 ## Current design focus
 
-The active product gate is D0: define the thirty-second control contract and demo
-failure contract, then approve or revise the Unity Guard-room interaction spike. Existing Brain,
-reflex, and full-game questions do not justify parallel implementation.
+The active product gate is D0: answer the six mini-game decisions in order, then
+approve or revise one bounded implementation vehicle. Existing research artifacts,
+additional encounters, final theme, and full-game questions do not justify parallel
+implementation.
