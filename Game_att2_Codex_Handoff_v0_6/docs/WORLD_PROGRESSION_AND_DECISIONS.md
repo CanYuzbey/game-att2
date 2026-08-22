@@ -119,7 +119,7 @@ Exact cue duration, input bindings, eligible Block/Parry/Evade sources, Block lo
 Parry and Evade windows, accessibility assistance, Will start/loss/recovery values,
 non-Parry Will mutations, and actor exceptions remain `OPEN`. This is paper authority
 only; it does not modify or validate the frozen simulator, H1 runner, visual lab,
-movement demo, configuration, tests, or any product runtime.
+configuration, tests, or any product runtime.
 
 `WORKING HYPOTHESIS DWF-0.1` now supplies one comparison set without closing those
 paper-rule decisions: ordinary Full/Strained Arms Block/Parry, Full/Strained Legs
@@ -385,7 +385,7 @@ buff content remain `OPEN`. Permanent Brain Parts are not the only approved form
 | Evade | Required response to Red; success prevents consequence without range/reposition | Paper rule; input/source/window open |
 | Will / surrender | Successful Parry reduces visible Will; Broken Will triggers a legal living limb bargain | Paper rule; values/exceptions open |
 | DWF-0.1 balance set | Body-source tags, Block formula, timing/accessibility grid, bilateral Will `90` and `24/30/36` Parry loss | Working hypothesis; paper comparison only |
-| NPC agency | Goal/Need/Want/RedLine/Leverage/Claim/Concession/Fallback; victory may pursue a disclosed claim | Approved direction; exact actors open |
+| NPC agency | Faction doctrine -> role/duty -> individual Goal/Need/RedLine/Claim; capability is separate and `NoClaim` is valid | Approved direction plus working faction families; exact actors open |
 | G1 Guard | Failing guarding arm; accepts Full Right Arm or `20 Blood`; exact `70 -> 60/50` release branches | Working hypothesis; owner promotion open |
 | Turn cadence | Visible Mana grows by round and permits larger one-turn sequences/combos | Approved direction; cadence/values open |
 | Encounter reward split | Kill grants Blood and loses limb; accepted living surrender grants limb and no kill-Blood reward | Paper rule; yield/presentation open |

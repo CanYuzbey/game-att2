@@ -56,7 +56,7 @@ python -m game_att2_sim.research_cli `
   --evidence-class AUTOMATED_REGRESSION `
   --participant-code AUTO-SMOKE `
   --seed 42 `
-  --script research/interactive_shell/example_action_sequence.json
+  --script examples/legacy_campaign_action_sequence.json
 python -m game_att2_sim.h1_cli `
   --all-comparisons `
   --script examples/h1_scripted_comparisons.json `

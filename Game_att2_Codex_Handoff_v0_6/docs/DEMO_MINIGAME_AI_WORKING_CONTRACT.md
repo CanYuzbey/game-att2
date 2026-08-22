@@ -22,7 +22,7 @@ As of 2026-08-22:
   product runtime**;
 - the deterministic Python campaign is frozen legacy rules evidence;
 - the H1 runner and visual lab are isolated research instruments;
-- `demo/` is a disposable movement demo, not the Underground City mini-game;
+- the former disposable browser movement demo is not retained in the active tree;
 - no engine choice, engine project, production content pipeline, complete UI, save
   system, or playable new-demo build is established by these documents.
 

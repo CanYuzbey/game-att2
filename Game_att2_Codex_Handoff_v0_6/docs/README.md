@@ -50,6 +50,7 @@ outside game-design consolidation.
 
 | Document/folder | Role |
 |---|---|
+| `../research/README.md` | Research navigation and active-versus-frozen classification |
 | `20_H1_HYBRID_COMBAT_SPEC_v0_1.md` | Historical owner-approved H1 research contract |
 | `21_H1_IMPLEMENTATION_RECORD_v0_1.md` | H1 implementation and evidence limits |
 | `23_REFLEX_INTERACTION_TAXONOMY_AND_DIAGNOSTIC_REVISION_v0_1.md` | Deferred reflex research direction |

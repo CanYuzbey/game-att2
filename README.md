@@ -2,106 +2,45 @@
 
 Canonical repository: <https://github.com/CanYuzbey/game-att2>
 
-Game att2 is a single-player hell-loop limb-grafting roguelike concept built
-around a simple fantasy: survive ritualized duels by turning damaged bodies
-into the next version of your own.
+Game att2 is a single-player hell-loop roguelike concept in which the player's body
+is the build and Blood is simultaneously life, currency, and fuel.
 
-> You are not collecting weapons. You are becoming the weapon, piece by piece,
-> using your own blood as money.
+## What exists now
 
-## Project status
+- A bounded Underground City mini-game is defined on paper at the D0 decision gate.
+- The new mini-game has no approved engine project or verified product runtime.
+- A deterministic Python simulator, H1 runner, and visual interaction lab remain as
+  frozen legacy/research evidence. They are not the new mini-game.
+- Current combat, Blood, Mana, Will, defense, and NPC-purpose decisions live in five
+  living design documents.
 
-The active product target is now a **bounded three-encounter playable demo** set in a
-provisional underground Rot Market. The current gate is its paper D0 contract: the
-thirty-second control form followed by exact failure/restart behavior. Unity is the
-owner-preferred working engine, but no engine project has been approved or created.
+## Start here
 
-The deterministic Python simulator and its S-001 -> Jeff -> Anna campaign are frozen
-legacy evidence. They remain reviewable, but they are not the new demo's content plan,
-engine foundation, or active feature backlog.
+The working package is [Game_att2_Codex_Handoff_v0_6](Game_att2_Codex_Handoff_v0_6/).
 
-The bounded visual interaction lab is implemented and fidelity-verified, but the owner
-deferred VL-WP4 and broader reflex-mechanics work on 2026-08-13 before diagnostic
-execution. The fixture is preserved for later research; it is not the active gate.
-The shared Stamina/readiness model remains a provisional research hypothesis; no
-runtime Stamina system, production UI, content expansion, or engine work is approved.
-The current paper design is consolidated into five living documents covering the
-game-director brief, encounter/run loop, body combat, deck/Brain relationship, and
-world/progression decisions. The former numbered design packages remain available as
-dated provenance, but they are no longer the active reading surface. The Underground
-City container now bounds the demo run; its detailed failure loop, interaction slice,
-and encounter implementations remain gated.
+1. Read the [AI working contract](Game_att2_Codex_Handoff_v0_6/docs/DEMO_MINIGAME_AI_WORKING_CONTRACT.md)
+   for scope and evidence rules.
+2. Use the [documentation map](Game_att2_Codex_Handoff_v0_6/docs/README.md) to read
+   the five living design documents in order.
+3. Use the [package README](Game_att2_Codex_Handoff_v0_6/README.md) for the concise
+   repository map and legacy verification commands.
 
-> **Collaborator verification note — 2026-08-13:** `main` contains the verified
-> visual interaction lab and the separate local Block-pressure demo. To review the
-> current evidence, start with the implementation results linked below; to reproduce
-> the automated checks, use the verification commands in the handoff package. These
-> checks establish implementation fidelity only—not final game balance, player
-> comprehension, or approval to begin production content.
+## Current paper direction
 
-## Design pillars
+- Attacks are body-sourced cards paid with round-growing Mana.
+- Incoming Yellow threats allow Block or Parry; Red threats require Evade.
+- Block redirects damage into a chosen guarding body part. Precise Parry prevents
+  damage and breaks opponent Will.
+- Killing grants Blood but loses that opponent's limb opportunity for the day;
+  living surrender grants the agreed limb but no kill-Blood.
+- NPC intent is derived from faction doctrine, current role, and individual need.
+  Strength is independent of purpose, and `NoClaim` is valid when conflict gains the
+  NPC nothing.
 
-- **Body as Build** - limbs create actions, passives, tradeoffs, and tactical
-  identity.
-- **Blood as Volatile Bankroll** - Blood is health, currency, and ability fuel.
-- **Combat as Extraction** - winning includes deciding what to damage, preserve,
-  harvest, graft, or sell.
-- **Desperate Maintenance** - every acquired part creates stabilization,
-  integration, preservation, or debt decisions.
-- **Ritualized Readability** - costs, targets, outcomes, rewards, and new risks
-  must remain inspectable.
+All of the above is paper design, not proof of implemented gameplay.
 
-## Repository guide
+## Repository boundary
 
-The active handoff package lives in
-[`Game_att2_Codex_Handoff_v0_6`](Game_att2_Codex_Handoff_v0_6/).
-
-- [Full project overview](Game_att2_Codex_Handoff_v0_6/README.md)
-- [Current documentation map](Game_att2_Codex_Handoff_v0_6/docs/README.md)
-- [Development master](Game_att2_Codex_Handoff_v0_6/docs/02_DEVELOPMENT_MASTER_v0_6.md)
-- [Combat rules](Game_att2_Codex_Handoff_v0_6/docs/03_COMBAT_RULES_v0_5.md)
-- [Simulator technical specification](Game_att2_Codex_Handoff_v0_6/docs/04_SIMULATOR_TECHNICAL_SPEC_v0_2.md)
-- [Tests and acceptance criteria](Game_att2_Codex_Handoff_v0_6/docs/06_TEST_PLAN_ACCEPTANCE_v0_2.md)
-- [Game director brief](Game_att2_Codex_Handoff_v0_6/docs/GAME_DIRECTOR_BRIEF.md)
-- [Core loop, encounter, and run](Game_att2_Codex_Handoff_v0_6/docs/CORE_LOOP_ENCOUNTER_AND_RUN.md)
-- [Combat, body, and Blood](Game_att2_Codex_Handoff_v0_6/docs/COMBAT_BODY_AND_BLOOD.md)
-- [Deck, Brain, and actions](Game_att2_Codex_Handoff_v0_6/docs/DECK_BRAIN_AND_ACTIONS.md)
-- [World, progression, and decisions](Game_att2_Codex_Handoff_v0_6/docs/WORLD_PROGRESSION_AND_DECISIONS.md)
-- [Visual interaction-lab record](Game_att2_Codex_Handoff_v0_6/docs/25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md)
-- [Archived design history](Game_att2_Codex_Handoff_v0_6/docs/archive/design_history_2026-08-21/README.md)
-- [Repository and CLI readiness record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/13_REPOSITORY_CLI_READINESS_2026-07-30.md)
-- [CLI/documentation alignment record](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/15_CLI_DOCUMENTATION_ALIGNMENT_2026-07-31.md)
-- [Full campaign CLI implementation report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/16_FULL_CAMPAIGN_PLAYABLE_CLI_2026-07-31.md)
-- [Repository production skill](.agents/skills/game-att2-production/SKILL.md)
-
-## Run the simulator
-
-Python 3.11 or newer is required.
-
-```powershell
-cd Game_att2_Codex_Handoff_v0_6
-python -m pip install -e ".[dev]"
-python -m game_att2_sim --scenario mini_campaign --seed 42 --format text
-```
-
-Play the full approved campaign:
-
-```powershell
-python -m game_att2_sim.play_cli --seed 42
-```
-
-Use `--phase-1` for the retained S-001 vs Jeff diagnostic.
-
-Run the verification suite:
-
-```powershell
-python -m pytest -q
-python -m ruff check src tests
-python -m mypy src
-```
-
-The latest local verification is 261 passing tests, 87% source-only line coverage,
-a clean Ruff run, and a clean strict mypy run across 32 source files. See the documentation map for current
-evidence limits, known debt, and production gates, and
-[the Phase 1 CLI report](Game_att2_Codex_Handoff_v0_6/docs/archive/implementation_reports/Game_att2_Playable_CLI_Phase1_Report_v0_1.md)
-for that interface's scope lock and assumptions.
+The root `.agents/` folder contains active collaboration instructions. Project files
+belong under `Game_att2_Codex_Handoff_v0_6/`. Historical evidence remains isolated
+under that package's `docs/archive/` and does not override current design authority.

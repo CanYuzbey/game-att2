@@ -64,9 +64,10 @@ Read `Game_att2_Codex_Handoff_v0_6/docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_COD
 - Treat S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table as frozen legacy
   simulator evidence. Do not expand or port it unless the owner approves one isolated
   maintenance or mechanic-experiment gate.
-- The owner opened planning for a separate three-encounter Underground City demo.
-  Planning does not authorize an engine project: complete D0 and obtain explicit
-  approval before creating the one-room Guard interaction spike.
+- The owner opened planning for a bounded Underground City mini-game; three mandatory
+  encounters are no longer part of its minimum contract. Planning does not authorize
+  an engine project: complete D0 and obtain explicit approval before creating the
+  one-room Guard interaction spike.
 - Keep Encounter 3 and the Warden out of runtime source, runtime config, production content, and engine work.
 - Keep Unity, final presentation, full wounds, active Cover It behavior, generalized mental defeat, multi-round negotiation, movement, and broader reflex families unimplemented until their documented gates pass. Keep the implemented visual interaction lab isolated and provisional. Preserve the existing H1 and visual-lab fidelity runners without presenting either as production combat.
 - Do not silently change costs, probabilities, thresholds, meanings, encounter order, rewards, or product identity.
@@ -127,9 +128,9 @@ bounded visual-lab plan approval - COMPLETE
 -> strategic-combat and Brain packages - CONSOLIDATED PAPER DIRECTION,
    RUNTIME DEFERRED
 -> legacy Python campaign - FROZEN EVIDENCE, NOT ACTIVE PRODUCT BACKLOG
--> Underground City demo D0 contract and thirty-second view - CURRENT OWNER GATE
+-> Underground City mini-game D0 decisions and acceptance contract - CURRENT OWNER GATE
 -> one-room Guard interaction spike - REQUIRES EXPLICIT IMPLEMENTATION APPROVAL
--> Merchant negotiation and Exit Keeper - DOWNSTREAM
+-> any additional Merchant / Exit Keeper content - OUTSIDE THE MINIMUM, DOWNSTREAM
 -> later separately approved reflex diagnostic / external pilot / production work
 ```
 

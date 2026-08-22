@@ -7,8 +7,9 @@ project action. For the active demo, also read
 ## Truth before output
 
 - The new Underground City demo is documented, not implemented.
-- The existing Python simulator, H1 research runner, visual lab, and disposable
-  browser movement demo are separate legacy/research artifacts. None proves that the
+- The existing Python simulator, H1 research runner, and visual lab are separate
+  legacy/research artifacts. The former disposable browser movement demo was removed
+  from the active tree. None of these artifacts or their Git history proves that the
   new demo or the full game exists.
 - Never say `implemented`, `working`, `playable`, `complete`, `ready`, or give a
   completion percentage without naming the exact artifact and supplying fresh

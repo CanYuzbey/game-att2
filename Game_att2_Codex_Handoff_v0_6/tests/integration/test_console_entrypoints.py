@@ -56,7 +56,7 @@ def test_research_module_entrypoint_replays_the_example_sequence() -> None:
         "--participant-code",
         "AUTO-CODEX",
         "--script",
-        str(PROJECT_ROOT / "research" / "interactive_shell" / "example_action_sequence.json"),
+        str(PROJECT_ROOT / "examples" / "legacy_campaign_action_sequence.json"),
     )
     assert result.returncode == 0
     assert "Outcome: COMPLETED" in result.stdout
