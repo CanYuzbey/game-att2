@@ -29,6 +29,16 @@ change legacy runtime, configuration, tests, dependencies, or executable content
 This is an operational contract, not a sixth living design authority. It summarizes
 the living set for execution hygiene and cannot close an `OPEN` design choice.
 
+## Concept-video communication plan
+
+| Document | Role |
+|---|---|
+| `CONCEPT_VIDEO_PRODUCTION_PLAN.md` | Near-term concept/previsualization film purpose, truth boundary, beat sheet, production gates, program chain, file handoffs, review questions, and parallel playable-demo boundary |
+
+This plan is a communication/production surface, not a sixth living design authority,
+runtime approval, asset-existence claim, playable build, or investor-readiness proof.
+Its scenes must inherit authority labels from the five living documents.
+
 ## Protected authority and engineering documents
 
 | Document | Role |

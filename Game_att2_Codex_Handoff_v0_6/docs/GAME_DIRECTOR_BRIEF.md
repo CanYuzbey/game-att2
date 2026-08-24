@@ -1,6 +1,6 @@
 # Game att2 - Game Director Brief
 
-Status date: 2026-08-23
+Status date: 2026-08-24
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. PAPER DIRECTION ONLY; NOT RUNTIME,
 CONTENT, FINAL UI, ENGINE, OR PRODUCTION APPROVAL.**
@@ -12,9 +12,15 @@ validated configuration.
 
 ## Product intent
 
-- The current production target is one bounded, playable PC sample demo rather than
-  another general-purpose simulator, a content-complete vertical slice, or a miniature
-  version of the full game.
+- `APPROVED DIRECTION`: the first near-term communication artifact is a short concept
+  video/previsualization explaining intended gameplay, dynamics, possible characters,
+  and world promise before full production. It must identify itself as pre-production
+  visualization rather than captured gameplay. Its detailed paper workflow lives in
+  `CONCEPT_VIDEO_PRODUCTION_PLAN.md`.
+- The longer-term gameplay-proof target remains one bounded, playable PC sample demo
+  rather than another general-purpose simulator, a content-complete vertical slice,
+  or a miniature version of the full game. The video does not open its engine/runtime
+  gate or substitute for real input and human-play evidence.
 - `APPROVED DIRECTION`: the mini-game objective is to escape the Underground City by
   defeating the boss at the city gate. Approximately 30 minutes is a non-binding
   planning reference, not a duration requirement, content ceiling, or acceptance

@@ -1,6 +1,6 @@
 # Game att2 - World, Progression, and Decisions
 
-Status date: 2026-08-23
+Status date: 2026-08-24
 
 Status: **CURRENT LIVING GAME-DESIGN LEDGER. APPROVED, WORKING, EXAMPLE, AND OPEN
 ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
@@ -14,6 +14,29 @@ ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
 | `WORKING HYPOTHESIS` | Worth testing but not proven fun or final. |
 | `EXAMPLE ONLY` | Illustration, never canon or implied content. |
 | `OPEN` | No answer exists yet; do not fill through convenience. |
+
+## 2026-08-24 owner direction: concept video as the first communication artifact
+
+`APPROVED DIRECTION`: while the bounded playable demo remains the longer-term
+gameplay-proof track, the first near-term communication target is a short concept
+video/previsualization. It should explain the intended Underground City gameplay,
+body/card/Blood dynamics, possible characters, and world potential to friends,
+possible collaborators, and potential investors before full game production begins.
+
+The video must remain visibly labelled as pre-production visualization wherever its
+shots are not captured from a verified playable build. It may communicate intended
+causal rules and visual potential, but it does not prove control feel, combat appeal,
+accessibility, market demand, production feasibility, investor readiness, or the
+existence of the Underground City runtime. Open graft, Brain/Memory, character,
+faction, boss, theme, and art choices may appear only as labelled concept variants;
+polish does not promote them to canon.
+
+The video and demo tracks share the five living design documents. The video uses a
+truth matrix that identifies each scene as `PAPER RULE`, `APPROVED DIRECTION`,
+`WORKING HYPOTHESIS`, `OPEN`, `CONCEPT VARIANT`, or verified prototype capture. Later
+real capture may replace matching concept shots without retroactively verifying the
+remainder. The detailed workflow, beat sheet, program chain, file handoffs, review
+questions, and evidence boundary live in `CONCEPT_VIDEO_PRODUCTION_PLAN.md`.
 
 ## 2026-08-22 owner direction: goal-driven NPCs and reciprocal stakes
 
@@ -428,6 +451,7 @@ buff content remain `OPEN`. Permanent Brain Parts are not the only approved form
 | Area | Current result | Maturity |
 |---|---|---|
 | Product memory | "I rebuilt myself" | Approved direction |
+| Near-term communication artifact | Labelled concept/previsualization film explaining intended gameplay, dynamics, possible characters, and world promise | Approved direction; production plan is paper-only and no video asset exists by implication |
 | Core emphasis | Using the built body, not construction alone | Approved direction |
 | Strategy/execution | Roughly 70/30 compass | Approved direction |
 | Combat control | Read, choose source/target/risk, lock, bounded execution, consequences | Approved direction |
@@ -498,9 +522,10 @@ part of the ordinary game-director reading order.
 
 ## Current design focus
 
-The active product gate is D0: close one reviewable acceptance matrix for the Guard
-concession, selected one-or-two-fight limb/graft chain, integrated gate boss, escape,
-and same-day reset; then explicitly approve or revise one bounded implementation
-vehicle. Existing research artifacts, content without a unique proof question, final
-theme, investor materials, and full-game questions do not justify parallel
-implementation.
+The first communication-planning focus is the labelled concept video defined in
+`CONCEPT_VIDEO_PRODUCTION_PLAN.md`. The active gameplay/runtime product gate remains
+D0: close one reviewable acceptance matrix for the Guard concession, selected
+one-or-two-fight limb/graft chain, integrated gate boss, escape, and same-day reset;
+then explicitly approve or revise one bounded implementation vehicle. Video planning
+does not authorize an engine project, and a polished previsualization does not replace
+the D0 contract or later playable evidence.
