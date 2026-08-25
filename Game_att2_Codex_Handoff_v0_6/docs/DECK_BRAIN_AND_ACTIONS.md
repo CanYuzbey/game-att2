@@ -1,255 +1,274 @@
 # Game att2 - Deck, Brain, and Actions
 
-Status date: 2026-08-23
+Status date: 2026-08-25
 
-Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. OWNERSHIP, DEFAULT/LEARNED DEATH
-PERSISTENCE, MEMORY CARD, AND BRAIN RESET DIRECTION ARE APPROVED; VALUES, CONTENT,
-DELIVERY, AND RUNTIME REMAIN OPEN.**
+Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. CONCEPT-DECK, BRAIN-PART,
+ATTENTION, READIED-ITEM, AND PREPARATION/MAIN OWNERSHIP ARE APPROVED DIRECTIONS;
+DIAGNOSTIC COUNTS, CONTENT, VALUES, ACHIEVEMENTS, SAVE DATA, UI, AND RUNTIME REMAIN
+UNAPPROVED.**
 
 ## Anatomical deckbuilder thesis
 
 > A card declares what the player is trying to do; the body determines how and at
 > what physical cost it can be done.
 
-Voluntary primary commitments normally use cards. Cards should represent physical
-techniques or preparations rather than detached percentage filler. Automatic reflex
-events, passives, wounds, Blood transactions, survival checks, and forced state
-reactions remain outside the hand.
+The player does not discover basic combat concepts one at a time. The complete
+abstract card vocabulary is known from the beginning. The current body determines
+which physical expressions of those concepts can exist, and an earned Concept Deck
+determines which compatible expressions are deliberately carried.
 
-The body and card must both matter:
+The same limb may support several roles. A crab-like arm is not restricted to one
+attack: it may have characteristic Attack, Defence, Control, or Preparation
+expressions. Those expressions must still differ causally from another limb through
+source requirements, targeting, effect, cost, exposure, reflex profile, commitment,
+or downstream body consequence. Label or number changes alone do not create a new
+card.
 
-- a card without a legal physical source cannot execute;
-- a source does not automatically force every related technique into the deck;
-- changing or damaging the body changes card legality and execution profile;
-- active inclusion/exclusion remains a real player decision.
+Automatic reflexes, body passives, wounds, Blood transactions, survival checks, and
+forced state reactions remain outside the voluntary hand.
 
 ## Ownership layers
 
-| Layer | Owns |
-|---|---|
-| Discovery/knowledge | Which techniques have been learned or made available |
-| Body | Which techniques are physically possible and through which exact source |
-| Active deck | Which compatible techniques the player deliberately carries |
-| Draw/hand | Imperfect access to the player-authored deck |
-| Brain | How the current hand/body relationship is interpreted or modified |
+| Layer | Owns | Does not own |
+|---|---|---|
+| Card-concept vocabulary | Abstract intents and techniques known from the beginning | Physical capability or current deck membership |
+| Body | Exact source-valid physical card expressions and non-card capabilities | Meta progression or Attention access |
+| Concept Deck | Achievement-earned playstyle chassis, dedicated special cards, and atomic compatible exchanges | Missing anatomy or hidden draw correction |
+| Anatomical Deck | The current bounded set produced from body-compatible expressions and the selected Concept Deck | Inventory, reflexes, passives, or forced actions |
+| Attention | Imperfect current access to the Anatomical Deck | Physical capability or extra voluntary actions |
+| Brain Parts | Persistent paired buffs/nerfs that affect one declared Attention/access/execution relationship | Deck membership, invented sources, perfect hands, or ordinary extra plays |
+| Readied Item Card | One deliberately prepared owned item opportunity with exact uses/source/timing | Random Attention selection or automatic replacement |
 
-The player authors a bounded active deck from currently known and source-compatible
-possibilities. Ordinary draw randomness acts on that deck and is not secretly
-weighted by the Brain.
+This separation is binding. Body compatibility is checked before Concept Deck
+construction; Concept Deck exchanges complete before Brain selection/modification;
+Brain rules never reintroduce a removed card.
 
-Exact acquisition, deck size, copy limits, edit locations, draw, discard, retention,
-exhaustion, reshuffle, rarity, upgrades, and ordinary rewards remain open. Death
-persistence is bounded below.
+## Card labels
 
-## Default technique cards
+Every card receives a small manually authored set of functional labels based on its
+causal effect, such as Attack, Defence, Control, Preparation, or Recovery. Labels are
+mechanical metadata used by Concept Deck selection/exchange rules and eligible Brain
+Part rules. A label grants no damage, defence, rarity, or class bonus by itself.
 
-The active-demo starting library currently includes:
+Labels are assigned to cards, not chosen dynamically to chase a buff. A multi-label
+card remains one card instance and is never duplicated because several rules match.
+The exact final label vocabulary remains `OPEN`.
 
-| Card | Required source | Target | Status |
-|---|---|---|---|
-| `Punch` | a qualifying arm | selected opponent body region | Default card; exact cost/effect/threshold open |
-| `Kick` | qualifying Legs | selected opponent body region | Default card; exact cost/effect/threshold open |
-| `Headbutt` | qualifying Head | selected opponent body region | Default card; exact cost/effect/threshold open |
+## Achievement-earned Concept Decks
 
-These are persistent default techniques, not rewards selected by the Brain. A card
-whose source requirement is not met remains visible but Dormant/unusable. Starting
-body compatibility is not guaranteed.
+`APPROVED DIRECTION`: earned Concept Decks persist between attempts/runs. They are
+unlocked through authored achievements or equivalent non-boss milestones. Boss
+progression is reserved for Brain Parts so the two persistent layers do not duplicate
+the same reward path.
 
-### D0 six-card/four-hand comparison — working hypothesis
+A Concept Deck is a reusable playstyle chassis, not an exact saved list that
+fabricates incompatible anatomy. It contains:
 
-The smallest concrete cadence to compare, not a promoted rule, is:
+- one declared playstyle promise;
+- label/source requirements;
+- one or more explicit remove/add exchanges;
+- dedicated special cards;
+- a visible sacrifice as well as a gain;
+- a compatibility and Dormant rule.
 
-- starter library: the three approved default techniques above;
-- starter active deck: six instances — `Punch x2`, `Kick x2`, `Headbutt x2`;
-- opening hand and hand cap: four;
-- round end: the player may retain one unplayed card and discards the rest;
-- next round: draw to four; reshuffle the discard pile only when required;
-- a Dormant card remains visible, occupies a hand position, and may be retained or
-  discarded, but receives no automatic replacement draw;
-- at a Grafting Table, one newly source-compatible known technique may replace one
-  chosen default instance; it is never auto-added or placed in the opening hand by
-  the Brain.
+At an approved construction boundary, the chassis resolves against the current body.
+Compatible exchanges may be applied. Incompatible expressions remain known but
+Dormant; they are not deleted, rewritten, or replaced automatically.
 
-This `6/4 WORKING HYPOTHESIS` aims to make the first draw readable while leaving two
-unknown cards and making every replacement legible. Before promotion it requires an
-exhaustive opening-hand check after every allowed Guard release branch, exact card
-cost/effect values, copy limits, learned-card acquisition, and proof that legal hands
-do not collapse into one obvious play. Revise it if four-card hands clog with Dormant
-cards, the two hidden cards create no meaningful uncertainty, or deck editing is too
-shallow to justify the deck layer.
+### Atomic exchange contract
 
-## Turn budget, combo, and lifecycle
-
-- The active demo's visible per-turn card/action resource is named `Mana`; Mana is
-  separate from Blood and replaces the previously unnamed budget.
-- Available Mana increases as rounds pass, exposing larger sequences and combos later
-  in the duel. Starting Mana, the per-round increase, cap, refill, and carryover remain
-  `OPEN`.
-- The player may play as many legal cards as that budget permits.
-- Two or more declared compatible cards may form a combo and complete within the same
-  turn. Exact combo links and resolution order remain open.
-- Each card pays a disclosed Mana cost. Mana's maximum, refresh rule, carryover, and
-  relationship to Blood remain open; do not silently make Blood pay ordinary card
-  costs or generate Mana.
-- Automatic reflex-defense consumes neither card nor voluntary play.
-- Committing and resolving an offensive technique card does not start an attack-side
-  QTE. The active demo's short execution input belongs to incoming defense: Yellow
-  allows Block/Parry and Red requires Evade.
-- `Ready`, `Dormant`, `Invalid`, and `Spent` remain useful lifecycle meanings.
-- Temporary source/commitment/turn-budget failure may make a card Dormant; permanent loss
-  of every required source makes it Invalid.
-- A locked card canceled before execution pays no unpaid execution cost and receives
-  no substitute card/source/target. Whether spent budget is restored remains `OPEN`.
-
-Mana escalation must not become permission for an infinite defensive loop. Repeated
-defense, restoration, redraw, retention, or setup must consume or mutate a finite
-state and may not reproduce the same complete combat position at no cost. Before the
-Mana cap, round growth advances the clock. At or beyond the cap, temporary card/status
-cycling is insufficient: a full round must consume or worsen Blood, integrity, wound
-severity, a finite item/charge, or capability. Exact anti-stall card rules remain a
-`WORKING HYPOTHESIS` until a bounded comparison closes them.
-
-Block supports that constraint directly: its chosen legal guarding part becomes the
-recipient and loses Integrity/capability rather than creating free total-state
-restoration. Parry and Evade remain reflex routes, not cards, and do not pay Mana.
-Their timing, source, and assistance rules remain separate from deck cadence.
-
-## Inventory boundary
-
-Inventory is not part of ordinary Brain hand selection. Owned items and tools remain
-directly inspectable and subject to real ownership, uses, expiry, source, timing,
-target, cost, and commitment rules.
-
-Whether inventory spends the same turn budget or retains one separate bounded use is
-`OPEN`. It must not create an unlimited item/card chain. The exact production
-presentation remains open; the old required Attention Slot readiness rule is
-historical.
-
-## Brain doctrine
-
-> The Brain does not select or distribute the player's body actions. It interprets
-> and modifies the hand the player built, turning bodily imbalance into an
-> inspectable power-versus-control tradeoff.
+Every exchange follows:
 
 ```text
-body/knowledge -> source-valid library
--> player-authored active deck
--> ordinary draw -> current hand
--> body + hand -> inspectable compatibility facts
--> deterministic Brain modifier
--> complete benefit/risk preview
--> player commitment and physical resolution
--> body/card legality and compatibility recomputed
+current compatible Anatomical Deck and usable sources
+-> validate every sacrificed card and its source
+-> validate every gained card and its source
+-> validate deck-size and other declared constraints
+-> remove and add in one mutation, or apply nothing
+-> construct complete deck
+-> only then apply Brain/Attention behavior
 ```
 
-The Brain may stabilize, exploit, retain, transform, or redirect an already-declared
-hand/body relationship. Every rule must declare:
+A missing, Dormant, Invalid, disabled, or otherwise unusable sacrifice cannot buy a
+live gain. A gained card with a missing source cannot enter as compensation. If a
+source is lost during combat, dependent cards become Dormant/Invalid immediately;
+the sacrificed cards do not return mid-encounter. Reconstruction waits for the next
+approved safe boundary.
+
+`EXAMPLE ONLY`: an aggressive chassis might remove one defensive Legs expression and
+one defensive Left-Arm expression, then add one brutal Left-Arm attack and one brutal
+Right-Arm attack. This specializes the body-card relationship; it does not physically
+remove those limbs. A future exceptional deck that sacrifices anatomy would require
+its own explicit paper rule.
+
+Count parity does not prove balance. Every powerful special card still needs an
+experienced Blood, exposure, recovery, interception, commitment, capability, or lost-
+future-option burden.
+
+## Attention and Brain Parts
+
+The current research direction combines imperfect Attention with deliberate deck
+construction:
 
 ```text
-trigger
--> state-derived condition
--> affected hand/card/source/relationship
--> deterministic benefit
--> visible instability cost, risk, or limitation
--> duration/expiry
--> pre-commit preview
--> post-resolution evidence
+known concepts + current body
+-> selected Concept Deck and atomic exchanges
+-> current Anatomical Deck
+-> Brain-Part-configured weighted Attention selection
+-> persistent visible hand
+-> Preparation/Main commitment
+-> source/reflex/consequence resolution
 ```
 
-The Brain may not normally choose, weight, filter, draw, remove, or guarantee cards;
-fabricate capability; restore an invalid source; waive costs or legality; create a
-card absent from the library/deck contract; add an ordinary Main; or produce hidden
-random punishment.
+`APPROVED DIRECTION`: Brain Parts are rare persistent roguelite rewards, normally on
+the boss/progression path. They are configured at the run/attempt boundary and remain
+locked for that interval. Each ordinary Part owns one primary lever and exposes both
+a buff and a nerf, restriction, risk, or cost.
 
-## Same-day death persistence
+An ordinary Brain Part may:
 
-On death:
+- change the visible selection weight of matching labelled/source-bound cards for one
+  declared Attention relationship; or
+- deterministically modify execution of a card reached through one declared slot or
+  relationship.
 
-- persistent default cards remain;
-- technique cards learned during that attempt are removed;
-- exactly one Memory Card is generated;
-- an incompatible Memory Card remains Dormant until the reset body or a later graft
-  supplies its required source; incompatibility produces no replacement reward;
-- run-derived embodied instability clears;
-- already-earned persistent Brain buffs/bonuses remain.
+Ordinary Parts do not combine access and execution power on the same Part. They may
+not create a card absent from the Anatomical Deck, restore a missing source, waive a
+cost, select a target, guarantee Attack/Defence/Main, grant an ordinary extra action,
+or hide random punishment.
 
-A persistent Brain buff must expose its trigger, legal affected relationship,
-deterministic benefit, limitation, and evidence. It should make later opponents easier
-to pass through an inspectable player advantage, not by secretly lowering enemy state,
-selecting favorable cards, restoring absent sources, or waiving card legality.
+`WORKING HYPOTHESIS`: four ordinary persistent Attention positions, weighted
+selection without replacement, refill of Spent/Invalid positions at Decision Refresh,
+and no category guarantee are the bounded diagnostic baseline. A once-per-round,
+pre-lock Blood-paid redraw may be compared only when no identical no-alternative
+redraw is possible. Counts, weights, redraw cost, repetition handling, and final hand
+lifecycle remain evidence-bound rather than final values.
 
-Memory Card generation recipe, whether it records a used/learned/death-context card,
-copy/storage rules, deck placement, duplicates, caps, Brain buff catalogue, acquisition,
-and numerical power curve remain `OPEN`.
+## Hold-drop-play and action budget
 
-### Memory Imprint and one Brain protocol — working hypothesis
-
-The original demo-facing proposition is:
-
-> Death is the printer; an earned causal lesson is the ink.
-
-Death still produces exactly one Memory Card, but a usable payload requires one
-authored lesson proof from that attempt:
+The intended interaction character is Balatro-like in rhythm, not poker rules:
 
 ```text
-inspectable prior state
--> legal voluntary technique or preparation
--> explicit state mutation
--> later changed legal affordance or outcome
+read visible state and intent
+-> inspect persistent Attention cards
+-> hold/drag a card
+-> choose a target limb only when required
+-> preview source, cost, risk, Brain effect, and interception
+-> drop/commit
+-> resolve and wait for the counter/interception boundary
 ```
 
-Mere death, manual abandon/reset, observation without player application, repeated
-QTE execution, self-harm, and cosmetic target variations create no eligible lesson.
-If several eligible attempt-learned techniques exist, the player chooses one through
-a disclosed rule; hidden random selection is excluded. If none exists, death still
-prints one visible `Unresolved Memory` with zero gameplay payload. It does not occupy
-the active deck or mint permanent power.
+The card already declares its exact source or source set. The player does not choose a
+different source unless the card explicitly supports a source choice.
 
-`WORKING HYPOTHESIS`: the demo stores one usable source-bound Memory Card. A new one
-requires a visible replace/archive choice; duplicates keyed to the same authored
-lesson do not stack. A stored Memory joins the known library but is not auto-slotted,
-auto-drawn, or guaranteed in the opening hand. Normal body-source legality applies,
-including Dormant state after reset.
+`PAPER RULE`: an actor may commit zero or one Preparation and zero or one Main per
+round. Preparation resolves before Main and may establish a later automatic response.
+Attention capacity never creates another ordinary action. The Aug-22 growing-Mana,
+multi-card-sequence, and combo cadence is superseded by this owner decision for the
+active paper design. Blood remains life, economy, and selected ability fuel; it is not
+renamed into generic card energy.
 
-One bounded persistent Brain comparison is `Mnemonic Grip`: once per encounter, the
-first already-drawn, source-legal Memory Card that would be discarded at round end is
-retained without consuming the ordinary one-card retain allowance. The trigger,
-affected card, one-use limit, and result are visible. It does not change draw order,
-card source, cost, target, enemy state, or QTE timing. Its acquisition must be tied to
-one named first-time causal proof/milestone, not death count; the exact proof remains
-`OPEN`.
+A started atomic action completes. Later source damage changes future capability
+rather than retroactively erasing the action. A now-illegal unstarted commitment is
+canceled without fabricating a substitute source, card, or target. Exact spent-cost
+handling before execution remains `OPEN`.
 
-## Embodied instability
+## Reflex and previously prepared responses
 
-Instability is not approved as a new global meter. It must derive from inspectable
-current facts such as source state, wound, integration, incompatible commitments, or
-another explicitly authored body relationship. It is recomputed after relevant state
-changes and previewed before commitment.
+Cards declare whether and how their execution can be intercepted. During an
+interceptable action, the defender receives the authored automatic reflex opportunity
+and any compatible previously played Preparation may trigger.
 
-Exact compatibility inputs, thresholds, representation, Brain content, number of
-active rules, and whether progression uses a tree, collectible parts, a hybrid, or
-another wrapper remain open.
+When the player attacks, there is no attack-side player QTE; an enemy interception is
+automatic/state-derived or comes from that enemy's prior Preparation. When an enemy
+attack is incoming, the player's bounded reflex input follows the Yellow/Red defence
+contract. This preserves the intended sequence without turning offensive cards into
+an action minigame.
+
+Prepared defence plus its reflex is one causal defence, not two unrelated reductions.
+Reflex performance may alter the physical result but may not routinely erase a bad
+strategic commitment.
+
+## Readied Item Card lane
+
+One owned Item Card may be deliberately readied before the encounter or at another
+later-approved readiness boundary.
+
+- It remains visibly an Item Card.
+- It occupies a separate lane and never reduces ordinary Attention capacity.
+- It retains exact ownership, quantity, uses, expiry, source, target, timing, and cost.
+- Playing it consumes its authored Preparation or Main opportunity.
+- At most one voluntary inventory-origin action executes per round.
+- Once used, lost, expired, or source-invalid, the lane remains empty.
+- Another item is never readied automatically.
+
+In-encounter re-readiness remains `OPEN`. If later allowed, it requires an explicit
+authored action and cannot become unrestricted inventory access by another name.
+
+## Persistence
+
+At same-day death or a full run end:
+
+- earned Brain Parts persist;
+- earned Concept Decks persist;
+- the abstract card-concept vocabulary remains known because it was available from
+  the beginning;
+- a Concept Deck blueprint remains owned even when its current expressions are
+  Dormant under the reset body;
+- current body, wounds, grafts, encounter state, and unaware-world state follow the
+  same-day/full-run reset contract rather than becoming permanent card capability;
+- run-derived temporary Brain/body instability clears unless a later explicit rule
+  says otherwise.
+
+The Aug-22 attempt-learned-card loss and death-generated Memory Card system is
+superseded. Death does not fabricate a new card reward. Exact achievement conditions,
+Brain-Part boss rewards, equipped loadout count, save boundary, duplicate handling,
+and full-game reset scope remain `OPEN`.
+
+## Scaling and individuality guardrails
+
+`OWNER-APPROVED DIAGNOSTIC BOUNDARY`: the first bounded catalogue uses the following
+provisional limits. These are research gates, not final production counts:
+
+- at most five cards referencing one exact source;
+- at most three functional labels per card;
+- at most six causal mechanic atoms including timing, target, and reflex grammar;
+- exactly one causal signature creativity atom per card;
+- at most two special cards added by one ordinary Concept Deck exchange;
+- at most one novel engine primitive in a card, requiring separate system review.
+
+Authorship is factorized across limb expressions, Concept Deck exchanges, Brain rules,
+and shared execution grammar. Full combinations are tested rather than handcrafted.
+Static source/atomicity checks, near-duplicate fingerprints, Pareto-dominance review,
+exhaustive exchange/source-loss cases, ordinary pairwise coverage, named high-risk
+three-way coverage, seeded transparent policies, and human comprehension tests form
+the evidence path. The complete method and research-only validator live in
+`../research/card_scaling_guardrails/`.
+
+Passing automation establishes structural consistency only. It cannot establish
+creativity, comprehension, balance, accessibility, fun, or long-term replay value.
 
 ## Poker boundary
 
 Pair, straight, flush, fixed hand ranking, and score-multiplier grammar are not part
-of the doctrine. Hand composition matters only through anatomical and causal facts.
+of the design. The Balatro comparison describes hold/read/commit rhythm and
+achievement-earned deck identities only.
 
 ## Minimum information contract
 
 Before commitment the player can inspect:
 
-- action and timing;
-- exact physical/tool source;
+- action, labels, and Preparation/Main timing;
+- exact physical/tool source and current condition;
 - target body region and target legality;
-- minimum source condition and current source condition;
-- turn cost, remaining budget, and any declared combo relationship;
+- Concept Deck exchange/sacrifice that made the card available;
 - expected effect if unaltered;
-- occupied or reserved sources;
-- Blood, integrity, wound, item-use, and other costs with timing;
-- Full/Strained/Desperate/Dormant/Invalid state and reason;
-- Brain benefit and instability consequence;
-- important capability or route loss caused by the result.
+- Brain-Part selection tendency or execution buff and paired nerf;
+- Blood, integrity, wound, item-use, exposure, and other costs with timing;
+- interception/reflex route and any previously prepared response;
+- important capability or route loss caused by the result;
+- Dormant/Invalid reason without an automatic replacement promise.
 
-Final layout, iconography, animation, certainty bands, and accessibility presentation
-remain open.
+Final layout, exact card/deck/hand counts, iconography, animation, accessibility,
+achievement list, Brain content, values, save data, and runtime implementation remain
+`OPEN`.

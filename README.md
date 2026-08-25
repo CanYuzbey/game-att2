@@ -11,7 +11,7 @@ is the build and Blood is simultaneously life, currency, and fuel.
 - The new mini-game has no approved engine project or verified product runtime.
 - A deterministic Python simulator, H1 runner, and visual interaction lab remain as
   frozen legacy/research evidence. They are not the new mini-game.
-- Current combat, Blood, Mana, Will, defense, and NPC-purpose decisions live in five
+- Current combat, Blood, Concept Deck, Brain Part, Will, defense, and NPC-purpose decisions live in five
   living design documents.
 
 ## Start here
@@ -27,7 +27,11 @@ The working package is [Game_att2_Codex_Handoff_v0_6](Game_att2_Codex_Handoff_v0
 
 ## Current paper direction
 
-- Attacks are body-sourced cards paid with round-growing Mana.
+- Body-sourced cards use a bounded Preparation/Main cadence and imperfect Attention.
+- Achievement-earned Concept Decks persist and atomically trade compatible
+  limb-sourced cards for playstyle-specific special cards.
+- Boss/progression-earned Brain Parts persist and apply visible paired buffs/nerfs to
+  declared Attention access or one execution relationship.
 - Incoming Yellow threats allow Block or Parry; Red threats require Evade.
 - Block redirects damage into a chosen guarding body part. Precise Parry prevents
   damage and breaks opponent Will.

@@ -45,7 +45,11 @@ general fun, retention, market demand, or investor readiness.
 
 Combat currently separates these resources and outcomes:
 
-- `Mana`: renewable card/turn effort whose capacity grows by round;
+- `Preparation/Main`: at most one of each per round; no active growing-Mana cadence;
+- `Concept Decks`: achievement-earned persistent playstyle chassis with atomic
+  compatible card exchanges;
+- `Brain Parts`: boss/progression persistent paired buffs/nerfs that shape declared
+  Attention access or one execution relationship;
 - `Blood`: life, economy, and selected ability fuel; active-demo encounter Blood is
   earned by killing;
 - `Will`: bilateral surrender pressure, reduced by successful Parry and explicit
@@ -129,8 +133,10 @@ prove that the Underground City mini-game exists or is playable.
 
 - promote, revise, or reject the exact `G1` Guard payment/released-state package;
 - choose enforced disclosed claim versus one lethal `Defy` at player Will zero;
-- set Mana cadence, card costs, defense inputs/windows, Block loss, and Will values;
+- set Anatomical Deck/Attention counts and lifecycle, Preparation/Main costs, Brain
+  weights/modifiers, defence inputs/windows, Block loss, and Will values;
 - choose one versus two pre-boss limb fights and assign each a unique proof question;
-- define their actors, one exact graft consequence, Memory/Brain persistence details,
+- define their actors, one exact graft consequence, Concept-Deck/Brain-Part reward
+  and persistence details,
   and the gate boss's integrated-combat test;
 - explicitly open an implementation gate before creating any engine/runtime project.

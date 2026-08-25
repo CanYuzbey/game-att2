@@ -10,6 +10,8 @@ Underground City mini-game exists.
 | `defense_will_npc_balance_v0_1.md` | Sourced Block, timing, accessibility, Will, Guard, and NPC-purpose comparison; every numeric value is a working hypothesis |
 | `defense_will_npc_balance_v0_1_model.py` | Deterministic arithmetic for the DWF-0.1 comparison |
 | `wound_numeric/` | Provisional wound/Blood arithmetic supporting current paper discussion |
+| `brain_synthesis/` | Deterministic body/deck/Brain ownership comparisons and procedural-persona diagnostics; informed current direction but cannot establish fun or balance |
+| `card_scaling_guardrails/` | Owner-approved diagnostic content bounds plus research-only static, atomic-exchange, dominance, and combinatorial-coverage checks |
 
 ## Frozen research evidence
 

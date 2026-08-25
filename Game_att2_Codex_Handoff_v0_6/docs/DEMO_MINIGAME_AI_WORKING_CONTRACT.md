@@ -1,6 +1,6 @@
 # Game att2 - Demo Mini-Game AI Working Contract
 
-Status date: 2026-08-23
+Status date: 2026-08-25
 
 Status: **BINDING OPERATIONAL CONTRACT FOR AI-ASSISTED DEMO WORK. NOT A DESIGN
 AUTHORITY, RUNTIME APPROVAL, OR CLAIM THAT THE MINI-GAME EXISTS.**
@@ -19,7 +19,7 @@ how work is scoped, evidenced, and reported.
 
 ## 2. Current existence baseline
 
-As of 2026-08-23:
+As of 2026-08-25:
 
 - the new Underground City mini-game has paper decisions but **no approved or verified
   product runtime**;
@@ -138,18 +138,26 @@ one Parry source, one Evade source, and every mandatory traversal source.
   not a requirement for a deep general dialogue tree.
 - Combat is primarily one-versus-one duel play.
 - Active-demo combat has no distance/range state or reposition system.
-- Default technique cards currently include `Punch`, `Kick`, and `Headbutt`.
+- The known starting concept vocabulary currently includes `Punch`, `Kick`, and
+  `Headbutt`; their concrete expressions still require exact compatible sources.
 - A card declares an exact source/body requirement, minimum source condition, target
   body region, cost, effect, and important consequence. The previously mentioned
   `2/6 arm` and `4/6 legs` values are examples, not approved thresholds.
-- A player may play as many legal cards, including a combo, as the current `Mana`
-  budget permits. A combo resolves within that turn. Mana's amount, refresh rule,
-  carryover, relationship to Blood, and exact sequencing are `OPEN`. Mana capacity
-  increases as rounds pass; starting Mana, increment, cap, and refill remain `OPEN`.
+- The ordinary round permits zero or one Preparation and zero or one Main. Attention
+  capacity and the separate Readied Item Card do not grant extra ordinary plays.
+- The player uses a read/calculate/hold/drop/commit rhythm. The card owns its source;
+  the player selects a target body region only when the card requires it.
+- The selected achievement-earned Concept Deck constructs the Anatomical Deck through
+  compatible atomic exchanges. Persistent Brain Parts then shape declared labelled
+  Attention access or one execution relationship through a visible paired buff/nerf.
 - Offensive cards resolve without an attack-side QTE. Short input occurs when
   defending an incoming attack: Yellow permits `Block` or `Parry`; Red requires
   `Evade`. Red cannot be Blocked or Parried. Color must be reinforced by a distinct
   icon/shape, animation, or audio cue.
+- Every card declares whether execution is interceptable. The defender's automatic
+  reflex and/or compatible prior Preparation resolves during that action. Enemy
+  interception of a player card remains automatic/state-derived, not a player attack
+  QTE.
 - Block protects the declared target by making another player-chosen legal usable
   body part the final structural recipient. That guarding part loses Integrity and may
   lose dependent capability; it is not a free damage cancel.
@@ -208,19 +216,15 @@ On player death:
 - the body returns to that day's original starting body;
 - the world and NPCs reset and do not remember prior attempts;
 - the protagonist/narrative knowledge remembers;
-- default cards remain;
-- technique cards learned during that attempt are lost;
-- exactly one `Memory Card` is generated at death;
-- a Memory Card whose source requirements are not met by the starting body remains
-  Dormant/unusable until a compatible source exists; it is not rewritten into a legal
-  card or compensated with another reward;
-- run-derived Brain instability clears;
-- already-earned persistent Brain buffs/bonuses remain and must provide a visible,
-  inspectable advantage that makes later attempts easier without selecting cards or
-  fabricating missing body capability.
+- the complete abstract card-concept vocabulary remains known;
+- achievement-earned Concept Decks remain;
+- boss/progression-earned Brain Parts remain;
+- incompatible Concept Deck expressions remain Dormant and produce no replacement;
+- run-derived temporary Brain/body instability clears;
+- death creates no Memory Card or card reward.
 
-The Memory Card's generation recipe, content limits, duplicates, storage/copy rules,
-Brain buff catalogue, and exact power curve remain `OPEN`.
+Achievement conditions, boss rewards, equipped Concept Deck/Brain Part counts,
+duplicate/storage rules, save boundary, and exact power curve remain `OPEN`.
 
 ## 5. What counts as a playable mini-game
 
@@ -237,9 +241,10 @@ observable state:
 3. enter/leave the contextual interaction without changing scenes;
 4. complete the selected one-or-two-fight pre-boss set, with every retained fight
    answering its named limb/graft evidence question;
-5. play a legal card, reject an illegal source/card, choose a target region, pay the
-   turn cost, observe Mana capacity increase across rounds, and observe the resulting
-   capability/state change;
+5. construct one compatible Concept Deck exchange, reject a missing/Dormant sacrifice
+   without partial gain, expose Brain-Part buff/nerf and Attention tendency, play a
+   legal Preparation/Main card, reject an illegal source/card, choose a target region,
+   and observe the resulting capability/state change;
 6. observe a redundant Yellow cue, protect the intended target by Block while the
    selected guarding part weakens, then successfully Parry with no incoming damage
    and visible enemy Will loss; observe a redundant Red cue that rejects Block/Parry
@@ -255,19 +260,17 @@ observable state:
     smoke runs reach the gate boss, keep both the disclosed Blood/no-graft and living-
     limb/graft routes viable, defeat the boss, and complete the Underground City
     escape endpoint;
-11. after D0 promotes the exact Memory/Brain contract, earn one bounded persistent
-    Brain advantage, die, reset the day/body/world, lose learned cards, retain defaults,
-    create one Memory Card, reset instability, inspect that the Brain advantage remains,
-    and observe it change one legal next-attempt decision; separately verify that an
-    ineligible empty death creates no usable power payload;
+11. after D0 promotes one bounded Concept Deck/Brain Part fixture, earn each through
+    its separate achievement/boss path, die, reset day/body/world and temporary
+    instability, retain both persistent layers and known concepts, create no death
+    card reward, and observe an incompatible expression remain Dormant;
 12. continue playing after kill reward, graft, or reset;
 13. reproduce the critical state transitions through logs/tests and a manual smoke run.
 
 The duel must also demonstrate that no repeatable sequence can reproduce the same
 complete meaningful combat state indefinitely without consuming or mutating a named
-finite fact. Mana growth supplies that monotonic fact before its cap; at or beyond the
-cap, every full round must consume or worsen Blood, integrity, wound severity, a
-finite item/charge, or capability. A temporary status cycle is insufficient. The
+finite fact. Every full round must consume or worsen Blood, integrity, wound severity,
+a finite item/charge, card lifecycle state, or capability. A temporary status cycle is insufficient. The
 exact anti-stall mechanic remains `OPEN`; this is an acceptance constraint, not
 permission to invent a hidden timer.
 
@@ -355,8 +358,8 @@ One recommended next gate
 - owner promotion, revision, or rejection of the exact `G1` Guard payment and released
   states;
 - exact starting-body generation/reset rule;
-- starting Mana, per-round increase, cap, refresh, carryover, relationship to Blood,
-  and combo resolution order;
+- exact Anatomical Deck size, Attention count/lifecycle/weights, redraw rule/cost,
+  Preparation/Main costs, and Readied-Item readiness boundary;
 - kill-Blood yield, collection timing/presentation, wound/yield relationship, and cap;
 - exact downstream Blood requirement that makes kill-versus-limb routing meaningful;
 - exact anti-stall rule and any maximum-round fallback;
@@ -368,9 +371,10 @@ One recommended next gate
 - promotion/revision of the `DWF-0.1` timing and accessibility grid;
 - promotion/revision of bilateral `90 Will`, `24/30/36` Parry loss, recovery, named
   GoalCritical mutations, actor exceptions, and the player Broken-Will consequence;
-- draw, hand, deck size, acquisition cadence, deck-edit points, and learned-card sources;
-- Memory Card generation/content/storage rules;
-- persistent Brain buff sources, limits, and visible tradeoffs;
+- exact card labels, Concept Deck exchange/content/equipment rules, achievement
+  conditions, and deck-edit points;
+- exact Brain Part boss/progression sources, equipped count, access/execution limits,
+  and visible paired tradeoffs;
 - exact surrender evaluation inputs per opponent;
 - exact Grafting Table cost/replacement procedure;
 - exact one-versus-two pre-boss fight choice, actor roles, and distribution of the

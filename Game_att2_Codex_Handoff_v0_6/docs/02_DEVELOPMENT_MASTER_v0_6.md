@@ -5,6 +5,55 @@ Project: Game att2
 Current stage: bounded playable-mini-game definition after the deterministic simulator
 Status: **The owner has frozen the Python campaign as legacy rules evidence and opened planning for a separate Underground City mini-game. The current gate is D0: close the remaining player-facing loop decisions and acceptance contract. No engine project, runtime content, or production dependency is approved by this planning amendment alone.**
 
+## 2026-08-25 Concept Deck, Brain Part, and Attention synthesis amendment
+
+The owner replaced the Aug-22 growing-Mana/multi-card cadence, attempt-learned-card
+loss, death-generated Memory Card, and deterministic non-selecting Brain doctrine for
+the active paper design.
+
+The complete abstract card-concept vocabulary is available from the beginning. The
+current body supplies exact source-valid physical expressions. Achievement-earned
+Concept Decks persist across attempts/runs and act as reusable playstyle chassis:
+they classify cards through manually authored functional labels, provide dedicated
+special cards, and perform explicit compatible remove/add exchanges. Incompatible
+expressions remain known but Dormant. Every exchange validates all sacrificed and
+gained cards plus their current sources, then mutates atomically or not at all.
+
+Rare persistent Brain Parts normally occupy the boss/progression reward path. They
+configure declared Attention relationships and provide one visible buff plus one
+visible nerf/risk/cost. A Part may alter labelled access weighting or one declared
+execution relationship, but it cannot change Concept Deck membership, fabricate a
+source/card, guarantee a category, waive costs, select targets, restore an invalid
+source, or grant an ordinary extra action.
+
+The active paper action budget returns to zero or one Preparation and zero or one
+Main per round. Preparation may establish a later automatic response. A card declares
+whether execution is interceptable; an automatic reflex opportunity and/or compatible
+previous Preparation resolves during that action. Player outgoing cards do not add an
+attack-side player QTE; player input remains on incoming Yellow/Red defence. One
+deliberately Readied Item Card occupies a separate lane and consumes its authored
+Preparation or Main timing; it is never selected through ordinary Attention or
+automatically replaced.
+
+The four-slot weighted Attention, no-category-guarantee, and Blood-redraw rules remain
+a bounded `WORKING HYPOTHESIS`, not final counts or balance. On same-day death or run
+end, earned Concept Decks and Brain Parts persist. Death creates no card reward because
+the concept vocabulary is already known. Body/world reset and temporary instability
+remain governed by their separate contracts.
+
+For the first bounded catalogue, the owner approved diagnostic—not production—limits:
+five cards per source, three functional labels per card, six causal mechanic atoms,
+one causal signature atom, two special gains per ordinary Concept Deck exchange, and
+one separately reviewed novel engine primitive per card. Factorized authorship,
+atomicity checks, duplicate/dominance review, exhaustive source-loss cases, pairwise/
+three-way interaction coverage, seeded structural tests, and later human diagnostics
+form the evidence path.
+
+This amendment supersedes the conflicting active-paper portions of the 2026-08-22
+Mana/playable-loop amendments and the 2026-08-21 Brain hand-modifier amendment. It
+does not change Combat Rules v0.5, frozen simulator source/configuration/tests, demo
+runtime, content values, achievements, save data, UI, engine, or production approval.
+
 ## 2026-08-22 goal-driven NPC and DWF-0.1 research amendment
 
 The owner directed that NPCs must not function as idle body-part containers. A
@@ -67,7 +116,7 @@ This amendment is active-demo paper authority only. It does not alter Combat Rul
 v0.5, the frozen simulator, H1/visual-lab research artifacts, configuration, tests,
 dependencies, or executable behavior.
 
-## 2026-08-22 Mana and kill-for-Blood amendment
+## 2026-08-22 Mana and kill-for-Blood amendment — Mana portion superseded 2026-08-25
 
 For the active Underground City demo, the visible renewable turn/card resource is
 named `Mana`. Mana is separate from Blood. Its maximum, refresh, carryover, card
@@ -103,7 +152,7 @@ meaningful state for free. Exact anti-stall mechanics and numbers remain open.
 These are active-demo paper decisions only. They do not alter the frozen simulator,
 Combat Rules v0.5, configuration, tests, dependencies, or executable behavior.
 
-## 2026-08-22 playable-mini-game and same-day loop amendment
+## 2026-08-22 playable-mini-game and same-day loop amendment — cadence/persistence portions superseded 2026-08-25
 
 The owner narrowed the active product proof from a provisional three-encounter slice
 to one bounded playable mini-game. It begins with an in-game captive negotiation,
@@ -187,7 +236,7 @@ research evidence, safety directives, or runtime behavior. The living set record
 that encounter/run structure is the current macro design gap; it does not invent an
 answer.
 
-## 2026-08-21 Brain hand-modifier doctrine amendment
+## 2026-08-21 Brain hand-modifier doctrine amendment — superseded 2026-08-25
 
 The owner accepted document 41 as the current Brain doctrine. The Brain no longer
 authors ordinary card access through weights or hard filters. The body defines

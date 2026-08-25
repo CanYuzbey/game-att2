@@ -1,6 +1,6 @@
 # Game att2 - Game Director Brief
 
-Status date: 2026-08-23
+Status date: 2026-08-25
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. PAPER DIRECTION ONLY; NOT RUNTIME,
 CONTENT, FINAL UI, ENGINE, OR PRODUCTION APPROVAL.**
@@ -93,6 +93,9 @@ No specific sanity, corruption, or instability meter is approved by this stateme
   compass, not a numeric promise.
 - The player reads a concrete pressure, finds a body-dependent approach, commits a
   source and risk, then physically applies that decision where appropriate.
+- The primary card rhythm is read, calculate, hold/drop, commit, and wait for the
+  disclosed interception/counter boundary. The ordinary round permits at most one
+  Preparation and one Main; it is not a growing-energy combo turn.
 - Strategy determines what and why. Execution influences how well the committed
   action resolves, but cannot routinely erase a bad strategic decision.
 - Offensive cards carry the strategic commitment without an attack QTE. The short
@@ -101,6 +104,10 @@ No specific sanity, corruption, or instability meter is approved by this stateme
   precise Parry protects the defender and breaks enemy Will toward surrender.
 - Cards, body state, Blood, wounds, and short reflex moments must form one causal
   interaction rather than unrelated minigames.
+- Achievement-earned Concept Decks provide persistent playstyle-specific atomic card
+  exchanges. Boss-earned Brain Parts provide persistent visible buffs and nerfs to
+  Attention/access/execution without inventing physical capability. The two paths
+  survive death but must not collapse into one generic permanent-power ladder.
 - Dialogue is an instrument for pressure, leverage, character, and route selection.
   It supports card combat and non-combat solutions; deep dialogue-tree authorship is
   not the demo's core production burden.
@@ -137,8 +144,12 @@ No specific sanity, corruption, or instability meter is approved by this stateme
 - Legacy simulator breadth is not a production requirement. A mechanic enters the
   demo only because the demo needs it and a player can encounter its consequence.
 - Same-day persistence must create earned familiarity, not erase all consequence:
-  flesh and the unaware world reset, while memory-derived progress remains bounded and
-  inspectable.
+  flesh and the unaware world reset, while earned Concept Decks, Brain Parts, and
+  protagonist knowledge remain bounded and inspectable. Death does not fabricate a
+  card reward.
+- Scaling must preserve individual card identity through exact source ownership, one
+  causal signature property, atomic Concept Deck exchanges, and factorized shared
+  grammar; combination growth belongs in testing rather than handcrafted exceptions.
 - NPCs cannot be inventory-scanning punishment functions or idle meat containers.
   Their demand must pre-exist the player's failure, their combat choices must protect
   what they want, and their victory/concession must visibly advance or revise a goal.

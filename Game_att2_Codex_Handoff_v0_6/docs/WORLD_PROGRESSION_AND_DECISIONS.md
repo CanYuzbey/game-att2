@@ -1,6 +1,6 @@
 # Game att2 - World, Progression, and Decisions
 
-Status date: 2026-08-23
+Status date: 2026-08-25
 
 Status: **CURRENT LIVING GAME-DESIGN LEDGER. APPROVED, WORKING, EXAMPLE, AND OPEN
 ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
@@ -14,6 +14,39 @@ ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
 | `WORKING HYPOTHESIS` | Worth testing but not proven fun or final. |
 | `EXAMPLE ONLY` | Illustration, never canon or implied content. |
 | `OPEN` | No answer exists yet; do not fill through convenience. |
+
+## 2026-08-25 owner direction: persistent Concept Decks and Brain Parts
+
+`APPROVED DIRECTION`: all abstract card concepts are known from the beginning. The
+current body provides exact physical expressions. Achievement-earned Concept Decks
+persist between attempts/runs and provide playstyle-specific dedicated cards through
+explicit atomic compatible exchanges. Boss/progression rewards instead provide rare
+persistent Brain Parts with paired visible buffs and nerfs. The two permanent paths
+must not duplicate the same unlock source or become one linear power ladder.
+
+Cards receive manually authored functional labels from their causal effects. Concept
+Deck and eligible Brain rules may reference those labels, but labels grant no power by
+themselves. Incompatible expressions remain known but Dormant. A Concept Deck cannot
+use a missing/Dormant/Invalid sacrifice to obtain a live gain; every removal, gain,
+and exact source validates before one atomic deck mutation.
+
+`PAPER RULE`: the active paper cadence is zero or one Preparation and zero or one
+Main per actor per round. One deliberately Readied Item Card remains in a separate
+lane and consumes its authored Preparation/Main timing. The Aug-22 growing-Mana,
+multi-card combo direction is superseded. Interceptable execution may invoke the
+defender's automatic reflex and/or a compatible prior Preparation. Player outgoing
+cards add no attack-side player QTE; player reflex input remains on incoming defence.
+
+At death/reset, earned Concept Decks and Brain Parts persist. The concept vocabulary
+was already known, so death creates no Memory Card. The current body, wounds, grafts,
+unaware world, and temporary instability reset according to the same-day contract.
+
+`OWNER-APPROVED DIAGNOSTIC BOUNDARY`: the first bounded catalogue uses configurable
+research limits of five cards per source, three functional labels, six causal mechanic
+atoms, one causal signature, two special gains per ordinary exchange, and one
+separately reviewed novel engine primitive per card. These are not production values.
+The full structural evidence method lives under
+`../research/card_scaling_guardrails/`.
 
 ## 2026-08-22 owner direction: goal-driven NPCs and reciprocal stakes
 
@@ -127,13 +160,11 @@ Evade; Block loss `ceil(D * 0.75 * GuardFactor)`; minimum `900 ms` cue; Block lo
 `250 ms` before contact; Parry `±90 ms`; Evade `±180 ms`; independent `100/140/200%`
 timing assist; bilateral `90 Will` with Parry loss `24/30/36` and zero passive recovery.
 
-## 2026-08-22 owner direction: Mana and kill-for-Blood reward
+## 2026-08-22 owner direction: kill-for-Blood reward; Mana cadence superseded
 
-`PAPER RULE`: the active demo's visible renewable turn/card resource is named `Mana`
-and remains separate from Blood. Mana's amount, refresh, carryover, individual card
-costs, combo order, and any bounded conversion relationship with Blood remain `OPEN`.
-Mana capacity increases as rounds pass so later rounds support larger card sequences;
-its starting amount, increment, cap, and refill remain `OPEN`.
+The former growing-Mana/multi-card portion of this entry is superseded by the
+2026-08-25 Preparation/Main and Attention direction above. `Mana` is not the active
+paper card cadence. The encounter-reward decision below remains current.
 
 `PAPER RULE`: killing the active-demo opponent grants a positive Blood reward sourced
 from that opponent and permanently loses that opponent's limb reward for the current
@@ -158,13 +189,12 @@ intended downstream route. After death, the same underlying opportunities return
 the player's remembered knowledge should support a better sequence. The game must
 not inspect current Blood and secretly remove, replace, or spawn the desired limb.
 
-`WORKING HYPOTHESIS`: growing Mana and monotonic finite-state pressure prevent an
-endless duel. A complete round should change at least one named finite fact—Blood,
-integrity, wound severity, finite item/charge, or capability—and defense or healing
-must not recreate the same complete state for free. Mana growth is the monotonic fact
-before its cap; at or beyond the cap, a non-renewable fact must be consumed or worsened
-each full round, and a temporary status cycle is insufficient. Exact recovery limits,
-maximum-round handling, and card-level anti-stall rules remain `OPEN`.
+`WORKING HYPOTHESIS`: monotonic finite-state pressure prevents an endless duel. A
+complete round should change at least one named finite fact—Blood, integrity, wound
+severity, finite item/charge, card lifecycle, or capability—and defence or healing
+must not recreate the same complete state for free. A temporary status cycle is
+insufficient. Exact recovery limits, maximum-round handling, and card-level anti-
+stall rules remain `OPEN`.
 
 This direction changes paper authority only. It does not modify the frozen simulator,
 runtime configuration, tests, dependencies, or executable content.
@@ -181,8 +211,8 @@ comparison package, not an automatically promoted answer.
 The freed player traverses one small Underground City/dungeon section and meets an
 actor blocking escape or progress. Exploration stays visible during a paused in-world
 interaction that combines dialogue, combat choices, cards, body, items, and state.
-Combat is one-versus-one and permits multiple legal body-sourced cards/combos within a
-turn budget. Cards target body regions. The active demo has no range/distance system.
+Combat is one-versus-one and permits at most one Preparation and one Main per actor
+per round. Cards target body regions. The active demo has no range/distance system.
 
 Body-part transfer occurs only from a living surrendered actor through a coerced
 survival bargain and visible Grafting Table transition. No corpse extraction occurs.
@@ -190,9 +220,9 @@ Killing the actor loses that part reward for the current day and instead grants 
 active-demo kill-Blood reward.
 
 Death repeats the same day for the aware protagonist. The original body and unaware
-world/NPCs reset. Default cards persist, attempt-learned cards are lost, exactly one
-Memory Card is produced, incompatible Memory Cards remain Dormant, run instability
-clears, and already-earned Brain buffs/bonuses remain as visible legal advantages.
+world/NPCs reset. The known card-concept vocabulary, earned Concept Decks, and earned
+Brain Parts persist; incompatible expressions remain Dormant; temporary instability
+clears. Death produces no Memory Card or card reward.
 
 This owner direction supersedes the active-demo paper requirements for a fixed Missing
 Right Arm/Damaged Torso start, three mandatory encounters, Clinch/Engaged/Distant, one
@@ -252,12 +282,13 @@ The first sample includes at minimum:
 - one city-gate boss confrontation that combines already-taught combat rules, tests
   the bounded combat-engagement hypothesis through human play, and opens escape when
   defeated;
-- the minimum hand/deck, body-source, target-region, turn-budget/combo, wound/Blood,
+- the minimum Concept Deck, Attention, Brain-Part, Readied-Item, body-source,
+  target-region, Preparation/Main, wound/Blood,
   kill-for-Blood, living surrender-for-limb, graft, Brain, and negotiation behavior
   required by those interactions;
 - one Grafting Table limb-transfer consequence before the gate boss, with a visible
   net capability gain and drawback used or deliberately declined in a later fight;
-- one same-day death/reset with the approved card/Memory/Brain persistence split;
+- one same-day death/reset with the approved Concept-Deck/Brain-Part persistence split;
 - one readable gate-boss defeat -> Underground City escape endpoint.
 
 The proof floor is not a hard encounter or content ceiling. Additional sample-scale
@@ -352,18 +383,18 @@ Decide in this order; a later decision may not disguise a missing earlier one:
 3. **Pre-boss fight roles and graft delta:** choose one versus two fights; define one
    exact donor limb, transfer/replacement cost, lost and gained capabilities, technique
    access, drawback, and the later ordinary-combat option it changes.
-4. **Turn/card contract:** define starting Mana, per-round growth, cap, refresh,
-   carryover, ordering, condition scale, target-region effects, defense inputs/windows,
-   Block loss, Will values, anti-stall rule, and the smallest Punch/Kick/Headbutt combo
-   set.
+4. **Turn/card contract:** define the bounded Anatomical Deck and Attention fixture,
+   Concept Deck exchange, Brain Parts, Preparation/Main costs, condition scale,
+   target-region effects, defence inputs/windows, Block loss, Will values, redraw,
+   Readied Item, and anti-stall rule.
 5. **Pre-boss actors and boss:** define motivation, threats, desired limb, starting
    Will, exceptional Will rules, and why refusal/resistance is still rational before
    Will breaks; separately define why the gate boss guards the exit, how both disclosed
    reward routes can defeat it, and promote, revise, or reject the no-new-fundamental-
    rule isolation hypothesis for its combat test.
-6. **Memory/Brain persistence:** define the Memory Card recipe, anti-empty-death rule,
-   and one bounded Brain buff that makes a repeated attempt easier without selecting
-   cards or fabricating body capability.
+6. **Concept Deck/Brain persistence:** define one achievement-earned Concept Deck,
+   one boss/progression Brain Part with a visible paired buff/nerf, their equipment
+   boundary, and one incompatible-body Dormant case. Death creates no card payload.
 7. **Evidence-led content budget:** start from the proof floor; add only rooms, cards,
    body states, animations, sounds, text, and tests that improve rule fidelity,
    comprehension, or evaluation of combat appeal.
@@ -376,9 +407,9 @@ Decide in this order; a later decision may not disguise a missing earlier one:
 |---|---|---|
 | D0 — current | Closed sample-demo paper contract and acceptance matrix | Every item 1-6 above is decided or explicitly excluded; every encounter owns a unique evidence question; no AI-invented defaults |
 | D1 | Captive Guard concession slice | Refusal remains captivity, attack lethality is legible, the accepted loss is understood, and the D0-approved concession causes its declared weaker-but-free playable state; if D0 approves multiple branches, each must pass; at least one accepted branch is required |
-| D2 | Pre-boss limb fight A | Player can read source, condition, target, cost/combo, defense, and consequences; kill and living-surrender routes create the advertised Blood/limb choice |
+| D2 | Pre-boss limb fight A | Player can read source, condition, target, Preparation/Main cost, Concept Deck/Brain effect, defence, and consequences; kill and living-surrender routes create the advertised Blood/limb choice |
 | D3 | Grafting Table plus selected downstream proof | Graft produces an exact gain, drawback, and legality change; if fight B exists it proves these in ordinary combat, otherwise the gate-boss evidence is explicitly marked as confounded; the no-graft/Blood route remains viable |
-| D4 | Same-day death/reset loop | Body/world/default/learned/Memory/instability/Brain persistence all match the paper contract and play can continue |
+| D4 | Same-day death/reset loop | Body/world/temporary-instability reset and Concept-Deck/Brain-Part/knowledge persistence match the paper contract and play can continue |
 | D5 | Connected sample and informal external playtest | In a fresh reproducible build with no unresolved P0/P1 rule-fidelity, comprehension, progression, or softlock blocker, real input reaches Guard outcome -> selected limb fight(s) -> graft consequence -> gate boss -> escape/reset; raw observations record comprehension, combat appeal, replay/change-of-plan behavior, facilitator intervention, and observed duration without claiming market validation |
 
 Rule fidelity, comprehension, and combat appeal are separate evidence classes. Tests
@@ -407,21 +438,24 @@ traversal proposal are the bounded `WORKING HYPOTHESIS` above, not full-game can
 Keep these responsibilities separate:
 
 - **Body state:** current anatomy, wounds, grafts, integration, capability, and loss.
-- **Technique knowledge:** what has been discovered or learned.
-- **Active deck:** what compatible knowledge is deliberately prepared.
-- **Brain progression:** how the current hand/body relationship is processed.
+- **Card-concept vocabulary:** the abstract techniques known from the beginning.
+- **Concept Deck:** which earned playstyle chassis and atomic exchanges shape the
+  current Anatomical Deck.
+- **Brain Parts:** how labelled Attention access or one execution relationship is
+  modified through a paired buff/nerf.
 - **Run/meta state:** what persists across failure or death.
 - **Narrative knowledge:** what the player/character understands about the loop.
 
-`APPROVED DIRECTION`: default cards persist through death; technique cards learned in
-the attempt do not. Death generates one Memory Card, which remains Dormant when its
-body-source requirement is unavailable after reset. Exact acquisition and Memory Card
-generation/storage remain `OPEN`.
+`APPROVED DIRECTION`: the abstract card-concept vocabulary is known from the
+beginning. Achievement-earned Concept Decks persist through death; incompatible
+expressions remain Dormant under the reset body. Death generates no Memory Card.
+Exact achievement conditions, equipped deck count, and save/storage rules remain
+`OPEN`.
 
-`APPROVED DIRECTION`: run-derived Brain instability resets on death, while already-
-earned persistent Brain buffs/bonuses remain and visibly ease later attempts. Brain
-progression delivery—tree, collectible parts, hybrid, or another wrapper—and exact
-buff content remain `OPEN`. Permanent Brain Parts are not the only approved form.
+`APPROVED DIRECTION`: run-derived temporary Brain/body instability resets on death,
+while earned Brain Parts persist. Brain Parts normally use the boss/progression path
+and expose a paired buff and nerf. Exact catalogue, equipped count, reward conditions,
+and numerical effects remain `OPEN`.
 
 ## Current compact decision ledger
 
@@ -442,23 +476,24 @@ buff content remain `OPEN`. Permanent Brain Parts are not the only approved form
 | DWF-0.1 balance set | Body-source tags, Block formula, timing/accessibility grid, bilateral Will `90` and `24/30/36` Parry loss | Working hypothesis; paper comparison only |
 | NPC agency | Faction doctrine -> role/duty -> individual Goal/Need/RedLine/Claim; capability is separate and `NoClaim` is valid | Approved direction plus working faction families; exact actors open |
 | G1 Guard | Failing guarding arm; accepts Full Right Arm or `20 Blood`; exact `70 -> 60/50` release branches | Working hypothesis; owner promotion open |
-| Turn cadence | Visible Mana grows by round and permits larger one-turn sequences/combos | Approved direction; cadence/values open |
+| Turn cadence | Zero/one Preparation plus zero/one Main; hold/drop/commit and wait for interception | Paper rule; exact costs/lifecycle open |
 | Encounter reward split | Kill grants Blood and loses limb; accepted living surrender grants limb and no kill-Blood reward | Paper rule; yield/presentation open |
 | Same-day opportunity learning | Wrong sequencing may separate Blood from desired-limb access; reset restores the same underlying opportunities without wallet-sensitive loot | Approved direction; exact route open |
-| Duel anti-stall | Growing Mana plus finite irreversible state pressure; no free full-state loop | Working hypothesis; exact rule open |
+| Duel anti-stall | Finite irreversible state pressure; no free full-state loop | Working hypothesis; exact rule open |
 | Procedures | Exact-source reservation and atomic started chains | Paper rule |
 | Catastrophic Blood survival | Exact eligible limb or death; net 12; no Torso rescue | Paper rule |
-| Deck ownership | Player-authored bounded active deck | Approved doctrine |
-| Brain | Deterministic current-hand modifier; visible power/control tradeoff | Approved doctrine |
+| Concept Decks | Achievement-earned persistent playstyle chassis with dedicated cards and atomic compatible exchanges | Approved direction; content/counts open |
+| Brain Parts | Boss/progression persistent paired buff/nerf affecting declared Attention access or one execution relationship | Approved direction; content/counts open |
+| Attention | Imperfect Brain-configured access to the constructed Anatomical Deck; four-slot weighted fixture only | Direction plus working hypothesis |
 | Encounter outcome | State/motivation-derived, potentially mutual | Direction plus survey prototype |
-| Default cards | Punch, Kick, Headbutt; body/condition/target/cost required | Paper rule; values open |
+| Starting concepts | Punch, Kick, Headbutt are known; concrete expressions still require body/condition/target/cost | Paper rule; values open |
 | Demo objective/time | Defeat the Underground City gate boss and escape; no fixed acceptance duration; approximately 30 minutes is a soft planning reference | Objective approved; duration observed from play |
 | Demo proof floor | Guard concession -> one or two pre-boss limb fights -> graft consequence -> integrated gate boss -> escape or same-day reset | Approved direction; exact one/two distribution and content open |
 | Demo decision use | Owner self-play plus informal friend play informs whether to pursue full-time development or investors | Owner play is internal evidence; friends are informal external convenience evidence; neither proves market or investor readiness |
 | Full-game run | Undefined | Open |
 | Demo world structure | One bounded connected Underground City/dungeon section | Working hypothesis |
 | Full-game world structure | Undefined | Open |
-| Demo failure/restart | Same aware protagonist/day; body/world reset; asymmetric card/Memory/Brain persistence | Paper rule |
+| Demo failure/restart | Same aware protagonist/day; body/world reset; Concept Decks, Brain Parts, and knowledge persist; no death card reward | Paper rule |
 | Living limb acquisition | Surrender bargain plus Grafting Table; killing selects Blood instead and no corpse-limb extraction occurs | Paper rule |
 | Full-game death/persistence | Demo rule approved; full-game expansion undefined | Partly open |
 | Final narrative truth | Undefined | Open |
@@ -471,7 +506,7 @@ These remain important but are downstream of the demo decision order above:
 2. What constitutes a run, what is its goal, and what connects its pressures?
 3. How does the approved demo same-day persistence contract expand across the full game?
 4. What world/topology/presentation structure supports that run?
-5. What exact deck cadence and embodied-instability model make repeated decisions
+5. What exact Concept Deck/Attention cadence and embodied-instability model make repeated decisions
    enjoyable rather than administrative?
 6. What final narrative truth recontextualizes play without replacing it?
 

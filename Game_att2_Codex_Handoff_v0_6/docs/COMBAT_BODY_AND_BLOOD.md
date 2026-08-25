@@ -1,6 +1,6 @@
 # Game att2 - Combat, Body, and Blood
 
-Status date: 2026-08-23
+Status date: 2026-08-25
 
 Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. PROVISIONAL VALUES ARE LABELLED;
 CURRENT SIMULATOR RULES REMAIN IN DOCUMENT 03. NO MIGRATION OR RUNTIME APPROVAL.**
@@ -132,6 +132,12 @@ non-Blood fatality.
 on player attack cards. Playing `Punch`, `Kick`, `Headbutt`, or another offensive card
 declares and pays for the attack; it does not start an attack-side QTE.
 
+Every card declares whether its execution is interceptable. The defender's automatic
+reflex and any compatible previously played Preparation resolve during that action.
+For a player outgoing card, enemy interception is automatic/state-derived or
+previously prepared; it does not create a player attack QTE. For an incoming enemy
+card, the player receives the bounded defence event below.
+
 Every incoming attack must expose one redundant threat cue before its consequence:
 
 | Cue | Meaning | Legal reflex routes |
@@ -167,8 +173,8 @@ chosen preparation/stance, if any
 -> final recipient, integrity, wound, Blood, and capability consequences
 ```
 
-Block, Parry, and Evade are response routes, not hand cards and do not spend Mana or a
-voluntary card play. The incoming cue and current body/build determine legality. An
+Block, Parry, and Evade are response routes, not hand cards and do not consume the
+ordinary Preparation/Main budget. The incoming cue and current body/build determine legality. An
 unusable or incompatibly committed required source removes its route. Prepared
 defense and its linked reflex are one defense, not duplicate reductions.
 
@@ -201,7 +207,7 @@ takes zero structural loss and the guarding source pays the previewed amount. Th
 closes the one-Integrity disposable-shield exploit without an invented overflow rule.
 Block itself creates no random wound or Blood loss; only an attack's disclosed contact
 profile can apply such a consequence to the guarding source. There is no additional
-Stamina, Mana, repeat multiplier, or hidden timing shrink.
+generic card-energy, repeat multiplier, or hidden timing shrink.
 
 The proposed normal-speed contact contract is a minimum `900 ms` cue, Block held by
 `250 ms` before contact, Parry within `±90 ms`, and Evade within `±180 ms`. The player
@@ -241,6 +247,21 @@ Will is the explicit combat-surrender state, not a decorative second health bar.
 mutations and break must be shown causally, and breaking it does not itself damage,
 sever, or transfer a limb. Exact refusal behavior, exceptional actors, dialogue
 effects, and whether any non-Parry event can change Will remain `OPEN`.
+
+### Player withdrawal, surrender, and bargain
+
+`APPROVED DIRECTION`: player defeat is not synonymous with every non-victory encounter
+resolution. The player may retreat, surrender, or bargain when a legal route and
+counterparty exist. Such a result preserves life and is not an absolute defeat, but it
+must exact the disclosed current-body, Blood, item, opportunity, relationship, or
+other authored consequence that makes the opponent accept it. The system may not
+invent the player's most valuable punishment after the choice.
+
+Player death remains the terminal physical failure for the current attempt and invokes
+the same-day/full-run reset contract after named survival checks. Exact withdrawal
+availability, claim enforcement, body-state cost, persistence, and later consequences
+remain `OPEN` per encounter. The captive Guard concession is the current bounded
+example, not a universal surrender price.
 
 `WORKING HYPOTHESIS DWF-0.1`: Will is bilateral and means an actor's confidence that
 continuing the current conflict can still protect its declared goal and Red Line.
@@ -321,16 +342,19 @@ replaced/filled body slot and procedure cost
 -> one changed option in a later pre-boss fight or the gate-boss confrontation
 ```
 
-For the cleanest first causal proof, the relevant technique knowledge exists before
-the graft but is source-incompatible. The graft supplies physical permission only;
-the player must deliberately place the newly compatible technique in the active deck
-at the table. The Brain may not learn it, auto-slot it, or guarantee its draw. A
-non-card source capability must also change so the graft consequence can be observed
-even when that technique is not drawn immediately.
+For the cleanest first causal proof, the relevant abstract card concepts are known
+from the beginning but source-incompatible. The graft supplies physical permission;
+the player then resolves the selected Concept Deck against the new body at the table.
+Compatible atomic exchanges may make a dedicated expression part of the Anatomical
+Deck. The Brain may influence declared Attention access only after construction; it
+may not learn the concept, bypass the exchange, restore a missing source, or guarantee
+the draw. A non-card source capability must also change so the graft consequence can
+be observed even when that card is not currently in Attention.
 
-Negative cases are part of the proof: without the graft the technique stays illegal;
-with the graft but without known/slotted technique it does not appear as a card; and a
-lost or ruined source makes it Dormant/Invalid again. The kill-for-Blood route and the
+Negative cases are part of the proof: without the graft the physical expression stays
+Dormant; with the graft but without a valid selected Concept Deck exchange its special
+card does not enter the Anatomical Deck; and a lost or ruined source makes it
+Dormant/Invalid again. The kill-for-Blood route and the
 living-limb route must each retain a disclosed way to defeat the gate boss; neither
 reward may be a disguised mandatory key. Exact limb, technique, cost, drawback, and
 the two boss routes remain `OPEN`.

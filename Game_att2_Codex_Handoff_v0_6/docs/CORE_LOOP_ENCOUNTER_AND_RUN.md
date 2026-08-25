@@ -1,6 +1,6 @@
 # Game att2 - Core Loop, Encounter, and Run
 
-Status date: 2026-08-23
+Status date: 2026-08-25
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. THE UNDERGROUND-CITY MINI-GAME HAS A
 BOUNDED SAME-DAY LOOP AND AN ESCAPE/GATE-BOSS END DIRECTION; DETAILED PACING AND THE
@@ -31,44 +31,44 @@ For the current one-versus-one strategic model:
 
 ```text
 start-of-round scheduled effects and forced checks
--> decision refresh
--> show readable hostile intent and current Mana budget
--> player selects an ordered sequence of legal cards and exact targets
--> preview total cost, source requirements, combo relationship, and consequences
--> commit one card at a time or the disclosed sequence
--> revalidate and resolve in declared order
--> after each resolved card, mutate state and recompute later-card legality
--> cancel a now-illegal later card without fabricating a substitute
--> declare the opponent's legal action, source, target, and Yellow/Red cue
--> Yellow: choose Block or attempt Parry; Red: attempt Evade
+-> Decision Refresh for Spent/Invalid Attention positions
+-> show readable hostile intent, current Attention, and Readied Item Card
+-> optionally hold/drop one legal Preparation and exact target
+-> hold/drop one legal Main and exact target
+-> preview sources, costs, Concept Deck/Brain effects, interception, and consequences
+-> lock and revalidate the Preparation, then the Main
+-> resolve each started atomic action and recompute later legality
+-> during an interceptable action, resolve the defender's automatic reflex and any
+   compatible previously played Preparation
+-> for an incoming Yellow attack choose Block or attempt Parry; for Red attempt Evade
 -> resolve the defense result, final recipient, and body consequences
 -> reduce opponent Will on a successful Parry and test for living surrender
--> expiry and next-turn refresh
+-> expiry and next-round refresh
 ```
 
-Outgoing attack cards do not contain QTEs. Reflex-defense events occur only inside
-incoming-action resolution and are not extra voluntary plays. Yellow permits Block or
-Parry; Red requires Evade. Block redirects the attack from its declared target into a
-chosen legal guarding part and weakens that part. Successful Parry prevents the
-incoming damage and reduces enemy Will; successful Evade prevents a Red consequence
-without creating reposition or range state. Exact inputs, timing windows, source
-requirements, Block loss, Will values, and assistance remain `OPEN`.
+Cards declare whether their execution is interceptable. The defender's automatic
+reflex and/or previously played compatible Preparation resolves inside that action
+and is not another voluntary play. A player attack has no attack-side player QTE; an
+enemy interruption is state-derived or previously prepared. For an incoming player-
+defence event, Yellow permits Block or Parry and Red requires Evade. Block redirects
+the attack from its declared target into a chosen legal guarding part and weakens that
+part. Successful Parry prevents the incoming damage and reduces enemy Will;
+successful Evade prevents a Red consequence without creating reposition or range
+state. Exact inputs, timing windows, source requirements, Block loss, Will values,
+and assistance remain `OPEN`.
 
 A started atomic action completes; later source damage changes future capability
-rather than retroactively erasing the action. The player may use as many cards as the
-budget permits, and a combo completes within the same turn. The resource is named
-`Mana`; its budget, refresh, carryover, whether a sequence locks all at once,
-relationship to Blood, and exact enemy cadence are `OPEN`. Mana capacity increases as
-rounds pass; the starting capacity, increment, cap, and refresh behavior remain
-`OPEN`.
+rather than retroactively erasing the action. The ordinary budget is zero or one
+Preparation and zero or one Main per actor per round. Attention capacity and a Readied
+Item never add an ordinary play. The Aug-22 growing-Mana/multi-card sequence is
+superseded for the active paper design.
 
-`WORKING HYPOTHESIS`: growing Mana is the readable escalation clock, while causal
-state loss prevents stalling. A complete round must not reproduce the same meaningful
-combat state through a free defense/heal cycle. Before the Mana cap, each round
-advances the visible Mana clock. At or beyond the cap, each full round must consume
-or worsen a non-renewable fact such as Blood, integrity, wound severity, finite
-item/charge, or capability; a temporary status that later expires is insufficient.
-Exact exceptions, recovery limits, and any maximum-round fallback remain `OPEN`.
+`WORKING HYPOTHESIS`: causal state loss prevents stalling without a growing Mana
+clock. A complete round must not reproduce the same meaningful combat state through a
+free defence/heal/redraw cycle. Repeated play must consume or worsen a named finite
+fact such as Blood, integrity, wound severity, a finite item/charge, a card lifecycle
+state, or capability. A temporary status that later expires is insufficient by
+itself. Exact recovery limits and any maximum-round fallback remain `OPEN`.
 
 ## Encounter meaning
 
@@ -221,8 +221,8 @@ claim-versus-`Defy` rule.
 The success endpoint is decided at direction level; duration is observed rather than
 accepted against a fixed target. The failure contract is decided: death resets the
 body and unaware world to the same day's start;
-the protagonist remembers; default cards remain; attempt-learned cards are lost; one
-Memory Card is created; run instability clears; persistent Brain buffs remain.
+the protagonist remembers; earned Concept Decks and Brain Parts remain; the known
+concept vocabulary remains; body/world state and temporary instability reset.
 
 ### Minimum interaction responsibilities
 
@@ -266,16 +266,18 @@ sequence the same opportunities better.
 Persistence is asymmetric:
 
 - protagonist/narrative knowledge persists;
-- default cards persist;
-- cards learned during the failed attempt do not persist;
-- death generates exactly one Memory Card;
-- a Memory Card remains Dormant if the reset body cannot source it;
-- run-derived Brain instability resets;
-- already-earned persistent Brain buffs/bonuses remain and make later attempts easier
-  through a visible legal advantage.
+- the complete abstract card-concept vocabulary remains known;
+- earned achievement-based Concept Decks persist;
+- earned boss/progression Brain Parts persist;
+- a retained Concept Deck expression remains Dormant if the reset body cannot source
+  it and produces no replacement reward;
+- run-derived temporary Brain/body instability resets;
+- current flesh, grafts, wounds, encounter state, and unaware-world state reset under
+  the same-day contract.
 
-Memory Card generation/content, Brain buff catalogue, starting-body rule, storage,
-save boundary, and exact numerical advantage remain `OPEN`.
+Death creates no Memory Card. Exact achievement conditions, Brain-Part rewards,
+equipped persistent loadouts, starting-body rule, save boundary, and full-game reset
+scope remain `OPEN`.
 
 ## Full-game run structure: OPEN
 
@@ -301,6 +303,7 @@ should masquerade as an answer to this missing structure.
 
 The current gate is to close the remaining `OPEN` choices needed for the smallest
 Guard-concession, one-or-two-fight limb/graft proof, integrated gate-boss escape, and
-same-day reset contract. Full Brain content, a broad dialogue system, content that
-does not answer one of those proof questions, final content, and polish must not be
-built first.
+same-day reset contract. The bounded Concept Deck/Brain diagnostic must use the
+approved scaling guardrails; full card/Brain content, a broad dialogue system, content
+that does not answer one of those proof questions, final content, and polish must not
+be built first.

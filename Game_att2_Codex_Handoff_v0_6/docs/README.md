@@ -57,6 +57,8 @@ outside game-design consolidation.
 | `25_VISUAL_INTERACTION_LAB_RECORD_v0_1.md` | Visual-lab plan, fidelity result, and deferred gate |
 | `encounter_3/` | Bounded paper-test packet; runtime remains blocked |
 | `../research/defense_will_npc_balance_v0_1.md` | DWF-0.1 sourced Block/timing/Will/NPC comparison, exact paper calculator, and reject criteria; all values remain working hypotheses |
+| `../research/brain_synthesis/` | Deterministic structural comparison that informed the Aug-25 Concept Deck/Attention/Brain synthesis; synthetic evidence only |
+| `../research/card_scaling_guardrails/` | Owner-approved diagnostic scaling boundaries plus atomic exchange, duplicate/dominance, and t-way coverage validator |
 
 Research evidence cannot prove fun, accessibility, fairness, balance, or production
 readiness and does not override the living design set.
