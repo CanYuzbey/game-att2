@@ -1,0 +1,206 @@
+# Demo Encounter Roster v0.1 — Owner decisions recorded 2026-08-27
+# STATUS: WORKING HYPOTHESIS for paper comparison
+# PRIORITY NOTE: Owner confirmed video is first priority, demo second.
+# This roster serves both: video needs characters/motivations,
+# demo needs exact stats. Video can use broad strokes from this file.
+
+meta:
+  priority: video_first_demo_second
+  fight_count: 1  # Only Fight A, no Fight B
+  will_broken_consequence: enforced_claim  # No Defy option
+  headbutt_will_effect: per_character  # Not a flat bonus; authored per actor
+
+# ─── ENCOUNTER 1: GUARD ──────────────────────────────────────────────────────
+
+guard:
+  name: "Guard"
+  faction: warden
+  narrative: "Kapı gardiyanı. Kendi sağ kolu bozuluyor, vardiya denetimi yakın."
+
+  # If player fights: certain loss (bound, lethal disadvantage)
+  # Negotiation is mandatory
+  combat_if_provoked: auto_loss_player_bound
+
+  purpose:
+    goal: "Vardiya denetiminden önce savaşabilir durumda kalmak"
+    need: "Bozulan kolunu tedavi etmek (klinik fiyatı: 20 Blood)"
+    want: "Oyuncunun Full Right Arm'ı"
+    red_line: "Strained/uyumsuz parça kabul etmez; savunmasız kalmaz"
+    leverage: "Bağlı esir, oda anahtarı, kontrollü çıkış"
+    primary_claim: "Full Right Arm"
+    counterclaim: "20 Blood"
+    concession: "Kontrollü çıkarım, bağları çözme, kapıyı açma"
+    fallback: "Red → esaret devam; saldırı → ölümcül tırmanma"
+
+  release_branches:
+    blood_payment:
+      cost: 20
+      player_blood_after: 50
+      player_body: intact
+      strategic_note: "Düşük reserve ama tam combat"
+    arm_payment:
+      cost: right_arm
+      player_blood_after: 60  # 70 - 10 (Clean Stump immediate)
+      player_body: missing_right_arm
+      stump: { type: clean, controlled_ticks: 2 }
+      strategic_note: "1 Punch/Block/Parry kaynağı kayıp"
+
+# ─── ENCOUNTER 2: FIGHT A — AVCI (HUNTER) ────────────────────────────────────
+
+fight_a:
+  name: "Avcı"
+  faction: hunter
+  narrative: "Bağımsız ödül avcısı. Kaçan esirlere ödül konmuş, yakalamaya çalışıyor."
+
+  purpose:
+    goal: "Kaçan esirin kanıtını getirerek ödülü almak"
+    need: "Ödülün kendisi (Blood veya kaynak)"
+    want: "Kolay yakalama — dövüşmeden teslim"
+    red_line: "Kendi bacaklarını kaybetmek (kaçış ve hareket aracı)"
+    leverage: "Oyuncunun kaçak statüsü, fiziksel üstünlük"
+    primary_claim: "Oyuncuyu yakalayıp geri götürmek"
+    concession: "Will kırılırsa: ödülden vazgeçer, özel bacaklarını teslim eder"
+    fallback: "Kaçış dener"
+
+  body:
+    head:      { max_integrity: 20 }
+    torso:     { max_integrity: 35 }
+    left_arm:  { max_integrity: 25 }
+    right_arm: { max_integrity: 25 }
+    legs:      { max_integrity: 40 }  # Güçlendirilmiş — donor uzuv
+    core:      { max_integrity: 30 }
+  total_integrity: 175
+
+  blood: 65
+  will: 90
+
+  attacks:
+    - name: "Swift Kick"
+      source: legs
+      impact: 10
+      target: player_legs_or_torso
+      cue: yellow  # Block/Parry possible
+      commitment_tier: 1  # Routine
+
+    - name: "Tackle"
+      source: legs
+      impact: 14
+      target: player_torso
+      cue: red  # Evade only
+      commitment_tier: 2  # Committed
+
+    - name: "Quick Jab"
+      source: right_arm
+      impact: 6
+      target: player_arms_or_head
+      cue: yellow
+      commitment_tier: 1
+
+  # Will effect: per-character authored
+  headbutt_will_bonus: 0  # Avcı has no special Headbutt vulnerability
+
+  technique_candidates:  # Max 2 observable
+    - name: "Shoulder Check"
+      source_requirement: "torso + legs (both Full/Strained)"
+      mana_cost: 3
+      impact: 16
+      decision_test: "Yüksek commitment çoklu kaynak saldırısı"
+      note: "EXAMPLE — exact values need balancing"
+
+    - name: "Pin"
+      source_requirement: "legs (Full/Strained)"
+      mana_cost: 2
+      impact: 4
+      effect: "Düşmanın commit etmiş kaynağının recovery'sini 1 tur geciktirir"
+      decision_test: "Kaynak kilitleme vs doğrudan hasar tercihi"
+      note: "EXAMPLE — exact values need balancing"
+
+  donor_limb: legs
+  kill_reward: 15  # Blood
+  surrender_reward: legs_graft  # 0 Blood, legs transfer
+
+# ─── GRAFT: AVCI'NIN BACAKLARI ───────────────────────────────────────────────
+
+graft:
+  slot: legs
+  replaced: "Mevcut bacakları değiştirir"
+  source_actor: fight_a
+
+  capability_delta:
+    physical_permission: "Shoulder Check tekniğini source-legal yapar"
+    draw_independent_advantage: "Evade penceresi genişler (±180ms → ±220ms)"
+    physical_drawback: "Ağır bacaklar: Kick Mana maliyeti +1 (2 → 3 Mana)"
+    deck_swap: "1 default Kick → Shoulder Check (öğrenilmişse)"
+
+  grafting_table:
+    max_technique_study: 1  # Learn 1 from observed candidates
+    max_deck_swap: 1        # One-for-one replacement
+    surgical_blood_cost: 0  # OPEN — not yet decided
+    procedure: "Grafting Table geçişi — detaylar OPEN"
+
+# ─── ENCOUNTER 3: GATE BOSS — KAPI GARDİYANI ─────────────────────────────────
+
+gate_boss:
+  name: "Kapı Gardiyanı"
+  faction: warden
+  narrative: "Underground City çıkış kapısının resmi gardiyanı. Kurumsal görev."
+
+  purpose:
+    goal: "Yetkisiz geçişi engellemek"
+    need: "Görev mandası devam ettiği sürece kapıyı tutmak"
+    want: "Düzenin korunması — gereksiz şiddet istemez ama görev emreder"
+    red_line: "Görevi terk etmek; izinsiz geçiş vermek"
+    leverage: "Kapı kontrolü, fiziksel üstünlük, kurumsal yetki"
+    primary_claim: "Oyuncuyu durdurmak / geri göndermek"
+    concession: "Will kırılırsa: 'Bugünlük geçebilirsin' — kapıyı açar"
+    fallback: "Tüm kaynakları tükenirse combat-incapacitated"
+
+  body:
+    head:      { max_integrity: 25 }
+    torso:     { max_integrity: 55 }  # Boss dayanıklı
+    left_arm:  { max_integrity: 30 }  # Block kaynağı
+    right_arm: { max_integrity: 35 }  # Ana saldırı kaynağı
+    legs:      { max_integrity: 40 }  # Charge kaynağı
+    core:      { max_integrity: 35 }
+  total_integrity: 220
+
+  blood: 80
+  will: 90
+
+  attacks:
+    - name: "Heavy Strike"
+      source: right_arm
+      impact: 14
+      target: player_arm_or_torso
+      cue: yellow
+      commitment_tier: 2  # Committed
+      will_on_parry: 30   # Committed tier Parry loss
+
+    - name: "Charge"
+      source: legs
+      impact: 12
+      target: player_legs
+      cue: red  # Evade only
+      commitment_tier: 2
+
+    - name: "Sweep"
+      source: legs
+      impact: 8
+      target: player_torso
+      cue: yellow
+      commitment_tier: 1
+      frequency: "Her 2 turda 1"
+      will_on_parry: 24  # Routine tier Parry loss
+
+  # Will effect: per-character authored
+  headbutt_will_bonus: 3  # Boss is vulnerable to Headbutt Will pressure
+
+  isolation_rule: "Yeni temel combat kuralı tanıtmaz"
+  dual_viability:
+    kill_route: "Boss'u öldür → 15 Blood → kapıdan kaç"
+    surrender_route: "Boss Will'ini kır → Enforced Claim → kapı açılır → kaç"
+
+  # Graft advantage for surrender route:
+  # Shoulder Check (16 Impact, Committed) gives better Parry Will damage (30)
+  # Wider Evade window (±220ms) helps dodge Charge (Red cue)
+  # But Kick costs 3 Mana now, limiting combo flexibility

@@ -15,6 +15,30 @@ ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
 | `EXAMPLE ONLY` | Illustration, never canon or implied content. |
 | `OPEN` | No answer exists yet; do not fill through convenience. |
 
+## 2026-08-24 recorded comparison: tools, starter deck, and learning
+
+At the owner's request, the following package is preserved as a `WORKING HYPOTHESIS`
+for paper comparison, not promoted authority:
+
+- one pre-card `Tool Window` per round; use zero or one owned tool, spend no Mana,
+  consume a finite charge, and commit its exact source until cleanup;
+- five proposed starter technique types in an eight-instance deck:
+  `Punch x2`, `Kick x2`, `Headbutt x2`, `Brace x1`, `Feint x1`;
+- opening hand and hand cap four, retain at most one, discard the rest, then draw to
+  four; Dormant cards occupy hand space and receive no automatic replacement;
+- one-for-one deck editing at a Grafting Table, with provisional copy and composition
+  limits rather than deck growth;
+- `Observe -> Candidate -> Learn -> Slot -> Prove -> Memory`, bounded in the demo to
+  at most two visible candidates, one Technique Study, one table swap, and one learned
+  technique carried into the gate boss;
+- a twelve-technique authored comparison budget: five proposed starters plus up to
+  seven learned candidates. Candidate names remain `EXAMPLE ONLY`.
+
+This record excludes random three-card rewards, card rarity, and card upgrades from
+the comparison. Exact card values, legal sources, tool charges/effects, acquisition
+actors/prices, catalogue content, balance, comprehension, and fun remain unproven.
+No simulator, visual lab, engine project, executable content, or product claim changes.
+
 ## 2026-08-24 owner direction: concept video as the first communication artifact
 
 `APPROVED DIRECTION`: while the bounded playable demo remains the longer-term
@@ -472,10 +496,12 @@ buff content remain `OPEN`. Permanent Brain Parts are not the only approved form
 | Duel anti-stall | Growing Mana plus finite irreversible state pressure; no free full-state loop | Working hypothesis; exact rule open |
 | Procedures | Exact-source reservation and atomic started chains | Paper rule |
 | Catastrophic Blood survival | Exact eligible limb or death; net 12; no Torso rescue | Paper rule |
-| Deck ownership | Player-authored bounded active deck | Approved doctrine |
+| Deck ownership | Player-authored bounded active deck; current comparison is exactly 8 cards, hand 4, retain 1, and one-for-one table swaps | Approved doctrine; numerical cadence is a working hypothesis |
+| Tool use | Proposed pre-card Tool Window: zero or one owned finite-charge tool, no Mana, exact source committed | Working hypothesis; tools, values, and runtime open |
 | Brain | Deterministic current-hand modifier; visible power/control tradeoff | Approved doctrine |
 | Encounter outcome | State/motivation-derived, potentially mutual | Direction plus survey prototype |
-| Default cards | Punch, Kick, Headbutt; body/condition/target/cost required | Paper rule; values open |
+| Default cards | Punch, Kick, Headbutt remain paper defaults; Brace and Feint are proposed additions to the 8-card comparison | Paper rule for the original three; additions/values are working hypotheses |
+| Technique acquisition | Observe -> Candidate -> Learn -> Slot -> Prove -> Memory; one study and one swap per table comparison | Working hypothesis; exact content, actors, and prices open |
 | Demo objective/time | Defeat the Underground City gate boss and escape; no fixed acceptance duration; approximately 30 minutes is a soft planning reference | Objective approved; duration observed from play |
 | Demo proof floor | Guard concession -> one or two pre-boss limb fights -> graft consequence -> integrated gate boss -> escape or same-day reset | Approved direction; exact one/two distribution and content open |
 | Demo decision use | Owner self-play plus informal friend play informs whether to pursue full-time development or investors | Owner play is internal evidence; friends are informal external convenience evidence; neither proves market or investor readiness |

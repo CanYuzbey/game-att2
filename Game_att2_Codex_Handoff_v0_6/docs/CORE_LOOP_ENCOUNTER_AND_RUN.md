@@ -1,6 +1,6 @@
 # Game att2 - Core Loop, Encounter, and Run
 
-Status date: 2026-08-23
+Status date: 2026-08-24
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. THE UNDERGROUND-CITY MINI-GAME HAS A
 BOUNDED SAME-DAY LOOP AND AN ESCAPE/GATE-BOSS END DIRECTION; DETAILED PACING AND THE
@@ -53,6 +53,12 @@ chosen legal guarding part and weakens that part. Successful Parry prevents the
 incoming damage and reduces enemy Will; successful Evade prevents a Red consequence
 without creating reposition or range state. Exact inputs, timing windows, source
 requirements, Block loss, Will values, and assistance remain `OPEN`.
+
+`WORKING HYPOTHESIS` recorded for later comparison: insert one bounded `Tool Window`
+after decision refresh, hand draw, and hostile-intent reveal but before the player's
+card sequence. The player may use zero or one owned tool; it costs no Mana, consumes a
+finite charge, and commits its exact physical source until cleanup. This is a proposed
+ordering clarification, not a promoted turn rule or runtime behavior.
 
 A started atomic action completes; later source damage changes future capability
 rather than retroactively erasing the action. The player may use as many cards as the

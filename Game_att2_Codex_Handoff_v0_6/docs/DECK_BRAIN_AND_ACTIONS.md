@@ -1,6 +1,6 @@
 # Game att2 - Deck, Brain, and Actions
 
-Status date: 2026-08-23
+Status date: 2026-08-24
 
 Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. OWNERSHIP, DEFAULT/LEARNED DEATH
 PERSISTENCE, MEMORY CARD, AND BRAIN RESET DIRECTION ARE APPROVED; VALUES, CONTENT,
@@ -55,28 +55,93 @@ These are persistent default techniques, not rewards selected by the Brain. A ca
 whose source requirement is not met remains visible but Dormant/unusable. Starting
 body compatibility is not guaranteed.
 
-### D0 six-card/four-hand comparison — working hypothesis
+### D0 eight-card/four-hand comparison — working hypothesis
 
-The smallest concrete cadence to compare, not a promoted rule, is:
+On 2026-08-24 the owner asked that the following proposal be retained for later
+comparison. It replaces the earlier `6/4` proposal as the current comparison surface;
+it does **not** promote deck cadence, card values, or acquisition to paper rules.
 
-- starter library: the three approved default techniques above;
-- starter active deck: six instances — `Punch x2`, `Kick x2`, `Headbutt x2`;
+The proposed starter package contains five technique types and eight instances:
+
+| Technique | Instances | Proposed role | Proposed minimum contract |
+|---|---:|---|---|
+| `Punch` | 2 | low-commitment arm attack | approved default; exact values still open |
+| `Kick` | 2 | leg-sourced attack | approved default; exact values still open |
+| `Headbutt` | 2 | head-sourced attack | approved default; exact values still open |
+| `Brace` | 1 | preparation for a stronger next Block | `1 Mana`; reserve one Full/Strained guarding Arm; improve its next legal `GuardFactor` by one comparison step (`1.20 -> 1.00`, `1.00 -> 0.80`, `0.80 -> 0.80`); expire after the enemy action; never automate Block or modify Parry |
+| `Feint` | 1 | same-turn setup for a second source | `1 Mana`; commit one Full/Strained attack-capable source and exact enemy region; the next attack from a different source to that region gains `+3 Impact`; expire unused at turn end; never change cue or defense route |
+
+`Brace` and `Feint` are proposed starter additions, not approved default content.
+Their values exist only to make a paper hand resolvable and are not balance claims.
+
+The comparison cadence is:
+
+- active deck: exactly eight instances;
 - opening hand and hand cap: four;
-- round end: the player may retain one unplayed card and discards the rest;
-- next round: draw to four; reshuffle the discard pile only when required;
-- a Dormant card remains visible, occupies a hand position, and may be retained or
-  discarded, but receives no automatic replacement draw;
-- at a Grafting Table, one newly source-compatible known technique may replace one
-  chosen default instance; it is never auto-added or placed in the opening hand by
-  the Brain.
+- round end: retain at most one unplayed card and discard the rest;
+- next round: draw to four and reshuffle the discard pile only when required;
+- a Dormant card remains visible, occupies a hand position, and receives no automatic
+  replacement draw;
+- editing is one-for-one at a Grafting Table, so learning never grows the active deck;
+- provisional copy limit: two ordinary copies and one copy of a Memory/Unique card;
+- provisional validation floor: at least five Attacks, at least two distinct attack-
+  source families, and at least two cards costing `1 Mana`.
 
-This `6/4 WORKING HYPOTHESIS` aims to make the first draw readable while leaving two
-unknown cards and making every replacement legible. Before promotion it requires an
-exhaustive opening-hand check after every allowed Guard release branch, exact card
-cost/effect values, copy limits, learned-card acquisition, and proof that legal hands
-do not collapse into one obvious play. Revise it if four-card hands clog with Dormant
-cards, the two hidden cards create no meaningful uncertainty, or deck editing is too
-shallow to justify the deck layer.
+The proposed starting deck has six Attacks and two preparations; every four-card
+opening contains at least two Attacks. That arithmetic does not prove that its choices
+are interesting. Before promotion, compare source commitment, Dormant-hand frequency,
+draw-order repetition, and whether `8/4` becomes too consistent or still creates
+obvious turns.
+
+### Technique acquisition comparison — working hypothesis
+
+The proposed acquisition loop is:
+
+```text
+Observe -> Candidate -> Learn -> Slot -> Prove -> Memory
+```
+
+- **Observe:** a visible enemy intent can reveal a technique candidate; the player
+  need not be hit. An important demo enemy exposes at most two candidates.
+- **Candidate:** observation creates an inspectable opportunity, never an automatic
+  reward. A graft or implant changes compatibility but does not teach a technique.
+- **Learn:** each Grafting Table visit permits at most one `Technique Study` choice
+  from observed candidates. It joins the current-attempt known library even if the
+  present body cannot yet source it.
+- **Slot:** the player may make at most one one-for-one deck swap per table visit.
+  Ordinary source-incompatible attempt techniques remain known but cannot be slotted;
+  the existing stored-Memory/Dormant rule is the explicit exception. There is no
+  universal Blood purchase price; an NPC trainer's authored price must follow that
+  actor's Goal, Need, Claim, and Concession.
+- **Prove:** Memory eligibility still requires legal source use, voluntary commitment,
+  an explicit state mutation, and a later changed decision or outcome.
+- **Memory:** attempt-learned techniques are lost on death. Exactly one eligible
+  lesson may become the run's Memory Card; otherwise death prints an `Unresolved
+  Memory`. A Memory joins the library but is neither auto-slotted nor auto-drawn.
+
+For the bounded demo, Fight A may expose at most two candidates, the next Grafting
+Table may teach one and allow one swap, and the player reaches the gate boss with at
+most one attempt-learned technique. Random three-card reward screens, card rarity,
+and card upgrades are excluded from this comparison; body, graft, implant, source
+condition, and deck replacement are expected to supply the variation.
+
+The first authored comparison catalogue is capped at twelve technique types: the five
+starter types above plus up to seven learned candidates. The following names are
+`EXAMPLE ONLY`, not approved demo content:
+
+| Example | Distinct decision it should test |
+|---|---|
+| `Hook` | threat/source denial rather than raw damage |
+| `Joint Break` | a visible condition breakpoint, such as Full `4` versus Strained `10` |
+| `Shoulder Check` | a high-commitment Torso + Legs attack |
+| `Tendon Cut` | Cutting/Open Wound pressure that also endangers graft value |
+| `Pin` | delay Recovery of an already-Committed source |
+| `Blood Lunge` | an exceptional disclosed Mana + Blood technique |
+| `Last Nerve` | a Desperate-only technique that Exhausts |
+
+Candidate requirements should use capability tags, not species names. No learned
+card should dominate merely through a larger damage number; each must alter target,
+source, timing, commitment, wound, Will, or reward-routing decisions.
 
 ## Turn budget, combo, and lifecycle
 
@@ -120,10 +185,16 @@ Inventory is not part of ordinary Brain hand selection. Owned items and tools re
 directly inspectable and subject to real ownership, uses, expiry, source, timing,
 target, cost, and commitment rules.
 
-Whether inventory spends the same turn budget or retains one separate bounded use is
-`OPEN`. It must not create an unlimited item/card chain. The exact production
-presentation remains open; the old required Attention Slot readiness rule is
-historical.
+`WORKING HYPOTHESIS`: after draw/refresh and hostile-intent reveal, but before the
+player's card sequence, open one `Tool Window`. The player may use zero or one owned
+tool per round. A tool spends no Mana, consumes one finite charge, requires its exact
+physical source, and leaves that source Committed until cleanup. Tools remain outside
+the deck; implants are passive biological modifiers and do not consume the tool use.
+No reactive/emergency tool use is included in the demo comparison.
+
+This does not approve any particular tool, charge count, source tag, healing amount,
+or UI. Finite charges and the one-use bound must still be tested against healing loops
+and anti-stall. The old required Attention Slot readiness rule is historical.
 
 ## Brain doctrine
 

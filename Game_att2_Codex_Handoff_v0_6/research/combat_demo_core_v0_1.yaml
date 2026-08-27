@@ -1,0 +1,136 @@
+# Combat Demo Core v0.1 — Owner decisions recorded 2026-08-26
+# STATUS: WORKING HYPOTHESIS for paper comparison
+# This file does NOT modify legacy simulator config.
+
+mana:
+  starting: 1
+  per_round_increase: 1
+  cap: 6
+  refresh: full          # Mana resets to current round budget each turn
+  carryover: false       # Unspent Mana does not carry over
+
+cards:
+  punch:
+    mana_cost: 1
+    base_impact: 8
+    source: arm           # Any Full/Strained arm
+    instances: 2
+    category: attack
+    will_pressure: 0
+
+  kick:
+    mana_cost: 2
+    base_impact: 12
+    source: legs          # Full/Strained legs
+    instances: 2
+    category: attack
+    will_pressure: 0
+
+  headbutt:
+    mana_cost: 2
+    base_impact: 10
+    source: head          # Full/Strained head
+    instances: 2
+    category: attack
+    will_pressure: 0      # OPEN — owner has not yet decided Will effect
+
+  brace:
+    mana_cost: 1
+    base_impact: 0
+    source: arm           # Full/Strained guarding arm
+    instances: 1
+    category: preparation
+    effect: improve_guard_factor_one_step
+    # 1.20 -> 1.00, 1.00 -> 0.80, 0.80 -> 0.80
+    expires: after_enemy_action
+
+  feint:
+    mana_cost: 1
+    base_impact: 0
+    source: any_attack    # Full/Strained attack-capable source
+    instances: 1
+    category: preparation
+    effect: next_different_source_same_target_plus_3_impact
+    expires: turn_end
+
+deck:
+  size: 8
+  hand_cap: 4
+  retain_at_round_end: 1
+  copy_limit_ordinary: 2
+  copy_limit_unique: 1
+  validation:
+    min_attacks: 5
+    min_source_families: 2
+    min_one_mana_cards: 2
+
+body:
+  # G1 starting fixture
+  starting_blood: 70
+  slots:
+    head:       { max_integrity: 25 }
+    torso:      { max_integrity: 45 }
+    left_arm:   { max_integrity: 30 }
+    right_arm:  { max_integrity: 30 }
+    legs:       { max_integrity: 35 }
+    core:       { max_integrity: 35 }
+  # Integrity state thresholds (% of max)
+  thresholds:
+    full_above: 0.70
+    strained_above: 0.35
+    desperate_above: 0.00
+    offline_at: 0.00
+
+defense:
+  block:
+    transfer_coefficient: 0.75   # Owner confirmed
+    guard_factors:
+      reinforced: 0.80
+      ordinary: 1.00
+      fragile: 1.20
+  timing:
+    cue_duration_ms: 900
+    block_hold_before_contact_ms: 250
+    parry_half_window_ms: 90
+    evade_half_window_ms: 180
+
+will:
+  starting: 90
+  passive_recovery: 0
+  parry_loss_formula: "min(current_will, 18 + 6 * commitment_tier)"
+  # Routine(1)=24, Committed(2)=30, Critical(3)=36
+  goal_critical_shocks:
+    strained: 6
+    desperate: 9
+    offline: 15
+    claim_lost: 18
+
+blood_economy:
+  kill_yield: 15               # Owner decided: orta
+  surrender_yield: 0
+  panic_pulse:
+    trigger_below: 25
+    restore: 10
+    cap: 35
+    charges: 1
+  limb_for_life:
+    net_blood: 12
+    charges: 1
+
+wounds:
+  # WNR-0.1 hypothesis values
+  closed_trauma:  { immediate: 0,  periodic: 0 }
+  open_wound:     { immediate: 3,  periodic: 5 }
+  major_wound:    { immediate: 8,  periodic: 8 }
+  clean_stump:    { immediate: 10, periodic: 8 }
+  violent_stump:  { immediate: 15, periodic: 12 }
+  periodic_cap: 20
+  treatment:
+    control:   { cost: 8,  duration_ticks: 2 }
+    stabilize: { cost: 12, duration: permanent }
+  wound_stress:
+    open: 2       # Blood per marked card play
+    major: 4
+  repair:
+    field:        { cost: 10, restore_pct: 0.25, ceiling_pct: 0.70 }
+    reconstructive: { cost: 18, restore_to_pct: 0.35, limit: once_per_slot_per_encounter }
