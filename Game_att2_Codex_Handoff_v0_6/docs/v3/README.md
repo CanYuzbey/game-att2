@@ -1,60 +1,65 @@
-# Game att2 — V3 Sandbox Authority
+# Game att2 — V3 Repository Front Door
 
-Status: ACTIVE on `v3/isolated-combat-sandbox-v01`
+Status date: 2026-09-04  
+Status: ACTIVE V3 SOURCE OF TRUTH
 
-This directory is the active documentation front door for V3 implementation work on this branch.
+V3 is the active product/design authority for new Game att2 work. V1/V2 remain provenance, research, and engineering evidence unless V3 explicitly inherits a rule.
 
-## Current gate
+## Read in this order
 
-**V3-1 — Isolated Combat Sandbox**
+1. `full_fidelity/README.md` — then read `MASTER_CHUNK_01.md` through `MASTER_CHUNK_12.md` in order. These chunks contain the complete V3 full-fidelity source with original source-document banners.
+2. `V3_1_ISOLATED_COMBAT_SANDBOX_ACCEPTANCE.md` — active deterministic V3-1 acceptance/evidence contract.
+3. `V3_1_TECHNICAL_HARDENING_REPORT.md` — latest non-owner-dependent implementation hardening.
+4. `V3_1_HUMAN_VALIDATION_PROTOCOL.md` — next evidence gate; requires real participants.
+5. `21_OWNER_DECISION_QUESTIONNAIRE_V3.md` — remaining owner-dependent questions, ordered from independent/simple/small to dependent/complex/large.
 
-The purpose of this gate is to validate the Body → Brain Architecture → Attention → Action relationship before the wider Underground City sample is implemented.
+## Authority precedence
 
-## Current implemented V3 package
+```text
+V3 full-fidelity authority / source banners
+→ dated owner-approved V3 amendments
+→ V3 implementation + tests + reproducible evidence
+→ V3 comparison and legacy ledgers
+→ V2 documents as provenance
+→ V1 simulator/history as engineering evidence
+→ archive
+```
 
-`src/game_att2_v3/`
+No old runtime behavior, numeric fixture, polished document, or historical commit overrides V3 merely because it is more detailed or already implemented.
 
-It is intentionally separate from legacy `src/game_att2_sim/`.
+## Current implementation gate
 
-Implemented fidelity surface:
-- exact source states;
-- source-valid body expressions;
-- guaranteed/flexible Brain duties;
-- weighted Attention;
-- intrinsic expression weights;
-- Brain tag bias;
-- recency suppression;
-- source-state weighting;
-- Focus source-family bias;
-- seeded selection;
-- no-replacement inside one refresh;
-- architecture coverage reporting;
-- shaded unfillable duties;
-- redraw no-alternative protection;
-- Preparation/Main budget;
-- inventory-origin action limit;
-- Yellow/Red defense legality.
+```text
+V3-0 authority/documentation consolidation — COMPLETE
+→ V3-1 deterministic isolated-combat sandbox — IMPLEMENTED / HARDENED
+→ V3-1 real human comprehension/agency validation — REQUIRES REAL HUMAN EVIDENCE
+→ V3-2 body transition / graft consequence — DOWNSTREAM
+→ V3-3 sacrifice / Blood economy — DOWNSTREAM
+→ V3-4 same-boss alternate-body replay — DOWNSTREAM
+→ V3-5 Underground City connected sample — DOWNSTREAM
+```
 
-## Binding hardening rules
+`src/game_att2_v3/` is the active V3 deterministic sandbox. `src/game_att2_sim/` remains legacy/research evidence and must not silently define V3 behavior.
 
-### V3-RQ-053 — Guaranteed Duty != Guaranteed Card
-Brain guarantees the tactical duty. The body must provide a legal physical expression. If none exists, the slot shades. No substitution.
+## Current deterministic evidence
 
-### V3-RQ-054 — Architecture Feasibility Warning
-At Brain configuration boundaries, expose `available / required` coverage for guaranteed duties. Insufficient coverage may be deliberately accepted; it must not be hidden.
+Latest professional hardening verified locally:
 
-### V3-RQ-055 — Redraw Alternative Invariant
-Blood redraw requires a distinct legal alternative. If none exists, redraw is disabled and no Blood is spent.
+```text
+Python compile: PASS
+V3-specific pytest: 26 passed
+Ruff: NOT VERIFIED in latest environment
+mypy: NOT VERIFIED in latest environment
+full legacy regression suite: NOT VERIFIED in latest environment
+```
 
-### V3-RQ-056 — Causal Specialization
-Do not secretly normalize specialization. A single remaining Attack expression may become perfectly consistent while additional Attack duties shade because real body coverage was lost.
+Automated evidence supports causal fidelity, determinism, negative-case behavior, and architecture consistency. It does **not** establish fun, comprehension, fairness, accessibility, final balance, or replay desire.
 
-## Evidence boundary
+## Core V3 hardening rules
 
-Automated V3-1 evidence can establish deterministic causal fidelity. It does not establish fun, comprehension, fairness, accessibility, final balance, or replay desire.
+- **V3-RQ-053 — Guaranteed Duty != Guaranteed Card:** Brain guarantees a tactical duty; Body must supply the legal expression. Otherwise the slot shades.
+- **V3-RQ-054 — Architecture Feasibility Warning:** expose available/required duty coverage; do not hide deliberate under-coverage.
+- **V3-RQ-055 — Redraw Alternative Invariant:** no distinct legal alternative means no redraw and no Blood spend.
+- **V3-RQ-056 — Causal Specialization:** do not secretly normalize specialization; consistency gains and coverage losses must emerge from actual body state.
 
-Read next:
-- `V3_1_ISOLATED_COMBAT_SANDBOX_ACCEPTANCE.md`
-- `V3_1_HUMAN_VALIDATION_PROTOCOL.md`
-
-The complete full-fidelity V3 design package remains the design source used to derive this branch; V1/V2 files outside this directory are provenance unless explicitly inherited by V3.
+Full detail, migration history, risks, technical contracts, old numeric hypotheses, V1/V2 ledgers, and owner questions are all preserved in the full-fidelity mirror.
