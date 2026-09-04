@@ -2,50 +2,33 @@
 
 Status: ACTIVE V3 detailed documentation mirror.
 
-Read parts in order. Each part preserves original source-document banners.
+This mirror contains the complete consolidated V3 full-fidelity master split into sequential Git-friendly chunks. Read them in order:
 
-## Part 01 — `V3_FULL_FIDELITY_PART_01.md`
-- `docs/00_V3_AUTHORITY_AND_SUPERSESSION_CONTRACT.md`
-- `docs/01_PROJECT_STATE_HISTORY_AND_VISION_V3_FULL.md`
-- `docs/02_DEVELOPMENT_MASTER_V3_FULL.md`
-- `docs/03_COMBAT_AND_ACTION_ECONOMY_V3_FULL.md`
+1. `MASTER_CHUNK_01.md`
+2. `MASTER_CHUNK_02.md`
+3. `MASTER_CHUNK_03.md`
+4. `MASTER_CHUNK_04.md`
+5. `MASTER_CHUNK_05.md`
+6. `MASTER_CHUNK_06.md`
+7. `MASTER_CHUNK_07.md`
+8. `MASTER_CHUNK_08.md`
+9. `MASTER_CHUNK_09.md`
+10. `MASTER_CHUNK_10.md`
+11. `MASTER_CHUNK_11.md`
+12. `MASTER_CHUNK_12.md`
 
-## Part 02 — `V3_FULL_FIDELITY_PART_02.md`
-- `docs/04_BODY_SOURCE_CAPABILITY_AND_DAMAGE_V3_FULL.md`
-- `docs/05_WOUNDS_BLOOD_GRAFT_AND_TRANSFORMATION_V3_FULL.md`
-- `docs/06_DECK_CONCEPT_BRAIN_ATTENTION_V3_FULL.md`
-- `docs/07_INVENTORY_READIED_ITEMS_AND_OPPORTUNITY_ORIGINS_V3.md`
-- `docs/08_DEFENSE_WILL_SURRENDER_AND_RESOLUTION_V3_FULL.md`
-- `docs/09_WORLD_NPC_PURPOSE_RUN_AND_PROGRESSION_V3_FULL.md`
+Each chunk continues the preceding chunk and preserves original `SOURCE DOCUMENT:` banners where source boundaries occur. The split is storage/navigation only; it does not change authority.
 
-## Part 03 — `V3_FULL_FIDELITY_PART_03.md`
-- `docs/10_FIRST_PLAYABLE_AND_CONTENT_CATALOG_V3_FULL.md`
-- `docs/11_TECHNICAL_ARCHITECTURE_DATA_AND_EVENTS_V3_FULL.md`
-- `docs/12_CONFIG_SCHEMA_AND_TUNABLE_AUTHORITY_V3.md`
-- `docs/13_METRICS_REPORTING_AND_DIAGNOSTICS_V3.md`
-- `docs/14_RESEARCH_HUMAN_TEST_AND_CONTAMINATION_V3.md`
-- `docs/15_TEST_PLAN_AND_ACCEPTANCE_V3.md`
-- `docs/16_ACCESSIBILITY_PRESENTATION_ART_AUDIO_V3.md`
-- `docs/17_PRODUCTION_OPERATIONS_LEGAL_RELEASE_AND_AI_GOVERNANCE_V3.md`
-- `docs/18_DECISIONS_RISKS_OPEN_QUESTIONS_V3_FULL.md`
+The owner questionnaire is also separately mirrored at `../21_OWNER_DECISION_QUESTIONNAIRE_V3.md` and `../questionnaire/` for convenient filling.
 
-## Part 04 — `V3_FULL_FIDELITY_PART_04.md`
-- `docs/19_REQUIREMENTS_TRACEABILITY_V3_FULL.md`
-- `docs/20_CURRENT_PROJECT_REPORT_V3.md`
+Current technical evidence from the latest hardening pass:
 
-## Part 05 — `V3_FULL_FIDELITY_PART_05.md`
-- `docs/21_OWNER_DECISION_QUESTIONNAIRE_V3.md`
-- `comparisons/00_SOURCE_BY_SOURCE_COMPARISON_AND_DISPOSITION.md`
+```text
+Python compile: PASS
+V3-specific pytest: 26 passed
+Ruff: NOT VERIFIED in latest environment
+mypy: NOT VERIFIED in latest environment
+full legacy suite: NOT VERIFIED in latest environment
+```
 
-## Part 06 — `V3_FULL_FIDELITY_PART_06.md`
-- `comparisons/01_RULE_LEVEL_DELTA_TABLE_V1_V2_V3.md`
-- `legacy/00_LEGACY_MECHANICS_AND_FIXTURES_LEDGER.md`
-- `legacy/01_NUMERIC_HYPOTHESIS_AND_RESULT_LEDGER.md`
-- `legacy/02_EVIDENCE_AND_TIMELINE_LEDGER.md`
-- `legacy/03_V1_DETAILED_FEATURE_ITEM_SCOPE_LEDGER.md`
-- `legacy/04_V1_SCENARIO_TEST_AND_MODULE_CONTRACT_LEDGER.md`
-- `ops/PRODUCTION_OPERATING_SKILL_V3_FULL.md`
-- `ops/RETURN_CONTRACT_V3.md`
-- `research/RESEARCH_TEMPLATE_V3.md`
-- `research/V3_1_DETERMINISTIC_ARCHITECTURE_EVIDENCE_v0_1.md`
-- `research/V3_1_TECHNICAL_HARDENING_REPORT_v0_2.md`
+Human-facing fun, comprehension, fairness, accessibility, and replay desire remain uncollected evidence and must not be inferred from deterministic tests.
