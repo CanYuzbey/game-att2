@@ -28,7 +28,10 @@ def test_illegal_source_never_leaks_into_attention() -> None:
     sources = prototype_sources()
     sources["minotaur_left_arm"] = Source("minotaur_left_arm", SourceState.OFFLINE)
     for seed in range(1000):
-        assert all(result.expression_id not in {"minotaur_smash", "minotaur_brutal_guard"} for result in resolve_seed(seed, sources))
+        assert all(
+            result.expression_id not in {"minotaur_smash", "minotaur_brutal_guard"}
+            for result in resolve_seed(seed, sources)
+        )
 
 
 def test_guaranteed_duty_never_substitutes_wrong_class() -> None:
@@ -142,3 +145,35 @@ def test_redraw_never_returns_current_when_alternative_exists() -> None:
         )
         assert new.reason == "redraw_selected_legal_alternative"
         assert new.expression_id != selection.expression_id
+
+
+def test_debug_trace_records_factors_rejections_and_roll() -> None:
+    resolver = AttentionResolver()
+    selections, traces = resolver.resolve_with_trace(
+        balanced_brain(),
+        prototype_expressions(),
+        prototype_sources(),
+        AttentionHistory(),
+        SeededRNG(42),
+    )
+    assert len(selections) == len(traces)
+    first = traces[0]
+    assert first.roll is not None
+    assert first.total_weight > 0
+    assert first.selected_expression_id == selections[0].expression_id
+    assert any(weight.expression_id == first.selected_expression_id for weight in first.weights)
+    assert any(reason == "wrong_duty_class" for _expression, reason in first.rejected)
+
+
+def test_coverage_warnings_only_report_shortfalls() -> None:
+    from game_att2_v3.attention import coverage_warnings
+
+    assert coverage_warnings(balanced_brain(), prototype_expressions(), prototype_sources()) == ()
+    sources = prototype_sources()
+    sources["human_right_arm"] = Source("human_right_arm", SourceState.OFFLINE)
+    sources["human_legs"] = Source("human_legs", SourceState.OFFLINE)
+    warnings = coverage_warnings(balanced_brain(), prototype_expressions(), sources)
+    attack = next(w for w in warnings if w.duty is ActionClass.ATTACK)
+    assert attack.available == 1
+    assert attack.required == 2
+    assert attack.shortfall == 1

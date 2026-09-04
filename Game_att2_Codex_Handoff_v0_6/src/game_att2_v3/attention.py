@@ -41,6 +41,39 @@ class AttentionPolicy:
                 raise ValueError("Attention factors must be non-negative")
 
 
+@dataclass(frozen=True)
+class WeightTrace:
+    expression_id: str
+    base: float
+    brain: float
+    recency: float
+    state: float
+    focus: float
+    final: float
+
+
+@dataclass(frozen=True)
+class SlotResolutionTrace:
+    slot_id: str
+    duty: ActionClass | None
+    rejected: tuple[tuple[str, str], ...]
+    weights: tuple[WeightTrace, ...]
+    roll: float | None
+    total_weight: float
+    selected_expression_id: str | None
+
+
+@dataclass(frozen=True)
+class CoverageWarning:
+    duty: ActionClass
+    available: int
+    required: int
+
+    @property
+    def shortfall(self) -> int:
+        return max(0, self.required - self.available)
+
+
 def expression_is_legal(expression: Expression, sources: dict[str, Source]) -> bool:
     for source_id in expression.source_ids:
         source = sources.get(source_id)
@@ -51,7 +84,9 @@ def expression_is_legal(expression: Expression, sources: dict[str, Source]) -> b
     return True
 
 
-def source_state_factor(expression: Expression, sources: dict[str, Source], policy: AttentionPolicy) -> float:
+def source_state_factor(
+    expression: Expression, sources: dict[str, Source], policy: AttentionPolicy
+) -> float:
     factor = 1.0
     for source_id in expression.source_ids:
         state = sources[source_id].state
@@ -91,36 +126,50 @@ def coverage_report(
             required[slot.duty] = required.get(slot.duty, 0) + 1
     for expression in legal:
         available[expression.action_class] = available.get(expression.action_class, 0) + 1
-    return {
-        duty: (available.get(duty, 0), count)
-        for duty, count in required.items()
-    }
+    return {duty: (available.get(duty, 0), count) for duty, count in required.items()}
+
+
+def coverage_warnings(
+    architecture: BrainArchitecture,
+    expressions: Iterable[Expression],
+    sources: dict[str, Source],
+) -> tuple[CoverageWarning, ...]:
+    report = coverage_report(architecture, expressions, sources)
+    return tuple(
+        CoverageWarning(duty=duty, available=available, required=required)
+        for duty, (available, required) in report.items()
+        if available < required
+    )
 
 
 class AttentionResolver:
     def __init__(self, policy: AttentionPolicy | None = None) -> None:
         self.policy = policy or AttentionPolicy()
 
-    def _weight(
+    def _weight_trace(
         self,
         expression: Expression,
         slot: BrainSlot,
         sources: dict[str, Source],
         history: AttentionHistory,
         focus_source_id: str | None,
-    ) -> float:
-        weight = expression.base_weight
+    ) -> WeightTrace:
+        base = expression.base_weight
+        brain = 1.0
         for tag, bias in slot.tag_biases.items():
             if tag in expression.tags:
-                weight *= bias
-        if history.surfaced_count.get(expression.id, 0) > 0:
-            weight *= self.policy.recency_factor ** history.surfaced_count[expression.id]
-        weight *= source_state_factor(expression, sources, self.policy)
-        if focus_source_id is not None and focus_source_id in expression.source_ids:
-            weight *= self.policy.focus_bias
-        return max(0.0, weight)
+                brain *= bias
+        recency = self.policy.recency_factor ** history.surfaced_count.get(expression.id, 0)
+        state = source_state_factor(expression, sources, self.policy)
+        focus = (
+            self.policy.focus_bias
+            if focus_source_id is not None and focus_source_id in expression.source_ids
+            else 1.0
+        )
+        final = max(0.0, base * brain * recency * state * focus)
+        return WeightTrace(expression.id, base, brain, recency, state, focus, final)
 
-    def resolve(
+    def resolve_with_trace(
         self,
         architecture: BrainArchitecture,
         expressions: Iterable[Expression],
@@ -128,26 +177,35 @@ class AttentionResolver:
         history: AttentionHistory,
         rng: SeededRNG,
         focus_source_id: str | None = None,
-    ) -> tuple[AttentionSelection, ...]:
-        legal = tuple(e for e in expressions if expression_is_legal(e, sources))
-        used_expression_ids: set[str] = set()
+        reserved_expression_ids: frozenset[str] = frozenset(),
+    ) -> tuple[tuple[AttentionSelection, ...], tuple[SlotResolutionTrace, ...]]:
+        all_expressions = tuple(expressions)
+        used_expression_ids: set[str] = set(reserved_expression_ids)
         results: list[AttentionSelection] = []
+        traces: list[SlotResolutionTrace] = []
 
         for slot in architecture.slots:
             duty = slot_role(slot, rng)
-            candidates = tuple(
-                e
-                for e in legal
-                if e.id not in used_expression_ids
-                and (duty is None or e.action_class is duty)
-            )
-            weighted = tuple(
-                (e, self._weight(e, slot, sources, history, focus_source_id))
-                for e in candidates
-            )
-            weighted = tuple(pair for pair in weighted if pair[1] > 0)
+            rejected: list[tuple[str, str]] = []
+            candidates: list[Expression] = []
+            for expression in all_expressions:
+                if expression.id in used_expression_ids:
+                    rejected.append((expression.id, "already_selected_this_refresh"))
+                    continue
+                if not expression_is_legal(expression, sources):
+                    rejected.append((expression.id, "source_or_state_illegal"))
+                    continue
+                if duty is not None and expression.action_class is not duty:
+                    rejected.append((expression.id, "wrong_duty_class"))
+                    continue
+                candidates.append(expression)
 
-            if not weighted:
+            weight_traces = tuple(
+                self._weight_trace(e, slot, sources, history, focus_source_id) for e in candidates
+            )
+            positive = tuple(t for t in weight_traces if t.final > 0)
+
+            if not positive:
                 results.append(
                     AttentionSelection(
                         slot_id=slot.id,
@@ -159,14 +217,25 @@ class AttentionResolver:
                         reason="no_legal_expression_for_duty",
                     )
                 )
+                traces.append(
+                    SlotResolutionTrace(
+                        slot_id=slot.id,
+                        duty=duty,
+                        rejected=tuple(rejected),
+                        weights=weight_traces,
+                        roll=None,
+                        total_weight=0.0,
+                        selected_expression_id=None,
+                    )
+                )
                 continue
 
-            total = sum(weight for _, weight in weighted)
-            normalized = tuple((e.id, weight / total) for e, weight in weighted)
-            selected = rng.choice_weighted(
-                tuple(e for e, _ in weighted),
-                tuple(weight for _, weight in weighted),
-            )
+            positive_by_id = {trace.expression_id: trace for trace in positive}
+            values = tuple(e for e in candidates if e.id in positive_by_id)
+            weights = tuple(positive_by_id[e.id].final for e in values)
+            total = sum(weights)
+            normalized = tuple((e.id, positive_by_id[e.id].final / total) for e in values)
+            selected, rng_trace = rng.choice_weighted_with_trace(values, weights)
             used_expression_ids.add(selected.id)
             history.note(selected.id)
             results.append(
@@ -175,13 +244,45 @@ class AttentionResolver:
                     duty=duty,
                     expression_id=selected.id,
                     shaded=False,
-                    candidates=tuple(e.id for e, _ in weighted),
+                    candidates=tuple(e.id for e in values),
                     normalized_weights=normalized,
                     reason="selected_from_legal_weighted_pool",
                 )
             )
+            traces.append(
+                SlotResolutionTrace(
+                    slot_id=slot.id,
+                    duty=duty,
+                    rejected=tuple(rejected),
+                    weights=weight_traces,
+                    roll=rng_trace.roll,
+                    total_weight=rng_trace.total_weight,
+                    selected_expression_id=selected.id,
+                )
+            )
 
-        return tuple(results)
+        return tuple(results), tuple(traces)
+
+    def resolve(
+        self,
+        architecture: BrainArchitecture,
+        expressions: Iterable[Expression],
+        sources: dict[str, Source],
+        history: AttentionHistory,
+        rng: SeededRNG,
+        focus_source_id: str | None = None,
+        reserved_expression_ids: frozenset[str] = frozenset(),
+    ) -> tuple[AttentionSelection, ...]:
+        selections, _traces = self.resolve_with_trace(
+            architecture,
+            expressions,
+            sources,
+            history,
+            rng,
+            focus_source_id,
+            reserved_expression_ids,
+        )
+        return selections
 
 
 def redraw(
@@ -193,11 +294,6 @@ def redraw(
     rng: SeededRNG,
     policy: AttentionPolicy,
 ) -> AttentionSelection:
-    """Reroll one slot without spending Blood if no legal alternative exists.
-
-    Blood accounting belongs to the caller/rule engine; this function reports
-    whether a legal alternative exists by returning ``reason=no_legal_alternative``.
-    """
     current = selection.expression_id
     duty = selection.duty
     legal_alternatives = tuple(
@@ -220,11 +316,7 @@ def redraw(
     resolver = AttentionResolver(policy)
     temporary_architecture = BrainArchitecture(id="redraw", slots=(slot,))
     resolved = resolver.resolve(
-        temporary_architecture,
-        legal_alternatives,
-        sources,
-        history,
-        rng,
+        temporary_architecture, legal_alternatives, sources, history, rng
     )[0]
     return AttentionSelection(
         slot_id=selection.slot_id,
