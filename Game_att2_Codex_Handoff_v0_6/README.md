@@ -1,142 +1,93 @@
-# Game att2 — Codex handoff
+# Game att2 — V3 Codex handoff
 
-This package has two deliberately separate responsibilities:
+This package now has three deliberately separated surfaces:
 
-1. define the paper contract for a bounded Underground City sample demo; and
-2. preserve the deterministic Python simulator and isolated research fixtures as
-   legacy evidence.
+1. **V3 active product/design authority** under `docs/v3/`;
+2. **V3 deterministic isolated-combat sandbox** under `src/game_att2_v3/` and `tests/v3/`;
+3. **V1/V2 legacy and research evidence** retained elsewhere in the package.
 
-The Underground City mini-game is **documented, not implemented**. No engine project,
-runtime content, production UI, or playable new-demo build exists in this package.
+The V3 sandbox is implemented as deterministic fidelity infrastructure. It is not yet evidence that the game is fun, comprehensible, fair, accessible, or ready for production. Those claims require real human testing.
 
-## Read in this order
+## Read in this order for V3 work
 
-1. `AGENTS.md` — binding repository and evidence rules.
-2. `docs/DEMO_MINIGAME_AI_WORKING_CONTRACT.md` — active demo scope and claim contract.
-3. `docs/README.md` — the five living design documents and authority map.
-4. `research/README.md` — current paper research versus frozen research evidence.
+1. `AGENTS.md` — repository/evidence rules.
+2. `docs/v3/README.md` — V3 active reading order and authority.
+3. `docs/v3/00_V3_AUTHORITY_AND_SUPERSESSION_CONTRACT.md`.
+4. `docs/v3/02_DEVELOPMENT_MASTER_V3_FULL.md`.
+5. the mechanic-specific V3 document relevant to the task.
+6. `docs/v3/15_TEST_PLAN_AND_ACCEPTANCE_V3.md` and current evidence reports.
 
-Do not start with the numbered legacy simulator documents or `docs/archive/` for new
-game-design work.
+Do not start new V3 work from the old numbered simulator documents or V2 living documents. They remain provenance/evidence and are indexed by the V3 comparison/legacy ledgers.
 
-## Current sample-demo contract
-
-The current paper direction is:
+## Current V3 product chain
 
 ```text
-captive Guard offer
--> accept one disclosed, unfavorable concession to buy freedom
--> weaker but playable release
--> one small Underground City section
--> pre-boss limb fight A
--> kill for Blood OR living surrender for an agreed limb
--> Grafting Table consequence
--> optional pre-boss fight B carries that consequence into ordinary combat
--> gate boss integrates the already-taught combat rules
--> defeat opens escape, or death causes same-day reset
+V3-0 authority/documentation consolidation — COMPLETE
+-> V3-1 isolated deterministic combat/Attention sandbox — IMPLEMENTED / HARDENED
+-> V3-1 real human comprehension and agency validation — NEXT EVIDENCE GATE
+-> V3-2 body transition / graft consequence
+-> V3-3 sacrifice / Blood economy
+-> V3-4 same-boss alternate-body replay
+-> V3-5 bounded Underground City connected sample
 ```
 
-This is a proof floor, not a fixed encounter count, content ceiling, or duration
-requirement. Approximately 30 minutes is only a soft planning reference until real
-sample sessions produce observed durations. The intended artifact is for owner
-self-play and informal friend play, helping decide whether the combat merits further
-full-time development or investor pursuit. Such a convenience sample cannot establish
-general fun, retention, market demand, or investor readiness.
-
-Combat currently separates these resources and outcomes:
-
-- `Preparation/Main`: at most one of each per round; no active growing-Mana cadence;
-- `Concept Decks`: achievement-earned persistent playstyle chassis with atomic
-  compatible card exchanges;
-- `Brain Parts`: boss/progression persistent paired buffs/nerfs that shape declared
-  Attention access or one execution relationship;
-- `Blood`: life, economy, and selected ability fuel; active-demo encounter Blood is
-  earned by killing;
-- `Will`: bilateral surrender pressure, reduced by successful Parry and explicit
-  goal-critical shocks in the current comparison model;
-- Yellow defense: Block or precise Parry;
-- Red defense: Evade;
-- kill: Blood, no limb opportunity from that opponent for the day;
-- living surrender: agreed limb, no kill-Blood.
-
-NPC purpose is authored as:
+The bounded product-facing sample remains:
 
 ```text
-Faction doctrine -> current role/duty -> individual Goal/Need/RedLine/Claim
+captivity
+-> disclosed sacrifice/concession
+-> weaker-but-free release
+-> Fight A
+-> kill for Blood OR living surrender for a legal limb
+-> graft
+-> Fight B demonstrating benefit + drawback
+-> gate boss with multiple body solutions
+-> escape or same-day reset
 ```
 
-Capability and risk tolerance are separate from purpose. An actor may seek Blood, a
-specific function, custody/compliance, a bounty, trade, escape, or `NoClaim`.
+Exact actors, sacrifice fiction, progression boundaries, presentation identity, and other owner-dependent choices are intentionally collected in `docs/v3/21_OWNER_DECISION_QUESTIONNAIRE_V3.md` rather than silently invented.
 
-These are paper rules or working hypotheses as labeled in the living documents; they
-are not runtime claims.
+## V3 implementation surface
 
-## Repository map
+| Path | Responsibility |
+|---|---|
+| `src/game_att2_v3/` | V3 Body/Brain/Attention/action fidelity sandbox |
+| `tests/v3/` | V3 deterministic and negative tests |
+| `docs/v3/` | V3 authority, specs, evidence, questionnaire, comparison and legacy ledgers |
+| `src/game_att2_sim/` | frozen/legacy simulator and research tooling |
+| `config/` | legacy/research config unless a future V3 config surface explicitly supersedes it |
+| `research/` | V2/V1 research fixtures and provenance |
+| `docs/archive/` | historical evidence |
 
-| Path | Purpose | Status |
-|---|---|---|
-| `docs/` | Living design, active operating contract, protected simulator authority, and bounded paper packets | Start at `docs/README.md` |
-| `research/` | DWF/WNR paper models plus isolated H1 and visual-lab evidence | Start at `research/README.md` |
-| `src/game_att2_sim/` | Deterministic Python simulator and research CLIs | Frozen legacy evidence |
-| `config/` | Simulator and research-fixture configuration | Frozen legacy evidence |
-| `tests/` | Unit/integration evidence for the Python artifacts | Protected verification surface |
-| `examples/` | Deterministic replay fixtures | Protected verification inputs |
-| `docs/archive/` | Superseded design, reports, and provenance | Historical evidence; not active authority |
-| `docs/encounter_3/` | Approved bounded paper-research packet | Paper-only; no runtime gate |
+## V3 sandbox behavior currently implemented
 
-Why is the Python code still here? Its modules, configuration discovery, tests, H1,
-visual lab, and replay fixtures are coupled deterministic evidence. Moving or deleting
-individual pieces would make old claims harder to verify. It remains frozen and
-isolated by status rather than presented as the new game.
+- exact body/source legality before probability;
+- Full/Strained/Desperate/Offline source states;
+- guaranteed and flexible Brain duties;
+- intrinsic expression weights + Brain tag bias + soft recency + source-state + Focus factors;
+- seeded deterministic weighted Attention;
+- visible duty-coverage shortfall warnings;
+- shaded duty rather than illegal class/source substitution;
+- per-slot candidate rejection, factor, RNG roll, and selection traces;
+- persistent held-card comparison lifecycle;
+- no mid-exchange replacement after source invalidation;
+- causal specialization without hidden normalization;
+- Blood redraw no-alternative/no-spend and insufficient-Blood/no-mutation behavior;
+- one Preparation + one Main;
+- one voluntary inventory-origin action;
+- Yellow Block/Parry and Red Evade legality.
 
-## Current paper research
+## Verification
 
-Run the deterministic defense/Will comparison with Python 3.11+:
+The latest V3 technical hardening session locally verified:
 
-```powershell
-python research/defense_will_npc_balance_v0_1_model.py
+```text
+Python compile: PASS
+V3-specific pytest: 26 passed
 ```
 
-The model checks the provisional Block matrix, exact Will pacing distribution, and
-both weaker-but-playable Guard release branches. It cannot prove fun, fairness,
-comprehension, accessibility, or final balance.
+Ruff, mypy, and the complete legacy regression suite were not available for fresh execution in that environment and must remain **NOT VERIFIED** until a normal repository environment or CI runs them. Never convert that limitation into an assumed pass.
 
-## Verify the frozen Python evidence
+## Legacy evidence
 
-Install development tools from this directory:
-
-```powershell
-python -m pip install -e ".[dev]"
-```
-
-Run the complete automated gate:
-
-```powershell
-python -m pytest -q
-python -m ruff check src tests
-python -m mypy src
-```
-
-Run deterministic smoke paths:
-
-```powershell
-python -m game_att2_sim --all-scenarios --seed 42 --format markdown
-python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_full_campaign_sequence.json
-python -m game_att2_sim.h1_cli --all-comparisons --script examples/h1_scripted_comparisons.json --format json
-python -m game_att2_sim.visual_lab_cli --script examples/visual_lab_scripted_comparisons.json --all-comparisons --format json
-```
-
-Passing these commands verifies only the named legacy/research artifacts. It does not
-prove that the Underground City mini-game exists or is playable.
-
-## Current owner decisions still open
-
-- promote, revise, or reject the exact `G1` Guard payment/released-state package;
-- choose enforced disclosed claim versus one lethal `Defy` at player Will zero;
-- set Anatomical Deck/Attention counts and lifecycle, Preparation/Main costs, Brain
-  weights/modifiers, defence inputs/windows, Block loss, and Will values;
-- choose one versus two pre-boss limb fights and assign each a unique proof question;
-- define their actors, one exact graft consequence, Concept-Deck/Brain-Part reward
-  and persistence details,
-  and the gate boss's integrated-combat test;
-- explicitly open an implementation gate before creating any engine/runtime project.
+The old deterministic simulator, Jeff/Anna/Table campaign, H1, visual lab, Warden paper work, numeric comparisons, and historical results remain valuable evidence. They do not regain design authority merely because they are more implemented or more detailed.
