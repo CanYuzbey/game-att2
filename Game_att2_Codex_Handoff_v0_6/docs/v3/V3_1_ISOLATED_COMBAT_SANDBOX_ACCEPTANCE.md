@@ -4,7 +4,8 @@ Status: IMPLEMENTED RESEARCH/FIDELITY FIXTURE
 
 ## Question
 
-Can V3's Body → Brain Architecture → Attention model preserve body authority while providing tactical-class access and bounded imperfect exact-expression access?
+Can V3's Body → Brain Architecture → Attention model preserve body authority while
+providing tactical-class access and bounded imperfect exact-expression access?
 
 ## Implemented proof surface
 
@@ -29,51 +30,21 @@ Can V3's Body → Brain Architecture → Attention model preserve body authority
 ## Hardening rules
 
 ### V3-RQ-053 — Guaranteed Duty != Guaranteed Card
-Brain guarantees the tactical duty. Body must supply a legal expression. If none exists, the slot shades; no substitution.
+Brain guarantees the tactical duty. Body must supply a legal expression.
+If none exists, the slot shades; no substitution.
 
 ### V3-RQ-054 — Architecture Feasibility Warning
-Configuration exposes available/required expression counts for guaranteed duties. Insufficient coverage is visible but need not be forbidden.
+Configuration can expose available/required expression counts for guaranteed duties.
+Insufficient coverage is visible but need not be forbidden.
 
 ### V3-RQ-055 — Redraw Alternative Invariant
-Blood redraw requires a distinct legal alternative. If none exists, redraw is disabled and no Blood should be spent.
+Blood redraw requires a distinct legal alternative.
+If none exists, redraw is disabled and no Blood should be spent.
 
 ### V3-RQ-056 — Causal Specialization
-The system does not normalize away extreme specialization. If only one legal Attack remains, it may become perfectly consistent while additional Attack duties shade. The downside emerges from actual lost coverage.
-
-## Required automated acceptance
-
-- same state + same seed → identical Attention selection;
-- an Offline source never leaks into Attention;
-- a guaranteed duty never fills with the wrong action class;
-- a guaranteed duty shades when no legal expression exists;
-- architecture coverage reports insufficient available expressions;
-- recency soft-suppresses without becoming a hard cooldown;
-- degraded source weighting can reduce access without necessarily invalidating the expression;
-- deliberate specialization may raise consistency;
-- additional duplicate duties shade when specialization leaves too few distinct legal expressions;
-- redraw with no legal alternative returns a no-spend result;
-- redraw with alternatives never returns the current expression as the alternative;
-- Yellow/Red defence legality is enforced;
-- one Preparation and one Main maximum;
-- one voluntary inventory-origin action maximum.
-
-## Current verification — 2026-09-04
-
-Verified on the prepared V3 sandbox source in this work session:
-
-```text
-Python compile: PASS
-pytest V3-specific suite: 17 passed
-```
-
-A first test invocation failed during collection because the isolated test subprocess did not receive the `src/` package path. After correcting the test harness environment, the unchanged V3 source/test suite completed with 17/17 passing tests. This was a test-environment import problem, not a gameplay-rule failure.
-
-Not freshly verified here:
-- Ruff;
-- mypy;
-- full legacy `game_att2_sim` suite.
-
-Reason: this execution environment did not provide the repository through the normal local worktree/network path needed to run the complete branch checkout. These checks remain explicitly **NOT VERIFIED**, not assumed pass/fail.
+The system does not normalize away extreme specialization.
+If only one legal Attack remains, it may become perfectly consistent while additional
+Attack duties shade. The downside emerges from actual lost coverage.
 
 ## Evidence boundaries
 
@@ -92,4 +63,25 @@ It cannot establish:
 - final balance;
 - replay desire.
 
-Those remain human-evidence gates and must not be fabricated from automated output.
+Those remain human-evidence gates.
+
+## Technical hardening pass — 2026-09-04
+
+The non-owner-dependent hardening pass additionally implemented:
+
+- full per-slot Attention explanation traces (candidate rejection reason, base weight, Brain factor, recency factor, source-state factor, Focus factor, final weight, seeded roll, selected expression);
+- explicit architecture coverage warnings when guaranteed duties exceed current legal expression coverage;
+- atomic Blood redraw transactions with injected cost and exact ledger events;
+- insufficient-Blood redraw rejection with zero mutation;
+- persistent Attention hand baseline: unused legal cards persist, played/dropped/invalid positions wait for explicit Decision Refresh;
+- immediate source-invalidation of held cards without mid-exchange replacement;
+- reserved-expression exclusion during partial hand refill so one physical expression cannot duplicate across held/refilled slots.
+
+Current local verification for the V3-specific suite after this pass:
+
+```text
+Python compile: PASS
+pytest: 26 passed
+```
+
+Ruff/mypy/full legacy suite still require a normal repository execution environment before their status can be upgraded from NOT VERIFIED.
