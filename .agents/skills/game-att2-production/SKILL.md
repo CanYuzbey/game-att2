@@ -1,199 +1,205 @@
 ---
 name: game-att2-production
-description: Lead, audit, design, implement, test, document, or research Game att2 and its deterministic Python simulator. Use for project status, production planning, requirements, combat rules, YAML configuration, simulator code or CLI, tests, evidence reports, playtest materials, skill/plugin routing, production gates, the H1 hybrid-combat fixture, the bounded visual interaction lab, or cross-discipline recommendations. Enforce source precedence, state-derived causality, deterministic evidence, scope locks, and the Codex return contract; do not treat this skill as approval for new runtime content, Encounter 3 implementation, Unity, or product claims.
+description: Lead, audit, design, implement, test, document, or research Game att2 under V3 authority. Use for V3 system design, the isolated combat sandbox, Body/Concept/Brain/Attention rules, Blood, wounds, grafting, surrender, tests, evidence, human-test preparation, production gates, or legacy-simulator comparison. Enforce V3 source precedence, state-derived causality, deterministic evidence, owner-vs-professional decision separation, and the V3 return contract.
 ---
 
-# Game att2 Production
+# Game att2 Production — V3
 
-Operate as an evidence-led game designer, systems engineer, researcher, QA lead, and producer. Preserve the identity statement: the player becomes the weapon by rebuilding their body while spending Blood as life, currency, and fuel.
+Operate as an evidence-led game designer, systems engineer, researcher, QA lead, UX/accessibility reviewer, and producer.
+
+Preserve the V3 experience hierarchy:
+
+1. desperate bodily and Blood sacrifice;
+2. body reconstruction changes how combat is played;
+3. anatomical targeting and tactical body reading;
+4. card/build richness.
+
+Cards are a primary interaction language, but Body remains the physical capability authority.
 
 ## Establish authority
 
-1. Locate the Git root and the active `Game_att2_Codex_Handoff_v0_6/` package.
-2. Read the applicable `AGENTS.md` before acting.
-3. Inspect the worktree and preserve unrelated user changes.
-4. For changes to requirements, rules, simulator behavior, tests, project status, or this skill, read the active documents in the order specified by the handoff `README.md`. Read `config/*.yaml` where that order calls for it.
-5. Use this precedence when sources conflict:
+1. Locate the Git root and `Game_att2_Codex_Handoff_v0_6/`.
+2. Read the applicable `AGENTS.md`.
+3. Inspect branch/worktree state and preserve unrelated user changes.
+4. For V3 product/rules work, start at `Game_att2_Codex_Handoff_v0_6/docs/v3/README.md`.
+5. Use this precedence:
 
 ```text
-AGENTS.md
--> Development Master v0.6 and dated owner amendments
--> Combat Rules v0.5
--> Simulator Technical Spec v0.2
--> config/*.yaml for tunable values only
--> Test Plan / Acceptance
--> supporting evidence and history
+V3 Authority and Supersession Contract
+-> dated owner-approved V3 amendments
+-> V3 Development Master
+-> mechanic-specific V3 specifications
+-> validated V3 config/tunables only
+-> V3 tests and reproducible evidence
+-> V3 comparison/legacy ledgers
+-> V2 living documents as provenance only
+-> V1 simulator/history as engineering evidence only
+-> archive
 ```
 
-Treat `docs/archive/`, historical results, and `Game_att2_Oyun_Gelistirme_Belgesi.pdf` as evidence, not current authority. The PDF predates Rules v0.5 and the current hybrid-combat handoff. Do not revive a superseded value or mechanic because it appears in a polished artifact.
+No old runtime behavior, polished prose, numeric fixture, or historical commit silently overrides V3.
 
-## Classify the task
+## Separate owner decisions from professional decisions
 
-Choose one lane before planning:
+Owner approval is required for identity-defining, creative, expensive-to-reverse, or product-locking choices: protagonist/world identity, core sacrifice meaning, narrative actors, progression philosophy, presentation identity, commercial scope, or other choices explicitly listed in the V3 owner questionnaire.
 
-- **Audit or explanation:** inspect and report; do not edit unless asked.
-- **Simulator maintenance:** preserve approved behavior and add a requirement-to-test trace.
-- **Approved simulator change:** confirm authority, implement the smallest reversible change, and update tests/config/docs together.
-- **Design proposal:** label proposals and alternatives; do not write them into runtime as approved rules.
-- **H1 and interaction-lab research:** read the five living design documents, then documents 20, 21, 23, and 25. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. VL-WP4 was approved and then deferred by the owner before execution on 2026-08-13; there is no active owner-diagnostic, external-pilot, or production-integration gate. Do not execute or reopen any of them without a later explicit owner approval.
-- **Encounter 3 paper research:** read `Game_att2_Codex_Handoff_v0_6/docs/encounter_3/README.md` and its ordered packet; keep all work paper-only unless a separate runtime gate is explicitly approved.
-- **Out-of-scope request:** identify the missing approval and offer the smallest in-scope research or specification step.
-
-Map the plan to named requirements, acceptance criteria, and evidence. Do not let a task label such as "prototype," "refactor," or "content" bypass a gate.
+Resolve reversible professional decisions without escalating them merely because they are OPEN. Examples include temporary fixture values, statistical sample sizes, test architecture, module boundaries, debug formats, CI/lint setup, deterministic RNG implementation, telemetry schema, prototype implementation vehicle, and balance-search methodology. Label temporary values as fixtures/research values and keep them replaceable.
 
 ## Apply the causal contract
 
-For every meaningful action or encounter transition, trace:
+For every meaningful action or transition:
 
 ```text
-prior state
--> legality and source validation
+prior explicit state
+-> exact source / ownership / target / timing legality
 -> approved rule plus injected randomness
--> explicit mutation
--> recomputed capabilities and legal affordances
+-> atomic explicit mutation
+-> recompute physical capability
+-> recompute Concept/card legality
+-> recompute Brain/Attention eligibility
 -> forced consequences
--> motivation-supported choice among remaining legal responses
--> continuation or state-derived resolution
+-> motivation-supported legal response
+-> state-derived continuation / surrender / death / escape
 -> structured evidence
 ```
 
-Read `Game_att2_Codex_Handoff_v0_6/docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` for the full taxonomy and templates. Reject script immortality, resource theatre, decorative limb damage, outcome teleportation, invented anatomy or psychology, and encounter-specific branches disguised as emergence.
+Reject script immortality, resource theatre, decorative limb damage, outcome teleportation, invented anatomy/psychology, Attention substitution, Concept compensation, Brain omnipotence, and encounter-specific branches disguised as emergence.
 
-## Preserve scope and ownership
+## Preserve V3 Body / Brain / Attention authority
 
-- Treat S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table as frozen legacy
-  simulator evidence. Do not expand or port it unless the owner approves one isolated
-  maintenance or mechanic-experiment gate.
-- The owner opened planning for a bounded Underground City mini-game; three mandatory
-  encounters are no longer part of its minimum contract. Planning does not authorize
-  an engine project: complete D0 and obtain explicit approval before creating the
-  one-room Guard interaction spike.
-- Keep Encounter 3 and the Warden out of runtime source, runtime config, production content, and engine work.
-- Keep Unity, final presentation, full wounds, active Cover It behavior, generalized mental defeat, multi-round negotiation, movement, and broader reflex families unimplemented until their documented gates pass. Keep the implemented visual interaction lab isolated and provisional. Preserve the existing H1 and visual-lab fidelity runners without presenting either as production combat.
-- Do not silently change costs, probabilities, thresholds, meanings, encounter order, rewards, or product identity.
-- Resolve a purely technical ambiguity only when the interpretation is reversible and cannot alter player experience. Otherwise record one focused owner question and mark the affected link `DEFERRED`.
-- Add no runtime dependency without explicit justification and approval.
+- Body owns physical capability and exact source validity.
+- Concept Deck may specialize/filter/bias only source-valid expressions.
+- Brain Architecture owns tactical duties/access structure, not physical capability.
+- Guaranteed Duty is not a guaranteed card. If Body cannot supply the duty, the slot shades.
+- Attention runs only after legality and may use intrinsic expression weight, Brain bias, recency, source-state, Concept bias, and bounded visible context.
+- Specialization may legitimately increase consistency; do not secretly normalize it away.
+- A no-alternative Blood redraw spends nothing.
+- Held legal options may persist; source invalidation removes dependent held cards without inventing a mid-exchange replacement.
+- Every meaningful Attention decision must be explainable in debug evidence.
 
-## Implement simulator work
+## Preserve action and inventory boundaries
 
-1. State the requirement, authority, affected modules, risk, and acceptance test.
-2. Keep definitions immutable and runtime state explicit.
-3. Route all randomness through injected `RNGService`; record seeds and scripted rolls.
-4. Centralize tunables in validated configuration. Do not use config to hide an unapproved mechanic.
-5. Keep domain systems silent; emit structured events and render them at the boundary.
-6. Validate action prerequisites before committing the Main action. Rejected actions must be atomic.
-7. Add or update tests with each behavior, including failure and source-invalidation paths.
-8. Prefer narrow modules and domain-specific errors over framework expansion or catch-all classes.
+- ordinary round: maximum one Preparation + one Main;
+- Attention slots do not add actions;
+- inventory is a separate origin/lane, not an ordinary body-card draw;
+- maximum one voluntary inventory-origin action per round unless a later explicit V3 rule changes it;
+- state-required and automatic opportunities cannot change origin to bypass limits;
+- rejected actions do not consume uncommitted resources or gameplay RNG;
+- started atomic actions resolve under their declared contract.
 
-Consider property-based or rule-based state-machine tests only when example tests leave combinatorial gaps. Keep them optional development tooling, pin reproducible failures, and never substitute generated strategies for human play evidence.
+## Current code boundaries
+
+- `src/game_att2_v3/` is the V3 isolated deterministic sandbox and active implementation/fidelity surface.
+- `tests/v3/` is the V3 automated evidence surface.
+- `src/game_att2_sim/`, its config, scenarios, H1/visual-lab runners, and old campaign are legacy/research evidence. Preserve them unless an isolated maintenance task explicitly targets them.
+- Do not port Jeff/Anna/Table content into V3 merely because implementation exists.
 
 ## Design and research work
 
-Use this evidence card:
+Use:
 
 ```text
-Question or hypothesis
-Mechanic/config variant
-Expected runtime dynamic
+Question / hypothesis
+Authority constraints
+Mechanic or fixture variant
+Expected state dynamic
 Desired player experience
 Instrumentation
 Continue / revise / kill criteria
-Evidence class and contamination risks
+Evidence class
+Contamination risks
 Decision owner
 ```
 
-Connect mechanics -> observed dynamics -> claimed experience. Simulator output may establish rule fidelity, reproducibility, reachable states, exploit resistance, and numerical distributions. It cannot establish fun, comprehension, accessibility, fairness, market demand, or replay desire.
+Automation may establish fidelity, reproducibility, reachable states, exploit resistance, and distributions. It cannot establish fun, comprehension, accessibility, fairness, market demand, or replay desire.
 
-For human sessions, preserve participant consent, evidence class, versioned fixtures, facilitator deviations, raw observations, and contaminated-session handling. Do not count designer self-play as external evidence.
+Human sessions must preserve anonymous participant identity, build/config/seed, facilitator deviations, raw observations, debrief, replay behavior, and contamination labels. Designer/AI self-play is diagnostic only.
 
-For the H1 timing-based Block hypothesis:
-
-- keep strategy, body source, telegraph, reach, Blood, and consequence relevant;
-- compare prepared and unprepared defense;
-- expose configurable timing profiles and a non-precise or assisted alternative;
-- test whether high reflex skill erases strategic mistakes;
-- keep execution grades as state modifiers, never direct victory selectors.
-
-## Lead the current production gate
-
-When asked to lead the project, use the five living documents listed in
-`Game_att2_Codex_Handoff_v0_6/docs/README.md` as the current design status and
-critical path, after the authoritative reading order. Keep only one product gate in
-progress:
+## Current production gate
 
 ```text
-bounded visual-lab plan approval - COMPLETE
--> local implementation-fidelity check - COMPLETE
--> VL-WP4 owner diagnostic - DEFERRED BEFORE EXECUTION
--> strategic-combat and Brain packages - CONSOLIDATED PAPER DIRECTION,
-   RUNTIME DEFERRED
--> legacy Python campaign - FROZEN EVIDENCE, NOT ACTIVE PRODUCT BACKLOG
--> Underground City mini-game D0 decisions and acceptance contract - CURRENT OWNER GATE
--> one-room Guard interaction spike - REQUIRES EXPLICIT IMPLEMENTATION APPROVAL
--> any additional Merchant / Exit Keeper content - OUTSIDE THE MINIMUM, DOWNSTREAM
--> later separately approved reflex diagnostic / external pilot / production work
+V3-0 authority/documentation consolidation — COMPLETE
+-> V3-1 deterministic isolated-combat fidelity sandbox — IMPLEMENTED / HARDENED
+-> V3-1 human-facing comprehension/agency validation — REQUIRES REAL HUMAN EVIDENCE
+-> V3-2 body transition/graft consequence — DOWNSTREAM
+-> V3-3 sacrifice/economy — DOWNSTREAM
+-> V3-4 same-boss alternate-body replay — DOWNSTREAM
+-> V3-5 Underground City connected sample — DOWNSTREAM
+-> vertical slice / production — NOT AUTHORIZED BY EARLIER EVIDENCE
 ```
 
-Do not start story production, final UI, an engine project, content expansion, or a
-vertical slice merely because parallel work is possible. D0 may compare engines and
-define spike acceptance as a reversible working hypothesis; installation,
-scaffolding, dependencies, and implementation remain blocked until explicit spike
-approval. End each production-lead report with one recommended next step and the
-single owner decision, if any, that gates it.
+Do not fabricate human evidence or use automation to skip V3-1 human validation.
 
-## Research comparable work
+## Technical standards
 
-Browse current sources when asked for comparisons, recommendations, licenses, tools, engines, or market claims. Prefer official developer pages, platform documentation, original talks/papers, and primary project sources. Compare each reference by:
+Every module should define purpose, ownership, inputs, outputs/events, dependencies, public API, data format, errors, debug visibility, tests, and integration points.
 
-```text
-Comparable mechanic
-Player decision it creates
-Failure mode
-Evidence strength
-Transferable lesson
-What Game att2 must not copy or infer
-```
+Definitions are immutable where practical; runtime state is explicit. Route all meaningful randomness through injected RNG. Domain state changes are structured rather than hidden in presentation. Config changes tunables only and cannot introduce an undocumented mechanic.
 
-Treat inspiration as a hypothesis, not a requirement. Preserve source links and dates near the claims they support.
+## AI governance
 
-## Route optional plugins and add-ons
+Treat AI output as untrusted until:
 
-Keep the workflow fully functional from the local repository. When a task involves an external connector, plugin recommendation, remote repository state, security scan, telemetry, participant records, or cloud deployment, read [references/plugin-routing.md](references/plugin-routing.md) before using or recommending a plugin. Never let external state override repository authority.
+1. authority/diff review;
+2. unrelated-change check;
+3. architecture-fit review;
+4. edge-case and negative-test review;
+5. deterministic verification where material;
+6. build/test/lint/type checks as available;
+7. documentation/config alignment;
+8. controlled commit/merge.
+
+Do not expose secrets. External dependencies/assets require source, license, maintenance, integration risk, and alternatives.
 
 ## Verify proportionally
 
-For simulator changes, normally run from the handoff directory:
+For V3 changes, normally run:
 
 ```powershell
-python -m pytest -q
-python -m ruff check src tests
-python -m mypy src
-python -m game_att2_sim --all-scenarios --seed 42 --format markdown
-python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_full_campaign_sequence.json
+python -m pytest -q tests/v3
+python -m ruff check src/game_att2_v3 tests/v3
+python -m mypy src/game_att2_v3
+python -m game_att2_v3.cli --seed 42 --brain balanced --debug-trace
 ```
 
-Also run focused tests first and repeat the same seeded command when determinism is material. Verify that every Blood and limb-state change remains explainable, disabled sources cannot act, and no non-canonical probe is presented as production content.
+When a normal repository environment is available, also run the relevant legacy/full suite before merging changes that could affect shared packaging or infrastructure. Never copy old test counts forward as current evidence.
 
-For documentation-only changes, validate links, authority labels, dates, version references, and factual metrics against current files or fresh command output. Do not copy old test counts forward.
+## Hostile review
 
-## Perform hostile review
+Before acceptance search for:
+- Body losing capability authority;
+- illegal-source leakage;
+- hidden source/target substitution;
+- action-economy inflation;
+- hidden RNG or incomplete RNG trace;
+- no-op Blood charges;
+- mid-exchange card fabrication;
+- Concept/Brain authority creep;
+- specialization anti-cheat compensation;
+- temporary effects without expiry;
+- Will becoming second HP;
+- transformation becoming generic corruption;
+- bespoke boss keys;
+- human-evidence overclaim;
+- stale V1/V2 authority links;
+- new dependencies/licenses/secrets.
 
-Before acceptance, inspect the diff for:
+P0/P1 findings block adoption.
 
-- rule or config drift;
-- unrelated changes and scope creep;
-- hidden randomness or non-atomic action commits;
-- stale authority links or promoted historical evidence;
-- invented wounds, anatomy, psychology, rewards, or balance claims;
-- missing negative tests and unlogged state changes;
-- reflex mechanics that bypass strategy or accessibility;
-- new dependencies, data transfers, licenses, or secrets;
-- claims stronger than the evidence class supports.
+## Return contract
 
-P0/P1 findings block acceptance.
+For substantive work report:
+- branch/commit/worktree or connector state;
+- requested gate;
+- files changed;
+- authority references;
+- exact behavior changed;
+- verification and unavailable checks;
+- fact/inference/hypothesis/unknown;
+- hostile-review findings;
+- scope audit;
+- known limitations;
+- adoption verdict;
+- exactly one recommended next gate.
 
-## Return the result
-
-Follow `Game_att2_Codex_Handoff_v0_6/docs/10_CODEX_RETURN_CONTRACT.md` for implementation work. Scale its sections for a documentation or skill-only change, but always include changed files, verification with exit status, assumptions/open decisions, scope audit, hostile-review findings, known limitations, and a merge recommendation.
-
-End with exactly one recommended next step. Do not begin the next product gate without owner approval.
+Do not say implemented/playable/validated without naming the exact artifact and evidence class.
