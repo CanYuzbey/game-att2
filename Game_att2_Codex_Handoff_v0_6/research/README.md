@@ -10,6 +10,14 @@ Underground City mini-game exists.
 | `defense_will_npc_balance_v0_1.md` | Sourced Block, timing, accessibility, Will, Guard, and NPC-purpose comparison; every numeric value is a working hypothesis |
 | `defense_will_npc_balance_v0_1_model.py` | Deterministic arithmetic for the DWF-0.1 comparison |
 | `wound_numeric/` | Provisional wound/Blood arithmetic supporting current paper discussion |
+| `z_fixture_2026_09_15_arithmetic.py` | Isolated Z48/A arithmetic checks and route witnesses; no game/demo runtime or legacy imports |
+| `z_fixture_2026_09_15_evidence.md` | Fresh paper-budget/source/vital/cost bounds with limits and unsafe-variant counterexamples |
+
+The Z fixture is declared in the five living design documents. Older
+`combat_demo_core_v0_1.yaml`, `demo_encounter_roster_v0_1.yaml` and
+`combat_demo_paper_sim_v0_1.py` are superseded Mana/Guard/escape comparisons,
+not current-demo authority or proof of playable combat. DWF/WNR remain historical
+numeric provenance where retained; their old rules do not override the Z choices.
 
 ## Frozen research evidence
 

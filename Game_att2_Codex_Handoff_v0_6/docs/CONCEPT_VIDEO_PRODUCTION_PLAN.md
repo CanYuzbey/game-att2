@@ -8,6 +8,13 @@ READINESS IS VERIFIED BY THIS DOCUMENT.**
 
 ## Purpose and relationship to the demo
 
+2026-09-15 scope note: the [current living demo ledger](WORLD_PROGRESSION_AND_DECISIONS.md)
+now selects the open bone landscape, two NPCs, pixel art/Godot and Boneatour bodily
+loss through Z01–Z55. The Underground City/Guard/escape beats retained below are
+historical concept variants, not the current demo contract. Any new video brief
+must inherit the reconciled living set; this answer/fixture task does not produce
+or approve video assets or update the historical storyboard into gameplay evidence.
+
 `APPROVED DIRECTION`: the first near-term communication artifact is a short concept
 video that explains the intended Underground City sample, its combat/body dynamics,
 possible characters, and world promise before full game production begins. It is for

@@ -1,0 +1,865 @@
+# İlk demo için kalan kararlar — son toplu soru ve öneri belgesi
+
+Tarih: 2026-09-08. **PAPER ONLY — 55 açık karar kartı, 3 gerçek bilgi alanı.**
+Kaynak: F01–F60, O1/S1 seçimleri, iki Charge/stun ek cevabı ve
+[işlenmiş owner cevapları](DEMO_ANSWER_REVIEW_2026-09-08.md).
+Bu bir soru/koordinasyon belgesidir; seçilmiş tasarım beş yaşayan belgeye aktarılır.
+
+## Amaç ve karar sınırı
+
+İstenen sonuç: ilk demoyu üretmek için gereken tasarım, içerik, teknik teslim ve
+kabul kararlarını tek turda yanıtlanabilir hale getirmek. Eski F formunu yeniden
+doldurmana gerek yok. Bu liste, güncel Q01–Q32 ve P01–P12 kapsamındaki bilinen
+açıkları bir araya getirir; kapanmış O1/S1 ve Charge/stun yönlerini yeniden oylamaz.
+
+“Geriye hiçbir açık karar kalmasın” üç farklı iş demektir:
+1. **Tercih/kimlik:** buradaki seçimleri sen yaparsın.
+2. **Exact içerik ve sayılar:** Z48/A ile sınırları belirlenmiş yetki verirsen bunları
+   ben üretir, rota/sonlanma ve negatif örneklerle sınarım. B seçilirse önce inceleme
+   paketi gelir. Değer seçmek ile çalıştığını kanıtlamak ayrı işlerdir.
+3. **Deneysel gerçek:** cihaz performansı, anlaşılırlık, adalet ve ilgi uygulama/testte
+   ölçülür. Karar belgesini doldurmak bu sonuçları önceden kanıtlamaz.
+
+Yeni çelişki bulunursa bunu saklayarak “sıfır açık” demeyeceğim. Z48/A kabul edilirse
+mekaniği/kimliği değiştirmeyen sayısal ve teknik düzeltmeleri yeniden sormadan yaparım;
+seçilmiş iki kural birlikte sağlanamıyorsa somut karşı örnek ve etkilenen seçimle
+geri dönerim. Hiçbir yanıtsız seçenek sessizce seçilmez.
+
+Son talebindeki **“demoyu oluşturalım”**, bu finalizasyonun ardından seçilecek motor
+ve bu bounded Windows demo kapsamında uygulamaya geçme yönlendirmesidir. Bu talebi
+ileride yeniden genel başlama izni istemek için yok saymayacağım. Motor/asset yöntemi
+ve dokunulan tasarım hâlâ seçilmediğinden bu tur engine/runtime kurulmaz.
+Yeni hesap/ücretli hizmet/yayın/başkalarına mesaj bu talepten doğmaz.
+
+## Zaten seçilmiş ve tekrar sorulmayanlar
+
+- Strateji öncelikli beden/kart oyunu; beden değişiminin taktik hissi ana hedef.
+- Her denemede farklı ruh/kişi; sınırlı başlangıç bilgisi, önceki kişinin anıları yok.
+- O1 doğrudan beden ihtiyacı; Guard pazarlığı ilk demo dışında.
+- İki sıradan NPC; S1 asimetrik → graft/bakım → insan → Boneatour.
+- Donor asimetrik; superior kol ve eksik diğer kol gerçek yetenek farkı yaratır.
+- Kill/Blood ile yaşayan surrender/uzuv ödülü birbirini dışlar; corpse limb yok.
+- Graft aracı, I1 bağlı hasarlı kol ve üç araç yönü; exact kaynak/uses hâlâ bu listede.
+- En çok bir Preparation ve bir Main; ayrı Readied Item ekstra eylem yaratmaz.
+- Ordinary Yellow Block/Parry; Red Evade; outgoing attack QTE ve combat range yok.
+- Boneatour iskelet minotor; ana oyuna taşınması amaçlanan güçlü ilk demo boss'u.
+- Boynuz Charge normal savunmayla durmaz; hücum sırasında refleksif Parry ile durur.
+- Unstopped Charge bir tur stun: sonraki Preparation/Main kayıp, savunma kalır.
+- Boss'un sahte şeytan/kral iddiası ve ileride yalnız iblis olduğunun açılması.
+- İlk demo kesin player loss/bedensel ölüm; exact nedensel yol bu listede.
+- Panic Pulse ve Limb for Life ilk demo dışında.
+- Pixel art, dünyada beden + inspect, İngilizce metin, seslendirme dahil.
+- Melez yara saati; okuma/pazarlık/bakım/pause/alt-tab yüzeylerinde durma.
+- Erişim paketi yönü: remap, klavye eşdeğeri, metin, simge, altyazı, ses,
+  hold-toggle, shake/flash azaltma ve savunma yardımı.
+- Özel yerel Windows örneği; diskte yalnız ayarlar; retry/menu/exit son ekranı.
+
+## Nasıl yanıtlanır?
+
+Her Z kartında **A benim önerimdir**; B gerçek alternatiftir. Bazı kartlarda üçüncü
+seçenek açıklanır. A'ları topluca kabul edip yalnız istisnaları yazabilirsin.
+Bu cümle kendi başına kabul değildir; aşağıdaki formu senin yanıtlaman gerekir.
+
+- `A` / `B` / açık özel cevap: ilgili seçimi kapatır.
+- `SEN SEÇ; şu sınırlarla…`: yalnız o kartta açık karar yetkisi verir.
+- `KARŞILAŞTIR`: karşılaştırma işi seçilir, nihai ürün seçimi kapanmaz.
+- `ANLAMADIM` veya boş: açık kalır; aynı soruya rastgele varsayım konmaz.
+- Sayıların tek tek son onayı yerine Z48/A seçilebilir; önceki F59=B kendiliğinden
+  değişmez.
+- Seçenekler çelişirse önce önkoşul çözülür; alttaki seçim zorla uygulanmaz.
+
+Özellikle dikkat isteyenler: **Z04–Z06** ilerleme, **Z09** kamera, **Z30** sonlu
+kaynak, **Z37–Z43** boss/ölüm ve **Z48** ayrıntı yetkisi. Z42/A yeni açık boss
+istisnası, Z43/B yeni bitirici eylemdir; bunlar önceki onaydan otomatik çıkmaz.
+
+## Ruh, kişi ve ilerleme — Z01–Z06
+
+### Z01 — Başka kişiyle yeniden deneme kurgu içinde nasıl açıklanacak?
+
+**A — Önerim:** Demo yeniden başlatıldığında aynı başlangıç koşullarına sahip ayrı bir deneme oynansın; karakter farklı kişi olsun. Oyun bunu evrenin zamanı geri sardığına dair kanıt olarak anlatmasın.
+
+**B — Alternatif:** Her ölümden sonra dünya içinde zaman ilerlesin; önceki kişinin NPC/ceset/kapı sonuçları yeni denemeye taşınsın.
+
+**Neden / bedeli:** A, seçilmiş aynı başlangıç ve başka kişi yönünü küçük demoda birleştirir. B, kalan iki karşılaşmayı yeniden üretme ve dünya kalıcılığı gerektirir. Ana oyunun kozmolojisi bu seçimle bütünüyle kapanmaz.
+
+Bağ: Q20 Q28 Q29. Önkoşul: yok.
+
+### Z02 — Ruhun oynanan bedenle ilişkisi ne olsun?
+
+**A — Önerim:** Cehennemde kişi somut, yaralanabilen bir bedende bulunur; Blood bu bedenin yaşamsal kaynağıdır. Bedenin kökeni ilk demoda açıklanmaz.
+
+**B — Alternatif:** Beden başkasından edinilmiş bir taşıyıcı olsun; ilk sahne bunu açıkça anlatsın.
+
+**Neden / bedeli:** A gerekli oynanış bilgisini kapatır; B bedenin eski sahibini ve aktarım koşulunu tasarlamayı gerektirir. İkisinde de aynı ruhun ölümden sonra taşınması yok.
+
+Bağ: Q04 Q28. Önkoşul: Z01.
+
+### Z03 — Yeni kişilerin görünüşü ve başlangıç yetenekleri değişsin mi?
+
+**A — Önerim:** İlk demoda aynı başlangıç mekanik şablonu, isimsiz farklı kişi; yeniden denemede farklı kısa kimlik etiketi. Rastgele beden/stat yok.
+
+**B — Alternatif:** İki önceden yazılmış kişi profili; mekanik başlangıç aynı, görünüş ve kısa geçmiş farklı.
+
+**Neden / bedeli:** A denemeler arasında mekanik karşılaştırmayı korur ve ek karakter üretimini azaltır; B kişilerin farklılığını daha görünür kılar.
+
+Bağ: Q04 Q20 Q22. Önkoşul: Z01, Z02.
+
+### Z04 — Concept uzmanlaşmasını demoda gerçekten kazanıp kullanacak mıyız?
+
+**A — Önerim:** Bir adet kazanım gösterilsin: ilk karşılaşmadaki açıklanmış başarıyla açılan uzmanlaşma, bakım noktasında uyumlu atomik kart değişimiyle insan savaşında kullanılabilsin. Kıskaç yoksa ona bağlı ifade Dormant kalsın.
+
+**B — Alternatif:** Yeni Concept kazanımı ilk demoda gösterilmesin; başlangıç uzmanlaşmasıyla fiziksel graft farkı gösterilsin.
+
+**Neden / bedeli:** Concept, bedenin yapabildiği hareketlerden hangi uzmanlaşmayı kurduğundur. A kart inşasını da kanıtlar; B daha sade ama kazanım/öğrenme kanıtı eksik kalır. A'nın exact achievement ve exchange'i Z48 kapsamında yazılır.
+
+Bağ: Q18 Q09 Q16. Önkoşul: Z03.
+
+### Z05 — Brain katmanı ilk demo kapsamına nasıl girsin?
+
+**A — Önerim:** Yeni Brain kazanımı/ekipmanı ilk demoda bulunmasın; tarafsız Attention erişimi kullanılsın. Ana oyunun Brain yönü korunur, demo bunu kanıtlamaz.
+
+**B — Alternatif:** Başlangıçta tek sabit Brain parçası olsun; bir erişim avantajı ve bedeli açıkça gösterilsin, boss kaybı ödül vermesin.
+
+**Neden / bedeli:** Brain, kurulmuş hareketlere erişim/uygulama biçimini değiştirir. A sahte boss ödülü ihtiyacını kaldırır; B yeni bir öğretim ve test dalı ekler. Önceki F37 şimdi bu soruyla kapanır.
+
+Bağ: Q19 Q09 Q20. Önkoşul: Z04.
+
+### Z06 — Oturum içinde kişiler arasında ne kalıcı olsun?
+
+**A — Önerim:** İlk demo gameplay kazanımları her denemede sıfırlansın; yalnız oyuncunun öğrendiği bilgi ve seçilmiş ayarlar kalsın. Concept yeniden doğal olarak kazanılabilsin.
+
+**B — Alternatif:** Açılmış Concept/Brain seçenekleri uygulama açıkken oyuncuya ait meta seçenekler olarak kalsın; yeni kişi eski kişinin anılarını bilmesin.
+
+**Neden / bedeli:** Her iki seçenek de diskte yalnız ayarlar kararına uyar. A kalıcılık UI'si gerektirmez; B roguelite ilerlemeyi demoda da gösterir. A seçimi tam oyundan meta ilerlemeyi silmez.
+
+Bağ: Q18 Q19 Q20 Q29. Önkoşul: Z01, Z04, Z05.
+
+## Dünya, kamera ve görsel kimlik — Z07–Z12
+
+### Z07 — Demo nerede geçsin?
+
+**A — Önerim:** Cehennemde birbirine bağlı dar bir yeraltı geçidi/şehir kenarı; O1 bakım ihtiyacı oyuncuyu çıkış yönüne iter. Yeni faction veya kozmik yasa anlatılmaz.
+
+**B — Alternatif:** Açık kemik arazisi ve bir geçit; yeraltı şehir yönü bu demodan çıkar.
+
+**Neden / bedeli:** A mevcut çalışma malzemesini ve kontrollü kadrajı kullanır; B çevre kimliğini belirgin değiştirir.
+
+Bağ: Q28 Q31. Önkoşul: yok.
+
+### Z08 — Keşif ve oda kapsamı ne olsun?
+
+**A — Önerim:** Dört bağlı küçük alan: başlangıç, asimetrik NPC ve aynı yerde bakım masası, insan NPC, boss. İlk iki savaş tamamlandıktan sonra boss'a girilir. Ek puzzle, hazard, tüccar, hub hizmeti veya yan dövüş yok.
+
+**B — Alternatif:** Aynı ana sıra, fakat bir dövüşsüz yan cep ve tek isteğe bağlı hikâye bulgusu eklensin.
+
+**Neden / bedeli:** A ana döngüyü ölçer; B küçük keşif ödülü ekler. Sayılan alanlar dört ayrı yükleme ekranı olmak zorunda değil. Genel oyunun hub/sefer yönü korunur.
+
+Bağ: Q26 Q27 Q28 Q31. Önkoşul: Z07.
+
+### Z09 — PA1/PA2 karşılaştırmasından hangi kamera yönünü seçelim?
+
+**A — Önerim:** PA1: sabit eğik üstten üçüncü şahıs; savaş aynı sahnede sabit kadraj, beden ayrıntısı büyük inceleme panelinde.
+
+**B — Alternatif:** PA2: sabit yandan/hafif eğik üçüncü şahıs; kısa bağlı alanlar, uzuvlar daha büyük teatral kadrajda.
+
+**Neden / bedeli:** A bağlı dünya ve stratejik seçimle iyi örtüşür; B iskelet minotor ve graft silüetlerini öne çıkarır. Bu bir tercih önerisidir; iki çizimin fiilen karşılaştırıldığını iddia etmiyorum. Karşılaştırma görmek istersen Z09=GÖRSEL KARŞILAŞTIR diyebilirsin; seçim o çıktıya kadar açık kalır.
+
+Bağ: Q30 Q21 Q31. Önkoşul: Z08.
+
+### Z10 — Keşif hareketi nasıl olsun?
+
+**A — Önerim:** WASD/yön tuşlarıyla sekiz yön; etkileşim için E; mouse kart/beden hedefi için. Diyalog/savaşta dünya hareketi durur.
+
+**B — Alternatif:** Tıkla-git hareketi; hedef ve iptal yolu açık gösterilir, klavye eşdeğeri de sağlanır.
+
+**Neden / bedeli:** A doğrudan denetim ve daha dar navigasyon kapsamı verir; B yol bulma/engel/iptal davranışı gerektirir. Combat mesafesi iki seçenekte de yok.
+
+Bağ: Q31 Q21. Önkoşul: Z09.
+
+### Z11 — Pixel üretim tarzı ne olsun?
+
+**A — Önerim:** Elle düzenlenen 2B, sınırlı palet ve belirgin silüet; özgün küçük sprite seti. Işık ve parça ayrımı okunurluğa hizmet etsin.
+
+**B — Alternatif:** 3B model/rig'den 2B kareler üretip pixel düzeltme yapalım; çıktı yine seçilmiş pixel görünümü olsun.
+
+**Neden / bedeli:** A ilk küçük içerik için daha dar üretim hattı; B çoklu uzuv/animasyon revizyonunda aday ama ek model/rig/export işi var. PA5 bir sanat türü değil üretim tercihidir.
+
+Bağ: Q30 Q22. Önkoşul: Z09.
+
+### Z12 — Gore ve beden korkusunun gösterim sınırı ne olsun?
+
+**A — Önerim:** Belirgin anatomik kayıp, kemik ve kan; uzun yakın plan prosedür yok. Azaltılmış gore ayarı mekanik izleri simge/siluetle korusun. Cinsel şiddet içeriği eklenmesin.
+
+**B — Alternatif:** Aynı mekanik kapsam, fakat graft/kesme kısa yakın planla daha sert gösterilsin; azaltma ayarı korunsun.
+
+**Neden / bedeli:** A beden sonucunu açıklarken ilk üretim ve rahatsızlık kapsamını sınırlar; B ayrı yakın plan/animasyon üretir. Önceden seçilmiş karanlık ton yeniden oylanmıyor; gösterim yoğunluğu kapanıyor.
+
+Bağ: Q21 Q22 Q30. Önkoşul: Z11.
+
+## Kontrol, tur sırası ve stun — Z13–Z18
+
+### Z13 — D1/D2 savunma girişinden hangisini uygulayalım?
+
+**A — Önerim:** D2: duraklatılmış karar yüzeyinde kaynak ve savunma niyeti seç; tehdit anında tek girişle seçilmiş yanıtı uygula. Bu ön seçim ayrı Preparation harcamaz.
+
+**B — Alternatif:** D1: tutuşla Block, bilinçli bırakışla Parry; Evade için ayrı niyet/simge. Hold-toggle eşdeğeri sağlanır.
+
+**Neden / bedeli:** A strateji ağırlığını daha açık ayırır; B daha fiziksel bir his verir. Yanlış niyet otomatik düzeltilmez. Charge'ın özel Parry işareti her ikisinde de ayrı görünür.
+
+Bağ: Q08 Q11 Q21. Önkoşul: yok.
+
+### Z14 — Normal savunmanın ilk sayısal deneme paketi ne olsun?
+
+**A — Önerim:** DWF başlangıcı: en az 900 ms işaret, Block temas öncesi 250 ms kilit, Parry ±90 ms, Evade ±180 ms. Bunlar ilk test değeridir; Z48 yetkisi sınırında ayarlanır.
+
+**B — Alternatif:** Daha yumuşak başlangıç: 1200 ms işaret, Parry ±140 ms, Evade ±220 ms; Block aynı açık kilitle çalışır.
+
+**Neden / bedeli:** A daha belirgin ustalık farkı; B ilk öğrenmede daha toleranslı. Bu değerlerin eğlence/erişilebilirliği doğrulanmış değil; beden/Will pencereleri gizlice daraltmaz.
+
+Bağ: Q11 Q23. Önkoşul: Z13.
+
+### Z15 — Yardım ayarları ve ilk varsayılan zorluk nasıl olsun?
+
+**A — Önerim:** Standart hız varsayılan; bağımsız geniş pencere, yavaş savunma ve doğru seçilmiş route için otomasyon sunulsun. Ödül/Will etkisi azaltılmasın; ilk açılış kısa ayar ekranı versin.
+
+**B — Alternatif:** İlk açılış geniş pencereyle başlasın; oyuncu isterse standart pencereye geçsin. Aynı yardım araçları mevcut olsun.
+
+**Neden / bedeli:** Kapsam zaten kabul edilmişti; varsayılan ve yardımın stratejiye müdahale sınırı kapanıyor. Otomasyon bozuk kaynağı onarmaz, yanlış niyeti Parry'ye çevirmez.
+
+Bağ: Q11 Q21 Q23. Önkoşul: Z14.
+
+### Z16 — Oyuncu ve düşman eylemleri hangi sırada çözülsün?
+
+**A — Önerim:** Her tur: zorunlu kontroller/refresh → düşman niyeti → oyuncu Preparation/Main → düşmanın hâlâ legal Preparation/Main'i → tur sonu etkiler. Her eylemin açık interception olayı kendi içinde çözülür.
+
+**B — Alternatif:** İki tarafın Preparation'ları önce, sonra oyuncu Main ve düşman Main çözülsün; düşman Preparation etkisi oyuncu Main'inden önce görülsün.
+
+**Neden / bedeli:** A daha basit öğretim; B hazırlıkların karşılıklı etkisini artırır. Hiçbir seçenek ekstra ordinary eylem yaratmaz; Charge'ın refleks olayı saldırı QTE'si değildir.
+
+Bağ: Q08 Q09 Q11. Önkoşul: Z13.
+
+### Z17 — Kilitlenen ama henüz başlamadan geçersizleşen eylem ne yapsın?
+
+**A — Önerim:** Başlamadan geçersizse ödeme/mutasyon yok; o kilitli fırsat harcanmış sayılır, aynı tur ücretsiz yeni Main seçilmez. Kaynak kaybı nedeni gösterilir.
+
+**B — Alternatif:** Başlamamış Main geçersizse tek sefer yeniden seçim açılır; yeni kaynak ve bedel tekrar açık doğrulanır.
+
+**Neden / bedeli:** Ödeme başlangıçta kuralı korunur. A taahhüt sonucunu korur; B daha bağışlayıcı fakat yeni seçim ve döngü sınırı gerektirir. Başlamış atomik eylem geriye dönük silinmez.
+
+Bağ: Q08 Q09. Önkoşul: Z16.
+
+### Z18 — Stun'ın exact tur ve tekrar uygulanma kuralı ne olsun?
+
+**A — Önerim:** Bir sonraki henüz başlamamış oyuncu karar turunda Preparation/Main=0; savunma kalır, tur sonunda stun biter. Üst üste birikmez. Charge yeniden kullanım aralığı toparlanma turunu garanti eder.
+
+**B — Alternatif:** Aynı fırsat kaybı, fakat stun aktifken yeniden isabet süreyi bir sonraki karar turuna yenileyebilir; boss'un saldırı planı süresiz zinciri engellemek zorunda.
+
+**Neden / bedeli:** Sonraki Preparation/Main kaybı seçilmişti; burada tüketim/yenileme kapanıyor. A daha okunur ve zincir riskini azaltır. Stun gerçek saniye veya menü açmakla erimez.
+
+Bağ: Q08 Q15 Q25. Önkoşul: Z16.
+
+## Beden, yaralar ve ölüm — Z19–Z24
+
+### Z19 — Beden/Integrity eşikleri nasıl ifade edilsin?
+
+**A — Önerim:** Her parçanın kendi max değeri ve yüzde durumu: Full >%70, Strained >%30–%70, Desperate >0–%30, Ruined=0; Missing/Severed ayrı durum. Normal savunma Full/Strained kaynak ister.
+
+**B — Alternatif:** Her parçayı altı görünür bütünlük birimiyle ifade edelim; teknikler birim eşiği istesin.
+
+**Neden / bedeli:** A farklı bedenlerin gücünü aynı durum diliyle taşır. Sayısal eşikler yeni adaydır. Ruined kol otomatik kopmaz; kaynak sınırı başka kola genel ceza vermez.
+
+Bağ: Q04 Q06 Q11. Önkoşul: yok.
+
+### Z20 — Başlangıç yaralı kolunun tam yönü ne olsun?
+
+**A — Önerim:** Sağ kol Strained, diğer normal saldırı/savunma kaynakları Full; başlangıç hasarı Closed Trauma olsun. Açılışta kontrolsüz kanama sayacı yok; graft sağ kolu değiştirsin.
+
+**B — Alternatif:** Sağ kol Strained ve tedavi edilmesi gereken Open Wound ile başla; diğer kaynaklar Full.
+
+**Neden / bedeli:** I1 bağlı hasarlı kol zaten seçili. A ilk karar okunurken ölüm baskısını artırmaz; B bakım ihtiyacını doğrudan gösterir ama önce öğretim/tedavi fırsatı gerekir. Exact max/Blood Z48'de.
+
+Bağ: Q04 Q05 Q06. Önkoşul: Z19.
+
+### Z21 — Wound, tedavi ve yapısal onarımın demo kapsamı ne olsun?
+
+**A — Önerim:** Dört mevcut wound ailesi; kit Control/Stabilize sağlar. İlk demoda yapısal onarım/ruined uzvu yeniden inşa yok; graft fiziksel değişim yolu olsun. Integrity Echo da demo dışında kalsın.
+
+**B — Alternatif:** Dört wound ailesi yanında kitte bir sınırlı field repair ve ayrı bedelli reconstructive repair bulunsun; Echo ayrıca gösterilsin.
+
+**Neden / bedeli:** Bu açık bir kapsam seçimi: A seçilirse retained repair/Echo hipotezleri ilk demoda gösterilmez; sessizce silinmez. B daha geniş araç, sayı ve öğretim yükü.
+
+Bağ: Q05 Q06 Q07 Q10 Q22. Önkoşul: Z20.
+
+### Z22 — Melez kanama saati tam nasıl işlesin?
+
+**A — Önerim:** Keşifte 15 etkin saniye = bir yara olayı; savaşta tur sonunda bir olay. Tamamlanmamış keşif süresi saklanır, savaşta ilerlemez, çıkınca devam eder. Kabul edilen okuma/bakım/pause/alt-tab yüzeyleri durur.
+
+**B — Alternatif:** Aynı muhasebe, keşif aralığı 30 etkin saniye; savaş yine tur sonunda.
+
+**Neden / bedeli:** A daha hissedilir bakım baskısı; B daha rahat keşif. Aynı zaman aralığı iki saatten ücretlenmez; sürekli savaş aç/kapat bir kaçış olamaz. Süre sayısal adaydır.
+
+Bağ: Q05 Q07 Q14. Önkoşul: Z16, Z21.
+
+### Z23 — Ölüm, stun ve son bakım fırsatı nasıl sıralansın?
+
+**A — Önerim:** Başlamış atomik zincir bitsin; Blood-0/Head-Core ölüm kontrolü living claim'den önce yapılsın. Ruined Torso için sonraki gerçekten kullanılabilir Main fırsatı verilsin; stun'ın kaldırdığı fırsat tedavi hakkını tüketmesin. İki ölüm birlikteyse iki ölüm kaydedilsin, ölü oyuncuya devam ödülü yok.
+
+**B — Alternatif:** Aynı sıralama; Torso'nun son fırsatı bir sonraki takvimsel tur olsun, stun onu da kaybettirebilsin. Bu ölümcül ilişki önceden açık gösterilsin.
+
+**Neden / bedeli:** A torso uyarısının gerçek yanıt hakkı olmasını sağlar; B stun'ı daha ölümcül yapar. Head/Core exact eşik ve saldırı profilleri Z48'de; F33 kurtarmaları iki seçenekte de yok.
+
+Bağ: Q07 Q08 Q25. Önkoşul: Z18, Z19, Z21, Z22.
+
+### Z24 — Block hasarı ve kaynak yetersizliği nasıl olsun?
+
+**A — Önerim:** DWF: guard kaybı ceil(D×0.75×GuardFactor), sıradan kaynak faktörü 1.0. Kaynak tahmini kaybı karşılayamıyorsa Block baştan illegal; hayali yedek/taşma yok. Yaralanma yalnız saldırının açık temas profilinden.
+
+**B — Alternatif:** Daha koruyucu katsayı 0.60; diğer legality aynı. 0.90 sonraki zor test adayı olarak kalsın.
+
+**Neden / bedeli:** A mevcut karşılaştırmanın ortası; B uzuvları daha uzun korur. Başarılı Parry hasarı önler ve Will etkisini sürdürür. Bu formül Charge'a otomatik Block izni vermez.
+
+Bağ: Q06 Q11. Önkoşul: Z19.
+
+## Kartlar, araçlar, Will ve sonlu kaynak — Z25–Z30
+
+### Z25 — Kart ve Attention'ın küçük katalog sınırı ne olsun?
+
+**A — Önerim:** Başlangıçta altı source-valid kart ifadesi hedefleyelim; Punch/Kick/Headbutt ve iki Preparation rolü, exact kaynak farklarıyla. Dört Attention konumu; eşit ağırlıklı, yerine koymadan çekim; Spent/Invalid refill, kalan kartlar elde. Ücretli redraw ilk demoda yok.
+
+**B — Alternatif:** Aynı temel, sekiz kart ve turda en çok bir 2 Blood redraw; aynı kartı tek seçenekken çektiren redraw illegal.
+
+**Neden / bedeli:** A daha küçük öğretim ve sonlanma uzayı; B erişim planlamasını genişletir. Altı, altı ayrı soyut kavram demek değil; iki kol aynı kavramın farklı kaynak ifadeleri olabilir. Catalogue Z48'de exact yazılır.
+
+Bağ: Q09 Q18 Q19. Önkoşul: Z04, Z05, Z16, Z19.
+
+### Z26 — Üç aracın başlangıç miktarı ve saklama sınırı ne olsun?
+
+**A — Önerim:** Bir tekrar kullanılabilir kesme aracı, üç kullanımlı kit, başlangıçta boş 40 Blood kapasiteli kap. Ayrı uzuv deposu/tüccar/yeniden dolan servis yok; başarısız illegal işlem use tüketmez.
+
+**B — Alternatif:** Kesme aracı da iki kullanım ile sınırlı olsun; kit dört kullanım, kap 30 Blood.
+
+**Neden / bedeli:** Üç araç yönü seçilmişti; adet/uses burada aday. A graft ve iki bakım fırsatı verir, kesin rota maliyetleri Z48'de doğrulanır. Kap Blood yaratmaz; kit tedavisi Blood doldurmaz.
+
+Bağ: Q10 Q17. Önkoşul: Z21.
+
+### Z27 — Readied Item savaşta değiştirilebilsin mi?
+
+**A — Önerim:** Karşılaşma öncesi/bakımda bir araç hazırla; savaş içinde değiştirilemesin. Kit ve kaptan kullanım Main harcasın; bir turda en fazla bir inventory eylemi.
+
+**B — Alternatif:** Savaş içinde yeniden hazırlamak Preparation harcasın; item kullanımı Main olsun.
+
+**Neden / bedeli:** A seçim bedelini ve daha dar akışı korur; B daha esnek. Stun iki bütçeyi de kaldırdığı için araçla atlanamaz. Elindeki tool'nun exact kullanımı tek legal kola ve uygun hedefe bağlı yazılacak.
+
+Bağ: Q08 Q10. Önkoşul: Z18, Z26.
+
+### Z28 — Will'ın ilk değer ve azalma paketi ne olsun?
+
+**A — Önerim:** Normal oyuncu/NPC için 90; başarıyla Parry edilen Routine/Committed/Critical saldırıda 24/30/36 kayıp; encounter içi pasif yenilenme yok. Normal hasar Will azaltmaz. GoalCritical ek şoku ilk demoda yok.
+
+**B — Alternatif:** Aynı temel; açıkça etiketli GoalCritical kaynağın ilk bozulmasında bir kez ek Will şoku da olsun.
+
+**Neden / bedeli:** A daha temiz neden-sonuç; B hedef bozmayı teslimiyete de bağlar ve ek açıklama gerekir. Boss'un farklı sonucu Z42'de ayrıca seçilecek; bedensel hasar ile Will birleştirilmez.
+
+Bağ: Q12 Q13. Önkoşul: Z16, Z24.
+
+### Z29 — Player Will kırıldığında seçilmiş accept/Defy akışı tam nasıl olsun?
+
+**A — Önerim:** Ölüm kontrollerinden sonra bir kez ClaimWindow; legal açıklanmış talebi kabul et veya kalan legal eylemle bir lethal Defy seç. Defy pazarlığı o encounter için kapatır. Geçersiz talep otomatik transfer yapmaz; NPC'nin önceden yazılmış fallback'i çalışır.
+
+**B — Alternatif:** Defy aynı, fakat tekliften önce tek açık karşı teklif hakkı da olsun; transfer edilecek kaynak ve bedel önceden sabit.
+
+**Neden / bedeli:** A seçilmiş accept/Defy yönünü ek pazarlık dalı olmadan kapatır; B daha fazla aktör yazımı ve ekonomi tablosu.
+
+Bağ: Q12 Q13 Q15. Önkoşul: Z23, Z28.
+
+### Z30 — Kaçınma ve pas geçmeyle sonsuz savaş nasıl engellensin?
+
+**A — Önerim:** Bütün dövüşlerde bedeni etkin tutmanın açık, sabit tur-sonu Blood gideri olsun; ilk aday 2 Blood/tur, wound kaybından ayrı. Yeni Mana değil; yaşamdan gerçek eksilir. Sonsuz ücretsiz refill/heal yok.
+
+**B — Alternatif:** Genel tur vergisi olmasın; her legal savunma ve saldırı kendi açıklanmış sonlu Blood/Integrity/uses bedelini taşısın. Pass/no-input da gerçek düşman tehdidiyle kapanabilsin.
+
+**Neden / bedeli:** A sonlu üst sınırı daha kolay izletir ama yeni evrensel Blood gideri seçmiş olursun. B daha organik, bütün ücretsiz döngülere ayrı matematiksel kontrol gerektirir; sadece 'tur değişti' yetmez.
+
+Bağ: Q14 Q05 Q09 Q11 Q25. Önkoşul: Z22, Z25, Z28.
+
+## Normal NPC'ler, graft ve rota ekonomisi — Z31–Z36
+
+### Z31 — İki normal NPC'nin motive ve talep paketini seçelim mi?
+
+**A — Önerim:** Asimetrik NPC eksik bedenini sürdürecek Blood için geçidi tutar; üstün kolunu kaybetmeye ancak yaşamı için razı olur. İnsan NPC kendi hayatta kalması için oyuncuyu boss yönüne itmek ister; oyuncu kendi amacını anlayıp çatışır. Her ikisinin talebi karşılaşma öncesi sabit, düşük bir Blood ödemesi; legal nonlethal yenilgiden sonra geçiş açık.
+
+**B — Alternatif:** Asimetrik NPC Blood yerine belirli bir bakım aracı ister; insan NPC ortak kaçış bilgisi için hizmet/itaat ister. Exact claims önceden yazılır.
+
+**Neden / bedeli:** A aynı ekonomide niyetleri ayırır; B yeni tool/service yükümlülüğü yaratır. İsim, kısa İngilizce metin ve exact claim miktarı Z48'de; tehdit/transfer devam kaynaklarını yok edemez.
+
+Bağ: Q15 Q13 Q17 Q28. Önkoşul: Z08, Z26, Z29.
+
+### Z32 — Normal dövüşten çekilme ve rakibin teslimiyetini reddetme nasıl olsun?
+
+**A — Önerim:** Dövüş başlamadan inspect/konuşmayı kapatabil; dövüş başladıktan sonra ücretsiz kaçış yok. Rakip teslim olunca kabul veya öldürmeye devam et; transfer koşulları yoksa öldürmeye zorlamadan açık bedelsiz bırakma da mümkün, ödül yok.
+
+**B — Alternatif:** Dövüş sırasında tek açıklanmış Blood bedelli geri çekilme olsun; yaralar/NPC durumu kalır, tekrar giriş resetlemez.
+
+**Neden / bedeli:** A az dal; B kaçış ve tekrar karşılaşma state'ini üretir. Sıra iki normal çatışma olarak korunur; arayüzü kapatmak gizli surrender veya heal yapmaz.
+
+Bağ: Q13 Q15 Q17 Q31. Önkoşul: Z29, Z31.
+
+### Z33 — Kıskaç için G2'yi kesin bedel olarak seçelim mi?
+
+**A — Önerim:** G2: tutuş devam ederken aynı kol saldırı/Block/Parry için kullanılamaz; tutuş yalnız açıklanmış tek düşman-kaynak eylemini bozar, tam oyuncu stun'ını kopyalamaz. Tutulan tarafın yanıtından önce bedelsiz bırakıp bedeli yok etme yok. Draw bağımsız fark: güçlü guarding profili; tutarken bu savunma kullanılamaz.
+
+**B — Alternatif:** G1: tutuş rezervasyonu yerine aynı kolun ince araç kullanımını kalıcı kaybetmesi; eski savunma profili de exact seçilir.
+
+**Neden / bedeli:** A güçlü kontrol ile karşı savunma arasında taktik seçim; B sürekli işlev bedeli. Tutuş boss Charge'ı durduran ayrı yol olmaz; yalnız refleksif Parry kuralı korunur.
+
+Bağ: Q16 Q11 Q08. Önkoşul: Z13, Z19, Z24.
+
+### Z34 — Graft ve eski kolun akıbeti nasıl olsun?
+
+**A — Önerim:** Aynı alandaki masada yaşayan donor anlaşması; tek atomik işlem sağ kolu değiştirir, bir kit use ve açıklanan Blood bedeli ödenir. Sol kol işlem için legal kalmalı. Eski kol yeniden ekiplenebilir stok oluşturmaz; prosedürün açık elden çıkarma sonucu olarak gösterilir.
+
+**B — Alternatif:** Eski kol masada saklansın ve bir kez ayrı bedelle geri takılabilsin; eski/yeni yaralar ve deck yeniden kuruluşu korunur.
+
+**Neden / bedeli:** A geniş inventory ve tersine tak-çıkar döngüsünü sınırlar; B daha fazla body/nesne persistency. Masaya girmek otomatik transfer değil; hem donor hem recipient son durumu ayrı kaydedilir.
+
+Bağ: Q16 Q17 Q10. Önkoşul: Z20, Z26, Z33.
+
+### Z35 — Harvest kalitesi ve insan NPC'nin uzuv sonucu ne olsun?
+
+**A — Önerim:** Uzuv bütünü bozulmadan yaşayan teslimiyet ve uygun araç/prosedür Clean sağlayabilsin; hasarlı kaynak Stressed profil, Ruined kaynak transfer edilemez. İnsan NPC için yalnız sıradan insan kolu transferi yazılsın; yeni özel teknik eklenmesin.
+
+**B — Alternatif:** İlk demoda yalnız sağlam/transfer edilemez ayrımı gösterilsin; kalite katmanını sonraya bırakalım, insan NPC yalnız ödülsüz bırakma veya kill/Blood sunsun.
+
+**Neden / bedeli:** A yaşayan uzuv/Blood ayrımını iki NPC'de korur; B kalite ve ikinci uzuv ödülünü açık scope cut yapar. Basic attack tek başına premium Clean üretmez.
+
+Bağ: Q06 Q15 Q16 Q17. Önkoşul: Z31, Z34.
+
+### Z36 — Kill-Blood toplama ve bakım fırsatı ne olsun?
+
+**A — Önerim:** Her normal kill için başlangıç adayı 30 Blood: önce gövdenin cap'ine, artan varsa kaba bir kez aktar; kapasiteyi aşan kısmı kaybolacağı önceden görünür. Surrender'da Blood yok. İki savaş sonrası güvenli bakım fırsatı var, ücretsiz doldurma yok.
+
+**B — Alternatif:** Ödül önce kaba aktarılır; bedene geçiş ayrıca kit kullanmadan bir kap/Main işlemi ister. Taşma aynı biçimde açık.
+
+**Neden / bedeli:** A reward etkisini erken gösterir; B tedavi zamanlamasını daha taktik yapar. Yara kalitesi kill yield'i ilk demoda değiştirmesin önerisi; miktar/rota Z48 hesabında ayarlanır.
+
+Bağ: Q17 Q10 Q05. Önkoşul: Z26, Z27, Z34, Z35.
+
+## Boneatour ve kesin yenilgi — Z37–Z44
+
+### Z37 — Boneatour Charge sırasında Evade'in sonucu ne olsun?
+
+**A — Önerim:** Evade tam korunma sağlamasın; yalnız legal başarılı Parry Charge hasarı ve stun'ını önlesin. Block/Evade yanlış yanıt olarak önceden görünür; gizli düzeltme yok.
+
+**B — Alternatif:** Evade temastan kaçırıp hasar/stun'ı önlesin, fakat Charge'ı durdurmasın ve Will kazancı vermesin.
+
+**Neden / bedeli:** Parry ile durdurma seçili; kaçınma sorusu hâlâ yanıtsız. A boss'un yeni tehdidini belirgin tutar; B ikinci güvenli yanıt sunar. Alternatif C: Evade yalnız hasarı azaltır, stun kalır; bu yeni ayrı hasar profili gerektirir.
+
+Bağ: Q11 Q15 Q25. Önkoşul: Z13.
+
+### Z38 — Başlangıç bedeni Charge Parry yapabilsin mi?
+
+**A — Önerim:** Evet: bir legal Full/Strained normal kol Charge Parry yapabilsin; normal Block gücü yetmez. Kıskaç da serbest ve legal olduğunda Parry yapabilsin, gizli avantaj yok.
+
+**B — Alternatif:** Sadece Full normal kol yapabilsin; Strained kol yeterli olmasın. Graft zorunlu key olmasın diye en az bir Full normal kol ile boss'a erişen doğal rota kanıtı şart.
+
+**Neden / bedeli:** A 'normal defans yetmez, refleksif Parry durdurur' tanımını iki rotaya açar; B daha sert beden koruma hedefi koyar. İkisinde de zaman penceresi stat nedeniyle gizlice küçülmez.
+
+Bağ: Q11 Q15 Q16 Q25. Önkoşul: Z19, Z33, Z37.
+
+### Z39 — Boynuzlar ve Charge'ın beden kaynağı nasıl temsil edilsin?
+
+**A — Önerim:** Boynuzlar Head kaynağının görünür parçası olsun; Charge legal Head ve Legs ister. Başlangıçta legal olmayan kaynakla Charge başlamaz; özel hazırlıkta iptal fazı yok. Head bozulması bağlı boynuz işlevini de değiştirir.
+
+**B — Alternatif:** Head'e bağlı iki ayrı hedeflenebilir boynuz alt parçası; ikisinden biri kaybedilince Charge profili değişsin, ikisi kaybedilince kapansın.
+
+**Neden / bedeli:** A altı slot sözleşmesini daha az ek state ile kullanır; B radikal anatomi etkileşimi fakat ek hedef/sağlık/asset üretimi. Boynuz kaybı kesin ölüm hesabında gerçek olmalı.
+
+Bağ: Q06 Q15 Q25. Önkoşul: Z19, Z38.
+
+### Z40 — Boneatour'un küçük eylem ve tekrar planı ne olsun?
+
+**A — Önerim:** İki sıradan beden saldırısı + Charge. İlk eylem tanıdık; üçüncü legal boss Main'inde Charge, sonrasında arada en az iki Charge dışı Main. Sıradaki niyet görünür; kaynak kaybı authored legal fallback'e gider.
+
+**B — Alternatif:** Aynı üç eylem, Charge belirli kaynak/Will durumunda açılır; giriş koşulu önceden görünür. Her zaman stun sonrası bir serbest karar turu bırakır.
+
+**Neden / bedeli:** A tahmin edilebilir öğrenme ve stun zinciri sınırı; B daha durumsal. Saldırı isim/kaynak/hasar Z48'de. Bu plan bedava kaynak veya gizli oyuncu-build taraması üretmez.
+
+Bağ: Q08 Q15 Q25. Önkoşul: Z18, Z39.
+
+### Z41 — İskelet beden Blood ve yaralarla nasıl ilişkilensin?
+
+**A — Önerim:** Blood iskeleti de sürdüren somut cehennem yaşam maddesi olsun; kemik içi kanallar görsel olarak açıklansın. Beden/yaralar ortak kaynak kurallarını kullansın; bedava regen veya otomatik bağışıklık yok.
+
+**B — Alternatif:** İskeletin darbeleri çoğunlukla Closed Trauma yaratsın; oyuncudaki et yaralarıyla aynı kanama profili olmasın. Hangi boss bölgelerinin kanadığı ayrı açık tabloyla tanımlansın.
+
+**Neden / bedeli:** A sistem birliği, fakat yeni küçük lore açıklaması gerektirir. B daha anatomik ayrım ve test yükü. Boneatour iskelet olduğu için yaşamı/sonlu maliyeti otomatik ortadan kalkmaz.
+
+Bağ: Q05 Q06 Q15 Q28. Önkoşul: Z02, Z21, Z39.
+
+### Z42 — Boss'un Will'ı kırılınca ne olsun?
+
+**A — Önerim:** Normal NPC'den açık istisna: boss'u teslim etmek yerine bir sonraki Charge fırsatı iptal olsun; bir kez yaşanan, görünür bir üstünlük kırılması. Will etkisi gerçek, boss gizlice dokunulmaz değil. Tekrar/alt sınır exact yazılsın.
+
+**B — Alternatif:** Ortak surrender/credible-threat kuralı aynen kalsın; boss gerçekten tehdit edilebilir duruma gelirse teslimiyet yolu da mümkün olsun. Bunun kesin ölüm hedefiyle çelişkisi Z43'te çözülmeden uygulanmaz.
+
+**Neden / bedeli:** A bir boss istisnası daha seçer ve F42 geçici işlev bozmayı somutlaştırır; henüz onaylı değil. B ortak sistemi korur ama güçlü statlar tek başına surrender imkânsızlığını kanıtlamaz.
+
+Bağ: Q12 Q13 Q15 Q25. Önkoşul: Z28, Z40, Z41.
+
+### Z43 — Seçilmiş kesin bedensel ölüm finali hangi nedensel yolla sağlansın?
+
+**A — Önerim:** Sonlu kaynak yolu: Z30'un açık yaşam/defans giderleri ve sınırlı tedariği kullan; boss'un gerçek dayanıklılığı, oyuncunun ulaşılabilir toplam saldırı kapasitesinden büyük olsun. Kusursuz Parry de sonlu Blood'u geri üretmesin. Sayısal üst sınır hesabı ve iki rota kanıtı başarısızsa uygulamaya taşıma.
+
+**B — Alternatif:** Açık sonlandırıcı eylem: ilk refleksif mücadeleden sonra farklı, önceden açıklanmış fiziksel bitirici kaynak/eylem oyuncuyu öldürsün. Bu Charge'a ek yeni boss eylemi ve yanıt sınırı seçimi demektir; sinematik 'artık öl' kesmesi olamaz.
+
+**Neden / bedeli:** A yeni büyü/can kilidi eklemez; ama bedeni sürdürme maliyeti ve çok üstün dayanıklılık gerekir, karşılaşma uzayabilir. B daha kısa final kurabilir ama yerel başarı/oyuncu kontrolü ve bitirici anatomisi ayrıca yazılmalıdır. İki seçenek de KESİN ÖLÜM hedefini korur; kanıt yokken kapanmış sayılmaz.
+
+Bağ: Q14 Q15 Q25. Önkoşul: Z23, Z30, Z36, Z38, Z39, Z40, Z41, Z42.
+
+### Z44 — Kaybederken yerel başarı ve kapanış ne göstersin?
+
+**A — Önerim:** Charge'ı bir kez doğru Parry ile durdurmak ve/veya açık Will kırılma etkisini görmek bir bilgi başarısı olsun; mekanik ödül yok. Final değişen bedenin ve okunabilen gücün gelecekte daha fazla seçenek sunabileceğini ima etsin, çözülmemiş özel karşı silah vaat etmesin.
+
+**B — Alternatif:** Yerel başarı boynuz/kaynak işlevini bozmak olsun; final o somut değişimi göstererek bitsin.
+
+**Neden / bedeli:** A iki rotada erişilebilir ve seçilmiş öğrenme önceliğine uygun; B Z39/B'ye ve gerçek hasar kapasitesine bağlı. Boss'un kesin iblis ifşası demoda yapılmasın önerisi; yalanı kuşkulu bırak, açık ifşayı ana oyuna ertele.
+
+Bağ: Q15 Q25 Q28 Q23. Önkoşul: Z39, Z42, Z43.
+
+## Anlatım, öğretim ve ayrıntı yetkisi — Z45–Z48
+
+### Z45 — Boss'un çatışma gerekçesi ve kısa diyalog kapsamı ne olsun?
+
+**A — Önerim:** Sahte hükümdarlığına itaat ister, çıkış arayan ruhun reddini güç gösterisiyle bastırır. Goal/Need/Want/RedLine bu çerçevede yazılsın. Her NPC'de giriş, niyet/talep, sonuç; boss'ta iddia, tehdit, Parry tepkisi, kapanış.
+
+**B — Alternatif:** Boss belirli bir geçidi korumakla görevlidir, kendi görevini tüm cehennemin krallığı gibi sunar; asıl üst otorite demoda açıklanmaz.
+
+**Neden / bedeli:** A ek kurum/lore üretmez; B yerel görevini daha somut yapar ama yeni otorite ilişkisi getirir. Sonraki oyunda ilk/son boss sıralaması seçilmiş olmaz.
+
+Bağ: Q15 Q22 Q25 Q28. Önkoşul: Z31, Z44.
+
+### Z46 — Öğretim ve tekrar okunabilirlik ne kadar olsun?
+
+**A — Önerim:** İlk gerek duyulduğunda tek kısa açıklama; source/target, Yellow/Red, reward ayrımı, graft kazanç-bedel, Charge simgesi ve stun. Açıklama tekrar açılabilir; daha önce görülen öğretim kullanıcı ayarıyla atlanabilir. Mekanik bilgiler gizem değil.
+
+**B — Alternatif:** Zorunlu kısa uygulama adımı ekle: ilk Block/Parry ve ilk graft sonrası prova yapılmadan ilerlenmesin.
+
+**Neden / bedeli:** A doğal karar ve tam iki savaş akışını korur; B öğretimi daha denetler fakat zorunlu prova ve potansiyel assist/ilerleme kilidi ekler.
+
+Bağ: Q21 Q22 Q23. Önkoşul: Z13, Z15, Z33, Z37, Z44.
+
+### Z47 — Seslendirme ve ses içeriğinin ilk teslim kapsamı ne olsun?
+
+**A — Önerim:** İngilizce 12 kritik replik; açık anlamı aynı altyazılar. Owner/gönüllü izinli ses kayıtları, az sayıda özgün/izinli efekt ve iki kısa atmosfer döngüsü. Ara build geçici sesle gösterilebilir, seslendirme şartı karşılanmadan demo sunum kabulü kapanmaz.
+
+**B — Alternatif:** Aynı kapsam için bütçeli ses sanatçısı ve izinli müzik; bütçe/temin tarihi M02/M03'te sağlanır.
+
+**Neden / bedeli:** Seslendirme zaten seçili; burada kaynak/ölçek kapanıyor. A ücret gerektirmez ama gerçek kayıt/izin gerekir; B satın alma/iletişim otomatik yapılmaz. Yapay ses istenirse ayrıca açık seçim ve kullanım hakkı gerekir.
+
+Bağ: Q22 Q23 Q32. Önkoşul: Z45, Z46.
+
+### Z48 — Sayılar ve ayrıntılı içerik için bana ne kadar karar yetkisi veriyorsun?
+
+**A — Önerim:** Bu belgedeki seçilmiş mekanik/lore/kapsam sınırları içinde P01–P12'nin exact kart, actor stat, cost, wound, claim, drop, source, UI metni ve acceptance tablolarını ben doldurayım; rota/sonlanma/negatif durumları doğrulayıp gerekli sayısal ayarı tekrar sormadan yapayım. Her değişiklik kayıtlı olsun; yeni mekanik, scope cut, farklı ölüm hedefi veya sayısal ayarla çözülemeyen çelişkide durup nedeni göster.
+
+**B — Alternatif:** Önce eksiksiz exact sayı/içerik tablolarını incelemene sunayım; ayrı cevabından sonra uygulayayım. Önceki F59=B bu seçenekti.
+
+**Neden / bedeli:** A sıradan ayar soruları olmadan uygulamaya ilerleme yetkisini açık sınırlar; bir optimum veya testten geçme garantisi değildir. B daha sık onay noktasıdır. Bu yeni seçimin önceki F59=B'yi ancak sen yanıtlayınca değiştireceğini özellikle kaydediyorum.
+
+Bağ: Q04 Q05 Q06 Q07 Q08 Q09 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18 Q19 Q20 Q21 Q22 Q23 Q25 Q28. Önkoşul: yok.
+
+## Cihaz, üretim, test ve teslim — Z49–Z55
+
+### Z49 — Hangi düşük donanım sınıfını hedefleyelim?
+
+**A — Önerim:** H2 esas alt hedef, H3 sunum hedefi; H1 sadece erişilebilir cihaz varsa ölçülen ek deneme. Minimum ilanını gerçek cihazda başarılı build'e bağlayalım.
+
+**B — Alternatif:** H3 ilk demonun alt hedefi olsun; H1/H2 desteği ilk teslimin şartı olmasın.
+
+**Neden / bedeli:** A düşük sistem niyetini daha geniş tutar; B daha fazla efekt alanı ama daha dar erişim. H3'ün de mantıklı olduğunu söylemiştin; henüz min seçmedin. M01 gerçek model gerektirir.
+
+Bağ: Q24 Q32. Önkoşul: yok.
+
+### Z50 — Performans ve pencere kabul bütçesi ne olsun?
+
+**A — Önerim:** Minimum 1280×720 okunabilir UI, H2'de 720p/60 ve H3'te 1080p/60 hedefi; 60 saniyelik combat testinde frame süresi p95≤16.7 ms, normal oynanışta >100 ms takılma yok. Süreç RAM≤2 GiB, soğuk açılış≤10 sn, geçiş≤2 sn ilk ölçüm hedefleri. Tam ekran/pencere, remap; gamepad ilk demo dışında.
+
+**B — Alternatif:** 720p/30 alt hedef, 1080p/60 tercih; frame bütçesi 30 FPS için p95≤33.3 ms. Diğer sınırlar aynı; savunma süresi gerçek saatten, düşük FPS'de kısalmadan işler.
+
+**Neden / bedeli:** Bunlar cihazda doğrulanmış minimum değil kabul adayları. A refleks akışını öne alır; B daha eski cihazları hedefler ama hareket geri bildirimini değiştirir. p95 gerçek ekran/input uçtan uca gecikme kanıtı değildir.
+
+Bağ: Q21 Q23 Q24 Q32. Önkoşul: Z49.
+
+### Z51 — Motor ve kurulacak araç kapsamı ne olsun?
+
+**A — Önerim:** Önceki Unity yönüyle Unity 6.3 LTS'nin uygun güncel yamasını sabitle; yalnız 2B demo ve Windows build için gereken resmi modüller. İlk dar test kaynak swap + kart/tehdit + Parry + Windows build. Kabul edilmedikçe ücretli eklenti veya başka platform paketi yok.
+
+**B — Alternatif:** Godot 4'ün doğrulanmış kararlı sürümü ve Compatibility renderer; aynı dar kabul testi. Unity'den geçiş proje tercihi olarak kaydedilsin.
+
+**Neden / bedeli:** Unity Hub dosyası bu makinede bulundu; Editor kurulumu/lisansı doğrulanmadı. A önceki yönü korur, B alternatif araç yoludur. Seçimden sonra patch sürümü ve gerekli dosyalar doğrulanıp kayıtlanır; yeniden genel 'başlayayım mı' sorusu açılmaz.
+
+Bağ: Q24 Q30 Q32. Önkoşul: Z09, Z11, Z49, Z50.
+
+### Z52 — İlk görsel varlıkları nasıl üretelim?
+
+**A — Önerim:** Özgün, sade elle düzenlenmiş pixel/sprite seti ve lisansı açık yardımcı font/efekt; düşük ayrıntıyla tutarlı ilk kalite. Owner referans sınırları içinde ajan geçici içerik üretsin; otomatik generatif görsel/ses kullanımı yok.
+
+**B — Alternatif:** Generatif görsel araçlarıyla karakter/çevre taslakları üretmeye izin ver; ardından seçilmiş pixel ölçeği/uzuv ayrımı ve animasyona elle uyarlayalım. Ücretli içerik tavanı ayrıca belirtilsin.
+
+**Neden / bedeli:** A daha dar yöntem, B farklı üretim aracı ve tutarlılık işi. Her ikisinde oyuncu/graft/Boneatour kimliği özgün tutulur; referans oyunun asset'i kopyalanmaz. Final sanat kalitesi ilk mekanik build kanıtı sayılmaz.
+
+Bağ: Q22 Q30 Q32. Önkoşul: Z11, Z12.
+
+### Z53 — Takvim, bütçe ve demo kalite önceliği nasıl yönetilsin?
+
+**A — Önerim:** Kabul adımlarına göre ilerleyelim; doğrulanmamış kesin tarih vermeyelim. İlk hedef okunur özgün geçici görsellerle bütün döngü, sonra ses/görsel kabulü. Onaylanmamış harcama 0; M02'de verdiğin kapasite ve tavanı esas alalım.
+
+**B — Alternatif:** M02'de sabit bir teslim tarihi ver; çakışan kapsamı sayı gizleyerek değil somut seçeneklerle beraber azaltalım.
+
+**Neden / bedeli:** A eksik üretim hızından takvim uydurmaz. B tarih önceliği getirir; seçilmiş zorunlu ses/graft/boss içeriği sessizce kesilmez. '0 harcama' ses kaydının otomatik mevcut olduğu anlamına gelmez.
+
+Bağ: Q22 Q23 Q24 Q32. Önkoşul: Z47, Z51, Z52.
+
+### Z54 — İlk insan testi ve kabul eşiği ne olsun?
+
+**A — Önerim:** Önce owner, ardından gönüllü üç hedefe yakın arkadaş. İlk rota serbest; diğer rota ayrı deneme. Kritik mutation/softlock 0; üç kişiden en az ikisi reward ayrımını, graft kazanç-bedelini ve Charge/stun sonucunu kendi sözüyle açıklayabilsin. Açıklanamayan kritik konu revizyon doğursun; ilgi/adalet puanları raporlansın ama pazar kanıtı sayılmasın.
+
+**B — Alternatif:** Önce yalnız owner teknik/içerik kabulü; arkadaş gözlemini sonraki aşamaya taşıyalım. Böyle teslim edilen build için dış kullanıcı anlama/ilgi doğrulaması yapılmadığı açık yazılsın.
+
+**Neden / bedeli:** A ilk demo hedefindeki arkadaş gözlemini içerir; B daha erken teknik teslim ama insan kanıtı eksik. Örnek eşikleri proje karar kuralıdır, istatistiksel geçerlik değil. Kayıt rızası, önceki maruziyet ve yardım sapmaları loglanır; kimseye otomatik mesaj yok.
+
+Bağ: Q23 Q21 Q25 Q32. Önkoşul: Z15, Z44, Z46, Z47, Z50.
+
+### Z55 — İlk teslim biçimi ve tekrar davranışının son sınırı ne olsun?
+
+**A — Önerim:** Çevrimdışı Windows x64 ZIP: oyun, kısa çalıştırma/tuş belgesi, sürüm ve bilinen sınırlamalar. Ayarlar kalır; final retry/menu/exit seçilmiş şekilde. Uygulama kapanır/çökerse gameplay baştan. Yerel teşhis logu anonim teknik olaylar; otomatik yükleme/analytics yok.
+
+**B — Alternatif:** Aynı oyun ayrıca owner'ın kendi makinesinde editörden çalıştırılsın; ZIP ve temiz makine kontrolü sonraki teslim olsun.
+
+**Neden / bedeli:** A kullanıcıya bağımsız örnek verir; B yalnız geliştirme teslimidir, özel Windows demo kabulünün eşdeğeri değildir. Kurulum programı, çevrimiçi hesap, Steam ve kamu yayını yok.
+
+Bağ: Q20 Q21 Q23 Q24 Q32. Önkoşul: Z01, Z06, Z50, Z51, Z54.
+
+## M01–M03 — öneriyle uydurulamayacak gerçek bilgiler
+
+Bu alanlara “bilmiyorum” diyebilirsin; o durumda ilgili üretim/kabul işi bilgi
+gelene kadar açık kalır. Diğer bağımsız belge ve uygulama işi bundan dolayı durmaz.
+
+| Alan | Gereken bilgi | Önerilen yanıt biçimi |
+|---|---|---|
+| M01 — geliştirme ve test cihazı | Geliştirme GPU/RAM/Windows sürümü, erişebileceğimiz en düşük test cihazının CPU/GPU/RAM/Windows modeli; yoksa yalnız mevcut cihaz | “Geliştirme: …; düşük test cihazı: … / şu an yok.” Modeli bilmeden minimum ilan edilmez |
+| M02 — kapasite, tarih ve ücret | Senin haftalık ayırabileceğin saat; zorunlu tarih var/yok; asset/ses/araç için harcama tavanı ve para birimi | “Haftada … saat; tarih yok/…; ücret tavanı 0/…” Bu harcama izni veya otomatik satın alma değildir |
+| M03 — içerik ve ses erişimi | Kullanım hakkı sende olan pixel/görsel dosyalar var mı; İngilizce 12 kritik repliği owner/gönüllü kaydedebilir mi; ücretli ses yolu mu gerekli; Unity seçilirse geçerli Editor lisans/hesap durumu biliniyor mu | “Görsel: yok/…; ses: kendim/gönüllü/ücretli/henüz yok; Unity erişimi: var/bilmiyorum.” Şifre/lisans anahtarı gönderme |
+
+Yerel salt okunur gözlem: Unity Hub uygulama dosyası bulundu; standart Editor
+konumunda bir sürüm doğrulanmadı. Bu, başka yere kurulu olmadığı anlamına gelmez.
+CPU kayıt bilgisinde Intel Core i7-10870H görüldü. GPU/RAM/Windows ayrıntısı için
+sistem envanteri erişim vermedi; null sonuçlar düşük donanım veya kurulu değil
+anlamına gelmez. Bu sınırlama yüzünden model uydurulmadı. Bir kurulum yapılmadı.
+
+## Bana bırakılan deneyimi değiştirmeyen teknik işler
+
+Önceki TD01–TD15 korunur. Bunları yeniden müşteri sorusuna çevirmiyorum:
+legacy'den ayrı `demo/` ürünü; UTF-8 kimlikli içerik; domain/sunum ayrımı;
+tek komut ve atomik mutation; varsa enjekte edilen kayıtlı RNG; ayrı oyun/input
+saati; çift commit koruması; reward/graft tek işlem kaydı; yerel sürümlü ayarlar;
+lisanslı asset kayıt defteri; gerçek input/build ve kural testlerinin ayrımı.
+
+Seçimlerden sonra teknik olarak tamamlanacak ayrıntılar:
+- Exact oyun/motor yamasını ve gerekli resmi modülleri pinleme; build dizini/hash.
+- İçerik yükleme alanları ve immutable tanımlar; bozuk veri hatasının kimliğini gösterme.
+- Session/attempt/actor/item kimlikleri; event sırası ve tekrar üretilebilir seed.
+- Ayar dosyasında sürüm, atomik yazma, bozuk kayıt yedeği ve açık geri dönüş.
+- Alt-tab sırasında input temizleme; geri dönünce eski tuş bırakışını Parry saymama.
+- Pause içinde süre/darbe işletmeme; karar ve input zamanını frame sayısına bağlamama.
+- Çift tıklama, tekrar reward, retry sırasında bekleyen animasyon/komut iptali.
+- Oyun/ayar/diagnostic dosyalarını ayırma; ağ analitiği veya otomatik yükleme eklememe.
+- Menü, resize, ölçek ve focus için seçilmiş okunurluk sınırlarının gerçek girdide testi.
+
+Bunlar yeni kuralların oyuncuya etkisini gizlice kararlaştırma yetkisi değildir.
+Örneğin Stun'ın hangi turu tükettiği teknik enum seçimi değil Z18'dir.
+
+## Exact uygulama tabloları ve negatif örnekler
+
+Aşağıdaki tablo, sadece başlık bırakarak uygulamaya geçmemek için teslim ölçütüdür.
+Z48/A seçilirse her satırı ben doldurur ve kontrol ederim; B seçilirse doldurduğum
+aynı tablolar ayrıca owner incelemesine gelir. **Bu tur exact fixture tamamlanmış
+veya doğrulanmış değildir.** Seçim cevapları ve varsa açık yetki önce gelir.
+
+| Tablo | Yeni sorular | Uygulamadan önce gereken somut çıktı |
+|---|---|---|
+| P01 Başlangıç/beden | Z02 Z03 Z19 Z20 Z48 | Altı slot max/current/state, Blood cap/current, wound, araçlar, ilk legal attack/defense. Strained kaynak threshold sınırları |
+| P02 Wound/ölüm | Z21 Z22 Z23 Z41 Z48 | Her wound immediate/tick/cap/overlap, Control/Stabilize cost/uses/expiry, catastrophic Head/Core/Torso ve simultaneous sonuç; stun bakım sınırı |
+| P03 Tur/savunma | Z13 Z14 Z15 Z16 Z17 Z18 Z24 Z37 Z38 Z48 | Baştan sona event sırası; legal source, timing, profile, wrong/early/late/no-input, otomasyon, cancel/cost ve kaynak rezervasyonu |
+| P04 Will/claims | Z28 Z29 Z31 Z32 Z42 Z48 | Her aktörün Goal/Need/Want/RedLine/Claim/Concession/Fallback, credible threat, transfer legality, Defy bir kez, boss istisnası |
+| P05 Sonlanma | Z30 Z40 Z42 Z43 Z48 | Bütün geri kazanım/ücretsiz çevrimler; sonlu Blood/uses sınırı, toplam mümkün eylem/hasar üst sınırı; boss kaynak ve Will kaybı altında terminal kanıt |
+| P06 Kart/Attention/item | Z04 Z05 Z25 Z26 Z27 Z33 Z48 | Her kartın source/target/minstate/cost/timing/labels/intercept/effect; Deck→Attention; Spent/Invalid/empty/no-alternative; uses/stack/readiness/drop/zero source |
+| P07 Aktör/içerik | Z03 Z20 Z31 Z35 Z39 Z40 Z41 Z45 Z48 | Oyuncu, iki NPC, Boneatour tam anatomy ve eylem listesi; source loss ve surrender dalı; isim/diyalog/asset envanteri |
+| P08 Graft/rota | Z26 Z33 Z34 Z35 Z36 Z48 | Her ara adımda beden/Blood/kit/kap/maliyet; yaşayan donor ve recipient sonucu; eski kol; kill/graft ve kötü seçim dalları |
+| P09 İlerleme | Z01 Z03 Z04 Z05 Z06 Z48 | Dahilse exact achievement/exchange/Brain buff-nerf, reset/ownership; dışarıdaysa eksik kanıtın açık kaydı; ölüm ödülü yok |
+| P10 Boss/final | Z18 Z23 Z37 Z38 Z39 Z40 Z41 Z42 Z43 Z44 Z45 Z48 | Charge cost/cue/route/status, local success, terminal source ve bitiş; yanlış route/assist/surrender/source loss/tekrar stun/beklenmedik kazanma |
+| P11 Sahne/UI/ses | Z07 Z08 Z09 Z10 Z11 Z12 Z15 Z45 Z46 Z47 Z52 | Kesin alan/bağlantı/etkileşim listesi; kart/beden/tehdit hedefi; menü/ayar/son; metin, animation, sprite, SFX ve ses kayıt listesi |
+| P12 Build/test | Z49 Z50 Z51 Z53 Z54 Z55 M01 M02 M03 | Motor/sürüm/lisans durumu, cihaz, paket, ham ölçüm ve build hash; test fixture/seed/input ve insan gözlem protokolü |
+
+Nedensel kontrolün en kritik karşı örnekleri:
+- Graft rotası ilk donordan Blood almadan procedure ve ikinci savaşı karşılayabiliyor mu?
+- Kill rotası kıskaçsız Charge Parry kaynağını koruyarak boss'a ulaşabiliyor mu?
+- İnsan NPC'yi de öldürmeyen rota ek ödül uydurmadan anlamlı finale ulaşabiliyor mu?
+- Kaynak kaybı yetenekleri gerçekten kapatıyor mu; kalan Full kola gizli ceza var mı?
+- Grip rezervasyonu boss Charge'ı bozmanın ikinci yolu haline geliyor mu?
+- Boss'a sürekli Parry, Will döngüsü, free redraw/pass/repair veya fazladan Blood
+  edinimi kesin ölüm hesabını çürütüyor mu?
+- Hiç input vermeyen oyuncu sonsuz modal/turn çevriminde tutuluyor mu?
+- Stun + son torso bakım fırsatı, item budget ve periodic wound hangi exact sırada?
+- Para/uses yetersizken illegal graft hiçbir tarafı yarım değiştirmeden reddediliyor mu?
+- Öldürme ve surrender ödülü aynı NPC'den tekrar alınabiliyor mu?
+- Dünya zamanı/saat geçişi ve retry eski yarayı/animasyonu yeni kişiye taşıyor mu?
+
+## Q01–Q32 kapsama kontrolü
+
+| Q | Bu turdaki karşılık / zaten kapanmış sınır |
+|---|---|
+| Q01 | SEÇİLİ iki normal savaş; Z08 içerik bağlantısı |
+| Q02 | SEÇİLİ boss yeniliği; Z37–Z44 exact sözleşme |
+| Q03 | HARİÇ: O1 ile Guard ilk demo dışında |
+| Q04 | Z02 Z03 Z19 Z20 Z48 |
+| Q05 | Z21 Z22 Z23 Z30 Z41 Z48 |
+| Q06 | Z19 Z20 Z21 Z23 Z24 Z35 Z39 Z41 Z48 |
+| Q07 | F33 kapsamı SEÇİLİ; Z21 Z23 Z48 |
+| Q08 | Z13 Z16 Z17 Z18 Z27 Z33 Z40 Z48 |
+| Q09 | Z04 Z05 Z25 Z48 |
+| Q10 | Üç araç yönü SEÇİLİ; Z21 Z26 Z27 Z34 Z36 Z48 |
+| Q11 | Z13 Z14 Z15 Z19 Z24 Z37 Z38 Z48 |
+| Q12 | Z28 Z29 Z42 Z48 |
+| Q13 | Accept/Defy yönü SEÇİLİ; Z29 Z31 Z32 Z42 |
+| Q14 | Z22 Z25 Z30 Z43 Z48 |
+| Q15 | Z28 Z31 Z32 Z35 Z37 Z38 Z39 Z40 Z41 Z42 Z43 Z44 Z45 Z48 |
+| Q16 | S1/asimetrik donor yönü SEÇİLİ; Z04 Z33 Z34 Z35 Z38 Z48 |
+| Q17 | Z26 Z29 Z31 Z32 Z34 Z35 Z36 Z43 Z48 |
+| Q18 | Z04 Z06 Z25 Z48 |
+| Q19 | Z05 Z06 Z48 |
+| Q20 | F15/F51/F52 SEÇİLİ; Z01 Z03 Z06 Z55 |
+| Q21 | Z09 Z10 Z12 Z13 Z14 Z15 Z46 Z50 Z55 |
+| Q22 | Z03 Z08 Z11 Z12 Z21 Z45 Z46 Z47 Z48 Z52 Z53 |
+| Q23 | Z14 Z15 Z44 Z46 Z47 Z50 Z54 Z55 |
+| Q24 | Z49 Z50 Z51 Z53 Z55 M01 M02 M03 |
+| Q25 | Kayıp/beden ölümü ve stun kapsamı SEÇİLİ; Z18 Z23 Z37 Z38 Z39 Z40 Z41 Z42 Z43 Z44 Z45 |
+| Q26 | S1 SEÇİLİ; Z08 Z33–Z36 exact graft ve rota |
+| Q27 | O1 SEÇİLİ; Z07 Z08 Z20 kesin sahne/beden |
+| Q28 | F17 bilgi sınırı SEÇİLİ; Z01 Z02 Z07 Z31 Z41 Z44 Z45 |
+| Q29 | Hedef/öncelik SEÇİLİ; Z01 Z04 Z05 Z06 demo içi meta sınırı |
+| Q30 | Pixel aile SEÇİLİ; Z09 Z11 Z12 Z51 Z52 |
+| Q31 | Z07 Z08 Z09 Z10 Z32 |
+| Q32 | Z47 Z49 Z50 Z51 Z52 Z53 Z54 Z55 M01 M02 M03 |
+
+Bu kapsama tablosu biçimsel izlenebilirlik sağlar; soruların iyi yanıtlandığını veya
+oyunun dengelendiğini otomatik kanıtlamaz. P tablolarının her alanı seçilmiş ya da
+açıkça yetkiyle kararlaştırılmış hale gelmeden “sıfır açık” denmez.
+
+## Demoya geçiş sırası
+
+1. Yanıtları bağımlılık sırasıyla yaşayan belgelere işle; tercih çelişkisini
+   örnek durumla göster. O1/S1 ve seçilmiş stun yönünü tekrar sorma.
+2. Z48'e göre P01–P10 exact fixture ve iki rota defterini üret. Boss kaçınılmazlığı
+   iddiasını kaynak/Will/kusursuz savunma altında çürütmeye çalış. Çözülmeyen
+   player-facing kuralı kod varsayımı yapma.
+3. P11–P12 içerik/ses/cihaz/build kabulünü somutlaştır; T00–T09 tamamlanma kanıtını
+   kaydet. Son kullanıcı talebindeki koşullu uygulama yönlendirmesini koru;
+   ayrı bir genel izin turu ekleme.
+4. T10: seçilmiş motorda dar input/body swap/defense/Windows build denemesi.
+   Geçerse sürümü sabitle; geçmezse ölçülen engeli ve seçilmiş fallback yolunu kullan.
+5. T11–T15: O1 açılış, source-valid kart/defense/Will/wound, iki NPC ve reward split.
+6. T16–T18: yaşayan graft, gerçek yeni işlev/bedel, seçilmiş progression, insan
+   ikinci dövüşte graft/no-graft rotaları.
+7. T19–T20: Boneatour Charge/stun, exact terminal neden, son ekran ve yeni kişiyle retry.
+8. T21: bağlı Windows paketinde gerçek input, kaynak/softlock negatifleri,
+   seçilmiş düşük cihaz ve insan gözlemi. Ses/asset kısıtları karşılanmadıysa
+   ilgili kabulün eksik olduğunu göster; build varlığını final demo kabulü sayma.
+
+Kapsam dışı kalan tam oyun kararları: bütün kampanya/topoloji, final kozmoloji, diğer
+boss/uzuv/kart kataloğu, uzun vadeli meta ekonomi, Steam/ticari fiyat ve diğer
+platformlar. Yeniden açma tetikleyicisi: ilk demo gereksinimiyle somut çelişki veya
+owner'ın sonraki ana oyun görevi. Bunları ilk demo öncesine yapay engel yapmıyoruz.
+
+## Birlikte okunması gereken seçimler
+
+- Z04/A + Z06/A: uzmanlaşma bir denemede kazanılıp kullanılır, sonraki kişiye
+  gameplay olarak geçmez. Bu bir çelişki değil, demo meta kapsamı seçimidir.
+- Z05/A: Brain kazanımı/ekipmanı gösterilmez; Z25 Attention yine vardır. Attention
+  mekanizmasını kaldırmak veya boss kaybından ödül üretmek anlamına gelmez.
+- Z30/A + Z43/A: genel açık Blood gideri sonlu yaşam hesabına girer. Gideri sonradan
+  kaldırmak aynı kesin ölüm kanıtını geçerli bırakmaz.
+- Z30/B + Z43/A: seçilmiş her eylem/defansın bedeli üzerinden yeni sonlanma hesabı
+  gerekir; bir ücretsiz Parry/pass döngüsü kalırsa bu birleşim kabul edilmez.
+- Z42/B + Z43: gerçek boss surrender yolu kesin ölüm hedefiyle çelişebilir. Kaynak ve
+  credible-threat hesabı çözmedikçe sonuçları birlikte onaylı fixture sayamayız.
+- Z39/A + Z44/B: ayrı boynuz sağlık havuzu yoktur; yerel başarı Head'e bağlı seçilmiş
+  kaynak işlevi üzerinden tanımlanır, gizlice yedinci slot açılmaz.
+- Z47/A + M03 ses kaynağı yok: ara mekanik build ilerleyebilir; seslendirme dahil
+  ilk demo sunum kabulü kayıt gelmeden kapanamaz.
+- Z49/A + yalnız H3 cihazı: H2 hedefi kağıtta kalır; ölçülmeyen H2 için minimum
+  sistem desteği doğrulanmış gibi ilan edilemez.
+
+Bu kontroller, bütün yanıtları işledikten sonra yapılacak exact fixture denetiminin
+yerine geçmez; önemli bağımlılıkları seçim anında görünür kılar.
+
+## Tek mesajlık cevap formu
+
+Aşağıdaki metin **cevap örneğidir; onay verilmiş değildir**. Ortak yöntemi kullanırsan
+yalnız istisnaları ve gerçek bilgi alanlarını yazman yeterli olur.
+
+```text
+Ortak seçim: Z01–Z55 için A önerilerini kabul ediyorum.
+İstisnalarım / özel sınırlarım:
+Z__:
+Z__:
+
+Z48 ayrıntı yetkisi: A / B
+M01 cihazlar:
+M02 haftalık zaman / zorunlu tarih / harcama tavanı:
+M03 görsel varlık / ses kaydı kaynağı / Unity erişimi:
+```
+
+Z48'i ayrı satırda vurgulamak yanlış anlaşılmayı azaltmak içindir; açık ve kapsayıcı
+toplu cevabın içinde Z48/A bulunuyorsa ikinci kez aynı yetkiyi istemem.
+Z09=GÖRSEL KARŞILAŞTIR veya başka KARŞILAŞTIR yanıtı seçilirse ilgili son tercih
+henüz kapanmaz. M alanındaki gerçekler, boş bırakıldıklarında tahmin edilmez.
+
+## Kaynak ve kanıt sınırı
+
+Yetki: [Director](../GAME_DIRECTOR_BRIEF.md), [Core](../CORE_LOOP_ENCOUNTER_AND_RUN.md),
+[Combat](../COMBAT_BODY_AND_BLOOD.md), [Deck](../DECK_BRAIN_AND_ACTIONS.md),
+[World](../WORLD_PROGRESSION_AND_DECISIONS.md).
+İş bağlantısı: [Q/R planı](D0_EXECUTION_PLAN_2026-09-06.md),
+[önceki soru formunun TD/P ekleri](DEMO_FINALIZATION_QUESTIONNAIRE_2026-09-07.md),
+[çalışma sözleşmesi](../DEMO_MINIGAME_AI_WORKING_CONTRACT.md).
+
+Motor araştırması 2026-09-08:
+- Unity'nin destek sayfasında 6.3 LTS ve Aralık 2027 desteği doğrulandı. Unity ayrıca
+  yeni/orta üretimler için Update sürümlerini öneriyor; burada LTS tercihi kısa
+  demoda sürümü sabitleme önerimizdir, resmi “her projeye LTS” kuralı değildir.
+  [Unity sürüm/destek](https://unity.com/releases/unity-6/support).
+- Editor ve Player gereksinimleri ayrı; motorun taban gereksinimi bizim demomuzun
+  performans kanıtı değildir. [Unity 6.3 gereksinimleri](https://docs.unity3d.com/6000.3/Documentation/Manual/system-requirements.html).
+- Godot'un Compatibility yolu daha geniş donanım adayıdır; belirli oyunun FPS'sini
+  garanti etmez. [Godot gereksinimleri](https://docs.godotengine.org/en/stable/about/system_requirements.html).
+- Kullanılacak Unity lisansı uygunluğu/hesap durumu kurulumdan önce doğrulanır;
+  ücretsiz kullanımın projeye otomatik uygun olduğu varsayılmaz.
+  [Unity Personal](https://unity.com/products/unity-personal).
+
+Sanat karşılaştırmasının daha önce araştırılmış birincil kaynakları cevap inceleme
+belgesinde. Bu tur yeni görsel karşılaştırma, gameplay testi veya insan araştırması
+yapılmadı. Öneriler proje hedeflerinden çıkarım; bilimsel optimum veya eğlence kanıtı
+değil. game-att2-production/grill-me/to-spec/to-tickets yöntemleri burada kaynak,
+tercih, bağımlılık, karşı örnek ve kabul ayrımını sağlamak için kullanıldı.
+
+## Belge kontrolü — 2026-09-08
+
+- Plan validator exit 0: 22 ticket, 32 Q, 16 R; 247 yerel bağlantı/40 Markdown;
+  eksik ID veya dependency döngüsü yok; runtime işleri halen bloke.
+- Dosyadan kontrol exit 0: 55 benzersiz Z kartı, her birinde A öneri/B alternatif,
+  Q01-Q32 ve P01-P12 kapsamı, M01-M03 alanları ve temiz satır sonları.
+- Z önkoşul grafiği: 55 düğüm; eksik kimlik ve döngü yok.
+- git diff --check exit 0; legacy src/config/tests değişiklik listesi boş.
+- Bunlar yapı/izlenebilirlik kontrolleridir; owner yanıtı, semantic uyum, tamamlanmış
+  exact fixture, runtime veya insan deneyimi kanıtı değildir.

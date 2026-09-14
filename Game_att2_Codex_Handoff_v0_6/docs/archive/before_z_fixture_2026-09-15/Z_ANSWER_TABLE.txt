@@ -1,0 +1,57 @@
+| Soru | Owner cevabı | Seçilen özgün seçenek |
+|---|---|---|
+| Z01 | A | Demo yeniden başlatıldığında aynı başlangıç koşullarına sahip ayrı bir deneme oynansın; karakter farklı kişi olsun. Oyun bunu evrenin zamanı geri sardığına dair kanıt olarak anlatmasın. |
+| Z02 | A | Cehennemde kişi somut, yaralanabilen bir bedende bulunur; Blood bu bedenin yaşamsal kaynağıdır. Bedenin kökeni ilk demoda açıklanmaz. |
+| Z03 | B | İki önceden yazılmış kişi profili; mekanik başlangıç aynı, görünüş ve kısa geçmiş farklı. |
+| Z04 | A | Bir adet kazanım gösterilsin: ilk karşılaşmadaki açıklanmış başarıyla açılan uzmanlaşma, bakım noktasında uyumlu atomik kart değişimiyle insan savaşında kullanılabilsin. Kıskaç yoksa ona bağlı ifade Dormant kalsın. |
+| Z05 | B | Başlangıçta tek sabit Brain parçası olsun; bir erişim avantajı ve bedeli açıkça gösterilsin, boss kaybı ödül vermesin. |
+| Z06 | B | Açılmış Concept/Brain seçenekleri uygulama açıkken oyuncuya ait meta seçenekler olarak kalsın; yeni kişi eski kişinin anılarını bilmesin. |
+| Z07 | B | Açık kemik arazisi ve bir geçit; yeraltı şehir yönü bu demodan çıkar. |
+| Z08 | B | Aynı ana sıra, fakat bir dövüşsüz yan cep ve tek isteğe bağlı hikâye bulgusu eklensin. |
+| Z09 | A | PA1: sabit eğik üstten üçüncü şahıs; savaş aynı sahnede sabit kadraj, beden ayrıntısı büyük inceleme panelinde. |
+| Z10 | A | WASD/yön tuşlarıyla sekiz yön; etkileşim için E; mouse kart/beden hedefi için. Diyalog/savaşta dünya hareketi durur. |
+| Z11 | A | Elle düzenlenen 2B, sınırlı palet ve belirgin silüet; özgün küçük sprite seti. Işık ve parça ayrımı okunurluğa hizmet etsin. |
+| Z12 | A | Belirgin anatomik kayıp, kemik ve kan; uzun yakın plan prosedür yok. Azaltılmış gore ayarı mekanik izleri simge/siluetle korusun. Cinsel şiddet içeriği eklenmesin. |
+| Z13 | A | D2: duraklatılmış karar yüzeyinde kaynak ve savunma niyeti seç; tehdit anında tek girişle seçilmiş yanıtı uygula. Bu ön seçim ayrı Preparation harcamaz. |
+| Z14 | A | DWF başlangıcı: en az 900 ms işaret, Block temas öncesi 250 ms kilit, Parry ±90 ms, Evade ±180 ms. Bunlar ilk test değeridir; Z48 yetkisi sınırında ayarlanır. |
+| Z15 | A | Standart hız varsayılan; bağımsız geniş pencere, yavaş savunma ve doğru seçilmiş route için otomasyon sunulsun. Ödül/Will etkisi azaltılmasın; ilk açılış kısa ayar ekranı versin. |
+| Z16 | B | İki tarafın Preparation'ları önce, sonra oyuncu Main ve düşman Main çözülsün; düşman Preparation etkisi oyuncu Main'inden önce görülsün. |
+| Z17 | B | Başlamamış Main geçersizse tek sefer yeniden seçim açılır; yeni kaynak ve bedel tekrar açık doğrulanır. |
+| Z18 | A | Bir sonraki henüz başlamamış oyuncu karar turunda Preparation/Main=0; savunma kalır, tur sonunda stun biter. Üst üste birikmez. Charge yeniden kullanım aralığı toparlanma turunu garanti eder. |
+| Z19 | A | Her parçanın kendi max değeri ve yüzde durumu: Full >%70, Strained >%30–%70, Desperate >0–%30, Ruined=0; Missing/Severed ayrı durum. Normal savunma Full/Strained kaynak ister. |
+| Z20 | B | Sağ kol Strained ve tedavi edilmesi gereken Open Wound ile başla; diğer kaynaklar Full. |
+| Z21 | A | Dört mevcut wound ailesi; kit Control/Stabilize sağlar. İlk demoda yapısal onarım/ruined uzvu yeniden inşa yok; graft fiziksel değişim yolu olsun. Integrity Echo da demo dışında kalsın. |
+| Z22 | B | Aynı muhasebe, keşif aralığı 30 etkin saniye; savaş yine tur sonunda. |
+| Z23 | A | Başlamış atomik zincir bitsin; Blood-0/Head-Core ölüm kontrolü living claim'den önce yapılsın. Ruined Torso için sonraki gerçekten kullanılabilir Main fırsatı verilsin; stun'ın kaldırdığı fırsat tedavi hakkını tüketmesin. İki ölüm birlikteyse iki ölüm kaydedilsin, ölü oyuncuya devam ödülü yok. |
+| Z24 | A | DWF: guard kaybı ceil(D×0.75×GuardFactor), sıradan kaynak faktörü 1.0. Kaynak tahmini kaybı karşılayamıyorsa Block baştan illegal; hayali yedek/taşma yok. Yaralanma yalnız saldırının açık temas profilinden. |
+| Z25 | B | Aynı temel, sekiz kart ve turda en çok bir 2 Blood redraw; aynı kartı tek seçenekken çektiren redraw illegal. |
+| Z26 | A | Bir tekrar kullanılabilir kesme aracı, üç kullanımlı kit, başlangıçta boş 40 Blood kapasiteli kap. Ayrı uzuv deposu/tüccar/yeniden dolan servis yok; başarısız illegal işlem use tüketmez. |
+| Z27 | B | Savaş içinde yeniden hazırlamak Preparation harcasın; item kullanımı Main olsun. |
+| Z28 | A | Normal oyuncu/NPC için 90; başarıyla Parry edilen Routine/Committed/Critical saldırıda 24/30/36 kayıp; encounter içi pasif yenilenme yok. Normal hasar Will azaltmaz. GoalCritical ek şoku ilk demoda yok. |
+| Z29 | B | Defy aynı, fakat tekliften önce tek açık karşı teklif hakkı da olsun; transfer edilecek kaynak ve bedel önceden sabit. |
+| Z30 | B | Genel tur vergisi olmasın; her legal savunma ve saldırı kendi açıklanmış sonlu Blood/Integrity/uses bedelini taşısın. Pass/no-input da gerçek düşman tehdidiyle kapanabilsin. |
+| Z31 | B | Asimetrik NPC Blood yerine belirli bir bakım aracı ister; insan NPC ortak kaçış bilgisi için hizmet/itaat ister. Exact claims önceden yazılır. |
+| Z32 | B | Dövüş sırasında tek açıklanmış Blood bedelli geri çekilme olsun; yaralar/NPC durumu kalır, tekrar giriş resetlemez. |
+| Z33 | A | G2: tutuş devam ederken aynı kol saldırı/Block/Parry için kullanılamaz; tutuş yalnız açıklanmış tek düşman-kaynak eylemini bozar, tam oyuncu stun'ını kopyalamaz. Tutulan tarafın yanıtından önce bedelsiz bırakıp bedeli yok etme yok. Draw bağımsız fark: güçlü guarding profili; tutarken bu savunma kullanılamaz. |
+| Z34 | B | Eski kol masada saklansın ve bir kez ayrı bedelle geri takılabilsin; eski/yeni yaralar ve deck yeniden kuruluşu korunur. |
+| Z35 | A | Uzuv bütünü bozulmadan yaşayan teslimiyet ve uygun araç/prosedür Clean sağlayabilsin; hasarlı kaynak Stressed profil, Ruined kaynak transfer edilemez. İnsan NPC için yalnız sıradan insan kolu transferi yazılsın; yeni özel teknik eklenmesin. |
+| Z36 | B | Ödül önce kaba aktarılır; bedene geçiş ayrıca kit kullanmadan bir kap/Main işlemi ister. Taşma aynı biçimde açık. |
+| Z37 | B | Evade temastan kaçırıp hasar/stun'ı önlesin, fakat Charge'ı durdurmasın ve Will kazancı vermesin. |
+| Z38 | B | Sadece Full normal kol yapabilsin; Strained kol yeterli olmasın. Graft zorunlu key olmasın diye en az bir Full normal kol ile boss'a erişen doğal rota kanıtı şart. |
+| Z39 | B | Head'e bağlı iki ayrı hedeflenebilir boynuz alt parçası; ikisinden biri kaybedilince Charge profili değişsin, ikisi kaybedilince kapansın. |
+| Z40 | B | Aynı üç eylem, Charge belirli kaynak/Will durumunda açılır; giriş koşulu önceden görünür. Her zaman stun sonrası bir serbest karar turu bırakır. |
+| Z41 | B | İskeletin darbeleri çoğunlukla Closed Trauma yaratsın; oyuncudaki et yaralarıyla aynı kanama profili olmasın. Hangi boss bölgelerinin kanadığı ayrı açık tabloyla tanımlansın. |
+| Z42 | A | Normal NPC'den açık istisna: boss'u teslim etmek yerine bir sonraki Charge fırsatı iptal olsun; bir kez yaşanan, görünür bir üstünlük kırılması. Will etkisi gerçek, boss gizlice dokunulmaz değil. Tekrar/alt sınır exact yazılsın. |
+| Z43 | A | Sonlu kaynak yolu: Z30'un açık yaşam/defans giderleri ve sınırlı tedariği kullan; boss'un gerçek dayanıklılığı, oyuncunun ulaşılabilir toplam saldırı kapasitesinden büyük olsun. Kusursuz Parry de sonlu Blood'u geri üretmesin. Sayısal üst sınır hesabı ve iki rota kanıtı başarısızsa uygulamaya taşıma. |
+| Z44 | B | Yerel başarı boynuz/kaynak işlevini bozmak olsun; final o somut değişimi göstererek bitsin. |
+| Z45 | B | Boss belirli bir geçidi korumakla görevlidir, kendi görevini tüm cehennemin krallığı gibi sunar; asıl üst otorite demoda açıklanmaz. |
+| Z46 | A | İlk gerek duyulduğunda tek kısa açıklama; source/target, Yellow/Red, reward ayrımı, graft kazanç-bedel, Charge simgesi ve stun. Açıklama tekrar açılabilir; daha önce görülen öğretim kullanıcı ayarıyla atlanabilir. Mekanik bilgiler gizem değil. |
+| Z47 | A | İngilizce 12 kritik replik; açık anlamı aynı altyazılar. Owner/gönüllü izinli ses kayıtları, az sayıda özgün/izinli efekt ve iki kısa atmosfer döngüsü. Ara build geçici sesle gösterilebilir, seslendirme şartı karşılanmadan demo sunum kabulü kapanmaz. |
+| Z48 | A | Bu belgedeki seçilmiş mekanik/lore/kapsam sınırları içinde P01–P12'nin exact kart, actor stat, cost, wound, claim, drop, source, UI metni ve acceptance tablolarını ben doldurayım; rota/sonlanma/negatif durumları doğrulayıp gerekli sayısal ayarı tekrar sormadan yapayım. Her değişiklik kayıtlı olsun; yeni mekanik, scope cut, farklı ölüm hedefi veya sayısal ayarla çözülemeyen çelişkide durup nedeni göster. |
+| Z49 | A | H2 esas alt hedef, H3 sunum hedefi; H1 sadece erişilebilir cihaz varsa ölçülen ek deneme. Minimum ilanını gerçek cihazda başarılı build'e bağlayalım. |
+| Z50 | A | Minimum 1280×720 okunabilir UI, H2'de 720p/60 ve H3'te 1080p/60 hedefi; 60 saniyelik combat testinde frame süresi p95≤16.7 ms, normal oynanışta >100 ms takılma yok. Süreç RAM≤2 GiB, soğuk açılış≤10 sn, geçiş≤2 sn ilk ölçüm hedefleri. Tam ekran/pencere, remap; gamepad ilk demo dışında. |
+| Z51 | B | Godot 4'ün doğrulanmış kararlı sürümü ve Compatibility renderer; aynı dar kabul testi. Unity'den geçiş proje tercihi olarak kaydedilsin. |
+| Z52 | A | Özgün, sade elle düzenlenmiş pixel/sprite seti ve lisansı açık yardımcı font/efekt; düşük ayrıntıyla tutarlı ilk kalite. Owner referans sınırları içinde ajan geçici içerik üretsin; otomatik generatif görsel/ses kullanımı yok. |
+| Z53 | A | Kabul adımlarına göre ilerleyelim; doğrulanmamış kesin tarih vermeyelim. İlk hedef okunur özgün geçici görsellerle bütün döngü, sonra ses/görsel kabulü. Onaylanmamış harcama 0; M02'de verdiğin kapasite ve tavanı esas alalım. |
+| Z54 | A | Önce owner, ardından gönüllü üç hedefe yakın arkadaş. İlk rota serbest; diğer rota ayrı deneme. Kritik mutation/softlock 0; üç kişiden en az ikisi reward ayrımını, graft kazanç-bedelini ve Charge/stun sonucunu kendi sözüyle açıklayabilsin. Açıklanamayan kritik konu revizyon doğursun; ilgi/adalet puanları raporlansın ama pazar kanıtı sayılmasın. |
+| Z55 | A | Çevrimdışı Windows x64 ZIP: oyun, kısa çalıştırma/tuş belgesi, sürüm ve bilinen sınırlamalar. Ayarlar kalır; final retry/menu/exit seçilmiş şekilde. Uygulama kapanır/çökerse gameplay baştan. Yerel teşhis logu anonim teknik olaylar; otomatik yükleme/analytics yok. |

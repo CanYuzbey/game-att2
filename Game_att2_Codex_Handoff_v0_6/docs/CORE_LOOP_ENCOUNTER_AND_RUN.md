@@ -1,312 +1,154 @@
-# Game att2 - Core Loop, Encounter, and Run
+# Game att2 — Core Loop, Encounter, and Run
 
-Status date: 2026-08-24
+Status date: 2026-09-15
 
-Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. THE UNDERGROUND-CITY MINI-GAME HAS A
-BOUNDED SAME-DAY LOOP AND AN ESCAPE/GATE-BOSS END DIRECTION; DETAILED PACING AND THE
-FULL-GAME RUN REMAIN OPEN. NO RUNTIME APPROVAL.**
+**CURRENT LIVING PAPER AUTHORITY.** Selected two-NPC/Boneatour demo and
+Z48/A numeric fixture v0.1. No engine/runtime approval or playable evidence.
 
-## What is currently solid
+## Connected attempt
 
-The smallest coherent active-play loop is:
+The actor starts injured and freely controllable, not bound:
+injured bone landscape -> asymmetric NPC A -> table -> human NPC B ->
+Boneatour -> state-derived death -> retry/menu/exit.
 
-```text
-read the concrete pressure and visible hostile intent
--> inspect current body, hand, turn budget, wounds/Blood, and available sources
--> choose an action/card, exact source, target, and disclosed risk
--> lock the commitment
--> resolve outgoing cards without an attack QTE
--> answer incoming Yellow attacks with Block/Parry or Red attacks with Evade
--> apply integrity, wound, Blood, inventory, and capability consequences
--> recompute the next legal decision state
-```
+A and B are resolved encounters, not optional substitutes for one another. Both
+ordinary kill and living surrender can open each passage. A creates the first
+limb/Blood decision; B tests the changed body's Grip and guarding tradeoff.
+The optional story pocket has no battle, Blood, item or permanent-power reward.
 
-The player must be able to see the incoming action family, its physical/tool source,
-its target or target category, and the expected consequence if unaltered. Exact UI,
-certainty bands, numbers, camera, and animation remain open.
+## P03 — Exact round and source contract
 
-## Active-demo turn contract
+Authority: Z13/A, Z16/B, Z17/B, Z18/A, Z23/A, Z25/B, Z27/B, Z33/A.
+Numbers and extra ordering details below are Z48/A delegated content.
 
-For the current one-versus-one strategic model:
+1. Complete previous atomic mutations; resolve death/fatality before living claims.
+2. Begin the next decision round. Set Preparation=1 and Main=1 for each living actor.
+   A pending player stun sets those opportunities to 0 for this round. Defense
+   remains available. The skipped Main does not consume a Ruined-Torso rescue.
+3. Recompute body/card/item legality. Refill only Spent/Invalid Attention positions,
+   with equal-weight draw without replacement from remaining deck instances;
+   unplayed and Dormant positions remain. Reveal exact hostile Main, source, target,
+   damage, cue, costs and any Preparation.
+4. While paused, choose at most one Preparation and one Main; choose a legal defense
+   source/intention for the revealed incoming action. One paid redraw may precede
+   commitment. Preview independent costs and source occupancy.
+5. Player Preparation resolves first, then enemy Preparation. Source/target changes
+   are visible before either Main. Re-readying a tool consumes Preparation instead
+   of a Preparation card; it does not add an opportunity.
+6. Revalidate player Main. If unstarted and now illegal, pay/mutate nothing and allow
+   exactly one reselection (Z17/B). A second invalidation or declined reselection
+   spends that opportunity. Started actions cannot be rolled back; no substitution.
+7. Resolve player Main atomically. NPC defense is inside that attack's resolution,
+   not an extra Main. Apply costs/contact, recompute legality, and check death then
+   claims before continuing.
+8. Revalidate the enemy's declared Main. Invalidation cancels its unpaid action;
+   it does not generate a new free Main. A fallback must be selected/revealed at
+   refresh, not substituted after a Grip.
+9. Execute the player's preselected legal defense with one timed input. Wrong
+   intent/source is not repaired by automation; missed Parry does not become Block.
+   Resolve activation cost and contact, then Will and claims.
+10. Release Grip only after the held actor's selected response opportunity has
+    resolved or been canceled. Until then the gripping arm cannot attack/Block/Parry.
+    Release creates no refund.
+11. Apply one combat wound tick, expire Brace/Feint, clear temporary commitments, and
+    consume this round's stun. Newly applied stun targets the next unstarted decision
+    round; it does not erase a completed Main. Re-run death/fatality/claim checks and
+    emit ordered state evidence.
 
-```text
-start-of-round scheduled effects and forced checks
--> decision refresh
--> show readable hostile intent and current Mana budget
--> player selects an ordered sequence of legal cards and exact targets
--> preview total cost, source requirements, combo relationship, and consequences
--> commit one card at a time or the disclosed sequence
--> revalidate and resolve in declared order
--> after each resolved card, mutate state and recompute later-card legality
--> cancel a now-illegal later card without fabricating a substitute
--> declare the opponent's legal action, source, target, and Yellow/Red cue
--> Yellow: choose Block or attempt Parry; Red: attempt Evade
--> resolve the defense result, final recipient, and body consequences
--> reduce opponent Will on a successful Parry and test for living surrender
--> expiry and next-turn refresh
-```
+There is no Mana, expanding sequence budget, free Tool Window or discard-all
+cadence. One Preparation plus one Main is the maximum ordinary budget. A same-round
+Feint/Main link uses those two opportunities. Defense uses neither budget nor card.
 
-Outgoing attack cards do not contain QTEs. Reflex-defense events occur only inside
-incoming-action resolution and are not extra voluntary plays. Yellow permits Block or
-Parry; Red requires Evade. Block redirects the attack from its declared target into a
-chosen legal guarding part and weakens that part. Successful Parry prevents the
-incoming damage and reduces enemy Will; successful Evade prevents a Red consequence
-without creating reposition or range state. Exact inputs, timing windows, source
-requirements, Block loss, Will values, and assistance remain `OPEN`.
+Selecting an intent alone does not reserve a source indefinitely. Atomic actions
+occupy their exact sources while resolving. Brace permits its source's subsequent
+Block; Grip's persistent occupancy forbids same-arm attack/Block/Parry. Feint expires
+if the differently sourced Main becomes illegal. Multi-source actions use the weakest
+required condition. Sources are revalidated after each mutation.
 
-`WORKING HYPOTHESIS` recorded for later comparison: insert one bounded `Tool Window`
-after decision refresh, hand draw, and hostile-intent reveal but before the player's
-card sequence. The player may use zero or one owned tool; it costs no Mana, consumes a
-finite charge, and commits its exact physical source until cleanup. This is a proposed
-ordering clarification, not a promoted turn rule or runtime behavior.
+## P04 — Will, claims and continuation
 
-A started atomic action completes; later source damage changes future capability
-rather than retroactively erasing the action. The player may use as many cards as the
-budget permits, and a combo completes within the same turn. The resource is named
-`Mana`; its budget, refresh, carryover, whether a sequence locks all at once,
-relationship to Blood, and exact enemy cadence are `OPEN`. Mana capacity increases as
-rounds pass; the starting capacity, increment, cap, and refresh behavior remain
-`OPEN`.
+Ordinary player/NPC Will starts 90 each encounter, recovery 0, ordinary
+damage/GoalCritical shocks 0. Successful Parry subtracts 24/30/36 for the revealed
+Routine/Committed/Critical attack. Low Will changes no cost, timing or stat.
 
-`WORKING HYPOTHESIS`: growing Mana is the readable escalation clock, while causal
-state loss prevents stalling. A complete round must not reproduce the same meaningful
-combat state through a free defense/heal cycle. Before the Mana cap, each round
-advances the visible Mana clock. At or beyond the cap, each full round must consume
-or worsen a non-renewable fact such as Blood, integrity, wound severity, finite
-item/charge, or capability; a temporary status that later expires is insufficient.
-Exact exceptions, recovery limits, and any maximum-round fallback remain `OPEN`.
+At Will=0 pause once after death checks. Living surrender requires two living actors
+and a winner with an affordable legal attack from a usable source. At least one
+compatible attack instance must remain in the active deck and be obtainable under
+the ordinary Attention/refill/redraw contract; no absent card/source is fabricated.
 
-## Encounter meaning
+For player defeat show the NPC's preauthored primary demand, one fixed counteroffer
+and one lethal Defy if legal continuation exists. At most one counteroffer occurs.
+Acceptance applies its cost and promised concession atomically. Defy closes this
+encounter's negotiation permanently. Invalid transfer does not occur; use the
+authored fallback. See [World P07](WORLD_PROGRESSION_AND_DECISIONS.md#p07--actors-and-preauthored-claims).
 
-Combat is core interaction, but combat is not automatically the purpose of every
-encounter. Keep these layers separate:
+For NPC defeat show its living arm offer, reward-free mercy or continue-to-kill.
+A ruined/unavailable arm yields no fake replacement. Mercy/passage follows its
+expectation of death from renewed resistance, not a free-flesh story. Accepting the
+living bargain yields no kill-Blood.
 
-| Layer | Question |
-|---|---|
-| Motivation | Why does this actor enter or continue conflict? |
-| Objective | What state are they trying to create? |
-| Route | Which reachable state can satisfy that objective? |
-| Resolution | Why did active conflict stop? |
-| Outcome | How successful was each actor? |
+Boneatour is the Z42/A exception: Will break cancels the next otherwise-legal Charge
+selection once, with a revealed normal fallback in its place. There is no boss
+surrender or transfer; Will stays 0 and the exception cannot be farmed.
 
-Actions mutate ordinary state. They do not directly select a designer-authored
-ending. Death, capability break, objective completion, surrender, bargain, mercy,
-escape, mutual success, partial success, or unresolved continuation must follow from
-state, motivation, and remaining legal affordances.
+## Retreat, clocks and stalled input
 
-For the active-demo duel, `Will (İrade)` is the visible combat-surrender state.
-Successful Parry reduces it. Reaching Broken Will triggers the living surrender/limb
-bargain only while the opponent lives, the limb remains transferable, and the player
-remains a credible threat. Exact values, recovery, other mutation sources, and actor
-exceptions remain `OPEN`.
+Each ordinary encounter permits one retreat for 6 Blood through Main using
+Full/Strained Legs. Wounds, body, NPC state, Will, negotiation flags, remaining uses
+and retreat-used flag persist. Reentry restores no resources, Attention or retreat.
+Round opportunities refresh on reentry; the unresolved encounter must still be
+resolved to open passage. This normal-fight choice gives Boneatour no retreat.
 
-### Goal-driven actors and reciprocal claims
+30 active exploration seconds create one wound tick; combat creates one at round
+end. Preserve the exploration remainder, freeze it in combat, resume it afterward.
+Dialogue, inspect, care/table, pause, settings and alt-tab pause both clocks.
+A completed retreat round ticks once; the same interval is never charged twice.
 
-`APPROVED DIRECTION`: consequential NPCs are actors with a purpose, not idle body-part
-containers. Their reason to seek Blood, protect/refuse a limb, negotiate, fight,
-surrender, or exploit a player defeat must exist before the player selects a route.
-An NPC may aim to break player Will and obtain a disclosed useful asset when that
-result advances its own goal.
+Leaving a paused decision panel open pauses the session; it is not a completed free
+combat-state cycle. No hidden timeout is introduced. No input in a running cue
+applies the original attack. Pass spends the Main opportunity and resolves that
+threat. Rejected uncommitted input is not a newly completed round.
 
-`WORKING HYPOTHESIS`: each bounded actor declares one `Goal`, `Need`, `Want`,
-`RedLine`, `Leverage`, primary `Claim`, optional counterclaim, `Concession`, and
-`Fallback`. Legal demands come only from that authored claim list and are ordered by
-Need closure, Goal progress, Want fit, survival benefit, lower Concession cost, then an
-authored tie-break. The system never scans the player's body or wallet for the most
-valuable punishment.
+## P05 — Finite-state and death bound
 
-Faction doctrine supplies shared long-horizon priorities and relationships; current
-role/duty supplies immediate obligations; the individual actor card supplies the
-actual Goal, Need, RedLine, and Claim. Combat strength and risk tolerance are separate
-from all three. An actor may validly trade, flee, ignore the player, or carry
-`NoClaim` when confrontation would not advance its purpose.
+Z30/B + Z43/A: attacks cost at least 2 player Blood, accepted defense at least 1,
+Grip at least 2, redraw at least 1 even with the Brain. There is no global round
+tax. Each procedure/item/Preparation declares its own cost. Healing transfers
+existing bowl Blood; treatment generates no Blood and repairs no structure.
 
-Broken Will opens the same legal-claim check for player and NPC. It does not erase
-personality or transfer property automatically. A living-result claim must have been
-disclosed before commitment, remain useful and transferable, be supported by real
-leverage, and leave the released player with the minimum required attack and defense
-routes. Exact player `Defy` versus enforced-claim behavior remains an owner decision.
-The complete research contract is in
-`../research/defense_will_npc_balance_v0_1.md`.
+Define E = body Blood + bowl Blood + unclaimed eligible normal-kill Blood.
+Initially E is at most 80 + 30 + 30 = 140. Each unique eligible kill converts its
+already-counted allowance once; accepted surrender/mercy removes that allowance.
+Costs, wounds, overflow and lost access decrease E. Card cycles, session unlocks,
+old-arm replacement and duplicate claim attempts cannot increase it.
 
-Jeff's reciprocal-repair behavior is an implemented survey prototype, not final
-canon or a universal encounter template.
+At the boss, an input-responsive completed round pays a defense/finite Main cost,
+or permits an actual vital hit of at least 10 Integrity plus 4 Blood. Grip cannot
+cancel all ordinary threats for free and cannot cancel Charge. Thus each completed
+round decreases a named finite player fact. The loose bound is 140 resolved boss
+rounds, including a fatal activation/hit. Modal pause is outside this transition bound.
 
-## Between-pressure loop
+Player structural damage is at most 4 times paid offensive Blood: all base ratios
+are at most 4; a nonstacking Feint adds 3 for another Blood. Grip has no repeat tick
+damage. Global damage is at most 560 even with all rewards, perfect draw and the
+best source. All boss lethal vitals start at 600; none can reach 0. Horns have no
+vital overflow or vascular wound. Making both arms and Legs Desperate would require
+3 * 420 = 1260 damage, more than 560, so an ordinary threat remains legal.
 
-The current supported fantasy is:
+Boss Blood starts 900. Its at-most-three paid actions per resolved round consume
+at most 420 in that loose bound. No boss regeneration or immortality override is
+used. Actual vital hits or paid depletion kill the player before the boss.
+This is analytic fixture evidence, not exhaustive verification of future engine
+code. New damage, healing, zero-cost discount, reward, wound or cancellation requires
+recomputing the bound.
 
-```text
-survive or resolve a pressure
--> assess wounds, Blood, body loss, and available parts
--> kill for Blood or accept a living surrender bargain for the agreed part
--> treat, restore Blood, repair, graft, integrate, sell, preserve, or refuse
--> carry the changed body into the next pressure
-```
+## Reset and full-game boundary
 
-Treatment, Blood restoration, structural repair, extraction, grafting, and
-integration are separate effects. An option performs only what it declares. Corpse
-limb extraction is excluded from the active demo. Killing the opponent instead grants
-a positive Blood reward sourced from that opponent; surrender grants no kill-Blood
-reward. Exact yield and collection presentation remain `OPEN`.
+Retry alternates the two authored people. Restore initial body/Blood/wounds, deck,
+kit/bowl, NPCs/horns and all attempt flags. Keep player-owned session Concept unlocks
+and the single starting Brain option; new people have no previous narrative memories.
+Unlocking is idempotent first-encounter achievement, never death count. No Memory
+Card, death buff or boss reward. Cold launch/crash clears gameplay, retaining settings.
 
-## Underground City demo container
-
-`APPROVED DIRECTION`: the next product target is a short playable sample demo proving
-one complete same-day loop. It is not an expansion of the Python mini-campaign. Its
-proof floor is the Guard concession opening, one or two pre-boss limb-mechanic fights,
-and the gate boss; that floor is neither a summary of the full game nor a fixed
-encounter ceiling.
-
-`WORKING HYPOTHESIS`: the player is a captive in an Underground City/dungeon economy
-that treats living bodies as stock. The old fixed Missing Right Arm/Damaged Torso start
-is not the active-demo default. `G1` now supplies one exact comparison rather than a
-canon answer: the player begins with `70 Blood` and Full Head `25`, Torso `45`, both
-Arms `30`, Legs `35`, and Core `35`. Random generation and the final starting body
-remain `OPEN` until the owner promotes, revises, or rejects that comparison.
-
-This container gives the demo a provisional run:
-
-```text
-captive and bound
--> Guard negotiation: refuse and remain captive, attack and likely die, or trade
--> if accepted, pay one disclosed Guard-favorable concession and become weaker but free
--> traverse one small Underground City/dungeon section
--> face pre-boss limb fight A
--> use card sources, body targets, defense, and Will to kill or force surrender
--> kill for Blood and lose limb access, or accept a living limb bargain through the
-   Grafting Table transition
--> optionally face pre-boss limb fight B to expose the graft's gain and drawback in
-   ordinary combat; the Blood/no-graft route remains viable
--> face the gate boss using the already-taught integrated combat language
--> defeat the gate boss and escape, or die and return to the same day's beginning
-```
-
-`APPROVED DIRECTION`: defeating the boss at the Underground City gate and escaping is
-the mini-game success endpoint. Approximately 30 minutes is a soft planning reference,
-not a duration requirement, content cap, or acceptance criterion. Clean-attempt,
-first-escape, and total-session durations are evidence to record from real play.
-
-`WORKING HYPOTHESIS`: the Grafting Table consequence must occur before the gate boss
-and must change at least one inspectable legal option in a later pre-boss fight or in
-the gate-boss confrontation. A limb received only after the final boss cannot prove
-the requested graft-result loop. The exact choice of one versus two pre-boss fights,
-their actors, the limb, the boss, and the changed option remain `OPEN`; this ordering
-is not approval for extra runtime content. With only one pre-boss fight, the boss must
-also expose the graft consequence, which contaminates its separate combat-fun test and
-must be reported as such rather than hidden.
-
-### G1 Guard comparison — working hypothesis
-
-The Guard is not a generic collector. Its own guarding arm is visibly failing before
-an imminent duty inspection. It needs a compatible Full `CanGuard` Right Arm, or
-exactly `20 Blood` to fund replacement/treatment, so that it remains fit for duty.
-It refuses Strained, Desperate, incompatible, or vital substitutes. Its leverage is
-the bound player and controlled exit; its Concession is controlled removal if needed,
-stump control, release, an opened exit, and no same-day pursuit.
-
-Two test branches leave the player weaker but playable:
-
-| Payment | Exact released state |
-|---|---|
-| `20 Blood` | `50 Blood`; complete Full body and every starting route retained. |
-| Full Right Arm | `60 Blood` after the provisional `10 Blood` Clean-Stump consequence; Right Arm Missing; stump Controlled for two wound ticks; Left-Arm Punch/Block/Parry, Kick/Evade, and Headbutt retained. |
-
-Every nonlethal release must retain at least `35 Blood`, two Ready attack families,
-one legal Block source, one Parry source, one Evade source, and all mandatory traversal
-sources. The Guard releases because payment closes its Need and continued custody adds
-cost without Goal progress. Refusal leaves captivity; hostile resistance makes the
-same disclosed claim its Will objective rather than authorizing a new inventory scan.
-This is `G1 WORKING HYPOTHESIS`, not final content or runtime behavior.
-
-For this sample, "losing at the Guard" means accepting one disclosed unfavorable
-concession while bound so the player can leave captivity weaker but playable. It does
-not promote a full Guard combat, a player-Will-break claim outcome, or the still-open
-claim-versus-`Defy` rule.
-
-The success endpoint is decided at direction level; duration is observed rather than
-accepted against a fixed target. The failure contract is decided: death resets the
-body and unaware world to the same day's start;
-the protagonist remembers; default cards remain; attempt-learned cards are lost; one
-Memory Card is created; run instability clears; persistent Brain buffs remain.
-
-### Minimum interaction responsibilities
-
-| Interaction | Actor motivation | What the mini-game must prove | Non-goal |
-|---|---|---|---|
-| Bound Guard opening | `G1` candidate: preserve duty by replacing/treating its failing guarding arm | Refusal loops to captivity; warned bound attack can kill; the player can identify the disclosed loss accepted to buy freedom; the D0-approved concession releases its declared weaker-but-playable body; if D0 approves multiple branches, each has a later consequence | A fake choice, a disguised Guard duel, a universal limb price, or inventory-scanning punishment |
-| Pre-boss limb fight A | `OPEN`, but must explain why it still expects to survive or win and why the desired limb matters to it | In-world body-sourced combat, source/target consequences, state-derived surrender/death, and the kill-for-Blood versus surrender-for-limb choice produce the graft decision | A detached battle scene, corpse-limb loot, or acquisition without a causal body decision |
-| Optional pre-boss limb fight B | `OPEN`; include only if it owns the distinct post-graft proof | In ordinary combat, the graft changes one legal capability and one drawback before the boss; the no-graft/Blood route also remains viable | Repeating Fight A, adding content for length, or making the graft a pure stat upgrade |
-| Gate boss | `OPEN`, but must guard the city exit for a goal/duty that exists without the player | `WORKING HYPOTHESIS`: without teaching a new fundamental combat rule, it combines a predeclared multi-layer subset of the already-taught card/body/defense/resource pressures; omitted systems are recorded; defeat opens escape; human observation tests whether the understood loop is engaging and worth another plan | A bespoke graft lock, a tutorial checklist, or a boss disconnected from body/Brain decisions |
-| Death/reset | World has no loop awareness | Same day/world/body reset plus asymmetric card/Brain/memory persistence | A generic roguelite results screen with unexplained reset |
-
-The pre-boss actors' and gate boss's motivations remain identity-level content
-decisions. Until chosen, none may be filled by a generic desire to kill or a scripted
-final twist.
-
-## Demo presentation hypothesis
-
-`APPROVED DIRECTION`: exploration and confrontation share the visible world. Entering
-an interaction pauses world time and opens the hand/body/item/dialogue interface over
-the scene rather than teleporting to a separate combat screen. Cards select intent,
-source, target region, cost, and disclosed risk. Short physical input belongs to
-defending incoming attacks: Yellow announces Block/Parry and Red announces Evade.
-Exact camera and layout remain `OPEN`.
-
-The active demo has no combat range state, range profile, neutral settling, or
-reposition action. Traversal outside interaction remains ordinary world movement.
-
-## Same-day run contract
-
-`PAPER RULE`: the player character knows the day is repeating; the world and NPCs do
-not. Death returns the body to that day's original starting configuration and returns
-world state to the day's beginning.
-
-The same day restores the same underlying Blood and limb opportunities unless the
-player's new choices causally change access. The game does not inspect the player's
-current Blood and secretly remove or spawn a desired limb. A failed attempt may end
-with Blood but no desired-limb access, or desired-limb access without enough Blood for
-the intended downstream use; remembered route knowledge should let the next attempt
-sequence the same opportunities better.
-
-Persistence is asymmetric:
-
-- protagonist/narrative knowledge persists;
-- default cards persist;
-- cards learned during the failed attempt do not persist;
-- death generates exactly one Memory Card;
-- a Memory Card remains Dormant if the reset body cannot source it;
-- run-derived Brain instability resets;
-- already-earned persistent Brain buffs/bonuses remain and make later attempts easier
-  through a visible legal advantage.
-
-Memory Card generation/content, Brain buff catalogue, starting-body rule, storage,
-save boundary, and exact numerical advantage remain `OPEN`.
-
-## Full-game run structure: OPEN
-
-The demo now has the same-day reset contract above. The full game still does **not**
-have an approved complete definition of a run. The current Python mini-campaign does
-not decide it.
-
-Still open:
-
-- what starts and ends a run;
-- how encounters, hazards, rooms, or authored scenes connect;
-- whether the world is a map, sequence, hub, branching path, or another structure;
-- checkpoint behavior beyond the same-day death reset;
-- how the approved demo persistence contract expands across the full game;
-- what failure short of death means;
-- what the player is ultimately trying to accomplish in a run and in the full game;
-- how a 10-12 hour complete arc differs from replay or post-completion structure.
-
-No detailed Brain value, card count, encounter roster, UI, or level-layout decision
-should masquerade as an answer to this missing structure.
-
-## Current design focus
-
-The current gate is to close the remaining `OPEN` choices needed for the smallest
-Guard-concession, one-or-two-fight limb/graft proof, integrated gate-boss escape, and
-same-day reset contract. Full Brain content, a broad dialogue system, content that
-does not answer one of those proof questions, final content, and polish must not be
-built first.
+Full-game run topology, long-term meta, cosmology, revelation, save architecture,
+other bosses and death rules remain OPEN.

@@ -1,173 +1,125 @@
-# Game att2 - Game Director Brief
+# Game att2 — Game Director Brief
 
-Status date: 2026-08-24
+Status date: 2026-09-15
 
-Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. PAPER DIRECTION ONLY; NOT RUNTIME,
-CONTENT, FINAL UI, ENGINE, OR PRODUCTION APPROVAL.**
-
-This is the first of five living game-design documents. Historical design packets are
-preserved under `archive/design_history_2026-08-21/`; they provide provenance but do
-not override this living set. Simulator authority remains in documents 02-06 and
-validated configuration.
+**CURRENT LIVING GAME-DESIGN AUTHORITY — PAPER ONLY.** Z01–Z55 owner choices
+and the requested Z48/A fixture preparation govern this demo. No engine project,
+new-demo runtime, playable build, or human-play evidence exists from this task.
 
 ## Product intent
 
-- `APPROVED DIRECTION`: the first near-term communication artifact is a short concept
-  video/previsualization explaining intended gameplay, dynamics, possible characters,
-  and world promise before full production. It must identify itself as pre-production
-  visualization rather than captured gameplay. Its detailed paper workflow lives in
-  `CONCEPT_VIDEO_PRODUCTION_PLAN.md`.
-- The longer-term gameplay-proof target remains one bounded, playable PC sample demo
-  rather than another general-purpose simulator, a content-complete vertical slice,
-  or a miniature version of the full game. The video does not open its engine/runtime
-  gate or substitute for real input and human-play evidence.
-- `APPROVED DIRECTION`: the mini-game objective is to escape the Underground City by
-  defeating the boss at the city gate. Approximately 30 minutes is a non-binding
-  planning reference, not a duration requirement, content ceiling, or acceptance
-  condition. Actual attempt and session duration must be observed from the playable
-  sample rather than decided by prose.
-- `APPROVED DIRECTION`: the minimum proof floor is one captive-Guard concession that
-  buys freedom at a real cost, one or two pre-boss fights that expose limb mechanics,
-  and one gate boss that exercises the integrated combat loop. Additional sample-scale
-  content may be proposed inside D0, or through a later separately approved content
-  gate, only when it owns a named evidence or presentation purpose; this floor is not
-  a fixed encounter cap or runtime authorization.
-- The demo must prove the distinctive interaction: read a pressure, use a body-sourced
-  technique, accept bodily/Blood consequences, rebuild, carry the altered body into a
-  later fight, and ask whether those known rules remain enjoyable in the gate-boss
-  confrontation.
-- The intended sample supports owner self-play and informal friend play, then an
-  internal go/no-go decision about full-time development or investor pursuit. It does
-  not by itself establish market demand, retention, broad-audience fun, or investor
-  readiness.
-- `FULL-GAME WORKING HYPOTHESIS`: a contained single-player PC game, provisionally
-  finishable in one weekend and roughly 10-12 hours. This does not budget the sample.
-- `FULL-GAME WORKING HYPOTHESIS`: USD 8-12 remains a commercial comparison, not market
-  evidence or a store decision.
-- The target is sustained entertainment plus a distinctive, strange aftertaste, not
-  a claim that this must be the player's best game ever.
-- The desired player memory is: **"Kendimi yeniden inşa ettiğim bir oyundu."**
+The player becomes the weapon by rebuilding their body while Blood remains life,
+currency, and technique fuel. The intended memory is “Kendimi yeniden inşa ettiğim
+bir oyundu.” Using the changed body must matter more than a stat upgrade menu.
 
-The mini-game must prove this player-facing arc:
+The concept/previsualization video remains the approved communication track. Any
+shot showing this fixture is intended play, not captured gameplay. Its production
+plan inherits current design; older Underground City/Guard scenes are historical
+concept variants. This paper task prepares the bounded Windows demo, not the film.
 
-```text
-I was trapped and accepted a disclosed loss from weakness
--> I bought freedom at a disclosed meaningful price and continued weaker but playable
--> in limb fight A I learned how cards, targets, and anatomy change one another
--> I chose Blood through death or a limb through a living bargain
--> I grafted and carried the resulting capability change forward
--> when needed, limb fight B exposed the graft's benefit and drawback before the boss
--> if I died, I returned to the same day with memory but not the same flesh
--> I used the known combat language against the gate boss and escaped the Underground City
-```
+## Current demo direction — owner-selected
 
-For this sample, the Guard-opening "loss" means accepting a disclosed unfavorable
-concession while bound in order to become free. It does not silently approve a full
-Guard duel, player-Will break enforcement, or the still-`OPEN` claim-versus-`Defy`
-decision.
+The demo is a strategy-first anatomical card game in an open bone landscape and
+a guarded passage in Hell. The body is tangible and vulnerable; its origin and the
+larger cosmology remain unexplained. The player begins with an attached wounded
+Right Arm and a direct bodily maintenance problem. There is no captive Guard bargain
+in this selected sequence.
 
-## Identity
+Four connected compact areas and one optional non-combat story pocket contain:
 
-> You are not collecting weapons. You are becoming the weapon, piece by piece, using
-> your own blood as money.
+~~~text
+injured start -> asymmetric limb NPC -> same-site graft/maintenance table ->
+human NPC -> Boneatour -> bodily death -> retry with another person
+~~~
 
-The player damages, extracts, grafts, stabilizes, integrates, and risks body parts.
-Blood is health, currency, and ability fuel. Body construction must materially change
-what the player can do, what they can lose, and which problems they can solve.
+Two authored protagonist profiles share identical mechanics and differ only in
+appearance and a brief background. Retry restores the fixture's initial world/body
+as a separate attempt with a different person; this is not proof of cosmic time
+rewinding. The new person has no memories of the previous person. Already-unlocked
+Concept/Brain options belong to the player for this open application session.
+Only settings persist on disk. Death does not mint a Memory Card or a boss reward.
 
-For the active demo, combat resolution creates one explicit reward tension: killing
-the opponent yields Blood but destroys access to that opponent's limb reward for the
-current day; accepting a living surrender yields the agreed limb through the
-Grafting Table but no kill-Blood reward. This is a paper rule, not runtime evidence.
+Both kill/Blood and living-surrender/graft routes must reach Boneatour with legal
+attack and defense options. The human encounter tests the graft's actual gain and
+its occupied-arm drawback before the boss. Killing closes that NPC's limb access;
+living surrender grants no kill-Blood. Corpses never supply limbs.
 
-## Creative hierarchy
+**Selected endpoint:** Boneatour causes certain bodily loss through finite resources,
+not a victory/escape endpoint. The local success is disabling a horn and changing a
+real Charge profile. This revises the earlier Underground City escape sample only;
+it neither chooses the full game's ending nor makes all future bosses unbeatable.
+The boss guards one passage and exaggerates that duty as kingship over Hell. The
+authority behind that duty and the final demonic revelation are not disclosed here.
 
-1. **Core play:** the build is a body that acts, commits, becomes wounded, and loses
-   capability. Using the built body must be fun; construction alone is insufficient.
-2. **Controlled depth:** parts, wounds, techniques, and current choices influence one
-   another without becoming an unreadable simulation.
-3. **Emotional result:** becoming stronger gradually raises the question of what part
-   of the former self has been surrendered.
+## What the sample should test
 
-Transhumanism is therefore a gameplay tension, not a cosmetic theme: transformation
-can create power while making the assembled self harder to coordinate or control.
-No specific sanity, corruption, or instability meter is approved by this statement.
+- Strategy/body interaction: source, target, cost, preparation and bodily consequences.
+- Graft value: a learned Grip becomes legal, guarding improves independently of draw,
+  and gripping occupies the same arm so it cannot attack/Block/Parry.
+- Reward tension: Blood stock through killing versus a living arm opportunity.
+- Execution: source and defense intention selected while paused, then one timed
+  response; no attack-side QTE or combat range/reposition state.
+- Learning: a readable Charge exception, recovery after stun, tangible horn damage,
+  and a different plan on a subsequent attempt.
 
-## Intended play character
+The rough 70% selection / 30% execution compass is qualitative. Approximately
+30 minutes remains a soft planning reference; attempt and session duration must be
+observed, not enforced by room count, a hidden clock, or a guessed completion claim.
+A forced-loss boss may feel unfair or overly long even if its arithmetic is correct.
+That is the main human-play risk; Z43/A authorizes the finite-resource mechanism,
+not a claim that losing is entertaining.
 
-- Approximately 70% problem solving and selection / 30% physical application is a
-  compass, not a numeric promise.
-- The player reads a concrete pressure, finds a body-dependent approach, commits a
-  source and risk, then physically applies that decision where appropriate.
-- Strategy determines what and why. Execution influences how well the committed
-  action resolves, but cannot routinely erase a bad strategic decision.
-- Offensive cards carry the strategic commitment without an attack QTE. The short
-  execution test belongs to defense: read Yellow as Block/Parry and Red as Evade.
-- Block protects one targeted part by sacrificing condition in another chosen part;
-  precise Parry protects the defender and breaks enemy Will toward surrender.
-- Cards, body state, Blood, wounds, and short reflex moments must form one causal
-  interaction rather than unrelated minigames.
-- Dialogue is an instrument for pressure, leverage, character, and route selection.
-  It supports card combat and non-combat solutions; deep dialogue-tree authorship is
-  not the demo's core production burden.
-- A consequential NPC has a goal it would pursue without the player, a need/want and
-  refusal that explain its trade, and a disclosed claim it may pursue after breaking
-  player Will. Blood and limbs are useful to that NPC, not generic score tokens.
+## Presentation and delivery choices
 
-## Design pillars
+Z09/A and Z10/A select a fixed oblique top-down third-person composition, WASD/arrow
+eight-direction exploration, E interaction, and mouse card/body selection with
+keyboard equivalents. Interaction pauses world movement in the same visible scene.
 
-1. **Body as Build** - important parts create actions, passives, tradeoffs, economy,
-   or tactical identity.
-2. **Blood as Volatile Bankroll** - spending power is also spending survival.
-3. **Combat as Extraction** - success may concern what can be preserved or taken,
-   not only reducing health. The active demo makes the kill-for-Blood versus
-   surrender-for-limb choice explicit.
-4. **Desperate Maintenance** - every useful transformation can create treatment,
-   repair, integration, preservation, or debt pressure.
-5. **Ritualized Readability** - source, target, cost, expected result, and new risk
-   are inspectable before commitment.
+Z11/A and Z52/A select original hand-edited 2D pixel sprites, limited palette,
+separate readable arm/horn silhouettes, and licensed supporting fonts/effects.
+No automatic generative image/audio production is authorized. Body loss, bone and
+Blood remain visible; reduced gore uses silhouettes/icons. No prolonged surgical
+close-ups or sexual violence. English text, matching subtitles, twelve permitted
+owner/volunteer voiced lines, a small SFX set and two ambience loops are specified,
+not produced.
 
-## Guardrails
+Z51/B selects Godot 4 and Compatibility renderer over the former Unity working
+hypothesis. World P12 pins the checked stable release listing; binary/template
+hashes, installation and export remain unverified. The target is an offline Windows x64 ZIP,
+settings only on disk, anonymous local technical logs, and no analytics/upload.
+No spending is authorized; M01–M03 factual constraints are still open.
 
-- The game must not become upgraded stat-menu dueling.
-- The body cannot be cosmetic eligibility for generic cards.
-- The reflex layer cannot become an unrelated skill game.
-- Yellow/Red threat meaning cannot depend on color alone; it requires redundant
-  readable shape/icon, animation, or audio language.
-- Space cannot become a walk-forward/attack/walk-back locomotion loop.
-- The active mini-game has no combat range/reposition system. Do not hide the removed
-  range model inside card tags, camera states, or renamed distance resources.
-- Narrative mystery cannot substitute for a playable core.
-- More documentation is not progress unless it closes a player-facing decision or
-  supports a bounded test.
-- Legacy simulator breadth is not a production requirement. A mechanic enters the
-  demo only because the demo needs it and a player can encounter its consequence.
-- Same-day persistence must create earned familiarity, not erase all consequence:
-  flesh and the unaware world reset, while memory-derived progress remains bounded and
-  inspectable.
-- NPCs cannot be inventory-scanning punishment functions or idle meat containers.
-  Their demand must pre-exist the player's failure, their combat choices must protect
-  what they want, and their victory/concession must visibly advance or revise a goal.
+## Authority and scope
 
-## Current bounded comparison, not canon
+The exact tables are distributed across the existing living set:
+[Core](CORE_LOOP_ENCOUNTER_AND_RUN.md), [Combat](COMBAT_BODY_AND_BLOOD.md),
+[Deck](DECK_BRAIN_AND_ACTIONS.md), and [World](WORLD_PROGRESSION_AND_DECISIONS.md).
+World's Z answer record preserves all letters and original selected option texts.
 
-`DWF-0.1` supplies test values for Block source/wear, `±90 ms` Parry, `±180 ms` Evade,
-independent accessibility controls, and bilateral `90 Will`. `G1` supplies an exact
-Guard comparison: a visibly failing guarding arm motivates a Full Right Arm or
-`20 Blood` demand, starting from `70 Blood`; the resulting release is either `50 Blood`
-with the full body or `60 Blood` with a Missing Right Arm and Controlled stump. Both
-remain `WORKING HYPOTHESIS`, not a final design or implemented behavior. Evidence and
-reject criteria live in `../research/defense_will_npc_balance_v0_1.md`.
+Numeric/content decisions below are the explicit Z48/A delegation, now exercised
+at the owner's “hazırla” request. They remain paper fixtures, not tuned human results.
+Selected mechanics, lore limits and loss endpoint cannot be changed through tuning.
+A contradiction not solvable numerically must return with a counterexample.
 
-## Living design set
+## Continuing identity guardrails
 
-Read in this order:
+Using the body is the core play; controlled systemic depth supports it, and growing
+power may make the player question what remains of the former self. This does not
+approve a global sanity/corruption meter. Body/card eligibility cannot be cosmetic,
+reflex cannot erase ordinary strategic error, and narrative mystery cannot substitute
+for legal play. Source, target, costs, risk and changed capability are inspectable.
+No inventory-sensitive limb spawn, hidden reward denial, gratuitous content growth
+or generic stat-menu duel is permitted. Faction doctrine, role/duty and individual
+purpose explain NPC behavior; strength/risk tolerance is separate and NoClaim remains
+valid outside this authored encounter set. Full-game mystical recontextualization
+remains approved direction with its actual truth/ending OPEN.
 
-1. `GAME_DIRECTOR_BRIEF.md`
-2. `CORE_LOOP_ENCOUNTER_AND_RUN.md`
-3. `COMBAT_BODY_AND_BLOOD.md`
-4. `DECK_BRAIN_AND_ACTIONS.md`
-5. `WORLD_PROGRESSION_AND_DECISIONS.md`
+Earlier versions are preserved as [raw historical snapshots](archive/before_z_fixture_2026-09-15/GAME_DIRECTOR_BRIEF.md.txt).
+Older G1, growing Mana, same-protagonist Memory persistence, Unity/low-poly, optional
+Fight B and escape acceptance do not govern this demo. Frozen legacy simulator
+documents 02–06, config/src/tests and H1/VL research remain separate and unchanged.
+Encounter 3/Warden, VL-WP4, full-game topology/meta, engine implementation and final
+asset production retain their separate gates.
 
-Only these five files form the active game-director reading surface. Engineering,
-test, evidence, governance, and research documents remain separate and protected.
+The full-game 10–12 hour/weekend and USD 8–12 comparisons are historical working
+hypotheses; this demo does not validate them or establish market/investor readiness.

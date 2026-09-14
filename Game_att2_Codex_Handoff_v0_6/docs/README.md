@@ -11,14 +11,24 @@ Read these for owner-led design work, in order:
 | Document | Responsibility |
 |---|---|
 | `GAME_DIRECTOR_BRIEF.md` | Product intent, identity, experience hierarchy, pillars, and guardrails |
-| `CORE_LOOP_ENCOUNTER_AND_RUN.md` | Active-play loop, encounter logic, same-day demo reset, and the explicitly open full-game run structure |
+| `CORE_LOOP_ENCOUNTER_AND_RUN.md` | Preparation/Main order, claims, retreat, separate-attempt reset, and finite-resource bound |
 | `COMBAT_BODY_AND_BLOOD.md` | Consolidated body, Blood, wounds, defense, targeting, procedure, and survival paper rules |
 | `DECK_BRAIN_AND_ACTIONS.md` | Anatomical deckbuilder ownership, action budget, inventory boundary, Brain doctrine, and open implementation details |
 | `WORLD_PROGRESSION_AND_DECISIONS.md` | Narrative/progression direction, compact decision ledger, foundational open questions, scope locks, and current focus |
 
-These five files are current paper game-design authority. They open D0 planning for a
-bounded Underground City demo, but do not by themselves create an engine project or
-change legacy runtime, configuration, tests, dependencies, or executable content.
+These five files are current paper game-design authority. The 2026-09-15 owner Z
+choices select the open-bone-landscape/two-NPC/Boneatour loss demo. Z48/A preparation
+fills P01–P12 paper tables and named route/termination arithmetic; it does not create
+an engine project or change legacy runtime, configuration, tests or dependencies.
+
+The [2026-09-15 Z01–Z55 owner answer record](WORLD_PROGRESSION_AND_DECISIONS.md#2026-09-15--can-yüzbey-z01z55-cevap-kaydı)
+contains newer selected demo options recovered against the original questionnaire.
+It preserves all 55 preferences and the original selected option text. The five
+living documents and operating contract now use the reconciled Z48/A fixture v0.1.
+The [isolated arithmetic report](../research/z_fixture_2026_09_15_evidence.md) checks
+favorable route budgets and conservative termination bounds. M01–M03 facts, actual
+assets/voice, engine/build/input and human evidence remain open. Earlier living
+versions are preserved as raw text under `archive/before_z_fixture_2026-09-15/`.
 
 ## Active-demo AI operating contract
 
