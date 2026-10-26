@@ -58,6 +58,28 @@ a claim that the full game has been built. Read
 - A runnable mock-up is not automatically a playable mini-game. The minimum causal
   chain and its acceptance evidence are defined in the AI working contract.
 
+## Content-first working discipline (Owner directive, 2026-08-27)
+
+The project's structural architecture and paper-rule framework are well-defined.
+While creating new abstract systems, layers, or floating concepts is not forbidden,
+it is **not a priority**. The current focus is on concrete, game-applicable content.
+
+**Binding rules:**
+
+- When editing a living document, creating a new concept, or adding a new sentence,
+  re-read the previous paragraph and verify that the new text integrates with it as a
+  playable whole — not as an adjacent, floating idea. Think about its integration
+  into the actual game.
+- Prefer filling existing content gaps over opening new abstract design axes.
+
+**The priority stack (binding until owner changes it):**
+
+1. Concept video content (V0 brief → V1 script/storyboard → V2 hero frames)
+2. Concrete demo content (card values, actor profiles, graft specifics, encounter
+   scripts with exact numbers)
+3. Paper-rule promotion (moving WORKING HYPOTHESIS to PAPER RULE with owner approval)
+4. Structural architecture (only when explicitly requested by the owner)
+
 ## Repository rules
 
 - Work on a feature branch when Git is available; do not push directly to `main`.
