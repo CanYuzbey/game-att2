@@ -10,8 +10,9 @@ is the build and Blood is simultaneously life, currency, and fuel.
 - The owner Z01–Z55 choices define a two-NPC/Boneatour demo in an open bone landscape;
   exact paper tables and isolated route/termination arithmetic exist in the handoff.
 - The new mini-game has no approved engine project or verified product runtime.
-- A deterministic Python simulator, H1 runner, and visual interaction lab remain as
-  frozen legacy/research evidence. They are not the new mini-game.
+- A deterministic Python simulator, H1 runner, visual interaction lab, and the
+  `2026-09-04` V3 isolated combat/Attention sandbox (`src/game_att2_v3/`, `docs/v3/`)
+  remain as separate legacy/sandbox/research evidence. They are not the new mini-game.
 - Current combat, Blood, Preparation/Main, Will, defense, and NPC-purpose decisions live in five
   living design documents.
 

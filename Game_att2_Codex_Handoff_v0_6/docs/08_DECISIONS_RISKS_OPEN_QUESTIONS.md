@@ -7,7 +7,44 @@
 > ledger remains runtime/project evidence and does not override the living paper-
 > design set.
 
-## 2026-08-21 owner-delegated decision: reconcile current systems and documents
+## 2026-08-25 owner decision: approve Concept Deck / Brain Part synthesis on paper
+
+The owner approved the following current paper ownership model:
+
+```text
+known concept vocabulary + current body
+-> achievement-earned Concept Deck and atomic compatible exchanges
+-> current Anatomical Deck
+-> persistent Brain Parts shape labelled Attention access or one execution relationship
+-> zero/one Preparation plus zero/one Main
+-> automatic/prepared interception and state consequences
+```
+
+Concept Decks and Brain Parts persist across attempts/runs. Concept Decks are earned
+through achievements or equivalent non-boss milestones; boss progression is reserved
+for Brain Parts. Card labels are manually authored from causal effects and may be
+referenced by deck/Brain rules without granting power by themselves. The complete
+abstract card-concept vocabulary is known from the beginning; death therefore creates
+no Memory Card and does not fabricate technique knowledge.
+
+Concept Deck exchanges are atomic. Every sacrifice and gain plus every required
+source must be currently valid, or the deck remains unchanged. Missing-body
+expressions remain Dormant. Brain Parts never restore removed cards, create physical
+capability, waive costs, guarantee categories, or add ordinary voluntary actions.
+One deliberately Readied Item Card remains outside ordinary Attention and consumes
+its authored Preparation/Main timing.
+
+The first bounded content diagnostic uses configurable limits of five cards per
+source, three functional labels, six causal mechanic atoms, one causal signature,
+two special gains per ordinary exchange, and one separately reviewed novel engine
+primitive per card. These are research gates, not balance or production values.
+
+This decision supersedes the active-paper conclusions below where they reject a
+Concept Deck layer, make Brain a deterministic non-selecting hand modifier, require
+growing Mana/multiple card sequences, or create a Memory Card at death. Those entries
+remain provenance. Frozen simulator behavior and its test authority are unchanged.
+
+## 2026-08-21 owner-delegated decision: reconcile current systems and documents — deck conclusion superseded 2026-08-25
 
 The owner directed a complete comparison of current project layers, logical closure
 of already-answerable collisions, documentation cleanup, and integration with current
@@ -25,7 +62,7 @@ their former plan/result pairs, the Director's Choice record remains document 38
 Brain authority is document 39, and the cross-system audit is document 40. No further
 tracked material was proven redundant or evidence-free enough to delete.
 
-## 2026-08-21 owner decision: approve Brain Module and Weighted Attention Slots
+## 2026-08-21 owner decision: approve Brain Module and Weighted Attention Slots — incorporated and superseded in part 2026-08-25
 
 The owner approved document 39 as the current paper authority for permanent Brain
 Part progression and the body-card hand. Brain Parts are rare permanent unlocks,

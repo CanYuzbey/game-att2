@@ -15,7 +15,10 @@ a claim that the full game has been built. Read
 
 - Can Yüzbey owns identity-level and product decisions.
 - The simulator is legacy rules evidence, not the production game or the new demo's
-  content/engine foundation.
+  content/engine foundation. The preserved `docs/v3/`, `src/game_att2_v3/`, and
+  `tests/v3/` surfaces are an isolated `2026-09-04` combat/Attention sandbox and
+  specification mirror; they do not override the `2026-09-15` `Z01–Z55` five living
+  design documents unless the owner explicitly scopes a V3 sandbox task.
 - Do not silently change costs, probabilities, thresholds, encounter order, rewards, or meanings.
 - When a rule is ambiguous, choose the simplest reversible implementation, make it configurable, and list the ambiguity in the final report.
 - Underground-city demo encounters may be defined in the living documents. They must

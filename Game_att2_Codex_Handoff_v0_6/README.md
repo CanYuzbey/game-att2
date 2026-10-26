@@ -58,8 +58,10 @@ runnable game, complete event model or playable combat claim.
 | Path | Role |
 |---|---|
 | docs/ | Five living paper authorities, operating/video contracts, protected legacy rules and archives |
-| research/ | Z paper arithmetic and superseded comparisons; frozen H1/visual fixtures |
+| docs/v3/ | Preserved 2026-09-04 V3 specification mirror, questionnaire and isolated V3-1 sandbox contracts (not current Z01–Z55 demo authority) |
+| research/ | Z paper arithmetic, Brain/card diagnostics and superseded comparisons; frozen H1/visual fixtures |
 | src/game_att2_sim/ | Frozen deterministic legacy simulator/research CLIs |
+| src/game_att2_v3/, tests/v3/ | Preserved deterministic V3-1 isolated combat/Attention sandbox and unit tests |
 | config/, tests/, examples/ | Protected legacy definitions, verification and replay inputs |
 | docs/archive/ | Historical evidence including pre-Z living snapshots and original questionnaire |
 | docs/encounter_3/ | Paper-only packet; no runtime gate |

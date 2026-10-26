@@ -23,10 +23,11 @@ Fast-item, and Main sequence below.
 Document 35 supplies the later owner-approved Resolution-Bound Range Tenure grammar.
 Its execution-bound maintenance classifications, non-stacking counters, and
 Lead/Reply range contest do not add runtime range state or change this sequence.
-Document 39 supplies the later owner-approved Brain Module and weighted Attention Slot
-paper direction. Its permanent Brain Parts, probabilistic body-only hand, Blood-paid
-redraw, direct inventory access, and hidden enemy hands do not add runtime card or
-progression state and do not replace the implemented sequence below.
+The 2026-08-25 Development Master amendment and living
+`DECK_BRAIN_AND_ACTIONS.md` supersede historical document 39 for current paper design.
+Their Concept Decks, permanent Brain Parts, weighted Attention, Readied Item Card,
+and Preparation/Main cadence do not add runtime card/progression state or replace the
+implemented simulator sequence below.
 
 ## 1. Round sequence
 

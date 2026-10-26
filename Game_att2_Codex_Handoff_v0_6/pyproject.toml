@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "game-att2-sim"
 version = "0.1.0"
-description = "Deterministic combat-loop simulator for the Game att2 paper prototype"
+description = "Deterministic combat-loop simulator and V3 isolated combat sandbox for Game att2"
 requires-python = ">=3.11"
 dependencies = ["PyYAML>=6"]
 
@@ -22,6 +22,7 @@ game-att2-sim = "game_att2_sim.cli:main"
 game-att2-research = "game_att2_sim.research_cli:main"
 game-att2-play = "game_att2_sim.play_cli:main"
 game-att2-visual-lab = "game_att2_sim.visual_lab_cli:main"
+game-att2-v3-sandbox = "game_att2_v3.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -37,4 +38,4 @@ src = ["src", "tests"]
 [tool.mypy]
 python_version = "3.11"
 strict = true
-packages = ["game_att2_sim"]
+packages = ["game_att2_sim", "game_att2_v3"]

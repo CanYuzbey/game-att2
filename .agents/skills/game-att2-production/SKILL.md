@@ -33,6 +33,7 @@ Choose one lane before planning:
 
 - **Audit or explanation:** inspect and report; do not edit unless asked.
 - **Simulator maintenance:** preserve approved behavior and add a requirement-to-test trace.
+- **V3 isolated sandbox maintenance:** inspect `Game_att2_Codex_Handoff_v0_6/docs/v3/` and `src/game_att2_v3/` (`tests/v3/`) only when the user explicitly scopes work to the preserved `2026-09-04` V3 sandbox; never let `docs/v3/` silently override the `2026-09-15` `Z01–Z55` living design documents for active demo work.
 - **Approved simulator change:** confirm authority, implement the smallest reversible change, and update tests/config/docs together.
 - **Design proposal:** label proposals and alternatives; do not write them into runtime as approved rules.
 - **H1 and interaction-lab research:** read the five living design documents, then documents 20, 21, 23, and 25. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. VL-WP4 was approved and then deferred by the owner before execution on 2026-08-13; there is no active owner-diagnostic, external-pilot, or production-integration gate. Do not execute or reopen any of them without a later explicit owner approval.

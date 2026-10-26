@@ -17,7 +17,7 @@ This record investigates only the active-demo decisions named in the owner reque
 - the minimum goal/need/claim contract that prevents an NPC from behaving like an
   idle body-part container.
 
-It does not decide Mana, card damage, the duel actor's identity, the Grafting Table,
+It does not decide current card cadence, card damage, the duel actor's identity, the Grafting Table,
 the demo ending, full-game world simulation, or an engine/runtime implementation.
 
 ## Result in one page
@@ -160,7 +160,7 @@ finite body budget, not proof that four Blocks is the final enjoyable number.
 Block creates no random wound or Blood loss of its own. The attack's declared contact
 profile is re-evaluated on the guarding part: a blunt attack may produce only Closed
 Trauma, while an attack explicitly carrying `Open Wound on guard` may open the guarding
-part. Repetition has no extra Stamina, Mana, or secret timing penalty; decreasing
+part. Repetition has no extra generic card-energy or secret timing penalty; decreasing
 Integrity and capability are already the cost.
 
 `T = 0.75` is the weakest numeric assumption in this package. Compare `0.60`, `0.75`,
@@ -505,7 +505,7 @@ does not fabricate value.
 - **Reset mismatch:** NPC goals and state reset with the unaware world. Only the player
   remembers prior attempts; no Nemesis-style NPC memory is implied.
 - **Remaining stall risk:** perfect Evade plus a no-cost pass can still create a
-  no-change loop. Mana-cap/anti-stall resolution remains open and is not solved here.
+  no-change loop. The exact anti-stall resolution remains open and is not solved here.
 
 ## Falsifiable D0 checks
 
