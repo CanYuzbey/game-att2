@@ -19,57 +19,39 @@ runtime content, production UI, or playable new-demo build exists in this packag
 Do not start with the numbered legacy simulator documents or `docs/archive/` for new
 game-design work.
 
-## Current sample-demo contract
+## Current sample-demo contract — 2026-09-08 second revision
 
-The current paper direction is:
-
-```text
-captive Guard offer
--> accept one disclosed, unfavorable concession to buy freedom
--> weaker but playable release
--> one small Underground City section
--> pre-boss limb fight A
--> kill for Blood OR living surrender for an agreed limb
--> Grafting Table consequence
--> optional pre-boss fight B carries that consequence into ordinary combat
--> gate boss integrates the already-taught combat rules
--> defeat opens escape, or death causes same-day reset
-```
-
-This is a proof floor, not a fixed encounter count, content ceiling, or duration
-requirement. Approximately 30 minutes is only a soft planning reference until real
-sample sessions produce observed durations. The intended artifact is for owner
-self-play and informal friend play, helping decide whether the combat merits further
-full-time development or investor pursuit. Such a convenience sample cannot establish
-general fun, retention, market demand, or investor readiness.
-
-Combat currently separates these resources and outcomes:
-
-- `Preparation/Main`: at most one of each per round; no active growing-Mana cadence;
-- `Concept Decks`: achievement-earned persistent playstyle chassis with atomic
-  compatible card exchanges;
-- `Brain Parts`: boss/progression persistent paired buffs/nerfs that shape declared
-  Attention access or one execution relationship;
-- `Blood`: life, economy, and selected ability fuel; active-demo encounter Blood is
-  earned by killing;
-- `Will`: bilateral surrender pressure, reduced by successful Parry and explicit
-  goal-critical shocks in the current comparison model;
-- Yellow defense: Block or precise Parry;
-- Red defense: Evade;
-- kill: Blood, no limb opportunity from that opponent for the day;
-- living surrender: agreed limb, no kill-Blood.
-
-NPC purpose is authored as:
+**2026-10-26 paper update:** The owner answered Z01-Z10=A and delegated the
+remaining option optimization. [The consolidated D0 plan](docs/planning/DEMO_D0_CONSOLIDATED_PLAN_2026-10-26.md)
+records all 55 selections, four deliberate B exceptions, and the exact fixture,
+device/resource, and terminal-proof work still to do. Earlier OPEN statements below
+are historical where that plan and the living ledger explicitly supersede them.
+The new-demo runtime is still absent and D0 is not closed.
 
 ```text
-Faction doctrine -> current role/duty -> individual Goal/Need/RedLine/Claim
+O1: wounded new person in Hell, immediate bodily need
+-> S1: asymmetric NPC -> living/graft or kill/Blood maintenance route
+-> human NPC, post-graft capability proof on graft route
+-> Boneatour: skeletal minotaur, horn Charge stopped only by reflexive Parry
+-> unstopped Charge: next Preparation/Main lost, defense retained
+-> intended bodily death and demo ending (exact terminal rule OPEN)
 ```
 
-Capability and risk tolerance are separate from purpose. An actor may seek Blood, a
-specific function, custody/compliance, a bounty, trade, escape, or `NoClaim`.
+This replaces the former gate-boss victory/escape objective. Exact loss mechanism,
+Charge source/avoidance/status ordering, location, soul/body explanation and
+retry/progression boundaries are OPEN. O1/S1 are selected; Guard is excluded from
+the first demo. See the living decision ledger and
+[execution plan](docs/planning/D0_EXECUTION_PLAN_2026-09-06.md).
 
-These are paper rules or working hypotheses as labeled in the living documents; they
-are not runtime claims.
+The sample must teach bodily combat and create grounded anticipation for the full
+game. Human interest and perceived fairness must be observed; documentation cannot
+prove them. Approximately 30 minutes remains a soft reference. Runtime is not
+implemented or authorized by this paper revision.
+
+Core ownership remains body -> compatible Concept Deck -> Anatomical Deck ->
+Brain/Attention. Ordinary play remains at most one Preparation and one Main.
+Blood/limb reward exclusivity, source-based legality, and ordinary Yellow/Red defense
+remain current. An exact novel boss exception needs its own reviewed causal contract.
 
 ## Repository map
 
@@ -131,12 +113,16 @@ prove that the Underground City mini-game exists or is playable.
 
 ## Current owner decisions still open
 
-- promote, revise, or reject the exact `G1` Guard payment/released-state package;
-- choose enforced disclosed claim versus one lethal `Defy` at player Will zero;
-- set Anatomical Deck/Attention counts and lifecycle, Preparation/Main costs, Brain
-  weights/modifiers, defence inputs/windows, Block loss, and Will values;
-- choose one versus two pre-boss limb fights and assign each a unique proof question;
-- define their actors, one exact graft consequence, Concept-Deck/Brain-Part reward
-  and persistence details,
-  and the gate boss's integrated-combat test;
-- explicitly open an implementation gate before creating any engine/runtime project.
+The demo fight order, opening direction, camera, retry scope, and Concept/Brain
+demo boundary now have selected paper directions. Continue with exact P01-P12
+fixtures, two-route legality and the Q25 terminal counterexample proof in the
+consolidated plan before treating D0 as closed or creating an engine runtime.
+
+Owner response surface: [complete demo/general-layout questionnaire and technical filing](docs/planning/DEMO_FINALIZATION_QUESTIONNAIRE_2026-09-07.md).
+
+Latest owner answers: [2026-09-08 response review and calibrated options](docs/planning/DEMO_ANSWER_REVIEW_2026-09-08.md).
+Different person per attempt; pixel art family; inevitable boss bodily-death ending;
+Panic Pulse/Limb for Life excluded; settings-only storage. The 2026-10-26 plan
+selects first-demo camera, sequence, Concept/Brain and retry boundaries. Exact
+mechanics, two-route/boss proof and production facts remain unfinished. No new-demo
+runtime exists.

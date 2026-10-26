@@ -1,9 +1,96 @@
 # Game att2 - World, Progression, and Decisions
 
-Status date: 2026-08-25
+Status date: 2026-10-26
 
 Status: **CURRENT LIVING GAME-DESIGN LEDGER. APPROVED, WORKING, EXAMPLE, AND OPEN
 ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
+
+## 2026-10-26 owner answers — Z01-Z10
+
+`APPROVED DIRECTION / PAPER RULE` for the first demo: the owner answered **A** to
+each of Z01-Z10 in order. The exact choice text and alternatives remain in
+[the question packet](planning/DEMO_REMAINING_DECISIONS_2026-09-08.md). These
+selections supersede conflicting older OPEN or comparison wording for the first
+demo; they do not decide the full game's cosmology, world reset, or progression.
+
+| IDs | Selected first-demo boundary | Affected coordination |
+|---|---|---|
+| Z01-Z03 | Each retry starts under the same conditions with a different person, without claiming literal world rewind. The person has a vulnerable embodied body whose origin is unexplained. The starting mechanics/body template are fixed; a short identity label varies, with no random stats. | Q04, Q20, Q28-Q29; T00, T02, T07 |
+| Z04-Z06 | One disclosed first-encounter achievement earns a Concept specialization, applied by compatible atomic exchange at maintenance and usable in the human fight; unavailable pincer expressions remain Dormant. The demo has neutral Attention and no Brain acquisition/equipment. Gameplay gains reset for each retry, including within an open app session; player knowledge and selected settings remain. Exact achievement, cards, and exchange are still to be authored. | Q09, Q16, Q18-Q20; T04, T07, T13, T17, T20 |
+| Z07-Z08 | The demo uses a linked narrow Hell underground passage/city edge, with four small connected areas: opening, asymmetric NPC plus maintenance table, human NPC, boss. The first two fights gate the boss; no extra puzzle, hazard, merchant, hub service, or side fight is selected. | Q26-Q28, Q31; T00-T02, T11, T15 |
+| Z09-Z10 | Fixed oblique top-down third-person camera, fixed same-scene combat framing, larger body inspection panel; eight-direction WASD/arrow movement, E interaction, mouse card/body targeting. Dialogue and combat stop world movement. Keyboard-equivalent card/target access remains required. | Q21, Q30-Q31; T00, T08, T10-T14 |
+
+At the end of this first response, Z11-Z55 and M01-M03 were still unanswered;
+the next dated entry records the subsequent delegation. The selected demo
+exclusion of Brain does not repeal the approved main-game Brain direction. These
+answers grant no engine/runtime or asset production gate by themselves.
+
+## 2026-10-26 delegated D0 consolidation — Z11-Z55
+
+The owner then stopped the question round and explicitly delegated optimization of
+the remaining choices from the existing design. The selected plan and individual
+provenance are in [the consolidated D0 plan](planning/DEMO_D0_CONSOLIDATED_PLAN_2026-10-26.md).
+These are **delegated first-demo paper selections**, not separately answered owner
+cards and not verified gameplay. The earlier Z11-Z55 OPEN status above is historical
+as of the first response, superseded here; M01-M03 are still unknown facts.
+
+- Presentation: hand-edited original 2D pixel sprites; visible body consequence with
+  reduced-gore mode; D2 source/defense preselection; fixed top-down same-scene view.
+  Z14/Z15 select the wider timing package and wide-window first-launch default;
+  Z50 selects a measured 720p/30 H2 floor target instead of the earlier 60 FPS
+  proposal. These are initial test targets, not observed usability/performance.
+- Rules: player Prep/Main resolves before still-legal enemy actions; invalid
+  unstarted commitments lose their locked opportunity without payment; stun takes
+  the next unstarted Prep/Main and cannot chain indefinitely. Six body slots use
+  percent-based source states; the starting right arm is Strained Closed Trauma.
+  Four wound families remain; the first demo excludes structural repair and
+  Integrity Echo. Z22 chooses a 30-active-second exploration wound event, plus one
+  event at combat round end, with the accepted pause surfaces.
+- Finite economy: an explicit initial fixture of 2 Blood per completed combat
+  round is selected for anti-stall study, distinct from wounds. The smaller six-card
+  source-valid catalogue, four Attention positions, no paid redraw, three named
+  tools, pre-readied item and normal Will 90/Parry loss 24/30/36 are bounded first
+  fixtures. Exact P01-P10 values, costs, actor definitions and upper-bound proof
+  remain to be written and falsified before D0 closure.
+- Route: the asymmetric and human NPCs receive authored motives and predeclared
+  claims; surrender/kill remains an exclusive reward. The pincer graft replaces
+  the right arm in one living, paid atomic Table operation; its sustained grip
+  reserves that arm's attack/Block/Parry, with a separate available guarding gain.
+  No corpse limb, stored old-arm swapping, free repair or new human special card.
+- Boss: Charge is a separately cued Parry-only exception; Full/Strained ordinary
+  arms keep a legal response. Horns belong to Head, Charge also requires Legs.
+  Broken boss Will visibly cancels one future Charge opportunity rather than
+  surrendering. The intended bodily death must follow a proved finite reachable
+  resource/attack bound; no hidden immortality, unannounced finisher or reward on
+  defeat. A good Parry/Will interruption is information success, not survival.
+- Delivery: short replayable teaching, 12 licensed/consented English voice lines,
+  offline Windows ZIP, local settings-only storage and no automatic telemetry.
+  Unity 6.3 LTS is the scoped first spike candidate, subject to Editor/license/
+  patch verification; measured failure may trigger Godot fallback. H2/H3 performance,
+  owner/friend understanding and asset/sound acceptance require actual evidence.
+
+Z48 is delegated for exact fixture authoring and numerical revisions **within**
+these selected boundaries; it supersedes F59=B for this D0 planning work. It does
+not authorize a new mechanic, identity change, unresolved contradiction, purchase,
+publication or invented M01-M03 fact. D0 remains PAPER ONLY until the exact causal
+tables, two-route state ledger, terminal counterexamples and acceptance matrix pass.
+
+## 2026-09-08 request to close remaining decisions and build the demo
+
+The owner requested all remaining questions with recommendations, then creation of
+the demo. [The original 55-card closure packet](planning/DEMO_REMAINING_DECISIONS_2026-09-08.md)
+maps the known Q01-Q32 and P01-P12 gaps and three factual production inputs.
+At that date, its A/B recommendations were not owner answers; Z01-Z10 have since
+been answered above. Existing O1/S1/Charge/stun decisions
+remain authoritative; the earlier unanswered Evade question is consolidated as Z37.
+
+The request supplies direction to proceed to the bounded Windows demo after the
+selected design, engine/tool scope and prerequisite evidence are concrete. Preserve
+that conditional authorization; do not demand another generic start approval when
+those conditions are met. It does not select a motor, new boss exception, numerical
+fixture, paid asset, account, publishing or messaging scope by itself.
+Runtime has not started; required paper decisions remain OPEN. Z48 can explicitly
+delegate bounded exact content/numeric decisions; old F59=B holds until answered.
 
 ## Status vocabulary
 
@@ -14,6 +101,140 @@ ITEMS MUST REMAIN DISTINCT. NO RUNTIME OR CONTENT APPROVAL.**
 | `WORKING HYPOTHESIS` | Worth testing but not proven fun or final. |
 | `EXAMPLE ONLY` | Illustration, never canon or implied content. |
 | `OPEN` | No answer exists yet; do not fill through convenience. |
+
+## 2026-09-08 second selection round — current supersession
+
+**PAPER RULE / APPROVED DIRECTION**, from owner replies 2/4/5/6/7/8/9/11 and the two
+subsequent Charge/stun answers. This entry supersedes conflicting earlier entries.
+
+- O1 direct wounded-body need opening selected. Guard/O2 is outside this first demo;
+  Underground City location/topology remains separate, not automatically discarded.
+- S1 selected: asymmetric NPC -> optional graft/maintenance -> human NPC -> Boneatour.
+  Kill/Blood takes the same route without graft. The second fight proves graft delta.
+- I1 attached damaged arm start and three-tool direction accepted: cutting tool,
+  graft/stitch + separately declared treatment kit, stored kill-Blood container.
+  No independent healing Blood source. Exact arm, uses, cost and collection/cap OPEN.
+- PA1/PA2 comparison and fixed third-person candidates accepted; same-scene fixed
+  combat framing direction. Exact perspective/style/movement remain OPEN; PA5 is a
+  production candidate. D1/D2 comparison accepted, not either input selected.
+- G2 commitment/exposure is the first graft drawback candidate to compare. Do not
+  stack G1 losses onto it. Exact source reservation and release remain OPEN.
+- Exact-cost/condition-explained effect previews and mixed wound-clock direction
+  accepted. Reading, bargaining, treatment UI, pause and alt-tab stop pressure;
+  exact tick/transition accounting OPEN. Lower cards + persistent compact body +
+  detailed inspect and accessibility package direction accepted; values OPEN.
+- Boneatour is the selected skeletal minotaur demo boss, statistically stronger,
+  with horn Charge. BP1/BP2/BP3 lore/mechanics are rejected.
+- Charge cannot be stopped by normal defense, especially the starting body's.
+  Only reflexive Parry during Charge stops it. This is an explicit boss exception
+  to ordinary Yellow/Red response grammar. Evade avoidance result remains OPEN.
+- Unstopped Charge causes one-turn stun: next Preparation AND Main are lost,
+  defense remains. Exact phase/refresh/reapplication/death ordering remains OPEN.
+- F39 false king/devil claim and later demon reveal remain owner directions.
+  Inevitable bodily death is retained, but stats/Charge/stun do not yet prove it.
+- H3 is included alongside H1/H2 in real-device evaluation; no minimum selected.
+  F37 Concept/Brain scope remains unanswered; no implicit exclusion.
+
+See [response mapping and rebuilt profile](planning/DEMO_ANSWER_REVIEW_2026-09-08.md),
+[story flow](CORE_LOOP_ENCOUNTER_AND_RUN.md) and
+[Charge/stun causal contract](COMBAT_BODY_AND_BLOOD.md).
+No runtime/asset gate opens. Existing historical entries below are provenance.
+
+## 2026-09-08 owner answers and explicit follow-ups
+
+See [all F01-F60 answers, research and calibrated alternatives](planning/DEMO_ANSWER_REVIEW_2026-09-08.md).
+This dated amendment supersedes conflicting earlier same-person, survival-scope,
+visual-family, defeat-policy and storage wording; earlier dated entries are provenance.
+
+Selected directions:
+- Strategy/card audience first, action second; body-driven tactical change > mastery
+  > narrative curiosity. Bodily survival is the immediate priority before escape.
+- Every attempt is another soul/person, explicitly clarified. It is not the same
+  soul switching bodies. Return to attempt beginning is selected; literal world-time
+  rewind and abstract unlock ownership across people remain OPEN.
+- F17 delegated knowledge: new person knows Hell/basic self/current body; discovers
+  exit and concealed motives; no automatic memory inheritance from the prior person.
+- Pixel art, visible body plus inspection, wounded/incomplete starting body. Exact
+  style/camera/movement and low-hardware specification remain OPEN.
+- Asymmetric donor with one superior arm and the other missing; pincer/grip direction.
+  The owner explicitly requests comparison of BOTH normal-fight orders. No order selected.
+- Player Broken Will offers accept-claim or one lethal Defy. Strong pre-reward
+  explanation preserves the free kill/Blood versus living/graft choice.
+- Grafting requires a tool; 2-3 items and a safe maintenance opportunity are directions.
+  Item identities, independent healing Blood and the wound-clock composition remain OPEN.
+- Boss falsely claims to be the devil/king; later revealed to be a demon. Boneateur
+  is a profile candidate. Inevitable demo loss and bodily death selected; exact source/
+  terminal rule OPEN. Discovery is primary local success, temporary disruption secondary.
+- English player text; voice acting included as a direction, extent/budget OPEN.
+  Private local Windows sample, settings-only disk storage, retry/menu/exit ending.
+- F59=B: numbers remain proposed for discussion. F37 requests explanation; no Concept/
+  Brain scope removal was authorized.
+
+**DEFERRED MAIN-GAME DESIGN:** Panic Pulse and Limb for Life are excluded from the
+first demo by F33. Reopen when the owner requests the later survival-system design;
+consider new-person attempts, wounds, persistence, exact trigger/cost/refresh and
+abuse cases together. Legacy values are not automatically carried over.
+No runtime, asset production, installation or new external account is authorized.
+
+## 2026-09-07 owner preference and complete decision-packet scope
+
+The owner prefers acquiring the new limb from the asymmetric NPC so its new play
+dynamics can be felt. This is the current donor direction under Q26; fight order,
+exact graft and subsequent test remain OPEN. The human-donor restoration proposal is
+not the current candidate. This amendment supersedes older donor-OPEN wording only.
+
+The owner requested a complete customer-facing question document covering the
+general-game decisions required by the first demo, including viewpoint and content.
+Q29-Q32 now expose product foundation, camera/visual production, world/traversal and
+delivery limits before exact scene implementation. See the
+[60-question finalization packet and documented technical decisions](planning/DEMO_FINALIZATION_QUESTIONNAIRE_2026-09-07.md).
+SEN SEÇ delegation must be explicit and bounded; unanswered design preferences remain
+OPEN. Technical decisions are documented only. No engine/runtime gate is opened.
+
+## 2026-09-06 later owner revision: Hell, two NPCs, novel boss and defeat ending
+
+`APPROVED DIRECTION`: the demo begins as one soul in Hell. Its two ordinary NPC
+fights include one human like the player and one opponent of comparable overall
+threat, potentially combining superior limbs with missing limbs/body limitations.
+This is not approval for numeric levels, stat equalization or an automatic global
+missing-limb penalty.
+
+Q01 remains two ordinary fights. Q02 is now resolved: the final boss may use a new
+radical mechanic. The boss is intended to return in the main game and rank among its
+relatively powerful bosses. The intended sequence ends with a short boss confrontation,
+player defeat and demo end. The sample should teach bodily combat, let a graft's
+gameplay difference be felt, establish coherent fiction and create anticipation.
+
+This supersedes both the city-gate victory/escape endpoint and the no-new-boss-rule
+hypothesis, including the earlier same-date entry below. Earlier dated design entries
+are provenance; current operational scope and gates below incorporate this revision.
+
+OPEN: Q25 exact loss/exceptional-victory/aftermath contract; Q26 NPC order and graft
+acquisition/test sequence; Q27 whether/how the earlier Guard/city opening fits;
+Q28 soul/body relation, immediate motive, NPC/boss encounter bridge and closing hook.
+Previously specified reset and Concept/Brain rewards must be reconciled (Q19/Q20);
+loss does not fabricate a reward. Q25/Q26 questions are pending, not approved defaults.
+No engine/runtime, final lore/asset production or full-game implementation is authorized.
+
+Historical basis: [original hell-loop vision](archive/design_history_2026-08-21/01_PROJECT_STATE_HISTORY_VISION.md).
+That older document establishes provenance, not the exact soul or boss-loss contract.
+Current causal alternatives and story scaffold are in
+[Core Loop — Hell demo container](CORE_LOOP_ENCOUNTER_AND_RUN.md).
+
+## 2026-09-06 earlier owner decision: two pre-boss fights for the demo
+
+`APPROVED DIRECTION — Q01`: after clarifying that this choice concerns the sample
+demo rather than the full game's encounter structure, the owner chose **two pre-boss
+fights**. Fight A exposes the kill-for-Blood versus living-limb choice; Fight B
+exposes the graft's benefit and physical drawback in ordinary combat before the
+gate boss. The Blood/no-graft route must remain viable through both fights.
+
+This closes the one-versus-two count choice for the initial demo fixture. Earlier
+dated entries below retain the prior decision history; their OPEN count and optional
+Fight B wording are superseded by this entry. Exact actors, graft, values and boss
+contract remain OPEN. In particular Q02, whether the boss may introduce a new
+fundamental rule, is not decided by choosing two fights. This is paper design only
+and does not open an engine/runtime gate or define the full game's encounter count.
 
 ## 2026-08-25 owner direction: persistent Concept Decks and Brain Parts
 
@@ -271,67 +492,49 @@ Approximately 30 minutes is a soft planning reference only. It is not a duration
 requirement, content ceiling, or acceptance condition. Actual attempt, first-escape,
 and total-session durations are recorded from playable builds.
 
-## Demo scope box
+## Demo scope box — current revision
 
-The first sample includes at minimum:
+The current minimum includes a readable Hell/soul opening, two ordinary NPC fights
+(one human, one body-asymmetric peer), an observed graft gain and drawback, and a
+short encounter with a powerful main-game boss that may introduce a new mechanic.
+Player defeat is the intended final demo endpoint; exact Q25 resolution is OPEN.
 
-- one captive Guard negotiation opening;
-- one small traversable Underground City/dungeon section;
-- one or two pre-boss limb-mechanic fights, with each retained fight answering a
-  distinct proof question;
-- one city-gate boss confrontation that combines already-taught combat rules, tests
-  the bounded combat-engagement hypothesis through human play, and opens escape when
-  defeated;
-- the minimum Concept Deck, Attention, Brain-Part, Readied-Item, body-source,
-  target-region, Preparation/Main, wound/Blood,
-  kill-for-Blood, living surrender-for-limb, graft, Brain, and negotiation behavior
-  required by those interactions;
-- one Grafting Table limb-transfer consequence before the gate boss, with a visible
-  net capability gain and drawback used or deliberately declined in a later fight;
-- one same-day death/reset with the approved Concept-Deck/Brain-Part persistence split;
-- one readable gate-boss defeat -> Underground City escape endpoint.
+O1 excludes the captive Guard from this first demo; Underground City location/layout
+remains a separate candidate. S1 selects asymmetric donor -> optional graft -> human
+post-graft test -> Boneatour. Traversal and paused in-world interaction remain. No third ordinary fight is
+implicitly approved. A proposed practice instrument also needs explicit scope selection.
 
-The proof floor is not a hard encounter or content ceiling. Additional sample-scale
-content may be proposed inside D0 only with a named evidence or presentation purpose;
-after D0 it requires a separately approved content gate, normally supported by an
-observed evidence gap. The sample excludes procedural generation, a world map, a fixed
-total encounter count beyond the proof floor, a full roguelite meta, a full Brain tree/
-collection, a general dialogue engine, broad inventory, crafting, stealth, quests, a
-large body-part roster, final lore revelation, production save architecture, range/
-reposition combat, and reuse of the old simulator campaign as content.
+Retain body-sourced actions, Blood/limb reward exclusivity, exact-source procedures,
+and no-range combat. Select only the bounded card, wound, survival, Concept/Brain and
+item fixtures the demo can actually demonstrate. Q19/Q20 must reconcile the earlier
+persistence demonstration with a final boss that is not defeated.
 
-`WORKING HYPOTHESIS`: legacy retirement is staged rather than allowed to consume
-production time. Freeze it now; after D1 has its own tests and reproducible build,
-preserve a final Git tag and review removal of legacy executable/config/test trees
-from the active checkout. Keep only an experimental runner that still answers a named
-demo question.
+Final assets, full roguelite meta, procedural generation, broad inventory, a general
+dialogue engine and full-game content remain outside this paper task. The boss's
+main-game role is approved intention, not existing content.
 
 ## Level-design working hypothesis
 
-Use one bounded connected playable section, not an open world:
-
 ```text
-holding/captive space
--> Guard concession and weaker-but-free release
--> small freely traversable Underground City/dungeon section
--> pre-boss limb fight A: source/target and kill-Blood versus living-limb choice
--> Grafting Table and bounded deck edit
--> optional pre-boss limb fight B: graft benefit and drawback in ordinary combat
--> city-gate boss
--> boss defeat opens escape
+O1 wounded-person bodily need (I1 attached damaged arm; exact state OPEN)
+-> asymmetric NPC -> living/graft OR kill/Blood maintenance route
+-> human NPC, post-graft proof on graft route
+-> Boneatour, skeletal minotaur with Parry-interruptible Charge and one-turn stun
+-> intended player defeat and explicit demo ending
 ```
 
-- The tunnel or its upward light should act as the persistent destination landmark.
-- Each space owns one primary pressure and at least one body-dependent route.
-- Encounters resolve in their room; a separate battle arena must earn its existence
-  through the interaction test and is currently excluded.
-- More branching is cut until the Guard/fight/graft/gate-boss/reset proof chain exists
-  and can be evaluated through real input.
+S1 positions optional graft before the human second fight. Each retained space has an evidence or narrative job.
+The boss's entry/arena, player purpose and NPC bridge are Q28; a city gate is no
+longer a required location. More rooms cannot repair an unexplained ending.
 
-## Art-direction working hypothesis — pending owner review
+## Art direction — pixel family selected; substyle OPEN
 
-The following is preserved from the prior demo proposal. It is not approved for asset
-production and must be reviewed during the upcoming general-theme discussion:
+F07 selects pixel art research, F08 visible body plus inspection, F09 stylized dark
+body horror with a stronger anatomical direction. Exact intensity/substyle/camera
+remain OPEN; see the PA1-PA5 comparison in the answer review.
+
+The following low-poly production list is the prior proposal only, not current
+selected visual direction or asset-production approval:
 
 - Fixed-angle stylized low-poly 3D for spaces and modular bodies.
 - Detachable/swappable body modules use clear silhouettes and a shared attachment
@@ -339,9 +542,10 @@ production and must be reviewed during the upcoming general-theme discussion:
 - 2D illustration is reserved for cards, intent, portraits, and high-value UI.
 - A restrained palette separates sick market neutrals, Blood red, and cold tunnel
   light. Gore is graphic design and state feedback, not fidelity competition.
-- Pixel art and high-fidelity realistic 3D are both excluded from the first slice:
-  the former weakens modular body readability at the intended camera, while the
-  latter creates an unaffordable asset/animation burden.
+- The former proposal set pixel art and high-fidelity 3D aside. This was not an
+  approved exclusion: readability and production burden depend on the still-open
+  camera, art direction, available assets and budget (Q30/F06-F09/F56). Compare them
+  if selected; do not claim a style is inherently unreadable or unaffordable.
 
 ## Engine and program recommendation
 
@@ -359,7 +563,7 @@ records direction but does not install Unity or create a project.
 | Versioning | Git + Git LFS | Already available; use LFS only for binary art/audio assets |
 
 Unity becomes the accepted demo engine only if the spike can demonstrate in one room:
-fixed-camera navigation, a body-part swap, a readable card/intent overlay, one bounded
+navigation with the selected Q30 camera, a body-part swap, a readable card/intent overlay, one bounded
 execution input, deterministic state mutation, and a Windows build. Godot remains a
 fallback only if Unity's iteration or asset overhead materially blocks this bounded
 slice. Unreal is rejected unless the art target changes toward high-fidelity 3D or
@@ -370,56 +574,42 @@ Official references: [Unity Personal](https://unity.com/products/unity-personal/
 [Blender features](https://www.blender.org/features/), [Krita
 license](https://krita.org/en/about/license/), and [Audacity downloads](https://www.audacityteam.org/download/).
 
-## Demo decision order
+## Demo decision order — current revision
 
-Decide in this order; a later decision may not disguise a missing earlier one:
-
-1. **Proof floor and evaluation question:** close the Guard concession test, distribute
-   the limb/graft evidence across one or two pre-boss fights, and define what the boss
-   must reveal about understood integrated combat. Record duration after play rather
-   than gating content against 30 minutes.
-2. **Guard payment and released state:** promote, revise, or reject `G1` (`20 Blood`
-   versus a Full Right Arm) and its two precisely weaker-but-playable released states.
-3. **Pre-boss fight roles and graft delta:** choose one versus two fights; define one
-   exact donor limb, transfer/replacement cost, lost and gained capabilities, technique
-   access, drawback, and the later ordinary-combat option it changes.
-4. **Turn/card contract:** define the bounded Anatomical Deck and Attention fixture,
-   Concept Deck exchange, Brain Parts, Preparation/Main costs, condition scale,
-   target-region effects, defence inputs/windows, Block loss, Will values, redraw,
-   Readied Item, and anti-stall rule.
-5. **Pre-boss actors and boss:** define motivation, threats, desired limb, starting
-   Will, exceptional Will rules, and why refusal/resistance is still rational before
-   Will breaks; separately define why the gate boss guards the exit, how both disclosed
-   reward routes can defeat it, and promote, revise, or reject the no-new-fundamental-
-   rule isolation hypothesis for its combat test.
-6. **Concept Deck/Brain persistence:** define one achievement-earned Concept Deck,
-   one boss/progression Brain Part with a visible paired buff/nerf, their equipment
-   boundary, and one incompatible-body Dormant case. Death creates no card payload.
-7. **Evidence-led content budget:** start from the proof floor; add only rooms, cards,
-   body states, animations, sounds, text, and tests that improve rule fidelity,
-   comprehension, or evaluation of combat appeal.
-8. **Engine/runtime gate:** choose the smallest implementation vehicle only after this
-   contract is reviewable; engine creation still requires explicit approval.
+1. Close Q29-Q32 general-game/demo foundations and production limits through the
+   finalization packet; retain the selected Hell premise, two NPCs and novel-boss defeat.
+   Close Q25 loss contract and Q26 graft acquisition/test sequence.
+2. Reconcile Q27 opening and Q28 soul/body/motive/story bridge. Then select the exact
+   starting body and any retained G1 costs; old candidates are not implementation defaults.
+3. Define source thresholds, action/card lifecycle, defense/Will, wounds/survival,
+   atomicity and finite-state pressure; all newly touched rule exceptions must be explicit.
+4. Author the two NPC bodies and goals, donor/graft tradeoff and Blood/no-graft route.
+   Comparable threat must follow reachable actions, not a sum of anatomy numbers.
+5. Select the main-game boss identity/function, one proposed signature rule or a
+   separately justified bounded set, its counterplay and exact defeat/aftermath.
+6. Reconcile Concept/Brain acquisition and early-death/retry/persistence scope with
+   the terminal ending. Explicitly select any minimum-fixture exclusions.
+7. Specify rule, comprehension, ordinary combat appeal, boss novelty/fairness and
+   anticipation observations separately. Choose sample and interpretation before testing.
+8. Close the acceptance matrix, then explicitly authorize a bounded engine/runtime
+   vehicle. None of the design choices above grants that authorization.
 
 ## Production gates
 
 | Gate | Deliverable | Continue criterion |
 |---|---|---|
-| D0 — current | Closed sample-demo paper contract and acceptance matrix | Every item 1-6 above is decided or explicitly excluded; every encounter owns a unique evidence question; no AI-invented defaults |
-| D1 | Captive Guard concession slice | Refusal remains captivity, attack lethality is legible, the accepted loss is understood, and the D0-approved concession causes its declared weaker-but-free playable state; if D0 approves multiple branches, each must pass; at least one accepted branch is required |
-| D2 | Pre-boss limb fight A | Player can read source, condition, target, Preparation/Main cost, Concept Deck/Brain effect, defence, and consequences; kill and living-surrender routes create the advertised Blood/limb choice |
-| D3 | Grafting Table plus selected downstream proof | Graft produces an exact gain, drawback, and legality change; if fight B exists it proves these in ordinary combat, otherwise the gate-boss evidence is explicitly marked as confounded; the no-graft/Blood route remains viable |
-| D4 | Same-day death/reset loop | Body/world/temporary-instability reset and Concept-Deck/Brain-Part/knowledge persistence match the paper contract and play can continue |
-| D5 | Connected sample and informal external playtest | In a fresh reproducible build with no unresolved P0/P1 rule-fidelity, comprehension, progression, or softlock blocker, real input reaches Guard outcome -> selected limb fight(s) -> graft consequence -> gate boss -> escape/reset; raw observations record comprehension, combat appeal, replay/change-of-plan behavior, facilitator intervention, and observed duration without claiming market validation |
+| D0 — current | Revised Hell demo contract and acceptance matrix | Q25-Q28 and touched earlier choices settled or explicitly scoped; no invented values, lore or ending defaults |
+| D1 | Selected Hell/embodied opening | First legal action and immediate goal readable; Guard/G1 included only if Q27 retains it |
+| D2 | Ordinary combat pair foundations | Human and asymmetric-peer source/target/defense behavior and reward choice legal; exact actor/order chosen |
+| D3 | Graft and selected subsequent proof | Gain, draw-independent capability and drawback actually observed; no-graft route remains meaningful; sequencing matches Q26 |
+| D4 | Defeat, demo end and chosen retry/persistence boundary | Boss loss/end distinguished from early failure; Q19/Q20 reward/persistence scope respected |
+| D5 | Connected sample and protocolled human observation | Real input reaches the two ordinary fights and novel boss, then selected defeat ending; evidence separates teaching, body change, ordinary appeal, boss fairness/novelty and anticipation |
 
-Rule fidelity, comprehension, and combat appeal are separate evidence classes. Tests
-and state logs can verify legality, mutation, completion, and absence of softlocks;
-they cannot prove fun. Owner self-play is internal design evidence. Friends who have
-not been taught the system provide informal external evidence, but their relationship
-and convenience sampling must be recorded as bias. If the chain is incorrect, fix the
-rules; if correct but misunderstood, fix interaction language; if understood but the
-boss is not engaging, revise combat rather than covering the result with more rooms,
-story, meta progression, or polish.
+Rule fidelity, comprehension, appeal and anticipation are separate. Correct mutations
+do not prove enjoyment. A novel and overpowering boss is not a clean test of already-
+understood combat. Friends are convenience evidence; their curiosity or wishlist
+intent does not prove demand. If players feel previous choices were discarded,
+inspect boss counterplay, expectation and ending before adding more spectacle.
 
 ## World and narrative
 
@@ -472,30 +662,30 @@ and numerical effects remain `OPEN`.
 | Block | Protect declared target by redirecting structural pressure into another chosen legal guarding part | Paper rule; eligibility/loss open |
 | Parry | Difficult precision response; success takes no incoming damage and reduces enemy Will | Paper rule; window/source/value open |
 | Evade | Required response to Red; success prevents consequence without range/reposition | Paper rule; input/source/window open |
-| Will / surrender | Successful Parry reduces visible Will; Broken Will triggers a legal living limb bargain | Paper rule; values/exceptions open |
+| Will / surrender | Successful Parry can open legal living claim; player may accept or make one lethal Defy | F30 direction selected; exact values/claims/order OPEN |
 | DWF-0.1 balance set | Body-source tags, Block formula, timing/accessibility grid, bilateral Will `90` and `24/30/36` Parry loss | Working hypothesis; paper comparison only |
 | NPC agency | Faction doctrine -> role/duty -> individual Goal/Need/RedLine/Claim; capability is separate and `NoClaim` is valid | Approved direction plus working faction families; exact actors open |
-| G1 Guard | Failing guarding arm; accepts Full Right Arm or `20 Blood`; exact `70 -> 60/50` release branches | Working hypothesis; owner promotion open |
+| Opening / G1 Guard | O1 direct wounded-body need; Guard/G1 excluded from first demo | Selected; exact location/body values OPEN |
 | Turn cadence | Zero/one Preparation plus zero/one Main; hold/drop/commit and wait for interception | Paper rule; exact costs/lifecycle open |
 | Encounter reward split | Kill grants Blood and loses limb; accepted living surrender grants limb and no kill-Blood reward | Paper rule; yield/presentation open |
 | Same-day opportunity learning | Wrong sequencing may separate Blood from desired-limb access; reset restores the same underlying opportunities without wallet-sensitive loot | Approved direction; exact route open |
 | Duel anti-stall | Finite irreversible state pressure; no free full-state loop | Working hypothesis; exact rule open |
 | Procedures | Exact-source reservation and atomic started chains | Paper rule |
-| Catastrophic Blood survival | Exact eligible limb or death; net 12; no Torso rescue | Paper rule |
+| First-demo death prevention | Panic Pulse and Limb for Life excluded; ordinary/catastrophic ordering to specify | F33 selected; old net-12 reference is main-game history only |
 | Concept Decks | Achievement-earned persistent playstyle chassis with dedicated cards and atomic compatible exchanges | Approved direction; content/counts open |
 | Brain Parts | Boss/progression persistent paired buff/nerf affecting declared Attention access or one execution relationship | Approved direction; content/counts open |
 | Attention | Imperfect Brain-configured access to the constructed Anatomical Deck; four-slot weighted fixture only | Direction plus working hypothesis |
 | Encounter outcome | State/motivation-derived, potentially mutual | Direction plus survey prototype |
 | Starting concepts | Punch, Kick, Headbutt are known; concrete expressions still require body/condition/target/cost | Paper rule; values open |
-| Demo objective/time | Defeat the Underground City gate boss and escape; no fixed acceptance duration; approximately 30 minutes is a soft planning reference | Objective approved; duration observed from play |
-| Demo proof floor | Guard concession -> one or two pre-boss limb fights -> graft consequence -> integrated gate boss -> escape or same-day reset | Approved direction; exact one/two distribution and content open |
+| Demo objective/time | Body learning, two NPC fights, deceptive powerful demon boss, inevitable bodily-death ending; duration observed | F41/F43 selected; exact terminal rule OPEN |
+| Demo proof floor | O1 -> asymmetric -> optional graft -> human -> Boneatour Charge/stun -> bodily death/end | O1/S1/boss signature selected; exact ending OPEN |
 | Demo decision use | Owner self-play plus informal friend play informs whether to pursue full-time development or investors | Owner play is internal evidence; friends are informal external convenience evidence; neither proves market or investor readiness |
-| Full-game run | Undefined | Open |
+| Full-game run | Repeated escape attempts with different people | Selected direction; world reset and complete run boundaries OPEN |
 | Demo world structure | One bounded connected Underground City/dungeon section | Working hypothesis |
-| Full-game world structure | Undefined | Open |
-| Demo failure/restart | Same aware protagonist/day; body/world reset; Concept Decks, Brain Parts, and knowledge persist; no death card reward | Paper rule |
+| Full-game world structure | Linked small regions plus hub/expedition direction | F04 selected direction; exact topology OPEN |
+| Demo failure/restart | Final death ends demo; early retry returns to attempt start with another person; disk saves settings only | F15/F50-F52; world rewind/unlock ownership OPEN |
 | Living limb acquisition | Surrender bargain plus Grafting Table; killing selects Blood instead and no corpse-limb extraction occurs | Paper rule |
-| Full-game death/persistence | Demo rule approved; full-game expansion undefined | Partly open |
+| Full-game death/persistence | Each attempt another soul/person; literal world loop and abstract unlock ownership need reconciliation | F15 selected; F03/F37/F50 details OPEN |
 | Final narrative truth | Undefined | Open |
 
 ## Full-game open decisions
@@ -504,7 +694,7 @@ These remain important but are downstream of the demo decision order above:
 
 1. What constitutes an encounter, and what are its possible end conditions?
 2. What constitutes a run, what is its goal, and what connects its pressures?
-3. How does the approved demo same-day persistence contract expand across the full game?
+3. Whether and how does the retained same-day persistence model expand across the full game?
 4. What world/topology/presentation structure supports that run?
 5. What exact Concept Deck/Attention cadence and embodied-instability model make repeated decisions
    enjoyable rather than administrative?
@@ -533,9 +723,6 @@ part of the ordinary game-director reading order.
 
 ## Current design focus
 
-The active product gate is D0: close one reviewable acceptance matrix for the Guard
-concession, selected one-or-two-fight limb/graft chain, integrated gate boss, escape,
-and same-day reset; then explicitly approve or revise one bounded implementation
-vehicle. Existing research artifacts, content without a unique proof question, final
-theme, investor materials, and full-game questions do not justify parallel
-implementation.
+Ground the Hell demo in a causal body/motive/encounter chain. Resolve Q25 ending and
+Q26 acquisition/order, then Q27 opening and Q28 narrative bridge; update exact fixtures
+before implementation. Boss novelty is already allowed and must not be re-interviewed.

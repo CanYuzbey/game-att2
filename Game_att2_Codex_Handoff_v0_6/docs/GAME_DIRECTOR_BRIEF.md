@@ -1,6 +1,6 @@
 # Game att2 - Game Director Brief
 
-Status date: 2026-08-25
+Status date: 2026-10-26
 
 Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. PAPER DIRECTION ONLY; NOT RUNTIME,
 CONTENT, FINAL UI, ENGINE, OR PRODUCTION APPROVAL.**
@@ -10,55 +10,96 @@ preserved under `archive/design_history_2026-08-21/`; they provide provenance bu
 not override this living set. Simulator authority remains in documents 02-06 and
 validated configuration.
 
-## Product intent
+## First-demo consolidation — 2026-10-26
 
-- The current production target is one bounded, playable PC sample demo rather than
-  another general-purpose simulator, a content-complete vertical slice, or a miniature
-  version of the full game.
-- `APPROVED DIRECTION`: the mini-game objective is to escape the Underground City by
-  defeating the boss at the city gate. Approximately 30 minutes is a non-binding
-  planning reference, not a duration requirement, content ceiling, or acceptance
-  condition. Actual attempt and session duration must be observed from the playable
-  sample rather than decided by prose.
-- `APPROVED DIRECTION`: the minimum proof floor is one captive-Guard concession that
-  buys freedom at a real cost, one or two pre-boss fights that expose limb mechanics,
-  and one gate boss that exercises the integrated combat loop. Additional sample-scale
-  content may be proposed inside D0, or through a later separately approved content
-  gate, only when it owns a named evidence or presentation purpose; this floor is not
-  a fixed encounter cap or runtime authorization.
-- The demo must prove the distinctive interaction: read a pressure, use a body-sourced
-  technique, accept bodily/Blood consequences, rebuild, carry the altered body into a
-  later fight, and ask whether those known rules remain enjoyable in the gate-boss
-  confrontation.
-- The intended sample supports owner self-play and informal friend play, then an
-  internal go/no-go decision about full-time development or investor pursuit. It does
-  not by itself establish market demand, retention, broad-audience fun, or investor
-  readiness.
-- `FULL-GAME WORKING HYPOTHESIS`: a contained single-player PC game, provisionally
-  finishable in one weekend and roughly 10-12 hours. This does not budget the sample.
-- `FULL-GAME WORKING HYPOTHESIS`: USD 8-12 remains a commercial comparison, not market
-  evidence or a store decision.
-- The target is sustained entertainment plus a distinctive, strange aftertaste, not
-  a claim that this must be the player's best game ever.
-- The desired player memory is: **"Kendimi yeniden inşa ettiğim bir oyundu."**
+The owner answered Z01-Z10=A, then delegated the remaining paper-choice
+optimization. The [dated living ledger](WORLD_PROGRESSION_AND_DECISIONS.md) and
+[selection record](planning/DEMO_D0_CONSOLIDATED_PLAN_2026-10-26.md) supersede
+earlier first-demo OPEN wording below. The demo starts with a different embodied
+person under repeatable starting mechanics, in four linked underground-city-edge
+areas. Fixed oblique top-down third-person pixel presentation and eight-direction
+movement are selected. Body detail is inspectable; gore reduction keeps mechanical
+information visible. Brain acquisition, structural repair and full-game meta
+persistence are outside this first demo; one Concept specialization is naturally
+earned and tried before the boss. No result here proves enjoyment or final quality.
 
-The mini-game must prove this player-facing arc:
+## Selected direction — owner answers, 2026-09-08
+
+Target strategy/card players primarily and action players secondarily. Body-driven
+tactical change takes priority over mastery, followed by narrative curiosity (F01/F02).
+Pixel art is the selected visual family; substyle, camera and pipeline remain OPEN.
+Show the changed body in the world and through inspectable body detail (F07/F08).
+I1 selects an attached damaged arm start; exact side/condition remain OPEN (F16).
+
+Every attempt uses a different soul/person (F15 and explicit follow-up), not the same
+soul in another body. The immediate purpose is bodily survival first, then reaching
+a passage/escape. Linked regions plus a hub/expedition direction are selected, not a
+complete topology. World rewind and cross-person persistent unlocks remain OPEN.
+
+The boss claims to be Hell's king/the devil but is actually a demon; the owner wants
+this revealed later. Reveal timing is OPEN. Boneatour is now the selected skeletal minotaur demo boss:
+strong stats plus horn Charge, stopped only by reflexive Parry during the charge.
+Unstopped Charge causes one-turn stun: next Preparation/Main lost, defense retained. The demo must end in inevitable defeat and bodily
+death; local discovery of information/weakness is primary, temporary capability
+disruption secondary (F39-F43). Exact terminal rules remain OPEN.
+
+Panic Pulse and Limb for Life are excluded from the first demo (F33), retained as
+deferred main-game design. Player text is English; voice acting is in the presentation
+direction, with extent/budget/source still OPEN. The target remains a private local
+Windows sample. Only settings persist to disk; ending offers retry/menu/exit.
+See [the answer review](planning/DEMO_ANSWER_REVIEW_2026-09-08.md) for all 60 answers.
+F59 requests proposed values for discussion, not final numeric selection.
+
+## Product intent — retained premise, updated by the selected direction above
+
+`APPROVED DIRECTION`: the demo character starts as one of the souls in Hell.
+The sample contains two ordinary NPC fights: one against a human like the player,
+one against a character of broadly comparable overall threat. Superior limbs may
+be balanced by missing limbs or other visible body limitations. This does not approve
+a numeric level system or make total Integrity a sufficient balance measure.
+
+The final opponent is a relatively powerful boss intended to appear in the main
+game as well. Unlike ordinary NPCs, it may introduce a new, potentially radical
+combat mechanic (`Q02 approved`). After a short meaningful fight, the intended
+demo ending is player defeat. The demo should establish the body's gameplay value,
+explain enough of its fiction, and create anticipation for the full game.
+
+This replaces the previous demo objective of defeating a city-gate boss and escaping,
+and rejects the previous no-new-fundamental-boss-rule hypothesis. Boneatour's identity,
+Charge/stun and S1 order are selected; exact source/Parry/avoidance/status semantics,
+death trigger, measured duration, exact limb and final narrative beat remain OPEN. Inevitable demo loss and bodily death are selected;
+there is no selected exceptional-victory branch. On 2026-09-07 the owner preferred the
+asymmetric NPC as donor; the second Sep-08 answer selects S1: asymmetric -> optional
+graft/maintenance -> human -> Boneatour. Bodily death is now selected; soul destruction, scripted invulnerability and an
+automatic playable reset after the final ending are not.
+
+O1 direct bodily-need opening is selected; the earlier Guard bargain is outside
+this demo. Underground City/location and world topology remain separate OPEN details. A soul identity
+does not imply bodiless gameplay; Q28 must explain its relationship to the playable
+body without replacing Blood or adding an unsupported soul resource.
+
+The player's intended arc is:
 
 ```text
-I was trapped and accepted a disclosed loss from weakness
--> I bought freedom at a disclosed meaningful price and continued weaker but playable
--> in limb fight A I learned how cards, targets, and anatomy change one another
--> I chose Blood through death or a limb through a living bargain
--> I grafted and carried the resulting capability change forward
--> when needed, limb fight B exposed the graft's benefit and drawback before the boss
--> if I died, I returned to the same day with memory but not the same flesh
--> I used the known combat language against the gate boss and escaped the Underground City
+I am a soul in Hell and understand my immediate bodily situation
+-> I learn to read and resolve an ordinary conflict
+-> I rebuild and observe a real capability gain and cost
+-> I use that understanding against the other ordinary opponent
+-> a powerful main-game boss reveals a further mechanical possibility
+-> I struggle, recognize why I lost, and reach a clear demo ending
+-> I want to discover what a different future body could make possible
 ```
 
-For this sample, the Guard-opening "loss" means accepting a disclosed unfavorable
-concession while bound in order to become free. It does not silently approve a full
-Guard duel, player-Will break enforcement, or the still-`OPEN` claim-versus-`Defy`
-decision.
+S1 selects acquisition before the second ordinary fight on the living-graft route.
+The desired reaction is a hypothesis, not evidence of actual player interest.
+Approximately 30 minutes remains a soft planning reference; short boss duration must
+be measured and should contain meaningful decisions, not a secretly fixed death timer.
+
+The current artifact remains a bounded PC sample for owner/friend evaluation, now
+also designed to communicate the full game's appeal. Public release, store page,
+final assets and market claims require their own work; anticipation is not demonstrated
+demand. Full-game length, price, world structure and detailed lore remain hypotheses
+or OPEN as previously labelled. No runtime or engine gate is opened by this revision.
 
 ## Identity
 
@@ -106,8 +147,9 @@ No specific sanity, corruption, or instability meter is approved by this stateme
   interaction rather than unrelated minigames.
 - Achievement-earned Concept Decks provide persistent playstyle-specific atomic card
   exchanges. Boss-earned Brain Parts provide persistent visible buffs and nerfs to
-  Attention/access/execution without inventing physical capability. The two paths
-  survive death but must not collapse into one generic permanent-power ladder.
+  Attention/access/execution without inventing physical capability. The retained persistence model
+  must now be reconciled with different people across attempts (F15/F37); it must not
+  collapse into one generic permanent-power ladder.
 - Dialogue is an instrument for pressure, leverage, character, and route selection.
   It supports card combat and non-combat solutions; deep dialogue-tree authorship is
   not the demo's core production burden.
@@ -143,7 +185,8 @@ No specific sanity, corruption, or instability meter is approved by this stateme
   supports a bounded test.
 - Legacy simulator breadth is not a production requirement. A mechanic enters the
   demo only because the demo needs it and a player can encounter its consequence.
-- Same-day persistence must create earned familiarity, not erase all consequence:
+- Where retained in the selected demo scope (Q19/Q20), same-day persistence must
+  create earned familiarity, not erase all consequence:
   flesh and the unaware world reset, while earned Concept Decks, Brain Parts, and
   protagonist knowledge remain bounded and inspectable. Death does not fabricate a
   card reward.

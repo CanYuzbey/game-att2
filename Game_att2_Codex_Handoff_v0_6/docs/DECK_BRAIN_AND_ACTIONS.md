@@ -1,11 +1,25 @@
 # Game att2 - Deck, Brain, and Actions
 
-Status date: 2026-08-25
+Status date: 2026-10-26
 
 Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. CONCEPT-DECK, BRAIN-PART,
 ATTENTION, READIED-ITEM, AND PREPARATION/MAIN OWNERSHIP ARE APPROVED DIRECTIONS;
 DIAGNOSTIC COUNTS, CONTENT, VALUES, ACHIEVEMENTS, SAVE DATA, UI, AND RUNTIME REMAIN
 UNAPPROVED.**
+
+## First-demo Concept and Brain boundary — 2026-10-26
+
+The owner chose Z04-Z06=A. One disclosed first-encounter achievement unlocks one
+Concept specialization, applied through compatible atomic exchange at maintenance
+and tried in the human fight; an unavailable pincer expression stays Dormant.
+The first demo uses four neutral Attention positions and no Brain acquisition or
+equipment. On retry, a different person's gameplay gains reset, even within the
+same open application session. This first-demo cut does not remove the full-game
+Concept/Brain design. The owner delegated the remaining paper options: a six-card
+source-valid starting catalogue, persistent hand with Spent/Invalid refill, no paid
+redraw, and one pre-readied item without in-fight swap are selected directions.
+Exact cards, achievement, exchange and draw/empty rules must be specified and
+tested before D0 closure. See the [decision record](planning/DEMO_D0_CONSOLIDATED_PLAN_2026-10-26.md).
 
 ## Anatomical deckbuilder thesis
 
@@ -205,9 +219,48 @@ later-approved readiness boundary.
 In-encounter re-readiness remains `OPEN`. If later allowed, it requires an explicit
 authored action and cannot become unrestricted inventory access by another name.
 
-## Persistence
+## Accepted presentation/comparison direction — second Sep-08 round
 
-At same-day death or a full run end:
+Persistent hand with Spent/Invalid refill remains the direction. C1 is the first
+small content draft; C2 depends on unanswered F37. No final card count, redraw cost,
+Concept award or Brain exclusion was chosen by accepting section 8.
+
+Cards below, compact persistent body summary plus expanded inspect, exact costs and
+condition-explained effect forecasts are accepted directions. Accessibility scope:
+keyboard-equivalent card/target selection, remapping, hold/toggle equivalence,
+adjustable text, redundant route symbols, subtitles, separate volumes, reduced
+shake/flash, and defense assistance; exact values/implementation OPEN.
+
+Boneatour's selected stun removes next Preparation AND Main, retaining legal defense.
+A Readied Item that consumes those budgets cannot bypass their loss. Stun consumption,
+Attention refresh and previously prepared effect ordering remain OPEN in Combat.
+
+## Demo content and ownership amendment — 2026-09-08
+
+F34 retains persistent hand and Spent/Invalid refill as the direction; alternative
+cadence/redraw and exact counts remain proposed. F38 authorizes small content
+alternatives, not final counts. F59=B requests a proposed numeric set for owner review.
+
+F37 is not a scope cut: the owner requested an explanation of Concept Deck versus
+Brain Part and options for their first-demo demonstration. Neither layer is silently
+removed. Each new attempt is another person (F15); ownership of abstract unlocks
+across people remains OPEN. Character knowledge must not inherit prior-person
+memories automatically. F51 chooses settings-only disk persistence, not gameplay saves.
+
+## Persistence — retained model; current demo applicability limited above
+
+2026-09-06 demo revision: final boss defeat of the player ends the demo. The model
+below remains the prior approved persistence direction; Q19/Q20 must now select its
+bounded demonstration and early-death/retry boundary. Do not award a Brain Part for
+losing merely to satisfy an old boss-victory acceptance test, and do not turn the new
+ending into automatic playable reset. A death still creates no card reward.
+
+
+The historical persistence model listed the following. F15 reopens who owns these
+across different people; F37 must select what the demo demonstrates. This is not an
+automatic current demo checklist:
+
+At same-day death or a full run end in that model:
 
 - earned Brain Parts persist;
 - earned Concept Decks persist;

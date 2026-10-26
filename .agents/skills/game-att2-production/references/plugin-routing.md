@@ -14,7 +14,26 @@ Before invoking an external tool, confirm all five conditions:
 
 Prefer read-only discovery. Before any external write, state the exact target and intended mutation. Never copy credentials into project files, logs, prompts, issues, or reports.
 
-## Route installed core plugins
+## Skill discovery and local adaptations
+
+For a requested missing skill use the local `find-skills` workflow. Inspect actual
+instructions, prerequisite tools, source/license, and scope before adoption. Keep
+project adaptations in `.agents/skills/`; do not overwrite Claude originals or use
+bulk/global installers by default. Record local hashes and verified upstream revision
+when available; do not claim a moving upstream branch is an immutable provenance pin.
+
+Use `grill-me` for owner decisions, `to-spec` for bounded acceptance synthesis, and
+`to-tickets` for local dependency-linked tickets. These adaptations do not require a
+tracker, Claude Skill tool, or generic setup wizard. Unresolved design work is blocked,
+not `ready-for-agent`. Existing authorization to create local drafts needs no second
+approval. A specific external publication remains a separate action.
+
+## Route available core capabilities
+
+Names below are capability routes, not a claim that an integration is installed or
+authenticated. Inspect the actual session tools before invocation. Public source
+research may use the built-in web tool without account authentication; the five
+connector checks above apply to account-connected services and private data.
 
 ### GitHub
 

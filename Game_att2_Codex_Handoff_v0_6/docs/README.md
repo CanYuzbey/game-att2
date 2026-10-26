@@ -73,7 +73,21 @@ validated configuration still win for current simulator behavior.
 
 Other archive categories remain evidence/history. See `archive/README.md`.
 
+## Remaining decisions before the first demo
+
+[The original 55-card question packet](planning/DEMO_REMAINING_DECISIONS_2026-09-08.md)
+is retained for alternatives and provenance. [The 2026-10-26 D0 consolidation](planning/DEMO_D0_CONSOLIDATED_PLAN_2026-10-26.md)
+records owner Z01-Z10 answers and delegated Z11-Z55 selections. M01-M03 factual
+inputs, exact fixture and acceptance evidence remain pending; D0 is not closed.
+
 ## Change rule
+
+Execution coordination (not additional design authority):
+[2026-09-07 customer finalization questionnaire, answer form and technical decisions](planning/DEMO_FINALIZATION_QUESTIONNAIRE_2026-09-07.md).
+
+[D0 decision tree, acceptance matrix and local tickets](planning/D0_EXECUTION_PLAN_2026-09-06.md).
+Audit evidence: [2026-09-06 skill and planning review](../research/skill_audit_2026-09-06.md).
+Owner decisions still belong in the five living documents; ticket status cannot promote them.
 
 - Update a living design document instead of creating a new numbered design packet.
 - Record a dated compact entry in `WORLD_PROGRESSION_AND_DECISIONS.md` when authority
@@ -83,3 +97,5 @@ Other archive categories remain evidence/history. See `archive/README.md`.
   the living design surface.
 - Never use documentation volume as a substitute for a player-facing decision or a
   bounded test.
+
+Latest answer integration: [2026-09-08 decisions and calibrated alternatives](planning/DEMO_ANSWER_REVIEW_2026-09-08.md).

@@ -1,9 +1,128 @@
 # Game att2 - Combat, Body, and Blood
 
-Status date: 2026-08-25
+Status date: 2026-10-26
 
 Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. PROVISIONAL VALUES ARE LABELLED;
 CURRENT SIMULATOR RULES REMAIN IN DOCUMENT 03. NO MIGRATION OR RUNTIME APPROVAL.**
+
+## First-demo delegated fixture direction — 2026-10-26
+
+The owner delegated the remaining choice optimization after answering Z01-Z10=A;
+the individual choices are [recorded here](planning/DEMO_D0_CONSOLIDATED_PLAN_2026-10-26.md)
+and summarized in the [living ledger](WORLD_PROGRESSION_AND_DECISIONS.md). For the
+first demo, the right arm starts Strained with Closed Trauma; four wound families
+remain, while structural repair and Integrity Echo are excluded. The exploration
+wound event uses an initial 30 active-second interval and combat one round-end
+event, with no double charge at transitions. Ordinary Block uses the DWF 0.75 base;
+the initial defense cue is 1200 ms, Parry ±140 ms and Evade ±220 ms, with wider
+assistance on first launch. These values are unverified trial fixtures.
+
+An initial visible 2 Blood/completed combat round maintenance cost is selected for
+finite-state testing, separate from wound loss. Charge is explicitly Parry-only;
+Full/Strained ordinary arms can respond, horn source belongs to Head and Charge
+also needs Legs. Broken boss Will cancels one future Charge opportunity rather than
+opening living surrender. Stun cannot accumulate into indefinite lost turns. The
+selected inevitable bodily-death ending still requires an exact two-route upper
+bound and counterexample audit; high boss statistics alone are not proof.
+
+## First-demo scope amendment — 2026-09-08
+
+F33 explicitly excludes Panic Pulse and Limb for Life from this first demo.
+They remain deferred main-game design; their reference rules below do not apply
+to current demo death. Define ordinary Blood-0 and catastrophic death ordering in
+the exact fixture without adding a replacement rescue passive.
+
+F30 selects accepting a legal disclosed claim or one final lethal Defy after player
+Will breaks. Exact event order, claim and consequences remain OPEN.
+F32 requests event-boundary plus real-time exploration wound pressure; the hybrid direction and reading/bargaining/treatment UI/pause/alt-tab freeze are
+now accepted. Exact tick/clock transition accounting remains OPEN. F24 requires a grafting tool.
+Three-tool direction now accepted: cut; graft/stitch plus separately declared wound
+treatment; container for stored kill-Blood. No independent Blood creation is approved.
+Exact uses, cost, initial ownership and storage/collection/cap remain OPEN.
+Source-level anatomy, pincer action and weakness values remain proposed under F59=B.
+
+## Boneatour Charge/stun — owner-selected boss exception, 2026-09-08
+
+Boneatour: skeletal minotaur, stronger stats, horn Charge. Only reflexive Parry
+during Charge stops it; normal defense cannot. One-turn stun removes next
+Preparation/Main, retaining defense. Numerical values and exact source/status
+ordering remain OPEN. The following separates selected rules from proposals.
+
+### Kaynak ve Charge
+
+Boynuzlar eylemin seçilmiş fiziksel kaynağıdır. Head'e bağlı bir alt kaynak olarak
+temsil ve Legs'in itiş gereği **öneri**; yeni yedinci slot veya sayısal boynuz eşiği
+seçilmedi. İskelet görünüşünden otomatik Blood/wound bağışıklığı çıkarılmaz.
+
+Charge ortak Yellow/Red dilinin **açık boss istisnasıdır**. Yellow normalde
+Block/Parry, Red Evade anlamına gelir; Charge'a aynı işareti verip farklı bir
+sonuç saklamayız. Ayrı boynuz simgesi + “Parry to interrupt” bilgisi sunum önerisidir.
+Son renk/input tasarımı OPEN; D1/D2 karşılaştırması bu Parry olayını da kapsar.
+
+Seçilen zincir:
+görünen Charge niyeti → exact kaynak/bedel kontrolü → hücum → refleksif Parry
+olayı → durdurma veya bir tur stun → seçilmiş sonuçlar ve sonraki karar durumu.
+
+Parry başarıyla hücumu durdurur. Mevcut Parry'nin hasarı önleme ve Will azaltma
+kuralı, açıkça seçilen istisna olmadıkça korunur; boss'a gizli Will bağışıklığı
+verilmez. Charge hasarı, kaynak şartı ve Will değerleri OPEN. Block'un hücumu/stun'ı
+iptal etmesi yasak; varsa yalnız hasar azaltma rolü ayrıca seçilmeli.
+Evade ile **kaçınma**, hücumu **durdurmak** değildir: owner yalnız durdurmayı
+netleştirdi. Evade'in temastan/stun'dan kurtarıp kurtarmadığı OPEN; eski Red/Evade
+önerisi onaylanmış gibi taşınmaz.
+
+Hücum sırasında Parry ile iptal, bu eylemin açık interception sınırıdır.
+Diğer başlamış atomik eylemler geriye dönük silinmez. Gerekli boynuz/kaynak önceden
+yoksa eylem legal başlayamaz; bu genel legality koşuludur, sahibin reddettiği
+özel bir “hazırlıkta iptal” oyun fazı veya yeni iptal yöntemi değildir.
+Kıskaç zorunlu anahtar olmaz; başlangıç ve graft bedeninin exact Parry kaynakları
+ile stat yetersizliğinin hangi savunmaya ait olduğu T05/T06'da gösterilecek.
+
+### Bir tur stun — seçilmiş sonuç ve sınırları
+
+**Seçildi:** sonraki Preparation + Main kaybolur; savunma fırsatları kalır.
+Savunma hâlâ legal beden kaynağı ister; stun eksik/bozuk uzvu iyileştirmez.
+
+**Sıralama önerisi:** stun bir sonraki henüz başlamamış tam oyuncu karar turunu
+işaretler; o tur Preparation/Main 0 olur ve tur sonunda stun biter. Başlamış
+eylem silinmez; tur numarası veya gerçek saniye yanlış sınırda stun'ı bitirmez.
+Bu exact tüketim sınırı, tekrar uygulama/yenileme ve kısmi tur davranışı OPEN.
+
+Mevcut item kuralından sonuç: Readied Item'ın Preparation/Main kullanan işlemi de
+kaybolan bütçeyi aşamaz; inventory paneli bir kaçış yolu oluşturmaz. Savunma sırasında
+önceden hazırlanmış/otomatik etkiler kendi kaynak/expiry şartına bağlıdır.
+Stun yara tedavisi veya dünya saatini durdurma değildir; yara olayı ve Attention
+refresh sırası ayrıca yazılır. Yeni otomatik kurtarma yok (F33).
+
+### İskelet ekonomisi ve kesin ölüm: kapanmamış temel
+
+- Blood/wounds, canlılık, beden kaynak kaybı ve boynuzun hedeflenebilirliği açıkça
+  yazılmalı. İskelet görünüşü sonsuz enerji, kemik iyileşmesi, bedelsiz onarım veya
+  cesetten uzuv alma izni vermez.
+- Başarılı Parry Charge'ı sürekli durdurabiliyorsa yüksek hasar + stun kesin
+  yenilgi kanıtı değildir. Ayrıca Parry Will azaltır; boss surrender/claim durumu da
+  sınanmalı. F41/F43 kesin bedensel ölüm hedefi sürüyor, exact terminal kural OPEN.
+- Görünmez can kilidi, gizli ölüm sayacı, yeni kaçınılmaz büyü veya süresiz stun
+  zinciriyle bu açıklığı kapatmayız. Kaynak ekonomisi ve legal yanıtların sınırı
+  seçilmeden nihai ölüm tasarımı bitmiş sayılmaz.
+
+### Kabul matrisi — kağıt kontrolü; test çalıştırılmadı
+
+| Durum | Beklenen kontrol |
+|---|---|
+| Charge kaynağı başlamadan illegal | Başlatılmaz; hayali boynuz/yedek kaynak yok, ödeme sınırı açık |
+| Legal başarılı Charge Parry | Charge durur; stun oluşmaz; ortak Parry/Will sonucu korunur |
+| Normal Block | Charge durmaz; varsa hasar azaltma ve stun sonucu exact seçilir |
+| Miss/no-input/yanlış route | Gizli Block/Parry düzeltmesi yok; seçili sonuç açık gösterilir |
+| Evade | Durdurma sayılmaz; temas/stun'dan kaçınma sonucu karar bekler |
+| Stun | Sonraki Preparation/Main fırsatı kaybolur; legal savunma kalır |
+| Tekrar stun / tur ortası / pause | Süre/yenileme ve tüketim sınırı seçilir; görünmez fazladan tur yok |
+| Readied Item / önceki hazırlık / refresh | Bütçe atlama veya ücretsiz yeni eylem yok; otomatik etkilerin sırası yazılır |
+| Stun + Ruined Torso son Main / wound / Blood-0 | Bakım fırsatı ve ölüm sırası sessizce silinmez/uzatılmaz; exact karar gerekir |
+| Graft/no-graft | İki rotada kaynak-geçerli yerel yanıt; graft zorunlu anahtar değil |
+| Kusursuz Parry/assist / boss Will veya kaynak kaybı | Sonlanma karşı örnekleri; tek kaybedilmiş deneme kaçınılmazlık kanıtı değil |
+
+
 
 ## Body and capability
 
@@ -57,8 +176,8 @@ a limb object and does not reopen corpse-part access.
 
 The exact Blood yield, collection timing and presentation, whether wound state changes
 yield, maximum/cap behavior, and relation to voluntary Blood spending remain `OPEN`.
-Named internal emergency effects such as Panic Pulse are not opponent-derived reward
-gains and retain their separate contracts. No ordinary active-demo item, damage event,
+Named emergency effects such as Panic Pulse are not opponent-derived rewards,
+but F33 excludes Panic Pulse and Limb for Life from this first demo. No ordinary active-demo item, damage event,
 surrender, or objective completion grants Blood; a later owner decision is required
 to add another ordinary acquisition route. No active-demo runtime implements this
 paper rule.
@@ -92,6 +211,22 @@ separately authored catastrophic rules.
 Treatment states are Untreated, Controlled, Stabilized, and Resolved. Treatment does
 not restore integrity or Blood. Repair does not treat a wound. Blood restoration does
 not repair or treat. Grafting replaces Severed/Missing anatomy and is not repair.
+
+## Accepted maintenance/clock direction — second selection round
+
+I1 attached damaged-arm start; exact source condition OPEN. Three tools separate
+living legal extraction, graft/stitch plus declared wound treatment, and storage/use
+of previously awarded kill-Blood. An empty container cannot create Blood. Reward
+storage must not credit both the body and the container for the same unit.
+
+Combat wounds progress at authored event boundaries; exploration uses real time.
+Reading cards, bargaining, treatment UI, pause and alt-tab freeze pressure. Exact
+duration, tick phase and fractional carryover on transitions remain OPEN; a wound
+cannot be charged by both clocks for the same interval.
+
+G2 commitment/exposure is the priority comparison for the pincer: gripping reserves
+its source against incompatible action/guard use. This is a candidate, not final
+reservation/release rules; no additional G1 permanent loss is silently stacked.
 
 ## Provisional WNR-0.1 values
 
@@ -138,7 +273,9 @@ For a player outgoing card, enemy interception is automatic/state-derived or
 previously prepared; it does not create a player attack QTE. For an incoming enemy
 card, the player receives the bounded defence event below.
 
-Every incoming attack must expose one redundant threat cue before its consequence:
+Every incoming attack must expose one redundant threat cue before its consequence.
+The following is the ordinary-attack grammar; Boneatour Charge uses the explicit
+Parry-only stopping exception above, with distinct readable signalling:
 
 | Cue | Meaning | Legal reflex routes |
 |---|---|---|
@@ -257,10 +394,11 @@ must exact the disclosed current-body, Blood, item, opportunity, relationship, o
 other authored consequence that makes the opponent accept it. The system may not
 invent the player's most valuable punishment after the choice.
 
-Player death remains the terminal physical failure for the current attempt and invokes
-the same-day/full-run reset contract after named survival checks. Exact withdrawal
+Player death remains terminal physical failure after named survival checks. The final
+boss loss now ends the demo; early-death/retry applicability of the retained same-day
+model is OPEN under Q20/Q25. Exact withdrawal
 availability, claim enforcement, body-state cost, persistence, and later consequences
-remain `OPEN` per encounter. The captive Guard concession is the current bounded
+remain `OPEN` per encounter. The captive Guard concession is a retained bounded
 example, not a universal surrender price.
 
 `WORKING HYPOTHESIS DWF-0.1`: Will is bilateral and means an actor's confidence that
@@ -283,9 +421,8 @@ Broken Will opens a `ClaimWindow`; it transfers nothing by itself. Both actors m
 alive, the winner must remain a credible legal threat, and the pre-disclosed claim must
 still exist, be transferable, advance the winner's Goal/Need, and preserve the bounded
 playability contract after a nonlethal release. An NPC may not inspect the player's
-inventory at break and invent the most painful demand. Whether Broken player Will
-enforces the disclosed claim immediately or offers one final lethal `Defy` remains an
-identity-level `OPEN` owner choice.
+inventory at break and invent the most painful demand. F30 now selects a choice between accepting the legal disclosed claim and one final
+lethal `Defy`; exact ordering/claim/outcome remains OPEN.
 
 ## Target regions and no-range boundary
 
@@ -339,8 +476,12 @@ replaced/filled body slot and procedure cost
 -> known cards that change Ready/Dormant/Invalid state
 -> one defense, passive, or world-interaction change that is not draw-dependent
 -> one physical drawback, burden, wound, or lost route
--> one changed option in a later pre-boss fight or the gate-boss confrontation
+-> one changed option actually tried at the Q26-selected later test
 ```
+
+Q26 selects the natural sequence. If the selected test is a non-combat rehearsal,
+record that ordinary-combat graft evidence is absent; no rehearsal is approved by
+this comparison alone. Boss novelty is a separate observation, not a clean control.
 
 For the cleanest first causal proof, the relevant abstract card concepts are known
 from the beginning but source-incompatible. The graft supplies physical permission;
@@ -355,26 +496,39 @@ Negative cases are part of the proof: without the graft the physical expression 
 Dormant; with the graft but without a valid selected Concept Deck exchange its special
 card does not enter the Anatomical Deck; and a lost or ruined source makes it
 Dormant/Invalid again. The kill-for-Blood route and the
-living-limb route must each retain a disclosed way to defeat the gate boss; neither
-reward may be a disguised mandatory key. Exact limb, technique, cost, drawback, and
+living-limb route must each retain a meaningful path through the ordinary encounters
+and into the boss confrontation. The later 2026-09-06 owner revision replaces the
+requirement to defeat that boss with an intended player-defeat ending; neither reward
+may be a disguised mandatory key. Exact limb, technique, cost, drawback, and
 the two boss routes remain `OPEN`.
 
-The gate boss is an integrated-combat test, not a graft-shaped lock. If a second
-pre-boss fight is used, it must carry the cleanest graft before/after proof so the
-boss can combine already-understood rules. If the sample uses only one pre-boss fight,
-the boss must expose the downstream graft delta, but that teaching/evidence overlap must
-remain visible in playtest interpretation.
+The owner selected two ordinary NPC fights and subsequently allowed a novel boss
+mechanic with an intended player-defeat ending. On 2026-09-07 the owner preferred
+the asymmetric NPC as donor. S1 now selects asymmetric first and human second, so Fight B is the post-graft test
+on the living-graft route. Q02 is resolved in favor of boss novelty; Q25 exact defeat remains OPEN.
+
+An opponent with a superior limb and missing other parts must be assessed by actions
+it can actually take or defend against, costs, exposure, target vulnerability and
+source-loss consequences. Equal summed Integrity does not establish equivalent threat.
+Do not add a global penalty for a missing limb or infer a level system from relative
+strength language. Describe the exploitable limitation and test it under the chosen
+player/body fixtures.
+
+Novel boss rules are explicitly authored exceptions: define source, trigger, tell,
+cost, legal response, effect, recomputed capability and terminal interaction. The
+intended loss may not silently bypass the selected Will/death contract or resurrect
+ruined sources. Panic/Limb-for-Life are excluded from the first-demo fixture (F33). Any exception to those contracts requires an exact owner-selected rule.
 
 ### Blood-0 wording clarification — OPEN
 
 The owner's phrase "Blood reaches zero and no passive properties remain" is not yet
-promoted as a generic passive rule. Current paper authority checks the named Panic
-Pulse and one tutorial-scope Limb for Life opportunity before final Blood-0 death; an
-unrelated body passive does not currently keep a run alive. If "passive properties"
+promoted as a generic passive rule. The earlier reference checked Panic
+Pulse and Limb for Life, but F33 excludes both from the first demo. An unrelated
+body passive must not be invented to keep the current demo character alive. If "passive properties"
 means a new family of finite death-prevention charges, that is a separate owner rule
 that must replace or compose explicitly with this sequence.
 
-## Limb for Life
+## Limb for Life — retained main-game reference; excluded from first demo
 
 The current tutorial paper package has one visible charge. Its eventual production
 reset boundary follows the still-open run definition. After an atomic chain and Panic
@@ -404,7 +558,8 @@ read prior state
 -> apply structure, wound, Blood, inventory, and procedure mutations
 -> complete started atomic chains
 -> recompute capability and legal affordances
--> resolve Panic, survival, catastrophic, incapacity, and encounter facts
+-> resolve selected demo death, catastrophic, incapacity, and encounter facts
+   (Panic Pulse and Limb for Life remain outside the first-demo scope)
 -> emit deterministic evidence
 ```
 

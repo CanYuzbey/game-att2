@@ -1,10 +1,24 @@
 # Game att2 - Core Loop, Encounter, and Run
 
-Status date: 2026-08-25
+Status date: 2026-10-26
 
-Status: **CURRENT LIVING GAME-DESIGN AUTHORITY. THE UNDERGROUND-CITY MINI-GAME HAS A
-BOUNDED SAME-DAY LOOP AND AN ESCAPE/GATE-BOSS END DIRECTION; DETAILED PACING AND THE
-FULL-GAME RUN REMAIN OPEN. NO RUNTIME APPROVAL.**
+Status: **CURRENT LIVING PAPER-DESIGN AUTHORITY. HELL DEMO WITH TWO ORDINARY
+NPC FIGHTS AND A NOVEL BOSS / INTENDED PLAYER-DEFEAT ENDING. EXACT CAUSAL ENDPOINT
+AND RETRY BOUNDARIES OPEN. NO RUNTIME APPROVAL.**
+
+## First-demo sequence and retry amendment — 2026-10-26
+
+The owner's Z01-Z10=A answers and delegated Z11-Z55 paper selections are recorded
+in the [living ledger](WORLD_PROGRESSION_AND_DECISIONS.md) and
+[consolidated plan](planning/DEMO_D0_CONSOLIDATED_PLAN_2026-10-26.md). One person
+starts with the fixed wounded-body template, traverses four linked areas, fights
+the asymmetric NPC, may graft/maintain, then fights the human and reaches Boneatour.
+One disclosed first-fight achievement may unlock a Concept specialization at the
+maintenance boundary; the human fight provides its natural use. A retry starts a
+different person under the same mechanics, with no inherited gameplay gains or
+claim that universe time literally rewinds. Final bodily death leads to the
+chosen retry/menu/exit screen. Exact encounter actions and boss terminal proof
+remain to be authored; the chosen endpoint alone does not prove inevitability.
 
 ## What is currently solid
 
@@ -144,99 +158,136 @@ limb extraction is excluded from the active demo. Killing the opponent instead g
 a positive Blood reward sourced from that opponent; surrender grants no kill-Blood
 reward. Exact yield and collection presentation remain `OPEN`.
 
-## Underground City demo container
+## Hell demo container — owner revision, 2026-09-06
 
-`APPROVED DIRECTION`: the next product target is a short playable sample demo proving
-one complete same-day loop. It is not an expansion of the Python mini-campaign. Its
-proof floor is the Guard concession opening, one or two pre-boss limb-mechanic fights,
-and the gate boss; that floor is neither a summary of the full game nor a fixed
-encounter ceiling.
+`APPROVED DIRECTION`: start as one soul in Hell; complete two ordinary NPC fights,
+one human and one comparably threatening body-asymmetric opponent; encounter a
+relatively powerful boss also intended for the main game; experience its new mechanic
+in a short fight and end the demo on player defeat. This supersedes the city-gate
+victory/escape endpoint and the restriction to previously taught boss rules.
 
-`WORKING HYPOTHESIS`: the player is a captive in an Underground City/dungeon economy
-that treats living bodies as stock. The old fixed Missing Right Arm/Damaged Torso start
-is not the active-demo default. `G1` now supplies one exact comparison rather than a
-canon answer: the player begins with `70 Blood` and Full Head `25`, Torso `45`, both
-Arms `30`, Legs `35`, and Core `35`. Random generation and the final starting body
-remain `OPEN` until the owner promotes, revises, or rejects that comparison.
+2026-09-07 owner preference: the new limb should come from the asymmetric NPC,
+because it can better communicate new bodily play dynamics. This is the current
+donor direction; S1 now selects order, while exact limb remains OPEN (Q26/F22).
+A/B still mean chronological fights, not locked species. The ordinary pair should establish comprehension and the observable
+graft delta before the boss's novelty is interpreted.
 
-This container gives the demo a provisional run:
+### Selected S1 and O1 — owner second selection round, 2026-09-08
 
-```text
-captive and bound
--> Guard negotiation: refuse and remain captive, attack and likely die, or trade
--> if accepted, pay one disclosed Guard-favorable concession and become weaker but free
--> traverse one small Underground City/dungeon section
--> face pre-boss limb fight A
--> use card sources, body targets, defense, and Will to kill or force surrender
--> kill for Blood and lose limb access, or accept a living limb bargain through the
-   Grafting Table transition
--> optionally face pre-boss limb fight B to expose the graft's gain and drawback in
-   ordinary combat; the Blood/no-graft route remains viable
--> face the gate boss using the already-taught integrated combat language
--> defeat the gate boss and escape, or die and return to the same day's beginning
+O1 begins directly with a wounded new person's bodily survival/maintenance need.
+The captive Guard bargain is outside this first demo; city/location selection
+remains separate. I1 selects an attached damaged arm, exact side/condition OPEN.
+
+```
+O1 bodily need -> asymmetric ordinary NPC
+-> accepted living surrender: graft/maintenance OR kill: Blood/no graft
+-> human ordinary NPC (post-graft gain/drawback observation on graft route)
+-> Boneatour -> selected bodily-death ending
 ```
 
-`APPROVED DIRECTION`: defeating the boss at the Underground City gate and escaping is
-the mini-game success endpoint. Approximately 30 minutes is a soft planning reference,
-not a duration requirement, content cap, or acceptance criterion. Clean-attempt,
-first-escape, and total-session durations are evidence to record from real play.
+Two ordinary fights only. S2 is comparison history, not active sequence.
+The first asymmetric actor teaches ordinary rules using a superior arm and an absent
+other arm; it cannot silently require an action the starting wounded body lacks.
+The human second fight tests the new function and actual drawback. The no-graft route
+must still reach and meaningfully respond to the boss. A familiar boss opening phase
+has not been selected by the S1 answer.
 
-`WORKING HYPOTHESIS`: the Grafting Table consequence must occur before the gate boss
-and must change at least one inspectable legal option in a later pre-boss fight or in
-the gate-boss confrontation. A limb received only after the final boss cannot prove
-the requested graft-result loop. The exact choice of one versus two pre-boss fights,
-their actors, the limb, the boss, and the changed option remain `OPEN`; this ordering
-is not approval for extra runtime content. With only one pre-boss fight, the boss must
-also expose the graft consequence, which contaminates its separate combat-fun test and
-must be reported as such rather than hidden.
+### Current story and knowledge boundary — 2026-09-08
 
-### G1 Guard comparison — working hypothesis
+Each new attempt starts with another soul/person. The body begins wounded/incomplete;
+the selected immediate need prioritizes bodily survival, then passage/escape.
+F17 delegates this bounded knowledge rule: the new person knows they are in Hell,
+basic personal information and observable bodily condition, but learns routes and
+others' concealed motives through the attempt. Prior characters' memories are not
+automatically inherited. Player knowledge and character knowledge remain distinct.
 
-The Guard is not a generic collector. Its own guarding arm is visibly failing before
-an imminent duty inspection. It needs a compatible Full `CanGuard` Right Arm, or
-exactly `20 Blood` to fund replacement/treatment, so that it remains fit for duty.
-It refuses Strained, Desperate, incompatible, or vital substitutes. Its leverage is
-the bound player and controlled exit; its Concession is controlled removal if needed,
-stump control, release, an opened exit, and no same-day pursuit.
+The human actor has survival needs and may use the player to meet them; short
+dialogue plus limited bargain branches are the direction. The asymmetric actor has
+one superior arm and the other arm missing, with source-level limitations still to
+be defined. A pincer/grip limb is the working direction, not an exact authored ability.
+First ordinary combat tolerates learning errors; the second asks for combination.
+S1 was selected after that comparison: asymmetric first, human second.
 
-Two test branches leave the player weaker but playable:
+The boss claims to be the devil/king, will later be exposed as only a demon, and
+kills the demo character's body after a brief meaningful confrontation. Boneatour is
+now the selected skeletal minotaur with horn Charge and one-turn stun; its detailed
+motive remains a proposal in [the answer review](planning/DEMO_ANSWER_REVIEW_2026-09-08.md).
 
-| Payment | Exact released state |
-|---|---|
-| `20 Blood` | `50 Blood`; complete Full body and every starting route retained. |
-| Full Right Arm | `60 Blood` after the provisional `10 Blood` Clean-Stump consequence; Right Arm Missing; stump Controlled for two wound ticks; Left-Arm Punch/Block/Parry, Kick/Evade, and Headbutt retained. |
+### Functional story spine — prior proposal; apply the selected boundary above
 
-Every nonlethal release must retain at least `35 Blood`, two Ready attack families,
-one legal Block source, one Parry source, one Evade source, and all mandatory traversal
-sources. The Guard releases because payment closes its Need and continued custody adds
-cost without Goal progress. Refusal leaves captivity; hostile resistance makes the
-same disclosed claim its Will objective rather than authorizing a new inventory scan.
-This is `G1 WORKING HYPOTHESIS`, not final content or runtime behavior.
+`WORKING HYPOTHESIS`: a soul has to maintain a materially consequential body to act
+in Hell. The opening demonstrates one limitation; ordinary conflicts arise because
+other actors have their own survival, bodily function or passage needs. A graft changes
+what the player can do. A stronger boss's role explains access to a more radical
+body-related capability and why it confronts this comparatively weak soul.
 
-For this sample, "losing at the Guard" means accepting one disclosed unfavorable
-concession while bound so the player can leave captivity weaker but playable. It does
-not promote a full Guard combat, a player-Will-break claim outcome, or the still-open
-claim-versus-`Defy` rule.
+The exact soul/body relation, location, immediate player goal, NPC goals and encounter
+bridge require owner selection (Q28). No named faction, cosmic law, soul meter, sin
+economy, imprisonment, resurrection scene or boss identity is implied.
 
-The success endpoint is decided at direction level; duration is observed rather than
-accepted against a fixed target. The failure contract is decided: death resets the
-body and unaware world to the same day's start;
-the protagonist remembers; earned Concept Decks and Brain Parts remain; the known
-concept vocabulary remains; body/world state and temporary instability reset.
+The boss must have a reason to act other than ending the demo. Its motive must explain
+why it kills this character's body. Death is selected (F43); exact source, trigger
+and the later reveal's timing remain OPEN. A main-game appearance is an approved content intention,
+not proof that main-game content exists or that future victory has been designed.
 
-### Minimum interaction responsibilities
+### Boss novelty and defeat contract
 
-| Interaction | Actor motivation | What the mini-game must prove | Non-goal |
-|---|---|---|---|
-| Bound Guard opening | `G1` candidate: preserve duty by replacing/treating its failing guarding arm | Refusal loops to captivity; warned bound attack can kill; the player can identify the disclosed loss accepted to buy freedom; the D0-approved concession releases its declared weaker-but-playable body; if D0 approves multiple branches, each has a later consequence | A fake choice, a disguised Guard duel, a universal limb price, or inventory-scanning punishment |
-| Pre-boss limb fight A | `OPEN`, but must explain why it still expects to survive or win and why the desired limb matters to it | In-world body-sourced combat, source/target consequences, state-derived surrender/death, and the kill-for-Blood versus surrender-for-limb choice produce the graft decision | A detached battle scene, corpse-limb loot, or acquisition without a causal body decision |
-| Optional pre-boss limb fight B | `OPEN`; include only if it owns the distinct post-graft proof | In ordinary combat, the graft changes one legal capability and one drawback before the boss; the no-graft/Blood route also remains viable | Repeating Fight A, adding content for length, or making the graft a pure stat upgrade |
-| Gate boss | `OPEN`, but must guard the city exit for a goal/duty that exists without the player | `WORKING HYPOTHESIS`: without teaching a new fundamental combat rule, it combines a predeclared multi-layer subset of the already-taught card/body/defense/resource pressures; omitted systems are recorded; defeat opens escape; human observation tests whether the understood loop is engaging and worth another plan | A bespoke graft lock, a tutorial checklist, or a boss disconnected from body/Brain decisions |
-| Death/reset | World has no loop awareness | Same day/world/body reset plus asymmetric card/Brain/memory persistence | A generic roguelite results screen with unexplained reset |
+`APPROVED DIRECTION`: new mechanics are allowed; player defeat is the intended ending.
+`SELECTED Q25 DIRECTION, 2026-09-08`: inevitable demo defeat and bodily death (F41/F43).
+`OPEN`: exact causal terminal rule and aftermath. No alternative victory is required.
 
-The pre-boss actors' and gate boss's motivations remain identity-level content
-decisions. Until chosen, none may be filled by a generic desire to kill or a scripted
-final twist.
+F42 prioritizes revealing information/weakness and secondarily disrupting a boss
+capability temporarily. Exact local objectives, rewards or carryover remain OPEN;
+no consolation reward is invented.
+
+A new mechanic should expose its source, tell, legal response, cost, state mutation
+and consequence. A clearly authored and disclosed exception can differ from an
+ordinary NPC rule; new-mechanic permission is not a waiver of causal explanation.
+
+The selected signature is Boneatour's horn Charge: only a reflexive Parry during the
+charge stops it; normal Block does not. An unstopped Charge stuns for one turn,
+removing next Preparation/Main while retaining defense. Source, avoidance, costs,
+status ordering and the inevitable-death proof remain open in
+[Combat](COMBAT_BODY_AND_BLOOD.md). Previous reserve reconstruction, source marking,
+linked consequences and BP1/BP2/BP3 proposals are no longer this boss's candidates.
+
+**Character motive proposal, not owner-selected lore:** Boneatour wants submission
+to his false kingship; needs local obedience, wants the escaping soul to acknowledge
+his superiority, and refuses public defiance. His selected physical power supplies
+leverage. Exact authored Claim/Concession/Fallback and the cause of lethal escalation
+remain OPEN. No tax economy, borrowed crown, regeneration or mimicry is imported.
+
+A guaranteed-loss design needs an argument over legal states and defenses, including
+assists, source removal, surrender and no-input play. F33 excludes Panic Pulse and
+Limb for Life from this demo; do not require or invoke those deferred charges. High damage
+alone does not prove inevitability. Hidden HP locks, adaptive cheating and outcome
+teleportation cannot substitute for an explicit selected rule.
+
+### Ordinary outcomes and the ending are separate
+
+Ordinary kill-for-Blood versus living-surrender-for-limb rules remain unchanged.
+Both routes should support reaching and meaningfully participating in the final
+confrontation. They are no longer required to defeat the final boss.
+
+The final loss ends the demo; an automatic return to playable same-day exploration
+is no longer its default endpoint. F50 selects early return to attempt beginning;
+F51 settings-only disk storage and F52 retry/menu/exit are selected. Exact world reset,
+cross-person session progression and narrative aftermath remain OPEN under Q20.
+The previous same-aware-character model is historical, superseded by F15.
+
+O1 excludes the Guard/G1 concession from this first demo. Its old costs remain
+research history; they are not part of the starting body's resource ledger.
+
+### Encounter evidence responsibilities
+
+| Moment | Required evidence | Still OPEN |
+|---|---|---|
+| Hell/soul opening | Player understands immediate body, goal and first action from the chosen fixture | Exact embodiment, location and wording; O1 selected, Guard excluded |
+| Human ordinary NPC | Basic source, target, defense, consequence and actor purpose are readable | Exact human body/actions; second fight selected |
+| Body-asymmetric ordinary NPC | A superior function creates a different threat; missing function creates a usable limitation | Exact anatomy, action set, values and balancing proof |
+| Graft and subsequent test | A changed legal option, draw-independent gain and actual drawback are observed | Exact tool/cost and graft function; S1 human test selected |
+| Main-game boss encounter | New rule is observable, local responses matter, inevitable bodily death follows the selected exact rule | False-devil claim selected; skeletal minotaur/Charge/stun selected; exact motive/terminal source/duration OPEN |
+| Demo ending | Ending is recognized; curiosity and perceived fairness are measured separately | Aftermath, retry, future-facing question and public call to action |
 
 ## Demo presentation hypothesis
 
@@ -250,9 +301,23 @@ Exact camera and layout remain `OPEN`.
 The active demo has no combat range state, range profile, neutral settling, or
 reposition action. Traversal outside interaction remains ordinary world movement.
 
-## Same-day run contract
+## Current retry and storage boundary — 2026-09-08
 
-`PAPER RULE`: the player character knows the day is repeating; the world and NPCs do
+F15 and the explicit follow-up select a different soul/person each attempt.
+F50 selects return to the attempt beginning; F03/F50 do not override this newer
+identity clarification. Whether world time literally rewinds is OPEN. Cross-person
+Concept/Brain ownership and session persistence require F37 explanation/selection.
+F51 selects settings-only disk storage; closing the application starts fresh gameplay.
+F52 selects retry/menu/exit after the final ending; retry is an explicit new attempt.
+No death-created card or automatic transfer of a dead person's memories is implied.
+
+## Historical same-day model — identity superseded; not current demo behavior
+
+The following preserves prior provenance only. Its same-aware-person rule is
+superseded by F15. World reset and abstract progression must be reconciled explicitly;
+this historical list is not a current demo implementation checklist.
+
+`PAPER RULE` in that model: the player character knows the day is repeating; the world and NPCs do
 not. Death returns the body to that day's original starting configuration and returns
 world state to the day's beginning.
 
@@ -281,7 +346,7 @@ scope remain `OPEN`.
 
 ## Full-game run structure: OPEN
 
-The demo now has the same-day reset contract above. The full game still does **not**
+The retained same-day model above has reopened demo retry boundaries. The full game still does **not**
 have an approved complete definition of a run. The current Python mini-campaign does
 not decide it.
 
@@ -291,7 +356,7 @@ Still open:
 - how encounters, hazards, rooms, or authored scenes connect;
 - whether the world is a map, sequence, hub, branching path, or another structure;
 - checkpoint behavior beyond the same-day death reset;
-- how the approved demo persistence contract expands across the full game;
+- whether and how the retained persistence model expands across the full game;
 - what failure short of death means;
 - what the player is ultimately trying to accomplish in a run and in the full game;
 - how a 10-12 hour complete arc differs from replay or post-completion structure.
@@ -301,9 +366,7 @@ should masquerade as an answer to this missing structure.
 
 ## Current design focus
 
-The current gate is to close the remaining `OPEN` choices needed for the smallest
-Guard-concession, one-or-two-fight limb/graft proof, integrated gate-boss escape, and
-same-day reset contract. The bounded Concept Deck/Brain diagnostic must use the
-approved scaling guardrails; full card/Brain content, a broad dialogue system, content
-that does not answer one of those proof questions, final content, and polish must not
-be built first.
+Close the causal ending (Q25), acquisition/order (Q26), opening continuity (Q27),
+and soul/body/story bridge (Q28), then reconcile the existing D0 mechanics and ticket
+matrix. Ordinary combat/graft comprehension and boss novelty/anticipation need
+separate observations. No engine/runtime implementation is authorized.

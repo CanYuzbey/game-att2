@@ -1,168 +1,131 @@
 ---
 name: game-att2-production
-description: Lead, audit, design, implement, test, document, or research Game att2 and its deterministic Python simulator. Use for project status, production planning, requirements, combat rules, YAML configuration, simulator code or CLI, tests, evidence reports, playtest materials, skill/plugin routing, production gates, the H1 hybrid-combat fixture, the bounded visual interaction lab, or cross-discipline recommendations. Enforce source precedence, state-derived causality, deterministic evidence, scope locks, and the Codex return contract; do not treat this skill as approval for new runtime content, Encounter 3 implementation, Unity, or product claims.
+description: Analyze and develop Game att2 through its paper-design and demo gates; audit causal rules, decisions, tickets, research, and evidence. Separately maintain the frozen Python simulator when requested. Use for Game att2 project work, never as runtime authorization.
 ---
 
 # Game att2 Production
 
-Operate as an evidence-led game designer, systems engineer, researcher, QA lead, and producer. Preserve the identity statement: the player becomes the weapon by rebuilding their body while spending Blood as life, currency, and fuel.
+Protect the identity: the player rebuilds their body while Blood is life, currency,
+and selected ability fuel. Turn uncertainty into a reviewable decision or bounded
+test, not more purportedly authoritative prose.
 
-## Establish authority
+## Establish the correct authority lane
 
-1. Locate the Git root and the active `Game_att2_Codex_Handoff_v0_6/` package.
-2. Read the applicable `AGENTS.md` before acting.
-3. Inspect the worktree and preserve unrelated user changes.
-4. For changes to requirements, rules, simulator behavior, tests, project status, or this skill, read the active documents in the order specified by the handoff `README.md`. Read `config/*.yaml` where that order calls for it.
-5. Use this precedence when sources conflict:
+1. Locate the Git root and active `Game_att2_Codex_Handoff_v0_6/` package.
+2. Read applicable `AGENTS.md`; inspect worktree and preserve unrelated changes.
+3. For active-demo work, read package `README.md`, the mini-game AI working contract,
+   `docs/README.md`, its five living documents in order, and `research/README.md`.
+4. Select the lane below before resolving conflicts. Current user instructions and
+   explicit owner decisions apply within system/developer constraints. Skill guidance
+   is neither product authority nor a new approval requirement.
 
-```text
-AGENTS.md
--> Development Master v0.6 and dated owner amendments
--> Combat Rules v0.5
--> Simulator Technical Spec v0.2
--> config/*.yaml for tunable values only
--> Test Plan / Acceptance
--> supporting evidence and history
-```
+| Lane | Rule authority | Operational / evidence sources |
+|---|---|---|
+| Active-demo paper design, planning, status | Five living documents and explicit owner amendments | AGENTS, mini-game working contract, research map |
+| Frozen simulator maintenance | Development Master v0.6 -> Combat Rules v0.5 -> Technical Spec v0.2 -> validated config for tunables -> acceptance plan | Fresh scoped Python evidence |
+| H1 / visual lab / Encounter 3 | Their explicitly bounded approved research contracts | Research records; never product evidence |
 
-Treat `docs/archive/`, historical results, and `Game_att2_Oyun_Gelistirme_Belgesi.pdf` as evidence, not current authority. The PDF predates Rules v0.5 and the current hybrid-combat handoff. Do not revive a superseded value or mechanic because it appears in a polished artifact.
+Do not put the legacy chain above the living set for active-demo decisions.
+The operating contract governs work and claims; it cannot close an OPEN design choice.
+Archives and the old PDF provide provenance only. Follow explicit supersession;
+otherwise identify conflicting passages and keep the affected product choice open.
 
-## Classify the task
+## Choose the work mode
 
-Choose one lane before planning:
+- Audit/explanation: read and report; edit only within the requested scope.
+- D0 design/planning: read [decision-to-delivery](references/decision-to-delivery.md).
+  Use the local `grill-me`, `to-spec`, and `to-tickets` adaptations when relevant.
+- Research/comparables: read [research method](references/research-method.md).
+- Authorized implementation: name the exact capability, authority, gate, affected
+  artifact, negative cases, and evidence before changing the smallest coherent slice.
+- Legacy maintenance: use the simulator procedure below; do not port the campaign.
+- H1/lab research: read docs 20, 21, 23, 25 only when this is the actual task.
+  Verify current status; historical fidelity reports are not fresh verification.
+- Encounter 3: read its README and ordered packet; remain paper-only unless the owner
+  explicitly opens a separate runtime gate.
 
-- **Audit or explanation:** inspect and report; do not edit unless asked.
-- **Simulator maintenance:** preserve approved behavior and add a requirement-to-test trace.
-- **Approved simulator change:** confirm authority, implement the smallest reversible change, and update tests/config/docs together.
-- **Design proposal:** label proposals and alternatives; do not write them into runtime as approved rules.
-- **H1 and interaction-lab research:** read the five living design documents, then documents 20, 21, 23, and 25. Treat the original four H1 questions plus attack-led input ownership, symmetric routine timing, state pressure, and the shared-readiness boundary as resolved at the research-direction level. Treat the isolated H1 runner as a completed fidelity fixture and its one-second terminal task as an inadequate human-facing instrument. Treat VL-WP1 through VL-WP3 as implemented fidelity infrastructure only. VL-WP4 was approved and then deferred by the owner before execution on 2026-08-13; there is no active owner-diagnostic, external-pilot, or production-integration gate. Do not execute or reopen any of them without a later explicit owner approval.
-- **Encounter 3 paper research:** read `Game_att2_Codex_Handoff_v0_6/docs/encounter_3/README.md` and its ordered packet; keep all work paper-only unless a separate runtime gate is explicitly approved.
-- **Out-of-scope request:** identify the missing approval and offer the smallest in-scope research or specification step.
+Assign role outputs, not ceremonial titles: designer -> alternatives and tradeoffs;
+systems analyst -> causal counterexamples; researcher -> sources and limits;
+UX/accessibility reviewer -> inspectable choices and input barriers;
+QA -> failure oracles; producer -> dependency frontier and scope.
+A single agent using these lenses is not an independent multi-person review.
 
-Map the plan to named requirements, acceptance criteria, and evidence. Do not let a task label such as "prototype," "refactor," or "content" bypass a gate.
+## Active-demo invariants
+
+Read current scope and D0-D5 status from `WORLD_PROGRESSION_AND_DECISIONS.md` and the
+working contract; do not maintain a second authoritative gate roster here.
+
+- D0 covers the currently selected opening, ordinary fights, graft evidence, boss
+  signature and exact ending/retry boundaries. Read their current owner revision;
+  do not freeze a former Guard, escape, donor order or reward path into this skill.
+- Planning does not open an engine/runtime gate. Use explicit owner authorization;
+  preserve authorization already given rather than asking again.
+- Legacy S-001/Jeff/Anna, H1, visual lab, and Encounter 3 are separate artifacts.
+  Deferred research does not reopen because active-demo planning is requested.
+- Body -> compatible Concept Deck exchange -> Anatomical Deck -> Brain/Attention
+  access. A Brain cannot invent a source, restore a removed card, or add ordinary plays.
+- Zero/one Preparation and zero/one Main; Readied Item uses its authored budget.
+  No growing Mana, attack QTE, corpse-limb reward, or combat range/reposition.
+- Yellow -> Block/Parry; Red -> Evade. Require redundant non-color information.
+  Assistance and exact numeric hypotheses are not silently promoted.
+- Kill -> Blood and no same-day limb access; accepted living surrender -> agreed
+  limb and no kill-Blood. Validate life, leverage, and transferable source first.
+- Reconcile final demo ending with early-death/retry and progression before applying
+  the retained same-day model. When that model applies, flesh/world/temporary
+  instability reset and earned abstract layers persist. Do not invent a death reward.
+- Do not silently decide identity, actor motives, losses, rewards, probabilities,
+  thresholds, content count, or player-facing behavior. Reversible technical choices
+  that do not alter experience can be made and recorded.
+- Runtime dependencies need explicit justification and approval. Final presentation,
+  broad content, and full-game systems are not implied by a bounded demo gate.
 
 ## Apply the causal contract
 
-For every meaningful action or encounter transition, trace:
+For each meaningful transition:
 
 ```text
-prior state
--> legality and source validation
--> approved rule plus injected randomness
--> explicit mutation
--> recomputed capabilities and legal affordances
--> forced consequences
--> motivation-supported choice among remaining legal responses
--> continuation or state-derived resolution
+prior state -> exact source/target/cost legality -> revalidation
+-> pay when execution starts -> complete started atomic action
+-> explicit mutation -> recomputed capability and remaining legality
+-> forced consequences -> goal-supported legal response -> continuation/resolution
 -> structured evidence
 ```
 
-Read `Game_att2_Codex_Handoff_v0_6/docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` for the full taxonomy and templates. Reject script immortality, resource theatre, decorative limb damage, outcome teleportation, invented anatomy or psychology, and encounter-specific branches disguised as emergence.
+Read `docs/11_SYSTEMIC_CAUSAL_DESIGN_SKILL_v0_1_CODEX.md` for taxonomy/templates,
+interpreted inside the selected lane: its historical reach/Downed examples do not
+reintroduce removed demo systems. Reject script immortality, resource theatre,
+decorative limb damage, invented anatomy/psychology, and outcome teleportation.
 
-## Preserve scope and ownership
+Cancellation before execution must not create partial mutation. A lost source cancels
+a later unstarted commitment, never a completed atomic action; do not invent replacement
+sources or an OPEN refund rule. NPC goals choose legal actions, not exceptions to costs.
 
-- Treat S-001 -> Jeff -> emergency graft -> Anna -> Grafting Table as frozen legacy
-  simulator evidence. Do not expand or port it unless the owner approves one isolated
-  maintenance or mechanic-experiment gate.
-- The owner opened planning for a bounded Underground City mini-game; three mandatory
-  encounters are no longer part of its minimum contract. Planning does not authorize
-  an engine project: complete D0 and obtain explicit approval before creating the
-  one-room Guard interaction spike.
-- Keep Encounter 3 and the Warden out of runtime source, runtime config, production content, and engine work.
-- Keep Unity, final presentation, full wounds, active Cover It behavior, generalized mental defeat, multi-round negotiation, movement, and broader reflex families unimplemented until their documented gates pass. Keep the implemented visual interaction lab isolated and provisional. Preserve the existing H1 and visual-lab fidelity runners without presenting either as production combat.
-- Do not silently change costs, probabilities, thresholds, meanings, encounter order, rewards, or product identity.
-- Resolve a purely technical ambiguity only when the interpretation is reversible and cannot alter player experience. Otherwise record one focused owner question and mark the affected link `DEFERRED`.
-- Add no runtime dependency without explicit justification and approval.
+Distinguish safety (nothing illegal happens), reachability (a legal route exists),
+and liveness (play cannot cycle forever). A changed round is not proof of termination:
+check free cycles, replenishment, optimal defense, and card refresh against a named
+finite irreversible fact. A round limit in a diagnostic is not an approved gameplay rule.
 
-## Implement simulator work
+## Research and creative work
 
-1. State the requirement, authority, affected modules, risk, and acceptance test.
-2. Keep definitions immutable and runtime state explicit.
-3. Route all randomness through injected `RNGService`; record seeds and scripted rolls.
-4. Centralize tunables in validated configuration. Do not use config to hide an unapproved mechanic.
-5. Keep domain systems silent; emit structured events and render them at the boundary.
-6. Validate action prerequisites before committing the Main action. Rejected actions must be atomic.
-7. Add or update tests with each behavior, including failure and source-invalidation paths.
-8. Prefer narrow modules and domain-specific errors over framework expansion or catch-all classes.
+For each material proposal record: question; source/current status; alternatives;
+predicted state dynamic; desired player experience; counterexample; test and observable
+revise/stop criterion; evidence limit; decision owner. Separate preference, fact, and
+testable hypothesis. D0 can choose provisional fixture values for a named test without
+claiming final balance. An unresolved required rule blocks its dependent ticket.
 
-Consider property-based or rule-based state-machine tests only when example tests leave combinatorial gaps. Keep them optional development tooling, pin reproducible failures, and never substitute generated strategies for human play evidence.
+Human comprehension and combat appeal need actual human observations. Simulator,
+synthetic personas, LLM critique, and designer self-play cannot prove general fun,
+fairness, accessibility, retention, market demand, or investor readiness. Preserve
+version, consent, prior exposure, facilitator deviations, raw observations, and bias.
 
-## Design and research work
+## Implement and verify simulator work only when requested
 
-Use this evidence card:
+Use immutable definitions, explicit typed state, narrow modules and domain errors.
+Inject RNGService; centralize validated tunables; keep domain systems silent and emit
+events. Invalid action rejection is atomic. Include source-loss, failure, survival,
+and reward-exclusivity tests appropriate to the changed behavior.
 
-```text
-Question or hypothesis
-Mechanic/config variant
-Expected runtime dynamic
-Desired player experience
-Instrumentation
-Continue / revise / kill criteria
-Evidence class and contamination risks
-Decision owner
-```
-
-Connect mechanics -> observed dynamics -> claimed experience. Simulator output may establish rule fidelity, reproducibility, reachable states, exploit resistance, and numerical distributions. It cannot establish fun, comprehension, accessibility, fairness, market demand, or replay desire.
-
-For human sessions, preserve participant consent, evidence class, versioned fixtures, facilitator deviations, raw observations, and contaminated-session handling. Do not count designer self-play as external evidence.
-
-For the H1 timing-based Block hypothesis:
-
-- keep strategy, body source, telegraph, reach, Blood, and consequence relevant;
-- compare prepared and unprepared defense;
-- expose configurable timing profiles and a non-precise or assisted alternative;
-- test whether high reflex skill erases strategic mistakes;
-- keep execution grades as state modifiers, never direct victory selectors.
-
-## Lead the current production gate
-
-When asked to lead the project, use the five living documents listed in
-`Game_att2_Codex_Handoff_v0_6/docs/README.md` as the current design status and
-critical path, after the authoritative reading order. Keep only one product gate in
-progress:
-
-```text
-bounded visual-lab plan approval - COMPLETE
--> local implementation-fidelity check - COMPLETE
--> VL-WP4 owner diagnostic - DEFERRED BEFORE EXECUTION
--> strategic-combat and Brain packages - CONSOLIDATED PAPER DIRECTION,
-   RUNTIME DEFERRED
--> legacy Python campaign - FROZEN EVIDENCE, NOT ACTIVE PRODUCT BACKLOG
--> Underground City mini-game D0 decisions and acceptance contract - CURRENT OWNER GATE
--> one-room Guard interaction spike - REQUIRES EXPLICIT IMPLEMENTATION APPROVAL
--> any additional Merchant / Exit Keeper content - OUTSIDE THE MINIMUM, DOWNSTREAM
--> later separately approved reflex diagnostic / external pilot / production work
-```
-
-Do not start story production, final UI, an engine project, content expansion, or a
-vertical slice merely because parallel work is possible. D0 may compare engines and
-define spike acceptance as a reversible working hypothesis; installation,
-scaffolding, dependencies, and implementation remain blocked until explicit spike
-approval. End each production-lead report with one recommended next step and the
-single owner decision, if any, that gates it.
-
-## Research comparable work
-
-Browse current sources when asked for comparisons, recommendations, licenses, tools, engines, or market claims. Prefer official developer pages, platform documentation, original talks/papers, and primary project sources. Compare each reference by:
-
-```text
-Comparable mechanic
-Player decision it creates
-Failure mode
-Evidence strength
-Transferable lesson
-What Game att2 must not copy or infer
-```
-
-Treat inspiration as a hypothesis, not a requirement. Preserve source links and dates near the claims they support.
-
-## Route optional plugins and add-ons
-
-Keep the workflow fully functional from the local repository. When a task involves an external connector, plugin recommendation, remote repository state, security scan, telemetry, participant records, or cloud deployment, read [references/plugin-routing.md](references/plugin-routing.md) before using or recommending a plugin. Never let external state override repository authority.
-
-## Verify proportionally
-
-For simulator changes, normally run from the handoff directory:
+From the package directory, discover the available interpreter and dependencies:
 
 ```powershell
 python -m pytest -q
@@ -172,28 +135,35 @@ python -m game_att2_sim --all-scenarios --seed 42 --format markdown
 python -m game_att2_sim.play_cli --seed 42 --script examples/play_cli_full_campaign_sequence.json
 ```
 
-Also run focused tests first and repeat the same seeded command when determinism is material. Verify that every Blood and limb-state change remains explainable, disabled sources cannot act, and no non-canonical probe is presented as production content.
+Repeat seeds when determinism is material. Use property/state-machine tests for real
+combinatorial gaps; preserve failing seeds. Never claim unrelated tests verify the demo.
 
-For documentation-only changes, validate links, authority labels, dates, version references, and factual metrics against current files or fresh command output. Do not copy old test counts forward.
+For documentation/skill work, verify frontmatter, local links, authority, current
+tool prerequisites, status labels, decision-to-ticket coverage, and acyclic blockers.
+Run changed helpers. Do not run the entire legacy suite merely to decorate a docs report.
 
-## Perform hostile review
+## External skills and tools
 
-Before acceptance, inspect the diff for:
+Read [plugin routing](references/plugin-routing.md) when discovering skills/connectors,
+using external data or trackers, or considering dependencies. Prefer locally available
+capabilities; audit actual instructions and licenses before adopting a third-party skill.
+A plugin install count is not evidence of compatibility or correctness.
+Do not weaken sandbox settings, edit global configuration, scaffold a web project, or
+publish to a tracker just because a helper skill suggests it.
 
-- rule or config drift;
-- unrelated changes and scope creep;
-- hidden randomness or non-atomic action commits;
-- stale authority links or promoted historical evidence;
-- invented wounds, anatomy, psychology, rewards, or balance claims;
-- missing negative tests and unlogged state changes;
-- reflex mechanics that bypass strategy or accessibility;
-- new dependencies, data transfers, licenses, or secrets;
-- claims stronger than the evidence class supports.
+## Hostile review and return
 
-P0/P1 findings block acceptance.
+Check authority drift, hidden defaults, cyclic blockers, unowned OPEN decisions,
+unreachable reward/persistence demonstrations, free combat loops, scope creep,
+unverified tooling, and claims stronger than evidence. P0/P1 fidelity findings block
+acceptance of the affected artifact/gate, not unrelated documentation progress.
 
-## Return the result
+Start every report with what exists. Use PAPER ONLY, OPEN, WORKING HYPOTHESIS,
+IMPLEMENTED — NOT VERIFIED, or VERIFIED IN <artifact> precisely. No completion
+percentage. Runtime claims require exact artifact, fresh build/command, exit status,
+and player-visible evidence. Never promote historical status from a skill's wording.
 
-Follow `Game_att2_Codex_Handoff_v0_6/docs/10_CODEX_RETURN_CONTRACT.md` for implementation work. Scale its sections for a documentation or skill-only change, but always include changed files, verification with exit status, assumptions/open decisions, scope audit, hostile-review findings, known limitations, and a merge recommendation.
-
-End with exactly one recommended next step. Do not begin the next product gate without owner approval.
+For active-demo work use the working contract's return format; for simulator
+implementation use `docs/10_CODEX_RETURN_CONTRACT.md`. Scale documentation reports:
+changed files, checks/exit statuses, open decisions, scope audit, hostile findings,
+limitations, merge recommendation. End with one bounded next step.

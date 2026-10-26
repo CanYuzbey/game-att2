@@ -7,23 +7,28 @@ description: "Persistent browser and Electron interaction through `js_repl` for 
 
 Use a persistent `js_repl` Playwright session to debug local web or Electron apps, keep the same handles alive across iterations, and run functional plus visual QA without restarting the whole toolchain unless the process ownership changed.
 
+## Project compatibility boundary
+
+Use only for an existing, authorized web/Electron artifact. This skill does not
+authorize a new Game att2 runtime, a package scaffold, global configuration changes,
+or dependency installation. Prefer the browser tools actually exposed in the session.
+The examples below describe the js_repl/Playwright route only; do not execute them
+through a different API merely because both use JavaScript.
+
 ## Preconditions
 
 - `js_repl` must be enabled for this skill.
-- If `js_repl` is missing, enable it in `~/.codex/config.toml`:
-
-```toml
-[features]
-js_repl = true
-```
-
-- You can also start a new session with `--enable js_repl` (equivalent to `-c features.js_repl=true`).
-- After enabling `js_repl`, start a new Codex session so the tool list refreshes.
-- For now, run this workflow with sandboxing disabled: start Codex with `--sandbox danger-full-access` (or the equivalent config for `sandbox_mode=danger-full-access`). This is a temporary requirement while `js_repl` + Playwright support inside the sandbox is still being completed.
+- If `js_repl` is missing, use an available supported browser tool and its own
+  documented API, or report the unavailable verification path. Do not change global
+  settings or disable the sandbox to satisfy this skill.
 - Run setup from the same project directory you need to debug.
 - Treat `js_repl_reset` as a recovery tool, not routine cleanup. Resetting the kernel destroys your Playwright handles.
 
 ## One-time setup
+
+Only use the following setup inside an already authorized web project after checking
+existing dependencies and the applicable dependency gate. Never run `npm init` merely
+to make this skill applicable to a paper-design or native-engine task.
 
 ```bash
 test -f package.json || npm init -y
@@ -690,4 +695,6 @@ If you plan to exit Codex immediately after debugging, run the cleanup cell firs
 - `Identifier has already been declared`: reuse the existing top-level bindings, choose a new name, or wrap the code in `{ ... }`. Use `js_repl_reset` only when the kernel is genuinely stuck.
 - `browserContext.newPage: Protocol error (Target.createTarget): Not supported` while working with Electron: do not use `appWindow.context().newPage()` or `electronApp.context().newPage()` as a scratch page; use the Electron-specific screenshot normalization flow in the model-bound screenshots section.
 - `js_repl` timed out or reset: rerun the bootstrap cell and recreate the session with shorter, more focused cells.
-- Browser launch or network operations fail immediately: confirm the session was started with `--sandbox danger-full-access` and restart that way if needed.
+- Browser launch or network operations fail immediately: inspect the actual error,
+  tool availability, and permissions. Use a supported route; report a blocked check
+  when necessary. Do not disable protection settings as a troubleshooting step.
